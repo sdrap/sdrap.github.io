@@ -1,0 +1,7 @@
+---
+layout: page
+title: talk LSE
+date: 20141009
+---
+
+This is the talk at the LSE

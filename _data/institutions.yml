@@ -1,0 +1,50 @@
+-
+    IDInstitution : Konstanz
+    institution : University of Konstanz
+    department : Department of Mathematics
+    address : "Universitaetstrasse 10, 78464 Konstanz"
+    country : Germany
+    web :  http://www.uni-konstanz.de
+-
+    IDInstitution : TUB
+    institution : TU Berlin
+    department : Department of Mathematics
+    address : "Strasse des 17. Juni 136, 10263 Berlin"
+    country : Germany
+    web :  http://www.tu-berlin.de
+-
+    IDInstitution : HUB
+    institution : Humboldt University of Berlin
+    department : Department of Mathematics
+    address : "Unter den Linden 6, 10099 Berlin"
+    country : Germany
+    web :  http://www.hu-berlin.de
+-
+    IDInstitution : Princeton
+    institution : Princeton University
+    department : ORFE
+    address : "Princeton University, Princeton NJ 08544"
+    country : USA
+    web :  http://www.princeton.edu
+-
+    IDInstitution : ETH
+    institution : ETH Zurich
+    department : Department of Mathematics
+    address : "ETH Zentrum, LEO D 8, CH-8092 Zurich"
+    country : Switzerland
+    web :  http://www.ethz.ch
+-
+    IDInstitution : IIT
+    institution : Illinois Institut of Technology
+    department : Department of Applied Mathematics
+    address : "10 West, 32nd Str, Chicago, IL 60616-3793"
+    country : Chicago
+    web :  http://www.iit.edu
+-
+    IDInstitution : Bicocca
+    institution : University of Milano-Bicocca
+    department : Department of Mathematics
+    address : "Via Bicocca degli Arcimboldi 8, 20126
+Milan"
+    country : Italy
+    web :  http://www.unimib.it

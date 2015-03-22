@@ -1,0 +1,29 @@
+-
+  id: samuel01
+  title: Dynamics of Optimized Certainty Equivalent and $\varphi$-Divergence
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+  issued:
+    date-parts:
+    - - 2006
+  type: thesis
+  genre: Master’s thesis
+  publisher: Humboldt Universität zu Berlin
+  rank: '00'
+-
+  id : drapeau02
+  title: Risk Preferences and their Robust Representation
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+  issued:
+    date-parts:
+    - - 2010
+  type: thesis
+  genre: PhD thesis
+  publisher: Humboldt Universität zu Berlin
+  URL: http://edoc.hu-berlin.de/dissertationen/drapeau-samuel-2010-04-30/PDF/drapeau.pdf
+  rank: '01'

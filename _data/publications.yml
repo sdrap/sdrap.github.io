@@ -1,0 +1,329 @@
+-
+  id: martin2012
+  title: Dynamic Assessment Indices
+  author:
+    -
+      family: Bielecki
+      given: Tomasz
+    -
+      family: Cialenco
+      given: Igor
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Karliczek
+      given: Martin
+  container-title: Forthcoming in Stochastics
+  issued:
+    date-parts:
+    - - 2013
+  type: article-journal
+  rank: '08'
+
+-
+  id: cheridito2013
+  title: Numerical Representation of Convex Preferences on Anscombe–Aumann Acts
+  author:
+    -
+      family: Cheridito
+      given: Patrick
+    -
+      family: Delbaen
+      given: Freddy
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Kupper
+      given: Michael
+  container-title: Preprint
+  issued:
+    date-parts:
+    - - 2015
+  type: article-journal
+  rank: '15'
+
+-
+  id: drapeau2015
+  title: Stability and markov property of forward backward minimal supersolutions
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Mainberger
+      given: Christoph  
+  container-title: preprint
+  issued:
+    date-parts:
+    - - 2015
+  type: article-journal
+  rank: '14'
+
+-
+  title: Complete Duality for Convex and Quasiconvex Set-Valued Functions
+  id: hamel2012
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Hamel
+      given: Andreas H.
+    - 
+      family: Kupper
+      given: Michael
+  container-title: Preprint
+  issued:
+    date-parts:
+    - - 2014
+  type: article-journal
+  rank: '12'
+
+-
+  id: asgar2013
+  title: Conditional Preferences and their Numerical Representations
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Jamneshan
+      given: Asgar
+  container-title: Preprint
+  issued:
+    date-parts:
+    - - 2014
+  type: article-journal
+  rank: '13'
+
+-
+  id: cheridito2011
+  title: Weak Closedness of Monotone Sets of Lotteries and Robust Representation of Risk Preferences
+  author:
+    -
+      family: Cheridito
+      given: Patrick
+    - 
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Kupper
+      given: Michael
+  container-title: Risk Measures and Attitudes
+  issued:
+    date-parts:
+    - - 2013
+  page: '3-9'
+  type: chapter
+  collection-title: EAA series
+  publisher: Springer London
+  editor:
+    -
+      family: Biagini
+      given: Francesca
+    -
+      family: Richter
+      given: Andreas
+    -
+      family: Schlesinger
+      given: Harris
+  rank: '05'
+
+-
+  id: drapeau03
+  title: A von Neumann–Morgenstern Representation Result without Weak Continuity Assumption
+  author:
+    -
+      family: Delbaen
+      given: Freddy
+    - 
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Kupper
+      given: Michael
+  container-title: Journal of Mathematical Economics
+  issued:
+    date-parts:
+    - - 2011
+  volume: '47'
+  page: '401-408'
+  type: article-journal
+  rank: '02'
+
+- 
+  id: ludovic2012
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Gianin
+      given: Emmanuela R.
+    - 
+      family: Kupper
+      given: Michael
+    - 
+      family: Tangpi
+      given: Ludovic
+
+  title: Dual Representation of Minimal Supersolutions of Convex BSDEs
+  container-title: Forthcoming in Annales de l’Institut Henri Poincaré
+  issued:
+    date-parts:
+    - - 2013
+  type: article-journal
+  date: 2013
+  rank: '10'
+
+-
+  id: DHK1101
+  title: Minimal Supersolutions of Convex BSDEs
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Heyne
+      given: Gregor
+    - 
+      family: Kupper
+      given: Michael
+  container-title: Annals of Probability
+  volume: '41'
+  issue: '6'
+  page: '3973-4001'
+  issued:
+    date-parts:
+    - - 2013
+  type: article-journal
+  rank: '04'
+
+- 
+  id: DHK2012
+  title: Minimal Supersolutions of BSDEs under Volatility Uncertainty
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Heyne
+      given: Gregor
+    - 
+      family: Kupper
+      given: Michael
+  container-title: Forthcoming SPA
+  issued:
+    date-parts:
+    - - 2012
+  type: article-journal
+  rank: '09'
+-
+  id: asgar2012
+  title: The Algebra of Conditional Sets and the Concept of Conditional Compactness
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Jamneshan
+      given: Asgar
+    - 
+      family: Karliczek
+      given: Martin
+    - 
+      family: Kupper
+      given: Michael
+  container-title: Preprint
+  issued:
+    date-parts:
+    - - 2013
+  type: article-journal
+  rank: '11'
+- 
+  id: drapeau01
+  title: Risk Preferences and their Robust Representation
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Kupper
+      given: Michael
+  container-title: Mathematics of Operations Research
+  volume: '28'
+  page: '28-62'
+  issue: '1'
+  issued:
+    date-parts:
+    - - 2013
+  type: article-journal
+  rank: '03'
+- 
+  id: martin2013
+  title: Brouwer Fixed Point Theorem in $(L^0)^d$
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Kupper
+      given: Michael
+    - 
+      family: Karliczek
+      given: Martin
+    - 
+      family: Streckfuß
+      given: Martin
+  container-title: Fixed Point Theory and Applications
+  page: 2013:301
+  issued:
+    date-parts:
+    - - 2013
+  type: article-journal
+  rank: '07'
+- 
+  id: antonis2012
+  title: A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Kupper
+      given: Michael
+    - 
+      family: Papapantoleon
+      given: Antonis
+  container-title: Journal of Risk
+  volume: '16'
+  page: '3-29'
+  issue: '6'
+  issued:
+    date-parts:
+    - - 2014
+  type: article-journal
+  rank: '06'
+-
+  id: drapeau05
+  title: A Note on Robust Representations of Law-Invariant Quasiconvex Functions
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    - 
+      family: Kupper
+      given: Michael
+    - 
+      family: Reda
+      given: Ranja
+  container-title: Advances in Mathematical Economics
+  volume: '15'
+  page: '27-39'
+  issued:
+    date-parts:
+    - - 2011
+  type: article-journal
+  rank: '01'
