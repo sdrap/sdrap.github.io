@@ -49,12 +49,12 @@ body {
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.5;
 }
 @media (min-width: 38em) {
   html {
-    font-size: 20px;
+    font-size: 12px;
   }
 }
 
@@ -128,12 +128,13 @@ dd {
 }
 
 /* Misc */
+
 hr {
   position: relative;
   margin: 1.5rem 0;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+  border-top: 1px dashed #313131;
+  border-bottom: 1px dashed #fff;
 }
 
 abbr {
@@ -259,7 +260,7 @@ tbody tr:nth-child(odd) th {
  */
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 0.75rem;
   font-weight: 300;
 }
 

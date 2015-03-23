@@ -1,30 +1,13 @@
 ---
 layout: page
-title: About
+title: About 
 ---
+## This is a title
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel augue in lacus aliquam ultricies at nec tellus. Nullam venenatis sed nibh a blandit. Fusce dictum lectus et mauris placerat, eget tincidunt nisl sollicitudin. Nam vel neque et tortor laoreet volutpat. Nulla tincidunt diam id nisl vehicula, vitae placerat elit pulvinar. Morbi mauris tortor, imperdiet ut sem in, mattis laoreet massa. Integer luctus tempor orci, ac cursus ligula iaculis vitae. Ut malesuada condimentum lorem. Sed dictum convallis semper. Vivamus luctus diam sit amet metus cursus, ut ornare eros volutpat. Curabitur vulputate vestibulum lectus, eget ornare risus hendrerit vitae. Cras in mauris placerat est pharetra rutrum quis quis sem. Nullam placerat fermentum massa, eget congue ligula consequat nec. Cras suscipit et est eget venenatis.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+Phasellus dolor quam, venenatis vitae magna sed, vehicula porttitor eros. Sed sed fringilla libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dolor purus, molestie vel quam et, commodo accumsan leo. Donec velit orci, pulvinar ac molestie euismod, varius non libero. Proin nisi elit, feugiat at tempor a, tempor sit amet justo. Phasellus est risus, blandit vitae lacinia nec, convallis sed lorem. Etiam efficitur molestie ligula, eu bibendum est facilisis a. Vestibulum ac porta justo, eu elementum leo. Nunc laoreet est eu massa consectetur luctus. Aliquam fringilla velit at est convallis ornare. Ut at porta enim. Praesent pharetra felis in rutrum blandit. Sed faucibus ex ipsum, quis condimentum libero varius eget. Nullam hendrerit tempus ligula, quis consectetur lorem mattis nec.
 
-There are currently two themes built on Poole:
+Nulla egestas nulla sed iaculis condimentum. Sed suscipit pretium commodo. Pellentesque vel lorem vel metus tristique mollis at eget metus. Ut tristique accumsan suscipit. In fringilla ex eget turpis pellentesque, non consequat justo mattis. Etiam convallis nunc nec nibh blandit, elementum facilisis nunc porttitor. Aliquam nec sapien felis. Aenean lobortis, metus sed gravida hendrerit, libero massa gravida metus, in commodo enim turpis blandit odio. Aliquam convallis, turpis in ultricies tincidunt, quam nulla vehicula enim, et dapibus eros nulla vitae nulla. Duis ut turpis at mi porta mattis. Donec nec magna nec nunc malesuada pharetra ut vel magna. Nulla egestas risus vel maximus venenatis.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Maecenas luctus, erat ut eleifend aliquam, arcu mauris vehicula neque, sit amet consequat dui nibh tristique orci. Nulla ornare auctor orci eget aliquam. Mauris id orci malesuada, pharetra risus in, lobortis dolor. Nulla eget dolor auctor nisi ornare finibus. Aenean blandit justo turpis, sed consequat ipsum molestie eu. Integer non pretium dui, vel iaculis libero. Curabitur placerat eget erat non efficitur. Sed ipsum dolor, hendrerit a hendrerit vitae, bibendum non arcu. Sed sagittis a nunc vel volutpat. In hac habitasse platea dictumst. Duis tempor lobortis elit, sit amet sollicitudin tortor egestas vitae. Nullam purus orci, ullamcorper ut diam non, lobortis ultricies nisi. Aliquam vel elit imperdiet est rutrum aliquam ut a orci. Pellentesque ut elit quis metus tincidunt interdum sit amet sit amet dolor. Nam pellentesque, velit posuere lobortis ultricies, sapien lectus porttitor ante, et suscipit est risus nec tellus. In ornare nunc lacus, in scelerisque sem scelerisque a

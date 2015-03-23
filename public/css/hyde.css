@@ -32,19 +32,25 @@
  */
 
 html {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+/*  font-family: "PT Sans", Helvetica, Arial, sans-serif; */
+    /*font-family: "Merriweather", Helvetica, Arial, sans-serif;*/
+/*    font-family: "Vollkorn", Helvetica, Arial, sans-serif;*/
+/*    font-family: "PT Mono", Helvetica, Arial, sans-serif;*/
+    font-family: "PT Mono", Helvetica, Arial, sans-serif;*/
 }
 @media (min-width: 48em) {
   html {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Old Standard TT";
+}
 
 /*
  * Sidebar
@@ -79,7 +85,8 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "Abril Fatface", serif;
+  font-family: "Old Standard TT";
+  font-weight: 400;
   font-size: 3.25rem;
 }
 
@@ -88,17 +95,22 @@ html {
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
-  display: block;
-  line-height: 1.75;
+    display: block;
+    line-height: 1.75;
+    font-size: 1.25rem;
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: underline;
 }
-.sidebar-nav-item.active {
-  font-weight: bold;
+.sidebar-nav-item.active:after {
+  content: "\00AB";
+  margin-right: -12px;
 }
-
+.sidebar-nav-item.active:before {
+  content: "\00BB";
+  margin-left: -12px;
+}
 /* Sticky sidebar
  *
  * Add the `sidebar-sticky` class to the sidebar's container to affix it the
@@ -128,7 +140,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .content {
-    max-width: 38rem;
+    max-width: 48rem;
     margin-left: 20rem;
     margin-right: 2rem;
   }
