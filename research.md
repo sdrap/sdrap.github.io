@@ -11,7 +11,7 @@ permalink: /research/
 <ol reversed>
 {% for publication in publications reversed %}
 <li>
-<em>"{{publication.title}}"</em><br>  
+<a href="{{publication.URL_Open}}" target="_blank"><em>"{{publication.title}}"</em></a><br>  
 {% for author in publication.author %}
 {% assign tmp = author.family | prepend: ' ' | prepend : author.given  %}
 {% assign url_auth = false %}
@@ -23,7 +23,10 @@ permalink: /research/
 {% endif %}
 {% if forloop.rindex > 2 %},{% elsif forloop.rindex == 2 %} and {% endif %} {% endfor %}
 <br>
-{{publication.container-title}}, {{publication.issued.date-parts}}
+{{publication.container-title}}, {{publication.issued.date-parts}},
+<a href="{{publication.URL_Open}}" target="_blank"> pdf (open)</a>
+{% if publication.URL %}
+, and <a href="{{publication.URL}}" target="_blank">Journal Link</a>{% endif %}
 </li>
 {% endfor %}
 </ol>
@@ -32,7 +35,11 @@ permalink: /research/
 <ul>
 {% for these in site.data.thesis reversed %}
 <li>
-<em>"{{these.title}}"</em><br>  
+{% if these.URL %}
+<a href="{{these.URL}}" target="_blank"><em>"{{these.title}}"</em><br></a>
+{% else %}
+<em>"{{these.title}}"</em><br>
+{% endif %}
 {{these.genre}}, {{these.issued.date-parts}}
 </li>
 {% endfor %}
