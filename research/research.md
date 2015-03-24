@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-## Publications
+## Publications and Preprints
 
 {% assign publications = site.data.publications | sort : 'rank' %}
 

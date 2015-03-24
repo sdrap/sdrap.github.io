@@ -1,29 +1,23 @@
 # Dependencies
-markdown:         kramdown
-highlighter:      pygments
+markdown: kramdown
+highlighter: pygments
 
 # Permalinks
-permalink:        pretty
-relative_permalinks: true
+permalink: pretty
 
 # Setup
-title:            Samuel Drapeau
-tagline:          'A Jekyll theme'
-description:      'doing maths (still wondering why)<br>
-      born and raised French<br>
-      educated German<br>
-      on my way to being Sinologized'
-url:              http://www.samuel-drapeau.info
-baseurl:          /
+title: Samuel Drapeau
+tagline: 'Personal Homepage'
+description: 'doing maths (still wondering why)<br>born and raised French<br>educated German<br>on my way to being Sinologized'
 
-author:
-  name:           'Samuel Drapeau'
-  url:            https://twitter.com/sdrapeau
+url: http://www.samuel-drapeau.info
+baseurl: /
 
-paginate:         5
+author: Samuel Drapeau
 
-# Custom vars
-version:          2.1.0
 
-github:
-  repo:           https://github.com/sdrap
+collections:
+    articles:
+        output: true
+    lectures:
+        output: true
