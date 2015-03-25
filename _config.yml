@@ -16,8 +16,6 @@ baseurl: /
 author: Samuel Drapeau
 
 
-paginate: 5
-paginate_path: "/blog/page:num"
 
 collections:
     articles:
