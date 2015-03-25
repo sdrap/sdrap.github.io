@@ -1,38 +1,26 @@
 ---
 layout: page
-permalink: /articles/
-
 title: A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents
-authors: 
-    - name: Samuel Drapeau
-      institution: SJTU_SAIF
-    - name: Michael Kupper
-      intitution: Konstanz
-    - name: Antonis Papapantoleon
-      institution: TU
-
-date: 2014
-journal: Journal of Risk
-issue: 16
-number: 6
-page: 3-29
 ---
+{% assign publications = site.data.publications | where: "title","A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents" %}
 
-Institute of Mathematics, TU Berlin, Straße des 17.
-Juni 136, 10623 Berlin, Germany
-b
-University of Konstanz, Universitätstraße 10,
-78464 Konstanz
-a
-1
-drapeau@math.tu-berlin.de
-kupper@uni-konstanz.de
-3
-papapan@math.tu-berlin.de
-      mail: sd@samuel-drapeau.info
-      institution: Shanghai Jiao Tong University
-      department: SAIF and Department of Mathematics
-      Address: 800 Donghuan Road
-      web: http://samuel-drapeau.info
-      mail: kupper@uni-konstanz.de
-      web: 
+{% for publication in publications %}
+Authors
+:   {% for author in publication.author %}{% assign tmp = author.family | prepend: ' ' | prepend : author.given  %}{% assign url_auth = false %}{% for search_author in site.data.authors %}{% if tmp == search_author.name and search_author.url != false %}{% assign url_auth = search_author.url %}{% endif %}{% endfor %}{% if url_auth != false %}<a href="{{url_auth}}">{{tmp}}</a>{% else %}{{tmp}}{% endif %}{% if forloop.rindex > 2 %}, {% elsif forloop.rindex == 2 %} and {% endif %}{% endfor %}
+
+Date
+:   {{publication.issued.date-parts}}
+
+Journal
+:   {{publication.container-title}}{% if publication.volume %}, {{publication.volume}}{% if publication.issue %}({{publication.issue}}){% endif %}{% endif %}{% if publication.page %}:{{publication.page}}{% endif %}
+
+Abstract
+:   {{publication.abstract}}
+
+Keywords
+:   {{publication.keywords | join: ', '}}
+
+Download
+:   <a href="{{publication.URL_Open}}" target="_blank"> pdf (open science)</a>{% if publication.URL %}<br><a href="{{publication.URL}}" target="_blank">journal link (usually closed science)</a>{% endif %}
+
+{% endfor %}

@@ -2,6 +2,45 @@
   <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      mtextFontInherit: true,
+      preferredFont: "Gyre-Pagella"
+    },
+      tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true,
+                        skipTags: ['script', 'noscript', 'style', 'textarea']
+      },
+    TeX: { 
+      equationNumbers: { autoNumber: "AMS" },
+      Macros: {
+                    Set: ["\\left\\{ #1 \\right\\}",1],
+                    set: ["\\{ #1 \\}",1],
+                    abs: ["\\left| #1\\right|",1],
+                    norm: ["\\left\\Vert #1\\right\\Vert",1],
+                                lrangle: ["\\langle #1,#2\\rangle",2],
+                                LRangle: ["\\left\\langle #1,#2\\right\\rangle",2],
+                    cl: "\\text{cl}",
+                    Int: "\\text{int}",
+                    ri: "\\text{ri}",
+                                core: "\\text{core}",
+                    span: "\\text{span}",
+                    aff: "\\text{aff}",
+                    conv: "\\text{conv}",
+                    co: "\\text{co}",
+                                cco: "\\text{cco}",
+                                epi: "\\text{epi}",
+                                hypo: "\\text{hypo}",
+                                dom: "\\text{dom}",
+        un: "\\textbf{1}",
+                                Lim: "\\text{Lim}"
+                      }
+    }
+  });
+  </script>
+
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">

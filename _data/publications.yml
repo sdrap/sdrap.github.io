@@ -21,6 +21,18 @@
   type: article-journal
   rank: '08'
   URL_Open: "http://arxiv.org/abs/1306.5198"
+  abstract: >
+    This paper provides a unified framework, which allows, in particular, to study the structure of dynamic monetary risk measures and dynamic acceptability indices.
+    The main mathematical tool, which we use here, and which allows us to significantly generalize existing results is the theory of $$L^0$$-modules.
+    In the first part of the paper we develop the general theory and provide a robust representation of conditional assessment indices, and in the second part we apply this theory to dynamic acceptability indices acting on stochastic processes.
+  keywords:
+    - Assessment indices
+    - Dynamic acceptability index
+    - Dynamic measures of performance
+    - Dynamic risk measures
+    - Certainty equivalent
+    - Strong time consistency
+    - Dynamic GLR
 
 -
   id: cheridito2013
@@ -45,10 +57,16 @@
   type: article-journal
   rank: '15'
   URL_Open: "http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2572745"
-
+  abstract: >
+    In this paper we derive a numerical representation for general complete preferences respecting the fol- lowing two principles: a) more is better than less, b) averages are better than extremes. To be able to distinguish between risk and ambiguity we work in an Anscombe–Aumann framework. Our main result is a quasi-concave numerical representation for a class of preferences wide enough to accommodate Ellsberg- as well as Allais-type behavior. Instead of assuming the usual monotonicity we suppose that our prefer- ences are monotone with respect to first order stochastic dominance. Preference for averages is expressed through convexity. No independence assumptions of any form are made. In general, our preferences in- tertwine attitudes towards risk and ambiguity. But if one assumes a weak form of Savage’s sure thing principle, there is separation between risk and ambiguity attitudes, and the representation decomposes into state dependent preference functionals over the consequences and a quasi-concave functional aggregating the preferences of the decision maker in different states of the world.
+  keywords:
+    - Convex preferences
+    - Uncertainty aversion
+    - Allais paradox
+    - Ellsberg paradox
 -
   id: drapeau2015
-  title: Stability and markov property of forward backward minimal supersolutions
+  title: Stability and Markov Property of Forward Backward Minimal Supersolutions
   author:
     -
       family: Drapeau
@@ -63,6 +81,14 @@
   type: article-journal
   rank: '14'
   URL_Open: "http://arxiv.org/abs/1503.00240"
+  abstract: >
+    We show stability and locality of the minimal supersolution of a forward backward stochastic differential equation with respect to the underlying forward process under weak assumptions on the generator. The forward process appears both in the generator and the terminal condition. Painlevé-Kuratowski and Convex Epi-convergence are used to establish the stability. For Markovian forward processes the minimal supersolution is shown to have the Markov property. Furthermore, it is related to a time-shifted problem and identified as a viscosity supersolution of a corresponding PDE.
+  keywords:
+    - Supersolutions of Backward Stochastic Differential Equations
+    - Stability
+    - FBSDEs
+    - Markov Property
+    - Viscosity Supersolutions
 
 -
   title: Complete Duality for Convex and Quasiconvex Set-Valued Functions
@@ -84,7 +110,15 @@
   type: article-journal
   rank: '12'
   URL_Open: "http://arxiv.org/abs/1405.0219"
-
+  abstract: >
+    This paper provides an unique dual representation of set-valued lower semi-continuous quasiconvex and convex functions.
+    The results are based on a duality result for increasing set valued functions.
+  keywords:
+    - Set Valued Functions
+    - Quasiconvexity
+    - Dual Representation
+    - Increasing Functions
+    - Fenchel-Moreau
 -
   id: asgar2013
   title: Conditional Preferences and their Numerical Representations
@@ -102,7 +136,14 @@
   type: article-journal
   rank: '13'
   URL_Open: "http://arxiv-web3.library.cornell.edu/abs/1410.5466"
-
+  abstract: >
+    This work provides an axiomatic framework to the concept of conditional preference orders based on conditional sets.
+    Conditional numerical representations of such preference orders are introduced and a conditional version of the theorems of Debreu about the existence of such numerical representations is given.
+    The continuous representations follow from a conditional version of Debreu's Gap Lemma the proof of which is free of any measurable selection arguments but is derived from the existence of a conditional axiom of choice.
+  keywords:
+    - Conditional Preferences
+    - Utility Theory
+    - Gap Lemma
 -
   id: cheridito2011
   title: Weak Closedness of Monotone Sets of Lotteries and Robust Representation of Risk Preferences
@@ -136,7 +177,14 @@
       given: Harris
   rank: '05'
   URL: "http://link.springer.com/chapter/10.1007%2F978-1-4471-4926-2_1#page-1"
-  URL_Open: "./../downloads/RPM4.pdf"
+  URL_Open: "http://www.samuel-drapeau.info/downloads/RPM4.pdf"
+  abstract: >
+    We prove a closedness result for sets of lotteries that are monotone with respect to first order stochastic dominance and show how it can be applied to obtain robust representations of risk preferences on lotteries with compact support.
+  keywords:
+    - Risk preferences
+    - Robust representations
+    - Lotteries with compact support
+    - Monotonicity
 -
   id: drapeau03
   title: A von Neumann–Morgenstern Representation Result without Weak Continuity Assumption
@@ -159,7 +207,15 @@
   type: article-journal
   rank: '02'
   URL: "http://www.sciencedirect.com/science/article/pii/S0304406811000486"
-  URL_Open: "./../downloads/vnmDDK_0411.pdf"
+  URL_Open: "http://www.samuel-drapeau.info/downloads/vnmDDK_0411.pdf"
+  abstract: >
+    In the paradigm of von Neumann-Morgenstern, a representation of affine preferences in terms of an expected utility can be obtained under the assumption of weak continuity. Since the weak topology is coarse, this requirement is a priori far from being negligible. In this work, we replace the assumption of weak continuity by monotonicity. More precisely, on the space of lotteries on an interval of the real line, it is shown that any affine preference order which is monotone with respect to the first stochastic order admits a representation in terms of an expected utility for some nondecreasing utility function. As a consequence, any affine preference order on the subset of lotteries with compact support, which is monotone with respect to the second stochastic order, can be represented in terms of an expected utility for some nondecreasing concave utility function. We also provide such representations for affine preference orders on the subset of those lotteries which fulfill some integrability conditions. The subtleties of the weak topology are illustrated by some examples.
+  keywords:
+    - Affine Preference Order
+    - von Neumann-Morgenstern Representation
+    - Automatic Continuity
+    - First Stochastic Order
+    - Weak Continuity
 
 - 
   id: ludovic2012
@@ -185,7 +241,15 @@
   type: article-journal
   date: 2013
   rank: '10'
-  URL_Open: "http://arxiv.org/abs/1308.1275" 
+  URL_Open: "http://arxiv.org/abs/1308.1275"
+  abstract: >
+    We give a dual representation of minimal supersolutions of BSDEs with non-bounded, but integrable terminal conditions and under weak requirements on the generator which is allowed to depend on the value process of the equation. 
+    Conversely, we show that any dynamic risk measure satisfying such a dual representation stems from a BSDE.
+    We also give a condition under which a supersolution of a BSDE is even a solution.
+  keywords:
+    - Convex Duality
+    - Supersolutions of BSDEs
+    - Cash-Subadditive Risk Measures
 
 -
   id: DHK1101
@@ -211,7 +275,12 @@
   rank: '04'
   URL: "http://projecteuclid.org/euclid.aop/1384957780"
   URL_Open: "http://arxiv.org/abs/1106.1400"
-
+  abstract: >
+    We study the nonlinear operator of mapping the terminal value $$\xi$$ to the corresponding minimal supersolution of a backward stochastic differential equation with the generator being monotone in $$y$$, convex in $$z$$, jointly lower semicontinuous and bounded below by an affine function of the control variable $$z$$. We show existence, uniqueness, monotone convergence, Fatou’s lemma and lower semicontinuity of this operator. We provide a comparison principle for minimal supersolutions of BSDEs.
+  keywords:
+    - Supersolutions of backward stochastic differential equations
+    - Nonlinear expectations
+    - Supermartingales
 - 
   id: DHK2012
   title: Minimal Supersolutions of BSDEs under Volatility Uncertainty
@@ -232,6 +301,13 @@
   type: article-journal
   rank: '09'
   URL_Open: "http://arxiv.org/abs/1306.6545"
+  abstract: >
+    We study the existence of minimal supersolutions of BSDEs under a family of mutually singular probability measures.
+    We consider generators that are jointly lower semicontinuous, positive, and either convex in the control variable and monotone in the value variable, or that fulfill a specific normalization property.
+  keywords:
+    - Minimal Supersolutions of Second Order Backward Stochastic Differential Equations
+    - Model Uncertainty
+    - $$G$$-Expectation
 
 -
   id: asgar2012
@@ -256,7 +332,16 @@
   type: article-journal
   rank: '11'
   URL_Open: "http://arxiv.org/abs/1309.6903"
-
+  abstract: >
+    We introduce the notion of conditional set and conditional inclusion.
+    We show that the resulting conditional power set is a complete Boolean algebra which allows to develop a conditional set theory, topology and functional analysis with a focus on conditional compactness.
+    We construct the conditional real numbers and we prove, among others, the conditional version of the following theorems: Ultrafilter lemma, Tychonoff, Heine-Borel, Banach-Alaoglu and Krein-Šmulian.
+  keywords:
+    - Conditional Set Theory
+    - Conditional Topology
+    - Conditional Compactness
+    - Conditional Real Numbers
+    - Conditional Duality
 - 
   id: drapeau01
   title: Risk Preferences and their Robust Representation
@@ -278,6 +363,14 @@
   rank: '03'
   URL_Open: "http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1557083"
   URL: "http://pubsonline.informs.org/doi/abs/10.1287/moor.1120.0560?journalCode=moor"
+  abstract: >
+    To address the plurality of interpretations of the subjective notion of risk, we describe it by means of a risk order and concentrate on the context invariant features of diversification and monotonicity. Our main results are uniquely characterized robust representations of lower semicontinuous risk orders on vector spaces and convex sets. This representation covers most instruments related to risk and allow for a differentiated interpretation depending on the underlying context which is illustrated in different settings: For random variables, risk perception can be interpreted as model risk, and we compute among others the robust representation of the economic index of riskiness. For lotteries, risk perception can be viewed as distributional risk and we study the “Value at Risk”. For consumption patterns, which excerpt an intertemporality dimension in risk perception, we provide an interpretation in terms of discounting risk and discuss some examples.
+  keywords:
+    - Risk Perception
+    - Risk Measures
+    - Robustness
+
+
 - 
   id: martin2013
   title: Brouwer Fixed Point Theorem in $(L^0)^d$
@@ -303,8 +396,15 @@
   rank: '07'
   URL: "http://www.fixedpointtheoryandapplications.com/content/2013/1/301"
   URL_Open: "http://www.fixedpointtheoryandapplications.com/content/2013/1/301"
-
-- 
+  abstract: >
+    The classical Brouwer fixed point theorem states that in $$\mathbb{R}^d$$ every continuous function from a convex, compact set on itself has a fixed point.
+    For an arbitrary probability space, let $$L^0=L^0(\Omega,\mathcal{A},P)$$ be the set of random variables.
+    We consider $$(L^0)^d$$ as an $$L^0$$-module and show that local, sequentially continuous functions on $$L^0$$-convex, closed and bounded subsets have a fixed point which is measurable by construction.
+  keywords:
+    - Conditional Simplex
+    - Fixed Points in $$(L^0)^d$$
+    - Brouwer
+-
   id: antonis2012
   title: A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents
   author:
@@ -328,7 +428,14 @@
   rank: '06'
   URL_Open: "http://arxiv.org/abs/1212.6732"
   URL: "http://www.risk.net/journal-of-risk/technical-paper/2360448/a-fourier-approach-to-the-computation-of-conditional-value-at-risk-and-optimized-certainty-equivalents"
-
+  abstract: >
+    We consider the class of risk measures associated with optimized certainty equivalents. This class includes several popular examples, such as conditional value-at-risk (CV@R) and monotone mean–variance. Numerical schemes are developed for the computation of these risk measures using Fourier transform methods. This leads, in particular, to a very competitive method for the calculation of CVa@R, which is comparable in computational time to the calculation of V@R. We also develop methods for the efficient computation of risk contributions.
+  keywords:
+    - V@R
+    - CV@R
+    - Optimized Certainty Equivalent
+    - Fourier Methods
+    - Risk Contribution
 
 -
   id: drapeau05
@@ -351,4 +458,11 @@
     - - 2011
   type: article-journal
   rank: '01'
-  URL_Open: "./../downloads/DKR_LIRM1010.pdf"
+  URL_Open: "http://www.samuel-drapeau.info/downloads/DKR_LIRM1010.pdf"
+  abstract: >
+    We give robust representations of law-invariant monotone quasiconvex functions. The results are based on Jouini, Schachermayer and Touzi (2006) and Svindland (2010) showing that lawinvariant quasiconvex functions have the Fatou property.
+  keywords:
+    - Fatou property
+    - law-invariance
+    - risk measure
+    - robust representation
