@@ -27,8 +27,3 @@ collections:
         output: true
         permalink: /teaching/lectures/:name/
 
-analytics:
-    provider: google
-    google: 
-        tracking_id : 'UA-61158375-1'
-
