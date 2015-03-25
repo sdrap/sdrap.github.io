@@ -8,7 +8,11 @@ permalink: pretty
 # Setup
 title: Samuel Drapeau
 tagline: 'Personal Homepage'
-description: 'doing maths (still wondering why)<br>born and raised French<br>educated German<br>on my way to being Sinologized'
+description: >
+    doing maths (still wondering why)<br>
+    born and raised French<br>
+    educated German<br>
+    now in Shanghai
 
 url: http://www.samuel-drapeau.info
 baseurl: /

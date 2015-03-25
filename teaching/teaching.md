@@ -2,6 +2,14 @@
 layout: page
 title: Teaching
 permalink: /teaching/
+rank: 4
 ---
 
-## This is a page about teaching
+{% assign lectures = site.lectures | group_by:"date" %}
+{% for test in lectures %}
+{{test.name}}
+:   {% for lecture in test.items %}<a href="{{lecture.url}}">{{lecture.title}}</a><br>{% endfor %}
+{% endfor %}
+
+
+

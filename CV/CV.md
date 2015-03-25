@@ -2,6 +2,7 @@
 layout: page
 title: CV
 permalink: /CV/
+rank: 3
 ---
 **Personal Details**
 

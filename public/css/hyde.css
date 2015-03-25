@@ -49,7 +49,7 @@ html {
   }
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Old Standard TT";
+    font-family: "PT Mono";
 }
 
 /*
@@ -78,7 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+    border-bottom: 0px;
+    color: #fff;
 }
 
 /* About section */
@@ -101,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 .sidebar-nav-item.active:after {
   content: "\00AB";
