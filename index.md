@@ -28,4 +28,4 @@ My research focus &mdash; even if not bounded to &mdash; are
 
 A list of my publications, preprints and talks can be found [there]({{site.url}}/research) and a short CV [here]({{site.url}}/CV).
 
-The [teaching]({{site.url}}/teaching) section entails the details about current and past lectures as well as some open sourced lecure notes that I've writen myself or together with others.
+The [teaching]({{site.url}}/teaching) section entails the details about current and past lectures as well as some open sourced lecture notes that I've written myself or together with others.
