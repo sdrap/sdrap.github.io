@@ -6,6 +6,17 @@ title: Personal Information
 <h1 class="page-title">{{ page.title }}</h1>
 <hr>
 
+
+Contact:
+:   Department of Mathematics<br>
+    Shanghai Jiao Tong University<br>
+    800 Dongchuan Road<br>
+    Shanghai, 200240 China
+
+:   Mail: drapeau@sjtu.edu.cn
+  
+--------------------------------------
+
 I have a position at the [Shanghai Jiao Tong University](http://en.sjtu.edu.cn) in China.
 My position is shared between the [Department of Mathematics](http://www.math.sjtu.edu.cn/) and the Shanghai Advanced Insitute of Finance [(SAIF)](http://saif.sjtu.edu.cn) in the China Academy of Finance and Research [(CAFR)](http://en.cafr.cn).
 

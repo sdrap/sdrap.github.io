@@ -38,12 +38,12 @@ html {
 /*    font-family: "PT Mono", Helvetica, Arial, sans-serif;*/
     font-family: "PT Mono", Helvetica, Arial, sans-serif;*/
 }
-@media (min-width: 48em) {
+@media (min-width: 38em) {
   html {
     font-size: 12px;
   }
 }
-@media (min-width: 58em) {
+@media (min-width: 48em) {
   html {
     font-size: 14px;
   }
