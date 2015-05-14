@@ -8,7 +8,7 @@ title: Personal Information
 
 
 Contact:
-:   Shanghai Advanced Institut for Finance<br>
+:   Shanghai Advanced Institute of Finance<br>
     Shanghai Jiao Tong University<br>
     211 West Huaihai Road<br>
     Shanghai, P.R. 200030 China
