@@ -8,12 +8,12 @@ title: Personal Information
 
 
 Contact:
-:   Department of Mathematics<br>
+:   Shanghai Advanced Institut for Finance<br>
     Shanghai Jiao Tong University<br>
-    800 Dongchuan Road<br>
-    Shanghai, 200240 China
+    211 West Huaihai Road<br>
+    Shanghai, P.R. 200030 China
 
-:   Mail: drapeau@sjtu.edu.cn
+:   Mail: sdrapeau@saif.sjtu.edu.cn
   
 --------------------------------------
 
