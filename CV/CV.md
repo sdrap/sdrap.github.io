@@ -11,7 +11,7 @@ rank: 3
     800 Dongchuan Road<br>
     Shanghai, 200240 China
 
-:   Mail: drapeau@sjtu.edu.cn <br>
+:   Mail: sdrapeau@saif.sjtu.edu.cn <br>
     Tel: +86-21-6293-2586
 
 ------------------------------------------------------------------------
