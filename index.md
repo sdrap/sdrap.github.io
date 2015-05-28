@@ -13,7 +13,7 @@ Contact:
     211 West Huaihai Road<br>
     Shanghai, P.R. 200030 China
 
-:   Mail: sdrapeau@saif.sjtu.edu.cn<br>
+:   Mail: sdrapeau@saif.sjtu.edu.cn <br>
     Tel: +86-21-6293-2586
   
 --------------------------------------
