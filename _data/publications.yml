@@ -234,12 +234,14 @@
       given: Ludovic
 
   title: Dual Representation of Minimal Supersolutions of Convex BSDEs
-  container-title: Forthcoming in Annales de l’Institut Henri Poincaré
+  container-title: Annales de l’Institut Henri Poincaré
+  volume: '50'
+  issue: '2'
+  page: '524-538'
   issued:
     date-parts:
-    - - 2013
+    - - 2015
   type: article-journal
-  date: 2013
   rank: '10'
   URL_Open: "http://arxiv.org/abs/1308.1275"
   abstract: >
