@@ -19,7 +19,7 @@ Contact:
 --------------------------------------
 
 I have a position at the [Shanghai Jiao Tong University](http://en.sjtu.edu.cn) in China.
-My position is shared between the [Department of Mathematics](http://www.math.sjtu.edu.cn/) and the Shanghai Advanced Insitute of Finance [(SAIF)](http://saif.sjtu.edu.cn) in the China Academy of Finance and Research [(CAFR)](http://en.cafr.cn).
+My position is shared between the [Department of Mathematics](http://www.math.sjtu.edu.cn/) and the Shanghai Advanced Institute of Finance [(SAIF)](http://saif.sjtu.edu.cn) in the China Academy of Finance and Research [(CAFR)](http://en.cafr.cn).
 
 My research focus &mdash; even if not bounded to &mdash; are
 
