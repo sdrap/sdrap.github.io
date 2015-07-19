@@ -1,4 +1,40 @@
 -
+  id: armenti2015
+  title: Multivariate Shortfall Risk Allocation
+  author:
+    -
+      family: Armenti
+      given: Yannick
+    -
+      family: Crépey
+      given: Stéphane
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Papapantoleon
+      given: Antonis
+  container-title: Preprint
+  issued:
+    date-parts:
+    - - 2015
+  type: article-journal
+  rank: '16'
+  URL_Open: ""
+  abstract: >
+      The ongoing concern about systemic risk since the outburst of the global financial crisis has highlighted the need for risk measures at the level of sets of interconnected financial components, such as portfolios, institutions or members of clearinghouses.
+      The two main issues in systemic risk are the computation of an overall reserve level and its allocation to the different components of the system according to their importance.
+      We develop here a pragmatic approach to systemic risk measurement and allocation based on multivariate shortfall risk measures, where acceptable allocations are first computed and then aggregated so as to minimize costs.
+      We emphasize the analysis of the risk allocation and of its sensitivity as an indicator of the systemic risk.
+      Moreover, we provide efficient numerical schemes to assess the risk allocation in high dimensions.
+  keywords:
+    - Systemic risk
+    - Risk allocation
+    - Multivariate shortfall risk
+    - Sensitivities
+    - Numerical methods
+
+-
   id: martin2012
   title: Dynamic Assessment Indices
   author:
