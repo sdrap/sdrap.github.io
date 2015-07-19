@@ -1,7 +1,37 @@
 -
+    occasion : "Center for Interdisciplinary Research Seminar"
+    place : "Bielefeld University, Bielefeld, Germany"
+    title : "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
+    date : Jul 2015
+    score : 8
+-
+    occasion : "Probability, Uncertainty and Quantification of Risk Conference"
+    place : "Shandong University, Weihai, China"
+    title : "Multivariate Shortfall Risk Allocation"
+    date : Jun 2015
+    score : 8
+-
+    occasion : "Risk, Uncertainty and Decision Conference"
+    place : "Bocconi, Mailand, Italy"
+    title : "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
+    date : Jun 2015
+    score : 8
+-
+    occasion : "Mathematical Finance Seminar"
+    place : "Fudan, Shanghai, China"
+    title : "Stability and Markov Properties of Forward-Backward Stochastic Differential Equations"
+    date : May 2015
+    score : 8
+-
+    occasion : "Shanghai Advanced Institute for Finance"
+    place : "SJTU, Shanghai, China"
+    title : "Multivariate Risk Assessment and Monetary Risk Allocation"
+    date : May 2015
+    score : 8
+-
     occasion : "Risk & Stochastics and Financial Mathematics Seminar"
     place : "LSE, London, England"
-    title : "Numerical representation of convex preferences on Anscombe–Aumann acts"
+    title : "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
     date : Nov 2014
     score : 8
 -
