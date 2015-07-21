@@ -20,7 +20,7 @@
     - - 2015
   type: article-journal
   rank: '16'
-  URL_Open: ""
+  URL_Open: "http://arxiv.org/abs/1507.05351"
   abstract: >
       The ongoing concern about systemic risk since the outburst of the global financial crisis has highlighted the need for risk measures at the level of sets of interconnected financial components, such as portfolios, institutions or members of clearinghouses.
       The two main issues in systemic risk are the computation of an overall reserve level and its allocation to the different components of the system according to their importance.
