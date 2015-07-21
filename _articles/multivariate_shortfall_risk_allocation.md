@@ -20,6 +20,7 @@ Abstract
 Keywords
 :   {{publication.keywords | join: ', '}}
 
+
 Download
 :   <a href="{{publication.URL_Open}}" target="_blank"> pdf (open science)</a>{% if publication.URL %}<br><a href="{{publication.URL}}" target="_blank">journal link (usually closed science)</a>{% endif %}
 
