@@ -1,13 +1,25 @@
 -
+    occasion : "International Congress on Industrial and Applied Mathematics"
+    place : "Beijing, China"
+    title : "Multivariate Shortfall Risk Allocation"
+    date : Aug 2015
+    score : 8
+-
     occasion : "Stochastics Methods in Finance and Physics Workshop"
     place : "Heraklion, Greece"
     title : "Multivariate Shortfall Risk Allocation"
     date : Jul 2015
     score : 8
 -
-    occasion : "Center for Interdisciplinary Research Seminar"
+    occasion : "Center for Interdisciplinary Research (ZIF); Seminar"
     place : "Bielefeld University, Bielefeld, Germany"
     title : "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
+    date : Jul 2015
+    score : 8
+-
+    occasion : "Berlin-Princeton-Singapore Workshop on Quantitative Finance"
+    place : "National University of Singapore, Singapore"
+    title : "Multivariate Shortfall Risk Allocation"
     date : Jul 2015
     score : 8
 -
