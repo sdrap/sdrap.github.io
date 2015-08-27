@@ -47,7 +47,7 @@ Sep 1995 &mdash; Sep 1997
 **Employment and Academic Positions**
 
 Apr 2015 &mdash; Now
-:   Assistant Professor &mdash; distinguished researcher &mdash; at [Shanghai Jiao Tong University](http://en.sjtu.edu.cn)
+:   Associate Professor &mdash; (Distinguished Researcher Fellow) &mdash; at [Shanghai Jiao Tong University](http://en.sjtu.edu.cn)
 
 Nov 2013 &mdash; Mar 2015
 :   Scientific Assistant at the [Technical University Berlin](http://www.tu-berlin.de), Germany.
