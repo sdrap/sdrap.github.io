@@ -6,7 +6,7 @@ rank: 5
 ---
 
 
-2015 September 7-10th &mdash; Lecture series by [Michael Kupper](http://cms.uni-konstanz.de/math/kupper/)
+2015 September 7-10th &mdash; Lecture series by [Michael Kupper](http://cms.uni-konstanz.de/math/kupper/) of Konstanz University
 :   **Date:** September 7th, 8th, 9th (eventually 10th if needed)  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
     **Room:** 305  
@@ -15,7 +15,7 @@ rank: 5
     **Abstract:** The lecture focuses on the pricing and hedging of derivatives in financial markets under model uncertainty. We first give a short introduction to risk measures and discuss several examples such as the mean-variance, the value at risk, and the average value at risk. Based on a convex version of the Daniell-Stone theorem we then derive a dual representation result for increasing convex functions with countably additive measures. As an application of the duality result, we discuss model free superhedging, give the link to transport problems, and derive duality formulas for robust pricing and hedging in discrete time financial markets.
 
 
-2015 August 19th &mdash; Seminar Talk by [Stéphane Crépey](http://grozny.maths.univ-evry.fr/pages_perso/crepey/)
+2015 August 19th &mdash; Seminar Talk by [Stéphane Crépey](http://grozny.maths.univ-evry.fr/pages_perso/crepey/) of Evry University
 :   **Date:** August 19th  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
     **Room:** 203  
