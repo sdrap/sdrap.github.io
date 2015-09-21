@@ -4,11 +4,12 @@ title: Stochastic Processes
 date: WS 2015/2016
 ---
 
-### Actual Informations:
+### Recent Informations:
+
 
 2015-09-14
-:    Dear all, since most of you never really heard a full lecture on general measure and integration theory I decided to dedicate the first 2 to 3 weeks of the lecture to present it (with all the definitions, most important properties, proofs).
-I will also provide the script at the end of each lecture and not every week so that you can work home with the right concepts (and not struggling with my very bad handwriting as I noticed ;) ).
+:    Dear all, since most of you never really attend a lecture on general measure and integration theory, I will dedicate the first 2-3 weeks of the lecture to present it.
+I will also provide the script at the end of each lecture and not every week so that you can work home with the right concepts
 
 
 ### When/Where
@@ -63,6 +64,7 @@ The course won't follow any textbook however you might find some interesting/alt
 
 ### Lecture Material
 
-* Script
+* Script: [First Chapter, Version 2015/09/21]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_0921.pdf)
 
-* Homeworks:
+* Assignments:
+    * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
