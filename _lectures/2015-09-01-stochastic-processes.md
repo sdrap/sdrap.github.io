@@ -36,12 +36,11 @@ Throughout the whole course we illustrate the theory by means of examples within
 ### Lecture Organization
 
 * Blackboard lecture. I Provide definition, motivation, theorems but sometimes only the main arguments of the proofs.
-* You complete the proofs on your own as an exercise.
-* In the following week the script on the content of the previous week is provided as pdf at the end of this page in the section [Lecture Material](#lecture-material) so that you can check your own proofs.
+* Sometimes you complete the proofs on your own as an exercise.
+* The script will be provided/corrected/completed every week as pdf at the end of this page in the section [Lecture Material](#lecture-material) so that you can check your own proofs.
 * Every week on Monday a set of exercises will be provided as pdf at the end of this page in the section [Lecture Material](#lecture-material).  
 The exercises have to be solved by group of three.  
-The following week, the teaching assistant will gather the homeworks and give you those of the previous week graded.  
-During the first half hour on Monday, a student of one of the group perform the proof of one of the exercises on the black board.
+You upload the assignment before the next Monday 14:00 on the server and the teaching assistant give you those of the previous week graded.  
 * You can ask for hints to the teaching assistant or myself during office hours.
 
 * Grading: There will be a final written exam at some point during the first of second week of January.
@@ -55,11 +54,17 @@ Measure theory, topology, some basics of functional analysis, and probability th
 
 The course won't follow any textbook however you might find some interesting/alternative approaches in
 
-[1] "Foundation of Modern Probability", O. Kallenberg, 2nd Edition 2002 (very general but complete)
+For measure and integration theory:
 
-[2] "Stochastic Calculus and Financial Applications", J.M. Steel, 2000 (easy but complete introduction with applications to finance)
+[1] "Measure and Integration Theory", H. Bauer, 2001 (very complete)
 
-[3] "Probability and Potentials B", P. Dellacherie, P.A. Meyer, 1982 (the most general reference, very hard and build upon Probability and Potentials A) 
+For stochastic processes:
+
+[2] "Foundation of Modern Probability", O. Kallenberg, 2nd Edition 2002 (very general but complete)
+
+[3] "Stochastic Calculus and Financial Applications", J.M. Steel, 2000 (easy but complete introduction with applications to finance)
+
+[4] "Probability and Potentials B", P. Dellacherie, P.A. Meyer, 1982 (the most general reference, very hard and build upon Probability and Potentials A) 
 
 
 ### Lecture Material
