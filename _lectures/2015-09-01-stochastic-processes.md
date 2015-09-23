@@ -69,7 +69,7 @@ For stochastic processes:
 
 ### Lecture Material
 
-* Script: [First Chapter, Version 2015/09/21]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_0921.pdf)
+* Script: [First Chapter, Version 2015/09/23]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_0923.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
