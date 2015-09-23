@@ -1,6 +1,6 @@
 -
   id: armenti2015
-  title: Multivariate Shortfall Risk Allocation
+  title: Multivariate Shortfall Risk Allocation and Systemic Risk
   author:
     -
       family: Armenti
@@ -14,7 +14,7 @@
     -
       family: Papapantoleon
       given: Antonis
-  container-title: Preprint
+  container-title: "Preprint (Updated Version with numerics 2015/09/22. Former version titled <em>Multivariate Shortfall Risk Allocation</em>)"
   issued:
     date-parts:
     - - 2015
@@ -22,11 +22,10 @@
   rank: '16'
   URL_Open: "http://arxiv.org/abs/1507.05351"
   abstract: >
-      The ongoing concern about systemic risk since the outburst of the global financial crisis has highlighted the need for risk measures at the level of sets of interconnected financial components, such as portfolios, institutions or members of clearinghouses.
-      The two main issues in systemic risk are the computation of an overall reserve level and its allocation to the different components of the system according to their importance.
-      We develop here a pragmatic approach to systemic risk measurement and allocation based on multivariate shortfall risk measures, where acceptable allocations are first computed and then aggregated so as to minimize costs.
-      We emphasize the analysis of the risk allocation and of its sensitivity as an indicator of the systemic risk.
-      Moreover, we provide efficient numerical schemes to assess the risk allocation in high dimensions.
+      The ongoing concern about systemic risk since the outburst of the global financial crisis has highlighted the need for risk measures at the level of sets of interconnected financial components, such as portfolios, institutions or members of clearing houses. The two main issues in systemic risk are the computation of an overall reserve level and its allocation to the different components according to their systemic relevance. We develop here a pragmatic approach to systemic risk measurement and allocation based on multivariate shortfall risk measures, where acceptable allocations are first computed and then aggregated so as to minimize costs. We analyze the sensitivity of the risk allocations to various factors and highlight its relevance as an indicator of systemic risk. Moreover, we provide numerical schemes to assess the risk allocation in high dimensions.
+
+      The code together with the numerical results can be viewed on [GitHub](https://github.com/sdrap/MSRA)
+
   keywords:
     - Systemic risk
     - Risk allocation

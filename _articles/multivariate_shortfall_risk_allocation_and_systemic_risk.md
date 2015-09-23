@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Multivariate Shortfall Risk Allocation
+title: Multivariate Shortfall Risk Allocation and Systemic Risk
 ---
-{% assign publications = site.data.publications | where: "title","Multivariate Shortfall Risk Allocation" %}
+{% assign publications = site.data.publications | where: "title","Multivariate Shortfall Risk Allocation and Systemic Risk" %}
 
 {% for publication in publications %}
 Authors
