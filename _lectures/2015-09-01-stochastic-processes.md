@@ -76,3 +76,4 @@ For stochastic processes:
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
+    * Sheet 2: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW02.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW02.tex)

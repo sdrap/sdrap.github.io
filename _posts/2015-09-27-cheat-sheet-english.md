@@ -28,7 +28,7 @@ categories:
 
 ## Basic math vocabulary:
 
-* $$x\geq y$$: $$x$$ is greater than $$y$$, or $$y$$ is less than $$x$$. $$x$$ 不等于 $$y$$   
+* $$x\geq y$$: $$x$$ is greater than $$y$$, or $$y$$ is less than $$x$$. $$x$$ 不小于 $$y$$   
 * $$x\geq 0$$: $$x$$ is positive, and $$-x$$ is negative. $$x$$不小于$$0$$    
 * $$x>y$$ or $$x>0$$: $$x$$ is strictly greater than $$y$$, or $$x$$ is strictly positive. $$x$$严格大于$$y$$  $$x$$严格大于$$0$$
 * $$\mathbb{N}$$: natural numbers (自然数) sometimes called strictly positive integers (正整数).
@@ -37,8 +37,8 @@ categories:
 * $$\mathbb{R}$$: real numbers 实数
 * $$f:X\to Y$$: function $$f$$ from the domain $$X$$ to the codomain $$Y$$. $$f$$ 是从定义域 $$X$$ 映射到值域 $$Y$$ 的函数
 * $$f(A)$$ and $$f^{-1}(B)$$: image of $$A\subseteq X$$ and preimage of $$B\subseteq Y$$ under $$f$$. $$A$$ 在映射$$f$$下的像，$$B$$的原像
-* $$f(x)\leq f(y)$$ for $$x\leq y$$: $$f$$ is increasing. 单调增的  
-* $$f(x)\geq f(y)$$ for $$x\leq y$$: $$f$$ is decreasing. 单调减的
+* $$f(x)\leq f(y)$$ for $$x\leq y$$: $$f$$ is increasing. 单调不减的  
+* $$f(x)\geq f(y)$$ for $$x\leq y$$: $$f$$ is decreasing. 单调不增的
 * $$f$$ either increasing or decreasing: $$f$$ is monotone. $$f$$ 是单调的
 * Finite family 有限族
 * Countable family 可数族
@@ -84,7 +84,7 @@ Then, $$nm$$ is also even.
 
 $$n,m \in \mathbb{Z}$$ are even $$\Rightarrow$$ $$\exists p,q \in \mathbb{Z}$$ such that $$n=2p$$ and $$m=2q$$ $$\Rightarrow nm=2p2q=2(2pq)=2r$$ where $$r:=2pq\in \mathbb{Z}$$ $$\Rightarrow$$ $$nm$$ is even. CQFD.
 
-$$n,m \in \mathbb{Z}$$ 是偶数 $$\Rightarrow$$ $$\exists p,q \in \mathbb{Z}$$ 使得 n=2p 且 m=2q $$\Rightarrow nm=2p2q=2(2pq)=2r其中r=2pq\in \mathbb{Z}$$ $$\Rightarrow$$ $$mn$$ 也是偶数。证明完成
+$$n,m \in \mathbb{Z}$$ 是偶数 $$\Rightarrow$$ $$\exists p,q \in \mathbb{Z}$$ 使得 n=2p 且 m=2q $$\Rightarrow nm=2p2q=2(2pq)=2r其中r=2pq\in \mathbb{Z}$$ $$\Rightarrow$$ $$mn$$ 也是偶数. 证明完成.
 
 #### Proof 证明
 Let $n$ and $m$ be two even integers. 

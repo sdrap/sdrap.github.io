@@ -1,0 +1,181 @@
+
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theorembodyfont{\upshape}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Youyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{2}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 2}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+Throughout, $(\Omega,\mathcal{F},P)$ be a probability space.
+
+\begin{exercise}(10 Points)
+    Given a sequence $(A_n)$ of events, we define
+    \begin{equation*}
+        \liminf A_n=\cap_n \cup _{k\geq n}A_k\quad \text{and}\quad \limsup A_n =\cup_n\cap_{n\geq k}A_k.
+    \end{equation*}
+    In other terms 
+    \begin{align*}
+        \limsup A_n &=\left\{ \omega\colon \omega \in A_n\text{ for all }n\geq n_0 \text{ for } n_0\text{ large enough}\right\} \\
+        \limsup A_n &=\left\{ \omega\colon \omega \in A_n\text{ for infinitely many }n\right\} 
+    \end{align*}
+    Show that
+    \begin{enumerate}[label=\textit{(\alph*)}]
+        \item $P[\liminf A_n]\leq \liminf P[A_n]\leq \limsup P[A_n]\leq P[\limsup A_n]$ and give an example for which all inequalities are strict.\footnote{To this end, show that $\liminf 1_{A_n}=1_{\liminf A_n}$ and $\limsup 1_{A_n}=1_{\limsup A_n}$.}
+        \item if $\sum P[A_n]<\infty$, then $P[\limsup A_n]=0$.\footnote{Recall that if $\sum a_n <\infty$ for $a_n>0$, then it holds $\sum_{k\geq n}a_k\to 0$ as $n\to \infty$.}
+    \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}(20 Points + 4 Bonus point question (f))
+    Recall that a sequence $(X_n)$ of random variables converges to $X$ in probability if $P[|X_n-X|\geq \varepsilon]\to 0$ for every $\varepsilon>0$.
+    Throughout the exercise $(X_n)$ and $(Y_n)$ denote sequences of random variables and $X,Y$ two random variables.
+    \begin{enumerate}[label=(\alph*), fullwidth]
+        \item Show that
+            \begin{equation*}
+                d(X,Y)=E\left[ \frac{|X-Y|}{1+|X-Y|} \right],
+            \end{equation*}
+            defines a metric on $L^0$ and that convergence in this metric is equivalent to convergence in probability.\footnote{That is $X_n\to X$ in probability is equivalent to $d(X_n,X)\to 0$. Make use of Markov's inequality, and the fact that $f(x)=x/(1+x)$ on $\mathbb{R}_+$ is bounded by $1$, and strictly increasing.}
+        \item Show that $X_n \to X$ $P$-almost surely implies that $X_n\to X$ in probability.
+            Give and example that the reciprocal is not true.
+        \item Suppose that $\sum P[|X_n-X|\geq \varepsilon] <\infty$ for every $\varepsilon>0$.
+            Show that $X_n\to X$ $P$-almost surely.
+        \item Show that each converging sequence of random variables that converges in probability has a subsequence that converges $P$-almost surely.
+                \item Suppose that any subsequence of $(X_n)$ admits itself another subsequence that converges to $X$ $P$-almost surely.
+            Show that $X_n\to X$ in probability.
+        \item (this one is Bonus) Let $f:\mathbb{R}\times \mathbb{R}\to \mathbb{R}$ be a continuous function.\footnote{Use the fact that $f$ is uniformly continuous on compact}
+            Show that if $X_n\to X$ and $Y_n\to Y$ both in probability, then it holds $f(X_n,Y_n)\to f(X,Y)$ in probability.
+    \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise} (20 Points) 
+    \begin{enumerate}[label=(\alph*), fullwidth]
+        \item Find a sequence of positive random variables $(X_n)$ such that $E[X_n]\to 0$ but $P[\limsup X_n>\liminf X_n]=1$, that is $X_n$ converges $P$-almost nowhere.
+        \item Find a sequence of positive random variables $(X_n)$ such that $X_n\to X$ $P$-almost surely and in $L^1$, but $\sup_n X_n $ is not integrable.
+        \item Show that if $X_n\to X$ in $L^1$, then $X_n\to X$ in probability.
+            Find an example such that the reciprocal is not true.
+        \item Show that the dominated convergence theorem holds when instead of requiring $X_n\to X$ $P$-almost surely, on suppose that $X_n\to X$ in probability.
+        \item Let $\alpha\geq 1$ and $X$ be an integrable positive random variable.
+            Show that $\lim E[n\ln(1+(X/n)^\alpha)]$ exists and compute its value.\footnote{Hint, show that $\ln(1+x^\alpha)\leq \alpha x$ for $\alpha\geq 1$ and $x\geq 0$. Then use some Taylor expansion.}
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}(Bonus, 10 Points)
+    Recall that the $\|\cdot\|_{\infty}$ operator is defined as\footnote{With the convention that $\inf \emptyset =\infty$.}
+    \begin{equation*}
+        \|X\|_{\infty}=\inf\left\{ m\in \mathbb{R}_+\colon P\left[ |X|\geq m \right]=0 \right\}
+    \end{equation*}
+    for a random variable $X$.
+
+    Let now $(X_n)$ be a sequence of random variables which converges $P$-almost surely to a random variable $X$.
+    Show that for every $\varepsilon>0$, there exists a measurable set $A$ with $P[A^c]<\varepsilon$ such that
+    \begin{equation*}
+        \lim \|(X_n-X)1_A\|_{\infty}=0.
+    \end{equation*}
+
+    Hint: Define $A_{n,k}=\cup_{m\geq n}\{|X_m-X|\geq 1/k\}$ and show that its probability can be made arbitrarily small.
+\end{exercise}
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015/10/12 14:00.
+
+\end{document}
