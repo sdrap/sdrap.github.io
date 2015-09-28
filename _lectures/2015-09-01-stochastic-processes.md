@@ -7,6 +7,9 @@ date: WS 2015/2016
 ### Recent Informations:
 
 
+2015-09-28
+:   [Cheat Sheet Chinese/English for Math]({{site.url}}/math/2015/09/27/cheat-sheet-english/)
+
 2015-09-14
 :    Dear all, since most of you never really attend a lecture on general measure and integration theory, I will dedicate the first 2-3 weeks of the lecture to present it.
 I will also provide the script at the end of each lecture and not every week so that you can work home with the right concepts
