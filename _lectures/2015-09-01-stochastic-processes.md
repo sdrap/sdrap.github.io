@@ -6,6 +6,8 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-09-30
+:   Update of the script. Download file below.
 
 2015-09-28
 :   [Cheat Sheet Chinese/English for Math]({{site.url}}/math/2015/09/27/cheat-sheet-english/)
