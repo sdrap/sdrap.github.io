@@ -6,6 +6,15 @@ rank: 5
 ---
 
 
+2015 October 8th &mdash; Seminar Talk from Fudan University by [Ulrich Horst](http://horst.qfl-berlin.de/ulrich-horst) of Humboldt University Berlin
+:   **Date:** October 8th  
+    **Place:** Fudan University, East Guanghua Tower 光华东主楼1801室, Shanghai  
+    **Room:** 1801  
+    **Time:** 10:30 &mdash; 11:30  
+    **Title:** Mathematical Models of Limit Order Books  
+    **Abstract:** A significant part of financial transactions is nowadays carried out over an electronic limit order book (LOB) where unexecuted orders are stored and displayed while awaiting execution. From a mathematical perspective, LOBs are high-dimensional complex priority queueing systems. Incoming limit orders can be placed at many different price levels while incoming market orders are matched against standing limit orders according to a set of priority rules. The inherent complexity of limit order books renders their mathematical analysis challenging. In this talk we review recent results on scaling limits for LOBs. Specifically, we consider queueing theoretic LOB models whose dynamics converges to a coupled PDE or SPDE system, depending on the choice of scaling. Our models are flexible enough to allow for a dependence of price dynamics on standing order volumes. This captures the well-documented empirical fact that order imbalances at the top of the book are a significant determinant of stock price dynamics over short time spans.
+
+
 2015 September 7-10th &mdash; Lecture series by [Michael Kupper](http://cms.uni-konstanz.de/math/kupper/) of Konstanz University
 :   **Date:** September 7th, 8th, 9th (eventually 10th if needed)  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
