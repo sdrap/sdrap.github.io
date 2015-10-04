@@ -47,7 +47,7 @@ It follows that
 * the family $$(x_n)_{n \in \mathbb{N}}$$ is the binary sequence $$(1,0,1,0,\ldots)$$
 
 ### Some -- abuse of -- notations
-I often -- just like many mathematicians -- misuse the notations to ease the notations.
+I often -- just like many mathematicians -- misuse the notations to ease the text flow.
 A short list of these misuses that are, however, not really confusing when you think a little bit about it.
 
 * *"Let $$(x_i)_{i \in I}$$ be a family of elements in $$X$$,..."*
