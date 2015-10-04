@@ -6,6 +6,11 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-10-04
+:   Correction of the homework sheet (typo by the definition of limit superior and limit inferior). Download link at the end of the page.    
+    Add some more arguments concerning Hilbert spaces in the lecture notes for the proof of Radon-Nykodym Theorem. Download link at the end of the page.  
+    After some questions concerning the difference between collection and family, [I wrote some words about it]({{site.url}}/math/2015/10/04/family-vs-collection/). You can look at the [This and That Section]({{site.url}}/this_and_that/).
+
 2015-09-30
 :   Update of the script. Download file below.
 
@@ -74,7 +79,7 @@ For stochastic processes:
 
 ### Lecture Material
 
-* Script: [First Chapter, Version 2015/09/30]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_0930_chap01.pdf)
+* Script: [First Chapter, Version 2015/10/04]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_1004_chap01.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)

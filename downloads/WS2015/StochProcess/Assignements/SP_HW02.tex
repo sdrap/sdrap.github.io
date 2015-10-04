@@ -111,12 +111,12 @@ Throughout, $(\Omega,\mathcal{F},P)$ be a probability space.
 \begin{exercise}(10 Points)
     Given a sequence $(A_n)$ of events, we define
     \begin{equation*}
-        \liminf A_n=\cap_n \cup _{k\geq n}A_k\quad \text{and}\quad \limsup A_n =\cup_n\cap_{n\geq k}A_k.
+        \liminf A_n=\cup_n \cap _{k\geq n}A_k\quad \text{and}\quad \limsup A_n =\cap_n\cup_{n\geq k}A_k.
     \end{equation*}
     In other terms 
     \begin{align*}
-        \limsup A_n &=\left\{ \omega\colon \omega \in A_n\text{ for all }n\geq n_0 \text{ for } n_0\text{ large enough}\right\} \\
-        \limsup A_n &=\left\{ \omega\colon \omega \in A_n\text{ for infinitely many }n\right\} 
+        \limsup A_n &=\left\{ \omega\colon \omega \in A_n\text{ for infinitely many }n\right\} \\
+        \liminf A_n &=\left\{ \omega\colon \omega \in A_n\text{ for all }n\geq n_0 \text{ for } n_0\text{ large enough}\right\} 
     \end{align*}
     Show that
     \begin{enumerate}[label=\textit{(\alph*)}]
