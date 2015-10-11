@@ -6,6 +6,11 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-10-12
+:   I hope you all spend some good national day.
+    I corrected some typos in the theorem on conditional expectation -- a notation mistake with $$\mathcal{F}$$ and $$\mathcal{G}$$.
+    The third homework assignment is online.
+
 2015-10-04
 :   Correction of the homework sheet (typo by the definition of limit superior and limit inferior). Download link at the end of the page.    
     Add some more arguments concerning Hilbert spaces in the lecture notes for the proof of Radon-Nykodym Theorem. Download link at the end of the page.  
@@ -79,8 +84,9 @@ For stochastic processes:
 
 ### Lecture Material
 
-* Script: [First Chapter, Version 2015/10/04]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_1004_chap01.pdf)
+* Script: [First Chapter, Version 2015/10/04]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_1012_chap01.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
     * Sheet 2: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW02.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW02.tex)
+    * Sheet 3: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW03.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW03.tex)

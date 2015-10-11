@@ -1,0 +1,188 @@
+
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Youyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{3}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 3}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\begin{exercise}(10 points)
+
+    Let $(\Omega,\mathcal{F},P)$ be a probability space.
+    Given two random variables $X$ and $Y$ in $L^2$, the covariance of $X$ and $Y$ is given as
+    \begin{equation*}
+        \text{Cov}(X,Y)=E\left[ \left( X-E[X] \right)\left( Y-E[Y] \right) \right]
+    \end{equation*}
+    and the variance of $X$ as
+    \begin{equation*}
+        \text{Var}(X)=\text{Cov}(X,X)=E\left[ \left( X-E[X] \right)^2 \right].
+    \end{equation*}
+    Let $(X_n)$ be a sequence of pairwise uncorrelated random variables in $L^2$ such that $\sup \text{Var}(X_n)<\infty$.
+    Defining
+    \begin{equation*}
+        S_n=\frac{1}{n} \sum_{k\leq n}\left(X_k-E[X_k]\right),
+    \end{equation*}
+    show that $S_n\to 0$ in probability.\footnote{What about Markov inequality?...}
+\end{exercise}
+
+
+\begin{exercise} (10 Points) 
+
+    We consider a very simple financial market with two stocks $S^1$ and $S^2$ which values tomorrow depends on three states, that is $\Omega:=\{\omega_1,\omega_2,\omega_3\}$.
+    The values are given as follows
+    \begin{equation*}
+        S^1(\omega):=
+        \begin{cases}
+            90  &\text{ if }\omega=\omega_1\text{ or }\omega=\omega_2\\
+            110 &\text{ if }\omega =\omega_3
+        \end{cases}
+        \quad \text{and}\quad
+        S^1(\omega):=
+        \begin{cases}
+            90  &\text{ if }\omega=\omega_1\\
+            100 &\text{ if }\omega=\omega_2\\
+            110 &\text{ if }\omega =\omega_3
+        \end{cases}
+    \end{equation*}
+    We set $\mathcal{F}=2^\Omega$ and consider that each state comes with the same probability, that is, we consider the uniform probability measure $P$ on $\mathcal{F}$ given by $P[\{\omega_1\}]=P[\{\omega_2\}]=P[\{\omega_3\}]=1/3$.
+
+    Suppose that you are an insider that have the knowledge about the outcome of $X$ tomorrow.
+    Compute the conditional expected value of $Y$ with respect to this information, that is $E[Y|X]$.\footnote{Under this terminology, we understand conditional expectation of $Y$ with respect to the $\sigma$-algebra generated by $X$, that is $\sigma(X)$.}
+\end{exercise}
+
+\begin{exercise}(18 points)
+
+    Let $(\Omega,\mathcal{F},P)$ be a probability space and $\mathcal{G}\subseteq \mathcal{F}$ be a sub-$\sigma$-algebra.
+    Show that
+    \begin{enumerate}[label=\textit{(\roman*)}]
+        \item $E[|E[X|\mathcal{G}]|]\leq E[|X|]$ for every $X \in L^1(\mathcal{F})$.
+        \item the mapping $X\mapsto E[X | \mathcal{G}]$ from $L^1(\mathcal{F})$ to $L^1(\mathcal{G})$ is linear and Lipschitz continuous;
+        \item $E[X|\mathcal{G}]\geq 0$ $P$-almost surely whenever $0\leq X$ $P$-almost surely and $X \in L^1(\mathcal{F})$;
+        \item $E[X_n|\mathcal{G}]\nearrow E[X|\mathcal{G}]$ $P$-almost surely for every sequence $(X_n)$ of elements in $L^1(\mathcal{F})$ such that $0\leq X_n\nearrow X\in L^1(\mathcal{F})$;
+        \item $E[\liminf X_n |\mathcal{G}]\leq \liminf E[X_n|\mathcal{G}]$ for every sequence $(X_n)$ of elements in $L^1(\mathcal{F})$ such that $X_n\geq Y \in L^1(\mathcal{F})$;
+        \item $E[X_n|\mathcal{G}]\to E[X|\mathcal{G}]$ $P$-almost surely and in $L^1(\mathcal{F})$ for every sequence $(X_n)$ of elements in $L^1(\mathcal{F})$ such that $|X_n|\leq Y\in L^1\mathcal{F}$ for every $n$;
+        \item $E[YX|\mathcal{G}]=YE[X|\mathcal{G}]$ whenever $Y$ is $\mathcal{G}$-measurable;
+        \item $E[XE[Y|\mathcal{G}]]=E[E[X|\mathcal{G}]Y]=E[E[X|\mathcal{G}]E[Y|\mathcal{G}]]$;
+        \item $E[E[X|\mathcal{G}_2]|\mathcal{G}_1]$ whenever the $\sigma$-algebras are such that $\mathcal{G}_1\subseteq \mathcal{G}_2\subseteq \mathcal{F}$.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}(Bonus 10 points)
+
+    Let $(\Omega,\mathcal{F},P)$ be a probability space where $\Omega =[0,1]$, $\mathcal{F}$ is the Borel-$\sigma$-algebra of $[0,1]$ and $P$ is the Lebesgue measure on $[0,1]$.
+    On the vector space $L^0$, we consider the topology generated by the distance\footnote{Which according to the last homework sheet corresponds to the topology of convergence in probability.}
+    \begin{equation*}
+        d(X,Y)=E\left[ \frac{|X-Y|}{1+|X-Y|} \right].
+    \end{equation*}
+
+    Let $C\subseteq L^0$ be a convex set with non empty interior\footnote{That is, there exists a open ball $B_\varepsilon(Y)=\{X\colon d(X,Y)<\varepsilon\}$ with $Y \in C$ and $\varepsilon>0$ such that $B_\varepsilon(Y)\subseteq C$.}.
+    Show that $C=L^0$.\footnote{Show that without loss of generality you can assume that $B_{\varepsilon}(0)\subseteq C$ for some $\varepsilon>0$ and approximate any $X \in L^0$ by smart convex combinations -- with more than two elements -- of elements in $B_{\varepsilon}(0)$.}
+    Deduce that the only continuous linear function $I:L^0\to \mathbb{R}$ with this topology is the constant $0$, that is, $I(X)=0$ for every $X \in L^0$.\footnote{If $I$ is linear and continuous, it follows that $I^{-1}(]-\varepsilon,\varepsilon[)$ is convex and open.}
+\end{exercise}
+
+
+
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.10.19 14:00.
+
+\end{document}
