@@ -5,6 +5,14 @@ permalink: /activities/
 rank: 5
 ---
 
+2015 October 15th &mdash; Lecture/Seminar Talk by me...
+:   **Date:** October 15th  
+    **Place:** Shanghai Jiao Tong University, Minhang Campus, Baoyugang library, Shanghai  
+    **Room:** 601  
+    **Time:** 14:00 &mdash; 15:40  
+    **Title:** Multivariate Shortfall Risk Allocation and Systemic Risk  
+    **Remark:** *This is not really a talk but rather an introduction to risk assessment with a particular focus on systemic risk*  
+
 
 2015 October 8th &mdash; Seminar Talk from Fudan University by [Ulrich Horst](http://horst.qfl-berlin.de/ulrich-horst) of Humboldt University Berlin
 :   **Date:** October 8th  
