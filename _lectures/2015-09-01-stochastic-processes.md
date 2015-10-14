@@ -6,6 +6,10 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+
+2015-10-14
+:   Beginning of Chapter 2 is online as well as Ipython notebooks
+
 2015-10-12
 :   I hope you all spend some good national day.
     I corrected some typos in the theorem on conditional expectation -- a notation mistake with $$\mathcal{F}$$ and $$\mathcal{G}$$.
@@ -84,9 +88,18 @@ For stochastic processes:
 
 ### Lecture Material
 
-* Script: [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_1012.pdf)
+* Script: 
+    * [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1012.pdf)
+    * [Second Chapter, Version 2015/10/14]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1014.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
     * Sheet 2: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW02.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW02.tex)
     * Sheet 3: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW03.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW03.tex)
+
+
+* Ipython notebooks:
+    * [Random walk]({{site.url}}/downloads/WS2015/StochProcess/Materials/Random Walk.ipynb)
+    * [Stopping time]({{site.url}}/downloads/WS2015/StochProcess/Materials/Random_Walk_Stopping_Time.ipynb)
+    * [Random Walk]({{site.url}}/downloads/WS2015/StochProcess/Materials/Random_Walk_Upcrossing.ipynb)
+
