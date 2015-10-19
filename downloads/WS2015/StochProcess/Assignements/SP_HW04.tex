@@ -1,0 +1,190 @@
+
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Youyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{4}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 4}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+Throughout, $(\Omega, \mathcal{F}, \mathbb{F},P)$ is a filtrated probability space where $\mathbf{T}=\mathbb{N}_0$.
+
+
+
+
+\begin{exercise}(10 points)
+    \begin{enumerate}[label=\textit{(\alph*)}]
+        \item Let $X$ and $Y$ be two super-martingales.
+            Show that $X\wedge Y$ is a super-martingale;
+        \item Let $X$ be a predictable martingale, show that $X_t=X_0$ for every $t$.
+        \item Let $\xi \in L^1$, show that $X_t:=E[\xi |\mathcal{F}_t]$ defines a martingale $X$;
+        \item Show, or find a counter example for the following assertion: Let $X$ be an adapted process such that $X_t$ is integrable and $E[X_0]=E[X_t]$ for every $t$. Then $X$ is a martingale.
+    \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}(5 points)
+    Let $I\subseteq \mathbf{T}$ be such that $\sup I=\infty$.
+    Show that every super-martingale $X$ such that $E[X_0]\leq E[X_t]$ for every $t \in I$ is a martingale.
+\end{exercise}
+
+
+
+
+\begin{exercise}(10 points)
+    Let $X$ be an adapted process such that $E[\sup_t |X_t|]<\infty$.
+    Denote by $\mathcal{T}$ the set of all stopping times and let $T \in \mathbb{N}_0$ be an arbitrary time horizon.
+    We define recursively
+    \begin{equation*}
+        S_T=X_T\quad \text{and}\quad S_t=\max \left\{ E\left[ S_{t+1}|\mathcal{F}_t \right];X_t \right\}, \quad t\leq T-1.
+    \end{equation*}
+    Define further $\tau^t=\inf\{s\colon s\geq t \text{ and }S_s=X_s\}$ for every $t=0,\ldots, T$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Show that $S=(S_t)_{t=0,\ldots, T}$ is a super-martingale such that $S_t\geq X_t$ for every $t=0,\ldots, T$;
+        \item Let $U=(U_t)_{t=0,\ldots,T}$ be a super-martingale such that $U_t\geq X_t$ for every $t=0,\ldots,T$.
+            Show that $U_t\geq X_t$ for every $t=0,\ldots, T$;
+        \item Show that $E[X_{\tau^t}|\mathcal{F}_s]=E[S_t|\mathcal{F}_s]$ for every $s\leq t\leq T$ and conclude that
+            \begin{equation*}
+                E\left[ X_{\tau^t} \right]=E\left[ S_t \right]=\max_{\{\tau \in \mathcal{T}\colon t\leq \tau\leq T\}} E\left[ X_\tau \right]
+            \end{equation*}
+        \item We denote by $S^T=(S_t^T)_{t=0,\ldots, T}$ the process defined in (a) whereby, we stress the dependence on the time horizon due to its recursive definition.
+            Clearly, $S_t=\lim_{T\to \infty} S^T_t$ defines a process $S$.
+            Show that $S$ is a super-martingale for which holds $S\geq X$.
+            Show further that for every other super-martingale $U$ such that $U\geq X$ it follows $U\geq S$.
+    \end{enumerate}
+\end{exercise}
+\begin{exercise}(Bonus 10 points)
+    Consider now our example of coin tossing but infinitely many times.
+    As seen, the state  space is defined as follows
+    \begin{equation*}
+        \Omega=\prod_{t \in \mathbb{N}} \{-1,1\}=\{-1,1\}^{\mathbb{N}}=\{\omega=(\omega_t)\colon \omega_t =\pm 1\text{ for every }t\}
+    \end{equation*}
+    On each $\Omega_t=\{-1,1\}$ we consider the $\sigma$-algebra $\mathcal{F}_t=\{\emptyset,\{-1\},\{1\}, \{-1,1\}\}$ and on $\Omega$ the product $\sigma$-algebra $\mathcal{F}=\otimes\mathcal{F}_t$.
+    \begin{enumerate}[label=(\alph*)]
+        \item Show that the collection $\mathcal{R}$ of finite product cylinders
+            \begin{equation}\label{eq:finite_cylinder_cointoss}
+                A=\{\omega=(\omega_t) \in \Omega \colon \omega_{t_k}=e_k, k=1,\ldots n\}
+            \end{equation}
+            for a given set of values $e_k\in \{-1,1\}$, and times $t_k \in \mathbb{N}$, $k=1,\ldots,n$, together with the empty-set is a semi-ring.
+        \item For $p\in [0,1]$, we define $P:\mathcal{R}\to [0,1]$ as follows
+            \begin{equation*}
+                P[\emptyset]=0\quad \text{ and }\quad P[A]=p^{l}(1-p)^{n-l}
+            \end{equation*}
+            for every $A \in \mathcal{R}$ of the form \eqref{eq:finite_cylinder_cointoss} where $l$ is equal to the number of those $k=1,\ldots,n$ where $e_k=1$.
+            Show that $P$ defines a content.
+        \item Show that for every finite family $(A_k)_{k\leq n}$ of elements in $\mathcal{R}$ and $A\in \mathcal{R}$ such that $A\subseteq \cup_{k\leq n}A_k$, it holds\footnote{Consider first the case where $n=2$ and $A_1,A_2$ are one dimensional product cylinder.}
+            \begin{equation*}
+                P[A]\leq \sum_{k\leq n}P[A_k].
+            \end{equation*}
+        \item Show that for every countable family $(A_n)$ of elements in $\mathcal{R}$ and $A\in \mathcal{R}$ such that $A\subseteq \cup A_n$, it holds\footnote{Show that there exists a finite $n_0$ such that $A\subseteq \cup_{k\leq n_0}A_k$.}
+            \begin{equation*}
+                P[A]\leq \sum P[A_n],
+            \end{equation*}
+            and deduce using Caratheodory's theorem that $P$ extends uniquely to a probability measure $P$ on $\mathcal{F}$.
+        \item Defining the process $X$ by $X_t(\omega)=\omega_t$, describe the filtration generated by $X$.
+    \end{enumerate}
+\end{exercise}
+
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.10.26 14:00.
+
+\end{document}
