@@ -92,7 +92,7 @@ For stochastic processes:
 
 * Script: 
     * [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1012.pdf)
-    * [Second Chapter, Version 2015/10/19]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1019.pdf)
+    * [Second Chapter, Version 2015/10/19]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1021.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
