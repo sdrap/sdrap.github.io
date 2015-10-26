@@ -6,6 +6,9 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-10-26
+:   Homework assignments are online.
+
 2015-10-19
 :   Update of Chapter 2 and homework assignments are online.
 
@@ -44,7 +47,7 @@ Place: Chen Ruiqiu Building, room 107
 Office hour: Wednesday from 13:00 to 15:30  
 Office: Math building, room 2.105
 
-Teaching Assistant: Zhang Youyuan <volwc@sjtu.edu.cn>
+Teaching Assistant: Zhang Yaoyuan <volwc@sjtu.edu.cn>
 
 ### Course Description
 
@@ -90,7 +93,9 @@ For stochastic processes:
 
 ### Lecture Material
 
-* Script: 
+Since they are 
+* Script:  **Disclaimer:** The following lecture notes are meant to be a script for the students attending the lecture. Since they are written on the fly, they change quite often are prone to typos or some mistakes that are corrected as the lecture advance. So if you are not a student of my class, I suggest that you take it with precaution or wait until the lecture finished so that the lecture notes converges to an acceptable steady state as unique reference.
+    
     * [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1012.pdf)
     * [Second Chapter, Version 2015/10/19]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1021.pdf)
 
@@ -99,6 +104,7 @@ For stochastic processes:
     * Sheet 2: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW02.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW02.tex)
     * Sheet 3: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW03.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW03.tex)
     * Sheet 4: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW04.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW04.tex)
+    * Sheet 5: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW05.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW05.tex)
 
 * Ipython notebooks:
     * [Random walk]({{site.url}}/downloads/WS2015/StochProcess/Materials/Random Walk.ipynb)

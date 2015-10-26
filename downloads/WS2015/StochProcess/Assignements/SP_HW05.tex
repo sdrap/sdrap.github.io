@@ -1,0 +1,191 @@
+
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{5}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 5}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+
+Let $(\Omega,\mathcal{F},\mathbb{F},P)$ a filtrated probability space with $\mathbb{F}=(\mathcal{F}_t)_{t=0,1,\ldots}$.
+
+\begin{exercise}(10 points)
+
+    Provide an example of a martingale $X=(X_t)$ such that $\sup_t E[|X_t|]<\infty$ and $X_t\to X_{\infty}$ $P$-almost surely for some $X_{\infty}$ but for which however it does not hold $E[|X_t-X_{\infty}|] \to 0$.
+\end{exercise}
+%\begin{proof}
+    
+%\end{proof}
+
+\begin{exercise}(10 points)
+
+    Let $X$ be an adapted and integrable stochastic process.
+    Show that if $E[X_\tau]=E[X_0]$ for every finite stopping time\footnote{That is $P[\tau\leq T]=1$ for some $T \in \mathbb{N}$} $\tau$ then $X$ is a martingale.
+\end{exercise}
+
+%\begin{proof}
+    
+%\end{proof}
+
+\begin{exercise}(20 points)
+
+    Under the same assumptions as Exercise 4.3 of the Homework sheet 4, that is, let $X$ be an adapted process such that $E[\sup_t |X_t|]<\infty$.
+    For the questions a) to d), we assume that $\mathbf{T}=\{0,\ldots,T\}$ for a given time horizon $T \in\mathbb{N}$.
+    Denote by $\mathcal{T}$ the set of all stopping times with values in $\mathbf{T}$.
+    We define recursively
+    \begin{equation*}
+        S_T=X_T\quad \text{and}\quad S_t=\max \left\{ E\left[ S_{t+1}|\mathcal{F}_t \right];X_t \right\}, \quad t\leq T-1.
+    \end{equation*}
+    and denote by $S=M-A$ the Doob decomposition of $S$ where $M$ is a martingale and $A$ is a predictable and integrable process with $A_0=0$.
+    We define
+    \begin{equation*}
+        \tau_0=\inf\left\{ t\colon X_t=S_t \right\}\quad \text{and}\quad \tau_1=\inf\left\{ t\colon A_{t+1}>0 \right\}\wedge T
+    \end{equation*}
+    \begin{enumerate}[label=\text{\alph*)}, fullwidth]
+        \item Show that $\tau_1$ is a stopping time such that $\tau_0\leq \tau_1$;
+        \item Show that for every $\sigma \in \mathcal{T}$ the following assertions are equivalent:
+            \begin{enumerate}[label=\textit{(\roman*)}]
+                \item $E[X_\sigma]=\sup_{\tau \in \mathcal{T}}E[X_\tau]$;
+                \item $X_\sigma=S_{\sigma}$ and $S^\sigma$ is a martingale;
+                \item $\tau_0\leq \sigma\leq \tau_1$ and $E[X_{\sigma}]=E[S_{\sigma}]$.
+            \end{enumerate}
+        \item Let $\mathcal{M}_0$ be the set of all martingale $Y=(Y_t)$ such that $Y_0=0$.
+            Show that
+            \begin{equation*}
+                \max_{\tau \in \mathcal{T}}E\left[ X_\tau \right]=\min_{Y \in \mathcal{M}_0}E\left[ \max_{0\leq t\leq T } \left( X_t-Y_t \right)\right]
+            \end{equation*}
+        \item Suppose that $T=2$, $\Omega=\{\omega_1,\omega_2,\omega_3,\omega_4\}$, $\mathcal{F}_0=\{\emptyset,\Omega\}$, $\mathcal{F}_1=\{\emptyset, \Omega, \{\omega_1,\omega_2\}, \{\omega_3,\omega_4\}\}$ and $\mathcal{F}_2=2^\Omega$.
+            The process $X$ is given by
+            \begin{equation*}
+                X_0\equiv 10,\quad
+                X_1(\omega)=
+                \begin{cases}
+                    5 &\text{if }\omega \in \{\omega_1,\omega_2\}\\
+                    30 &\text{otherwise }
+                \end{cases},\quad
+                X_3(\omega)=
+                \begin{cases}
+                   5  & \text{if } \omega=\omega_1 \\
+                   15 & \text{if } \omega=\omega_2 \\
+                   10 & \text{if } \omega=\omega_3 \\
+                   30 & \text{if } \omega=\omega_4 
+                \end{cases}
+            \end{equation*}
+            compute $\tau_0$ and $\tau_1$.
+        \item From now on, we consider that $\mathbf{T}=\mathbb{N}_0$, $T=\infty$ and consider the process $S$ defined in homework sheet 4.3 d).
+            For $n \in \mathbb{N}$ we define $\mathcal{T}^n=\{\tau\in \mathcal{T}\colon n\leq \tau <\infty\}$ and $\tau_n=\inf\{t\colon n \leq t \text{ and }S_t=X_t\}$.
+            Show that if $\tau_n <\infty$, then
+            \begin{equation*}
+                E\left[ X_{\tau_n} \right]=E\left[ S_n \right]=\max_{\tau \in \mathcal{T}^n}E\left[ X_{\tau} \right]
+            \end{equation*}
+    \end{enumerate}
+\end{exercise}
+%\begin{proof}
+    
+%\end{proof}
+
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.11.02 14:00.
+
+\end{document}
