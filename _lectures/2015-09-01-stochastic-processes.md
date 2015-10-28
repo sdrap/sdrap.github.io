@@ -6,6 +6,9 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-10-28
+:   Update Chapter 2.
+
 2015-10-26
 :   Homework assignments are online.
 
@@ -97,7 +100,7 @@ Since they are
 * Script:  **Disclaimer:** The following lecture notes are meant to be a script for the students attending the lecture. Since they are written on the fly, they change quite often are prone to typos or some mistakes that are corrected as the lecture advance. So if you are not a student of my class, I suggest that you take it with precaution or wait until the lecture finished so that the lecture notes converges to an acceptable steady state as unique reference.
     
     * [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1012.pdf)
-    * [Second Chapter, Version 2015/10/19]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1021.pdf)
+    * [Second Chapter, Version 2015/10/28]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1028.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
