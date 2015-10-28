@@ -96,9 +96,9 @@ For stochastic processes:
 
 ### Lecture Material
 
-Since they are 
-* Script:  **Disclaimer:** The following lecture notes are meant to be a script for the students attending the lecture. Since they are written on the fly, they change quite often are prone to typos or some mistakes that are corrected as the lecture advance. So if you are not a student of my class, I suggest that you take it with precaution or wait until the lecture finished so that the lecture notes converges to an acceptable steady state as unique reference.
-    
+**Disclaimer:** The following lecture notes are meant to be a script for the students attending the lecture. Since they are written on the fly, they change quite often are prone to typos or some mistakes that are corrected as the lecture advance. So if you are not a student of my class, I suggest that you take it with precaution or wait until the lecture is finished so that the lecture notes converges to an acceptable steady state.
+
+* Script:
     * [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1012.pdf)
     * [Second Chapter, Version 2015/10/28]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1028.pdf)
 
