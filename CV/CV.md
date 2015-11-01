@@ -63,6 +63,11 @@ Jun 2001 &mdash; Apr 2004
 -----------------------------------------------------------------------
 
 **Teaching**
+
+W.S. 2015
+:   Lecture *Stochastic Processes* SJTU Shanghai, Graduates  
+    Lecture *Financial Mathematics* Master of Finance, SAIF, Graduates
+
 S.S. 2014
 :   Lecture *(Super-)Solutions of BSDEs* TU Berlin, Master/PhD
 
