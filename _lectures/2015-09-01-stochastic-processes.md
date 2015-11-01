@@ -6,6 +6,10 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-11-01
+:   Correction of a Typo in Proposition 2.20 page 33 in Chapter 2. Homework assignment number 3 is online.
+
+
 2015-10-28
 :   Update Chapter 2.
 
@@ -100,7 +104,7 @@ For stochastic processes:
 
 * Script:
     * [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1012.pdf)
-    * [Second Chapter, Version 2015/10/28]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1028.pdf)
+    * [Second Chapter, Version 2015/10/28]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1101.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
@@ -108,6 +112,8 @@ For stochastic processes:
     * Sheet 3: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW03.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW03.tex)
     * Sheet 4: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW04.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW04.tex)
     * Sheet 5: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW05.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW05.tex)
+    * Sheet 6: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW06.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW06.tex)
+
 
 * Ipython notebooks:
     * [Random walk]({{site.url}}/downloads/WS2015/StochProcess/Materials/Random Walk.ipynb)

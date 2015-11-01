@@ -1,0 +1,236 @@
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+\usepackage{stmaryrd}
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{5}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 6}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+
+Let $(\Omega,\mathcal{F},\mathbb{F},P)$ a filtrated probability space with $\mathbb{F}=(\mathcal{F}_t)_{t=0,1,\ldots}$.
+
+\begin{exercise}(10 points)
+    Let $X$ be a sub-martingale.
+    Let $\sigma$ and $\tau$ be two stopping times, such that $\sigma\leq \tau \leq T$ for an integer $T$.
+    We set
+    \begin{equation*}
+        \tau_0=0
+    \end{equation*}
+    and recursively
+    \begin{align*}
+        \tau_1(\omega) & = \inf\{t\colon \sigma(\omega)\leq t\leq \tau(\omega), t\geq \tau_0(\omega), X_t(\omega) < x\}\\
+        \tau_2(\omega) & = \inf\{t\colon \sigma(\omega)\leq t\leq \tau(\omega), t\geq \tau_1(\omega), X_t(\omega)>y\}\\
+        & \vdots\\
+        \tau_{2k-1}(\omega) & = \inf\{t \colon \sigma(\omega)\leq t\leq \tau(\omega), t\geq \tau_{2k-2}(\omega), X_t(\omega) < x\}\\
+        \tau_{2k}(\omega) & = \inf\{t \colon \sigma(\omega)\leq t\leq \tau(\omega), t\geq \tau_{2k-1}(\omega), X_t(\omega)>y\}
+    \end{align*}
+    with the convention that the infimum over the empty set is infinite.
+    Define
+    \begin{equation*}
+        U_{\llbracket \sigma(\omega),\tau(\omega)\rrbracket}(x,y,X(\omega))=\sup\{k\colon \tau_{2k}(\omega)<\infty\}
+    \end{equation*}
+    where $\llbracket \sigma(\omega),\tau(\omega)\rrbracket=\{t \in \mathbb{N}\colon \sigma(\omega)\leq t\leq \tau(\omega)\}$.
+    \begin{enumerate}[label=\textit{(\roman*)}]
+        \item Show that
+            \begin{equation*}
+                \left( y-x \right)E\left[  U_{\llbracket \sigma,\tau\rrbracket}(x,y,X) |\mathcal{F}_{\sigma}\right]\leq E\left[ \left( X_{\tau}-x \right)^+ |\mathcal{F}_{\sigma}\right]-E\left[ \left( X_{\sigma}-x \right)^+ |\mathcal{F}_{\sigma}\right]
+            \end{equation*}
+        \item Show that
+            \begin{equation*}
+                P\left[ \sup_{t} X_t \geq \lambda \right]\leq \frac{1}{\lambda}\sup_t E\left[ X_t^+ \right]
+            \end{equation*}
+    \end{enumerate}
+\end{exercise}
+%\begin{proof}
+    
+%\end{proof}
+
+%\begin{proof}
+    
+%\end{proof}
+
+\begin{exercise}(20 points)
+
+We consider the following random walk starting at $0$
+\begin{equation*}
+    S_0=0\quad \text{and}\quad S_t=\sum_{s=1}^t X_s,\quad t\geq 1
+\end{equation*}
+where 
+\begin{equation*}
+    X_t(\omega)=
+    \begin{cases}
+        1&\text{if } \omega_t=1,\\
+        -1&\text{if }\omega_t=-1.
+    \end{cases}
+    \quad t\geq 1\text{ and }\omega=(\omega_t)_{t\in \mathbb{N}} \in \Omega =\{-1,1\}^{\mathbb{N}}.
+\end{equation*}
+As for the filtration we take
+\begin{equation*}
+    \mathcal{F}_0=\{\emptyset,\Omega\}\quad \text{and}\quad \mathcal{F}_t=\sigma(X_s\colon 1\leq s\leq t),\quad t\geq 1
+\end{equation*}
+On $\mathcal{F}=\otimes_{t \in \mathbb{N}} \{\emptyset, \{-1\},\{1\},\{-1,1\}\}$ and the unique probability on $\mathcal{F}$ which on the finite cylinder is given by
+\begin{equation*}
+    P[A]=p^lq^{t-l}
+\end{equation*}
+where $p\in [0,1]$, $q=1-p$ and
+\begin{equation*}
+    A=\{\omega \in \Omega\colon \omega_{t_k}=e_k, k=1,\ldots n\}
+\end{equation*}
+for the finite number of times $t_1,\ldots, t_n$, numbers $e_k\in \{-1,1\}$ and $l$ is equal to the numbers of those $e_k=1$.
+In other words, this is the probability that we have head at time $t_k$ when $e_k=1$ and tail when $e_k=-1$ for the finite numbers of time $t_1,\ldots, t_n$ but with a biased coin which provides a probability $p$ of having head and $q=1-p$ of having tail.
+
+\begin{enumerate}[label=\textit{(\roman*)}]
+    \item Show that $S$ is a martingale if and only if $p=1/2$. 
+        Show in that case that
+        \begin{equation*}
+            P\left[ \liminf X_t=-\infty\text{ and } \limsup X_t =\infty\right]=1
+        \end{equation*}
+    \item Show in the general case
+        \begin{equation*}
+            P\left[ \lim X_t=\infty \right]=1,\quad \text{if } p>1/2;
+        \end{equation*}
+        and
+        \begin{equation*}
+            P\left[ \lim X_t =-\infty \right]=1,\quad \text{if }p<1/2.
+        \end{equation*}
+        To do so, show first that $E[X_t|\mathcal{F}_{t-1}]=E[X_t]$ for every $t\geq 1$.
+        Then, that the Doob-Meyer decomposition
+        \begin{equation*}
+            S=M-A,
+        \end{equation*}
+        is such that $A_t=-t(2p-1)$ and $M$ satisfies
+        \begin{equation*}
+            P\left[ \liminf M_t=-\infty\text{ and }\limsup M_t=\infty \right]=1
+        \end{equation*}
+        and use exercise 3.1.
+    \item Suppose that $p=1/2$.
+        Define $\tau =\inf\{t\colon S_t=a\text{ or }S_t=-b\}$ for two integers $a,b$.
+        \begin{itemize}
+            \item Show that $P[\tau<\infty]=1$.
+            \item Show that
+                \begin{equation*}
+                    P\left[ S_{\tau}=a \right]=\frac{b}{a+b}
+                \end{equation*}
+                This is the probability that $S$ reach the value $a$ before hitting $-b$.
+            \item Show that $M=S^2_t-t$ is a martingale.
+                Deduce that
+                \begin{equation*}
+                    E\left[ \tau \right]=ab
+                \end{equation*}
+        \end{itemize}
+    \item Suppose that $p\neq 1/2$, in the general case, show that $M_t:=(q/p)^{S_t}$ is a martingale.
+        Define $\tau =\inf\{t\colon S_t=a\text{ or }S_t=-b\}$ for two integers $a,b$.
+        Show that
+        \begin{equation*}
+            P[S_{\tau}=a]=\frac{(q/p)^b-1}{(q/p)^{a+b}-1}
+        \end{equation*}
+\end{enumerate}
+\end{exercise}
+%\begin{proof}
+    
+%\end{proof}
+
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.11.02 14:00.
+
+\end{document}
