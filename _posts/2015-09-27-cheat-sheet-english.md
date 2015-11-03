@@ -5,7 +5,7 @@ categories:
   - math
 ---
 
-*Disclaimer: The following is by no mean 'the' introduction on how to write mathematical proofs in English -- English is my third tong, therefore I do not master it very well myself. Just take the following as building blocks so that I can follow your proofs.
+*Disclaimer: The following is by no means 'the' introduction on how to write mathematical proofs in English -- English is my third tongue, therefore I do not master it very well myself. Just take the following as building blocks so that I can follow your proofs.
 After a while, you may improve by looking at proof arguments in professional English textbooks -- I am not a reference on that topic. That's also why I recommend you to read only textbooks in English! At the beginning I accept -- even if I hate it -- the use of logical symbols such as $$\Rightarrow$$, $$\Leftrightarrow$$, $$\forall$$, $$\exists$$, etc. in text. Try however to replace them by their English counterparts, it is nicer to read.*
 
 
