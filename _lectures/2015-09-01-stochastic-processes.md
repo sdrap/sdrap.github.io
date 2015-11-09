@@ -6,8 +6,11 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-11-09
+:   Homework assignment number 7 is online.
+
 2015-11-01
-:   Correction of a Typo in Proposition 2.20 page 33 in Chapter 2. Homework assignment number 3 is online.
+:   Correction of a Typo in Proposition 2.20 page 33 in Chapter 2. Homework assignment number 6 is online.
 
 
 2015-10-28
@@ -113,7 +116,7 @@ For stochastic processes:
     * Sheet 4: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW04.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW04.tex)
     * Sheet 5: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW05.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW05.tex)
     * Sheet 6: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW06.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW06.tex)
-
+    * Sheet 6: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW07.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW07.tex)
 
 * Ipython notebooks:
     * [Random walk]({{site.url}}/downloads/WS2015/StochProcess/Materials/Random Walk.ipynb)

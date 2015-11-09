@@ -1,0 +1,190 @@
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+\usepackage{stmaryrd}
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{7}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 7}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+
+\begin{exercise}(5 points)
+    
+    Let $(\Omega,\mathcal{F},P)$ be a probability space.
+    Let $X=(X_t)_{t\in \mathbb{N}}$ be a process of integrable independent random variables, that is
+    \begin{equation*}
+        P\left[ X_{t_1}\in A_1,\ldots,X_{t_n}\in A_n \right]=\prod_{k=1}^nP[X_{t_k}\in A_k]
+    \end{equation*}
+    for every finite subset of times $t_1,\ldots t_n$ and Borel sets $A_1,\ldots A_n$.
+    Suppose that $E[X_t]=1$ for every $t$.
+
+    For the filtration
+    \begin{equation*}
+        \mathcal{F}_t=\sigma(X_s\colon s\leq t), 
+    \end{equation*}
+    Show that the process $Y$ given by
+    \begin{equation*}
+        Y_t=\prod_{s=0}^t X_s, \quad s\geq 0
+    \end{equation*}
+    is a martingale.
+\end{exercise}
+
+
+\begin{exercise}(10 points)
+
+    In this exercise, we will consider a simple discrete price process model with finite horizon $T \in \mathbb{N}$.
+    
+    We denote by $S=(S_{t})_{0\leq t\leq T}$ the evolution of a stock price for the times $t=0,\ldots ,T$.
+    Usually, stock prices are strictly positives and characterized by their returns
+    \begin{equation*}
+        R_t = \frac{S_{t}-S_{t-1}}{S_t}, \quad 1\leq t\leq T
+    \end{equation*}
+    which is the proportional gain/loss of the price evolution between $t-1$ and $t$.
+    Or in other terms, if the returns $R=(R_t)_{1\leq t\leq T}$ are given, the stock price is then
+    \begin{equation*}
+        S_t=S_0\prod_{s=1}^t\left( 1+R_s \right), \quad 0\leq t\leq T
+    \end{equation*}
+    for a given start price $S_0>0$.
+    To guarantee that the stock price remains strictly positive, we assume that $R_t>-1$ for every $t=1,\ldots T$.
+
+    Our simple model is as follows.
+    Let 
+    \begin{itemize}
+        \item $\Omega =\{-1,1\}^T=\{\omega=(\omega_t)_{1\leq t\leq T}\colon \omega_t \in \{-1,1\}\}$;
+        \item For $-1<d<u$, (where $d$ stands for down and $u$ for up) we define
+            \begin{equation*}
+                R_t(\omega):= \
+                \begin{cases}
+                    u&\text{if }\omega_t=1\\
+                    d&\text{if }\omega_t=-1
+                \end{cases},\quad 1\leq t\leq T
+            \end{equation*}
+        \item As for the filtration we take
+            \begin{equation*}
+                \mathcal{F}_0=\{\emptyset,\Omega\}\quad \text{and}\quad \mathcal{F}_t=\sigma(R_s\colon 1\leq s\leq t),\quad 1\leq t\leq T
+            \end{equation*}
+    \end{itemize}
+    Show that if $-1<d<0<u$, then there exists a unique probability measure $P$ on $2^{\Omega}$ such that $S$ is a martingale.
+    Hereby, show that this probability measure is such that $P[\omega_t=1]=-d/(u-d)$.
+    Show that under this measure, the random variables $R_1,\ldots, R_T$ are independent.
+\end{exercise}
+
+\begin{exercise}(Bonus 10 points)
+    Find a probability space, $(\Omega, \mathcal{F},P)$, a filtration $\mathbb{F}=(\mathcal{F}_t)_{t\in \mathbb{N}}$, a process $X$ and a random variable $X_T$ such that
+    \begin{itemize}
+        \item $X$ is a martingale;
+        \item $\sup_t E[|X_t|]<\infty$;
+        \item $X_t\to X_T$ $P$-almost surely;
+        \item but $E[|X_t-X|]\not \to 0$.
+    \end{itemize}
+\end{exercise}
+
+
+
+%\begin{proof}
+    
+%\end{proof}
+
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.11.09 14:00.
+
+\end{document}
