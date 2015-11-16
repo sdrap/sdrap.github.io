@@ -1,0 +1,219 @@
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+\usepackage{stmaryrd}
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{8}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 8}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+
+\begin{exercise}(8 points)
+    
+    Recall from the lecture that a family $(\mathcal{C}^i)$ of collections of elements in $\mathcal{F}$ on some probability space $(\Omega,\mathcal{F},P)$ is called \emph{independent} if for every finite collection $(A_{i_k})_{k\leq n}$ with $A_{i_k} \in \mathcal{C}^{i_k}$ for every $k=1,\ldots, n$, it holds
+    \begin{equation*}
+        P\left[ A_{i_1}\cap \cdots\cap A_{i_n} \right]=\prod_{k\leq n} P\left[ A_{i_k} \right]
+    \end{equation*}
+    And random variables of a family $(X^i)$ are independent if $(\sigma(X_i))$ is an independent family.
+    \begin{itemize}
+        \item Such a family $(\mathcal{C}^i)$ is called \emph{pairwise independent} if $P[A_{i_1}\cap A_{i_2}]=P[A_{i_1}]P[A_{i_2}]$ for every $A_{i_1}\in \mathcal{C}^{i_1}$, $A_{i_2}\in \mathcal{C}^{i_2}$ and every $i_1,i_2$.
+            Pairwise independence is therefore a weaker statement than independence.
+            It is actually strictly weaker.
+
+            Find three events $A,B$ and $C$ in some probability space that are pairwise independent but not independent.
+        \item Show that two random variables $X,Y$ are independent, if and only it
+            \begin{equation*}
+                P_{(X,Y)}=P_{X}\otimes P_{Y}
+            \end{equation*}
+            where 
+            \begin{equation*}
+                P_{(X,Y)}[A]:=P[(X,Y)\in A],\quad P_{X}[A_1]:=P[X\in A_1]\quad \text{and}\quad P_{Y}[A_2]:=P[Y\in A_2]
+            \end{equation*}
+            for Borel sets $A_1,A_2 \in \mathcal{B}(\mathbb{R})$ and $A\in \mathcal{B}(\mathbb{R}\times \mathbb{R})=\mathcal{B}(\mathbb{R})\otimes \mathcal{B}(\mathbb{R})$.
+    \end{itemize}
+
+
+\end{exercise}
+
+
+\begin{exercise}(8 points)
+
+
+    Let $(\Omega,\mathcal{F},P)$ be a probability space and $\mathcal{G}$ be a $\sigma$-algebra such that $\mathcal{G}\subseteq \mathcal{F}$.
+    Let further $(A_n)$ be a sequence of pairwise disjoint elements of $\mathcal{F}$ such that $P[A_n]>0$ for every $n$.
+    Define $\mathcal{G}=\sigma(A_n\colon n)$ the $\sigma$-algebra generated by the sequence $(A_n)$.
+    Show that
+    \begin{enumerate}[label=\textit{(\roman*)}]
+        \item for every $B \in \mathcal{F}$ it holds
+            \begin{equation*}
+                P\left[ B|\mathcal{G} \right]:=E\left[ 1_B |\mathcal{G} \right]=\sum P\left[ B |A_n \right]1_{A_n}
+            \end{equation*}
+            where $P[B|A_n]:=P[B|\sigma(A_n)]=P[B\cap A_n]/P[A_n]$.
+        \item for every $X \in L^1$, it holds
+            \begin{equation*}
+                E\left[ X|\mathcal{G} \right]=\sum \frac{E\left[ 1_{A_n}X \right]}{P[A_n]}1_{A_n}
+            \end{equation*}
+    \end{enumerate}
+    
+\end{exercise}
+
+
+\begin{exercise}(8 points)
+
+
+    Let $(\Omega,\mathcal{F},P)$ be a probability space and $\mathcal{G}$ be a $\sigma$-algebra such that $\mathcal{G}\subseteq \mathcal{F}$.
+    Let also $X \in L^1$ be a random variable such that $X>0$ almost surely and $E[X]=1$.
+
+    \begin{enumerate}[label=\textit{(\roman*)}]
+        \item Show that $Q:\mathcal{F}\to [0,1]$, defined as $Q[A]=E[1_A X]$ defines a probability measure which is equivalent to $P$\footnote{That is $Q[A]=0$ if and only if $P[A]=0$.} and for which holds
+            \begin{equation*}
+                E_{Q}\left[ Y \right]=E\left[ XY \right]
+            \end{equation*}
+            for every positive random variable $Y$,
+        \item Show that for every $\mathcal{G}$-measurable positive random variable $Y$, it holds
+            \begin{equation*}
+                E_{Q}\left[ Y \right]=E\left[ E\left[ X|\mathcal{G} \right] Y\right]
+            \end{equation*}
+        \item Let $\mathcal{H}$ be a $\sigma$-algebra such that $\mathcal{H}\subseteq \mathcal{G}\subseteq \mathcal{F}$ and $Y$ be a $\mathcal{G}$-measurable positive random variable.
+            Show that it holds
+            \begin{equation*}
+                E_Q\left[ Y|\mathcal{H} \right]=\frac{1}{E\left[ X|\mathcal{H} \right]}E\left[ XY |\mathcal{H} \right]
+            \end{equation*}
+        \item Let $\mathbb{F}=(\mathcal{F})_{0\leq t\leq T}$ be a filtration where $T$ is a finite integer.
+            Define the process $X$ by $X_t=E[X|\mathcal{F}_t]$ for every $t=1,\ldots,T$.
+            Show that a process $Y$ is a martingale with respect to the measure $Q$ if and only if the process $XY=(X_tY_t)_{1\leq t\leq T}$ is a martingale with respect to the measure $P$.
+
+    \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}(10 points)
+
+    Be careful, in this exercise, we make everything upside down.
+
+    \begin{itemize}
+        \item     Let $(\Omega, \mathcal{F},P)$ be a probability space and $(\mathcal{F}_t)_{0\leq t}$ be a sequence of $\sigma$-algebras such that $\mathcal{F}\supseteq \mathcal{F}_0\supseteq \mathcal{F}_1\supseteq \ldots \supseteq \mathcal{F}_t\supseteq \ldots$.
+            Suppose that $X$ is a backward-martingale, that is such that 
+            \begin{itemize}
+                \item $X_t$ is $\mathcal{F}_t$-measurable for every $t$;
+                \item $X_t$ is integrable for every $t$;
+                \item $E[X_t|\mathcal{F}_{t+1}]=X_{t+1}$.
+            \end{itemize}
+            Inspired by Doob's upcrossing's inequality, show that $X_t\to X_T$ almost surely where $X_T \in L^1$.
+
+       \item Let $(X_t)$ be a sequence of independent, identically distributed and integrable random variable.
+           Show using the previous point that $(\sum_{s\leq t}X_s)/t$ converges almost surely.\footnote{Hint: Show that $E[X_1|\sigma(\sum_{s\leq t}X_s, X_{t+1},\ldots)]=\sum_{s\leq t}X_s$.}
+
+    \end{itemize}
+    Suppose now that 
+\end{exercise}
+
+
+
+%\begin{proof}
+
+%\end{proof}
+
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.23.09 14:00.
+
+\end{document}

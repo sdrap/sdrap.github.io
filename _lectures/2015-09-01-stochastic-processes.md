@@ -110,7 +110,7 @@ For stochastic processes:
 
 * Script:
     * [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1012.pdf)
-    * [Second Chapter, Version 2015/11/11]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1112.pdf)
+    * [Second Chapter, Version 2015/11/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1112.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
@@ -120,6 +120,7 @@ For stochastic processes:
     * Sheet 5: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW05.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW05.tex)
     * Sheet 6: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW06.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW06.tex)
     * Sheet 7: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW07.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW07.tex)
+    * Sheet 7: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW08.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW08.tex)
 
 * Ipython notebooks:
     * [Random walk]({{site.url}}/downloads/WS2015/StochProcess/Materials/Random Walk.ipynb)
