@@ -6,6 +6,11 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-11-18
+:   Update Chapter 2 with uniform $$L^1$$ convergence of martingales. Update of Chapter 1 with Fubini-Tonelli
+
+
+
 2015-11-11
 :   Update Chapter 2.
 
@@ -109,8 +114,8 @@ For stochastic processes:
 **Disclaimer:** The following lecture notes are meant to be a script for the students attending the lecture. Since they are written on the fly, they change quite often are prone to typos or some mistakes that are corrected as the lecture advance. So if you are not a student of my class, I suggest that you take it with precaution or wait until the lecture is finished so that the lecture notes converges to an acceptable steady state.
 
 * Script:
-    * [First Chapter, Version 2015/10/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1012.pdf)
-    * [Second Chapter, Version 2015/11/12]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1112.pdf)
+    * [First Chapter, Version 2015/11/18]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1118.pdf)
+    * [Second Chapter, Version 2015/11/18]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1118.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
