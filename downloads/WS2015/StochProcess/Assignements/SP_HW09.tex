@@ -1,0 +1,187 @@
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+\usepackage{stmaryrd}
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{9}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 9}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+
+\begin{exercise}(5 points)
+    Let $X$ and $Y$ be two integrable random variables independent of each other and identically distributed.
+    Show that
+    \begin{equation*}
+        E\left[ X |X+Y \right]=\frac{X+Y}{2}
+    \end{equation*}
+\end{exercise}
+
+\begin{exercise}(Bonus 5 points)
+    Let $\mathcal{G}_1$ and $\mathcal{G}_2$ be two $\sigma$-algebra independent of each other.
+    Let $X$ be an integrable random variable such that $\sigma(\sigma(X),\mathcal{G}_1)$ is independent of $\mathcal{G}_2$.
+    Show that
+    \begin{equation*}
+        E\left[ X |\sigma(\mathcal{G}_1,\mathcal{G}_2)) \right]=E\left[ X|\mathcal{G}_1 \right]
+    \end{equation*}
+\end{exercise}
+
+
+\begin{exercise}(5 points)
+    Let $X$ be a positive random variable.
+    Show that
+    \begin{equation*}
+        E\left[ X \right]=\int_{0}^{\infty}P\left[ X > x \right] dx
+    \end{equation*}
+\end{exercise}
+
+
+
+\begin{exercise}(20 points)
+
+    Let $X$ and $Y$ be two random variable with a joint distribution $P_{(X,Y)}$ absolute continuous with respect to the Lebesgue measure on $\mathbb{R}^2$.
+    Show that
+    \begin{itemize}
+        \item show that $P_{(X,Y)}$ has a density, that it, there exists a measurable function $f_{(X,Y)}:\mathbb{R}^2\to \mathbb{R}_+$, such that
+            \begin{equation*}
+                E\left[ g(X,Y) \right]=\int_{\mathbb{R}^2} g(x,y)f_{(X,Y)}(x,y) dx dy
+            \end{equation*}
+            for every positive measurable function $g:\mathbb{R}^2\to [0,\infty[$.
+        \item show that $P_X$ as well as $P_Y$ are also absolutely continuous with respect to Lebegue.
+            Provide an expression for their density $f_X$ and $f_Y$ respectively.
+        \item show that $P_{(X,Y)}=P_X\otimes K$ for some stochastic kernel
+            \begin{equation*}
+                K(x,B)=\int_{B}^{} f_{(Y|X)}(x,y)dy
+            \end{equation*}
+            where $f_{(Y|X)}:\mathbb{R}^2\to \mathbb{R}$ is to be determined as a function of $f_X$, $f_Y$ and $f_{(X,Y)}$.
+        \item show that 
+            \begin{equation*}
+                E\left[ g(X,Y) | X\right]=\int_{\mathbb{R}^2}^{} f_{Y|X}(X,y) dy
+            \end{equation*}
+            for every positive measurable random variable $g:\mathbb{R}^2\to \mathbb{R}$.
+        \item Suppose that $f_{(X,Y)}=21_{[0,1]}(x+y)1_{[0\infty[}(x)1_{[0,\infty[}(y)$.
+            Compute $E[\exp(Y)|X]$ explicitly.
+    \end{itemize}
+\end{exercise}
+
+\begin{exercise}(5 points)
+    Let $(X_n)$ be a sequence of independent random variables such that each $X_n$ is $\mathcal{N}(\mu,\sigma)$-distributed with $\mu\in \mathbb{R}$ and $\sigma>0$, that is, they are all identically distributed with a probability density function with respect to Lebesgue given by
+    \begin{equation*}
+        f_{X_n}(x)=f_{X_1}(x)=\frac{1}{\sigma \sqrt{2\pi}}\exp\left( -\frac{(x-\mu)^2}{2\sigma^2} \right)
+    \end{equation*}
+    We define the process $M$ as
+    \begin{equation*}
+        M_0=1, \quad \text{and}\quad M_t=\exp\left( \sum_{s=1}^t X_s-\frac{n\sigma^2}{2} \right)
+    \end{equation*}
+    Show that $M$ is a converging martingale and compute its limit.
+\end{exercise}
+
+
+
+
+%\begin{proof}
+
+%\end{proof}
+
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.11.30 14:00.
+
+\end{document}
