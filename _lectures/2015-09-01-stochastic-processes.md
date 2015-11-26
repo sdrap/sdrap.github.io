@@ -6,52 +6,9 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
-2015-11-18
-:   Update Chapter 2 with uniform $$L^1$$ convergence of martingales. Update of Chapter 1 with Fubini-Tonelli
+2015-11-26
+:   Chapter 3 on Markov process -- be aware of possible typos! -- Update Chapter 1 and 2 for small typos
 
-
-
-2015-11-11
-:   Update Chapter 2.
-
-2015-11-09
-:   Homework assignment number 7 is online.
-
-2015-11-01
-:   Correction of a Typo in Proposition 2.20 page 33 in Chapter 2. Homework assignment number 6 is online.
-
-
-2015-10-28
-:   Update Chapter 2.
-
-2015-10-26
-:   Homework assignments are online.
-
-2015-10-19
-:   Update of Chapter 2 and homework assignments are online.
-
-2015-10-14
-:   Beginning of Chapter 2 is online as well as Ipython notebooks
-
-2015-10-12
-:   I hope you all spend some good national day.
-    I corrected some typos in the theorem on conditional expectation -- a notation mistake with $$\mathcal{F}$$ and $$\mathcal{G}$$.
-    The third homework assignment is online.
-
-2015-10-04
-:   Correction of the homework sheet (typo by the definition of limit superior and limit inferior). Download link at the end of the page.    
-    Add some more arguments concerning Hilbert spaces in the lecture notes for the proof of Radon-Nykodym Theorem. Download link at the end of the page.  
-    After some questions concerning the difference between collection and family, [I wrote some words about it]({{site.url}}/math/2015/10/04/family-vs-collection/). You can look at the [This and That Section]({{site.url}}/this_and_that/).
-
-2015-09-30
-:   Update of the script. Download file below.
-
-2015-09-28
-:   [Cheat Sheet Chinese/English for Math]({{site.url}}/math/2015/09/27/cheat-sheet-english/)
-
-2015-09-14
-:    Dear all, since most of you never really attend a lecture on general measure and integration theory, I will dedicate the first 2-3 weeks of the lecture to present it.
-I will also provide the script at the end of each lecture and not every week so that you can work home with the right concepts
 
 
 ### When/Where
@@ -114,8 +71,9 @@ For stochastic processes:
 **Disclaimer:** The following lecture notes are meant to be a script for the students attending the lecture. Since they are written on the fly, they change quite often are prone to typos or some mistakes that are corrected as the lecture advance. So if you are not a student of my class, I suggest that you take it with precaution or wait until the lecture is finished so that the lecture notes converges to an acceptable steady state.
 
 * Script:
-    * [First Chapter, Version 2015/11/18]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1118.pdf)
-    * [Second Chapter, Version 2015/11/18]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1118.pdf)
+    * [First Chapter, Version 2015/11/26]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1126.pdf)
+    * [Second Chapter, Version 2015/11/26]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1126.pdf)
+    * [Third Chapter, Version 2015/11/26]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap03_1126.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
