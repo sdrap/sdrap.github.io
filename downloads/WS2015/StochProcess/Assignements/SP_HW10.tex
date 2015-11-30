@@ -1,0 +1,217 @@
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+\usepackage{stmaryrd}
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{10}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 10}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+
+\begin{definition}
+    Given a transition probability $p$ on the countable state space $S$.
+    A distribution $\pi$ on $S$ is called \emph{stationary} if
+    \begin{itemize}
+        \item $\pi_x<\infty$ for every state $x$;
+        \item $\pi_x=\sum_{y\in S}\pi_xp_{xy}$, for every state $x$.
+    \end{itemize}
+    If $\sum \pi_x=1$, we say that $\pi$ is a stationary probability distribution.
+\end{definition}
+
+\begin{exercise}(10 points)
+
+    \begin{itemize}[fullwidth]
+        \item Let $X$ be a time homogeneous Markov chain with start distribution $\mu$ and transition probability matrix $p$.
+            Suppose that $\mu$ is a stationary probability distribution, shows that
+            \begin{equation*}
+                P_{\mu}\left[ X_t=x \right]=\mu_x
+            \end{equation*}
+            for every time $t$ and state $x$.
+        \item Let $(Y_n)_{n\geq 1}$ and $X_0$ be independent and identically distributed random variables on $\mathbb{Z}^d$.
+            Defining the random walk
+            \begin{equation*}
+                X_t=X_0+\sum_{s\leq t}Y_s
+            \end{equation*}
+            we saw in the lecture that it is a time homogeneous Markov chain.
+            Show that $\pi_x= 1$ for every $x \in \mathbb{Z}^d$ is a stationary distribution.
+    \end{itemize}
+\end{exercise}
+\begin{exercise}(10 points)
+
+    Let $X$ be a time homogeneous Markov chain with values on the state space $S=\{x_0,x_1,\ldots,x_6\}$ and with transition probability matrix
+    \begin{equation*}
+        P = 
+        \begin{bmatrix} 
+            1/3 & 0   & 0   & 1/3 & 1/3 & 0 & 0\\
+            0   & 1/2 & 0   & 1/2 & 0   & 0 & 0\\
+            0   & 0   & 1   & 0   & 0   & 0 & 0 \\
+            1/2 & 0   & 0   & 1/2 & 0   & 0 & 0 \\
+            1/2 & 0   & 0   & 1/2 & 0   & 0 & 0 \\
+            0   & 0   & 0   & 0   & 0   & 1 & 0 \\
+            0   & 1/3 & 1/3 & 0   & 1/3 & 0 & 0
+        \end{bmatrix}. 
+    \end{equation*}
+    \begin{itemize}
+        \item As in the lecture, provide a graph that shows how the process evolves between the seven states.
+        \item Give the recurrent and transient states.
+    \end{itemize}
+\end{exercise}
+
+\begin{exercise}(10 points)
+
+    Let $(\Omega,\mathcal{F},\mathbb{F},P)$ be a probability space and $X$ be an adapted process with value in $(S,\mathcal{S})$ whereby $S$ is countable and $\mathcal{S}=2^S$.
+    Let further
+    \begin{equation*}
+        \mathcal{G}_t=\sigma(X_s\colon s\geq t)
+    \end{equation*}
+    the backward filtration generated by $X$.
+    Show that the following three assertions are equivalent
+    \begin{itemize}
+        \item $X$ is a Markov-Chain\footnote{Not necessarily time-homogeneous.}
+        \item For all $t$ and bounded $\mathcal{G}_t$-measurable random variable $Y$ holds
+            \begin{equation*}
+                E\left[ Y|\mathcal{F}_t \right]=E\left[ Y|X_t \right].
+            \end{equation*}
+        \item For all $t$, $B\in \mathcal{F}_t$ and $C \in \mathcal{G}_t$ it holds
+            \begin{equation*}
+                P\left[ B\cap C|X_t \right]=P\left[ B|X_t \right]P\left[ C|X_t \right]
+            \end{equation*}
+    \end{itemize}
+\end{exercise}
+
+
+
+\begin{exercise}(Bonus 10 points)
+
+    Let $S:=\{1,2,3,4\}$ and consider a time homogeneous Markov Chain $X$ on the canonical space with transition probability matrix
+    \begin{equation*}
+        p=
+        \begin{pmatrix}
+            1   & 0   & 0   & 0 \\
+            1/2 & 0   & 1/2 & 0 \\
+            0   & 1/2 & 0   & 1/2 \\
+            0   & 0   & 0   & 1 \\
+        \end{pmatrix},
+    \end{equation*}
+    \begin{enumerate}[label=\textit{\alph*)},fullwidth]
+        \item As in the lecture, provide a graph that shows how the process evolves between the four states.
+            Hereby, you can visualize which sequences are possible or not.
+        \item Compute the probability $P_x[X_t=4, \text{ for some time }t]$ where $x$ is a state.
+            That is the probability that $X$ reaches at some moment the state $4$ starting from $x$.
+        \item Let $\tau_{1,4}=\inf\{t\colon X_t=1\text{ or }X_t=4\}$ be the first ``visiting'' time of the Markov Chain of the states $1$ or $4$.
+            Compute 
+            \begin{equation*}
+                E_{P_x}\left[ \tau_{1,4} \right]
+            \end{equation*}
+            for every state $x$.
+        \item Compute the stationary distribution of this Markov Chain -- inspire yourself from Exercise 10.2.
+    \end{enumerate}
+\end{exercise}
+
+%\begin{proof}
+
+%\end{proof}
+
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.12.07 14:00.
+
+\end{document}
