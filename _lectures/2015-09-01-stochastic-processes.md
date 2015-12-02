@@ -6,6 +6,11 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-12-02
+:   Beginning of Chapter 4 is online and there is an remark concerning conditional density and stochastic kernel in the first chapter in the Fubini section.
+
+
+
 2015-11-30
 :   Homework Sheet 10 is online
 
@@ -74,9 +79,10 @@ For stochastic processes:
 **Disclaimer:** The following lecture notes are meant to be a script for the students attending the lecture. Since they are written on the fly, they change quite often are prone to typos or some mistakes that are corrected as the lecture advance. So if you are not a student of my class, I suggest that you take it with precaution or wait until the lecture is finished so that the lecture notes converges to an acceptable steady state.
 
 * Script:
-    * [First Chapter, Version 2015/11/26]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1126.pdf)
+    * [First Chapter, Version 2015/12/02]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1202.pdf)
     * [Second Chapter, Version 2015/11/26]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1126.pdf)
     * [Third Chapter, Version 2015/11/26]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap03_1126.pdf)
+    * [Fourth Chapter, Version 2015/12/02]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap04_1202.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
