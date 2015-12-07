@@ -1,0 +1,191 @@
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+\usepackage{stmaryrd}
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{11}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 11}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+
+%\begin{proof}
+
+%\end{proof}
+
+\begin{exercise}
+    Let $T_1,T_2,\ldots$ be a sequence of independent random variable all exponentially distributed with parameter $\lambda>0$, that is,
+    \begin{equation*}
+        dP_{T_n}=\lambda e^{-\lambda t} dt, \quad \text{for every }n
+    \end{equation*}
+    We define the discrete process $S$ as
+    \begin{equation*}
+        S_0 \quad\text{and}\quad S_n=\sum_{k=1}^n T_k
+    \end{equation*}
+    which somehow model the number of persons arriving into a queue.
+    We finally define the continuous time process
+    \begin{equation*}
+        N_t=\max\left\{ n\in \mathbb{N}\colon S_n\leq t \right\}, \quad 0\leq t <\infty
+    \end{equation*}
+    representing the number of persons in the queue at time $t$ and define
+    \begin{equation*}
+        \mathcal{F}_t=\sigma\left( N_s\colon s\leq t \right)
+    \end{equation*}
+
+    Show that
+    \begin{enumerate}[label=\textit{(\roman*)}]
+        \item Show that for $0\leq s\leq t$, it holds\footnote{Hint: Show that for every $A\in \mathcal{F}_s$ and every $n$, there exists $\tilde{A} \in \sigma(T_1,\ldots, T_n)$ such that $A\cap \{N_s=n\}=\tilde{A}\cap\{N_s=n\}$ and use the independence of $T_{n+1}$ from $(S_n,1_{\tilde{A}})$ to show that
+                \begin{equation*}
+                    E\left[ 1_{A\cap\{N_s=n\}}P\left[ S_{n+1}>t|\mathcal{F}_s \right] \right]=e^{-\lambda(t-s)}P\left[ A\cap \{N_s=n\} \right].
+                \end{equation*}
+            }
+            \begin{equation*}
+                P\left[ S_{N_s+1}>t|\mathcal{F}_s \right]=e^{-\lambda(t-s)}
+            \end{equation*}
+        \item (Difficult, bonus) Show that for $s\leq t$, $N_t-N_s$ is a Poisson distributed random variable with parameter $\lambda(t-s)$ independent of $\mathcal{F}_s$\footnote{Hint: You can use the previous result to show that for every $A\in \mathcal{F}_s$ and $n$, it holds
+                \begin{equation*}
+                    E\left[ 1_{A\cap \{N_s=n\}}P\left[ N_t-N_s\leq k|\mathcal{F}_s \right] \right]=P\left[ A\cap\{N_s=n\} \right]\sum_{j=0}^ke^{-\lambda(t-s)}\frac{(\lambda(t-s))^j}{j!}
+                \end{equation*}
+            } that is
+            \begin{equation*}
+                E\left[ 1_A P\left[ N_t-N_s\leq k |\mathcal{F}_s \right] \right]=P\left[ A \right]\sum_{j=0}^k e^{-\lambda(t-s)}\frac{(\lambda(t-s))^j}{j!}
+            \end{equation*}
+            for every $A \in \mathcal{F}_s$.
+        \item Show that the compensated Poisson process
+            \begin{equation*}
+                M_t:=N_t-\lambda t, \quad 0\leq t<\infty
+            \end{equation*}
+            is a Martingale.
+        \item Show that for any $c>0$, it holds
+            \begin{align}
+                \limsup_{t\to \infty} P\left[ \sup_{s\leq t} M_s \geq c\sqrt{\lambda t} \right] & \leq \frac{1}{c\sqrt{2\pi}}\\
+                \liminf_{t \to \infty} P\left[ \inf_{s\leq t} M_s \leq -c\sqrt{\lambda t} \right] & \leq \frac{1}{c\sqrt{2\pi}}\\
+                E\left[ \sup_{s\leq u\leq t}\left(\frac{M_u}{u}\right)^2 \right]&\leq \frac{4t\lambda}{s^2}
+            \end{align}
+            the latter inequality being for every $0<s<t$.\footnote{Recall Stirling's asymptotic behavior $n!\sim \sqrt{2\pi n}(n/e)^n$.}
+    \end{enumerate}
+\end{exercise}
+Let $(\Omega,\mathcal{F},\mathbb{F}=(\mathcal{F}_t)_{0\leq t<\infty},P)$ be a filtrated probability space.
+\begin{definition}
+    A stochastic process $B$ is called a Brownian Motion if
+    \begin{enumerate}[label=\textbf{(\Roman*)}]
+        \item $B$ is adapted;
+        \item $B_0=0$ almost surely;
+        \item $B$ has continuous path almost surely.\footnote{That is $P[\{\omega\colon t\mapsto B_t(\omega)\text{ is continuous}\}]=1$.}
+        \item $B_t-B_s$ is independent of $\mathcal{F}_s$ and $B_t-B_s\sim \mathcal{N}(0,t-s)$. 
+    \end{enumerate}
+\end{definition}
+\begin{exercise}
+    Let $B$ be a Brownian motion.
+    Show that
+    \begin{enumerate}[label=\textit{(\roman*)}]
+        \item $B$ is a martingale;
+        \item $B^2_t-t$ is a martingale\footnote{You may use without proof that $B_t-B_s$ has the same distribution as $B_{t-s}$ for every $0\leq s\leq t$.}
+        \item $\exp(\sigma B_t-\sigma^2 t/2)$ is a martingale for every $\sigma>0$.
+        \item $1/\sigma^2 B_{\sigma t}$ is a Brownian motion with respect to the filtration $(\mathcal{F}_{\sigma t})_{0\leq t<\infty}$ for all $\sigma>0$;
+        \item For fixed $s$, $B_{t+s}-B_s$ is a Brownian motion with respect to $(\mathcal{F}_{t+s})_{0\leq t <\infty}$.
+        \item Use the last two point to show that the Brownian motion is non-differentiable at any $t$ almost surely.
+    \end{enumerate}
+\end{exercise}
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.12.14 14:00.
+
+\end{document}
