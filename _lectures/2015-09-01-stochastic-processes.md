@@ -6,6 +6,9 @@ date: WS 2015/2016
 
 ### Recent Informations:
 
+2015-12-08
+:   Update of Chapter 4 up to Ito's formula.
+
 2015-12-02
 :   Beginning of Chapter 4 is online and there is an remark concerning conditional density and stochastic kernel in the first chapter in the Fubini section.
 
@@ -82,7 +85,7 @@ For stochastic processes:
     * [First Chapter, Version 2015/12/02]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1202.pdf)
     * [Second Chapter, Version 2015/11/26]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1126.pdf)
     * [Third Chapter, Version 2015/11/26]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap03_1126.pdf)
-    * [Fourth Chapter, Version 2015/12/02]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap04_1202.pdf)
+    * [Fourth Chapter, Version 2015/12/08]({{site.url}}/downloads/WS2015/StochProcess/Stochastic_Processes_chap04_1208.pdf)
 
 * Assignments:
     * Sheet 1: [PDF]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf), [TEX]({{site.url}}/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex)
