@@ -170,10 +170,32 @@ Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
 \end{exercise}
 \begin{exercise}
     Let $f:[0,\infty[\to \mathbb{R}$ be a function.
-    We define the variations of $f$ as the function 
-    \begin{equation*}
-        S_t=\sup_{\Pi=\{0=t_0\leq t_1\leq \cdots \leq t_n=t\}} \sum_{k=1}^n \left|f(t_k)-f(t_{k-1})\right|
-    \end{equation*}
+    We define
+    \begin{itemize}
+        \item the variations of $f$ as the function 
+            \begin{equation*}
+                S_t=\sup_{\Pi=\{0=t_0\leq t_1\leq \cdots \leq t_n=t\}} \sum_{k=1}^n \left|f_{t_k}-f_{t_{k-1}}\right|, \quad t \in [0,\infty[
+            \end{equation*}
+        \item the quadratic variations of $f$ as
+            \begin{equation*}
+                \langle f\rangle_t=\sup_{\Pi=\{0=t_0\leq t_1\leq \cdots \leq t_n=t\}} \sum_{k=1}^n \left|f_{t_k}-f_{t_{k-1}}\right|^2, \quad t \in [0,\infty[
+            \end{equation*}
+    \end{itemize}
+    We say that $f$ has 
+    \begin{itemize}
+        \item bounded variations if $S_t<\infty$ for every $t$;
+        \item quadratic variations if $\langle f\rangle_t<\infty$ for every $t$.
+    \end{itemize}
+
+    \begin{enumerate}[label=\textit{(\roman*)},fullwidth]
+        \item show that if $f$ has bounded variations, then
+            \begin{equation*}
+                S_t-f_t\quad \text{and}\quad S_t+f_t
+            \end{equation*}
+            are both increasing functions.
+        \item Show that if $t\mapsto f_t$ is Lipschitz continuous, then $f$ has bounded variations;
+        \item Show that if $t \mapsto f_t$ has bounded variations, then $\langle f\rangle_t=0$ for every $t$.
+    \end{enumerate}
 \end{exercise}
 \begin{exercise}
     Let $B$ be the Brownian Motion (as in the previous exercise sheet) and consider a fixed time horizon $T<\infty$.
