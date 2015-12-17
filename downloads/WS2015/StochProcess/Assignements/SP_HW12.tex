@@ -1,0 +1,215 @@
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+\usepackage{stmaryrd}
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{12}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 12}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+\begin{exercise}[Easy]
+    \begin{enumerate}[label=\arabic*), fullwidth]
+        \item Let $X=(X_t)_{0\leq t\leq T}$ be a martingale on a probability space $(\Omega,\mathcal{F},P)$ with a filtration $\mathbb{F}=(\mathcal{F}_t)_{0\leq t\leq T}$.
+            Show that if $X_t\geq 0$ $P$-almost surely, then holds for $P$-almost all $\omega \in \Omega$:
+                    \begin{equation*}
+                        X_t(\omega)=0\; \text{ for some }t\quad\text{implies}\quad X_{s}(\omega)=0\;\text{ for every }s=t+1,\ldots,T
+                    \end{equation*}
+        \item Let $Y_1,\ldots,Y_t$ be independent random variables such that $Y_t\sim \mathcal{N}(0,1)$ on some probability space $(\Omega,\mathcal{F},P)$.
+            Consider the filtration $\mathcal{F}_0=\{\emptyset,\Omega\}$ and $\mathcal{F}_t=\sigma(Y_1,\ldots,Y_t)$.
+            We consider the process
+            \begin{equation*}
+                S_0>0,\quad S_t=S_0\exp\left( \sum_{s=1}^t \left(\sigma_s Y_s +\mu_s\right) \right)
+            \end{equation*}
+            where $\sigma_t, \mu_t$ are constant for $t=1,\ldots,T$ such that $\sigma_t\neq 0$.
+            Let further
+            \begin{equation*}
+                S_t^0=(1+r)^t
+            \end{equation*}
+            for some constant $r>-1$.
+            For which values of $\sigma_t$ is the price process
+            \begin{equation*}
+                X_t=\frac{S_t}{S_t^0}
+            \end{equation*}
+            a martingale.
+    \end{enumerate}
+\end{exercise}
+
+
+%\begin{proof}
+
+%\end{proof}
+\begin{exercise}[Insider Problem]
+    Let $Y_1,\ldots, Y_T$ be independent identically distributed random variables such that $E[Y_t]=0$ for every $t$ and not identically constant on some probability space $(\Omega,\mathcal{F}, P)$.
+    We consider the filtration $\mathcal{F}_0=\{\emptyset,\Omega\}$ and $\mathcal{F}_t=\sigma(Y_1,\ldots,Y_t)$ and process
+    \begin{equation*}
+        X_0:=1,\quad X_t:=X_0+\sum_{s=1}^t Y_s.
+    \end{equation*}
+    We interpret this process as a stock price which is fair in the sense that it is a martingale and therefore does not brings any gain or loss in expectation.
+    And for every strategy $H$, that is predictable process, the investment gain $H\bullet X_T$ at time $T$ does not brings in average more than $H_0X_0$ due to Doob's optional sampling theorem.
+
+    We extend the filtration with the information provided by $X_T$, that is
+    \begin{equation*}
+        \tilde{\mathcal{F}}_t=\sigma(\mathcal{F}_t,X_T), \quad t=0,\ldots,T
+    \end{equation*}
+    This can be interpreted as the information of an insider knowing for whatever reason the terminal value of the price at time $T$.
+    We denote the non-insider filtration $\mathbb{F}$ and the insider filtration $\tilde{\mathbb{F}}$.
+    Show that
+    \begin{enumerate}[label=\textit{(\roman*)},fullwidth]
+    \item $X$ is a martingale under the filtration $\mathbb{F}$.
+        Show that $X$ can not be a martingale under the insider filtration $\tilde{\mathbb{F}}$.
+        However, the process
+        \begin{equation*}
+            \tilde{X}_t=X_t-\sum_{s=0}^{t-1}\frac{X_T-X_s}{T-s}, \quad t=0,\ldots, T
+        \end{equation*}
+        is a martingale under $\tilde{\mathbb{F}}$.
+    \item With the information about the terminal value $X_T$ of the stock, it is possible to realize arbitrage gains.
+        It means that you can find a predictable process but with respect to $\tilde{\mathbb{F}}$ such that starting with $0$ money, that is $H_0=0$, you end up with positive gains and even strict gains with strict positive probability.
+        That is
+        \begin{equation*}
+            P\left[ H\bullet X_T \geq 0 \right]=1\quad\text{and}\quad P\left[ H\bullet X_T> 0 \right]>0
+        \end{equation*}
+        Find the best ``insider strategy'' -- that is $\tilde{\mathbb{F}}$-predictable process $H$ with $H_0=0$ -- that brings the maximum of gains among the insider strategies such that $|H_s|\leq 1$ for every $s=1,\ldots,T$.
+    \end{enumerate} 
+\end{exercise}
+\begin{exercise}
+    Let $f:[0,\infty[\to \mathbb{R}$ be a function.
+    We define the variations of $f$ as the function 
+    \begin{equation*}
+        S_t=\sup_{\Pi=\{0=t_0\leq t_1\leq \cdots \leq t_n=t\}} \sum_{k=1}^n \left|f(t_k)-f(t_{k-1})\right|
+    \end{equation*}
+\end{exercise}
+\begin{exercise}
+    Let $B$ be the Brownian Motion (as in the previous exercise sheet) and consider a fixed time horizon $T<\infty$.
+    Recall that you showed that $\langle B\rangle_t=t$, hence $d\langle B\rangle_t=dt$.
+    Hence we will consider the space $\mathcal{L}^2:=\mathcal{L}^2(P\otimes dT)$ of those processes $H=(H_t)_{0\leq t\leq T}$ which are progressive and such that
+    \begin{equation*}
+        E\left[ \int_{0}^{T}H_t^2 d\langle B\rangle_t  \right]=E\left[ \int_{0}^{T}H_t^2dt  \right]<\infty.
+    \end{equation*}
+    For a fixed time horizon $T<\infty$, define the process
+    \begin{equation*}
+        H^n_t=\sum_{k=1}^nB_{t_{k-1}^n}1_{]t_{k-1}^n,t_k^n]}(t), \quad 0\leq t\leq T
+    \end{equation*}
+    where $t_k^n=kT/n$, $k=0,\ldots, n$.
+    \begin{enumerate}[label=\textit{(\roman*)}, fullwidth]
+        \item Though $B_{t_{k-1}^n}$ is $\mathcal{F}_{t_{k-1}^n}$-measurable, it is now uniformly bounded and therefore not element of $\mathcal{S}$ as given in the lecture.
+            Show however that it belongs to $\mathcal{L}^2$.
+        \item Show that $H^n\to B$ in $\mathcal{L}^2$ -- for the $L^2$-norm.
+            In particular, $B \in \mathcal{L}^2$.
+        \item Show that there exists a random variable $I_T\in \mathcal{L}^2$ such that
+            \begin{equation*}
+                (H^n\bullet B)_T=\sum_{k=1}^nH^n_{t_k^n}\left( B_{t_k^n}-B_{t_{k-1}^n} \right)=\sum_{k=1}^nB_{t_{k-1}^n}\left( B_{t_{k}^n}-B_{t_{k-1}^n} \right)
+            \end{equation*}
+            converges in $\mathcal{L}^2$ to $I_T$.
+            We denote this random variable the stochastic integral of $B$, that is
+            \begin{equation*}
+                I_T:=\int_{0}^{T}B_t dB_t 
+            \end{equation*}
+        \item Using the relation $b(a-b)=(a^2-b^2-(a-b)^2)/2$, show using the approximation above that
+            \begin{equation*}
+                \int_{0}^{T}B_tdB_t=\frac{1}{2}\left(B_T^2-T \right)
+            \end{equation*}
+    \end{enumerate}
+\end{exercise}
+
+\smallskip
+\noindent
+\textbf{Due date:} Upload before Monday 2015.12.23 14:00.
+
+\end{document}
