@@ -1,0 +1,236 @@
+%-----------------------   general info   ----------------------------------------	
+
+%	filename  	= 	homework_template
+%   date      	= 	
+%   time      	= 	
+%   author    	= 	Samuel Drapeau (Based on a template provided by Daniel, University of Constance)
+% 	adress		= 	Shanghai Jiao Tong University
+
+%-----------------------   documentclass, packages   -----------------------------
+\documentclass[DIV=classic,a4paper,10pt]{scrartcl}
+
+\KOMAoptions{DIV=last}
+
+\setkomafont{title}{\scshape}
+\setkomafont{disposition}{\normalcolor\scshape}
+
+%\setkomafont{title}{\bfseries}
+%\setkomafont{disposition}{\normalfont\normalcolor\bfseries}
+
+
+%----------------------- general packages (fonts, language, enumitem) ------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{enumitem}
+%\usepackage{fullpage}
+
+
+
+%----------------------- Math Packages -------------------------------------------
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[intlimits]{amsmath}
+\usepackage[hyperref,amsmath,thmmarks]{ntheorem}
+\usepackage{stmaryrd}
+%\parindent0cm
+
+%-----------------------   math operators   --------------------------------------	
+%-----------------------   general short cuts   ----------------------------------	
+
+%-----------------------   theorem environments   --------------------------------
+
+
+\theoremseparator{.}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theorembodyfont{\upshape}
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremsymbol{\ensuremath{\lozenge}}
+\newtheorem{example}[theorem]{Example}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remark}[theorem]{Remark}
+
+\theoremsymbol{\ensuremath{\blacklozenge}}
+\theoremheaderfont{\itshape}
+\newtheorem{remarks}[theorem]{Remarks}
+
+\theoremsymbol{\ensuremath{\square}}
+\theoremheaderfont{\itshape}
+\theoremstyle{nonumberplain}
+\newtheorem{proof}{Proof}
+
+
+
+%---------------------------------------------------------------------------------
+% \numberwithin{section}{chapter}\numberwithin{equation}{chapter}
+\numberwithin{equation}{section}
+\setcounter{tocdepth}{2}
+
+
+\begin{document}
+
+\noindent
+Teacher: Samuel Drapeau \hfill Shanghai Jiao Tong University \newline
+Teaching Assistant: Zhang Yaoyuan \hfill WS 2015/2016
+
+\smallskip
+\noindent
+\hrulefill
+
+\smallskip
+%-----------------------   mainmatter   ------------------------------------------
+
+\setcounter{section}{13}
+
+\pagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+\section*{``Stochastic Processes'' -- Homework Sheet 13}
+\thispagestyle{empty}
+
+
+%-----------------------------------------------------------------------
+
+Given a continuous square integrable martingale $M$ and a process $H\in \mathcal{L}^2(P\otimes d\langle M\rangle)$ we denote the stochastic integral of $H$ with respect to $M$ either
+\begin{equation*}
+    H\bullet M \quad \text{or}\quad \int H dM \quad\text{or}\quad \int H_s dM_s
+\end{equation*}
+
+\begin{exercise}
+    Let $M\in \mathcal{M}_c^2$, $\alpha \in \mathbb{R}$ and $G,H \in \mathcal{L}^2(P\otimes d\langle M\rangle)$.
+    Show that
+    \begin{itemize}
+        \item $(\alpha H+G)\bullet M=\alpha H\bullet M+G\bullet M$;
+        \item $(1_{[0,\tau]}H)\bullet M=H\bullet M^\tau=(H\bullet M)^\tau$.
+    \end{itemize}
+\end{exercise}
+
+For $M,N \in \mathcal{M}_c^2$, we define the co-variations $\langle M, N\rangle$ of $M$ and $N$ by means of the polar formula
+\begin{equation*}
+    \langle M,N\rangle = \frac{\langle M+N\rangle -\langle M-N\rangle}{4}
+\end{equation*}
+which is a continuous process of bounded variations -- not necessarily increasing.
+\begin{exercise}
+    Show for $G,H \in \mathcal{S}$ and $M,N \in \mathcal{M}_c^2$ that it holds
+    \begin{align*}
+        \langle \int_{}^{} GdM\rangle   & = \int_{}^{} G^2_sd\langle M\rangle_s\\
+        \langle \int_{}^{} G dM,\int_{}^{} H dN\rangle & = \int_{}^{} G_sd \langle M,\int_{}^{} H dN\rangle_s\\
+        &= \int_{}^{} G_sH_s d\langle M,N\rangle_s
+    \end{align*}
+    Always with $G,H \in \mathcal{S}$, and the Doob-Meyer decomposition, follows the chain rule
+    \begin{equation*}
+        \int_{}^{}  G\left( H\bullet M \right)=\int_{}^{} GH dM
+    \end{equation*}
+\end{exercise}
+\begin{exercise}
+    Let $M \in \mathcal{M}_c^2$.
+    We know from the Doob-Meyer decomposition that
+    \begin{equation*}
+        M^2=\tilde{M}+\langle M\rangle
+    \end{equation*}
+    for some martingale $\tilde{M}$.
+    Show using Ito's formula that
+    \begin{equation*}
+        \tilde{M}=2\int_{}^{} M_s dM_s
+    \end{equation*}
+\end{exercise}
+\begin{exercise}
+    Let $B$ be a Brownian motion.
+    \begin{itemize}
+        \item Show using Ito's Formula that the process $X$ given by
+            \begin{equation*}
+                X_t=e^{t/2}\cos\left( B_t \right)
+            \end{equation*}
+            is a martingale.
+        \item Consider the following stochastic differential equation
+            \begin{equation*}
+                dX_t=X_t\left( \mu_t dt+\sigma_t dB_t \right), \quad X_0=1
+            \end{equation*}
+            where $\mu_t$ and $\sigma_t$ are uniformly bounded progressive processes and $\sigma_t>\varepsilon>0$ for every $t$.
+            Show using Ito's formula that it has a solution given by
+            \begin{equation*}
+                X_t=\exp\left( \int_{0}^{t} \left( \mu_s-\frac{1}{2} \sigma_s^2 \right)ds+\int_{0}^{t}\sigma_s dB_s  \right)
+            \end{equation*}
+        \item Using the previous point show that
+            \begin{equation*}
+                X_t=\exp\left( -\frac{1}{2}\int_{0}^{t} \sigma_s^2 ds+\int_{0}^{t}\sigma_s dB_s  \right)
+            \end{equation*}
+            is a martingale.
+        \item Consider the following stochastic differential equation
+            \begin{equation*}
+                dX_t=-\theta X_t dt+\sigma dB_t, \quad X_0=x
+            \end{equation*}
+            for $\theta, \sigma >0$.
+            This stochastic differential equation describes exponential convergence to $0$.
+            Show that it has a solution by considering the process $U_t=e^{\theta t}X_t$.
+    \end{itemize}
+\end{exercise}
+\begin{exercise}
+    Let $B$ be a Brownian motion on a filtrated probability space and for a fixed time horizon $T\in \mathbb{R}_+$, let $f:[0,T]\to [0,T]$ be a measurable function -- note that $f$ is deterministic, that is do not depend on the state $\omega \in \Omega$ -- such that
+    \begin{equation*}
+        E\left[ \int_{0}^T f_t^2 dt \right]<\infty.
+    \end{equation*}
+    For $0\leq a\leq b\leq T$, define
+    \begin{equation*}
+        J_{a,b}=\int_{a}^{b}f_s dB_s.
+    \end{equation*}
+    \begin{enumerate}[label=\alph*)]
+        \item Show that $J_{a,b}$ is well defined, and normally distributed $\mathcal{N}(\mu,\sigma)$ where\footnote{The case where $\int_{a}^b f_s^2ds=0$ being a trivial case where the distribution has $0$ variance and point mass $1$ at $0$.}
+            \begin{equation*}
+                \mu=0\quad\text{and}\quad\sigma^2=\int_{a}^{b}f_s^2 ds
+            \end{equation*}
+        \item Show further that for $0\leq a\leq b\leq c\leq d\leq T$, the random vector $(J_{a,b},J_{c,d})$ is a Gaussian vector, that is, every linear combination
+            \begin{equation*}
+                \alpha J_{a,b}+\beta J_{c,d}
+            \end{equation*}
+            is normally distributed for every choice of $\alpha,\beta \in \mathbb{R}$ -- the case where $\alpha=\beta=0$ being the previous trivial case with point mass $1$ at $0$.
+            Show finally that $J_{a,b}$ is independent of $J_{c,d}$.
+    \end{enumerate}
+    \emph{Hint:} Show first the case where $f$ is piecewise constant.
+    Then approximate $f$ by a sequence $(f^n)$ of piecewise constant functions and shows that it converges to the good distribution.
+\end{exercise}
+
+
+\begin{exercise}[Difficult]
+   A function $f: D \subseteq \mathbb R \to \mathbb R$ is called locally H\"older continuous of order $\alpha$ at $x \in D$ if there exists $\delta > 0$ and $C > 0$ such that $|f (x) - f (y)| \leq C|x - y|^\alpha$ for all $y \in D$ with $|x - y| \leq \delta$.
+   A function $f : D \subseteq \mathbb R \to \mathbb R$ is called locally H\"older continuous of order $\alpha$, if it is locally H\"older continuous of order $\alpha$ at each $x \in D$.
+   \begin{enumerate}[label=\alph*)]
+       \item Let $Z \sim \mathcal N (0, 1)$.
+           Prove that $P [|Z| \leq \varepsilon] \leq \varepsilon$ for any $\varepsilon \geq  0$.
+       \item Let $B$ be a Brownian motion (without the assumption that it has continuous paths).
+           Prove that for any $\alpha > 1/2$, $P$-almost all path of the Brownian motion $B$ are nowhere on $[0, 1]$ locally H\"older-continuous of order $\alpha$.
+           
+           \emph{Hint:} Take any $M \in \mathbb{N}$ satisfying $M (\alpha- 1/2) > 1$ and show that the set
+           \begin{equation*}
+               \left\{ \omega\colon t\mapsto B_t(\omega)\text{ is locally H\"older continuous at some }t\in [0,1] \right\}
+           \end{equation*}
+           is contained in the set
+           \begin{equation*}
+               \bigcup_{C \in \mathbb{N}}\bigcup_{m\in \mathbb{N}}\bigcap_{n\geq m}\bigcap_{k=0,\ldots, n-M}\bigcap_{j=1,\ldots,M}\left\{ \left| B_{\frac{k+j}{n}}-B_{\frac{k+j-1}{n}} \right| \leq C\frac{1}{n^\alpha}\right\}
+           \end{equation*}
+       \item The Kolmogorov-\v{C}entsov theorem states that any process $X$ on $[0, T]$ satisfying 
+           \begin{equation*}
+              E\left[ \left| X_t-X_s \right|^{\gamma} \right] \leq C\left| t-s \right|^{1+\beta},\quad 0\leq s,t\leq T
+           \end{equation*}
+           where $\gamma, \beta, C > 0$, has a version which is locally H\"older-continuous of order $\alpha$ for all $\alpha < \beta/\gamma$.
+           Use this to deduce that Brownian motion has for every $\alpha < 1/2$ a version which is locally H\"older-continuous of order $\alpha$. 
+   \end{enumerate}
+\end{exercise}
+\smallskip
+\noindent
+\textbf{Due date:} Optional
+
+\end{document}
