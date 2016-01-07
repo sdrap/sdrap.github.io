@@ -5,6 +5,18 @@ permalink: /activities/
 rank: 5
 ---
 
+2016 January 14th &mdash; Seminar Talk by [Ludovic Tangpi](http://www.mat.univie.ac.at/~tangpi/) of the University of Vienna
+:   **Date:** January 14th  
+    **Place:** SAIF, 211 West Huaihai Road, Shanghai  
+    **Room:** 403  
+    **Time:** 15:15 &mdash; 16:30  
+    **Title:** Efficient hedging under ambiguity   
+    **Abstract:** It is well known that the minimal superhedging price of a contingent claim is typically too high for the seller in practice. In a non-dominated model uncertainty framework, we propose alternative hedging criteria and, based on an aggregation result and new findings on representation of convex functionals, we derive existence of optimal strategies and dual representation of minimal prices.
+
+
+
+
+
 2015 October 15th &mdash; Lecture/Seminar Talk by me...
 :   **Date:** October 15th  
     **Place:** Shanghai Jiao Tong University, Minhang Campus, Baoyugang library, Shanghai  
