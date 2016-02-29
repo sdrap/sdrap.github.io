@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Risk Preferences: Quantification &mdash; Robustness &mdash; Dynamic"
-date: WS 2013/14
+date: WS 2013/2014
 semester: WS
 ---
 ### When/Where

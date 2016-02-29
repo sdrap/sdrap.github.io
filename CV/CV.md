@@ -64,6 +64,11 @@ Jun 2001 &mdash; Apr 2004
 
 **Teaching**
 
+S.S. 2016
+:   Lecture *Risk Management* SJTU Shanghai, Graduates   
+    Lecture *Backward Stochastic Differential Equations*, SJTU Shanghai, Graduates   
+    Seminar *Finance and Stochastics* SJTU Shanghai, Graduates
+
 W.S. 2015
 :   Lecture *Stochastic Processes* SJTU Shanghai, Graduates  
     Lecture *Financial Mathematics* Master of Finance, SAIF, Graduates

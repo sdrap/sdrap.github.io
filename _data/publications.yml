@@ -14,7 +14,7 @@
     -
       family: Papapantoleon
       given: Antonis
-  container-title: "Preprint (Updated version with numerics 2015/09/22. Former version titled <em>Multivariate Shortfall Risk Allocation</em>)"
+  container-title: "Preprint 2015/09"
   issued:
     date-parts:
     - - 2015
@@ -49,10 +49,13 @@
     -
       family: Karliczek
       given: Martin
-  container-title: Stochastics (Forthcoming)
+  container-title: Stochastics
   issued:
     date-parts:
-    - - 2013
+    - - 2016
+  volume: '88'
+  issue: '1'
+  page: '1-44'
   type: article-journal
   rank: '08'
   URL_Open: "http://arxiv.org/abs/1306.5198"
@@ -365,10 +368,13 @@
     - 
       family: Kupper
       given: Michael
-  container-title: Journal of Mathematical Analysis and Applications (Forthcoming)
+  container-title: Journal of Mathematical Analysis and Applications
   issued:
     date-parts:
-    - - 2013
+    - - 2016
+  volume: '437'
+  issue: '1'
+  page: '561-589'
   type: article-journal
   rank: '11'
   URL_Open: "http://arxiv.org/abs/1309.6903"
