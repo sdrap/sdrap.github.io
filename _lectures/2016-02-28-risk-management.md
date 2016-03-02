@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Risk Management"
-date: SS 2016
-semester: SS
+date: 2016-02-28
+semester: SS 2016
 ---
 ### When/Where
 

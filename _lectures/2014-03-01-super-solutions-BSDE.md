@@ -1,7 +1,8 @@
 ---
 layout: page
 title: (Super)Solutions of Backward Stochastic Differential Equations
-date: SS 2014
+date: 2014-03-01
+semester: SS 2014
 ---
 
 ### When/Where

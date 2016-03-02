@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Stochastic Processes
-date: WS 2015/2016
+date: 2015-09-01
+semester: WS 2015/2016
 ---
 
 ### Recent Informations:

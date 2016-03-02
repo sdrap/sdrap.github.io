@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Financial Mathematics"
-date: WS 2015/2016
-semester: WS
+date: 2015-09-01
+semester: WS 2015/2016
 ---
 ### When/Where
 
