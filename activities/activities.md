@@ -5,6 +5,16 @@ permalink: /activities/
 rank: 5
 ---
 
+2016 March 11th &mdash; Seminar Talk by [Ernst Eberlein](http://www.stochastik.uni-freiburg.de/emeriti/eberlein) of Freiburg University in Germany
+:   **Date:** March 11th  
+    **Place:** SAIF, 211 West Huaihai Road, Shanghai  
+    **Room:** 305  
+    **Time:** 14:00 &mdash; 15:00  
+    **Title:** tba   
+
+
+
+
 2016 January 14th &mdash; Seminar Talk by [Ludovic Tangpi](http://www.mat.univie.ac.at/~tangpi/) of the University of Vienna
 :   **Date:** January 14th  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
