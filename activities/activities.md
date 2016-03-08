@@ -10,9 +10,9 @@ rank: 5
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
     **Room:** 305  
     **Time:** 14:00 &mdash; 15:00  
-    **Title:** tba   
-
-
+    **Title:** A defaultable asset price model and two price valuation  
+    **Abstract:** In classical economic theory the law of one price prevails and market participants trade freely in both directions at the same price. This approach is appropriate for perfectly liquid markets. In the absence of sufficient liquidity, the law of one price has to be replaced by a two price economy where market participants continue to trade freely with the market but the terms of trade now depend on the direction of the trade. The two prices are given by nonlinear expectation operators.  
+    After outlining this new approach we demonstrate its applicability in the context of an asset price model which takes default into account. Negative dependence between asset price and default probability is implemented as a key property. Purely discontinuous Lévy processes are used as drivers for the asset price process as well as for the hazard process which is used to model credit risk. Some pricing formulas for derivatives are explicitly given and numerical aspects to evaluate these formulas are discussed.  
 
 
 2016 January 14th &mdash; Seminar Talk by [Ludovic Tangpi](http://www.mat.univie.ac.at/~tangpi/) of the University of Vienna
