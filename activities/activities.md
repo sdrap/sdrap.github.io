@@ -5,6 +5,15 @@ permalink: /activities/
 rank: 5
 ---
 
+2016 April 1st-3rd April &mdash; Lecture series by [Hao Xing](http://stats.lse.ac.uk/xing/) of London School of Economics
+:   **Date:** April 1st, 2nd and 3rd  
+    **Place:** SAIF, 211 West Huaihai Road, Shanghai  
+    **Room:** 305  
+    **Time:** 14:00 &mdash; 17:00  
+    **Title:** Mathematics of continuous-time contract theory  
+    **Abstract:** In recent years there has been a significant increase of interest in continuous-time Principal-Agent models, or contract theory, in which Principal hires Agent to work on a project and pays him according to an agreed upon contract. Contract theory has wide applications in corporate finance, portfolio selection, and financial equilibrium. In such problems, the optimal contract has to be such that both Principal and Agent solve optimally their stochastic control problems. In contrast to discrete-time models, continuous-time models provide a powerful and elegant framework in which the solution of Principal-Agent problems is mathematically challenging, results obtained are also economically important. In this continuous-time framework, stochastic control theory and backward stochastic differential equations play a special role. We will discuss seminal papers of  Holmström and Milgrom (1987), Sannikov (2008), and DeMarzo and Sannikov (2006).  
+    
+
 2016 March 11th &mdash; Seminar Talk by [Ernst Eberlein](http://www.stochastik.uni-freiburg.de/emeriti/eberlein) of Freiburg University in Germany
 :   **Date:** March 11th  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
