@@ -6,7 +6,7 @@ rank: 3
 ---
 **Personal Details**
 
-:   [China Academy of Finance Research](http://en.cafr.cn) and [Department of Mathematics](http://www.math.sjtu.edu.cn/)<br>
+:   [China Academy of Finance Research](http://en.cafr.cn) and [School of Mathematical Sciences](http://www.math.sjtu.edu.cn/)<br>
     Shanghai Jiao Tong University<br>
     800 Dongchuan Road<br>
     Shanghai, 200240 China
