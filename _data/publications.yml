@@ -141,10 +141,13 @@
     - 
       family: Kupper
       given: Michael
-  container-title: Set-Valued and Variational Analysis (Forthcoming)
+  container-title: Set-Valued and Variational Analysis
   issued:
     date-parts:
-    - - 2014
+    - - 2016
+  volume: '24'
+  issue: '2'
+  page: '253--275'
   type: article-journal
   rank: '12'
   URL_Open: "http://arxiv.org/abs/1405.0219"
@@ -273,12 +276,12 @@
 
   title: Dual Representation of Minimal Supersolutions of Convex BSDEs
   container-title: Annales de l’Institut Henri Poincaré
-  volume: '50'
+  volume: '52'
   issue: '2'
-  page: '524-538'
+  page: '868-887'
   issued:
     date-parts:
-    - - 2015
+    - - 2016
   type: article-journal
   rank: '10'
   URL_Open: "http://arxiv.org/abs/1308.1275"
