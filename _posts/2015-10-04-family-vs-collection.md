@@ -10,17 +10,19 @@ Even in the math community -- myself included -- there is often confusion betwee
 However, as long as it is clear what is meant for the writer and the reader, there is actually no real problem.
 Let me stress the difference between both
 
+<div class="definition" markdown="1">
 
-Definition: Family
+Family
 :   Given two sets $$X$$ and $$I$$, a *family of elements in $$X$$ indexed by $$I$$* is a function $$f:I\to X$$.
+    Such a family is often denoted by $$(x_i)_{i \in I}$$ where $$x_i:=f(i)$$ for every $$i\in I$$.
 
-Such a family is often denoted by $$(x_i)_{i \in I}$$ where $$x_i:=f(i)$$ for every $$i\in I$$.
-Typical examples of families are sequences $$(x_n)_{n\in \mathbb{N}}$$ of elements in $$X$$ indexed by $$\mathbb{N}$$.
-
-Definition: Collection
+Collection
 :   Given a set $$X$$, a *collection $$A$$ of elements in $$X$$* is a subset of $$X$$.
 
-A collection is therefore a set, which, as a consequence, implies that repetition of elements is not possible.
+</div>
+
+Typical examples of families are sequences $$(x_n)_{n\in \mathbb{N}}$$ of elements in $$X$$ indexed by $$\mathbb{N}$$.
+A collection is a set, which, as a consequence, implies that repetition of elements is not possible.
 For instance, if $$X=\mathbb{N}$$, we can not have a collection of elements in $$\mathbb{N}$$ that contains ten times the number $$1$$.
 
 The small confusion comes from the fact that
@@ -78,13 +80,13 @@ Sometimes you will also see -- I personally try to avoid it as much as possible:
 
 * *"Let $$(x_i)\subseteq X$$ be a family,..."* or *"Let $$(x_n)\subseteq X$$ be a sequence,..."* or even *"Let $$(x_i)\subseteq X$$,..."*, or *"Let $$(x_n)\subseteq X$$,..."*.
 
-    In contrast to the previous short hand-writings, these notations are formally not really acceptable from a mathematical view-point.
-    For instance, in the case of a sequence $$(x_n)$$ of elements in $$X$$, it clearly follows that $$\{x_n\colon n \in \mathbb{N}\}\subseteq X$$.
-    However, as illustrated in the previous example, unless the function defining the family is injective, the collection $$\{x_n\colon n \in \mathbb{N}\}$$ may not be able to describe the whole sequence.
-    The real acceptable notation would be *"Let $$\{(n,x_n)\colon n\in \mathbb{N}\}\subseteq \mathbb{N}\times X$$ be a sequence,..."* which is not really nice.
-    Anyhow, the object $$(x_n)$$ can in general not be identified with a subset of $$X$$ so that the notation $$(x_n)\subseteq X$$ does not make sense.
+In contrast to the previous short hand-writings, these notations are formally not really acceptable from a mathematical view-point.
+For instance, in the case of a sequence $$(x_n)$$ of elements in $$X$$, it clearly follows that $$\{x_n\colon n \in \mathbb{N}\}\subseteq X$$.
+However, as illustrated in the previous example, unless the function defining the family is injective, the collection $$\{x_n\colon n \in \mathbb{N}\}$$ may not be able to describe the whole sequence.
+The real acceptable notation would be *"Let $$\{(n,x_n)\colon n\in \mathbb{N}\}\subseteq \mathbb{N}\times X$$ be a sequence,..."* which is not really nice.
+Anyhow, the object $$(x_n)$$ can in general not be identified with a subset of $$X$$ so that the notation $$(x_n)\subseteq X$$ does not make sense.
 
-    However, as human being and skilled mathematician, we can overcome this cognitive dissonance and immediately understand what is meant under these notations.
+However, as human being and skilled mathematician, we can overcome this cognitive dissonance and immediately understand what is meant under these notations.
 
 I hope you are not more confused now.
 Do not really pay too much attention at the difference as long as your way of writing is not inconsistent with what you want to show and is well accepted and understood by your peers.

@@ -5,9 +5,10 @@ categories:
   - math
 ---
 
-*Disclaimer: The following is by no means 'the' introduction on how to write mathematical proofs in English -- English is my third tongue, therefore I do not master it very well myself. Just take the following as building blocks so that I can follow your proofs.
+<div class="remark" markdown="1">
+The following is by no means 'the' introduction on how to write mathematical proofs in English -- English is my third tongue, therefore I do not master it very well myself. Just take the following as building blocks so that I can follow your proofs.
 After a while, you may improve by looking at proof arguments in professional English textbooks -- I am not a reference on that topic. That's also why I recommend you to read only textbooks in English! At the beginning I accept -- even if I hate it -- the use of logical symbols such as $$\Rightarrow$$, $$\Leftrightarrow$$, $$\forall$$, $$\exists$$, etc. in text. Try however to replace them by their English counterparts, it is nicer to read.*
-
+</div>
 
 
 ## Logic:
@@ -75,19 +76,26 @@ After a while, you may improve by looking at proof arguments in professional Eng
 
 ## Example
 
-#### Proposition 推理
+
+
+<div class="proposition" markdown="1">
+(推理)\\
 Let $$n$$ and $$m$$ be two integers.Suppose that $$n$$ is even and $$m$$ is even.
 Then, $$nm$$ is also even.
 
 令 $$n$$ 和 $$m$$ 是两个整数. 假设 $$n$$ 是偶数 $$m$$ 是偶数. 那么 $$nm$$ 也是偶数.
+</div>
 
-#### Proof (not nice but okay at the beginning) 证明（不完美的写法）
-
+<div class="proof" markdown="1">
+(not nice but okay at the beginning) 证明（不完美的写法）
+\\
 $$n,m \in \mathbb{Z}$$ are even $$\Rightarrow$$ $$\exists p,q \in \mathbb{Z}$$ such that $$n=2p$$ and $$m=2q$$ $$\Rightarrow nm=2p2q=2(2pq)=2r$$ where $$r:=2pq\in \mathbb{Z}$$ $$\Rightarrow$$ $$nm$$ is even. CQFD.
 
 $$n,m \in \mathbb{Z}$$ 是偶数 $$\Rightarrow$$ $$\exists p,q \in \mathbb{Z}$$ 使得 n=2p 且 m=2q $$\Rightarrow nm=2p2q=2(2pq)=2r其中r=2pq\in \mathbb{Z}$$ $$\Rightarrow$$ $$mn$$ 也是偶数. 证明完成.
+</div>
 
-#### Proof 证明
+
+<div class="proof" markdown="1">(证明)\\
 Let $n$ and $m$ be two even integers. 
 By definition, it follows that $n$ and $m$ are divisible by two, that is, $$n=2p$$ and $$m=2q$$ for some integers $$p$$ and $$q$$.
 Hence, $$nm=2p2q=4pq=2(2pq)$$.
@@ -97,7 +105,7 @@ It follows that $$nm=2r$$ where $$r=2pq$$ is an integer. Thus, $$nm$$ is even, w
 根据定义，$$m$$ 和 $$n$$ 可以被 $$2$$ 整除，这说明 $$n=2p$$ 且 $$m=2q$$ 对某些整数 $$p,q$$ 成立.
 那么 $$mn=2r$$ 其中 $$r=2pq$$ 也是整数.
 那么 $$nm$$ 是偶数，证明完成.
-
+</div>
 
 ## Comments
 
