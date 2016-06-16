@@ -454,3 +454,81 @@ a.pagination-item:hover {
     display: inline-block;
     text-align: center;
 }
+
+
+
+/**
+ * 9.0 Math special
+ * ----------------------------------------------------------------------------
+ */
+
+.definition,
+.theorem,
+.proposition,
+.lemma,
+.corollary {
+	display: block;
+    overflow: auto;
+    padding: .25em .5em;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    margin: 10px 0px 10px;
+    padding: 5px 10px 0px;
+}
+
+.definition>:first-child:before{
+	content: "Definition: ";
+	font-weight: bold;
+}
+
+.theorem>:first-child:before{
+	content: "Theorem: ";
+	font-weight: bold;
+}
+
+.proposition>:first-child:before{
+	content: "Proposition: ";
+	font-weight: bold;
+}
+
+.lemma>:first-child:before{
+	content: "Lemma: ";
+	font-weight: bold;
+}
+
+.corollary>:first-child:before{
+	content: "Corollary: ";
+	font-weight: bold;
+}
+
+.remark,
+.example,
+.proof {
+	position: relative;
+
+}
+
+.remark>:first-child:before{
+	content: "Remark: ";
+	font-weight: bold;
+}
+
+.example>:first-child:before{
+	content: "Example: ";
+	font-weight: bold;
+}
+
+.proof>:first-child:before{
+	content: "Proof: ";
+	font-weight: bold;
+}
+
+.proof:after {
+	content:"";
+	position:absolute;
+	bottom:2px;
+	right:0;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #999;
+}
