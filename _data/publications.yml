@@ -112,13 +112,18 @@
     - 
       family: Mainberger
       given: Christoph  
-  container-title: Forthcoming in Electronic Journal of Probability
+  container-title: Electronic Journal of Probability
   issued:
     date-parts:
-    - - 2015
+    - - 2016
+  volume: '21'
+  issue: '41'
+  page: '1--15'
   type: article-journal
+
   rank: '14'
   URL_Open: "http://arxiv.org/abs/1503.00240"
+  URL: "http://projecteuclid.org/euclid.ejp/1466166072"
   abstract: >
     We show stability and locality of the minimal supersolution of a forward backward stochastic differential equation with respect to the underlying forward process under weak assumptions on the generator. The forward process appears both in the generator and the terminal condition. Painlevé-Kuratowski and Convex Epi-convergence are used to establish the stability. For Markovian forward processes the minimal supersolution is shown to have the Markov property. Furthermore, it is related to a time-shifted problem and identified as a viscosity supersolution of a corresponding PDE.
   keywords:
