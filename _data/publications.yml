@@ -175,13 +175,16 @@
     - 
       family: Jamneshan
       given: Asgar
-  container-title: Journal of Mathematical Economics (Forthcoming)
+  container-title: Journal of Mathematical Economics
   issued:
     date-parts:
-    - - 2014
+    - - 2016
   type: article-journal
+  volume: '63'
+  page: '106--118'
   rank: '13'
   URL_Open: "http://arxiv-web3.library.cornell.edu/abs/1410.5466"
+  URL: "http://www.sciencedirect.com/science/article/pii/S0304406815001585"
   abstract: >
     This work provides an axiomatic framework to the concept of conditional preference orders based on conditional sets.
     Conditional numerical representations of such preference orders are introduced and a conditional version of the theorems of Debreu about the existence of such numerical representations is given.

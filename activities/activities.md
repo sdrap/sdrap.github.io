@@ -5,6 +5,80 @@ permalink: /activities/
 rank: 5
 ---
 
+2016 July 4th-8th July &mdash; Lecture series by [Antonis Papapantoleon](http://page.math.tu-berlin.de/~papapan/) of Technical University Berlin
+:   **Date:** July 4th, 5th, 6th, 7th and eventually 8th  
+    **Place:** SAIF, 211 West Huaihai Road, Shanghai  
+    **Room:** tba  
+    **Time:** 15:00 &mdash; 18:00  
+    **Title:** Numerical Methods for Finance  
+    **Abstract:** In mathematical finance, the price of derivatives such as options are represented as expectations of random variables, obtained from stochastic models of the underlying assets. Usually, explicit formulas for the prices are not available, i.e. the expectations cannot be computed explicitly. Therefore, numerical approximations play an important role in the finance industry. There are three general approaches to the numerical calculation of expected values.
+
+    1. By the law of large numbers, sample averages converge to the expected value of a random variable if the sample size goes to infinity. This observation leads to Monte-Carlo simulation and its variants like Quasi Monte-Carlo simulation. It requires a method to simulate from the distribution of the underlying random variable. While exact simulation is usually not possible, approximate simulation methods (e.g. Euler approximations of SDEs) are widely available. Therefore, Monte-Carlo simulation is a very general approach to approximate option prices.
+    2. If the underlying model is a Markovian model (e.g. given by an SDE), the option price satisfies a PDE, the Kolmogorov-backward equation. Therefore, one can compute the option price by solving the PDE numerically using the finite-difference or finite-element approach. Apart from regularity and (too) exotic path-dependence, the applicability of PDE-based approximation methods is mainly limited by the dimension of the underlying ("curse of dimensionality").
+    3. If explicit densities are available, expectation can be written as (low-dimensional) integrals. The density, however, is usually not known explicitly, and even if it is known, direct quadrature (i.e., numerical approximation) of the integral might not lead to a competitive numerical method. However, in many important cases (e.g., Levy or affine processes), the Fourier transform of the density (corresponding to the characteristic function of the underlying random variable) is explicitly known, thus allowing to calculate
+the option price using Fourier methods.
+    
+    In this mini-course, I will present the above mentioned approaches. More precisely, the content of the course will be a selection of the following:
+    
+    * Pseudo random numbers (random number generation on the computer)
+    * Basics of Monte Carlo simulation
+    * Quasi Monte Carlo
+    * Monte-Carlo simulation of diffusion models: weak and strong approximations, order of the Euler scheme
+    * Solving a PDE using finite differences (various finite difference schemes, in particular Crank-Nicolson)
+    * Option pricing with Fourier methods
+    * Affine processes and the Heston model.  
+ 
+
+
+2016 July 1st &mdash; Seminar Talk by [Michael Kupper](https://cms.uni-konstanz.de/math/kupper/) of Konstanz University in Germany
+:   **Date:** July 1st  
+    **Place:** Mathematical Building, 800 Dongchuan road, Shanghai  
+    **Room:** tba  
+    **Time:** 15:00 &mdash; 16:00  
+    **Title:** tba  
+    **Abstract:** tba
+
+
+
+2016 July 1st &mdash; Seminar Talk by [Asgar Jamneshan](https://cms.uni-konstanz.de/math/asgar-jamneshan/home/) of Konstanz University in Germany
+:   **Date:** July 1st  
+    **Place:** Mathematical Building, 800 Dongchuan road, Shanghai  
+    **Room:** tba  
+    **Time:** 14:00 &mdash; 15:00  
+    **Title:** Vector Duality by Means of the Conditional Set Theory and Applications  
+    **Abstract:** Based on conditional set theory, a dual representation for a convex and lower-semicontinuous Banach space valued function is derived. The procedure of extending a vector valued function into a conditional framework is explained which makes tools from conditional convex analysis applicable. Necessary elements of conditional set theory are briefly introduced. Some situations to which the procedure applies are discussed, and applications to vector optimization, risk measure theory and utility maximization are given.  
+    Joint work with Michael Kupper and Samuel Drapeau
+
+
+2016 Mai 9-13th &mdash; Team Workshop on Financial Data Modeling
+:   **Date:** Mai 9-13th  
+    **Place:** Fudan University  
+    **Room:** tba  
+    **Organizers:** [School of Mathematical Sciences, Fudan University](http://math.fudan.edu.cn/en/), [Center of Mathematical Assessment of Risk of SAIF/CAFR](http://en.cafr.cn/) SJTU, [School of Mathematical Sciences, Shanghai Jiao Tong University](http://math.sjtu.edu.cn), [Department of Mathematics of Shandong University](http://www.maths.sdu.edu.cn/).  
+    **Participants:** Elected students in quantitative finance and related fields.  
+    **Meeting Format:** The Team Workshop Meeting is challenged by problems from financial institutions from China, America and Canada. The students with professors form groups to solve the proposed problems with hands-on directions from these financial institutions. The workshop provides an opportunity for the students to experience the whole problem solving process: observation, postulation, simulation and all the way to solutions in an collaborative atmosphere. 
+
+2016 April 18th-19th April &mdash; [Workshop on Risk Measures, XVA Analysis, Cost of Capital & Central Counterparties](http://cqf.nus.edu.sg/NUS_SJTU_Evry_Workshop/Overview.html)
+:   **Date:** April 18th--19th  
+    **Place:** Standard Chartered Bank,8 Marina Boulevard, Marina Bay Financial Centre Tower 1, Singapore  
+    **Room:** L21 Townhall  
+    **Time:** [See Program](http://cqf.nus.edu.sg/NUS_SJTU_Evry_Workshop/Programme.html)   
+    **Organizers:**   
+    
+    * [Stéphane Crepey (University of Evry)](https://math.maths.univ-evry.fr/crepey/)
+    * [Min DAI (National University of Singapore)](http://www.math.nus.edu.sg/~matdm/)
+    * [Samuel Drapeau (Shanghai Jiao Tong University)](http://www.samuel-drapeau.info)
+    * [Steven KOU (National University of Singapore)](http://www.rmi.nus.edu.sg/aboutus/profile/stevenkou/stevenkou.html)
+    * [Alexandre Thiery (National University of Singapore)](http://www.normalesup.org/~athiery/)
+    * [Chao Zhou (National University of Singapore)](http://www.math.nus.edu.sg/~matzc/)  
+
+    **Title:** Workshop on Risk Measures, XVA Analysis, Cost of Capital & Central Counterpartie  
+    **Abstract:** In the aftermath of the global financial crisis, new issues were raised concerning accurate derivative pricing and the sound risk assessment thereof. On the one hand, several valuation adjustments (XVAs), such as credit valuation adjustment (CVA), funding valuation adjustment (FVA) or capital valuation adjustment (KVA), were introduced to account for the inherent incompleteness of financial markets. On the other hand, from the risk assessment point of view, one sees a growing concern for the systemic dimension and how to account for it in the capital allocation among different components of a financial system. A related evolution of the infrastructure of financial markets is the generalization of centrally cleared trading and central counterparties (CCPs).
+    All these changes pose important questions at the boundary between challenging academic questions and relevant industrial applications. To address these issues, the University of Evry, Shanghai Jiao Tong University and National University of Singapore are jointly organizing two companion workshops on Risk Measures, XVA Analysis, Cost of Capital and Central Counterparties.
+    The first workshop will be held at the Standard Chartered Bank in Singapore on 18-19 April 2016. The second workshop will be held at the Shanghai Advanced Institute for Finance in China on 27-29 October 2016.
+
+
+
 2016 April 1st-3rd April &mdash; Lecture series by [Hao Xing](http://stats.lse.ac.uk/xing/) of London School of Economics
 :   **Date:** April 1st, 2nd and 3rd  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
