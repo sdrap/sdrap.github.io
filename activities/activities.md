@@ -33,17 +33,16 @@ the option price using Fourier methods.
 2016 July 1st &mdash; Seminar Talk by [Michael Kupper](https://cms.uni-konstanz.de/math/kupper/) of Konstanz University in Germany
 :   **Date:** July 1st  
     **Place:** Mathematical Building, 800 Dongchuan road, Shanghai  
-    **Room:** tba  
+    **Room:** 1106  
     **Time:** 15:00 &mdash; 16:00  
-    **Title:** tba  
-    **Abstract:** tba
+    **Title:** A Semigroup Approach to Nonlinear Expectations  
 
 
 
 2016 July 1st &mdash; Seminar Talk by [Asgar Jamneshan](https://cms.uni-konstanz.de/math/asgar-jamneshan/home/) of Konstanz University in Germany
 :   **Date:** July 1st  
     **Place:** Mathematical Building, 800 Dongchuan road, Shanghai  
-    **Room:** tba  
+    **Room:** 1106  
     **Time:** 14:00 &mdash; 15:00  
     **Title:** Vector Duality by Means of the Conditional Set Theory and Applications  
     **Abstract:** Based on conditional set theory, a dual representation for a convex and lower-semicontinuous Banach space valued function is derived. The procedure of extending a vector valued function into a conditional framework is explained which makes tools from conditional convex analysis applicable. Necessary elements of conditional set theory are briefly introduced. Some situations to which the procedure applies are discussed, and applications to vector optimization, risk measure theory and utility maximization are given.  
