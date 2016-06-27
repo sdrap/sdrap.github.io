@@ -8,7 +8,7 @@ rank: 5
 2016 July 4th-8th July &mdash; Lecture series by [Antonis Papapantoleon](http://page.math.tu-berlin.de/~papapan/) of Technical University Berlin
 :   **Date:** July 4th, 5th, 6th, 7th and eventually 8th  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
-    **Room:** tba  
+    **Room:** 304  
     **Time:** 15:00 &mdash; 18:00  
     **Title:** Numerical Methods for Finance  
     **Abstract:** In mathematical finance, the price of derivatives such as options are represented as expectations of random variables, obtained from stochastic models of the underlying assets. Usually, explicit formulas for the prices are not available, i.e. the expectations cannot be computed explicitly. Therefore, numerical approximations play an important role in the finance industry. There are three general approaches to the numerical calculation of expected values.
