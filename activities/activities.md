@@ -9,7 +9,8 @@ rank: 5
 :   **Date:** July 4th, 5th, 6th, 7th and eventually 8th  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
     **Room:** 304  
-    **Time:** 15:00 &mdash; 18:00  
+    **Time:** ~~15:00 &mdash; 18:00~~ changed to 14:30 &mdash; 17:30  
+    **Lecture Notes, Code, Exercise:** Can be found [there](http://page.math.tu-berlin.de/~papapan/ComputationalFinance.html), on Antonis'homepage.  
     **Title:** Numerical Methods for Finance  
     **Abstract:** In mathematical finance, the price of derivatives such as options are represented as expectations of random variables, obtained from stochastic models of the underlying assets. Usually, explicit formulas for the prices are not available, i.e. the expectations cannot be computed explicitly. Therefore, numerical approximations play an important role in the finance industry. There are three general approaches to the numerical calculation of expected values.
 
