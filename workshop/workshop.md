@@ -44,7 +44,7 @@ rank: 6
 </ul>
 
 
-## Risk Measures, XVA Analysis, Cost of Capital and Central Counterparties
+## Risk Measures, XVA Analysis, Capital Allocation and Central Counterparties
 {: style="text-align:center"}
 
 Second Workshop
@@ -118,14 +118,13 @@ For more details on the first workshop, please click here.
 
 ### Sponsors:
 
-* Centre for Quantitative Finance
+* Center for Quantitative Finance
 * Chair Markets in Transition under the aegis of Louis Bachelier laboratory (a joint initiative of Ecole polytechnique, Université d'Evry Val d'Essonne and Fédération Bancaire Française)
 * China Academy of Research in Finance (CAFR/SAIF), Shanghai Jiao Tong University
 * Europlace Institute of Finance Grant "Collateral Management in Centrally Cleared Trading"
 * National Natural Science Foundation of China (NSFC) "Systemic Risk and Uncertainty in Finance", Grant number 11550110184.
 * National University of Singapore Grant ''Mathematical Treatments of some Problems in Quantitative Finance"
 * National University of Singapore Grant ''Monte-Carlo Methods for Inference in Complex Stochastic Systems''
-* Standard Chartered Bank (Singapore) Limited
 
 ### Contact us:
 
