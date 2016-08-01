@@ -111,6 +111,7 @@ For more details on the first workshop, please click here.
 | Birgit Rudloff        | Vienna University of Economics and Business, Austria                  |
 | Marek Rutkowski       | University of Sydney, Australia                                       |
 | Shiki Song            | Université d’Evry, France                                             |
+| Stephan Sturm         | Worcester Polytechnic Institute                                       |
 | Stefan Weber          | Leibniz Universität Hannover, Germany                                 |
 | Lan Wu                | Beijing University, China                                             |
 | Chao Zhou             | National University of Singapore, Singapore                           |
@@ -129,3 +130,9 @@ For more details on the first workshop, please click here.
 ### Contact us:
 
 For any additional information, do not hesitate to contact <sdrapeau@saif.sjtu.edu.cn>.
+
+
+### [Last Workshop in Singapore](http://cqf.nus.edu.sg/NUS_SJTU_Evry_Workshop/Overview.html)
+
+![Workshop Singapore](./../downloads/images/sgworkshop1.jpeg)
+
