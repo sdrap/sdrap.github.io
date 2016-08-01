@@ -53,7 +53,7 @@ Second Workshop
 <br>
   
 **Place:** 
-:   [Shanghai Advanced Institute for Finance](http://http://saif.sjtu.edu.cn/en)    
+:   Shanghai Advanced Institute for Finance [(SAIF)](http://http://saif.sjtu.edu.cn/en)    
     [Shanghai Jiao Tong University](http://www.sjtu.edu.cn/)  
     West Huaihai Road 211, Shanghai, 200030 China
 
@@ -111,7 +111,7 @@ For more details on the first workshop, please click here.
 | Birgit Rudloff        | Vienna University of Economics and Business, Austria                  |
 | Marek Rutkowski       | University of Sydney, Australia                                       |
 | Shiki Song            | Université d’Evry, France                                             |
-| Stephan Sturm         | Worcester Polytechnic Institute                                       |
+| Stephan Sturm         | Worcester Polytechnic Institute, USA                                  |
 | Stefan Weber          | Leibniz Universität Hannover, Germany                                 |
 | Lan Wu                | Beijing University, China                                             |
 | Chao Zhou             | National University of Singapore, Singapore                           |
