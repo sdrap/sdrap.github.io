@@ -98,7 +98,7 @@ For more details on the first workshop, please click here.
 |:----------------------|:----------------------------------------------------------------------|
 | Agostino Capponi      | Columbia University, USA                                              |
 | Patrick Cheridito     | ETH Zürich, Switzerland                                               |
-| Freddy Delbaen        | ETH Zürich, Switzerland                                               |
+| Freddy Delbaen        | Department of Mathematics ETH Zurich, Institute of Mathematics UZH, Tokyo Metropolitan University |
 | Karl-Theodor Eisele   | Université de Strasbourg, France                                      |
 | Jean-Pierre Fouque    | UC Santa Barbara, USA                                                 |
 | Hans Föllmer          | Humboldt University of Berlin, Germany                                |
