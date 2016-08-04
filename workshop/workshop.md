@@ -110,7 +110,7 @@ For more details on the first workshop, please click here.
 | Dylan Possamai        | Université Paris Dauphine, France                                     |
 | Birgit Rudloff        | Vienna University of Economics and Business, Austria                  |
 | Marek Rutkowski       | University of Sydney, Australia                                       |
-| Shiki Song            | Université d’Evry, France                                             |
+| Shiqi Song            | Université d’Evry, France                                             |
 | Stephan Sturm         | Worcester Polytechnic Institute, USA                                  |
 | Stefan Weber          | Leibniz Universität Hannover, Germany                                 |
 | Lan Wu                | Beijing University, China                                             |
