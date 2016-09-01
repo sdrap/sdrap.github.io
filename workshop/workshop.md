@@ -77,9 +77,8 @@ In the aftermath of the global financial crisis, new issues were raised concerni
 
 All these changes pose important questions at the boundary between challenging academic questions and relevant industrial applications. To address these issues, the University of Evry, Shanghai Jiao Tong University and National University of Singapore are jointly organizing two companion workshops on Risk Measures, XVA Analysis, Cost of Capital and Central Counterparties.
 
-The first workshop has been held at the Standard Chartered Bank in Singapore on 18-19 April 2016. The second workshop will be held at the Shanghai Advanced Institute for Finance in China on 27-29 October 2016. 
+The first workshop has been held at the Standard Chartered Bank in Singapore on 18-19 April 2016.  
 
-For more details on the first workshop, please click here.
 
 
 ### Members of the Organizing Committee:
@@ -105,6 +104,7 @@ For more details on the first workshop, please click here.
 | Marco Fritelli        | Università degli Studi di Milano, Italy                               |
 | Samim Ghamami         | Federal Reserve Board, UC Berkeley, NYU, USA                          |
 | Michael Kupper        | Konstanz University, Germany                                          |
+| Thilo Meyer-Brandis   | Ludwig-Maximilians University, Munich, Germany                        |
 | Antonis Papapantoleon | Technical University of Berlin, Germany                               |
 | Shige Peng            | Shandong University, China                                            |
 | Dylan Possamai        | Université Paris Dauphine, France                                     |
@@ -121,7 +121,7 @@ For more details on the first workshop, please click here.
 
 * Center for Quantitative Finance
 * Chair Markets in Transition under the aegis of Louis Bachelier laboratory (a joint initiative of Ecole polytechnique, Université d'Evry Val d'Essonne and Fédération Bancaire Française)
-* China Academy of Research in Finance (CAFR/SAIF), Shanghai Jiao Tong University
+* China Academy of Research in Finance (CMAR/CAFR/SAIF), Shanghai Jiao Tong University
 * Europlace Institute of Finance Grant "Collateral Management in Centrally Cleared Trading"
 * National Natural Science Foundation of China (NSFC) "Systemic Risk and Uncertainty in Finance", Grant number 11550110184.
 * National University of Singapore Grant ''Mathematical Treatments of some Problems in Quantitative Finance"

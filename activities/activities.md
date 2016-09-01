@@ -5,7 +5,29 @@ permalink: /activities/
 rank: 5
 ---
 
-2016 July 4th-8th July &mdash; Lecture series by [Antonis Papapantoleon](http://page.math.tu-berlin.de/~papapan/) of Technical University Berlin
+2016 October 27th-29th &mdash; [Workshop on Risk Measures, XVA Analysis, Cost of Capital & Central Counterparties](http://www.samuel-drapeau.info/workshop/)
+:   **Date:** October 27th--29th  
+    **Place:** SAIF, 211 West Huaihai Road, Shanghai  
+    **Room:** TBA   
+    **Time:** TBA      
+    **Organizers:**   
+    
+    * [Stéphane Crepey (University of Evry)](https://math.maths.univ-evry.fr/crepey/)
+    * [Min DAI (National University of Singapore)](http://www.math.nus.edu.sg/~matdm/)
+    * [Samuel Drapeau (Shanghai Jiao Tong University)](http://www.samuel-drapeau.info)
+    * [Steven KOU (National University of Singapore)](http://www.rmi.nus.edu.sg/aboutus/profile/stevenkou/stevenkou.html)
+    * [Alexandre Thiery (National University of Singapore)](http://www.normalesup.org/~athiery/)
+    * [Chao Zhou (National University of Singapore)](http://www.math.nus.edu.sg/~matzc/)  
+
+    **Title:** Workshop on Risk Measures, XVA Analysis, Cost of Capital & Central Counterpartie  
+    **Abstract:** In the aftermath of the global financial crisis, new issues were raised concerning accurate derivative pricing and the sound risk assessment thereof. On the one hand, several valuation adjustments (XVAs), such as credit valuation adjustment (CVA), funding valuation adjustment (FVA) or capital valuation adjustment (KVA), were introduced to account for the inherent incompleteness of financial markets. On the other hand, from the risk assessment point of view, one sees a growing concern for the systemic dimension and how to account for it in the capital allocation among different components of a financial system. A related evolution of the infrastructure of financial markets is the generalization of centrally cleared trading and central counterparties (CCPs).  
+    All these changes pose important questions at the boundary between challenging academic questions and relevant industrial applications. To address these issues, the University of Evry, Shanghai Jiao Tong University and National University of Singapore are jointly organizing two companion workshops on Risk Measures, XVA Analysis, Cost of Capital and Central Counterparties.  
+    The first workshop has been held at the Standard Chartered Bank in Singapore on 18-19 April 2016.
+
+
+
+
+2016 July 4th-8th &mdash; Lecture series by [Antonis Papapantoleon](http://page.math.tu-berlin.de/~papapan/) of Technical University Berlin
 :   **Date:** July 4th, 5th, 6th, 7th and eventually 8th  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
     **Room:** 304  
@@ -58,7 +80,7 @@ the option price using Fourier methods.
     **Participants:** Elected students in quantitative finance and related fields.  
     **Meeting Format:** The Team Workshop Meeting is challenged by problems from financial institutions from China, America and Canada. The students with professors form groups to solve the proposed problems with hands-on directions from these financial institutions. The workshop provides an opportunity for the students to experience the whole problem solving process: observation, postulation, simulation and all the way to solutions in an collaborative atmosphere. 
 
-2016 April 18th-19th April &mdash; [Workshop on Risk Measures, XVA Analysis, Cost of Capital & Central Counterparties](http://cqf.nus.edu.sg/NUS_SJTU_Evry_Workshop/Overview.html)
+2016 April 18th-19th &mdash; [Workshop on Risk Measures, XVA Analysis, Cost of Capital & Central Counterparties](http://cqf.nus.edu.sg/NUS_SJTU_Evry_Workshop/Overview.html)
 :   **Date:** April 18th--19th  
     **Place:** Standard Chartered Bank,8 Marina Boulevard, Marina Bay Financial Centre Tower 1, Singapore  
     **Room:** L21 Townhall  
@@ -78,8 +100,27 @@ the option price using Fourier methods.
     The first workshop will be held at the Standard Chartered Bank in Singapore on 18-19 April 2016. The second workshop will be held at the Shanghai Advanced Institute for Finance in China on 27-29 October 2016.
 
 
+2016 April 13rd &mdash; Seminar Talk by [Hao Xing](http://stats.lse.ac.uk/xing/) of London School of Economics
+:   **Date:** April 13rd  
+    **Place:** Mathematical Building, 800 Dongchuan road, Shanghai  
+    **Room:** 1106  
+    **Time:** 15:00 &mdash; 16:00  
+    **Title:** A class of globally solvable Markovian quadratic BSDE systems and application.   
+    **Abstract:** We establish existence and uniqueness for a wide class of Markovian systems of backward stochastic differential equations (BSDE) with quadratic nonlinearities. This class is characterized by an abstract structural assumption on the generator, an a-priori local-boundedness property, and a locally-Hoelder-continuous terminal condition. We present easily verifiable sufficient conditions for these assumptions and treat several applications, including stochastic equilibria in incomplete financial markets, stochastic differential games, and martingales on Riemannian manifolds.   
+    
 
-2016 April 1st-3rd April &mdash; Lecture series by [Hao Xing](http://stats.lse.ac.uk/xing/) of London School of Economics
+2016 April 1st-3rd &mdash; Lecture series by [Hao Xing](http://stats.lse.ac.uk/xing/) of London School of Economics
+:   **Date:** April 1st, 2nd and 3rd  
+    **Place:** SAIF, 211 West Huaihai Road, Shanghai  
+    **Room:** 305  
+    **Time:** 14:00 &mdash; 17:00  
+    **Title:** Mathematics of continuous-time contract theory  
+    **Abstract:** In recent years there has been a significant increase of interest in continuous-time Principal-Agent models, or contract theory, in which Principal hires Agent to work on a project and pays him according to an agreed upon contract. Contract theory has wide applications in corporate finance, portfolio selection, and financial equilibrium. In such problems, the optimal contract has to be such that both Principal and Agent solve optimally their stochastic control problems. In contrast to discrete-time models, continuous-time models provide a powerful and elegant framework in which the solution of Principal-Agent problems is mathematically challenging, results obtained are also economically important. In this continuous-time framework, stochastic control theory and backward stochastic differential equations play a special role. We will discuss seminal papers of  Holmström and Milgrom (1987), Sannikov (2008), and DeMarzo and Sannikov (2006).  
+ 
+
+
+
+2016 April 1st-3rd &mdash; Lecture series by [Hao Xing](http://stats.lse.ac.uk/xing/) of London School of Economics
 :   **Date:** April 1st, 2nd and 3rd  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
     **Room:** 305  
@@ -105,9 +146,6 @@ the option price using Fourier methods.
     **Time:** 15:15 &mdash; 16:30  
     **Title:** Efficient hedging under ambiguity   
     **Abstract:** It is well known that the minimal superhedging price of a contingent claim is typically too high for the seller in practice. In a non-dominated model uncertainty framework, we propose alternative hedging criteria and, based on an aggregation result and new findings on representation of convex functionals, we derive existence of optimal strategies and dual representation of minimal prices.
-
-
-
 
 
 2015 October 15th &mdash; Lecture/Seminar Talk by me...
