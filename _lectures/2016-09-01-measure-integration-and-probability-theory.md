@@ -15,7 +15,7 @@ Place: Chen Ruiqiu Building, room 305
 Office hour: Wednesday from 13:00 to 15:30  
 Office: Math building, room 2.105
 
-Teaching Assistant: [Ying Liming](mailto:gacktkaga@sjtu.edu.cn)
+Teaching Assistant: [Liming Yin - 殷礼鸣](mailto:gacktkaga@sjtu.edu.cn)
 
 ### Course Description
 

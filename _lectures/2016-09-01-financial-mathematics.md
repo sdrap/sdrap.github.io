@@ -18,7 +18,7 @@ Time: from 13:30 to 16:30
 
 Place: TBA
 
-Teaching Assistant: [Yujie Jiao](mailto:jiaoyujie@sjtu.edu.cn)
+Teaching Assistant: [Yujie Jiao - 焦毓杰](mailto:jiaoyujie@sjtu.edu.cn)
 
 ### Course Objective
 
