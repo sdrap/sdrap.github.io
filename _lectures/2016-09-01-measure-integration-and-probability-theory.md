@@ -10,7 +10,7 @@ semester: WS 2016/2017
 From 2016.09.14 to 2016.12.30
 
 Wednesday: 8:50-11:50  
-Place: Chen Ruiqiu Building, room 305  
+Place: Chen Ruiqiu Building, room 304  
 
 Office hour: Wednesday from 13:00 to 15:30  
 Office: Math building, room 2.105
@@ -48,7 +48,7 @@ We will handle the following topics. *Due to time constraints, the points in ita
     * Definition of integral, $L^p$ spaces, identification in the almost sure sense.
     * Monotone convergence, Fatou’s lemma, dominated convergence.
     * Fubini-Tonelli.
-    * Jensen, Hoelder and Minkowsky inequalities.
+    * Jensen, H&ouml;lder and Minkowsky inequalities.
     * Radon-Nykodym theorem
 4. Convergence in measure and in $L^p$. Uniform integrability. (2 weeks)
     * Different notions of convergence
