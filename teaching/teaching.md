@@ -8,7 +8,7 @@ rank: 4
 {% assign lectures = site.lectures | group_by:"semester" %}
 {% for test in lectures reversed %}
 {{test.name}}
-:   {% for lecture in test.items %}<a href="{{lecture.url}}">{{lecture.title}}</a><br>{% endfor %}
+:   {% for lecture in test.items %}&bull; <a href="{{lecture.url}}">{{lecture.title}}</a><br>{% endfor %}
 {% endfor %}
 
 
