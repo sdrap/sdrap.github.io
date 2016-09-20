@@ -61,13 +61,28 @@ Second Workshop
 :   from October 27th to 29th
 
 **Room:**
-:   To be announced
+:   901-902
 
 **Program:**
-:   To be announced.
+:   |--------------------------------------------------------------------------------|
+    | Date/Time   | 27 Oct 2016           | 28 Oct 2016          | 29 Oct 2016       |
+    |--------------------------------------------------------------------------------|
+    | 09:00-09:45 | Freddy Delbaen        | Hans Foellmer        | Shige Peng        |
+    | 09:55-10:40 | Dylan Possamai        | Karl-Theodore Eisele | Birgitt Rudloff   |
+    | 10:40-11:25 | *Tea Break*           | *Tea Break*          | *Tea Break*       |
+    | 11:30-12:15 | Marco Fritelli        | Stefan Weber         | Lan Wu            |
+    | 12:30-14:00 | *Lunch & Break*       | *Lunch & Break*      | *Lunch & Break*   |
+    | 14:00-14:45 | Marek Rutowski        | Zhou Chao            | Agostino Capponi  |
+    | 14:55-15:40 | Antonis Papapantoleon | Stefan Sturm         | Patrick Cheridito |
+    | 15:40-16:25 | *Tea Break*           | *Tea Break*          |                   |
+    | 16:25-17:10 | Asgar Jamneshan       | Shiqi Song           |                   |
+    | 17:15-18:00 | Thilo-Mayer Brandis   | Michael Kupper       |                   |
+    | 18:30-      | *Reception*           | *Dinner*             |                   |
+    |--------------------------------------------------------------------------------|
+
 
 **Registration:**
-:   Attendance is free and open to everyone. Please send a mail at <sdrapeau@saif.sjtu.edu.cn> to notify your presence in order to estimate the capacity and keep you informed about eventual program changes.
+:   Attendance is free and open to everyone. Please send a mail to <sdrapeau@saif.sjtu.edu.cn> or Jenny Chen <jchen@saif.sjtu.edu.cn> to notify your presence in order to estimate the capacity and keep you informed about eventual program changes.
 
 <br>
 
@@ -129,7 +144,7 @@ The first workshop has been held at the Standard Chartered Bank in Singapore on 
 
 ### Contact us:
 
-For any additional information, do not hesitate to contact <sdrapeau@saif.sjtu.edu.cn>.
+For any additional information, do not hesitate to contact Jenny Chen <jchen@saif.sjtu.edu.cn>.
 
 
 ### [Last Workshop in Singapore](http://cqf.nus.edu.sg/NUS_SJTU_Evry_Workshop/Overview.html)

@@ -8,8 +8,8 @@ rank: 5
 2016 October 27th-29th &mdash; [Workshop on Risk Measures, XVA Analysis, Cost of Capital & Central Counterparties](http://www.samuel-drapeau.info/workshop/)
 :   **Date:** October 27th--29th  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
-    **Room:** TBA   
-    **Time:** TBA      
+    **Room:** 901-902   
+    **Time:** 9:00 to 18:00, see [program](http://www.samuel-drapeau.info/workshop/)     
     **Organizers:**   
     
     * [Stéphane Crepey (University of Evry)](https://math.maths.univ-evry.fr/crepey/)
