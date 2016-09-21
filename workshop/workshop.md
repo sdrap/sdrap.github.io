@@ -141,6 +141,7 @@ The first workshop has been held at the Standard Chartered Bank in Singapore on 
 * National Natural Science Foundation of China (NSFC) "Systemic Risk and Uncertainty in Finance", Grant number 11550110184.
 * National University of Singapore Grant ''Mathematical Treatments of some Problems in Quantitative Finance"
 * National University of Singapore Grant ''Monte-Carlo Methods for Inference in Complex Stochastic Systems''
+* School of Mathematical Sciences, Shanghai Jiao Tong University
 
 ### Contact us:
 
