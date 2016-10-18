@@ -107,30 +107,28 @@ The first workshop has been held at the Standard Chartered Bank in Singapore on 
 
 ### Speakers
 
-|-----------------------+-----------------------------------------------------------------------+
-| Name                  | Institution                                                           |
-|:----------------------|:----------------------------------------------------------------------|
-| Agostino Capponi      | Columbia University, USA                                              |
-| Patrick Cheridito     | ETH Zürich, Switzerland                                               |
-| Freddy Delbaen        | Department of Mathematics ETH Zurich, Institute of Mathematics UZH, Tokyo Metropolitan University |
-| Karl-Theodor Eisele   | Université de Strasbourg, France                                      |
-| Jean-Pierre Fouque    | UC Santa Barbara, USA                                                 |
-| Hans Föllmer          | Humboldt University of Berlin, Germany                                |
-| Marco Fritelli        | Università degli Studi di Milano, Italy                               |
-| Samim Ghamami         | Federal Reserve Board, UC Berkeley, NYU, USA                          |
-| Michael Kupper        | Konstanz University, Germany                                          |
-| Thilo Meyer-Brandis   | Ludwig-Maximilians University, Munich, Germany                        |
-| Antonis Papapantoleon | Technical University of Berlin, Germany                               |
-| Shige Peng            | Shandong University, China                                            |
-| Dylan Possamai        | Université Paris Dauphine, France                                     |
-| Birgit Rudloff        | Vienna University of Economics and Business, Austria                  |
-| Marek Rutkowski       | University of Sydney, Australia                                       |
-| Shiqi Song            | Université d’Evry, France                                             |
-| Stephan Sturm         | Worcester Polytechnic Institute, USA                                  |
-| Stefan Weber          | Leibniz Universität Hannover, Germany                                 |
-| Lan Wu                | Beijing University, China                                             |
-| Chao Zhou             | National University of Singapore, Singapore                           |
-|=======================|=======================================================================|
+|-------------------------------+------------------------------------------------------+
+| Name                          | Institution                                          |
+|:------------------------------|:-----------------------------------------------------|
+| Lijun Bo                      | University of Science and Technology, China          |
+| St&eacute;phane Cr&eacute;pey | University of Evry, France                           |
+| Karl-Theodor Eisele           | Université de Strasbourg, France                     |
+| Hans Föllmer                  | Humboldt University of Berlin, Germany               |
+| Marco Fritelli                | Università degli Studi di Milano, Italy              |
+| Asgar Jamneshan               | Konstanz University, Germany                         |
+| Lee Junboem                   | National University of Singapore, Singapore          |
+| Michael Kupper                | Konstanz University, Germany                         |
+| Thilo Meyer-Brandis           | Ludwig-Maximilians University, Munich, Germany       |
+| Shige Peng                    | Shandong University, China                           |
+| Dylan Possamai                | Université Paris Dauphine, France                    |
+| Birgit Rudloff                | Vienna University of Economics and Business, Austria |
+| Marek Rutkowski               | University of Sydney, Australia                      |
+| Shiqi Song                    | Université d’Evry, France                            |
+| Stephan Sturm                 | Worcester Polytechnic Institute, USA                 |
+| Stefan Weber                  | Leibniz Universität Hannover, Germany                |
+| Lan Wu                        | Beijing University, China                            |
+| Chao Zhou                     | National University of Singapore, Singapore          |
+|===============================|======================================================|
 
 ### Sponsors:
 
