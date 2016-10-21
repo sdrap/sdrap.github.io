@@ -70,12 +70,12 @@ Second Workshop
     | 09:00-09:45 | Hans F&ouml;llmer   | Marco Fritelli       | Shige Peng      |
     | 09:55-10:40 | Dylan Possamai      | Karl-Theodore Eisele | Birgitt Rudloff |
     | 10:40-11:25 | *Tea Break*         | *Tea Break*          | *Tea Break*     |
-    | 11:30-12:15 | Lijun Bo            | Stefan Weber         | Lan Wu          |
+    | 11:30-12:15 | Stephan Sturm       | Stefan Weber         | Lan Wu          |
     | 12:30-14:00 | *Lunch & Break*     | *Lunch & Break*      | *Lunch & Break* |
     | 14:00-14:45 | Marek Rutowski      | Zhou Chao            | Stephane Crepey |
     | 14:55-15:40 | Lee Junboem         | Asgar Jamneshan      |                 |
     | 15:40-16:25 | *Tea Break*         | *Tea Break*          |                 |
-    | 16:25-17:10 | Stephan Sturm       | Shiqi Song           |                 |
+    | 16:25-17:10 | Lijun Bo            | Shiqi Song           |                 |
     | 17:15-18:00 | Thilo-Mayer Brandis | Michael Kupper       |                 |
     | 18:30-      | *Reception*         | *Dinner*             |                 |
     |----------------------------------------------------------------------------|
