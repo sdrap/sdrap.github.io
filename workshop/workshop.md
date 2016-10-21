@@ -82,6 +82,7 @@ Second Workshop
 
 
 
+
 **Registration:**
 :   Attendance is free and open to everyone. Please send a mail to <sdrapeau@saif.sjtu.edu.cn> or Jenny Chen <jchen@saif.sjtu.edu.cn> to notify your presence in order to estimate the capacity and keep you informed about eventual program changes.
 
