@@ -73,8 +73,8 @@ Second Workshop
     | 10:40-11:25 | *Tea Break*         | *Tea Break*          | *Tea Break*     |
     | 11:30-12:15 | Stephan Sturm       | Stefan Weber         | Lan Wu          |
     | 12:30-14:00 | *Lunch & Break*     | *Lunch & Break*      | *Lunch & Break* |
-    | 14:00-14:45 | Marek Rutowski      | Zhou Chao            | Stephane Crepey |
-    | 14:55-15:40 | Lee Junboem         | Asgar Jamneshan      |                 |
+    | 14:00-14:45 | Marek Rutowski      | Zhou Chao            | Michael Schmutz |
+    | 14:55-15:40 | Lee Junboem         | Asgar Jamneshan      | Stephane Crepey |
     | 15:40-16:25 | *Tea Break*         | *Tea Break*          |                 |
     | 16:25-17:10 | Lijun Bo            | Shiqi Song           |                 |
     | 17:15-18:00 | Thilo-Mayer Brandis | Michael Kupper       |                 |
@@ -126,6 +126,7 @@ The first workshop has been held at the Standard Chartered Bank in Singapore on 
 | Dylan Possamai                | Université Paris Dauphine, France                    |
 | Birgit Rudloff                | Vienna University of Economics and Business, Austria |
 | Marek Rutkowski               | University of Sydney, Australia                      |
+| Michael Schmutz               | Bern University, Switzerland                         |
 | Shiqi Song                    | Université d’Evry, France                            |
 | Stephan Sturm                 | Worcester Polytechnic Institute, USA                 |
 | Stefan Weber                  | Leibniz Universität Hannover, Germany                |
