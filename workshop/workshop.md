@@ -69,19 +69,19 @@ Second Workshop
     | Date/Time   | 27 Oct 2016         | 28 Oct 2016          | 29 Oct 2016     |
     |----------------------------------------------------------------------------|
     | 09:00-09:45 | Hans F&ouml;llmer   | Marco Fritelli       | Shige Peng      |
-    | 09:55-10:40 | Dylan Possamai      | Karl-Theodore Eisele | Birgitt Rudloff |
+    | 09:55-10:40 | Dylan Possamai      | Karl-Theodor Eisele | Birgit Rudloff  |
     | 10:40-11:25 | *Tea Break*         | *Tea Break*          | *Tea Break*     |
     | 11:30-12:15 | Stephan Sturm       | Stefan Weber         | Lan Wu          |
     | 12:30-14:00 | *Lunch & Break*     | *Lunch & Break*      | *Lunch & Break* |
-    | 14:00-14:45 | Marek Rutowski      | Zhou Chao            | Michael Schmutz |
+    | 14:00-14:45 | Marek Rutkowski     | Zhou Chao            | Michael Schmutz |
     | 14:55-15:40 | Lee Junboem         | Asgar Jamneshan      | Stephane Crepey |
     | 15:40-16:25 | *Tea Break*         | *Tea Break*          |                 |
     | 16:25-17:10 | Lijun Bo            | Shiqi Song           |                 |
-    | 17:15-18:00 | Thilo-Mayer Brandis | Michael Kupper       |                 |
+    | 17:15-18:00 | Thilo-Meyer Brandis | Michael Kupper       |                 |
     | 18:30-      | *Reception*         | *Dinner*             |                 |
     |----------------------------------------------------------------------------|
 
-
+    [Titles and Abstracts](http://www.samuel-drapeau.info/workshop/program)
 
 
 **Registration:**
@@ -115,7 +115,7 @@ The first workshop has been held at the Standard Chartered Bank in Singapore on 
 |:------------------------------|:-----------------------------------------------------|
 | Lijun Bo                      | University of Science and Technology, China          |
 | St&eacute;phane Cr&eacute;pey | University of Evry, France                           |
-| Karl-Theodor Eisele           | Université de Strasbourg, France                     |
+| Karl-Theodor Eisele          | Université de Strasbourg, France                     |
 | Hans Föllmer                  | Humboldt University of Berlin, Germany               |
 | Marco Fritelli                | Università degli Studi di Milano, Italy              |
 | Asgar Jamneshan               | Konstanz University, Germany                         |
