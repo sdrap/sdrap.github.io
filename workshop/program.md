@@ -306,7 +306,11 @@ October 29th, 2016
 {: style="text-align:center"}
 
 **Title**
-:    To be announced
+:    XVA Analysis From the Balance Sheet
+
+**Abstract**
+:   In the aftermath of the financial crisis, regulators launched a major effort of banking reform aimed at securing the financial system by raising collateralisation and capital requirements. Notwithstanding finance theories, according to which costs of capital and of funding for collateral are irrelevant to decisions, banks have introduced an array of XVA metrics to precisely quantify them. In particular, KVA (capital valuation adjustment) and FVA (funding valuation adjustment) are emerging as metrics of key relevance. We frame a capital structure model acknowledging the impossibility for a bank to replicate jump-to-default related cash flows. Because of this counterparty credit risk incompleteness, deals trigger wealth transfers from bank shareholders to bank creditors and shareholders need to set capital at risk. On this basis we devise a theory of XVAs where so-called contra-liabilities and cost of capital are sourced from bank clients at trade inceptions, on top of the fair valuation of counterparty credit risk, in order to compensate shareholders for wealth transfers and risk on capital.
+
 
 ----
 
