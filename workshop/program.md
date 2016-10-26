@@ -55,6 +55,7 @@ rank: 6
 ### Program
 {: style="text-align:center"}
 <br>
+Registration: 27, 28 and 29th of October starting from 8:30  
 
 |----------------------------------------------------------------------------|
 | Date/Time   | 27 Oct 2016         | 28 Oct 2016          | 29 Oct 2016     |

@@ -65,11 +65,12 @@ Second Workshop
 :   904
 
 **Program:**
-:   |----------------------------------------------------------------------------|
+:   Registration: 27, 28 and 29th of October starting from 8:30   
+    |----------------------------------------------------------------------------|
     | Date/Time   | 27 Oct 2016         | 28 Oct 2016          | 29 Oct 2016     |
     |----------------------------------------------------------------------------|
     | 09:00-09:45 | Hans F&ouml;llmer   | Marco Fritelli       | Shige Peng      |
-    | 09:55-10:40 | Dylan Possamai      | Karl-Theodor Eisele | Birgit Rudloff  |
+    | 09:55-10:40 | Dylan Possamai      | Karl-Theodor Eisele  | Birgit Rudloff  |
     | 10:40-11:25 | *Tea Break*         | *Tea Break*          | *Tea Break*     |
     | 11:30-12:15 | Stephan Sturm       | Stefan Weber         | Lan Wu          |
     | 12:30-14:00 | *Lunch & Break*     | *Lunch & Break*      | *Lunch & Break* |
