@@ -298,7 +298,10 @@ October 29th, 2016
 {: style="text-align:center"}
 
 **Title**
-:   To be announced
+:   Intragroup transfers, intragroup diversification and their risk assessment
+
+**Abstract**
+:   Solvency II, in force since the beginning of this year, and the Swiss Solvency Test (SST), in force in Switzerland since 2011, seek to assess the financial health of insurance companies by quantifying capital adequacy based on a risk evaluation of the economic balance sheet modelled after one year. These calculations are based on scalar risk measures and related to numerous challenges. Some of them will be briefly mentioned. When assessing group risks, an important question is to what extent intragroup transfers may be taken into account, as this determines to which extent diversification can be achieved. A framework to explicitly describe the families of admissible transfers that range from the free movement of capital to excluding any transactions will be discussed. The constraints on admissible transactions are described as random closed sets. Parts of the presentation are based on joint work with Andreas Haier and Ilya Molchanov (University of Bern)
 
 ----
 
