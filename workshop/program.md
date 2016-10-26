@@ -232,7 +232,7 @@ October 28th, 2016
 :   Duality results for multi-variate risk
 
 **Abstract**
-:   Vector duality results for proper convex and lower semi-continuous operators $f\colon X \rightarrow L^0$ are presented, where $(X, Y, \sigma(X,Y))$ is a dual pair of Banach spaces and $L^0$ is the collection of all equivalence classes of extended real-valued random variables. Applications to multi-variate risk measures are discussed. The talk is based on a joint work with Samuel Drapeau and Michael Kupper.
+:   Vector duality results for proper convex and lower semi-continuous operators $f\colon X \rightarrow L^0$ are presented, where $(X, Y, \langle \cdot, \cdot \rangle )$ is a dual pair of Banach spaces and $L^0$ is the collection of all equivalence classes of extended real-valued random variables. Applications to multi-variate risk measures are discussed. The talk is based on a joint work with Samuel Drapeau and Michael Kupper.
 
 ----
 
