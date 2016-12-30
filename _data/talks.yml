@@ -1,4 +1,11 @@
 -
+    occasion : "Quantitative Methods in Finance, International Conference"
+    place : "Sydney, Australia"
+    title : "Portfolio Optimization under Probability and Discounting Risk"
+    date : Dec 2017
+    score : 6
+
+-
     occasion : "9th World Congress of the Bachelier Finance Society"
     place : "New York City, USA"
     title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
@@ -18,6 +25,14 @@
     title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
     date : Feb 2016
     score : 6
+
+-
+    occasion : "Quantitative Methods in Finance, International Conference"
+    place : "Sydney, Australia"
+    title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
+    date : Dec 2016
+    score : 6
+
 -
     occasion : "Informs, Annual Meeting, Philadelphia"
     place : "Philadelphia, USA"
