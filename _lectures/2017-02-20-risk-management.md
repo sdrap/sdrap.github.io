@@ -6,7 +6,7 @@ semester: SS 2017
 ---
 ### When/Where
 
-From 20.02.2017 to 08.06.2016
+From 20.02.2017 to 08.06.2017
 
 Time: Friday from 8:55 to 12:00
 
