@@ -64,6 +64,14 @@ Jun 2001 &mdash; Apr 2004
 
 **Teaching**
 
+S.S. 2017
+:   Lecture *Stochastic Processes* SJTU Shanghai, Graduates
+    Lecture *Risk Management and Actuarial Sciences* SJTU Shanghai, Graduates
+
+W.S. 2016
+:   Lecture *Probability, Measure and Integration Theory* SJTU Shanghai, Graduates
+    Lecture *Financial Mathematics* Master of Finance, SAIF, Graduates
+
 S.S. 2016
 :   Lecture *Risk Management* SJTU Shanghai, Graduates   
     Lecture *Backward Stochastic Differential Equations*, SJTU Shanghai, Graduates   
