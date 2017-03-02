@@ -62,36 +62,13 @@ Jun 2001 &mdash; Apr 2004
 
 -----------------------------------------------------------------------
 
-**Teaching**
+**Teaching** (Since 2013)
 
-S.S. 2017
-:   Lecture *Stochastic Processes* SJTU Shanghai, Graduates
-    Lecture *Risk Management and Actuarial Sciences* SJTU Shanghai, Graduates
-
-W.S. 2016
-:   Lecture *Probability, Measure and Integration Theory* SJTU Shanghai, Graduates
-    Lecture *Financial Mathematics* Master of Finance, SAIF, Graduates
-
-S.S. 2016
-:   Lecture *Risk Management* SJTU Shanghai, Graduates   
-    Lecture *Backward Stochastic Differential Equations*, SJTU Shanghai, Graduates   
-    Seminar *Finance and Stochastics* SJTU Shanghai, Graduates
-
-W.S. 2015
-:   Lecture *Stochastic Processes* SJTU Shanghai, Graduates  
-    Lecture *Financial Mathematics* Master of Finance, SAIF, Graduates
-
-S.S. 2014
-:   Lecture *(Super-)Solutions of BSDEs* TU Berlin, Master/PhD
-
-W.S. 2013
-:   Lecture *Risk Preferences: Quantification &mdash; Robustness &mdash; Dynamic* TU Berlin, Master/PhD
-
-W.S. 2012
-:   Teaching Assistant *Linear Algebra and Analytical Geometry* HU Berlin, Bachelor
-
-W.S. 2007
-:   Teaching Assistant *Mathematical Finance in Continuous Time* ETH Zurich, Master
+{% assign lectures = site.lectures | group_by:"semester" %}
+{% for test in lectures reversed %}
+{{test.name}}
+:   {% for lecture in test.items %}&bull; <a href="{{lecture.url}}">{{lecture.title}}</a><br>{% endfor %}
+{% endfor %}
 
 ------------------------------------------------------------------------
 
