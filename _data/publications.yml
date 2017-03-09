@@ -1,4 +1,35 @@
 -
+  id: dewen2017
+  title: Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization under Probability and Discounting Uncertainty 
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Luo
+      given: Peng
+    -
+      family: Xiong
+      given: Dewen
+
+  container-title: "Preprint 2017/03"
+  issued:
+    date-parts:
+    - - 2017
+  type: article-journal
+  rank: '18'
+  URL_Open: "http://arxiv.org/abs/1703.02694"
+  abstract: >
+      We characterize a class of fully coupled forward backward stochastic differential equations in terms of optimal maximal sub-solutions of BSDEs. We present the application thereof in utility optimization with random endowment under probability and discounting uncertainty. We provide some explicit examples and show how to quantify the costs of incompleteness when using utility indifference pricing.
+
+  keywords:
+    - Fully Coupled FBSDE
+    - Portfolio Optimization
+    - Random Endowment
+    - Probability and Discounting Uncertainty
+
+
+-
   id: asgar2016
   title: Vector Duality via Conditional Extension of Dual Pairs 
   author:
