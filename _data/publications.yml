@@ -80,12 +80,12 @@
   container-title: "Preprint 2015/09"
   issued:
     date-parts:
-    - - 2015
+    - - 2015 (Current revised version 03.2017)
   type: article-journal
   rank: '16'
   URL_Open: "http://arxiv.org/abs/1507.05351"
   abstract: >
-      The ongoing concern about systemic risk since the outburst of the global financial crisis has highlighted the need for risk measures at the level of sets of interconnected financial components, such as portfolios, institutions or members of clearing houses. The two main issues in systemic risk are the computation of an overall reserve level and its allocation to the different components according to their systemic relevance. We develop here a pragmatic approach to systemic risk measurement and allocation based on multivariate shortfall risk measures, where acceptable allocations are first computed and then aggregated so as to minimize costs. We analyze the sensitivity of the risk allocations to various factors and highlight its relevance as an indicator of systemic risk. Moreover, we provide numerical schemes to assess the risk allocation in high dimensions.
+      The ongoing concern about systemic risk since the outburst of the global financial crisis has highlighted the need for risk measures at the level of sets of interconnected financial components, such as portfolios, institutions or members of clearing houses. The two main issues in systemic risk measurement are the computation of an overall reserve level and its allocation to the different components according to their systemic relevance. We develop here a pragmatic approach to systemic risk measurement and allocation based on multivariate shortfall risk measures, where acceptable allocations are first computed and then aggregated so as to minimize costs. We analyze the sensitivity of the risk allocations to various factors and highlight its relevance as an indicator of systemic risk. In particular, we study the interplay between the loss function and the dependence structure of the components. Moreover, we address the computational aspects of risk allocation. Finally, we apply this methodology to the allocation of the default fund of a CCP on real data.
 
       The code together with the numerical results can be viewed on [github](https://github.com/sdrap/msra)
 
@@ -95,6 +95,8 @@
     - multivariate shortfall risk
     - sensitivities
     - numerical methods
+    - CCP
+    - Default Fund
 
 -
   id: martin2012
