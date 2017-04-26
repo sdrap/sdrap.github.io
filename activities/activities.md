@@ -5,6 +5,18 @@ permalink: /activities/
 rank: 5
 ---
 
+2017 May 3rd &mdash; Seminar Talk by [Marcel Nutz](http://www.math.columbia.edu/~mnutz/) of Columbia University in New York City USA
+:   **Date:** May 3rd  
+    **Place:** SAIF, 211 West Huaihai Road, Shanghai  
+    **Room:** 301  
+    **Time:** 15:00 &mdash; 16:00  
+    **Title:** Supply and Shorting in Speculative Markets  
+    **Abstract:** We study the formation of prices in equilibrium. In our model, agents who “agree to disagree” interact in continuous time and give rise to a tractable equilibrium that is described by a PDE of Hamilton-Jacobi-Bellman type and  reveals the influence of speculation, short-selling, and exogenous supply. (Work-in-progress with Jose Scheinkman)
+
+
+
+
+
 2016 October 27th-29th &mdash; [Workshop on Risk Measures, XVA Analysis, Cost of Capital & Central Counterparties](http://www.samuel-drapeau.info/workshop/)
 :   **Date:** October 27th--29th  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
