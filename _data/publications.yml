@@ -1,4 +1,36 @@
 -
+  id: bartl2017
+  title: Computational Aspects of Robust Optimized Certainty Equivalents 
+  author:
+    -
+      family: Bartl
+      given: Daniel
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Tangpi
+      given: Ludovic
+
+  container-title: "Preprint 2017/06"
+  issued:
+    date-parts:
+    - - 2017
+  type: article-journal
+  rank: '19'
+  URL_Open: "http://arxiv.org/abs/1706.10186"
+  abstract: >
+      Accounting for model uncertainty in risk management leads to infinite dimensional optimization problems which are both analytically and numerically untractable. In this article we study when this fact can be overcome for the so-called optimized certainty equivalent risk measure (OCE) - including the average value-at-risk as a special case. First we focus on the case where the set of possible distributions of a financial loss is given by the neighborhood of a given baseline distribution in the Wasserstein distance, or more generally, an optimal-transport distance. Here it turns out that the computation of the robust OCE reduces to a finite dimensional problem, which in some cases can even be solved explicitly. Further, we derive convex dual representations of the robust OCE for measurable claims without any assumptions on the set of distributions and finally give conditions on the latter set under which the robust average value-at-risk is a tail risk measure.
+
+  keywords:
+    - Optimized Certainty Equivalent
+    - Optimal Transport
+    - Wasserstein Distance
+    - Distribution Uncertainty
+    - Convex Duality
+    - Average Value-at-Risk.
+
+-
   id: dewen2017
   title: Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization under Probability and Discounting Uncertainty 
   author:
