@@ -1,8 +1,22 @@
 -
+    occasion : "2017 Financial Mathematics and Financial Engineering Summer School"
+    place : "Weihai, China"
+    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
+    date : July 2017
+    score : 6
+
+-
+    occasion : "Second Paris-Asia Conference in Quantitative Finance"
+    place : "Suzhou, China"
+    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
+    date : May 2017
+    score : 6
+
+-
     occasion : "Quantitative Methods in Finance, International Conference"
     place : "Sydney, Australia"
     title : "Portfolio Optimization under Probability and Discounting Risk"
-    date : Dec 2017
+    date : Dec 2016
     score : 6
 
 -
