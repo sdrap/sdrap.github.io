@@ -63,7 +63,7 @@
 
 -
   id: asgar2016
-  title: Vector Duality via Conditional Extension of Dual Pairs 
+  title: A Fenchel-Moreau Theorem for L0-Valued Functions 
   author:
     -
       family: Drapeau
@@ -81,9 +81,12 @@
     - - 2016
   type: article-journal
   rank: '17'
-  URL_Open: "http://arxiv.org/abs/1608.08709"
+  URL_Open: "http://arxiv.org/abs/1708.03127"
   abstract: >
-      In this article, we establish a Fenchel-Moreau type duality for proper convex and $\sigma(X,Y)$-lower semi-continuous functions $f\colon X\to \overline{L^0}$, where $(X,Y,\langle \cdot,\cdot \rangle)$ is a dual pair of Banach spaces and $\overline{L^0}$ is the collection of all equivalence classes of extended real-valued random variables. The duality result is based on several conditional extensions and analytic tools from conditional set theory. As an application of our main result we derive a vector duality for increasing convex functions from a Banach lattice $X$ into $L^0$ in terms of dual elements in the Bochner-Lebesgue space $L^0(X^\ast)$. For convex functions $f\colon L^\infty \to L^0$ satisfying the Fatou continuity property, we derive a vector duality in terms of dual elements in the Bochner-Lebesgue space $L^0(L^1)$.
+      In this article, we establish a Fenchel-Moreau type duality for proper convex and $\sigma(X,Y)$-lower semi-continuous functions $f\colon X\to \overline{L^0}$, where $(X,Y,\langle \cdot,\cdot \rangle)$ is a dual pair of Banach spaces and $\overline{L^0}$ is the collection of all equivalence classes of extended real-valued random variables. The duality result is based on several conditional extensions and analytic tools from conditional set theory. As an application of our main result we derive a vector duality for increasing convex functions from a Banach lattice $X$ into $L^0$ in terms of dual elements in the Bochner-Lebesgue space $L^0(X^\ast)$. For convex functions $f\colon L^\infty \to L^0$ satisfying the Fatou continuity property, we derive a vector duality in terms of dual elements in the Bochner-Lebesgue space $L^0(L^1)$.    
+
+      *Note that a previous version of this paper was titled Vector Duality via Extension of Dual Pairs*
+
 
   keywords:
     - Vector duality

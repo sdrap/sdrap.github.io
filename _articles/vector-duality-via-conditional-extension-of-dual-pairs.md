@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Vector Duality via Conditional Extension of Dual Pairs
+title: A Fenchel-Moreau Theorem for L0-Valued Functions
 ---
-{% assign publications = site.data.publications | where: "title","Vector Duality via Conditional Extension of Dual Pairs" %}
+{% assign publications = site.data.publications | where: "title","A Fenchel-Moreau Theorem for L0-Valued Functions" %}
 
 {% for publication in publications %}
 Authors
