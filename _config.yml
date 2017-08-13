@@ -15,7 +15,7 @@ description: >
     now in Shanghai
 
 url: http://www.samuel-drapeau.info
-baseurl: /
+baseurl: "/" 
 
 author: Samuel Drapeau
 
