@@ -14,8 +14,8 @@ description: >
     educated German<br>
     now in Shanghai
 
-url: http://www.samuel-drapeau.info
-baseurl: "" 
+url: "http://www.samuel-drapeau.info"
+baseurl: "http://www.samuel-drapeau.info/"
 
 author: Samuel Drapeau
 
