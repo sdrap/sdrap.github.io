@@ -2,7 +2,7 @@
 layout: page
 title: Thematic Series on Risk Measures, XVA Analysis, Capital Allocation and Central Counterparties
 ---
-{% assign publications = site.data.publications | where: "title","Thematic Series on Risk Measures, XVA Analysis, Capital Allocation and Central Counterparties" %}
+{% assign publications = site.data.book | where: "title","Thematic Series on Risk Measures, XVA Analysis, Capital Allocation and Central Counterparties" %}
 
 {% for publication in publications %}
 Guest Editors:
@@ -12,15 +12,14 @@ Date
 :   {{publication.issued.date-parts}}
 
 Journal
-:   {{publication.container-title}}{% if publication.volume %}, {{publication.volume}}{% if publication.issue %}({{publication.issue}}){% endif %}{% endif %}{% if publication.page %}:{{publication.page}}{% endif %}
+:   {{publication.publisher}}, {{publication.container-title}}{% if publication.volume %}, {{publication.volume}}{% if publication.issue %}({{publication.issue}}){% endif %}{% endif %}{% if publication.page %}:{{publication.page}}{% endif %}
+
 
 Abstract
 :   {{publication.abstract}}
 
-Keywords
-:   {{publication.keywords | join: ', '}}
 
-Download
-:   <a href="{{publication.URL_Open}}" target="_blank"> pdf (open science)</a>{% if publication.URL %}<br><a href="{{publication.URL}}" target="_blank">journal link (usually closed science)</a>{% endif %}
+Link
+:   <a href="{{publication.URL_Open}}" target="_blank"> pdf (open science)</a>
 
 {% endfor %}

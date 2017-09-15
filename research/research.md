@@ -31,6 +31,20 @@ Journal: {{publication.container-title}}{% if publication.volume %}, {{publicati
 {% endfor %}
 </ol>
 
+## Special Editions and Others
+<ul>
+{% for these in site.data.book reversed %}
+{% assign articless = site.articles | where: "title", these.title %}
+<li>
+{% for article in articless %}
+    <a href="{{article.url}}"><b>"{{these.title}}"</b></a>
+{% endfor %}<br>
+{{these.genre}}<br>
+Publisher: {{these.container-title}}, {{these.publisher}}, {{these.issued.date-parts}}
+</li>
+{% endfor %}
+</ul>
+
 ## Thesis
 <ul>
 {% for these in site.data.thesis reversed %}
