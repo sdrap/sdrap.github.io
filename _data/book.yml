@@ -1,0 +1,26 @@
+-
+  id: samuel2017
+  title: Thematic Series on Risk Measures, XVA Analysis, Capital Allocation and Central Counterparties
+  author:
+    -
+      family: Crépey
+      given: Stéphane
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Zhou
+      given: Chao
+
+  issued:
+    date-parts:
+    - - 2017
+  type: book
+  genre: Special Issue
+  publisher: Springer
+  containter-title: Probability Uncertainty and Quantitative Risk
+  URL: https://probability-risk.springeropen.com/rm-xva-ca-cc
+  abstract: >
+    In the aftermath of the global financial crisis, new issues were raised concerning a sound pricing and risk management of financial derivatives. On the pricing side, several new valuation adjustments (XVAs), including funding valuation adjustment (FVA), margin valuation adjustment (MVA) and capital valuation adjustment (KVA), were introduced on top of the traditional credit valuation adjustment (CVA) in order to account for the incompleteness of counterparty credit risk. On the risk side, one sees a growing concern for the systemic dimension and how to account for it in capital and its allocation among different components of a financial system. A related evolution of the infrastructure of financial markets is the generalization of centrally cleared trading and central counterparties (CCPs). All these changes pose important questions at the boundary between challenging academic questions and relevant industrial applications. To address these issues, the University of Evry, Shanghai Jiaotong University and the National University of Singapore have jointly organized two 2016 companion workshops about “risk measures, XVA analysis, capital allocation and central counterparties” (see http://cqf.nus.edu.sg/NUS_SJTU_Evry_Workshop/Overview.html and http://www.samuel-drapeau.info/workshop/). As a follow up to these workshops, "Probability, Uncertainty and Quantitative Risk" is proud to announce two 2017 peer-reviewed special issues on these topics, the first one with submission deadline January 31, 2017 and the second one with submission deadline August 31, 2017. Both issues are public, meaning that contributions of non-participants to the workshops are equally welcome. These special issues will be given an important diffusion not only through the usual academic channels, but also via (e)mailing to a series of financial institutions.   Potential topics include, but are not limited to: XVA (CVA, FVA, MVA, KVA), Central counterparties (CCPs), Capital allocation, Systemic risk, BSDEs, Model risk
+
+  rank: '01'

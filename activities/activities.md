@@ -5,6 +5,31 @@ permalink: /activities/
 rank: 5
 ---
 
+
+2016 July 18th-August 3rd &mdash; 2017 Financial Mathematics and Financial Engineering Summer School in Weihai
+:   **Date:** July 18th to August 3rd  
+    **Place:** Shandong University, Weihai Campus  
+    **Organizers:** Shige Peng.   
+    **Participants:** Elected students in quantitative finance and related fields.  
+   
+
+
+
+2016 May 8-12th &mdash; [Fields-China Joint Industrial Problem Solving Workshop in Finance](http://www.fields.utoronto.ca/activities/16-17/Finance-IPSW)
+:   **Date:** May 8-12th  
+    **Place:** Fields Institute, Toronto, Canada  
+    **Organizers:** Western University, Shandong University, Institute of Financial Study.   
+    **Participants:** Elected students in quantitative finance and related fields.  
+    **Involved Industry:** China Security Index Co., China Financial Future Exchange, Scotia Bank, TMX Group.   
+    **Further Information:**
+    
+    * **Objectives:** The objective of the IPSW is to connect industries with faculty, postdocs and graduate students who have expertise in industrial case-studies. This interaction is fostered in the specific context of a problem-solving session over 5 days. The case-studies in question have a significant mathematical or statistical content and are focused on finance.    
+        The interaction between industry and academia has many potential benefits for both. Academics learn about interesting potential research problems and find application for their existing tools. Industries get access to some of the most experienced mathematical modellers and problem-solvers on the continent.
+    * **Format:** The IPSW will occur over 5 days. Participants will include a group of academic experts (including mathematicians and statisticians) as well as experts from industry. On the first day, the industrial sponsors will present their problem statements. The academic experts will divide into small teams, with one team assigned to each problem. The teams spend the next 3 days collaborating on solutions to their problem, and present their solution on the final day of the workshop.
+    * **Deliverables:** At the end of the week, the academic experts make a presentation consisting of the problem restatement and their solution. This is a summary of results; the teams also prepare reports for the industrial sponsors. 
+
+
+
 2017 May 3rd &mdash; Seminar Talk by [Marcel Nutz](http://www.math.columbia.edu/~mnutz/) of Columbia University in New York City USA
 :   **Date:** May 3rd  
     **Place:** SAIF, 211 West Huaihai Road, Shanghai  
@@ -35,6 +60,13 @@ rank: 5
     **Abstract:** In the aftermath of the global financial crisis, new issues were raised concerning accurate derivative pricing and the sound risk assessment thereof. On the one hand, several valuation adjustments (XVAs), such as credit valuation adjustment (CVA), funding valuation adjustment (FVA) or capital valuation adjustment (KVA), were introduced to account for the inherent incompleteness of financial markets. On the other hand, from the risk assessment point of view, one sees a growing concern for the systemic dimension and how to account for it in the capital allocation among different components of a financial system. A related evolution of the infrastructure of financial markets is the generalization of centrally cleared trading and central counterparties (CCPs).  
     All these changes pose important questions at the boundary between challenging academic questions and relevant industrial applications. To address these issues, the University of Evry, Shanghai Jiao Tong University and National University of Singapore are jointly organizing two companion workshops on Risk Measures, XVA Analysis, Cost of Capital and Central Counterparties.  
     The first workshop has been held at the Standard Chartered Bank in Singapore on 18-19 April 2016.
+
+2016 August 15-19th &mdash; International Problem Solving Workshop
+:   **Date:** August 15-19th  
+    **Place:** Fields Institute, Toronto, Canada  
+    **Organizers:** Fields Institute, university of Calgary, CRM, McMaster University.
+    **Participants:** Elected students in quantitative finance and related fields.  
+    **Further Information:** [See reports.](http://www.fields.utoronto.ca/activities/16-17/IPSW16)
 
 
 
