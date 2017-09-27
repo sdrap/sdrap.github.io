@@ -5,8 +5,26 @@ permalink: /activities/
 rank: 5
 ---
 
+2017 September 28th &mdash; Seminar Talk by [Michael Kupper](https://cms.uni-konstanz.de/math/kupper/) of Konstanz University in Germany
+:   **Date:** September 28th  
+    **Place:** Shangyuan Building, 800 Dongchuan road, Shanghai  
+    **Room:** 318  
+    **Time:** 17:00 &mdash; 18:00  
+    **Title:** On the pointwise superhedging duality in continuous time  
+    **Abstract:** We focus on the pathwise (model-free) superhedging duality in continuous time. On a $\sigma$-compact path space of continuous functions we show that the minimal superhedging price of every upper semicontinuous contingent claim is equal to the supremum over all its expectations with respect to martingale measures with compact support. As an application we discuss semi-static hedging and the link to Vovk’s outer measure. The talk is based on joint work with Daniel Bartl, David Prömel, and Ludovic Tangpi.
 
-2016 July 18th-August 3rd &mdash; 2017 Financial Mathematics and Financial Engineering Summer School in Weihai
+
+2017 September 28th &mdash; Seminar Talk by [Daniel Bartl](https://sites.google.com/site/danielbartlmath/) of Konstanz University in Germany
+:   **Date:** September 28th  
+    **Place:** Shangyuan Building, 800 Dongchuan road, Shanghai  
+    **Room:** 318  
+    **Time:** 16:00 &mdash; 17:00  
+    **Title:** Characterization of (conditional) nonlinear expectations  
+    **Abstract:** In this talk, we study nonlinear generalizations of (conditional) expectations. In both cases, we show a non-linear version of the  Daniell-Stone: A (conditional) nonlinear expectation has some sequential continuity properties if and only if there exists a set of probabilities (a set-valued mapping containing probabilities satisfying certain measurability) such that the (conditional) nonlinear expectation is equal to the supremum over linear (conditional) expectations in this set of probabilities. Further, time-consistency and other extensions are discussed.
+
+
+
+2017 July 18th-August 3rd &mdash; 2017 Financial Mathematics and Financial Engineering Summer School in Weihai
 :   **Date:** July 18th to August 3rd  
     **Place:** Shandong University, Weihai Campus  
     **Organizers:** Shige Peng.   
@@ -15,7 +33,7 @@ rank: 5
 
 
 
-2016 May 8-12th &mdash; [Fields-China Joint Industrial Problem Solving Workshop in Finance](http://www.fields.utoronto.ca/activities/16-17/Finance-IPSW)
+2017 May 8-12th &mdash; [Fields-China Joint Industrial Problem Solving Workshop in Finance](http://www.fields.utoronto.ca/activities/16-17/Finance-IPSW)
 :   **Date:** May 8-12th  
     **Place:** Fields Institute, Toronto, Canada  
     **Organizers:** Western University, Shandong University, Institute of Financial Study.   
