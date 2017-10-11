@@ -5,6 +5,15 @@ permalink: /activities/
 rank: 5
 ---
 
+2017 October 19th &mdash; Seminar Talk by [Hans Foellmer](https://www.math.hu-berlin.de/~foellmer/) of Humboldt University Berlin in Germany
+:   **Date:** October 19th  
+    **Place:** School of Mathematics building, 800 Dongchuan road, Shanghai  
+    **Room:** Middle lecture room  
+    **Time:** 16:00 &mdash; 17:00  
+    **Title:** Shifting martingale measures, perceived bubbles, and couplings on Wiener space  
+    **Abstract:** In the context of an incomplete financial market model, a shift in the space of martingale measures may induce the birth of a perceived bubble. In joint work with F. Biagini and S. Nedelcu (2014), this is illustrated by a simple flow between two martingale measures such that the price process is uniformly integrable under one of them, but not under the other. To prepare for a more systematic study of dynamics on the space of martingale measures, we discuss different Wasserstein metrics and couplings for measures on path space, and in particular a new version of Talagrand’s inequality on Wiener space that is of independent interest.
+
+
 2017 September 28th &mdash; Seminar Talk by [Michael Kupper](https://cms.uni-konstanz.de/math/kupper/) of Konstanz University in Germany
 :   **Date:** September 28th  
     **Place:** School of Mathematics building, 800 Dongchuan road, Shanghai  

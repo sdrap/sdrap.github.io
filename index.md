@@ -15,6 +15,9 @@ Contact:
 
 :   Mail: sdrapeau@saif.sjtu.edu.cn <br>
     Tel: +86-21-6293-3586
+
+:   Office in SAIF: 1216<br>
+    Office in Minhang: 105
   
 --------------------------------------
 
