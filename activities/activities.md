@@ -5,6 +5,15 @@ permalink: /activities/
 rank: 5
 ---
 
+2017 October 26th  and November 2nd &mdash; Lecture series by [Hans Foellmer](https://www.math.hu-berlin.de/~foellmer/) of Humboldt University Berlin in Germany
+:   **Date:** October 26th and November 2nd  
+    **Place:** Minhang, 800 Dongchuan road, Shanghai  
+    **Room:** 205 Lower hall  
+    **Time:** 16:00 &mdash; 18:00  
+    **Title:** Risk Measures, an Introduction  
+    **Abstract:** During these two lectures we will present an introduction to modern risk managment and the mathematics underlying it. This course is based on the fourth chapter of the book "Stochastic finance, an introduction in discrete time".   
+
+
 2017 October 19th &mdash; Seminar Talk by [Hans Foellmer](https://www.math.hu-berlin.de/~foellmer/) of Humboldt University Berlin in Germany
 :   **Date:** October 19th  
     **Place:** School of Mathematics building, 800 Dongchuan road, Shanghai  
