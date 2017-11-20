@@ -5,6 +5,15 @@ permalink: /activities/
 rank: 5
 ---
 
+2017 November 23rd &mdash; Seminar Talk by [Ariel Neufeld](https://people.math.ethz.ch/~aneufeld/) of ETH Zuerich in Switzerland
+:   **Date:** November 23rd  
+    **Place:** Minhang, 800 Dongchuan road, Shanghai  
+    **Room:** 205 Lower hall  
+    **Time:** 16:00 &mdash; 17:00  
+    **Title:** Robust Utility Maximization with Lévy processes  
+    **Abstract:** We present a tractable framework for Knightian uncertainty, the so-called nonlinear Lévy processes, and use it to formulate and solve problems of robust utility maximization for an investor with logarithmic or power utility. The uncertainty is specified by a set of possible Lévy triplets; that is, possible instantaneous drift, volatility and jump characteristics of the price process. Thus, our setup describes uncertainty about drift, volatility and jumps over a class of fairly general models. We show that an optimal investment strategy exists and compute it in semi-closed form. Moreover, we provide a saddle point analysis describing a worst-case model. No compactness on the set of probability measures is necessary. We discuss the general difficulty of providing compactness (i.e. closedness) of semimartingale laws and present a compactness criterion.The first part is joint work with Marcel Nutz, the second part is joint work with Chong Liu.
+
+
 2017 October 26th  and November 2nd &mdash; Lecture series by [Hans Foellmer](https://www.math.hu-berlin.de/~foellmer/) of Humboldt University Berlin in Germany
 :   **Date:** October 26th and November 2nd  
     **Place:** Minhang, 800 Dongchuan road, Shanghai  
