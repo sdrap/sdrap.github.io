@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization under Probability and Discounting Uncertainty
+title: Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization
 ---
-{% assign publications = site.data.publications | where: "title","Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization under Probability and Discounting Uncertainty" %}
+{% assign publications = site.data.publications | where: "title","Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization" %}
 
 {% for publication in publications %}
 Authors
