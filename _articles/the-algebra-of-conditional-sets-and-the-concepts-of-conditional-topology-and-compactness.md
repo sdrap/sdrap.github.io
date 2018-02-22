@@ -1,8 +1,8 @@
 ---
 layout: page
-title: The Algebra of Conditional Sets and the Concept of Conditional Compactness
+title: The Algebra of Conditional Sets and the Concepts of Conditional Topology and Compactness
 ---
-{% assign publications = site.data.publications | where: "title","The Algebra of Conditional Sets and the Concept of Conditional Compactness" %}
+{% assign publications = site.data.publications | where: "title","The Algebra of Conditional Sets and the Concepts of Conditional Topology and Compactness" %}
 
 {% for publication in publications %}
 Authors
