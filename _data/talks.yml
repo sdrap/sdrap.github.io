@@ -1,4 +1,18 @@
 -
+    occasion : "Stochastic Finance Seminar, Warwick University"
+    place : "Warwick, UK"
+    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
+    date : Feb 2018
+    score : 6
+
+-
+    occasion : "Mathematical and Computational Finance Seminar, Oxford University"
+    place : "Oxford, UK"
+    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
+    date : Feb 2018
+    score : 6
+
+-
     occasion : "Quantitative Methods in Finance, International Conference"
     place : "Sydney, Australia"
     title : "Computational Aspects of Robust Optimized Certainty Equivalent"
@@ -51,7 +65,7 @@
     occasion : "Quantitative Methods in Finance, International Conference"
     place : "Sydney, Australia"
     title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
-    date : Dec 2016
+    date : Dec 2015
     score : 6
 
 -
