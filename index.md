@@ -31,6 +31,8 @@ My research focus &mdash; even if not bounded to &mdash; are
 * Risk and Uncertainty
 * Data Analysis
 
-A list of my publications, preprints and talks can be found [there]({{site.url}}/research) and a short CV [here]({{site.url}}/CV).
-
-The [teaching]({{site.url}}/teaching) section entails the details about current and past lectures as well as some open sourced lecture notes that I've written myself or together with others.
+Links:
+:   **Publications and CV:** [Publications, preprints and talks]({{site.url}}/research) and a short CV [here]({{site.url}}/CV).  
+    **Teaching:** The [teaching]({{site.url}}/teaching) section contains details about current and past lectures as well as some open sourced lecture notes that I've written myself or together with others.  
+    **Activities:** Various informations about finance and stochastic [activities]({{site.url}}/activities) in Shanghai and around.  
+    **Seminar:** The group of probability, stochastic and finance of the school of mathematical sciences is running a bi-monthly [seminar]({{site.url}}/seminar).
