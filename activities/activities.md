@@ -5,6 +5,16 @@ permalink: /activities/
 rank: 5
 ---
 
+2018 March 13th &mdash; [Anis Matoussi](https://sites.google.com/site/matoussianis66) (Universite du Maine, le Mans, France)
+:   **Date:** March 13th  
+    **Time:** 16:00 &mdash; 17:00  
+    **Place:** Minhang, 800 Dongchuan road, Shanghai  
+    **Room:** Middle lecture room  
+    **Title:** Probabilistic interpretation for solutions of fully nonlinear SPDEs  
+    **Abstract:** We propose a wellposedness theory for a class of second order backward doubly stochastic differential equation (2BDSDE). We prove existence and uniqueness of the solution under a Lipschitz type assumption on the generator, and we investigate the links between the 2BDSDEs and a class of parabolic fully nonlinear Stochastic PDEs. Precisely, we show that the Markovian solution of 2BDSDEs provide a probabilistic interpretation of the classical and stochastic viscosity solution of fully nonlinear SPDEs. The talk is based on a joint work with Dylan Possamai (Columbia University) and Wissal Sabbagh (University of Evry-Paris-Saclay).   
+
+
+
 2017 November 23rd &mdash; Seminar Talk by [Ariel Neufeld](https://people.math.ethz.ch/~aneufeld/) of ETH Zuerich in Switzerland
 :   **Date:** November 23rd  
     **Place:** Minhang, 800 Dongchuan road, Shanghai  
