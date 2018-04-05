@@ -5,6 +5,18 @@ permalink: /activities/
 rank: 5
 ---
 
+
+2018 Mai 14th &mdash; [Workshop on Mathematical Finance]({{site.url}}/workshop-2018-05), CAFR/SAIF
+:   **Date:** Mai 14th  
+    **Time:** 14:00 &mdash; 17:00  
+    **Place:** SAIF/CAFR, 211 West Huaihai Road, Shanghai  
+    **Room:** TBA   
+    **Speakers:** Prof. Tom Salisbury (York university and Fields Institute), Prof. Matheus Grasselli (McMaster University), Prof. Sebastian Jaimungal (University of Toronto), Andrew Day (Western University), Nathan Gold (York University)   
+
+    [See anouncement page for details and programm]({{site.url}}/workshop-2018-05)
+
+
+
 2018 March 13th &mdash; [Anis Matoussi](https://sites.google.com/site/matoussianis66) (Universite du Maine, le Mans, France)
 :   **Date:** March 13th  
     **Time:** 16:00 &mdash; 17:00  
