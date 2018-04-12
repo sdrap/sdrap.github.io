@@ -86,7 +86,7 @@ Attendance is open to any interested participants.
 
 
 **Registration:**
-:   Attendance is free and open to everyone. Please send a mail to [Samuel Drapeau](mailto:sdrapeau@saif.sjtu.edu.cn) to notify your presence in order to estimate the capacity and keep you informed about eventual program changes.
+:   Attendance is free and open to everyone. Please send a mail to [CAFR](mailto:cafr@saif.sjtu.edu.cn) or [Samuel Drapeau](mailto:sdrapeau@saif.sjtu.edu.cn) to notify your presence in order to estimate the capacity and keep you informed about eventual program changes.
 
 <br>
 
