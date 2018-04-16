@@ -10,7 +10,7 @@ rank: 5
 :   **Date:** Mai 14th  
     **Time:** 14:00 &mdash; 17:00  
     **Place:** SAIF/CAFR, 211 West Huaihai Road, Shanghai  
-    **Room:** TBA   
+    **Room:** 903   
     **Speakers:** Prof. Tom Salisbury (York university and Fields Institute), Prof. Matheus Grasselli (McMaster University), Prof. Sebastian Jaimungal (University of Toronto), Andrew Day (Western University), Nathan Gold (York University)   
 
     [See anouncement page for details and programm]({{site.url}}/workshop-2018-05)

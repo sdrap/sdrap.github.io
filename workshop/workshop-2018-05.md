@@ -64,7 +64,7 @@ Attendance is open to any interested participants.
 :   May 14th 2018 from 2pm to 6pm
 
 **Room:**
-:   TBA
+:   903
 
 **Contact:**
 :   The workshop is organized by the Chinese Academy of Research for Finance (CAFR/SAIF) in Shanghai. For any question do not hesitate to contact [Samuel Drapeau](mailto:sdrapeau@saif.sjtu.edu.cn).
