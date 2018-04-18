@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  Computational Aspects of Robust Optimized Certainty Equivalents
+title:  Computational Aspects of Robust Optimized Certainty Equivalents and Option Pricing
 ---
-{% assign publications = site.data.publications | where: "title","Computational Aspects of Robust Optimized Certainty Equivalents" %}
+{% assign publications = site.data.publications | where: "title","Computational Aspects of Robust Optimized Certainty Equivalents and Option Pricing" %}
 
 {% for publication in publications %}
 Authors
