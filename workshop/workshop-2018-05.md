@@ -76,7 +76,7 @@ Attendance is open to any interested participants.
     | Time        | Speaker                                     | Affiliation                           |
     |---------------------------------------------------------------------------------------------------|
     | 14:00-14:05 | Welcome                                     |                                       |
-    | 14:05-14:45 | [Tom Salisburry](#tom-salisburry)           | York University and Fields Institute  |
+    | 14:05-14:45 | [Tom Salisbury](#tom-salisbury)             | York University and Fields Institute  |
     | 14:50-15:30 | [Matheus Grasselli](#matheus-grasselli)     | McMaster University                   |
     | 15:30-16:00 | [Nathan Gold](#nathan-gold)                 | York University                       |
     | 16:00-16:20 | *Tea Break*                                 |                                       |
@@ -101,7 +101,7 @@ Attendance is open to any interested participants.
 
 -----
 
-#### [Tom Salisburry](http://www.math.yorku.ca/~salt/)
+#### [Tom Salisbury](http://www.math.yorku.ca/~salt/)
 {: style="text-align:center"}
 
 **Title**
