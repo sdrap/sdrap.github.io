@@ -107,7 +107,7 @@ rank: 6
     **Place:** Minhang, 800 Dongchuan road, Shanghai  
     **Room:** Middle conference room  
 
-2018 October 11th &mdash; [Daniel Bartl](https://sites.google.com/site/danielbartlmath/) of Vienna University in Germany
+2018 October 11th &mdash; [Daniel Bartl](https://sites.google.com/site/danielbartlmath/) of Vienna University in Austria
 :   **Date:** October 11th   
     **Title:** Geometry of the Skorokhod embedding problem   
     **Abstract:**Most of this talk is devoted to explain the results of  "Optimal Transport and Skorokhod Embedding" by Beiglboeck, Cox, and Huesmann. If time permits, we talk about some recent progress together with Mathias Beiglboeck and Manu Eder.       
