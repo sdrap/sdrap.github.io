@@ -5,6 +5,25 @@ permalink: /activities/
 rank: 5
 ---
 
+
+2018 November 5th &mdash; [Hans Foellmer](https://www.math.hu-berlin.de/~foellmer/) Humboldt University Berlin, Germany
+:   **Date:** Monday November 5th  
+    **Title:** TBA  
+    **Time:** 16:00 &mdash; 18:00  
+    **Place:** Minhang, 800 Dongchuan road, Shanghai  
+    **Room:** Middle conference room   
+
+
+
+
+2018 October 25th to November 8th &mdash; Lecture series by [Hans Foellmer](https://www.math.hu-berlin.de/~foellmer/) Humboldt University Berlin, Germany
+:   **Dates (3 lectures):** Thursday 2018-10-25，Thursday 2018-11-01, Thursday 2018-11-11  
+    **Title:** Optimal transport on the Wiener space &mdash; a short introduction  
+    **Time:** 16:00 &mdash; 18:00  
+    **Place:** Minhang, 800 Dongchuan road, Shanghai  
+    **Room:** 中院301   
+
+
 2018 October 11th &mdash; [Michael Kupper](https://cms.uni-konstanz.de/math/kupper/) of Konstanz University in Germany
 :   **Date:** October 11th   
     **Title:** Computation of optimal transport and robust risk aggregation with neural networks   
