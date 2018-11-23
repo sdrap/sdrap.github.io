@@ -134,6 +134,15 @@ rank: 6
     **Room:** Large conference room   
 
 
+2018 December 3rd &mdash; Daisuke Yoshikawa, Hokkai-Gakuen University, Japan
+:   **Date:** Monday December 3rd  
+    **Title:** Pairs trading under model uncertainty  
+    **Abstract:** Since the introduction of pairs trading, this method has undergone considerable development. This method uses the mean reversion of the pair value and the point furthermost from this point; e.g., when the pair value touches the point furthermost from the mean reverted point, it is a time to take a short position of the pair of stocks. For fixing the profit, we liquidate it, when the pair value touches the mean reverted point. This simple trading code will give us the stable profit if model parameters are correctly given. However, the misspecification of the parameters may result in the big loss. This possibility is due to the model uncertainty. To avoid this, we derive the optimal strategy of pairs trading reflecting the model uncertainty; i.e., we use the relative entropy as a penalty function to derive a probability mea- sure which is used for the calculation of expectation of the pair value. Then, we can derive the optimal point, according to the confidence in each agent&rsquo;s estimation. Further, we show numerical examples using market data. Com- paring with other methods, we could show the remarkable stability of our strategy of pairs trading which does not lead to the big loss. Joint work with Mark H.A. Davis    
+    **Time:** 16:00 &mdash; 17:30  
+    **Place:** Minhang, 800 Dongchuan road, Shanghai  
+    **Room:** Middle lecture room   
+
+
 
 
 ------
