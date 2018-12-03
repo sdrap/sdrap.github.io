@@ -134,6 +134,20 @@ rank: 5
     **Room:** Middle lecture room  
 
 
+2018 May 7-11th &mdash; [Fields-China Joint Industrial Problem Solving Workshop in Finance](http://www.fields.utoronto.ca/activities/17-18/fields-china-joint-ipsw)
+:   **Date:** May 7-11th  
+    **Place:** Shanghai university of Finance and Economics, Shanghai, China  
+    **Organizers:** Higher Education Committee of Chinese Mathematical Society, The Fields Institute for Research in Mathematical Sciences, Shandong University, Shanghai Jiao Tong University, Shanghai University of Finance and Economics.   
+    **Participants:** Elected students in quantitative finance and related fields.  
+    **Involved Industry:** HSBC paris, UniDT Technology, MathWorks, Zhengzhou Comodity Exchange, OANADA.
+    **Further Information:**
+    
+    * **Objectives:** The objective of the IPSW is to connect industries with faculty, postdocs and graduate students who have expertise in industrial case-studies. This interaction is fostered in the specific context of a problem-solving session over 5 days. The case-studies in question have a significant mathematical or statistical content and are focused on finance.    
+        The interaction between industry and academia has many potential benefits for both. Academics learn about interesting potential research problems and find application for their existing tools. Industries get access to some of the most experienced mathematical modellers and problem-solvers on the continent.
+    * **Format:** The IPSW will occur over 5 days. Participants will include a group of academic experts (including mathematicians and statisticians) as well as experts from industry. On the first day, the industrial sponsors will present their problem statements. The academic experts will divide into small teams, with one team assigned to each problem. The teams spend the next 3 days collaborating on solutions to their problem, and present their solution on the final day of the workshop.
+    * **Deliverables:** At the end of the week, the academic experts make a presentation consisting of the problem restatement and their solution. This is a summary of results; the teams also prepare reports for the industrial sponsors. 
+
+
 
 
 2018 April 17th &mdash; [Gechun Liang](https://sites.google.com/site/lianggechun1982/home) (University of Warwick, UK)
