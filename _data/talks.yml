@@ -1,4 +1,11 @@
 -
+    occasion : "Seminar in Finance, Shandong University"
+    place : "Jinan, China"
+    title : "Option Prices of Pegged Exchange Rates: The HKD-USD Puzzle"
+    date : Dec 2018
+    score : 6
+
+-
     occasion : "Department Seminar in Statistics and Actuarial Sciences, Waterloo University"
     place : "Waterloo, Canada"
     title : "Computational Aspects of Robust Optimized Certainty Equivalent and Option Pricing"
