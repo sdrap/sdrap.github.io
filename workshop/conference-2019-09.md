@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Conference
-permalink: /workshop-2019-09/
+permalink: /conference-2019-09/
 rank: 6
 ---
 <style>
