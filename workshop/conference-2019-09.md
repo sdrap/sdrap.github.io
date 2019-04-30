@@ -34,7 +34,7 @@ rank: 6
 
 
 
-## Conference on Stochastic Analysis, Stochastic Dynamic Systems and Stochastic Finance
+## Conference on Stochastic Analysis, Stochastic Dynamical Systems and Stochastic Finance
 {: style="text-align:center"}
 
 #### Shanghai Jiao Tong University, School of Mathematical Sciences
@@ -43,21 +43,21 @@ rank: 6
 <br>
 -----
 
-In recent years, many fundamental advances have been reached in different areas of stochastic -- from stochastic partial differential equations, ergodic theory to stochastic differential equations on manifolds as well as non dominated models and transport in financial mathematics.
+In recent years, fundamental advances have been made in different areas of stochastics -- from stochastic partial differential equations, ergodic theory to manifold valued stochastic differential equations as well as non-dominated models and transport methods in financial mathematics.
 
-The School of Mathematical Sciences takes this opportunity to bring together those different fields of research related to stochastic to exchange on common issues, their respective approaches, new results and research directions.
-Aside from the presentation of each speaker, this conference intends to encourage research discussions and exchanges in a convivial atmosphere.
+The School of Mathematical Sciences takes this opportunity to bring together those working on different areas of research related to stochastics to exchange on common issues, their respective approaches, new results and new research directions.
+Alongside the presentation of each speaker, this conference also intends to facilitate research discussions and interactions in a stimulating and convivial atmosphere.
 
-Attendance is open to any interested participants.
+Attendance is open to any interested participants up to capacity.
+Therefore, would you like to attend, we kindly ask you to register by sending a mail to [Hu Jie](mailto:hujie150@sjtu.edu.cn).
 
 
 -----
 
-
 **Place:** 
 :   [School of Mathematical Sciences](http://math.sjtu.edu.cn/en)    
     [Shanghai Jiao Tong University](http://www.sjtu.edu.cn/)  
-    Dongshuan Road 800, Shanghai
+    Dongchuan Road 800, Shanghai
 
 **Date:**
 :   from September 6th to 8th
@@ -77,6 +77,8 @@ Attendance is open to any interested participants.
 | Mathias Beiglboek             | Wien University                               | 
 | Rama Cont                     | Oxford University                             | 
 | Zhao Dong                     | Chinese Academy of Sciences                   |
+| David Elworthy                | University of Warwick                         |
+| Chunrong Feng                 | Loughborough University                       |
 | Paolo Guasoni                 | Dublin City University                        | 
 | Ying Hu                       | Rennes I University                           | 
 | Peter Imkeller                | Humboldt University Berlin                    | 
@@ -98,10 +100,8 @@ Attendance is open to any interested participants.
 
 [//]: # ( Xuewei Li   Imperial College London)
 [//]: # (Martin Hairer Imperial College London)
-[//]: # (David Elworthy University of Warwick)
 [//]: # (Zdzlaw Brezniak University of York)
 [//]: # (Tusheng Zhang University of Manchester)
-[//]: # (Chunrong Feng Loughborough University)
 [//]: # (Terry Lyons University of Oxford)
 [//]: # (Zengjing Chen	Shandong University)
 [//]: # (Shige Peng	Shandong University)
@@ -118,7 +118,7 @@ Attendance is open to any interested participants.
 * Yiqing LIN (Shanghai  Jiao Tong University, China)
 * Dewen XIONG (Shanghai  Jiao Tong University, China)
 * Deng ZHANG (Shanghai  Jiao Tong University, China)
-* Huaizhong ZHAO (Loborough University, UK)
+* Huaizhong ZHAO (Loughborough University, UK)
 
 ### Sponsors:
 
@@ -128,8 +128,6 @@ Attendance is open to any interested participants.
 
 ### Contact us:
 
-For any additional information, do not hesitate to contact [Hu Jie](mailto:hujie150@sjtu.edu.cn).
-
-
+For any additional information or registration, do not hesitate to contact [Hu Jie](mailto:hujie150@sjtu.edu.cn).
 
 
