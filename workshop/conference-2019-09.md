@@ -30,7 +30,7 @@ rank: 6
 </style>
 
 
-![header](./../downloads/images/SJTU-SMS.png){:width="100%"}
+![header](./../downloads/images/SJTU-SMS.jpg){:width="100%"}
 
 
 
