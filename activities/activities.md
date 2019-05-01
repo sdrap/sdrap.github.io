@@ -6,6 +6,28 @@ rank: 5
 ---
 
 
+
+2019 September 6th-8th &mdash; [Conference on Stochastic Analysis, Stochastic Dynamical Systems and Stochastic Finance](http://www.samuel-drapeau.info/conference-2019-09/)
+:   **Date:** September 6th--8th  
+    **Place:** [School of Mathematical Sciences](http://math.sjtu.edu.cn/en), [Shanghai Jiao Tong University](http://www.sjtu.edu.cn/), Dongchuan Road 800, Shanghai   
+    **Room:** TBA   
+    **Organizers:**   
+    
+    * Xin CHEN (Shanghai  Jiao Tong University, China)
+    * Samuel DRAPEAU (Shanghai  Jiao Tong University, China)
+    * Dong HAN (Shanghai  Jiao Tong University, China)
+    * Yiqing LIN (Shanghai  Jiao Tong University, China)
+    * Dewen XIONG (Shanghai  Jiao Tong University, China)
+    * Deng ZHANG (Shanghai  Jiao Tong University, China)
+    * Huaizhong ZHAO (Loughborough University, UK)
+
+    **Title:** Conference on Stochastic Analysis, Stochastic Dynamical Systems and Stochastic Finance  
+    **Abstract:** In recent years, fundamental advances have been made in different areas of stochastics -- from stochastic partial differential equations, ergodic theory to manifold valued stochastic differential equations as well as non-dominated models and transport methods in financial mathematics. The School of Mathematical Sciences takes this opportunity to bring together those working on different areas of research related to stochastics to exchange on common issues, their respective approaches, new results and new research directions. Alongside the presentation of each speaker, this conference also intends to facilitate research discussions and interactions in a stimulating and convivial atmosphere. Attendance is open to any interested participants up to capacity. Therefore, would you like to attend, we kindly ask you to register by sending a mail to [Hu Jie](mailto:hujie150@sjtu.edu.cn).
+
+    For more information, see the [conference webpage](http://www.samuel-drapeau.info/conference-2019-09/).
+    
+
+
 2018 December 3rd &mdash; Daisuke Yoshikawa, Hokkai-Gakuen University, Japan
 :   **Date:** Monday December 3rd  
     **Title:** Pairs trading under model uncertainty  

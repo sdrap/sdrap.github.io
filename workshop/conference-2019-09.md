@@ -74,7 +74,7 @@ Therefore, would you like to attend, we kindly ask you to register by sending a 
 |-------------------------------+-----------------------------------------------+
 | Name                          | Institution                                   |
 |:------------------------------|:----------------------------------------------|
-| Mathias Beiglboek             | Wien University                               | 
+| Mathias Beiglboek             | University of Vienna                          | 
 | Rama Cont                     | Oxford University                             | 
 | Zhao Dong                     | Chinese Academy of Sciences                   |
 | David Elworthy                | University of Warwick                         |
@@ -90,6 +90,7 @@ Therefore, would you like to attend, we kindly ask you to register by sending a 
 | Shanjian Tang                 | Fudan University                              |
 | Nizar Touzi                   | Polytechnic University Paris                  | 
 | Martin Schweizer              | ETH Zurich                                    | 
+| Fengyu Wang                   | Tianjin University                            |
 | Guojing Wang                  | Suzhou University                             |
 | Hao Xing                      | Boston University                             |
 | Jie Xiong                     | Southern University of Science and Technology |
@@ -107,7 +108,6 @@ Therefore, would you like to attend, we kindly ask you to register by sending a 
 [//]: # (Shige Peng	Shandong University)
 [//]: # (Zenghu Li	Beijing Normal University)
 [//]: # (Juan Li	Shandong University)
-[//]: # (Fengyu Wang	Tianjin University)
 [//]: # (Fuzhou Gong	CAS)
 
 ### Members of the Organizing Committee:
