@@ -1,4 +1,31 @@
 -
+  id: mekonnen2017
+  title: Relative Bound and Asymptotic Comparison of Expectile with Respect to Expected Shortfall  
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Tadese
+      given: Mekonnen
+
+  container-title: "Preprint 06/2019"
+  issued:
+    date-parts:
+    - - 2019
+  type: article-journal
+  rank: '20'
+  URL_Open: "http://arxiv.org/abs/1906.09729"
+  abstract: >
+      Expectile bears some interesting properties in comparison to the industry wide expected shortfall in terms of assessment of tail risk. We study the relationship between expectile and expected shortfall using duality results and the link to optimized certainty equivalent. Lower and upper bounds of expectile are derived in terms of expected shortfall as well as a characterization of expectile in terms of expected shortfall. Further, we study the asymptotic behavior of expectile with respect to expected shortfall as the risk level goes to 0 in terms of extreme value distributions. Illustrating the formulation of expectile in terms of expected shortfall, we also provide explicit or semi-explicit expressions of expectile for some classical distributions.
+
+  keywords:
+    - Risk Measures
+    - Expectiles
+    - Expected Shortfall
+    - Extreme Values
+
+-
   id: bartl2017
   title: Computational Aspects of Robust Optimized Certainty Equivalents and Option Pricing 
   author:

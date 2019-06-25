@@ -1,4 +1,33 @@
 -
+    occasion : "Probability, Uncertainty and Quantitative Finance workshop"
+    place : "Shandong University, Weihai, China"
+    title : "On Detecting Spoofing Strategies in High Frequency Trading"
+    date : July 2019
+    score : 6
+
+-
+    occasion : "7th Asian Quantitative Finance Conference"
+    place : "Hanoi, Vietnam"
+    title : "On Detecting Spoofing Strategies in High Frequency Trading"
+    date : July 2019
+    score : 6
+
+-
+    occasion : "Finance Seminar, NTU"
+    place : "NTU, Singapore"
+    title : "Spatially Determined Optimal Price Design in a Ride Sharing Economy"
+    date : June 2019
+    score : 6
+
+-
+    occasion : "SIAM International Conference on Financial Engineering"
+    place : "Toronto, Canada"
+    title : "Spatially Determined Optimal Price Design in a Ride Sharing Economy"
+    date : June 2019
+    score : 6
+
+
+-
     occasion : "Conference Data Science and Finance"
     place : "Siem Reap, Cambodia"
     title : "Option Prices of Pegged Exchange Rates: The HKD-USD Puzzle"
