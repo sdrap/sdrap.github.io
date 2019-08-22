@@ -66,7 +66,7 @@ Therefore, would you like to attend, we kindly ask you to register by sending a 
 :   TBA
 
 **Program and Abstracts:**
-:   TBA
+:   For Title and abstracts, see on the dedicated [program page](https://www.samuel-drapeau.info/conference-2019-09/program-2019-09).
 
 
 ### Speakers
@@ -77,7 +77,6 @@ Therefore, would you like to attend, we kindly ask you to register by sending a 
 | [Mathias Beiglboek](#mathias-beiglboek)            | University of Vienna                          | 
 | [Zengjing Chen](#zengjing-chen)                | Shandong University                           | 
 | [Zhenqing Chen](#zhenqing-chen)                 | Washington University                         | 
-| [Rama Cont](#rama-cont)                     | Oxford University                             | 
 | [Zhao Dong](#zhao-dong)                     | Chinese Academy of Sciences                   |
 | [Paolo Guasoni](#paolo-guasoni)                 | Dublin City University                        | 
 | [Peter Imkeller](#peter-imkeller)                | Humboldt University Berlin                    | 
@@ -163,16 +162,6 @@ For any additional information or registration, do not hesitate to contact [Hu J
 
 -----
 
-#### [Rama Cont](https://www.maths.ox.ac.uk/people/rama.cont)
-{: style="text-align:center"}
-
-**Title**
-:   TBA 
-
-**Abstract**
-:   TBA
-
------
 
 #### Zhao Dong
 {: style="text-align:center"}
