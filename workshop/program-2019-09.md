@@ -58,11 +58,11 @@ Registration: 6, 7 and 8th of September starting from 8:00
 | 10:30-11:15 | [Zenghu Li](#zhenghu-li)                | [Zhao Dong](#zhao-dong)              | [Guojing Wang](#guojing-wang)   |
 | 11:15-12:00 |	[Zengjing Chen](#zhengjing-chen)        | [Michael Kupper](#michael-kupper)    | [Xicheng Zhang](#xicheng-zhang) |
 | 12:00-14:00 | Lunch Break                             | Lunch Break                          | Lunch Break                     |
-| 14:00-14:45 | [Martin Schweizer](#martin-schweizer)   | [Zhenqing Chen](#zhenqing-chen)      | Discussions/Activities          |
-| 14:45-15:30 | [Paolo Guasoni](#paolo-guasoni)         | [Litan Yan](#litan-yan)              | Discussions/Activities          |
-| 15:30-16:00 | Tea Break                               | Tea Break                            | Discussions/Activities          |
-| 16:00-16:45 |	[Mathias Beiglboek](#mathias-beiglboek) | [Hao Xing](#hao-xing)                | Discussions/Activities          |
-| 16:45-17:30 |	                                        | [Zhenya Liu](#zhenya-liu)            | Discussions/Activities          |
+| 14:00-14:45 | [Martin Schweizer](#martin-schweizer)   | [Zhenqing Chen](#zhenqing-chen)      |                                 |
+| 14:45-15:30 | [Paolo Guasoni](#paolo-guasoni)         | [Litan Yan](#litan-yan)              |                                 |
+| 15:30-16:00 | Tea Break                               | Tea Break                            |                                 |
+| 16:00-16:45 |	[Mathias Beiglboek](#mathias-beiglboek) | [Hao Xing](#hao-xing)                |                                 |
+| 16:45-17:30 |	                                        | [Zhenya Liu](#zhenya-liu)            |                                 |
 |--------------------------------------------------------------------------------------------------------------------------------|
 
 
