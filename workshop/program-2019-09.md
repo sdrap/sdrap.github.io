@@ -101,14 +101,13 @@ Registration: 6, 7 and 8th of September starting from 8:00
 -----
 
 #### [Zhenqing Chen](https://sites.math.washington.edu/~zchen/)
-
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Stability of heat kernel estimates and parabolic Harnack inequalities for symmetric Dirichlet forms 
 
 **Abstract**
-:   TBA
+:   In this talk, I will present recent progress in the study of heat kernels and parabolic Harnack inequalities for symmetric Markov processes that have both diffusive and jumping parts on general metric measure spaces.  Under general volume doubling condition and some mild assumptions on the scaling functions, we establish stability results for two-sided estimates for heat kernels in terms of the jumping kernels, the generalized capacity inequalities, and Poincare inequalities. Stable characterizations of the associated parabolic Harnack inequalities will also be given. Our results hold on spaces even when the underlying spaces have walk dimensions are larger than 2. Joint work with Takashi Kumagai and Jian Wang.
 
 -----
 
@@ -152,10 +151,10 @@ local time
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:    Nonlinear expectations under Wasserstein uncertainty and convex semigroups 
 
 **Abstract**
-:   TBA
+:   We provide general results for convex semigroups, in particular uniqueness in terms of the generator. As an example, we consider scaling limits of Levy processes under distributional uncertainty with respect to (martingale) transport distances. The talk is based on joint works with Daniel Bartl, Robert Denk and Max Nendel.
 
 -----
 
@@ -208,10 +207,10 @@ local time
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Stochastic LQ and Associated Riccati equation of PDEs Driven by State- and Control-Dependent White Noise
 
 **Abstract**
-:   TBA
+:   The optimal stochastic control problem with a quadratic cost functional for linear partial differential equations (PDEs) driven by a state- and control-dependent white noise is formulated and studied. Both finite- and infinite-time horizons are considered. The multi- plicative white noise dynamics of the system give rise to a new phenomenon of singularity to the associated Riccati equation and even to the Lyapunov equation. Well-posedness of both Riccati equation and Lyapunov equation are obtained for the first time. The linear feedback coefficient of the optimal control turns out to be singular and expressed in terms of the solution of the associated Riccati equation. The null controllability is shown to be equivalent to the existence of the solution to Riccati equation with the singular terminal value. Finally, the controlled Anderson model is addressed as an illustrating example. This is a joint work with Ying Hu. 
 
 -----
 
@@ -219,10 +218,10 @@ local time
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Continuous-time Principal-Agent problem and optimal planning
 
 **Abstract**
-:   TBA
+:   Motivated by the approach introduced by Sanninkov to solve principal-agent problems, we provide a solution approach which allows to address a wider range of problems. The key argument uses a representation result from the theory of backward stochastic differential equations. This methodology extends to the mean field game version of the problem, and provides a connexion with the P.-L. Lions optimal planning problem.
 
 -----
 
@@ -230,10 +229,10 @@ local time
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Absence of arbitrage without a numeraire 
 
 **Abstract**
-:   TBA
+:   We propose a new approach to defining and characterising absence of arbitrage in a way which does not depend on an a priori chosen numeraire. In spirit, this is similar to Kabanov's approach to modelling markets with transaction costs. The key idea is that the comparison basis for a profit is no longer wealth, which is numeraire-dependent, but a chosen reference portfolio, which is in units of assets and hence numeraire-independent. We provide dual characterisations in terms of discounting and martingale properties, and we also discuss to which extent the approach and results depend on the reference portfolio. This is based on joint work with Daniel Balint.
 
 -----
 
