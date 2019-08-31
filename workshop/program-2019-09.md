@@ -52,17 +52,17 @@ Registration: 6, 7 and 8th of September starting from 8:00
 |--------------------------------------------------------------------------------------------------------------------------------|
 | Date/Time   | Fri 6 Sep 2019                          | Sat 7 Sep 2019                       | Sun 8 Sep 2019                  |
 |--------------------------------------------------------------------------------------------------------------------------------|
-| 08:30-09:15 | Registration /Opening                   | [Michal Roeckner](#michael-roeckner) | [Shanjian Tang](#shanjian-tang) | 
-| 09:15-10:00 | [Peter Imkeller](#peter-imkeller)       | [Fengyu Wang](#fengyu-wang)          | [Nizar Touzi](#nizar-touzi)     |
+| 08:30-09:15 | Registration /Opening                   | [Michal Roeckner](#michael-roeckner) |                                 | 
+| 09:15-10:00 | [Peter Imkeller](#peter-imkeller)       | [Fengyu Wang](#fengyu-wang)          | [Shanjian Tang](#shanjian-tang) |
 | 10:00-10:30 | Tea Break/Photo                         | Tea Break                            | Tea Break                       |
-| 10:30-11:15 | [Zenghu Li](#zhenghu-li)                | [Zhao Dong](#zhao-dong)              | [Guojing Wang](#guojing-wang)   |
-| 11:15-12:00 |	[Zengjing Chen](#zhengjing-chen)        | [Michael Kupper](#michael-kupper)    | [Xicheng Zhang](#xicheng-zhang) |
+| 10:30-11:15 | [Zenghu Li](#zhenghu-li)                | [Zhao Dong](#zhao-dong)              | [Nizar Touzi](#nizar-touzi)     |
+| 11:15-12:00 |	[Huaizhong Zhao](#huaizhong-zhao)       | [Michael Kupper](#michael-kupper)    | [Xicheng Zhang](#xicheng-zhang) |
 | 12:00-14:00 | Lunch Break                             | Lunch Break                          | Lunch Break                     |
 | 14:00-14:45 | [Martin Schweizer](#martin-schweizer)   | [Zhenqing Chen](#zhenqing-chen)      |                                 |
-| 14:45-15:30 | [Paolo Guasoni](#paolo-guasoni)         | [Litan Yan](#litan-yan)              |                                 |
+| 14:45-15:30 | [Hao Xing](#hao-xing)                   | [Litan Yan](#litan-yan)              |                                 |
 | 15:30-16:00 | Tea Break                               | Tea Break                            |                                 |
-| 16:00-16:45 |	[Mathias Beiglboek](#mathias-beiglboek) | [Hao Xing](#hao-xing)                |                                 |
-| 16:45-17:30 |	                                        | [Zhenya Liu](#zhenya-liu)            |                                 |
+| 16:00-16:45 |	[Guojing Wang](#guojing-wang)           | [Paolo Guasoni](#paolo-guasoni)      |                                 |
+| 16:45-17:30 |	[Mathias Beiglboek](#mathias-beiglboek) | [Zhenya Liu](#zhenya-liu)            |                                 |
 |--------------------------------------------------------------------------------------------------------------------------------|
 
 
@@ -77,6 +77,7 @@ Registration: 6, 7 and 8th of September starting from 8:00
 -----
 
 
+
 #### [Mathias Beiglboek](https://www.mat.univie.ac.at/~mathias/)
 {: style="text-align:center"}
 
@@ -88,15 +89,6 @@ Registration: 6, 7 and 8th of September starting from 8:00
 :   Several researchers have introduced topological structures on the set of laws of stochastic processes. A unifying goal of these authors is to strengthen the usual weak topology in order to adequately capture the temporal structure of stochastic processes. We find that all of these seemingly independent approaches define the same topology in finite discrete time. Moreover, we explain how optimal transport theory can be used obtain a compatible metric that is both tractable and highly relevant for a number of questions in mathematical finance.   
 (J. Backhoff, D. Bartl, D. Lacker, M. Eder)
 
------
-#### [Zengjing Chen](http://www.cer.sdu.edu.cn/info/1085/3234.htm)
-{: style="text-align:center"}
-
-**Title**
-:   TBA 
-
-**Abstract**
-:   TBA
 
 -----
 
@@ -127,10 +119,10 @@ Registration: 6, 7 and 8th of September starting from 8:00
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Asset Prices in Segmented and Integrated Markets 
 
 **Abstract**
-:   TBA
+:   This paper evaluates the effect of market integration on prices and welfare, in a model where two Lucas trees grow in separate regions with similar investors. We find equilibrium asset price dynamics and welfare both in segmentation, when each region holds its own asset and consumes its dividend, and in integration, when both regions trade both assets and consume both dividends. Integration always increases welfare. Asset prices may increase or decrease, depending on the time of integration, but decrease on average. Correlation in assets' returns is zero or negative before integration, but significantly positive afterwards, explaining some effects commonly associated with financialization.
 
 -----
 
@@ -151,7 +143,7 @@ local time
 {: style="text-align:center"}
 
 **Title**
-:    Nonlinear expectations under Wasserstein uncertainty and convex semigroups 
+:   Nonlinear expectations under Wasserstein uncertainty and convex semigroups
 
 **Abstract**
 :   We provide general results for convex semigroups, in particular uniqueness in terms of the generator. As an example, we consider scaling limits of Levy processes under distributional uncertainty with respect to (martingale) transport distances. The talk is based on joint works with Daniel Bartl, Robert Denk and Max Nendel.
@@ -251,10 +243,10 @@ local time
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Pricing basket CDS with some certain dependent default risk 
 
 **Abstract**
-:   TBA
+:   In this talk, we consider the basket CDS spreads under some reduced form credit risk models. We explain how the default intensity of a defaultable firm can be defined as the intensity of a point process. The dependence of default can be described by the dependence among the default intensity processes of defaultable firms with contagion (interacting), the conditional independence, the common shock and the regime switching. We derive some closed form joint distributions for default times and present some analytic pricing formulas for the basket CDS spreads under the proposed credit risk models.
 
 -----
 

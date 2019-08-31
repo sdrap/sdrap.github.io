@@ -63,7 +63,7 @@ Therefore, would you like to attend, we kindly ask you to register by sending a 
 :   from September 6th to 8th
 
 **Room:**
-:   TBA
+:   706, School of Mathematical Sciences Building, Shanghai Jiao Tong University, Minhang Campus
 
 **Program and Abstracts:**
 :   For Title and abstracts, see on the dedicated [program page](https://www.samuel-drapeau.info/conference-2019-09/program-2019-09).
@@ -75,7 +75,6 @@ Therefore, would you like to attend, we kindly ask you to register by sending a 
 | Name                          | Institution                                   |
 |:------------------------------|:----------------------------------------------|
 | [Mathias Beiglboek](#mathias-beiglboek)            | University of Vienna                          | 
-| [Zengjing Chen](#zengjing-chen)                | Shandong University                           | 
 | [Zhenqing Chen](#zhenqing-chen)                 | Washington University                         | 
 | [Zhao Dong](#zhao-dong)                     | Chinese Academy of Sciences                   |
 | [Paolo Guasoni](#paolo-guasoni)                 | Dublin City University                        | 
@@ -140,16 +139,6 @@ For any additional information or registration, do not hesitate to contact [Hu J
 (J. Backhoff, D. Bartl, D. Lacker, M. Eder)
 
 -----
-#### [Zengjing Chen](http://www.cer.sdu.edu.cn/info/1085/3234.htm)
-{: style="text-align:center"}
-
-**Title**
-:   TBA 
-
-**Abstract**
-:   TBA
-
------
 
 #### [Zhenqing Chen](https://sites.math.washington.edu/~zchen/)
 {: style="text-align:center"}
@@ -178,10 +167,10 @@ For any additional information or registration, do not hesitate to contact [Hu J
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Asset Prices in Segmented and Integrated Markets 
 
 **Abstract**
-:   TBA
+:   This paper evaluates the effect of market integration on prices and welfare, in a model where two Lucas trees grow in separate regions with similar investors. We find equilibrium asset price dynamics and welfare both in segmentation, when each region holds its own asset and consumes its dividend, and in integration, when both regions trade both assets and consume both dividends. Integration always increases welfare. Asset prices may increase or decrease, depending on the time of integration, but decrease on average. Correlation in assets' returns is zero or negative before integration, but significantly positive afterwards, explaining some effects commonly associated with financialization.
 
 -----
 
@@ -302,10 +291,10 @@ local time
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Pricing basket CDS with some certain dependent default risk 
 
 **Abstract**
-:   TBA
+:   In this talk, we consider the basket CDS spreads under some reduced form credit risk models. We explain how the default intensity of a defaultable firm can be defined as the intensity of a point process. The dependence of default can be described by the dependence among the default intensity processes of defaultable firms with contagion (interacting), the conditional independence, the common shock and the regime switching. We derive some closed form joint distributions for default times and present some analytic pricing formulas for the basket CDS spreads under the proposed credit risk models.
 
 -----
 
