@@ -106,10 +106,14 @@
       family: Kupper
       given: Michael
 
-  container-title: "Forthcoming in Journal of Convex Analysis, Preprint 2016/08"
+  container-title: "Journal of Convex Analysis"
   issued:
     date-parts:
-    - - 2016
+    - - 2019
+  volume: '26'
+  issue: '2'
+  page: '593-603'
+
   type: article-journal
   rank: '17'
   URL_Open: "http://arxiv.org/abs/1708.03127"
