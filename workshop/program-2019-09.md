@@ -43,10 +43,26 @@ rank: 6
 <br>
 -----
 
+**Place:** 
+:   [School of Mathematical Sciences](http://math.sjtu.edu.cn/en)    
+    [Shanghai Jiao Tong University](http://www.sjtu.edu.cn/)  
+    Dongchuan Road 800, Shanghai
+
+**Date:**
+:   from September 6th to 8th
+
+**Room:**
+:   706, School of Mathematical Sciences Building, Shanghai Jiao Tong University, Minhang Campus
+
+
+**Registration:**
+:   6, 7 and 8th of September starting from 8:00
+
+-----
+
 ### Program
 {: style="text-align:center"}
 <br>
-Registration: 6, 7 and 8th of September starting from 8:00  
 
 
 |------------------------------------------------------------------------------------------------------------------------------------|
@@ -88,7 +104,7 @@ Registration: 6, 7 and 8th of September starting from 8:00
 **Abstract**
 :   What notion of closeness for probabilistic models guarantees closeness of utility maximization/optimal stopping/...? We argue that while Wasserstein distances are not suitable for this task, there is a modified offspring (the adapted Wasserstein distance) that is suitable. We establish Lipschitz continuity w.r.t. adapted Wasserstein distance and show sharpness already in a simple Brownian setting. The picture is completed by providing statistical estimators and studying their convergence rate in adapted Wasserstein distance. Joint with J.Backhoff, M.Beiglboeck, M.Eder, J.Wiesel
 
-
+-----
 
 #### [Mathias Beiglboeck](https://www.mat.univie.ac.at/~mathias/)
 {: style="text-align:center"}
@@ -157,18 +173,6 @@ Registration: 6, 7 and 8th of September starting from 8:00
 
 **Abstract**
 :   This paper evaluates the effect of market integration on prices and welfare, in a model where two Lucas trees grow in separate regions with similar investors. We find equilibrium asset price dynamics and welfare both in segmentation, when each region holds its own asset and consumes its dividend, and in integration, when both regions trade both assets and consume both dividends. Integration always increases welfare. Asset prices may increase or decrease, depending on the time of integration, but decrease on average. Correlation in assets' returns is zero or negative before integration, but significantly positive afterwards, explaining some effects commonly associated with financialization.
-
------
-
-#### [Peter Imkeller](https://www.mathematik.hu-berlin.de/de/forschung/forschungsgebiete/stochastik/stoch-employees/imkeller)
-{: style="text-align:center"}
-
-**Title**
-:   On the geometry of some rough Weierstrass curves: SBR measure and
-local time 
-
-**Abstract**
-:   We investigate geometric properties of Weierstrass curves with one or two components, representing series based on trigonometric functions. They are Hoelder continuous, and not (para-)controlled with respect to each other. They can be embedded into a smooth dynamical system, where their graph emerges as a pullback attractor. Each one-dimensional component of the curve may also be seen in the light of this dynamical system. It turns out that occupation measures and Sinai-Bowen-Ruelle (SBR) measures on its stable manifold are dual to each other, via time reversal. A suitable version of approximate self similarity for deterministic functions yields approximate scaling properties for the measures. As a consequence, absolute continuity of the SBR measure is obtained, as well as the existence of a local time. The link between rough Weierstrass curves and smooth dynamical systems can be generalized considerably. Applications to regularization of singular ODE by rough (Weierstrass type) signals are on our agenda. This is joint work with G. dos Reis (U Edinburgh) and O. Pamen (U Liverpool and AIMS Ghana).
 
 
 -----

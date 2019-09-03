@@ -139,6 +139,7 @@ For any additional information or registration, do not hesitate to contact [Hu J
 :   What notion of closeness for probabilistic models guarantees closeness of utility maximization/optimal stopping/...? We argue that while Wasserstein distances are not suitable for this task, there is a modified offspring (the adapted Wasserstein distance) that is suitable. We establish Lipschitz continuity w.r.t. adapted Wasserstein distance and show sharpness already in a simple Brownian setting. The picture is completed by providing statistical estimators and studying their convergence rate in adapted Wasserstein distance. Joint with J.Backhoff, M.Beiglboeck, M.Eder, J.Wiesel
 
 
+-----
 
 #### [Mathias Beiglboeck](https://www.mat.univie.ac.at/~mathias/)
 {: style="text-align:center"}
