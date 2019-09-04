@@ -158,10 +158,11 @@ rank: 6
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Large deviation principles for first-order scalar conservation laws with stochastic forcing 
 
 **Abstract**
-:   TBA
+:   In this paper, we established the Freidlin-Wentzell type large deviation principles for first-order scalar conservation laws perturbed by small multiplicative noise. Due to the lack of the viscous terms in the stochastic equations, the kinetic solution to the Cauchy problem for Abstract 15 these first-order conservation laws is studied. Then, based on the well-posedness of the kinetic solutions, we show that the large deviations holds by utilising the weak convergence approach. This is joint work with Wu Jiang Lun, Zhang Rang Rang, Zhang Tu sheng.
+
 
 -----
 
@@ -307,10 +308,10 @@ with (in general nonlinear) operators $A(t,\cdot)$ satisfying general weak monot
 {: style="text-align:center"}
 
 **Title**
-:   TBA 
+:   Periodic measures and stochastic resonance 
 
 **Abstract**
-:   TBA
+:   In this talk, I will talk about the periodic measures of Markovian systems and their ergodic theory. Our theory reveals how geometric ergodic periodic measure provides rigorous proof for the transition of the stochastic resonance problem. We derive a parabolic partial differential equation for the expected exit time of the Markovian periodic process and its periodic solution gives the expected transition time of stochastic resonance. We subsequently find the parameters when the expected transition time is equal to the period of the system which is the real meaning of resonance. This is a joint work with Chunrong Feng and Johnny Zhong.
 
 -----
 

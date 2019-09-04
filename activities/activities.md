@@ -10,7 +10,7 @@ rank: 5
 2019 September 6th-8th &mdash; [Conference on Stochastic Analysis, Stochastic Dynamical Systems and Stochastic Finance](http://www.samuel-drapeau.info/conference-2019-09/)
 :   **Date:** September 6th--8th  
     **Place:** [School of Mathematical Sciences](http://math.sjtu.edu.cn/en), [Shanghai Jiao Tong University](http://www.sjtu.edu.cn/), Dongchuan Road 800, Shanghai   
-    **Room:** TBA   
+    **Room:** 706      
     **Organizers:**   
     
     * Xin CHEN (Shanghai  Jiao Tong University, China)
