@@ -1,4 +1,32 @@
 -
+  id: mekonnen2019
+  title: Dual Representation of Expectile Based Expected Shortfall and its Properties  
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Tadese
+      given: Mekonnen
+
+  container-title: "Preprint 11/2019"
+  issued:
+    date-parts:
+    - - 2019
+  type: article-journal
+  rank: '23'
+  URL_Open: "https://arxiv.org/abs/1911.03245"
+  abstract: >
+      The expectile can be considered as a generalization of quantile. While expected shortfall is a quantile based risk measure, we study its counterpart -- the expectile based expected shortfall -- where expectile takes the place of quantile. We provide its dual representation in terms of Bochner integral. Among other properties, we show that it is bounded from below in terms of convex combinations of expected shortfalls, and also from above by the smallest law invariant, coherent and comonotonic risk measure, for which we give the explicit formulation of the corresponding distortion function. As a benchmark to the industry standard expected shortfall we further provide its comparative asymptotic behavior in terms of extreme value distributions. Based on these results, we finally compute explicitly the expectile based expected shortfall for some selected class of distributions.
+
+  keywords:
+    - Coherent Risk Measures
+    - Expectile
+    - Expected Shortfall
+    - Dual Representation
+    - Tail Conditional Expectation
+
+-
   id: yunbozhang2019
   title: Pricing and Hedging Performance on Pegged Markets Based on a Regime Switching Model  
   
