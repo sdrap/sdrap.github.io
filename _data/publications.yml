@@ -1,4 +1,39 @@
 -
+  id: peng2020
+  title: An FBSDE Approach to Market Impact Games with Stochastic Parameters  
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Luo
+      given: Peng
+    -
+      family: Schied
+      given: Alexander
+    -
+      family: Xiong
+      given: Dewen
+
+  container-title: "Preprint 01/2020"
+  issued:
+    date-parts:
+    - - 2020
+  type: article-journal
+  rank: '24'
+  URL_Open: "https://arxiv.org/abs/2001.00622"
+  abstract: >
+      We analyze a market impact game between n risk averse agents who compete for liquidity in a market impact model with permanent price impact and additional slippage. Most market parameters, including volatility and drift, are allowed to vary stochastically. Our first main result characterizes the Nash equilibrium in terms of a fully coupled system of forward-backward stochastic differential equations (FBSDEs). Our second main result provides conditions under which this system of FBSDEs has indeed a unique solution, which in turn yields the unique Nash equilibrium. We furthermore obtain closed-form solutions in special situations and analyze them numerically.
+
+  keywords:
+    - FBSDE
+    - Market Impact
+    - Nash Equilibrium
+
+
+
+
+-
   id: mekonnen2019
   title: Dual Representation of Expectile Based Expected Shortfall and its Properties  
   author:
@@ -159,10 +194,10 @@
       family: Xiong
       given: Dewen
 
-  container-title: "Preprint 2017/03"
+  container-title: "Forthcoming in Electronic Journal of Probability"
   issued:
     date-parts:
-    - - 2017 (Revised version 2019-03)
+    - - 2020
   type: article-journal
   rank: '18'
   URL_Open: "http://arxiv.org/abs/1703.02694"
