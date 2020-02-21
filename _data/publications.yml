@@ -160,13 +160,17 @@
       family: Tangpi
       given: Ludovic
 
-  container-title: "Forthcoming in Mathematical Finance (Preprint 06/2017)"
+  container-title: "Mathematical Finance"
   issued:
     date-parts:
     - - 2017
   type: article-journal
   rank: '19'
+  volume: '30'
+  issue: '1'
+  page: '287-309'
   URL_Open: "http://arxiv.org/abs/1706.10186"
+  URL: "https://onlinelibrary.wiley.com/doi/full/10.1111/mafi.12203"
   abstract: >
       Accounting for model uncertainty in risk management leads to infinite dimensional optimization problems which are both analytically and numerically untractable. In this article we study when this fact can be overcome for the so-called optimized certainty equivalent risk measure (OCE) - including the average value-at-risk as a special case. First we focus on the case where the set of possible distributions of a financial loss is given by the neighborhood of a given baseline distribution in the Wasserstein distance, or more generally, an optimal-transport distance. Here it turns out that the computation of the robust OCE reduces to a finite dimensional problem, which in some cases can even be solved explicitly. Further, we derive convex dual representations of the robust OCE for measurable claims without any assumptions on the set of distributions and finally give conditions on the latter set under which the robust average value-at-risk is a tail risk measure.
       <br>
@@ -194,13 +198,15 @@
       family: Xiong
       given: Dewen
 
-  container-title: "Forthcoming in Electronic Journal of Probability"
+  container-title: "Electronic Journal of Probability"
   issued:
     date-parts:
     - - 2020
   type: article-journal
   rank: '18'
+  volume: '25'
   URL_Open: "http://arxiv.org/abs/1703.02694"
+  URL: "https://projecteuclid.org/euclid.ejp/1581735876"
   abstract: >
       We provide a verification and characterization result of optimal maximal sub-solutions of BSDEs in terms of fully coupled forward backward stochastic differential equations. We illustrate the application thereof in utility optimization with random endowment under probability and discounting uncertainty. We show with explicit examples how to quantify the costs of incompleteness when using utility indifference pricing, as well as a way to find optimal solutions for recursive utilities.   
 
