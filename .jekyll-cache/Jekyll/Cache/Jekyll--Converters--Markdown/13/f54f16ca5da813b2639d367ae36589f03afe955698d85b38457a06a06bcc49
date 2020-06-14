@@ -1,0 +1,41 @@
+I"l<h1 class="page-title">Personal Information</h1>
+<hr />
+
+<dl>
+  <dt>Contact:</dt>
+  <dd>Shanghai Advanced Institute of Finance<br />
+Shanghai Jiao Tong University<br />
+211 West Huaihai Road<br />
+Shanghai, P.R. 200030 China</dd>
+  <dd>
+    <p>Mail: sdrapeau@saif.sjtu.edu.cn <br />
+Tel: +86-21-6293-3586</p>
+  </dd>
+  <dd>
+    <p>Office in SAIF: 1216<br />
+Office in Minhang: 105</p>
+  </dd>
+</dl>
+
+<hr />
+
+<p>I have a position as Associate Professor (Distinguished Researcher Fellow) at the <a href="http://en.sjtu.edu.cn">Shanghai Jiao Tong University</a> in China.
+My position is shared between the <a href="http://www.math.sjtu.edu.cn/">School of Mathematical Sciences</a> and the Shanghai Advanced Institute of Finance <a href="http://saif.sjtu.edu.cn">(SAIF)</a> within the China Academy of Finance and Research <a href="http://en.cafr.cn">(CAFR)</a>.</p>
+
+<p>My research focus — even if not bounded to — are</p>
+
+<ul>
+  <li>Stochastic and Convex Analysis</li>
+  <li>Decision Theory</li>
+  <li>Risk and Uncertainty</li>
+  <li>Data Analysis</li>
+</ul>
+
+<dl>
+  <dt>Links:</dt>
+  <dd><strong>Publications and CV:</strong> <a href="http://localhost:4000/research">Publications, preprints and talks</a> and a short CV <a href="http://localhost:4000/CV">here</a>.<br />
+<strong>Teaching:</strong> The <a href="http://localhost:4000/teaching">teaching</a> section contains details about current and past lectures as well as some open sourced lecture notes that I’ve written myself or together with others.<br />
+<strong>Activities:</strong> Various informations about finance and stochastic <a href="http://localhost:4000/activities">activities</a> in Shanghai and around.<br />
+<strong>Seminar:</strong> The group of probability, stochastic and finance of the school of mathematical sciences is running (usually twice a month) a <a href="http://localhost:4000/seminar">seminar</a>.</dd>
+</dl>
+:ET

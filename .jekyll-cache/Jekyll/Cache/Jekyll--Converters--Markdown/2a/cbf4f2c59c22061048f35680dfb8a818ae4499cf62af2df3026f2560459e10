@@ -1,0 +1,17 @@
+I"m
+<dl>
+  <dt>Authors</dt>
+  <dd>Samuel Drapeau and <a href="">Yunbo Zhang</a></dd>
+  <dt>Date</dt>
+  <dd>2020</dd>
+  <dt>Journal</dt>
+  <dd>Forthcoming in Quantitative Finance</dd>
+  <dt>Abstract</dt>
+  <dd>This paper investigates the hedging performance of pegged foreign exchange market in a regime switching (RS) model introduced in a recent paper by Drapeau, Wang and Wang (2019). We compare two prices, an exact solution and first order approximation and provide the bounds for the error. We provide exact RS delta, approximated RS delta as well as mean variance hedging strategies for this specific model and compare their performance. To improve the efficiency of the pricing and calibration procedure, the Fourier approach of this regime-switching model is developed in our work. It turns out that: 1 - the calibration of the volatility surface with this regime switching model outperforms on real data the classical SABR model; 2 - the Fourier approach is significantly faster than the direct approach; 3 - in terms of hedging, the approximated RS delta hedge is a viable alternative to the exact RS delta hedge while significantly faster.</dd>
+  <dt>Keywords</dt>
+  <dd>Pegged FX Markets, HKDUSD, Regime Switching, Mean-Variance Hedging, Fourier Approach</dd>
+  <dt>Download</dt>
+  <dd><a href="http://arxiv.org/abs/1910.08344" target="_blank"> pdf (open science)</a></dd>
+</dl>
+
+:ET

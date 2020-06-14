@@ -1,0 +1,107 @@
+I"<h3 id="whenwhere">When/Where</h3>
+
+<p>From 2019.02.25 to 2019.06.14</p>
+
+<p>Tuesday: 12:55-14:45<br />
+Thursday: 12:55-14:45<br />
+Place: Chen Ruiqiu Building, room 223</p>
+
+<p>Office hour: Tuesday from 16:00 to 17:00<br />
+Office: Math building, room 523</p>
+
+<p>Together with Y. Lin<br />
+Teaching Assistant: Wenjie</p>
+
+<h3 id="course-description">Course Description</h3>
+
+<p>This lecture is an introduction to the theory of stochastic processes, with a special focus on Martingale Theory.
+The discrete time framework is first addressed and then the continuous time with the construction of Ito’s integral.
+One finally address with the help of Ito’s Formula some Stochastic differential equations.
+Throughout the whole course we illustrate the theory by means of examples within financial mathematics.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>Measure and probability theory, topology and analysis.</p>
+
+<h3 id="lecture-organization">Lecture Organization</h3>
+<ul>
+  <li>Lecture, homework sheet, and exam are in English.</li>
+  <li>Every week a lecture note following what is taught in class is provided on the wechat group.</li>
+  <li>Every week, a homework sheet has to be solved (by group of 2 or 3 students) and will be graded. The homework sheets are available on this webpage, section <a href="#lecture-material">Lecture Material</a>. The homework sheet should be handed electronically to the teaching assistant on Friday before the lecture.</li>
+  <li>Final exam in June</li>
+  <li>Final grade is a pondered average between homework sheet and final exam</li>
+</ul>
+
+<h3 id="content-of-the-lecture">Content of the lecture</h3>
+
+<ol>
+  <li>Recall of basics in Probability theory, conditional expectation, independence, uniform integrability. (1 week)</li>
+  <li>Martingale Theory (4 weeks)
+    <ul>
+      <li>Martingale (recall from discrete), Doob’s optional sampling theorem, Doob’s upcrossing’s lemma, doob’s inequality, modification of martingales.</li>
+      <li>Stochastic processes, modification, indistiguishability, rcll lcrl, stopping times, hitting times</li>
+      <li>Martingale (recall from discrete), Doob’s optional sampling theorem, Doob’s upcrossing’s lemma, doob’s inequality, modification of martingales.</li>
+      <li>Browninan Motion, Poisson process, Levy process
+Process of Bounded Variations, predictable, Doob-Meyer decomposition</li>
+      <li>Local Martingales</li>
+    </ul>
+  </li>
+  <li>Stochastic Integration (4 weeks)
+    <ul>
+      <li>Lebesgue’s Stieljes integral, Chain-rule Formula</li>
+      <li>Quadratic Variations</li>
+      <li>Ito-isometrie, Stochastic integral</li>
+      <li>Covariations, Watanabe’s inequality</li>
+      <li>Semi-martingales, Ito’s Formula</li>
+      <li>Martingale representation theorem.</li>
+      <li>Girsanov Theorem</li>
+    </ul>
+  </li>
+  <li>Brownian Motion and Partial Differential Equations. (2 weeks)
+    <ul>
+      <li>Harmonic functions and Dirichlet problem.</li>
+      <li>The heat equation</li>
+      <li>Formula of Feynman and Kac</li>
+    </ul>
+  </li>
+  <li>Stochastic Differential Equations (SDE) (3 weeks)
+    <ul>
+      <li>Strong solutions, comparison result</li>
+      <li>Weak solutions, Martingale problem of Strook and Varadhan</li>
+      <li>Linear Equations</li>
+    </ul>
+  </li>
+  <li>Backward Stochastic Differential Equations (BSDE) (2 weeks)
+    <ul>
+      <li>Lipschitz case, existence and uniqueness</li>
+      <li>Comparison theorem</li>
+      <li>Application to finance</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="literature">Literature</h3>
+
+<p>The course won’t follow any textbook however you might find some interesting/alternative approaches in</p>
+
+<p>[1] <strong>J.M Steel:</strong> <em>Stochastic Calculus and financial Applications</em>, 2nd Ed. Springer Verlag New York (2001) (more easy)</p>
+
+<p>[2] <strong>I. Karatzas S. Schreeve</strong>: <em>Foundation of Modern Probability</em> Springer Verlag, New York (1991) (more advanced)</p>
+
+<p>[3] <strong>P. Protter:</strong> <em>Stochastic Integration and Differential Equations</em>, 2nd Ed. Springer Verlag Berlin-Heidelberg (2004) (very advanced with discontinuous processes)</p>
+
+<p>[4] <strong>P. Dellacherie, P.A. Meyer:</strong> <em>Probability and Potentials B</em>, , 1982 (the most general reference, very hard and build upon Probability and Potentials A)</p>
+
+<h3 id="lecture-material">Lecture Material</h3>
+
+<ul>
+  <li>Ipython notebooks:
+    <ul>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Materials/Random Walk.ipynb">Random walk</a></li>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Materials/Random_Walk_Stopping_Time.ipynb">Stopping time</a></li>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Materials/Random_Walk_Upcrossing.ipynb">Random Walk up-crossing</a></li>
+    </ul>
+  </li>
+</ul>
+
+:ET

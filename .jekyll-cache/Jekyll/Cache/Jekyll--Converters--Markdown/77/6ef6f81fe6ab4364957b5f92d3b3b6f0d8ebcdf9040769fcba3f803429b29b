@@ -1,0 +1,17 @@
+I">
+<dl>
+  <dt>Authors</dt>
+  <dd>Samuel Drapeau and <a href="">Mekonnen Tadese</a></dd>
+  <dt>Date</dt>
+  <dd>2019</dd>
+  <dt>Journal</dt>
+  <dd>Preprint 11/2019</dd>
+  <dt>Abstract</dt>
+  <dd>The expectile can be considered as a generalization of quantile. While expected shortfall is a quantile based risk measure, we study its counterpart – the expectile based expected shortfall – where expectile takes the place of quantile. We provide its dual representation in terms of Bochner integral. Among other properties, we show that it is bounded from below in terms of convex combinations of expected shortfalls, and also from above by the smallest law invariant, coherent and comonotonic risk measure, for which we give the explicit formulation of the corresponding distortion function. As a benchmark to the industry standard expected shortfall we further provide its comparative asymptotic behavior in terms of extreme value distributions. Based on these results, we finally compute explicitly the expectile based expected shortfall for some selected class of distributions.</dd>
+  <dt>Keywords</dt>
+  <dd>Coherent Risk Measures, Expectile, Expected Shortfall, Dual Representation, Tail Conditional Expectation</dd>
+  <dt>Download</dt>
+  <dd><a href="https://arxiv.org/abs/1911.03245" target="_blank"> pdf (open science)</a></dd>
+</dl>
+
+:ET

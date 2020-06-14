@@ -1,0 +1,17 @@
+I"G
+<dl>
+  <dt>Authors</dt>
+  <dd><a href="https://people.math.ethz.ch/~delbaen/">Freddy Delbaen</a>, Samuel Drapeau and <a href="http://cms.uni-konstanz.de/math/kupper/">Michael Kupper</a></dd>
+  <dt>Date</dt>
+  <dd>2011</dd>
+  <dt>Journal</dt>
+  <dd>Journal of Mathematical Economics, 47:401-408</dd>
+  <dt>Abstract</dt>
+  <dd>In the paradigm of von Neumann-Morgenstern, a representation of affine preferences in terms of an expected utility can be obtained under the assumption of weak continuity. Since the weak topology is coarse, this requirement is a priori far from being negligible. In this work, we replace the assumption of weak continuity by monotonicity. More precisely, on the space of lotteries on an interval of the real line, it is shown that any affine preference order which is monotone with respect to the first stochastic order admits a representation in terms of an expected utility for some nondecreasing utility function. As a consequence, any affine preference order on the subset of lotteries with compact support, which is monotone with respect to the second stochastic order, can be represented in terms of an expected utility for some nondecreasing concave utility function. We also provide such representations for affine preference orders on the subset of those lotteries which fulfill some integrability conditions. The subtleties of the weak topology are illustrated by some examples.</dd>
+  <dt>Keywords</dt>
+  <dd>Affine Preference Order, von Neumann-Morgenstern Representation, Automatic Continuity, First Stochastic Order, Weak Continuity</dd>
+  <dt>Download</dt>
+  <dd><a href="http://www.samuel-drapeau.info/downloads/vnmDDK_0411.pdf" target="_blank"> pdf (open science)</a><br /><a href="http://www.sciencedirect.com/science/article/pii/S0304406811000486" target="_blank">journal link (usually closed science)</a></dd>
+</dl>
+
+:ET

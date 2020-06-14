@@ -1,0 +1,19 @@
+I"Œ<p>The python library <code class="language-plaintext highlighter-rouge">pandas</code> allows to load and manipulate large sets of data for analysis.
+The following Ipython notebook shows basic manipulations that you can realize using this library for financial purposes.
+The notebook is written with a fresh installation of Anaconda with Python 3.4.
+You will need to install the following packages with Anacondaâ€™s terminal if they are not already there:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">conda install seaborn</code></p>
+</blockquote>
+
+<p>for the plotting library and</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">pip install pandas_datareader</code></p>
+</blockquote>
+
+<p>If you need more information how to use pandas, consult the <a href="http://pandas.pydata.org/pandas-docs/stable/10min.html">10 minutes to pandas tutorial</a> as well as the <a href="http://pandas.pydata.org/pandas-docs/stable/tutorials.html">full tutorial</a>.</p>
+
+<p>Here is the <a href="http://localhost:4000/downloads/Ipython_Notebooks/Download_and_Basic_Manipulation_Financial_Data.ipynb">Ipython notebook</a>.</p>
+:ET

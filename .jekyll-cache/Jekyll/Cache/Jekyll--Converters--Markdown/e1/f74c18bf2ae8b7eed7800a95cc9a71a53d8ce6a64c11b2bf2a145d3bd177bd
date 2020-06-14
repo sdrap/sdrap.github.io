@@ -1,0 +1,17 @@
+I"Š
+<dl>
+  <dt>Authors</dt>
+  <dd>Samuel Drapeau, <a href="">Gregor Heyne</a> and <a href="http://cms.uni-konstanz.de/math/kupper/">Michael Kupper</a></dd>
+  <dt>Date</dt>
+  <dd>2013</dd>
+  <dt>Journal</dt>
+  <dd>Annals of Probability, 41(6):3973-4001</dd>
+  <dt>Abstract</dt>
+  <dd>We study the nonlinear operator of mapping the terminal value \(\xi\) to the corresponding minimal supersolution of a backward stochastic differential equation with the generator being monotone in \(y\), convex in \(z\), jointly lower semicontinuous and bounded below by an affine function of the control variable \(z\). We show existence, uniqueness, monotone convergence, Fatouâ€™s lemma and lower semicontinuity of this operator. We provide a comparison principle for minimal supersolutions of BSDEs.</dd>
+  <dt>Keywords</dt>
+  <dd>Supersolutions of backward stochastic differential equations, Nonlinear expectations, Supermartingales</dd>
+  <dt>Download</dt>
+  <dd><a href="http://arxiv.org/abs/1106.1400" target="_blank"> pdf (open science)</a><br /><a href="http://projecteuclid.org/euclid.aop/1384957780" target="_blank">journal link (usually closed science)</a></dd>
+</dl>
+
+:ET

@@ -1,0 +1,17 @@
+I")
+<dl>
+  <dt>Authors</dt>
+  <dd>Samuel Drapeau, <a href="http://en.saif.sjtu.edu.cn/content/show/103-27.html">Tan Wang</a> and <a href="http://en.saif.sjtu.edu.cn/content/show/103-17.html">Tao Wang</a></dd>
+  <dt>Date</dt>
+  <dd>2019</dd>
+  <dt>Journal</dt>
+  <dd>Preprint 10/2019</dd>
+  <dt>Abstract</dt>
+  <dd>In this paper, we study the prices of the options on Hong Kong’s linked exchange rate. The study was motivated by the apparent contradiction that options with strike prices outside the narrow trading band have positive prices. We developed a simple regime-switching model of the exchange rate and provided a formula for the prices of its options. The option pricing formula allows us to back out the implied probability of the failure of the linked exchange rate regime. With the option price data for the period from June 1, 2005 to July 31, 2018, we find that the market’s belief about the likelihoods of the failure, as implied by the option prices, is too high to be justified by the possibility of the failure alone. This is first shown qualitatively, without using any model, with ratio of empirical over implied volatilities and the implied range of strike prices. Then, using the model, we find that, close to 40% of the sample period, the market thinks the failure probability is greater than 10%. When contrasted with the fact that the regime has not failed since 1983, the p-value of that event is less than 0.1%. Our finding suggests that, while the failure of the linked exchange rate regime is a significant risk factor, it cannot explain the risk premium seen in the option prices.</dd>
+  <dt>Keywords</dt>
+  <dd>HKDUSD Exchange Rate, Option Pricing</dd>
+  <dt>Download</dt>
+  <dd><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3476943" target="_blank"> pdf (open science)</a></dd>
+</dl>
+
+:ET

@@ -1,0 +1,144 @@
+I"<p>ipython is an excellent and easy way to implement rapidly and nicely some of the techniques we learned during the lecture.
+The main advantages of Python are the following:</p>
+
+<ul>
+  <li>Beautiful and very natural syntax, easy to learn;</li>
+  <li>Huge and increasing community – both in science and industry;</li>
+  <li>Loads of libraries for scientific computing: numpy, scipy, matplotlib, pandas, etc.;</li>
+  <li>Language of reference for data analysis, computing, financial engineering and statistics;</li>
+  <li>Good balance between low and high level programing language: Higher than C++ but possibility to implement C through Cython;</li>
+  <li>Excellent cross platform interfaces: ipython notebook, Sage, etc.;</li>
+  <li>Produce beautiful pictures, and we all love pictures: matplotlib, seaborn, etc.;</li>
+  <li>Free as in “Free Beer” or “Free Speech”: Open source! You do not have to pay for it and can contribute to the libraries. Central for science.</li>
+</ul>
+
+<p>I won’t discuss in details why, some did it better than I would ever do <a href="https://www.stat.washington.edu/~hoytak/blog/whypython.html">there</a> or <a href="http://sjbyrnes.com/?page_id=67">there</a>.
+There are many other alternatives, but to my mind none of them does have all the advantages listed above yet – perhaps in the next future with <a href="http://julialang.org/">Julia</a> for instance that also can run in ipython notebook.
+In any cases, this is really by far better than Matlab – we hate the dinosaur Matlab with its painful and expensive closed source business – see <a href="http://www.pyzo.org/python_vs_matlab.html">here</a> or <a href="https://www.linkedin.com/pulse/matlab-vs-python-jan-rhebergen">here</a>.</p>
+
+<p>At <a href="#install">the end of this page</a>, you can find the explanation how to install it.</p>
+
+<h2 id="some-tutorials-useful-links-additional-information">Some Tutorials, Useful Links, Additional Information</h2>
+
+<p>If you are new to Python, I advise you to follow the online course at <a href="www.codeacademy.com">codeacademy</a>.
+After registration you can choose to follow the python course.</p>
+
+<p>After that, try playing around with tutorial ipython notebooks that you can download on your computer and use.
+For instance <a href="https://github.com/patvarilly/dihub-python-for-data-scientists-2015">Patrick Varilly</a> produced a series of <a href="https://github.com/patvarilly/dihub-python-for-data-scientists-2015/tree/master/notebooks">notebooks</a> to learn how to manipulate data, use the libraries and plot things.
+Learning by doing is the better way.</p>
+
+<p>You will make a lot of use of <a href="http://www.numpy.org/">numpy</a> and <a href="http://scipy.org/">scipy</a> as well as <a href="http://matplotlib.org/">matplotlib</a>, the library for scientific programing.
+Here also, learn by the examples – in particular for plots there are <a href="http://matplotlib.org/examples/index.html">thousands of them</a>.
+However, if you need exact documentation about one or the other function, look at <a href="http://docs.scipy.org/doc/numpy/reference/index.html">numpy reference</a>,<a href="http://docs.scipy.org/doc/scipy/reference/">scipy reference</a> or <a href="http://matplotlib.org/contents.html">matplotlib reference</a>.</p>
+
+<p>Couple of tutorials:</p>
+
+<ul>
+  <li><a href="http://www.python-course.eu/numpy.php">Numpy</a> a little bit outdated</li>
+  <li><a href="http://cs231n.github.io/python-numpy-tutorial/">Numpy/Scipy/Matplotlib</a></li>
+</ul>
+
+<p>More advanced courses:</p>
+
+<ul>
+  <li><a href="https://docs.python.org/3.4/tutorial/">Official Python 3.4 tutorial</a></li>
+  <li><a href="http://learnpythonthehardway.org/book/">Learn Python the Hard Way</a></li>
+  <li><a href="https://developers.google.com/edu/python/set-up">Python course by google</a> excellent but you will need vpn to access</li>
+  <li>Otherwise look at online courses provided by universities – I personally do not like to follow a course on video in particular programing</li>
+</ul>
+
+<p>Finally, there are many ipython notebooks online where you can learn about different topic.
+<a href="https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks">Here</a> is a – not fully up to date – list of notebooks classified by topics.</p>
+
+<p>BE AWARE: that there are some small differences between Python 2 and 3, the main one being</p>
+
+<blockquote>
+  <p>print “Hello” # for python 2<br />
+print(“Hello”) # for python 3</p>
+</blockquote>
+
+<p>So if you download a notebook, it may happen that it is not fully compatible with your version so you will have to debug a little bit.</p>
+
+<h2 id="install">Install</h2>
+
+<p>The easiest way to get Python together with all the useful libraries as well as the GUI interfaces is to install <a href="https://www.continuum.io/why-anaconda">Anaconda</a></p>
+
+<h3 id="youre-a-microoft-windows-user">You’re a Micro$$oft Windows user:</h3>
+
+<ol>
+  <li>Download the <a href="https://www.continuum.io/downloads">Anaconda installer</a> for windows by choosing Python 3.4 and the version for your computer 32-bits or 64-bits.</li>
+  <li>Double click on the downloaded file, follow instructions</li>
+  <li>
+    <p>Once installed, launch the program anaconda command line and type</p>
+
+    <blockquote>
+      <p>pip install seaborn</p>
+    </blockquote>
+  </li>
+  <li>You can now run the program Ipyhon notebook that will open ipython in your browser</li>
+</ol>
+
+<h3 id="youre-a-mac-ox-user">You’re a Mac O$$X user:</h3>
+
+<ol>
+  <li>Download the <a href="https://www.continuum.io/downloads">Anaconda installer</a> for linux by choosing Python 3.4 and the version for your computer 32-bits or 64-bits.</li>
+  <li>Double click on the downloaded file, follow instructions</li>
+  <li>
+    <p>Once installed, launch the program anaconda command line and type</p>
+
+    <blockquote>
+      <p>pip install seaborn</p>
+    </blockquote>
+  </li>
+  <li>You can now run the program Ipyhon notebook that will open ipython in your browser</li>
+</ol>
+
+<h3 id="youre-a-linux-user-ubuntu-distribution-geq-1404">You’re a linux user (Ubuntu distribution \(\geq\) 14.04)</h3>
+
+<p>You can also install anaconda the same way as above.
+However you can also set up a virtual environment to isolate what you are doing from the rest of the system as follows:</p>
+
+<p>copy paste in terminal (ctrl+alt+t)</p>
+
+<blockquote>
+  <p>sudo apt-get install -y python3-dev g++ libblas-dev liblapack-dev gfortran libfreetype6-dev libpng-dev</p>
+</blockquote>
+
+<p>Then install globally virtual environment by typing</p>
+
+<blockquote>
+  <p>sudo pip install -y virtualenv virtualenvwrapper</p>
+</blockquote>
+
+<p>and create a virtualenv in the directory ipython where you will be working</p>
+
+<blockquote>
+  <p>virtualenv –no-site-packages ipython</p>
+</blockquote>
+
+<p>Activate the virtualenv</p>
+
+<blockquote>
+  <p>cd ipython<br />
+source ./bin/activate</p>
+</blockquote>
+
+<p>And then install what is needed</p>
+
+<blockquote>
+  <p>pip install numpy scipy matplotlib ipython[all] patsy pandas statmodels scikit-learn seaborn</p>
+</blockquote>
+
+<p>That’s pretty much it, close the terminal.</p>
+
+<p>Inside the directory IPyhton, you can create a directory <code class="language-plaintext highlighter-rouge">_notebook</code> where you will store and organize your notebooks.
+To run ipython from this directory you go in a terminal, activate the virtual environment, move to the directory <code class="language-plaintext highlighter-rouge">_notebook</code>, and run ipython notebook:</p>
+
+<blockquote>
+  <p>cd ipython<br />
+source ./bin/activate<br />
+cd _notebook<br />
+ipython notebook</p>
+</blockquote>
+
+:ET

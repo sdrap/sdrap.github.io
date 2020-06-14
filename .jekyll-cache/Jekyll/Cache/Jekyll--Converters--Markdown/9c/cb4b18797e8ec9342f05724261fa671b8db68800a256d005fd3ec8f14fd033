@@ -1,0 +1,17 @@
+I"H
+<dl>
+  <dt>Authors</dt>
+  <dd>Samuel Drapeau and <a href="http://cms.uni-konstanz.de/math/kupper/">Michael Kupper</a></dd>
+  <dt>Date</dt>
+  <dd>2013</dd>
+  <dt>Journal</dt>
+  <dd>Mathematics of Operations Research, 28(1):28-62</dd>
+  <dt>Abstract</dt>
+  <dd>To address the plurality of interpretations of the subjective notion of risk, we describe it by means of a risk order and concentrate on the context invariant features of diversification and monotonicity. Our main results are uniquely characterized robust representations of lower semicontinuous risk orders on vector spaces and convex sets. This representation covers most instruments related to risk and allow for a differentiated interpretation depending on the underlying context which is illustrated in different settings: For random variables, risk perception can be interpreted as model risk, and we compute among others the robust representation of the economic index of riskiness. For lotteries, risk perception can be viewed as distributional risk and we study the “Value at Risk”. For consumption patterns, which excerpt an intertemporality dimension in risk perception, we provide an interpretation in terms of discounting risk and discuss some examples.</dd>
+  <dt>Keywords</dt>
+  <dd>Risk Perception, Risk Measures, Robustness</dd>
+  <dt>Download</dt>
+  <dd><a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1557083" target="_blank"> pdf (open science)</a><br /><a href="http://pubsonline.informs.org/doi/abs/10.1287/moor.1120.0560?journalCode=moor" target="_blank">journal link (usually closed science)</a></dd>
+</dl>
+
+:ET

@@ -1,0 +1,111 @@
+I"<h3 id="recent-informations">Recent Informations:</h3>
+
+<dl>
+  <dt>2015-12-28</dt>
+  <dd>Update of Chapter 4. Upload of Homework Sheets 12 and 13.</dd>
+  <dt>2015-12-08</dt>
+  <dd>Update of Chapter 4 up to Ito’s formula.</dd>
+  <dt>2015-12-02</dt>
+  <dd>Beginning of Chapter 4 is online and there is an remark concerning conditional density and stochastic kernel in the first chapter in the Fubini section.</dd>
+  <dt>2015-11-30</dt>
+  <dd>Homework Sheet 10 is online</dd>
+  <dt>2015-11-26</dt>
+  <dd>Chapter 3 on Markov process – be aware of possible typos! – Update Chapter 1 and 2 for small typos</dd>
+</dl>
+
+<h3 id="whenwhere">When/Where</h3>
+
+<p>From 2015.09.14 to 2016.01.04</p>
+
+<p>Monday: 14-15:40<br />
+Wednesday: 10-12<br />
+Place: Chen Ruiqiu Building, room 107</p>
+
+<p>Office hour: Wednesday from 13:00 to 15:30<br />
+Office: Math building, room 2.105</p>
+
+<p>Teaching Assistant: Zhang Yaoyuan <a href="mailto:volwc@sjtu.edu.cn">volwc@sjtu.edu.cn</a></p>
+
+<h3 id="course-description">Course Description</h3>
+
+<p>This lecture is an introduction to the theory of stochastic processes, with a special focus on Martingale Theory.
+The discrete time framework is first addressed and then the continuous time with the construction of Ito’s integral.
+One finally address with the help of Ito’s Formula some Stochastic differential equations.
+Throughout the whole course we illustrate the theory by means of examples within financial mathematics.</p>
+
+<h3 id="lecture-organization">Lecture Organization</h3>
+
+<ul>
+  <li>Blackboard lecture. I Provide definition, motivation, theorems but sometimes only the main arguments of the proofs.</li>
+  <li>Sometimes you complete the proofs on your own as an exercise.</li>
+  <li>The script will be provided/corrected/completed every week as pdf at the end of this page in the section <a href="#lecture-material">Lecture Material</a> so that you can check your own proofs.</li>
+  <li>Every week on Monday a set of exercises will be provided as pdf at the end of this page in the section <a href="#lecture-material">Lecture Material</a>.<br />
+The exercises have to be solved by group of three.<br />
+You upload the assignment before the next Monday 14:00 on the server and the teaching assistant give you those of the previous week graded.</li>
+  <li>
+    <p>You can ask for hints to the teaching assistant or myself during office hours.</p>
+  </li>
+  <li>Grading: There will be a final written exam at some point during the first of second week of January.
+The final grade will consists of one third for the homeworks and two third for the final exam.</li>
+</ul>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<p>Measure theory, topology, some basics of functional analysis, and probability theory.</p>
+
+<h3 id="literature">Literature</h3>
+
+<p>The course won’t follow any textbook however you might find some interesting/alternative approaches in</p>
+
+<p>For measure and integration theory:</p>
+
+<p>[1] “Measure and Integration Theory”, H. Bauer, 2001 (very complete)</p>
+
+<p>For stochastic processes:</p>
+
+<p>[2] “Foundation of Modern Probability”, O. Kallenberg, 2nd Edition 2002 (very general but complete)</p>
+
+<p>[3] “Stochastic Calculus and Financial Applications”, J.M. Steel, 2000 (easy but complete introduction with applications to finance)</p>
+
+<p>[4] “Probability and Potentials B”, P. Dellacherie, P.A. Meyer, 1982 (the most general reference, very hard and build upon Probability and Potentials A)</p>
+
+<h3 id="lecture-material">Lecture Material</h3>
+
+<p><strong>Disclaimer:</strong> The following lecture notes are meant to be a script for the students attending the lecture. Since they are written on the fly, they change quite often are prone to typos or some mistakes that are corrected as the lecture advance. So if you are not a student of my class, I suggest that you take it with precaution or wait until the lecture is finished so that the lecture notes converges to an acceptable steady state.</p>
+
+<ul>
+  <li>Script:
+    <ul>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Stochastic_Processes_chap01_1202.pdf">First Chapter, Version 2015/12/02</a></li>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Stochastic_Processes_chap02_1126.pdf">Second Chapter, Version 2015/11/26</a></li>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Stochastic_Processes_chap03_1126.pdf">Third Chapter, Version 2015/11/26</a></li>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Stochastic_Processes_chap04_1228.pdf">Fourth Chapter, Version 2015/12/28</a></li>
+    </ul>
+  </li>
+  <li>Assignments:
+    <ul>
+      <li>Sheet 1: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW01.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW01.tex">TEX</a></li>
+      <li>Sheet 2: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW02.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW02.tex">TEX</a></li>
+      <li>Sheet 3: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW03.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW03.tex">TEX</a></li>
+      <li>Sheet 4: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW04.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW04.tex">TEX</a></li>
+      <li>Sheet 5: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW05.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW05.tex">TEX</a></li>
+      <li>Sheet 6: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW06.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW06.tex">TEX</a></li>
+      <li>Sheet 7: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW07.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW07.tex">TEX</a></li>
+      <li>Sheet 8: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW08.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW08.tex">TEX</a></li>
+      <li>Sheet 9: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW09.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW09.tex">TEX</a></li>
+      <li>Sheet 10: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW10.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW10.tex">TEX</a></li>
+      <li>Sheet 11: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW11.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW11.tex">TEX</a></li>
+      <li>Sheet 12: <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW12.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW12.tex">TEX</a></li>
+      <li>Sheet 13 (optional): <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW13.pdf">PDF</a>, <a href="http://localhost:4000/downloads/WS2015/StochProcess/Assignements/SP_HW13.tex">TEX</a></li>
+    </ul>
+  </li>
+  <li>Ipython notebooks:
+    <ul>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Materials/Random Walk.ipynb">Random walk</a></li>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Materials/Random_Walk_Stopping_Time.ipynb">Stopping time</a></li>
+      <li><a href="http://localhost:4000/downloads/WS2015/StochProcess/Materials/Random_Walk_Upcrossing.ipynb">Random Walk up-crossing</a></li>
+    </ul>
+  </li>
+</ul>
+
+:ET

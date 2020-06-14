@@ -1,0 +1,48 @@
+I"O<h3 id="whenwhere">When/Where</h3>
+
+<p>From 24.11.2015 to 07.01.2016</p>
+
+<p>On the 24.11, 27.11, 28.11, 01.12, 03.12, 04.12, 08.12 and 10.12, the class is from 9:00 to 12:00 <br />
+On the 29.12, 31.12, 05.01 and 07.01, the class is from 13:30 to 16:30</p>
+
+<p>Place: Room 303 SAIF</p>
+
+<h3 id="course-objective">Course Objective</h3>
+
+<p>The objective of this course is to introduce the mathematics needed for the</p>
+
+<ul>
+  <li>pricing of financial assets, such as options and other derivatives</li>
+  <li>optimal portfolio choice</li>
+  <li>modern risk management</li>
+</ul>
+
+<p>Stochastics as a mathematical field developed parallel to the emergence of the finance industry (first insurance, then stock markets, derivatives, etc…).
+This lecture aims at being an introduction to
+the mathematics needed in modern finance. We cover the arbitrage theory, pricing of financial assets such as European and American options as well as the optimal portfolio selection.
+We also address modern risk management theory such as risk measures and risk allocations which are nowadays of paramount importance in the financial industry.
+We illustrate the application of these theories by implementing some classical numerical pricing methods.</p>
+
+<p>We will cover</p>
+
+<ol>
+  <li>Optimization</li>
+  <li>Stochastic process (discrete)</li>
+  <li>Dynamic programming and simulation</li>
+  <li>Stochastic integrals and Ito formula</li>
+  <li>Derivatives Pricing</li>
+  <li>Change of measure</li>
+  <li>American Options Pricing</li>
+  <li>Risk measures (Value at Risk, Expected Shortfall, Risk Allocation)</li>
+</ol>
+
+<h3 id="literature-prerequisite-and-assessment">Literature, Prerequisite and Assessment</h3>
+
+<p>Based on lecture notes provided throughout the lecture.
+A good knowledge of advanced calculus, linear algebra and basic probability theory is mandatory.
+The final grade for the course will be based on a final exam (70%) and 5 homeworks (30%).</p>
+
+<p>[1] H. Follmer and A. Schied, Stochastic Finance. An Introduction in
+Discrete Time, de Gruyter Studies in Mathematics, Walter de Gruyter,
+Berlin, New York, 2 ed., 2004.</p>
+:ET

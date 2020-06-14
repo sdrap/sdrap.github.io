@@ -1,0 +1,17 @@
+I"�
+<dl>
+  <dt>Authors</dt>
+  <dd>Samuel Drapeau and <a href="https://sites.google.com/site/christophmainberger/">Christoph Mainberger</a></dd>
+  <dt>Date</dt>
+  <dd>2016</dd>
+  <dt>Journal</dt>
+  <dd>Electronic Journal of Probability, 21(41):1–15</dd>
+  <dt>Abstract</dt>
+  <dd>We show stability and locality of the minimal supersolution of a forward backward stochastic differential equation with respect to the underlying forward process under weak assumptions on the generator. The forward process appears both in the generator and the terminal condition. Painlevé-Kuratowski and Convex Epi-convergence are used to establish the stability. For Markovian forward processes the minimal supersolution is shown to have the Markov property. Furthermore, it is related to a time-shifted problem and identified as a viscosity supersolution of a corresponding PDE.</dd>
+  <dt>Keywords</dt>
+  <dd>Supersolutions of Backward Stochastic Differential Equations, Stability, FBSDEs, Markov Property, Viscosity Supersolutions</dd>
+  <dt>Download</dt>
+  <dd><a href="http://arxiv.org/abs/1503.00240" target="_blank"> pdf (open science)</a><br /><a href="http://projecteuclid.org/euclid.ejp/1466166072" target="_blank">journal link (open science journal)</a></dd>
+</dl>
+
+:ET
