@@ -1,4 +1,17 @@
 -
+    name : Jan Obloj
+    IDInstitution : Oxford University    
+    mail : jan.obloj@maths.ox.ac.uk 
+    url : "https://www.maths.ox.ac.uk/people/jan.obloj" 
+
+-
+    name : Johannes Wiesel
+    IDInstitution : Oxford University  
+    mail : johannes.wiesel@sjc.ox.ac.uk  
+    url : "https://www.maths.ox.ac.uk/people/johannes.wiesel" 
+
+
+-
     name : Tan Wang
     IDInstitution : Shanghai Advanced Institute for Finance, Shanghai Jiao Tong University  
     mail : tanwang@saif.sjtu.edu.cn
@@ -27,10 +40,10 @@
     url : "http://www.math.nus.edu.sg/~matzc/"
 
 -
-    name : Bartl Daniel
-    IDInstitution : Konstanz University
-    mail : daniel.bartl@uni-konstanz.de 
-    url : "https://sites.google.com/site/danielbartlmath/"
+    name : Daniel Bartl
+    IDInstitution : Vienna University
+    mail : daniel.bartl@univie.ac.at 
+    url : "https://sites.google.com/site/danielbartlmath/" 
 
 -
     name : Peng Luo
