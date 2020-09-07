@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Stochastic Processes"
-date: 2018-02-26
+date: 2019-03-01
 semester: SS 2019
 ---
 
