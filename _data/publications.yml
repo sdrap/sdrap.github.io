@@ -1,4 +1,38 @@
 -
+  id: tx2020
+  title: On Detecting Spoofing Strategies in High Frequency Trading   
+  author:
+    
+    -
+      family: Tao
+      given: Xuan
+    -
+      family: Day
+      given: Andrew
+    -
+      family: Ling
+      given: Lan
+    -
+      family: Drapeau
+      given: Samuel
+
+  container-title: "Preprint 09/2020"
+  issued:
+    date-parts:
+    - - 2020
+  type: article-journal
+  rank: '26'
+  URL_Open: "https://arxiv.org/abs/2009.14818"
+  abstract: >
+      Spoofing is an illegal act of artificially modifying the supply to drive temporarily prices in a given direction for profit. In practice, detection of such an act is challenging due to the complexity of modern electronic platforms and the high frequency at which orders are channeled. We present a micro-structural study of spoofing in a simple static setting. A multilevel imbalance which influences the resulting price movement is introduced upon which we describe the optimization strategy of a potential spoofer. We provide conditions under which a market is more likely to admit spoofing behavior as a function of the characteristics of the market. We describe the optimal spoofing strategy after optimization which allows us to quantify the resulting impact on the imbalance after spoofing. Based on these results we calibrate the model to real Level 2 datasets from TMX, and provide some monitoring procedures based on the Wasserstein distance to detect spoofing strategies in real time.
+
+  keywords:
+    - Spoofing
+    - High Frequency Trading
+    - Imbalance
+    - Limit Order Book
+
+-
   id: daniel2020
   title: Robust Uncertainty Sensitivity Analysis   
   author:
