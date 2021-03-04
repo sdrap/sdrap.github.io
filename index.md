@@ -17,7 +17,7 @@ Contact:
     Tel: +86-21-6293-3586
 
 :   Office in SAIF: 1216<br>
-    Office in Minhang: 105
+    Office in Minhang (School of Mathematical Sciences): 523
   
 --------------------------------------
 
