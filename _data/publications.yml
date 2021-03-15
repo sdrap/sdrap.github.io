@@ -1,4 +1,31 @@
 -
+  id: ly2021
+  title: $q$-Moment Estimates for the Singular $p$-Laplace Equation and Applications   
+  author:
+    -
+      family: Ying
+      given: Liming
+    -
+      family: Drapeau
+      given: Samuel
+
+  container-title: "Preprint 03/2021"
+  issued:
+    date-parts:
+    - - 2021
+  type: article-journal
+  rank: '27'
+  URL_Open: "https://arxiv.org/abs/2103.05177"
+  abstract: >
+      We provide $q$-moment estimates on annuli for weak solutions of the singular $p$-Laplace equation where $p$ and $q$ are conjugates. We derive $q$-uniform integrability for some critical parameter range. As a application, we derive a mass conservation as well as a weak convergence result for a larger critical parameter range. Concerning the latter point, we further provide a rate of convergence of order $t^{q−1}$ of the solution in the $q$-Wasserstein distance.
+
+  keywords:
+    - Singular $p$-Laplace Equation
+    - Moment Estimates
+    - Mass Conservation
+    - Convergence Rate in Wasserstein Distance
+
+-
   id: tx2020
   title: On Detecting Spoofing Strategies in High Frequency Trading   
   author:
