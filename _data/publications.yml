@@ -1,4 +1,36 @@
 -
+  id: yunbozhang2021
+  title: Model Robustness of the Regime Switching Approach for the Usd-Hkd Pegged Foreign Exchange Market  
+  
+  author:
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Zhang
+      given: Yunbo
+
+  container-title: "Preprint 03/2021"
+  issued:
+    date-parts:
+    - - 2021
+  type: article-journal
+  rank: '28'
+  URL_Open: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3805405"
+  abstract: >
+      We test the robustness of the regime switching model for the pegged market USD-HKD introduced in S. Drapeau, Want T. and Wang T. (2021). In particular, two disputable underlying assumptions: 1) A Black and Scholes model with low volatility for the pre-depegging regime. 2) A thin tail distribution -- Poisson type -- for the time of the depegging. For the pre-depegging regime, we consider a bounded model within the pegg -- from Ingersoll and Rady. For the depegging time, we consider fat tail distributions more in line with catastrophic events -- Pareto/Frechet. We derive the option prices formula for each combination of these models and calibrate it to the option data from USD-HKD. In comparison to the benchmark model in \citep{drapeau2019}, it turns out that the relevant resulting characteristics -- probability of a depegging before maturity, appreciation/depreciation at the depegging time as well as post-depegging volatility -- are strongly robust in terms of model choice for this regime switching approach.
+
+  keywords:
+    - FX Markets
+    - Pegged Exchange Rate,
+    - USD-HKD
+    - Regime Switching
+    - Option Pricing
+    - Calibration
+
+
+
+-
   id: ly2021
   title: $q$-Moment Estimates for the Singular $p$-Laplace Equation and Applications   
   author:
