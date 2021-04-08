@@ -1,5 +1,0 @@
-I"Ì<p>The python library <code class="language-plaintext highlighter-rouge">pandas</code> allows to load and manipulate large sets of data for analysis.
-The following Ipython notebook shows basic manipulations that you can realize using this library for financial purposes.
-The notebook is written with a fresh installation of Anaconda with Python 3.4.
-You will need to install the following packages with Anacondaâ€™s terminal if they are not already there:</p>
-:ET
