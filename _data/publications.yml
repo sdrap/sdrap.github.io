@@ -47,7 +47,10 @@
     - - 2021
   type: article-journal
   rank: '27'
+  volume: '211'
+
   URL_Open: "https://arxiv.org/abs/2103.05177"
+  URL: "https://www.sciencedirect.com/science/article/abs/pii/S0362546X21001012"
   abstract: >
       We provide $q$-moment estimates on annuli for weak solutions of the singular $p$-Laplace equation where $p$ and $q$ are conjugates. We derive $q$-uniform integrability for some critical parameter range. As a application, we derive a mass conservation as well as a weak convergence result for a larger critical parameter range. Concerning the latter point, we further provide a rate of convergence of order $t^{q−1}$ of the solution in the $q$-Wasserstein distance.
 
