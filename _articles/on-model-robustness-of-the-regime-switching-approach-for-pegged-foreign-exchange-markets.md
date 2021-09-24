@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Model Robustness of the Regime Switching Approach for the Usd-Hkd Pegged Foreign Exchange Market
+title: On Model Robustness of the Regime Switching Approach for Pegged Foreign Exchange Markets
 ---
-{% assign publications = site.data.publications | where: "title","Model Robustness of the Regime Switching Approach for the Usd-Hkd Pegged Foreign Exchange Market" %}
+{% assign publications = site.data.publications | where: "title","On Model Robustness of the Regime Switching Approach for Pegged Foreign Exchange Markets" %}
 
 {% for publication in publications %}
 Authors
