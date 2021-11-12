@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Robust Uncertainty Sensitivity Analysis
+title: Sensitivity Analysis of Wasserstein Distributionally Robust Optimization Problems
 ---
-{% assign publications = site.data.publications | where: "title","Robust Uncertainty Sensitivity Analysis" %}
+{% assign publications = site.data.publications | where: "title","Sensitivity Analysis of Wasserstein Distributionally Robust Optimization Problems" %}
 
 {% for publication in publications %}
 Authors

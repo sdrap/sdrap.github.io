@@ -96,7 +96,7 @@
 
 -
   id: daniel2020
-  title: Robust Uncertainty Sensitivity Analysis   
+  title: Sensitivity Analysis of Wasserstein Distributionally Robust Optimization Problems   
   author:
     
     -
@@ -112,7 +112,7 @@
       family: Wiesel
       given: Johannes
 
-  container-title: "Preprint 06/2020"
+  container-title: "Forthcoming in Proceedings A."
   issued:
     date-parts:
     - - 2020
