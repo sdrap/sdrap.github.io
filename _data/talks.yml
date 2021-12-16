@@ -1,4 +1,32 @@
 -
+    occasion : "Research Seminar in Mathematics"
+    place : "UIC, China"
+    title : "Robust Uncertainty Analysis"
+    date : Dec 2021
+    score : 6
+
+-
+    occasion : "Forschungsseminar: Stochastische Analysis und Stochastik der Finanzmaerkte"
+    place : "Humbold und TU Berlin, Germany"
+    title : "Robust Uncertainty Analysis"
+    date : Dec 2021
+    score : 6
+
+-
+    occasion : "Workshop on Recent Advances in Financial Mathematics"
+    place : "University of Eonomics, Ho Chi Minh City, Vietnam"
+    title : "Puzzeling Option Prices of Pegged Exchange Markets"
+    date : Nov 2021
+    score : 6
+
+-
+    occasion : "Joint Workshop on Mathematical Finance, Machine Learning and Statistics, NUS SJTU"
+    place : "NUS, Singapore"
+    title : "On Detecting Spoofing Strategies in High Frequency Trading"
+    date : Jun 2021
+    score : 6
+
+-
     occasion : "Mathematical Finance Seminar, Columbia University"
     place : "Columbia University, New York City, USA"
     title : "On Detecting Spoofing Strategies in High Frequency Trading"
