@@ -21,8 +21,8 @@ Contact:
   
 --------------------------------------
 
-I have a position as Associate Professor (Distinguished Researcher Fellow) at the [Shanghai Jiao Tong University](http://en.sjtu.edu.cn) in China.
-My position is shared between the [School of Mathematical Sciences](http://www.math.sjtu.edu.cn/) and the Shanghai Advanced Institute of Finance [(SAIF)](http://saif.sjtu.edu.cn) within the China Academy of Finance and Research [(CAFR)](http://en.cafr.cn).
+I have a position as Associate Professor at the [Shanghai Jiao Tong University](http://en.sjtu.edu.cn) in China at the [School of Mathematical Sciences](http://www.math.sjtu.edu.cn/).
+I am also Affiliated Professor at [Shanghai Advanced Institute of Finance (SAIF)](http://saif.sjtu.edu.cn).
 
 My research focus &mdash; even if not bounded to &mdash; are
 

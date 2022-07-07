@@ -1,4 +1,33 @@
 -
+  id: ly2021
+  title: Extremal of Log-Sobolev Functionals and Li-Yau Estimate on $\text{RCD}^*(K,N)$ Spaces   
+  author:
+    -
+      family: Yin
+      given: Liming
+    -
+      family: Drapeau
+      given: Samuel
+
+  container-title: "Preprint"
+  issued:
+    date-parts:
+    - - 2022
+  type: article-journal
+  rank: '29'
+
+  URL_Open: "https://arxiv.org/abs/2207.01800"
+  abstract: >
+    In this work, we study the extremal functions of log-Sobolev functional in metric measure space satisfying $\text{RCD}^*(K,N)$ condition for $K>0$ and $N$ in $(2,\infty)$. We show the existence, regularity and positivity of non-negative extremal functions. Based on these results, we prove a Li-Yau type estimate for the logarithmic transform of all non-negative extremal functions of log-Sobolev functional. As applications, we show a Harnack type inequality as well as lower and upper bounds for the non-negative extremal functions.
+  keywords:
+
+    - Log-Sobolev functional
+    - Metric measure space
+    - Li-Yau inequality
+    - Curvature-dimension condition
+    - Extremal function
+
+-
   id: yunbozhang2021
   title: On Model Robustness of the Regime Switching Approach for Pegged Foreign Exchange Markets  
   
@@ -10,11 +39,16 @@
       family: Zhang
       given: Yunbo
 
-  container-title: "Forthcoming in Quantitative Finance"
+  container-title: "Quantitative Finance"
   issued:
     date-parts:
-    - - 2021
+    - - 2022
   type: article-journal
+  volume: '21'
+  issue: '2'
+  page: '305-322'
+
+
   rank: '28'
   URL_Open: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3805405"
   abstract: >
@@ -27,8 +61,6 @@
     - Regime Switching
     - Option Pricing
     - Calibration
-
-
 
 -
   id: ly2021
@@ -78,10 +110,14 @@
       family: Drapeau
       given: Samuel
 
-  container-title: "Preprint 09/2020"
+  container-title: "Quantitative Finance"
+  volume: '22'
+  issue: '8'
+  page: '1405-1425'
+
   issued:
     date-parts:
-    - - 2020
+    - - 2022
   type: article-journal
   rank: '26'
   URL_Open: "https://arxiv.org/abs/2009.14818"

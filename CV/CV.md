@@ -6,10 +6,11 @@ rank: 3
 ---
 **Personal Details**
 
-:   [China Academy of Finance Research](http://en.cafr.cn) and [School of Mathematical Sciences](http://www.math.sjtu.edu.cn/)<br>
+:   [School of Mathematical Sciences](http://www.math.sjtu.edu.cn/) &
+    [Shanghai Advanced Institute of Finance](https://en.saif.sjtu.edu.cn/)<br>
     Shanghai Jiao Tong University<br>
-    800 Dongchuan Road<br>
-    Shanghai, 200240 China
+    211 West Huaihai Road<br>
+    Shanghai, 200030 China
 
 :   Mail: sdrapeau@saif.sjtu.edu.cn <br>
     Tel: +86-21-6293-3586
@@ -46,8 +47,12 @@ Sep 1995 &mdash; Sep 1997
 
 **Employment and Academic Positions**
 
-Apr 2015 &mdash; Now
-:   Associate Professor &mdash; (Distinguished Researcher Fellow) &mdash; at [Shanghai Jiao Tong University](http://en.sjtu.edu.cn)
+Jan 2022 &mdash; Now
+:   Associate Professor &mdash; Tenured &mdash; [Shanghai Jiao Tong University](http://en.sjtu.edu.cn), [School of Mathematical Sciences](http://www.math.sjtu.edu.cn/)<br>
+    Affiliate Professor at [Shanghai Advanced Institute of Finance](https://en.saif.sjtu.edu.cn/)
+
+Apr 2015 &mdash; Dec 2021
+:   Associate Professor &mdash; (Distinguished Researcher Fellow) &mdash; at [Shanghai Jiao Tong University](http://en.sjtu.edu.cn), joint position at [School of Mathematical Sciences](http://www.math.sjtu.edu.cn/) and China Academy for Financial Research (SAIF)
 
 Nov 2013 &mdash; Mar 2015
 :   Scientific Assistant at the [Technical University Berlin](http://www.tu-berlin.de), Germany.
