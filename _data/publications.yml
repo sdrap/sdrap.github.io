@@ -1,4 +1,37 @@
 -
+  id: dorinel2022
+  title: Derivatives Risks as Costs in a One-Period Network Model   
+  author:
+    -
+      family: Bastide
+      given: Dorinel
+    -
+      family: Crépey
+      given: Stéphane
+    -
+      family: Drapeau
+      given: Samuel
+    -
+      family: Tadese
+      given: Mekonnen
+
+  container-title: "Forthcoming in Frontiers of Mathematical Finance"
+  issued:
+    date-parts:
+    - - 2022
+  type: article-journal
+  rank: '30'
+
+  URL_Open: "https://arxiv.org/pdf/2202.03248.pdf"
+  abstract: >
+    We present a one-period XVA model encompassing bilateral and centrally cleared trading in a unified framework with explicit formulas for most quantities at hand. We illustrate possible uses of this framework for running stress test exercises on a financial network from a clearing member’s perspective or for optimizing the porting of the portfolio of a defaulted clearing member.
+  keywords:
+
+    - Derivative risk
+    - XVA
+    - Network
+
+-
   id: ly2021
   title: Extremal of Log-Sobolev Functionals and Li-Yau Estimate on $\text{RCD}^*(K,N)$ Spaces   
   author:
