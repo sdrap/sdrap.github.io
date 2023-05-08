@@ -1,91 +1,77 @@
--
-  id: dorinel2022
-  title: Derivatives Risks as Costs in a One-Period Network Model   
+- id: dorinel2022
+  title: Derivatives Risks as Costs in a One-Period Network Model
   author:
-    -
-      family: Bastide
+    - family: Bastide
       given: Dorinel
-    -
-      family: Crépey
+    - family: Crépey
       given: Stéphane
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Tadese
+    - family: Tadese
       given: Mekonnen
 
   container-title: "Forthcoming in Frontiers of Mathematical Finance"
   issued:
     date-parts:
-    - - 2022
+      - - 2022
   type: article-journal
-  rank: '30'
+  rank: "30"
 
   URL_Open: "https://arxiv.org/pdf/2202.03248.pdf"
   abstract: >
     We present a one-period XVA model encompassing bilateral and centrally cleared trading in a unified framework with explicit formulas for most quantities at hand. We illustrate possible uses of this framework for running stress test exercises on a financial network from a clearing member’s perspective or for optimizing the porting of the portfolio of a defaulted clearing member.
   keywords:
-
     - Derivative risk
     - XVA
     - Network
 
--
-  id: ly2021
-  title: Extremal of Log-Sobolev Functionals and Li-Yau Estimate on $\text{RCD}^*(K,N)$ Spaces   
+- id: ly2021
+  title: Extremal of Log-Sobolev Functionals and Li-Yau Estimate on $\text{RCD}^*(K,N)$ Spaces
   author:
-    -
-      family: Yin
+    - family: Yin
       given: Liming
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
 
-  container-title: "Preprint"
+  container-title: "Forthcoming in Potential Analysis"
   issued:
     date-parts:
-    - - 2022
+      - - 2023
   type: article-journal
-  rank: '29'
+  rank: "29"
 
   URL_Open: "https://arxiv.org/abs/2207.01800"
   abstract: >
     In this work, we study the extremal functions of log-Sobolev functional in metric measure space satisfying $\text{RCD}^*(K,N)$ condition for $K>0$ and $N$ in $(2,\infty)$. We show the existence, regularity and positivity of non-negative extremal functions. Based on these results, we prove a Li-Yau type estimate for the logarithmic transform of all non-negative extremal functions of log-Sobolev functional. As applications, we show a Harnack type inequality as well as lower and upper bounds for the non-negative extremal functions.
   keywords:
-
     - Log-Sobolev functional
     - Metric measure space
     - Li-Yau inequality
     - Curvature-dimension condition
     - Extremal function
 
--
-  id: yunbozhang2021
-  title: On Model Robustness of the Regime Switching Approach for Pegged Foreign Exchange Markets  
-  
+- id: yunbozhang2021
+  title: On Model Robustness of the Regime Switching Approach for Pegged Foreign Exchange Markets
+
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Zhang
+    - family: Zhang
       given: Yunbo
 
   container-title: "Quantitative Finance"
   issued:
     date-parts:
-    - - 2022
+      - - 2022
   type: article-journal
-  volume: '21'
-  issue: '2'
-  page: '305-322'
+  volume: "21"
+  issue: "2"
+  page: "305-322"
 
-
-  rank: '28'
+  rank: "28"
   URL_Open: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3805405"
   abstract: >
-      We test the robustness of the regime switching model for the pegged market USD-HKD introduced in S. Drapeau, Want T. and Wang T. (2021). In particular, two disputable underlying assumptions: 1) A Black and Scholes model with low volatility for the pre-depegging regime. 2) A thin tail distribution -- Poisson type -- for the time of the depegging. For the pre-depegging regime, we consider a bounded model within the pegg -- from Ingersoll and Rady. For the depegging time, we consider fat tail distributions more in line with catastrophic events -- Pareto/Frechet. We derive the option prices formula for each combination of these models and calibrate it to the option data from USD-HKD. In comparison to the benchmark model in \citep{drapeau2019}, it turns out that the relevant resulting characteristics -- probability of a depegging before maturity, appreciation/depreciation at the depegging time as well as post-depegging volatility -- are strongly robust in terms of model choice for this regime switching approach.
+    We test the robustness of the regime switching model for the pegged market USD-HKD introduced in S. Drapeau, Want T. and Wang T. (2021). In particular, two disputable underlying assumptions: 1) A Black and Scholes model with low volatility for the pre-depegging regime. 2) A thin tail distribution -- Poisson type -- for the time of the depegging. For the pre-depegging regime, we consider a bounded model within the pegg -- from Ingersoll and Rady. For the depegging time, we consider fat tail distributions more in line with catastrophic events -- Pareto/Frechet. We derive the option prices formula for each combination of these models and calibrate it to the option data from USD-HKD. In comparison to the benchmark model in \citep{drapeau2019}, it turns out that the relevant resulting characteristics -- probability of a depegging before maturity, appreciation/depreciation at the depegging time as well as post-depegging volatility -- are strongly robust in terms of model choice for this regime switching approach.
 
   keywords:
     - FX Markets
@@ -95,29 +81,26 @@
     - Option Pricing
     - Calibration
 
--
-  id: ly2021
-  title: $q$-Moment Estimates for the Singular $p$-Laplace Equation and Applications   
+- id: ly2021
+  title: $q$-Moment Estimates for the Singular $p$-Laplace Equation and Applications
   author:
-    -
-      family: Yin
+    - family: Yin
       given: Liming
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
 
   container-title: "Nonlinear Analysis"
   issued:
     date-parts:
-    - - 2021
+      - - 2021
   type: article-journal
-  rank: '27'
-  volume: '211'
+  rank: "27"
+  volume: "211"
 
   URL_Open: "https://arxiv.org/abs/2103.05177"
   URL: "https://www.sciencedirect.com/science/article/abs/pii/S0362546X21001012"
   abstract: >
-      We provide $q$-moment estimates on annuli for weak solutions of the singular $p$-Laplace equation where $p$ and $q$ are conjugates. We derive $q$-uniform integrability for some critical parameter range. As a application, we derive a mass conservation as well as a weak convergence result for a larger critical parameter range. Concerning the latter point, we further provide a rate of convergence of order $t^{q−1}$ of the solution in the $q$-Wasserstein distance.
+    We provide $q$-moment estimates on annuli for weak solutions of the singular $p$-Laplace equation where $p$ and $q$ are conjugates. We derive $q$-uniform integrability for some critical parameter range. As a application, we derive a mass conservation as well as a weak convergence result for a larger critical parameter range. Concerning the latter point, we further provide a rate of convergence of order $t^{q−1}$ of the solution in the $q$-Wasserstein distance.
 
   keywords:
     - Singular $p$-Laplace Equation
@@ -125,37 +108,31 @@
     - Mass Conservation
     - Convergence Rate in Wasserstein Distance
 
--
-  id: tx2020
-  title: On Detecting Spoofing Strategies in High Frequency Trading   
+- id: tx2020
+  title: On Detecting Spoofing Strategies in High Frequency Trading
   author:
-    
-    -
-      family: Tao
+    - family: Tao
       given: Xuan
-    -
-      family: Day
+    - family: Day
       given: Andrew
-    -
-      family: Ling
+    - family: Ling
       given: Lan
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
 
   container-title: "Quantitative Finance"
-  volume: '22'
-  issue: '8'
-  page: '1405-1425'
+  volume: "22"
+  issue: "8"
+  page: "1405-1425"
 
   issued:
     date-parts:
-    - - 2022
+      - - 2022
   type: article-journal
-  rank: '26'
+  rank: "26"
   URL_Open: "https://arxiv.org/abs/2009.14818"
   abstract: >
-      Spoofing is an illegal act of artificially modifying the supply to drive temporarily prices in a given direction for profit. In practice, detection of such an act is challenging due to the complexity of modern electronic platforms and the high frequency at which orders are channeled. We present a micro-structural study of spoofing in a simple static setting. A multilevel imbalance which influences the resulting price movement is introduced upon which we describe the optimization strategy of a potential spoofer. We provide conditions under which a market is more likely to admit spoofing behavior as a function of the characteristics of the market. We describe the optimal spoofing strategy after optimization which allows us to quantify the resulting impact on the imbalance after spoofing. Based on these results we calibrate the model to real Level 2 datasets from TMX, and provide some monitoring procedures based on the Wasserstein distance to detect spoofing strategies in real time.
+    Spoofing is an illegal act of artificially modifying the supply to drive temporarily prices in a given direction for profit. In practice, detection of such an act is challenging due to the complexity of modern electronic platforms and the high frequency at which orders are channeled. We present a micro-structural study of spoofing in a simple static setting. A multilevel imbalance which influences the resulting price movement is introduced upon which we describe the optimization strategy of a potential spoofer. We provide conditions under which a market is more likely to admit spoofing behavior as a function of the characteristics of the market. We describe the optimal spoofing strategy after optimization which allows us to quantify the resulting impact on the imbalance after spoofing. Based on these results we calibrate the model to real Level 2 datasets from TMX, and provide some monitoring procedures based on the Wasserstein distance to detect spoofing strategies in real time.
 
   keywords:
     - Spoofing
@@ -163,103 +140,86 @@
     - Imbalance
     - Limit Order Book
 
--
-  id: daniel2020
-  title: Sensitivity Analysis of Wasserstein Distributionally Robust Optimization Problems   
+- id: daniel2020
+  title: Sensitivity Analysis of Wasserstein Distributionally Robust Optimization Problems
   author:
-    
-    -
-      family: Bartl
+    - family: Bartl
       given: Daniel
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Obloj
+    - family: Obloj
       given: Jan
-    -
-      family: Wiesel
+    - family: Wiesel
       given: Johannes
 
   container-title: "Proceedings of the Royal Society A 477:20210176"
   issued:
     date-parts:
-    - - 2021
+      - - 2021
   type: article-journal
-  rank: '25'
+  rank: "25"
   URL_Open: "https://arxiv.org/abs/2006.12022"
   abstract: >
-      We consider sensitivity of a generic stochastic optimization problem to model uncertainty. We take a non-parametric approach and capture model uncertainty using Wasserstein balls around the postulated model. We provide explicit formulae for the first order correction to both the value function and the optimizer and further extend our results to optimization under linear constraints. We present applications to statistics, machine learning, mathematical finance and uncertainty quantification. In particular, we provide explicit first-order approximation for square-root LASSO regression coefficients and deduce coefficient shrinkage compared to the ordinary least squares regression. We consider robustness of call option pricing and deduce a new Black-Scholes sensitivity, a non-parametric version of the so-called Vega. We also compute sensitivities of optimized certainty equivalents in finance and propose measures to quantify robustness of neural networks to adversarial examples.
+    We consider sensitivity of a generic stochastic optimization problem to model uncertainty. We take a non-parametric approach and capture model uncertainty using Wasserstein balls around the postulated model. We provide explicit formulae for the first order correction to both the value function and the optimizer and further extend our results to optimization under linear constraints. We present applications to statistics, machine learning, mathematical finance and uncertainty quantification. In particular, we provide explicit first-order approximation for square-root LASSO regression coefficients and deduce coefficient shrinkage compared to the ordinary least squares regression. We consider robustness of call option pricing and deduce a new Black-Scholes sensitivity, a non-parametric version of the so-called Vega. We also compute sensitivities of optimized certainty equivalents in finance and propose measures to quantify robustness of neural networks to adversarial examples.
 
   keywords:
     - Robust stochastic optimization
-    - Sensitivity analysis 
-    - Uncertainty quantification 
-    - Non-parametric uncertainty 
+    - Sensitivity analysis
+    - Uncertainty quantification
+    - Non-parametric uncertainty
     - Wasserstein metric
 
--
-  id: peng2020
-  title: An FBSDE Approach to Market Impact Games with Stochastic Parameters  
+- id: peng2020
+  title: An FBSDE Approach to Market Impact Games with Stochastic Parameters
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Luo
+    - family: Luo
       given: Peng
-    -
-      family: Schied
+    - family: Schied
       given: Alexander
-    -
-      family: Xiong
+    - family: Xiong
       given: Dewen
 
   container-title: "Probability, Uncertainty and Quantitative Risk"
   issued:
     date-parts:
-    - - 2021
+      - - 2021
   type: article-journal
-  volume: '6'
-  issue: '3'
-  page: '237-260'
- 
-  rank: '24'
+  volume: "6"
+  issue: "3"
+  page: "237-260"
+
+  rank: "24"
   URL_Open: "https://arxiv.org/abs/2001.00622"
   abstract: >
-      We analyze a market impact game between n risk averse agents who compete for liquidity in a market impact model with permanent price impact and additional slippage. Most market parameters, including volatility and drift, are allowed to vary stochastically. Our first main result characterizes the Nash equilibrium in terms of a fully coupled system of forward-backward stochastic differential equations (FBSDEs). Our second main result provides conditions under which this system of FBSDEs has indeed a unique solution, which in turn yields the unique Nash equilibrium. We furthermore obtain closed-form solutions in special situations and analyze them numerically.
+    We analyze a market impact game between n risk averse agents who compete for liquidity in a market impact model with permanent price impact and additional slippage. Most market parameters, including volatility and drift, are allowed to vary stochastically. Our first main result characterizes the Nash equilibrium in terms of a fully coupled system of forward-backward stochastic differential equations (FBSDEs). Our second main result provides conditions under which this system of FBSDEs has indeed a unique solution, which in turn yields the unique Nash equilibrium. We furthermore obtain closed-form solutions in special situations and analyze them numerically.
 
   keywords:
     - FBSDE
     - Market Impact
     - Nash Equilibrium
 
-
-
-
--
-  id: mekonnen2019
-  title: Dual Representation of Expectile Based Expected Shortfall and its Properties  
+- id: mekonnen2019
+  title: Dual Representation of Expectile Based Expected Shortfall and its Properties
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Tadese
+    - family: Tadese
       given: Mekonnen
 
   container-title: "Probability, Uncertainty and Quantitative Risk"
   issued:
     date-parts:
-    - - 2021
-  volume: '6'
-  issue: '2'
-  page: '99-116' 
+      - - 2021
+  volume: "6"
+  issue: "2"
+  page: "99-116"
   type: article-journal
-  rank: '23'
+  rank: "23"
   URL_Open: "https://arxiv.org/abs/1911.03245"
   abstract: >
-      The expectile can be considered as a generalization of quantile. While expected shortfall is a quantile based risk measure, we study its counterpart -- the expectile based expected shortfall -- where expectile takes the place of quantile. We provide its dual representation in terms of Bochner integral. Among other properties, we show that it is bounded from below in terms of convex combinations of expected shortfalls, and also from above by the smallest law invariant, coherent and comonotonic risk measure, for which we give the explicit formulation of the corresponding distortion function. As a benchmark to the industry standard expected shortfall we further provide its comparative asymptotic behavior in terms of extreme value distributions. Based on these results, we finally compute explicitly the expectile based expected shortfall for some selected class of distributions.
+    The expectile can be considered as a generalization of quantile. While expected shortfall is a quantile based risk measure, we study its counterpart -- the expectile based expected shortfall -- where expectile takes the place of quantile. We provide its dual representation in terms of Bochner integral. Among other properties, we show that it is bounded from below in terms of convex combinations of expected shortfalls, and also from above by the smallest law invariant, coherent and comonotonic risk measure, for which we give the explicit formulation of the corresponding distortion function. As a benchmark to the industry standard expected shortfall we further provide its comparative asymptotic behavior in terms of extreme value distributions. Based on these results, we finally compute explicitly the expectile based expected shortfall for some selected class of distributions.
 
   keywords:
     - Coherent Risk Measures
@@ -268,31 +228,28 @@
     - Dual Representation
     - Tail Conditional Expectation
 
--
-  id: yunbozhang2019
-  title: Pricing and Hedging Performance on Pegged Markets Based on a Regime Switching Model  
-  
+- id: yunbozhang2019
+  title: Pricing and Hedging Performance on Pegged Markets Based on a Regime Switching Model
+
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Zhang
+    - family: Zhang
       given: Yunbo
 
   container-title: "Quantitative Finance"
   issued:
     date-parts:
-    - - 2021
+      - - 2021
   type: article-journal
-  rank: '22'
-  volume: '21'
-  issue: '2'
-  page: '305-322'
+  rank: "22"
+  volume: "21"
+  issue: "2"
+  page: "305-322"
   URL: "https://www.tandfonline.com/doi/abs/10.1080/14697688.2020.1776378"
   URL_Open: "http://arxiv.org/abs/1910.08344"
   abstract: >
-      This paper investigates the hedging performance of pegged foreign exchange market in a regime switching (RS) model introduced in a recent paper by Drapeau, Wang and Wang (2019). We compare two prices, an exact solution and first order approximation and provide the bounds for the error. We provide exact RS delta, approximated RS delta as well as mean variance hedging strategies for this specific model and compare their performance. To improve the efficiency of the pricing and calibration procedure, the Fourier approach of this regime-switching model is developed in our work. It turns out that: 1 - the calibration of the volatility surface with this regime switching model outperforms on real data the classical SABR model; 2 - the Fourier approach is significantly faster than the direct approach; 3 - in terms of hedging, the approximated RS delta hedge is a viable alternative to the exact RS delta hedge while significantly faster.
+    This paper investigates the hedging performance of pegged foreign exchange market in a regime switching (RS) model introduced in a recent paper by Drapeau, Wang and Wang (2019). We compare two prices, an exact solution and first order approximation and provide the bounds for the error. We provide exact RS delta, approximated RS delta as well as mean variance hedging strategies for this specific model and compare their performance. To improve the efficiency of the pricing and calibration procedure, the Fourier approach of this regime-switching model is developed in our work. It turns out that: 1 - the calibration of the volatility surface with this regime switching model outperforms on real data the classical SABR model; 2 - the Fourier approach is significantly faster than the direct approach; 3 - in terms of hedging, the approximated RS delta hedge is a viable alternative to the exact RS delta hedge while significantly faster.
 
   keywords:
     - Pegged FX Markets
@@ -301,59 +258,51 @@
     - Mean-Variance Hedging
     - Fourier Approach
 
-      
--
-  id: wangwang2019
-  title: How Rational Are the Option Prices of Hong Kong Dollar Exchange Rate  
+- id: wangwang2019
+  title: How Rational Are the Option Prices of Hong Kong Dollar Exchange Rate
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Wang
+    - family: Wang
       given: Tan
-    -
-      family: Wang
+    - family: Wang
       given: Tao
 
   container-title: "The Journal of Derivatives"
   issued:
     date-parts:
-    - - 2020
+      - - 2020
   type: article-journal
-  rank: '21'
+  rank: "21"
   URL: "https://jod.pm-research.com/content/early/2020/11/12/jod.2020.1.120.abstract"
   URL_Open: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3476943"
   abstract: >
-      In this paper, we study the prices of the options on Hong Kong’s linked exchange rate. The study was motivated by the apparent contradiction that options with strike prices outside the narrow trading band have positive prices. We developed a simple regime-switching model of the exchange rate and provided a formula for the prices of its options. The option pricing formula allows us to back out the implied probability of the failure of the linked exchange rate regime. With the option price data for the period from June 1, 2005 to July 31, 2018, we find that the market’s belief about the likelihoods of the failure, as implied by the option prices, is too high to be justified by the possibility of the failure alone. This is first shown qualitatively, without using any model, with ratio of empirical over implied volatilities and the implied range of strike prices. Then, using the model, we find that, close to 40% of the sample period, the market thinks the failure probability is greater than 10%. When contrasted with the fact that the regime has not failed since 1983, the p-value of that event is less than 0.1%. Our finding suggests that, while the failure of the linked exchange rate regime is a significant risk factor, it cannot explain the risk premium seen in the option prices.
+    In this paper, we study the prices of the options on Hong Kong’s linked exchange rate. The study was motivated by the apparent contradiction that options with strike prices outside the narrow trading band have positive prices. We developed a simple regime-switching model of the exchange rate and provided a formula for the prices of its options. The option pricing formula allows us to back out the implied probability of the failure of the linked exchange rate regime. With the option price data for the period from June 1, 2005 to July 31, 2018, we find that the market’s belief about the likelihoods of the failure, as implied by the option prices, is too high to be justified by the possibility of the failure alone. This is first shown qualitatively, without using any model, with ratio of empirical over implied volatilities and the implied range of strike prices. Then, using the model, we find that, close to 40% of the sample period, the market thinks the failure probability is greater than 10%. When contrasted with the fact that the regime has not failed since 1983, the p-value of that event is less than 0.1%. Our finding suggests that, while the failure of the linked exchange rate regime is a significant risk factor, it cannot explain the risk premium seen in the option prices.
 
   keywords:
     - HKDUSD Exchange Rate
     - Option Pricing
 
--
-  id: mekonnen2017
-  title: Relative Bound and Asymptotic Comparison of Expectile with Respect to Expected Shortfall  
+- id: mekonnen2017
+  title: Relative Bound and Asymptotic Comparison of Expectile with Respect to Expected Shortfall
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Tadese
+    - family: Tadese
       given: Mekonnen
 
   container-title: "Insurance: Mathematics and Economics"
   issued:
     date-parts:
-    - - 2020
+      - - 2020
   type: article-journal
-  rank: '20'
-  volume: '93'
-  page: '387-399'
+  rank: "20"
+  volume: "93"
+  page: "387-399"
   URL: "https://www.sciencedirect.com/science/article/abs/pii/S016766872030086X"
   URL_Open: "http://arxiv.org/abs/1906.09729"
   abstract: >
-      Expectile bears some interesting properties in comparison to the industry wide expected shortfall in terms of assessment of tail risk. We study the relationship between expectile and expected shortfall using duality results and the link to optimized certainty equivalent. Lower and upper bounds of expectile are derived in terms of expected shortfall as well as a characterization of expectile in terms of expected shortfall. Further, we study the asymptotic behavior of expectile with respect to expected shortfall as the risk level goes to 0 in terms of extreme value distributions. Illustrating the formulation of expectile in terms of expected shortfall, we also provide explicit or semi-explicit expressions of expectile for some classical distributions.
+    Expectile bears some interesting properties in comparison to the industry wide expected shortfall in terms of assessment of tail risk. We study the relationship between expectile and expected shortfall using duality results and the link to optimized certainty equivalent. Lower and upper bounds of expectile are derived in terms of expected shortfall as well as a characterization of expectile in terms of expected shortfall. Further, we study the asymptotic behavior of expectile with respect to expected shortfall as the risk level goes to 0 in terms of extreme value distributions. Illustrating the formulation of expectile in terms of expected shortfall, we also provide explicit or semi-explicit expressions of expectile for some classical distributions.
 
   keywords:
     - Risk Measures
@@ -361,35 +310,31 @@
     - Expected Shortfall
     - Extreme Values
 
--
-  id: bartl2017
-  title: Computational Aspects of Robust Optimized Certainty Equivalents and Option Pricing 
+- id: bartl2017
+  title: Computational Aspects of Robust Optimized Certainty Equivalents and Option Pricing
   author:
-    -
-      family: Bartl
+    - family: Bartl
       given: Daniel
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Tangpi
+    - family: Tangpi
       given: Ludovic
 
   container-title: "Mathematical Finance"
   issued:
     date-parts:
-    - - 2020
+      - - 2020
   type: article-journal
-  rank: '19'
-  volume: '30'
-  issue: '1'
-  page: '287-309'
+  rank: "19"
+  volume: "30"
+  issue: "1"
+  page: "287-309"
   URL_Open: "http://arxiv.org/abs/1706.10186"
   URL: "https://onlinelibrary.wiley.com/doi/full/10.1111/mafi.12203"
   abstract: >
-      Accounting for model uncertainty in risk management leads to infinite dimensional optimization problems which are both analytically and numerically untractable. In this article we study when this fact can be overcome for the so-called optimized certainty equivalent risk measure (OCE) - including the average value-at-risk as a special case. First we focus on the case where the set of possible distributions of a financial loss is given by the neighborhood of a given baseline distribution in the Wasserstein distance, or more generally, an optimal-transport distance. Here it turns out that the computation of the robust OCE reduces to a finite dimensional problem, which in some cases can even be solved explicitly. Further, we derive convex dual representations of the robust OCE for measurable claims without any assumptions on the set of distributions and finally give conditions on the latter set under which the robust average value-at-risk is a tail risk measure.
-      <br>
-      This article was previously uploaded on ArXiV with the title *Computational Aspects of Robust Optimized Certainty Equivalents*.
+    Accounting for model uncertainty in risk management leads to infinite dimensional optimization problems which are both analytically and numerically untractable. In this article we study when this fact can be overcome for the so-called optimized certainty equivalent risk measure (OCE) - including the average value-at-risk as a special case. First we focus on the case where the set of possible distributions of a financial loss is given by the neighborhood of a given baseline distribution in the Wasserstein distance, or more generally, an optimal-transport distance. Here it turns out that the computation of the robust OCE reduces to a finite dimensional problem, which in some cases can even be solved explicitly. Further, we derive convex dual representations of the robust OCE for measurable claims without any assumptions on the set of distributions and finally give conditions on the latter set under which the robust average value-at-risk is a tail risk measure.
+    <br>
+    This article was previously uploaded on ArXiV with the title *Computational Aspects of Robust Optimized Certainty Equivalents*.
 
   keywords:
     - Optimized Certainty Equivalent
@@ -399,33 +344,29 @@
     - Convex Duality
     - Average Value-at-Risk.
 
--
-  id: dewen2017
-  title: Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization 
+- id: dewen2017
+  title: Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Luo
+    - family: Luo
       given: Peng
-    -
-      family: Xiong
+    - family: Xiong
       given: Dewen
 
   container-title: "Electronic Journal of Probability"
   issued:
     date-parts:
-    - - 2020
+      - - 2020
   type: article-journal
-  rank: '18'
-  volume: '25'
+  rank: "18"
+  volume: "25"
   URL_Open: "http://arxiv.org/abs/1703.02694"
   URL: "https://projecteuclid.org/euclid.ejp/1581735876"
   abstract: >
-      We provide a verification and characterization result of optimal maximal sub-solutions of BSDEs in terms of fully coupled forward backward stochastic differential equations. We illustrate the application thereof in utility optimization with random endowment under probability and discounting uncertainty. We show with explicit examples how to quantify the costs of incompleteness when using utility indifference pricing, as well as a way to find optimal solutions for recursive utilities.   
+    We provide a verification and characterization result of optimal maximal sub-solutions of BSDEs in terms of fully coupled forward backward stochastic differential equations. We illustrate the application thereof in utility optimization with random endowment under probability and discounting uncertainty. We show with explicit examples how to quantify the costs of incompleteness when using utility indifference pricing, as well as a way to find optimal solutions for recursive utilities.   
 
-      **The former title was "Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization under Probability and Discounting Uncertainty"**
+    **The former title was "Characterization of Fully Coupled FBSDE in Terms of Portfolio Optimization under Probability and Discounting Uncertainty"**
 
   keywords:
     - Fully Coupled FBSDE
@@ -433,34 +374,29 @@
     - Random Endowment
     - Probability and Discounting Uncertainty
 
-
--
-  id: asgar2016
-  title: A Fenchel-Moreau Theorem for L0-Valued Functions 
+- id: asgar2016
+  title: A Fenchel-Moreau Theorem for L0-Valued Functions
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Jamneshan
+    - family: Jamneshan
       given: Asgar
-    -
-      family: Kupper
+    - family: Kupper
       given: Michael
 
   container-title: "Journal of Convex Analysis"
   issued:
     date-parts:
-    - - 2019
-  volume: '26'
-  issue: '2'
-  page: '593-603'
+      - - 2019
+  volume: "26"
+  issue: "2"
+  page: "593-603"
 
   type: article-journal
-  rank: '17'
+  rank: "17"
   URL_Open: "http://arxiv.org/abs/1708.03127"
   abstract: >
-      In this article, we establish a Fenchel-Moreau type duality for proper convex and $\sigma(X,Y)$-lower semi-continuous functions $f\colon X\to \overline{L^0}$, where $(X,Y,\langle \cdot,\cdot \rangle)$ is a dual pair of Banach spaces and $\overline{L^0}$ is the collection of all equivalence classes of extended real-valued random variables. The duality result is based on several conditional extensions and analytic tools from conditional set theory. As an application of our main result we derive a vector duality for increasing convex functions from a Banach lattice $X$ into $L^0$ in terms of dual elements in the Bochner-Lebesgue space $L^0(X^\ast)$. For convex functions $f\colon L^\infty \to L^0$ satisfying the Fatou continuity property, we derive a vector duality in terms of dual elements in the Bochner-Lebesgue space $L^0(L^1)$.
+    In this article, we establish a Fenchel-Moreau type duality for proper convex and $\sigma(X,Y)$-lower semi-continuous functions $f\colon X\to \overline{L^0}$, where $(X,Y,\langle \cdot,\cdot \rangle)$ is a dual pair of Banach spaces and $\overline{L^0}$ is the collection of all equivalence classes of extended real-valued random variables. The duality result is based on several conditional extensions and analytic tools from conditional set theory. As an application of our main result we derive a vector duality for increasing convex functions from a Banach lattice $X$ into $L^0$ in terms of dual elements in the Bochner-Lebesgue space $L^0(X^\ast)$. For convex functions $f\colon L^\infty \to L^0$ satisfying the Fatou continuity property, we derive a vector duality in terms of dual elements in the Bochner-Lebesgue space $L^0(L^1)$.
 
   keywords:
     - Vector duality
@@ -470,37 +406,32 @@
     - vector optimization
     - vector-valued risk measures
 
--
-  id: armenti2015
+- id: armenti2015
   title: Multivariate Shortfall Risk Allocation and Systemic Risk
   author:
-    -
-      family: Armenti
+    - family: Armenti
       given: Yannick
-    -
-      family: Crépey
+    - family: Crépey
       given: Stéphane
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Papapantoleon
+    - family: Papapantoleon
       given: Antonis
   container-title: "SIAM Journal on Financial Mathematics"
   issued:
     date-parts:
-    - - 2018 (Preprint version June 2015)
-  volume: '9'
-  issue: '1'
-  page: '90-126'
+      - - 2018 (Preprint version June 2015)
+  volume: "9"
+  issue: "1"
+  page: "90-126"
   type: article-journal
-  rank: '16'
+  rank: "16"
   URL_Open: "http://arxiv.org/abs/1507.05351"
   URL: "http://epubs.siam.org/doi/abs/10.1137/16M1087357"
   abstract: >
-      The ongoing concern about systemic risk since the outburst of the global financial crisis has highlighted the need for risk measures at the level of sets of interconnected financial components, such as portfolios, institutions or members of clearing houses. The two main issues in systemic risk measurement are the computation of an overall reserve level and its allocation to the different components according to their systemic relevance. We develop here a pragmatic approach to systemic risk measurement and allocation based on multivariate shortfall risk measures, where acceptable allocations are first computed and then aggregated so as to minimize costs. We analyze the sensitivity of the risk allocations to various factors and highlight its relevance as an indicator of systemic risk. In particular, we study the interplay between the loss function and the dependence structure of the components. Moreover, we address the computational aspects of risk allocation. Finally, we apply this methodology to the allocation of the default fund of a CCP on real data.
+    The ongoing concern about systemic risk since the outburst of the global financial crisis has highlighted the need for risk measures at the level of sets of interconnected financial components, such as portfolios, institutions or members of clearing houses. The two main issues in systemic risk measurement are the computation of an overall reserve level and its allocation to the different components according to their systemic relevance. We develop here a pragmatic approach to systemic risk measurement and allocation based on multivariate shortfall risk measures, where acceptable allocations are first computed and then aggregated so as to minimize costs. We analyze the sensitivity of the risk allocations to various factors and highlight its relevance as an indicator of systemic risk. In particular, we study the interplay between the loss function and the dependence structure of the components. Moreover, we address the computational aspects of risk allocation. Finally, we apply this methodology to the allocation of the default fund of a CCP on real data.
 
-      The code together with the numerical results can be viewed on [github](https://github.com/sdrap/msra)
+    The code together with the numerical results can be viewed on [github](https://github.com/sdrap/msra)
 
   keywords:
     - systemic risk
@@ -511,31 +442,26 @@
     - CCP
     - Default Fund
 
--
-  id: martin2012
+- id: martin2012
   title: Dynamic Assessment Indices
   author:
-    -
-      family: Bielecki
+    - family: Bielecki
       given: Tomasz
-    -
-      family: Cialenco
+    - family: Cialenco
       given: Igor
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Karliczek
+    - family: Karliczek
       given: Martin
   container-title: Stochastics
   issued:
     date-parts:
-    - - 2016
-  volume: '88'
-  issue: '1'
-  page: '1-44'
+      - - 2016
+  volume: "88"
+  issue: "1"
+  page: "1-44"
   type: article-journal
-  rank: '08'
+  rank: "08"
   URL_Open: "http://arxiv.org/abs/1306.5198"
   abstract: >
     This paper provides a unified framework, which allows, in particular, to study the structure of dynamic monetary risk measures and dynamic acceptability indices.
@@ -550,28 +476,23 @@
     - Strong time consistency
     - Dynamic GLR
 
--
-  id: cheridito2013
+- id: cheridito2013
   title: Numerical Representation of Convex Preferences on Anscombe–Aumann Acts
   author:
-    -
-      family: Cheridito
+    - family: Cheridito
       given: Patrick
-    -
-      family: Delbaen
+    - family: Delbaen
       given: Freddy
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
   container-title: Preprint
   issued:
     date-parts:
-    - - 2015
+      - - 2015
   type: article-journal
-  rank: '15'
+  rank: "15"
   URL_Open: "http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2572745"
   abstract: >
     In this paper we derive a numerical representation for general complete preferences respecting the fol- lowing two principles: a) more is better than less, b) averages are better than extremes. To be able to distinguish between risk and ambiguity we work in an Anscombe–Aumann framework. Our main result is a quasi-concave numerical representation for a class of preferences wide enough to accommodate Ellsberg- as well as Allais-type behavior. Instead of assuming the usual monotonicity we suppose that our prefer- ences are monotone with respect to first order stochastic dominance. Preference for averages is expressed through convexity. No independence assumptions of any form are made. In general, our preferences in- tertwine attitudes towards risk and ambiguity. But if one assumes a weak form of Savage’s sure thing principle, there is separation between risk and ambiguity attitudes, and the representation decomposes into state dependent preference functionals over the consequences and a quasi-concave functional aggregating the preferences of the decision maker in different states of the world.
@@ -580,26 +501,23 @@
     - Uncertainty aversion
     - Allais paradox
     - Ellsberg paradox
--
-  id: drapeau2015
+- id: drapeau2015
   title: Stability and Markov Property of Forward Backward Minimal Supersolutions
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Mainberger
-      given: Christoph  
+    - family: Mainberger
+      given: Christoph
   container-title: Electronic Journal of Probability
   issued:
     date-parts:
-    - - 2016
-  volume: '21'
-  issue: '41'
-  page: '1--15'
+      - - 2016
+  volume: "21"
+  issue: "41"
+  page: "1--15"
   type: article-journal
 
-  rank: '14'
+  rank: "14"
   URL_Open: "http://arxiv.org/abs/1503.00240"
   URL: "http://projecteuclid.org/euclid.ejp/1466166072"
   abstract: >
@@ -611,28 +529,24 @@
     - Markov Property
     - Viscosity Supersolutions
 
--
-  title: Complete Duality for Convex and Quasiconvex Set-Valued Functions
+- title: Complete Duality for Convex and Quasiconvex Set-Valued Functions
   id: hamel2012
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    -
-      family: Hamel
+    - family: Hamel
       given: Andreas H.
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
   container-title: Set-Valued and Variational Analysis
   issued:
     date-parts:
-    - - 2016
-  volume: '24'
-  issue: '2'
-  page: '253--275'
+      - - 2016
+  volume: "24"
+  issue: "2"
+  page: "253--275"
   type: article-journal
-  rank: '12'
+  rank: "12"
   URL_Open: "http://arxiv.org/abs/1405.0219"
   abstract: >
     This paper provides an unique dual representation of set-valued lower semi-continuous quasiconvex and convex functions.
@@ -643,24 +557,21 @@
     - Dual Representation
     - Increasing Functions
     - Fenchel-Moreau
--
-  id: asgar2013
+- id: asgar2013
   title: Conditional Preferences and their Numerical Representations
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Jamneshan
+    - family: Jamneshan
       given: Asgar
   container-title: Journal of Mathematical Economics
   issued:
     date-parts:
-    - - 2016
+      - - 2016
   type: article-journal
-  volume: '63'
-  page: '106--118'
-  rank: '13'
+  volume: "63"
+  page: "106--118"
+  rank: "13"
   URL_Open: "http://arxiv-web3.library.cornell.edu/abs/1410.5466"
   URL: "http://www.sciencedirect.com/science/article/pii/S0304406815001585"
   abstract: >
@@ -671,38 +582,31 @@
     - Conditional Preferences
     - Utility Theory
     - Gap Lemma
--
-  id: cheridito2011
+- id: cheridito2011
   title: Weak Closedness of Monotone Sets of Lotteries and Robust Representation of Risk Preferences
   author:
-    -
-      family: Cheridito
+    - family: Cheridito
       given: Patrick
-    - 
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
   container-title: Risk Measures and Attitudes
   issued:
     date-parts:
-    - - 2013
-  page: '3-9'
+      - - 2013
+  page: "3-9"
   type: chapter
   collection-title: EAA series
   publisher: Springer London
   editor:
-    -
-      family: Biagini
+    - family: Biagini
       given: Francesca
-    -
-      family: Richter
+    - family: Richter
       given: Andreas
-    -
-      family: Schlesinger
+    - family: Schlesinger
       given: Harris
-  rank: '05'
+  rank: "05"
   URL: "http://link.springer.com/chapter/10.1007%2F978-1-4471-4926-2_1#page-1"
   URL_Open: "http://www.samuel-drapeau.info/downloads/RPM4.pdf"
   abstract: >
@@ -712,27 +616,23 @@
     - Robust representations
     - Lotteries with compact support
     - Monotonicity
--
-  id: drapeau03
+- id: drapeau03
   title: A von Neumann–Morgenstern Representation Result without Weak Continuity Assumption
   author:
-    -
-      family: Delbaen
+    - family: Delbaen
       given: Freddy
-    - 
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
   container-title: Journal of Mathematical Economics
   issued:
     date-parts:
-    - - 2011
-  volume: '47'
-  page: '401-408'
+      - - 2011
+  volume: "47"
+  page: "401-408"
   type: article-journal
-  rank: '02'
+  rank: "02"
   URL: "http://www.sciencedirect.com/science/article/pii/S0304406811000486"
   URL_Open: "http://www.samuel-drapeau.info/downloads/vnmDDK_0411.pdf"
   abstract: >
@@ -744,32 +644,27 @@
     - First Stochastic Order
     - Weak Continuity
 
-- 
-  id: ludovic2012
+- id: ludovic2012
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Gianin
+    - family: Gianin
       given: Emmanuela R.
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
-    - 
-      family: Tangpi
+    - family: Tangpi
       given: Ludovic
 
   title: Dual Representation of Minimal Supersolutions of Convex BSDEs
   container-title: Annales de l’Institut Henri Poincaré
-  volume: '52'
-  issue: '2'
-  page: '868-887'
+  volume: "52"
+  issue: "2"
+  page: "868-887"
   issued:
     date-parts:
-    - - 2016
+      - - 2016
   type: article-journal
-  rank: '10'
+  rank: "10"
   URL_Open: "http://arxiv.org/abs/1308.1275"
   abstract: >
     We give a dual representation of minimal supersolutions of BSDEs with non-bounded, but integrable terminal conditions and under weak requirements on the generator which is allowed to depend on the value process of the equation. 
@@ -780,28 +675,24 @@
     - Supersolutions of BSDEs
     - Cash-Subadditive Risk Measures
 
--
-  id: DHK1101
+- id: DHK1101
   title: Minimal Supersolutions of Convex BSDEs
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Heyne
+    - family: Heyne
       given: Gregor
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
   container-title: Annals of Probability
-  volume: '41'
-  issue: '6'
-  page: '3973-4001'
+  volume: "41"
+  issue: "6"
+  page: "3973-4001"
   issued:
     date-parts:
-    - - 2013
+      - - 2013
   type: article-journal
-  rank: '04'
+  rank: "04"
   URL: "http://projecteuclid.org/euclid.aop/1384957780"
   URL_Open: "http://arxiv.org/abs/1106.1400"
   abstract: >
@@ -810,28 +701,24 @@
     - Supersolutions of backward stochastic differential equations
     - Nonlinear expectations
     - Supermartingales
-- 
-  id: DHK2012
+- id: DHK2012
   title: Minimal Supersolutions of BSDEs under Volatility Uncertainty
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Heyne
+    - family: Heyne
       given: Gregor
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
   container-title: Stochastic Processes and Applications
-  volume: '125'
-  issue: '8'
-  page: '2895--2909'
+  volume: "125"
+  issue: "8"
+  page: "2895--2909"
   issued:
     date-parts:
-    - - 2015
+      - - 2015
   type: article-journal
-  rank: '09'
+  rank: "09"
   URL_Open: "http://arxiv.org/abs/1306.6545"
   abstract: >
     We study the existence of minimal supersolutions of BSDEs under a family of mutually singular probability measures.
@@ -841,31 +728,26 @@
     - Model Uncertainty
     - $$G$$-Expectation
 
--
-  id: asgar2012
+- id: asgar2012
   title: The Algebra of Conditional Sets and the Concepts of Conditional Topology and Compactness
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Jamneshan
+    - family: Jamneshan
       given: Asgar
-    - 
-      family: Karliczek
+    - family: Karliczek
       given: Martin
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
   container-title: Journal of Mathematical Analysis and Applications
   issued:
     date-parts:
-    - - 2016
-  volume: '437'
-  issue: '1'
-  page: '561-589'
+      - - 2016
+  volume: "437"
+  issue: "1"
+  page: "561-589"
   type: article-journal
-  rank: '11'
+  rank: "11"
   URL_Open: "http://arxiv.org/abs/1309.6903"
   abstract: >
     We introduce the notion of conditional set and conditional inclusion.
@@ -877,25 +759,22 @@
     - Conditional Compactness
     - Conditional Real Numbers
     - Conditional Duality
-- 
-  id: drapeau01
+- id: drapeau01
   title: Risk Preferences and their Robust Representation
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
   container-title: Mathematics of Operations Research
-  volume: '28'
-  page: '28-62'
-  issue: '1'
+  volume: "28"
+  page: "28-62"
+  issue: "1"
   issued:
     date-parts:
-    - - 2013
+      - - 2013
   type: article-journal
-  rank: '03'
+  rank: "03"
   URL_Open: "http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1557083"
   URL: "http://pubsonline.informs.org/doi/abs/10.1287/moor.1120.0560?journalCode=moor"
   abstract: >
@@ -905,30 +784,24 @@
     - Risk Measures
     - Robustness
 
-
-- 
-  id: martin2013
+- id: martin2013
   title: Brouwer Fixed Point Theorem in $(L^0)^d$
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
-    - 
-      family: Karliczek
+    - family: Karliczek
       given: Martin
-    - 
-      family: Streckfuß
+    - family: Streckfuß
       given: Martin
   container-title: Fixed Point Theory and Applications
   page: 2013:301
   issued:
     date-parts:
-    - - 2013
+      - - 2013
   type: article-journal
-  rank: '07'
+  rank: "07"
   URL: "http://www.fixedpointtheoryandapplications.com/content/2013/1/301"
   URL_Open: "http://www.fixedpointtheoryandapplications.com/content/2013/1/301"
   abstract: >
@@ -939,28 +812,24 @@
     - Conditional Simplex
     - Fixed Points in $$(L^0)^d$$
     - Brouwer
--
-  id: antonis2012
+- id: antonis2012
   title: A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
-    - 
-      family: Papapantoleon
+    - family: Papapantoleon
       given: Antonis
   container-title: Journal of Risk
-  volume: '16'
-  page: '3-29'
-  issue: '6'
+  volume: "16"
+  page: "3-29"
+  issue: "6"
   issued:
     date-parts:
-    - - 2014
+      - - 2014
   type: article-journal
-  rank: '06'
+  rank: "06"
   URL_Open: "http://arxiv.org/abs/1212.6732"
   URL: "http://www.risk.net/journal-of-risk/technical-paper/2360448/a-fourier-approach-to-the-computation-of-conditional-value-at-risk-and-optimized-certainty-equivalents"
   abstract: >
@@ -972,27 +841,23 @@
     - Fourier Methods
     - Risk Contribution
 
--
-  id: drapeau05
+- id: drapeau05
   title: A Note on Robust Representations of Law-Invariant Quasiconvex Functions
   author:
-    -
-      family: Drapeau
+    - family: Drapeau
       given: Samuel
-    - 
-      family: Kupper
+    - family: Kupper
       given: Michael
-    - 
-      family: Reda
+    - family: Reda
       given: Ranja
   container-title: Advances in Mathematical Economics
-  volume: '15'
-  page: '27-39'
+  volume: "15"
+  page: "27-39"
   issued:
     date-parts:
-    - - 2011
+      - - 2011
   type: article-journal
-  rank: '01'
+  rank: "01"
   URL_Open: "http://www.samuel-drapeau.info/downloads/DKR_LIRM1010.pdf"
   abstract: >
     We give robust representations of law-invariant monotone quasiconvex functions. The results are based on Jouini, Schachermayer and Touzi (2006) and Svindland (2010) showing that lawinvariant quasiconvex functions have the Fatou property.
