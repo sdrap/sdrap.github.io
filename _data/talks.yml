@@ -1,464 +1,396 @@
--
-    occasion : "Research Seminar in Mathematics"
-    place : "UIC, China"
-    title : "Robust Uncertainty Analysis"
-    date : Dec 2021
-    score : 6
+- occasion: "ICIAM"
+  place: "Tokyo, China"
+  title: "On/Off Shore Currency Rate Discrepancy"
+  date: Aug 2023
+  score: 6
 
--
-    occasion : "Forschungsseminar: Stochastische Analysis und Stochastik der Finanzmaerkte"
-    place : "Humbold und TU Berlin, Germany"
-    title : "Robust Uncertainty Analysis"
-    date : Dec 2021
-    score : 6
+- occasion: "Research Seminar in Mathematics"
+  place: "UIC, China"
+  title: "Robust Uncertainty Analysis"
+  date: Dec 2021
+  score: 6
 
--
-    occasion : "Workshop on Recent Advances in Financial Mathematics"
-    place : "University of Eonomics, Ho Chi Minh City, Vietnam"
-    title : "Puzzeling Option Prices of Pegged Exchange Markets"
-    date : Nov 2021
-    score : 6
+- occasion: "Forschungsseminar: Stochastische Analysis und Stochastik der Finanzmaerkte"
+  place: "Humbold und TU Berlin, Germany"
+  title: "Robust Uncertainty Analysis"
+  date: Dec 2021
+  score: 6
 
--
-    occasion : "Joint Workshop on Mathematical Finance, Machine Learning and Statistics, NUS SJTU"
-    place : "NUS, Singapore"
-    title : "On Detecting Spoofing Strategies in High Frequency Trading"
-    date : Jun 2021
-    score : 6
+- occasion: "Workshop on Recent Advances in Financial Mathematics"
+  place: "University of Eonomics, Ho Chi Minh City, Vietnam"
+  title: "Puzzeling Option Prices of Pegged Exchange Markets"
+  date: Nov 2021
+  score: 6
 
--
-    occasion : "Mathematical Finance Seminar, Columbia University"
-    place : "Columbia University, New York City, USA"
-    title : "On Detecting Spoofing Strategies in High Frequency Trading"
-    date : Apr 2021
-    score : 6
+- occasion: "Joint Workshop on Mathematical Finance, Machine Learning and Statistics, NUS SJTU"
+  place: "NUS, Singapore"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: Jun 2021
+  score: 6
 
--
-    occasion : "Mathematical and Finance Seminar, Fudan University"
-    place : "Fudan University, Shanghai, China"
-    title : "On Detecting Spoofing Strategies in High Frequency Trading"
-    date : Dec 2020
-    score : 6
+- occasion: "Mathematical Finance Seminar, Columbia University"
+  place: "Columbia University, New York City, USA"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: Apr 2021
+  score: 6
 
--
-    occasion : "Mathematical and Computational Finance Seminar, Oxford University"
-    place : "Oxford University, UK, Online"
-    title : "On Detecting Spoofing Strategies in High Frequency Trading"
-    date : Nov 2020
-    score : 6
+- occasion: "Mathematical and Finance Seminar, Fudan University"
+  place: "Fudan University, Shanghai, China"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: Dec 2020
+  score: 6
 
--
-    occasion : "Financial Seminar and Mini Lecture Series"
-    place : "Zhongnan University of Economics and Law, Wuhan"
-    title : "On Detecting Spoofing Strategies in High Frequency Trading"
-    date : Nov 2020
-    score : 6
+- occasion: "Mathematical and Computational Finance Seminar, Oxford University"
+  place: "Oxford University, UK, Online"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: Nov 2020
+  score: 6
 
--
-    occasion : "SIAM Activity Group on Financial Mathematics and Engineering, Virtual Seminars Series"
-    place : "Online"
-    title : "On Detecting Spoofing Strategies in High Frequency Trading"
-    date : Oct 2020
-    score : 6
+- occasion: "Financial Seminar and Mini Lecture Series"
+  place: "Zhongnan University of Economics and Law, Wuhan"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: Nov 2020
+  score: 6
 
--
-    occasion : "Probability Seminar"
-    place : "Suzhou University, China"
-    title : "Robust Uncertainty Analysis"
-    date : Aug 2020
-    score : 6
+- occasion: "SIAM Activity Group on Financial Mathematics and Engineering, Virtual Seminars Series"
+  place: "Online"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: Oct 2020
+  score: 6
 
--
-    occasion : "Stochastic and Finance Seminar"
-    place : "Sydney University, Australia"
-    title : "Robust Uncertainty Analysis"
-    date : Jul 2020
-    score : 6
+- occasion: "Probability Seminar"
+  place: "Suzhou University, China"
+  title: "Robust Uncertainty Analysis"
+  date: Aug 2020
+  score: 6
 
--
-    occasion : "Quantitative Methods in Finance, International Conference"
-    place : "Sydney, Australia"
-    title : "Spatially Determined Optimal Price Design in a Ride Sharing Economy"
-    date : Dec 2019
-    score : 6
+- occasion: "Stochastic and Finance Seminar"
+  place: "Sydney University, Australia"
+  title: "Robust Uncertainty Analysis"
+  date: Jul 2020
+  score: 6
 
--
-    occasion : "Advances in Stochastic Analysis for Handling Risks in Finance and Insurance"
-    place : "Centre International de Rencontres Mathematiques (CIRM), Marseille"
-    title : "Computational Aspects and Sensitivity of Robust Optimization Problems"
-    date : October 2019
-    score : 6
+- occasion: "Quantitative Methods in Finance, International Conference"
+  place: "Sydney, Australia"
+  title: "Spatially Determined Optimal Price Design in a Ride Sharing Economy"
+  date: Dec 2019
+  score: 6
 
--
-    occasion : "Probability, Uncertainty and Quantitative Finance workshop"
-    place : "Shandong University, Weihai, China"
-    title : "On Detecting Spoofing Strategies in High Frequency Trading"
-    date : July 2019
-    score : 6
+- occasion: "Advances in Stochastic Analysis for Handling Risks in Finance and Insurance"
+  place: "Centre International de Rencontres Mathematiques (CIRM), Marseille"
+  title: "Computational Aspects and Sensitivity of Robust Optimization Problems"
+  date: October 2019
+  score: 6
 
--
-    occasion : "7th Asian Quantitative Finance Conference"
-    place : "Hanoi, Vietnam"
-    title : "On Detecting Spoofing Strategies in High Frequency Trading"
-    date : July 2019
-    score : 6
+- occasion: "Probability, Uncertainty and Quantitative Finance workshop"
+  place: "Shandong University, Weihai, China"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: July 2019
+  score: 6
 
--
-    occasion : "Finance Seminar, NTU"
-    place : "NTU, Singapore"
-    title : "Spatially Determined Optimal Price Design in a Ride Sharing Economy"
-    date : June 2019
-    score : 6
+- occasion: "7th Asian Quantitative Finance Conference"
+  place: "Hanoi, Vietnam"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: July 2019
+  score: 6
 
--
-    occasion : "SIAM International Conference on Financial Engineering"
-    place : "Toronto, Canada"
-    title : "Spatially Determined Optimal Price Design in a Ride Sharing Economy"
-    date : June 2019
-    score : 6
+- occasion: "Finance Seminar, NTU"
+  place: "NTU, Singapore"
+  title: "Spatially Determined Optimal Price Design in a Ride Sharing Economy"
+  date: June 2019
+  score: 6
 
+- occasion: "SIAM International Conference on Financial Engineering"
+  place: "Toronto, Canada"
+  title: "Spatially Determined Optimal Price Design in a Ride Sharing Economy"
+  date: June 2019
+  score: 6
 
--
-    occasion : "Conference Data Science and Finance"
-    place : "Siem Reap, Cambodia"
-    title : "Option Prices of Pegged Exchange Rates: The HKD-USD Puzzle"
-    date : Fev 2019
-    score : 6
+- occasion: "Conference Data Science and Finance"
+  place: "Siem Reap, Cambodia"
+  title: "Option Prices of Pegged Exchange Rates: The HKD-USD Puzzle"
+  date: Fev 2019
+  score: 6
 
+- occasion: "Seminar in Finance, Shandong University"
+  place: "Jinan, China"
+  title: "Option Prices of Pegged Exchange Rates: The HKD-USD Puzzle"
+  date: Dec 2018
+  score: 6
 
--
-    occasion : "Seminar in Finance, Shandong University"
-    place : "Jinan, China"
-    title : "Option Prices of Pegged Exchange Rates: The HKD-USD Puzzle"
-    date : Dec 2018
-    score : 6
+- occasion: "Department Seminar in Statistics and Actuarial Sciences, Waterloo University"
+  place: "Waterloo, Canada"
+  title: "Computational Aspects of Robust Optimized Certainty Equivalent and Option Pricing"
+  date: Nov 2018
+  score: 6
 
--
-    occasion : "Department Seminar in Statistics and Actuarial Sciences, Waterloo University"
-    place : "Waterloo, Canada"
-    title : "Computational Aspects of Robust Optimized Certainty Equivalent and Option Pricing"
-    date : Nov 2018
-    score : 6
+- occasion: "Forum: Mathematics for Industry, Fudan University"
+  place: "Shanghai, China"
+  title: "Option Prices of Pegged Exchange Rates: The HKD-USD Puzzle"
+  date: Nov 2018
+  score: 6
 
--
-    occasion : "Forum: Mathematics for Industry, Fudan University"
-    place : "Shanghai, China"
-    title : "Option Prices of Pegged Exchange Rates: The HKD-USD Puzzle"
-    date : Nov 2018
-    score : 6
+- occasion: "Insurance Mathematics and Stochastic Finance Seminar, ETH University"
+  place: "Zurich, Switzerland"
+  title: "Computational Aspects of Robust Optimized Certainty Equivalent and Option Pricing"
+  date: Jul 2018
+  score: 6
 
--
-    occasion : "Insurance Mathematics and Stochastic Finance Seminar, ETH University"
-    place : "Zurich, Switzerland"
-    title : "Computational Aspects of Robust Optimized Certainty Equivalent and Option Pricing"
-    date : Jul 2018
-    score : 6
+- occasion: "Stochastic Finance Seminar, Konstanz University"
+  place: "Konstanz, Germany"
+  title: "Computational Aspects of Robust Optimized Certainty Equivalent and Option Pricing"
+  date: Jul 2018
+  score: 6
 
--
-    occasion : "Stochastic Finance Seminar, Konstanz University"
-    place : "Konstanz, Germany"
-    title : "Computational Aspects of Robust Optimized Certainty Equivalent and Option Pricing"
-    date : Jul 2018
-    score : 6
+- occasion: "Stochastic Finance Seminar, Warwick University"
+  place: "Warwick, UK"
+  title: "Computational Aspects of Robust Optimized Certainty Equivalent"
+  date: Feb 2018
+  score: 6
 
+- occasion: "Mathematical and Computational Finance Seminar, Oxford University"
+  place: "Oxford, UK"
+  title: "Computational Aspects of Robust Optimized Certainty Equivalent"
+  date: Feb 2018
+  score: 6
 
--
-    occasion : "Stochastic Finance Seminar, Warwick University"
-    place : "Warwick, UK"
-    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
-    date : Feb 2018
-    score : 6
+- occasion: "Quantitative Methods in Finance, International Conference"
+  place: "Sydney, Australia"
+  title: "Computational Aspects of Robust Optimized Certainty Equivalent"
+  date: Dec 2017
+  score: 6
 
--
-    occasion : "Mathematical and Computational Finance Seminar, Oxford University"
-    place : "Oxford, UK"
-    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
-    date : Feb 2018
-    score : 6
+- occasion: "2017 Financial Mathematics and Financial Engineering Summer School"
+  place: "Weihai, China"
+  title: "Computational Aspects of Robust Optimized Certainty Equivalent"
+  date: July 2017
+  score: 6
 
--
-    occasion : "Quantitative Methods in Finance, International Conference"
-    place : "Sydney, Australia"
-    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
-    date : Dec 2017
-    score : 6
+- occasion: "Second Paris-Asia Conference in Quantitative Finance"
+  place: "Suzhou, China"
+  title: "Computational Aspects of Robust Optimized Certainty Equivalent"
+  date: May 2017
+  score: 6
 
--
-    occasion : "2017 Financial Mathematics and Financial Engineering Summer School"
-    place : "Weihai, China"
-    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
-    date : July 2017
-    score : 6
+- occasion: "Quantitative Methods in Finance, International Conference"
+  place: "Sydney, Australia"
+  title: "Portfolio Optimization under Probability and Discounting Risk"
+  date: Dec 2016
+  score: 6
 
--
-    occasion : "Second Paris-Asia Conference in Quantitative Finance"
-    place : "Suzhou, China"
-    title : "Computational Aspects of Robust Optimized Certainty Equivalent"
-    date : May 2017
-    score : 6
+- occasion: "9th World Congress of the Bachelier Finance Society"
+  place: "New York City, USA"
+  title: "Multivariate Shortfall Risk Allocation and Systemic Risk"
+  date: Jul 2016
+  score: 6
 
--
-    occasion : "Quantitative Methods in Finance, International Conference"
-    place : "Sydney, Australia"
-    title : "Portfolio Optimization under Probability and Discounting Risk"
-    date : Dec 2016
-    score : 6
+- occasion: "Finance and Stochastic Seminar"
+  place: "Shandong University, China"
+  title: "Systemic Risk"
+  date: Jun 2016
+  score: 6
 
--
-    occasion : "9th World Congress of the Bachelier Finance Society"
-    place : "New York City, USA"
-    title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
-    date : Jul 2016
-    score : 6
+- occasion: "Seminaire de probabilites et mathematiques financieres"
+  place: "Universite d'Evry, Paris, France"
+  title: "Multivariate Shortfall Risk Allocation and Systemic Risk"
+  date: Feb 2016
+  score: 6
 
--
-    occasion : "Finance and Stochastic Seminar"
-    place : "Shandong University, China"
-    title : "Systemic Risk"
-    date : Jun 2016
-    score : 6
+- occasion: "Quantitative Methods in Finance, International Conference"
+  place: "Sydney, Australia"
+  title: "Multivariate Shortfall Risk Allocation and Systemic Risk"
+  date: Dec 2015
+  score: 6
 
--
-    occasion : "Seminaire de probabilites et mathematiques financieres"
-    place : "Universite d'Evry, Paris, France"
-    title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
-    date : Feb 2016
-    score : 6
+- occasion: "Informs, Annual Meeting, Philadelphia"
+  place: "Philadelphia, USA"
+  title: "Multivariate Shortfall Risk Allocation and Systemic Risk"
+  date: Nov 2015
+  score: 8
 
--
-    occasion : "Quantitative Methods in Finance, International Conference"
-    place : "Sydney, Australia"
-    title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
-    date : Dec 2015
-    score : 6
+- occasion: "Seminar at the INS, Shanghai Jiao Tong University"
+  place: "Shanghai, China"
+  title: "Multivariate Shortfall Risk Allocation and Systemic Risk"
+  date: Oct 2015
+  score: 8
 
--
-    occasion : "Informs, Annual Meeting, Philadelphia"
-    place : "Philadelphia, USA"
-    title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
-    date : Nov 2015
-    score : 8
-
--
-    occasion : "Seminar at the INS, Shanghai Jiao Tong University"
-    place : "Shanghai, China"
-    title : "Multivariate Shortfall Risk Allocation and Systemic Risk"
-    date : Oct 2015
-    score : 8
-
--
-    occasion : "International Congress on Industrial and Applied Mathematics"
-    place : "Beijing, China"
-    title : "Multivariate Shortfall Risk Allocation"
-    date : Aug 2015
-    score : 8
--
-    occasion : "Stochastics Methods in Finance and Physics Workshop"
-    place : "Heraklion, Greece"
-    title : "Multivariate Shortfall Risk Allocation"
-    date : Jul 2015
-    score : 8
--
-    occasion : "Center for Interdisciplinary Research (ZIF); Seminar"
-    place : "Bielefeld University, Bielefeld, Germany"
-    title : "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
-    date : Jul 2015
-    score : 8
--
-    occasion : "Berlin-Princeton-Singapore Workshop on Quantitative Finance"
-    place : "National University of Singapore, Singapore"
-    title : "Multivariate Shortfall Risk Allocation"
-    date : Jul 2015
-    score : 8
--
-    occasion : "Probability, Uncertainty and Quantification of Risk Conference"
-    place : "Shandong University, Weihai, China"
-    title : "Multivariate Shortfall Risk Allocation"
-    date : Jun 2015
-    score : 8
--
-    occasion : "Risk, Uncertainty and Decision Conference"
-    place : "Bocconi, Mailand, Italy"
-    title : "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
-    date : Jun 2015
-    score : 8
--
-    occasion : "Mathematical Finance Seminar"
-    place : "Fudan, Shanghai, China"
-    title : "Stability and Markov Properties of Forward-Backward Stochastic Differential Equations"
-    date : May 2015
-    score : 8
--
-    occasion : "Shanghai Advanced Institute for Finance"
-    place : "SJTU, Shanghai, China"
-    title : "Multivariate Risk Assessment and Monetary Risk Allocation"
-    date : May 2015
-    score : 8
--
-    occasion : "Risk & Stochastics and Financial Mathematics Seminar"
-    place : "LSE, London, England"
-    title : "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
-    date : Nov 2014
-    score : 8
--
-    occasion : "Seminaire de probabilites et mathematiques financieres"
-    place : "Universite d'Evry, Paris, France"
-    title : "Minimal Super Solutions of BSDE: Hedging, Duality, Markov Property"
-    date : Oct 2014
-    score : 6
--
-    occasion : "8th World Congress of the Bachelier Finance Society"
-    place : "Brussel, Belgium"
-    title : "Preference for Diversification: Different but Intricate Dimensions of Uncertainty Aversion"
-    date : Jun 2014
-    score : 8
--
-    occasion : "Berlin-Singapore Workshop on Quantitative Finance"
-    place :  "Berlin, Germany"
-    title : "A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents"
-    date : Mai 2014
-    score : 8
--
-    occasion : "Workshop on Robust Techniques in Financial Economics"
-    place : "ETH Zurich, Switzerland"
-    title : "Preference for Diversification: Different but Intricate Dimensions of Uncertainty Aversion"
-    date : Mar 2014
-    score : 8
--
-    occasion : "Berliner Kolloquium Wahrscheinlichkeitstheorie"
-    place : "TU and Humboldt University Berlin, Germany"
-    title : "Preference for Diversification: Different but Intricate Dimensions of Uncertainty Aversion"
-    date : Jan 2014
-    score : 8
--
-    occasion : "De Finetti Risk Seminars"
-    place : "Università Bocconi - Università di Milano, Milan, Italy"
-    title : "Preference for Diversification: Different but Intricate Dimensions of Uncertainty Aversion"
-    date : Jan 2014
-    score : 8
--
-    occasion : "Workshop on Knightian Uncertainty and Risk Measures"
-    place : "National University of Singapore, Singapore"
-    title : "Superhedging under Model Uncertainty"
-    date : Jul 2013
-    score : 8
--
-    occasion : "International Conference on Computational Finance 2013 'Computation at the Frontiers of Science'"
-    place :  "Barcelona, Spain"
-    title : "A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents"
-    date : Jun 2013
-    score : 8
--
-    occasion : "Workshop, Indices of Riskiness and New Risk Measures"
-    place :  "ETH Zurich, Switzerland"
-    title : "Dynamic Assessment Indices"
-    date : Mar 2013
-    score : 8
--
-    occasion : "Workshop, Games, Model Uncertainty and Related Fields"
-    place :  "Shandong University, Jinan, China"
-    title : "Minimal Supersolutions of BSDEs, Duality and Robust Hedging"
-    date : Nov 2012
-    score : 8
--
-    occasion : "International Symposium on Mathematical Programming"
-    place :  "Berlin, Germany"
-    title : "Complete Duality for Quasiconvex Set-Valued Functions"
-    date : Aug 2012
-    score : 8
--
-    occasion : "Conference, Set Optimization Meets Finance"
-    place :  "Martin-Luther University, Halle Wittenberg, Germany"
-    title : "Complete Duality for Quasiconvex Set-Valued Functions"
-    date : Aug 2012
-    score : 8
--
-    occasion : "Conference, BSDEs, Numerics and Finance"
-    place :  "Oxford University, UK"
-    title : "Minimal Supersolutions of Backwards Stochastics Differential Equations and Robust Hedging"
-    date : Jun 2012
-    score : 8
--
-    occasion : "7th World Congress of the Bachelier Finance Society"
-    place :  "Sydney, Australia"
-    title : "Minimal Supersolutions of Backwards Stochastics Differential Equations and Robust Hedging"
-    date : Jun 2012
-    score : 8
--
-    occasion : "Mathematics Seminar"
-    place :  " Biccoca University, Milan, Italy"
-    title : "Incomplete Preferences and Set Valued Complete Duality"
-    date : Mai 2012
-    score : 8
--
-    occasion : "Colloquium, Versicherungs- und Finanzmathematik"
-    place :  "Leibniz University Hannover, Germany"
-    title : "Minimal Supersolutions of Backwards Stochastics Differential Equations and Robust Hedging"
-    date : Jan 2012
-    score : 8
--
-    occasion : "Colloquium"
-    place :  "Illinois Institut of Technology Chicago, USA"
-    title : "Minimal Supersolutions of Convex BSDEs and Robust Extensions"
-    date : Nov 2011
-    score : 8
--
-    occasion : "International Conference on Mathematical Finance and Economics"
-    place :  "Istanbul, Turkey"
-    title : "Incomplete (Quasi)Convex Preferences and their Robust Representation"
-    date : Jul 2011
-    score : 8
--
-    occasion : "Berlin Mathematical School Days 2011"
-    place :  "Berlin, Germany"
-    title : "Risk Preferences and their Robust Representation"
-    date : Feb 2011
-    score : 8
--
-    occasion : "Colloquium"
-    place :  "Illinois Institut of Technology Chicago, USA"
-    title : "Risk Preferences and their Robust Representation"
-    date : Dec 2010
-    score : 8
--
-    occasion : "SIAM Conference on Financial Mathematics and Engineering"
-    place :  "San Francisco, USA"
-    title : "Risk Preferences and their Robust Representation"
-    date : Dec 2010
-    score : 8
--
-    occasion : "Conference, Risk, Uncertainty and Decision"
-    place :  "Paris, France"
-    title : "Risk Preferences and their Robust Representation"
-    date : Jul 2010
-    score : 8
--
-    occasion : "6th World Congress of the Bachelier finance society"
-    place :  "Toronto, Canada"
-    title : "Risk Preferences and their Robust Representation"
-    date : Jun 2010
-    score : 8
--
-    occasion : "Mathematic and Economic Seminar"
-    place :  "Hausdorff Center for Mathematics, Bonn University, Germany"
-    title : "Risk Preferences and their Robust Representation"
-    date : Mai 2010
-    score : 8
--
-    occasion : "The Fifth General Conference on Advanced Mathematical Methods in Finance"
-    place :  "Bled, Slovenia"
-    title : "Risk Preferences and their Robust Representation"
-    date : Mai 2010
-    score : 8
--
-    occasion : "Conference, Quantitative Methods in Finance Conference"
-    place :  "Sydney, Australia"
-    title : "Risk Preferences and their Robust Representation"
-    date : Dec 2009
-    score : 8
--
-    occasion : "Workshop, Finance and Insurance ITN"
-    place :  "Jena, Germany"
-    title : "Conditional and Dynamic Preferences"
-    date : Mar 2009
-    score : 8
+- occasion: "International Congress on Industrial and Applied Mathematics"
+  place: "Beijing, China"
+  title: "Multivariate Shortfall Risk Allocation"
+  date: Aug 2015
+  score: 8
+- occasion: "Stochastics Methods in Finance and Physics Workshop"
+  place: "Heraklion, Greece"
+  title: "Multivariate Shortfall Risk Allocation"
+  date: Jul 2015
+  score: 8
+- occasion: "Center for Interdisciplinary Research (ZIF); Seminar"
+  place: "Bielefeld University, Bielefeld, Germany"
+  title: "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
+  date: Jul 2015
+  score: 8
+- occasion: "Berlin-Princeton-Singapore Workshop on Quantitative Finance"
+  place: "National University of Singapore, Singapore"
+  title: "Multivariate Shortfall Risk Allocation"
+  date: Jul 2015
+  score: 8
+- occasion: "Probability, Uncertainty and Quantification of Risk Conference"
+  place: "Shandong University, Weihai, China"
+  title: "Multivariate Shortfall Risk Allocation"
+  date: Jun 2015
+  score: 8
+- occasion: "Risk, Uncertainty and Decision Conference"
+  place: "Bocconi, Mailand, Italy"
+  title: "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
+  date: Jun 2015
+  score: 8
+- occasion: "Mathematical Finance Seminar"
+  place: "Fudan, Shanghai, China"
+  title: "Stability and Markov Properties of Forward-Backward Stochastic Differential Equations"
+  date: May 2015
+  score: 8
+- occasion: "Shanghai Advanced Institute for Finance"
+  place: "SJTU, Shanghai, China"
+  title: "Multivariate Risk Assessment and Monetary Risk Allocation"
+  date: May 2015
+  score: 8
+- occasion: "Risk & Stochastics and Financial Mathematics Seminar"
+  place: "LSE, London, England"
+  title: "Numerical Representation of Convex Preferences on Anscombe–Aumann Acts"
+  date: Nov 2014
+  score: 8
+- occasion: "Seminaire de probabilites et mathematiques financieres"
+  place: "Universite d'Evry, Paris, France"
+  title: "Minimal Super Solutions of BSDE: Hedging, Duality, Markov Property"
+  date: Oct 2014
+  score: 6
+- occasion: "8th World Congress of the Bachelier Finance Society"
+  place: "Brussel, Belgium"
+  title: "Preference for Diversification: Different but Intricate Dimensions of Uncertainty Aversion"
+  date: Jun 2014
+  score: 8
+- occasion: "Berlin-Singapore Workshop on Quantitative Finance"
+  place: "Berlin, Germany"
+  title: "A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents"
+  date: Mai 2014
+  score: 8
+- occasion: "Workshop on Robust Techniques in Financial Economics"
+  place: "ETH Zurich, Switzerland"
+  title: "Preference for Diversification: Different but Intricate Dimensions of Uncertainty Aversion"
+  date: Mar 2014
+  score: 8
+- occasion: "Berliner Kolloquium Wahrscheinlichkeitstheorie"
+  place: "TU and Humboldt University Berlin, Germany"
+  title: "Preference for Diversification: Different but Intricate Dimensions of Uncertainty Aversion"
+  date: Jan 2014
+  score: 8
+- occasion: "De Finetti Risk Seminars"
+  place: "Università Bocconi - Università di Milano, Milan, Italy"
+  title: "Preference for Diversification: Different but Intricate Dimensions of Uncertainty Aversion"
+  date: Jan 2014
+  score: 8
+- occasion: "Workshop on Knightian Uncertainty and Risk Measures"
+  place: "National University of Singapore, Singapore"
+  title: "Superhedging under Model Uncertainty"
+  date: Jul 2013
+  score: 8
+- occasion: "International Conference on Computational Finance 2013 'Computation at the Frontiers of Science'"
+  place: "Barcelona, Spain"
+  title: "A Fourier Approach to the Computation of CV@R and Optimized Certainty Equivalents"
+  date: Jun 2013
+  score: 8
+- occasion: "Workshop, Indices of Riskiness and New Risk Measures"
+  place: "ETH Zurich, Switzerland"
+  title: "Dynamic Assessment Indices"
+  date: Mar 2013
+  score: 8
+- occasion: "Workshop, Games, Model Uncertainty and Related Fields"
+  place: "Shandong University, Jinan, China"
+  title: "Minimal Supersolutions of BSDEs, Duality and Robust Hedging"
+  date: Nov 2012
+  score: 8
+- occasion: "International Symposium on Mathematical Programming"
+  place: "Berlin, Germany"
+  title: "Complete Duality for Quasiconvex Set-Valued Functions"
+  date: Aug 2012
+  score: 8
+- occasion: "Conference, Set Optimization Meets Finance"
+  place: "Martin-Luther University, Halle Wittenberg, Germany"
+  title: "Complete Duality for Quasiconvex Set-Valued Functions"
+  date: Aug 2012
+  score: 8
+- occasion: "Conference, BSDEs, Numerics and Finance"
+  place: "Oxford University, UK"
+  title: "Minimal Supersolutions of Backwards Stochastics Differential Equations and Robust Hedging"
+  date: Jun 2012
+  score: 8
+- occasion: "7th World Congress of the Bachelier Finance Society"
+  place: "Sydney, Australia"
+  title: "Minimal Supersolutions of Backwards Stochastics Differential Equations and Robust Hedging"
+  date: Jun 2012
+  score: 8
+- occasion: "Mathematics Seminar"
+  place: " Biccoca University, Milan, Italy"
+  title: "Incomplete Preferences and Set Valued Complete Duality"
+  date: Mai 2012
+  score: 8
+- occasion: "Colloquium, Versicherungs- und Finanzmathematik"
+  place: "Leibniz University Hannover, Germany"
+  title: "Minimal Supersolutions of Backwards Stochastics Differential Equations and Robust Hedging"
+  date: Jan 2012
+  score: 8
+- occasion: "Colloquium"
+  place: "Illinois Institut of Technology Chicago, USA"
+  title: "Minimal Supersolutions of Convex BSDEs and Robust Extensions"
+  date: Nov 2011
+  score: 8
+- occasion: "International Conference on Mathematical Finance and Economics"
+  place: "Istanbul, Turkey"
+  title: "Incomplete (Quasi)Convex Preferences and their Robust Representation"
+  date: Jul 2011
+  score: 8
+- occasion: "Berlin Mathematical School Days 2011"
+  place: "Berlin, Germany"
+  title: "Risk Preferences and their Robust Representation"
+  date: Feb 2011
+  score: 8
+- occasion: "Colloquium"
+  place: "Illinois Institut of Technology Chicago, USA"
+  title: "Risk Preferences and their Robust Representation"
+  date: Dec 2010
+  score: 8
+- occasion: "SIAM Conference on Financial Mathematics and Engineering"
+  place: "San Francisco, USA"
+  title: "Risk Preferences and their Robust Representation"
+  date: Dec 2010
+  score: 8
+- occasion: "Conference, Risk, Uncertainty and Decision"
+  place: "Paris, France"
+  title: "Risk Preferences and their Robust Representation"
+  date: Jul 2010
+  score: 8
+- occasion: "6th World Congress of the Bachelier finance society"
+  place: "Toronto, Canada"
+  title: "Risk Preferences and their Robust Representation"
+  date: Jun 2010
+  score: 8
+- occasion: "Mathematic and Economic Seminar"
+  place: "Hausdorff Center for Mathematics, Bonn University, Germany"
+  title: "Risk Preferences and their Robust Representation"
+  date: Mai 2010
+  score: 8
+- occasion: "The Fifth General Conference on Advanced Mathematical Methods in Finance"
+  place: "Bled, Slovenia"
+  title: "Risk Preferences and their Robust Representation"
+  date: Mai 2010
+  score: 8
+- occasion: "Conference, Quantitative Methods in Finance Conference"
+  place: "Sydney, Australia"
+  title: "Risk Preferences and their Robust Representation"
+  date: Dec 2009
+  score: 8
+- occasion: "Workshop, Finance and Insurance ITN"
+  place: "Jena, Germany"
+  title: "Conditional and Dynamic Preferences"
+  date: Mar 2009
+  score: 8
