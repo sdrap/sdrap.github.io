@@ -1,3 +1,41 @@
+- id: dorinel2023
+  title: Resolving a Clearing Member's Default, A Radner Equilibrium Approach
+  author:
+    - family: Bastide
+      given: Dorinel
+    - family: Crépey
+      given: Stéphane
+    - family: Drapeau
+      given: Samuel
+    - family: Tadese
+      given: Mekonnen
+
+  container-title: "Preprint"
+  issued:
+    date-parts:
+      - - 2023
+  type: article-journal
+  rank: "31"
+
+  URL_Open: "https://arxiv.org/pdf/2310.02608.pdf"
+  abstract: >
+    For vanilla derivatives that constitute the bulk of investment banks' hedging portfolios, central clearing through central counterparties (CCPs) has become hegemonic. A key mandate of a CCP is to provide an efficient and proper clearing member default resolution procedure. When a clearing member defaults, the CCP can hedge and auction or liquidate its positions. The counterparty credit risk cost of auctioning has been analyzed in terms of XVA metrics in Bastide, Cr{é}pey, Drapeau, and Tadese (2023). In this work we assess the costs of hedging or liquidating. This is done by comparing pre- and post-default market equilibria, using a Radner equilibrium approach for portfolio allocation and price discovery in each case. We show that the Radner equilibria uniquely exist and we provide both analytical and numerical solutions for the latter in elliptically distributed markets. Using such tools, a CCP could decide rationally on which market to hedge and auction or liquidate defaulted portfolios.
+  keywords:
+    - Financial Markets
+    - Exchanges
+    - Central Counterparties (CCPs)
+    - Default Resolution
+    - Radner Equilibrium
+    - Pprice Impact
+    - Entropic Risk Measure
+    - Expected Shortfall
+    - Hedging
+    - Auctioning
+    - Liquidation
+    - Market Risk
+    - Credit Risk
+    - Cross-Valuation Adjustments (XVA)
+
 - id: dorinel2022
   title: Derivatives Risks as Costs in a One-Period Network Model
   author:
