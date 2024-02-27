@@ -14,7 +14,7 @@
         <link rel="prev" href="../00-introduction/">
       
       
-        <link rel="next" href="../../material/">
+        <link rel="next" href="../02-control-flows/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>First Steps, Data Structure - Scientific Programing - An Introduction</title>
+        <title>Basic Operations, Data Types - Scientific Programing - An Introduction</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#first-steps-data-structure" class="md-skip">
+        <a href="#basic-operations-data-types" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              First Steps, Data Structure
+              Basic Operations, Data Types
             
           </span>
         </div>
@@ -328,6 +328,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -405,7 +409,7 @@
           
   
   <span class="md-ellipsis">
-    First Steps, Data Structure
+    Basic Operations, Data Types
   </span>
   
 
@@ -416,7 +420,7 @@
         
   
   <span class="md-ellipsis">
-    First Steps, Data Structure
+    Basic Operations, Data Types
   </span>
   
 
@@ -446,10 +450,196 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-special-case-of-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      The special case of strings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The special case of strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatenate-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concatenate strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formatted-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formatted strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortcut-f-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortcut: f-strings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced formatting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arithmetic operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relational-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relational Operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitwise-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bitwise Operators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Structures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lists
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dictionaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dictionaries
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-control-flows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control Flows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-functions-classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions and Classes
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -497,10 +687,18 @@
                   
 
 
-<h1 id="first-steps-data-structure">First Steps Data Structure</h1>
+<h1 id="basic-operations-data-types">Basic Operations, Data Types</h1>
 <p>We start with the most simple example, namely a constant function that will print a message
 <div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
 </code></pre></div></p>
+<p>Note that you can put comments in the code that is ignored by python.
+These pieces of code to ignore are indicated by <code>#</code> character</p>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># We want to print Hello world</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+<span class="c1"># We next print a date</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Today is 2024-02-14&quot;</span><span class="p">)</span>
+</code></pre></div>
+As your code will start to get longer and longer it is well advised to comment the most important steps so that you can come back and understand what you do, as well as other people can rapidly follow what you are coding.</p>
 <h2 id="variables">Variables</h2>
 <p>In math, declaring variables is bottom line and done like</p>
 <div class="arithmatex">\[
@@ -510,14 +708,15 @@
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is now:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </code></pre></div></p>
-<div class="admonition alert">
+<div class="admonition warning">
 <p class="admonition-title">Equal is not Equal</p>
-<p>In math the symbol <span class="arithmatex">\(=\)</span> has a very special meaning, it is a binary relation which transitive, symetric and antisymetric.
-But it is also colloquialy used as definition means as above. In python <code>=</code> means definition or assignment.
-It is not a reflexive relation meaning that <code>1 =a</code> if <code>a</code> was not defined before will not work.
-Also <code>a =1</code> and <code>b=2</code>, then <code>a=b</code> should return an error, while here it just reassign <code>b</code> to <code>a</code>.</p>
+<p>In math the symbol <span class="arithmatex">\(=\)</span> has a very special meaning, it is a binary relation which is transitive, symetric and antisymetric.
+But it is also colloquialy used as definition such as let <span class="arithmatex">\(x = \sqrt{\pi}\)</span>.
+In python <code>=</code> means definition or assignment.
+It is not a reflexive relation meaning that <code>1 =a</code> (if <code>a</code> was not defined before) will not work.
+Also <code>a =1</code> and <code>b=2</code>, then <code>a=b</code> is not true mathematically, while in python it just reassign <code>b</code> to <code>a</code>.</p>
 </div>
-<p>Variables are automatically mutable, means that another assignation will override it</p>
+<p>Variables are mutable, means that another assignation will override it</p>
 <div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value of a is&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
@@ -532,347 +731,584 @@ Those assignations are copies and therefore independent objects</p>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is now&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;and the value of b remains&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 </code></pre></div>
-<!---->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # # Data types  -->
-<!-- # * boolean -->
-<!-- # * integers -->
-<!-- # * floats -->
-<!-- # * strings -->
-<!-- #%% -->
-<!---->
-<!-- my_bollean = False -->
-<!-- my_integer = 25 -->
-<!-- my_float = 3.1 -->
-<!-- my_string = "My string" -->
-<!-- # and you can print them as well as the type -->
-<!---->
-<!-- print("my_boolean = ", my_bollean) -->
-<!-- print("my_integer = ", my_integer) -->
-<!-- print("my_float = ", my_float) -->
-<!-- print("my_string =", my_string) -->
-<!-- print("With types:", type(my_bollean), type(my_integer), type(my_float), type(my_string)) -->
-<!---->
-<!---->
-<!-- #%% -->
-<!-- a = 1 -->
-<!-- b = 3.2 -->
-<!-- print(a+b) -->
-<!-- print(type(a), type(b), type(a+b)) -->
-<!---->
-<!---->
-<!-- #%% [markdown] -->
-<!-- # Further use -->
-<!-- #%% -->
-<!-- print("Integer positive negative") -->
-<!-- print(1, 2, -3) -->
-<!-- print("of type") -->
-<!-- print(type(-3)) -->
-<!-- print("Floats with different declarations") -->
-<!-- print(1.7, 10e-2, -3.0) -->
-<!-- print("of type") -->
-<!-- print(type(1.7)) -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # Strings are declared between  -->
-<!-- # * single `'...'` quotes -->
-<!-- # * double quotes `"..."` -->
-<!-- # * three triple quotes `"""..."""` -->
-<!-- #%% -->
-<!-- string1 = 'Hello' -->
-<!-- string2 = "Samuel." -->
-<!-- string3 = """Your email address is 'sdrapeau@saif.sjtu.edu.cn'. How are you doing on this "2024-02-19"?""" -->
-<!-- print(string1, string2, string3) -->
-<!---->
-<!-- #%% -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # ## More on strings -->
-<!-- # Strings in combination with the print statement are extremly useful to track what your program is doing. -->
-<!-- # -->
-<!-- # Python has a very powerfull string formating procedure called f strings or string format. -->
-<!-- #  -->
-<!-- # You can -->
-<!-- # * concatenate strings -->
-<!-- # * format strings -->
-<!-- # * use `fstrings` -->
-<!-- # -->
-<!-- #%% -->
-<!-- # concatenation of two strings -->
-<!---->
-<!-- string1 = "Hello " -->
-<!-- string2 = "World!" -->
-<!---->
-<!-- result = string1 + string2 -->
-<!-- print(result) -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # ## Formated strings -->
-<!-- # Formating string is usually done in the following way -->
-<!-- # -->
-<!-- # Declare a string with triple quotes and put place holders between curly brakets and format it with the relevant informations -->
-<!-- #%% -->
-<!---->
-<!-- to_format = """ -->
-<!-- Hello {name}! how are you doing on this {weather} day of {date}? -->
-<!-- """ -->
-<!---->
-<!-- print(type(to_format), format) -->
-<!---->
-<!-- # Format the string and print -->
-<!-- result1 = to_format.format(name = 'Samuel', weather = 'sunny', date = 'February 2024') -->
-<!-- result2 = to_format.format(name = "John", weather = "rainy", date = "2021") -->
-<!-- print(result1, type(result1)) -->
-<!-- print(result2) -->
-<!-- #%% -->
-<!---->
-<!-- # You can also plug numbers in the format that will be showed. These numbers can be formated -->
-<!-- num1 = 1 -->
-<!-- num2 = 73/7 -->
-<!-- num3 = 0.45622 -->
-<!---->
-<!-- my_string = """ -->
-<!-- We have: -->
-<!-- An integer: {number1} -->
-<!-- two floats: {number2} and {number3} -->
-<!---->
-<!-- I can appy formating with :.xf or :.x% where -->
-<!--  - x represent the number of significant digits -->
-<!--  - f/% represent if float formating or percent formating (will multiply by 100) -->
-<!---->
-<!-- Formated Floats (works for int): {number1:.2f} {number2: .4f} -->
-<!-- Formated percent: {number3:.2%} and {number3:.0%} -->
-<!-- """ -->
-<!---->
-<!-- result = my_string.format(number1 = num1, number2 = num2, number3 = num3) -->
-<!-- print(result) -->
-<!---->
-<!-- #%% -->
-<!-- # ## fstrings -->
-<!-- # -->
-<!-- # fstrings are shortcuts for formated strings where the place holders are name of variables that are defined before -->
-<!-- #%% -->
-<!---->
-<!-- a = 2.52436123 -->
-<!-- b= 73/7 -->
-<!---->
-<!-- result = f"We can now show a:{a}, a formated: {a:.2f} and a+b formated: {a+b:.2f}" -->
-<!-- print(result) -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # # Operators -->
-<!-- #  -->
-<!-- # ## Arithmetic operators -->
-<!-- #  -->
-<!-- # | Symbol | Task Performed | -->
-<!-- # |----|---| -->
-<!-- # | +  | Addition | -->
-<!-- # | -  | Subtraction | -->
-<!-- # | /  | division | -->
-<!-- # | *  | multiplication | -->
-<!-- # | %  | mod | -->
-<!-- # | //  | floor division | -->
-<!-- # | **  | to the power of | -->
-<!-- # -->
-<!-- # As for the euclidean division, for two integers $a$ and $b$, there exists a unique m and n integers such that -->
-<!-- #  -->
-<!-- # * $a = m * b + n$ -->
-<!-- # * $0\leq n < |b|$ -->
-<!-- #  -->
-<!-- # In python, `a = a//b * b + a%b` -->
-<!-- # %% -->
-<!-- a = 5 -->
-<!-- b = 3 -->
-<!---->
-<!-- print(f""" -->
-<!-- a+b = {a+b} -->
-<!-- a-b = {a-b} -->
-<!-- a/b = {a/b} -->
-<!-- a*b = {a * b} -->
-<!-- a^b = {a**b} -->
-<!-- a mod b = {a%b} -->
-<!-- a '//' b = {a//b} -->
-<!-- a//b * b+ a%b = {a//b * b + a%b} -->
-<!-- """) -->
-<!---->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # ### Relational Operators -->
-<!-- # %% [markdown] -->
-<!-- # | Symbol | Task Performed | -->
-<!-- # |----|---| -->
-<!-- # | == | True, if it is equal | -->
-<!-- # | !=  | True, if not equal to | -->
-<!-- # | < | less than | -->
-<!-- # | > | greater than | -->
-<!-- # | <=  | less than or equal to | -->
-<!-- # | >=  | greater than or equal to | -->
-<!---->
-<!-- # %% -->
-<!-- z = 1 -->
-<!---->
-<!---->
-<!-- # %% -->
-<!-- z == 1 -->
-<!---->
-<!---->
-<!-- # %% -->
-<!-- z >= 1 -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # ### Bitwise Operators -->
-<!-- #  -->
-<!-- # | Symbol | Task Performed | -->
-<!-- # |----|---| -->
-<!-- # | &  | Logical And | -->
-<!-- # | l  | Logical OR | -->
-<!-- # | ^  | XOR | -->
-<!-- # | ~  | Negate | -->
-<!---->
-<!-- # %% -->
-<!-- True | False -->
-<!---->
-<!---->
-<!-- # %% -->
-<!-- True & False -->
-<!---->
-<!---->
-<!-- # %% -->
-<!-- a = 1 -->
-<!-- b = 2 -->
-<!---->
-<!-- (a == 1) & (b != 3) -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # ## Data Structures -->
-<!-- #  -->
-<!-- # ### Lists -->
-<!-- #  -->
-<!-- # Lists are arrays of different variables that can be of mixed types -->
-<!-- #  -->
-<!-- # You declare lists between squared parenthesis [...] -->
-<!---->
-<!-- # %% -->
-<!-- a = [] -->
-<!-- print(type(a)) -->
-<!---->
-<!---->
-<!-- # %% -->
-<!-- x = ['apple', 'orange', 25, 5.4] -->
-<!-- print(x) -->
-<!-- print(x[0]) -->
-<!-- # %% [markdown] -->
-<!-- # #### List access value, assign value, make a slice -->
-<!---->
-<!-- # %% -->
-<!-- x = ['apple', 'orange', 25, 5.4] -->
-<!-- #print(x) -->
-<!-- # you acceess values by position (the first element is of index 0) -->
-<!-- #print(x[0], x[3]) -->
-<!---->
-<!-- # you can change the value of elements by assignment -->
-<!-- x[3] = "new value" # I changed the value of x[3] from a float 5.4 to a string "new value" -->
-<!-- #print("new value at the index 3 = ", x[3]) -->
-<!-- #print(x) -->
-<!-- # you can access backward -->
-<!---->
-<!-- #print("last element of the list:", x[-1]) # will give you the last element of the list -->
-<!-- #print("second last element of the list:", x[-2])  -->
-<!---->
-<!-- # you can take a slice of the list x[start:stop] will extract the list elements between start and stop-1 -->
-<!-- #print(x[1:3]) -->
-<!---->
-<!-- # if you want from the begining to a value or from a value to the end -->
-<!-- print(x[:2]) -->
-<!---->
-<!---->
-<!-- print(x[2:]) -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # #### Append, insert, delete -->
-<!-- #  -->
-<!-- # you can dynamically append elements, insert elements at specific places or delete elements -->
-<!---->
-<!-- # %% -->
-<!-- x = [2, 'orange'] -->
-<!---->
-<!-- # appending -->
-<!---->
-<!-- x.append("new value 1") -->
-<!-- x.append(3) -->
-<!-- print(x) -->
-<!---->
-<!-- #inserting at a given position -->
-<!---->
-<!-- x.insert(0, "value at the begining") -->
-<!-- print(x) -->
-<!---->
-<!-- # deleting a certain value -->
-<!---->
-<!-- del x[0] -->
-<!-- print(x) -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # #### List of lists -->
-<!---->
-<!-- # %% -->
-<!-- x = [1, 2] -->
-<!-- y = ['carrot','potato'] -->
-<!-- z = [x,y] -->
-<!-- print(z) -->
-<!-- print(z[1][0]) -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # #### Built in List Functions -->
-<!-- #  -->
-<!-- # * length of a list, the minimum and maximum (if numerical list)  -->
-<!-- # * concatenation -->
-<!---->
-<!-- # %% -->
-<!-- # get length of a list -->
-<!---->
-<!-- num = [0.3, 3, 5, 8.5] -->
-<!---->
-<!-- print("length:", len(num)) -->
-<!---->
-<!-- print("minimum and maximum: ", min(num), " and ", max(num)) -->
-<!---->
-<!-- # we can concatenate lists -->
-<!---->
-<!-- print([1,2,3] + [5,4,7]) -->
-<!---->
-<!-- # %% [markdown] -->
-<!-- # ### Dictionarry -->
-<!-- #  -->
-<!-- # Dictionarry are some kind of advanced lists where the keys are however given by explicit values -->
-<!-- #  -->
-<!-- # The form is { key : value} -->
-<!---->
-<!-- # %% -->
-<!-- Dict = {'fruit': 'apple', 'vegetable': 'cucumber'} -->
-<!-- print(Dict) -->
-<!---->
-<!-- # access the value given a key -->
-<!-- print(Dict["fruit"]) -->
-<!---->
-<!-- # Adding new key values -->
-<!-- Dict['drinks'] = "water" -->
-<!-- print(Dict) -->
-<!---->
-<!-- # Adding a subdictionarry -->
-<!---->
-<!-- Dict["condiments"] = {"salty": "salt", "sugary": "caramel"} -->
-<!-- #print(Dict) -->
-<!-- #print(Dict["condiments"]) -->
-<!-- #print(Dict["condiments"]["salty"]) -->
-<!---->
-<!---->
-<!-- # %% -->
-<!---->
-<!---->
-<!---->
-<!---->
+<h2 id="data-types">Data types</h2>
+<p>Every programming language distinguishes between the nature of data.
+The basic datatypes in python are</p>
+<ul>
+<li>boolean: either <code>True</code> or <code>False</code></li>
+<li>integers: elements of <span class="arithmatex">\(\mathbb{Z}\)</span></li>
+<li>floats: elements of <span class="arithmatex">\(\mathbb{R}\)</span></li>
+<li>strings: sequence of characters <code>"Hello this is Samuel"</code></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is clear from the description of a computer that the range of available numbers is bounded (by memory).
+In particular integers will only be a bounded subset of <span class="arithmatex">\(\mathbb{Z}\)</span>.
+For floats it is even more complicated.
+Remember that <span class="arithmatex">\(\mathbb{Q}\)</span> is constructed from <span class="arithmatex">\(\mathbb{Z}\)</span> and <span class="arithmatex">\(\mathbb{R}\)</span> is constructed as the quotient of all limits of Cauchy sequences in <span class="arithmatex">\(\mathbb{Q}\)</span>.
+Since we only have access to a bounded elements of <span class="arithmatex">\(\mathbb{Z}\)</span> we can not even construct full <span class="arithmatex">\(\mathbb{Q}\)</span>.
+Furthermore quotient of limits of Cauchy sequences, since those are limit objects, can not be considered on a computer.
+Hence floats is just a subset of <span class="arithmatex">\(\mathbb{Q}\)</span> which is even discrete, meaning that the minimal distance between two floats is strictly positive which is not the case of arbitrary subsets of <span class="arithmatex">\(\mathbb{Q}\)</span>.</p>
+</div>
+<p>At any time, given a variable <code>x</code> you can assess what type python is considering for it by using the function <code>type(x)</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">my_bollean</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">my_integer</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">my_float</span> <span class="o">=</span> <span class="mf">3.1</span>
+<span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;My string&quot;</span>
+<span class="c1"># and you can print them as well as the type</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_boolean = &quot;</span><span class="p">,</span> <span class="n">my_bollean</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_integer = &quot;</span><span class="p">,</span> <span class="n">my_integer</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_float = &quot;</span><span class="p">,</span> <span class="n">my_float</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_string =&quot;</span><span class="p">,</span> <span class="n">my_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;With types:&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_bollean</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_integer</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_float</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_string</span><span class="p">))</span>
+</code></pre></div>
+<p>Note that some operations propagate accross types.
+In math, since <span class="arithmatex">\(\mathbb{Z}\subseteq \mathbb{R}\)</span> as a group, the addition between and integer <span class="arithmatex">\(n \in \mathbb{Z}\)</span> and a real number <span class="arithmatex">\(x \in \mathbb{R}\)</span> is well defined as an element of <span class="arithmatex">\(n+x \in \mathbb{R}\)</span>
+Python does the same automatically by casting the type in the correct space whenever it is unambiguous.
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">3.2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">))</span>
+</code></pre></div></p>
+<details class="note">
+<summary>Further use</summary>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Integer positive negative&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;of type&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Floats with different declarations&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span> <span class="mf">10e-2</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;of type&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">1.7</span><span class="p">))</span>
+</code></pre></div>
+</details>
+<h2 id="the-special-case-of-strings">The special case of strings</h2>
+<p>Strings in programming languages are difficult datatypes.
+Indeed, their length is not exactly defined (from a couple of characters for a name, to a milions of characters for a book).
+In python, each datatype is a class (we will see that later) hence they have many additional functionalities.
+This is in particular the case for strings which can be partially declared and formated later.</p>
+<h3 id="declaration">Declaration</h3>
+<p>Strings are declared in several ways</p>
+<ul>
+<li>Between single quotes: <code>'my string'</code></li>
+<li>Between triple single quotes: <code>'''my string'''</code></li>
+<li>Between double quotes: <code>"my string"</code></li>
+<li>Between triple double quotes: <code>"""my string"""</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">string1</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">string2</span> <span class="o">=</span> <span class="s2">&quot;Samuel.&quot;</span>
+<span class="n">string3</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Your email address is &#39;sdrapeau@saif.sjtu.edu.cn&#39;. How are you doing on this &quot;2024-02-19&quot;?&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">,</span> <span class="n">string3</span><span class="p">)</span>
+</code></pre></div>
+<details class="note">
+<summary>Single, double, triple, triple double quotes? What the heck!</summary>
+<p>There is kilometers of documentation and webpage about it, you can have a look.
+However the basic principle is that if a string contains itself a character like <code>'</code> or <code>"</code> the declaration becomes ambiguous: <code>'I'm Samuel'</code>, <code>"Let us meet at the "Da Pino" restaurant"</code>.
+In this case, those characters conflicting with the declaration of string should be <em>escaped</em> (with another character which again raises the question how to escape and escape character...)
+For ease of use, the triple (single/double) quotes allow you to define inside quotes as long as they are stricly less than three: <code>'''I'm Samuel'''</code>, <code>"""Let us meet at the "Da Pino" restaurant"""</code>
+Rule of thumb:</p>
+<ul>
+<li>Use double quotes for simple strings or messages where you know that there won't be double quotes inside</li>
+<li>if you want to use single quotes, no pb, just follow the same argumentation than for the first point</li>
+<li>Use double quote for simple <code>f-strings</code> (see after)</li>
+<li>For large string or complex <code>f-strings</code> or formated strings use triple double quote</li>
+</ul>
+</details>
+<h3 id="concatenate-strings">Concatenate strings</h3>
+<p>You can try in python that while <code>1+3.5</code> works as expected, <code>1 + "Samuel"</code> will result into an error telling that addition is not well defined between and integer and a string.
+However, the addition between strings is well defined and result in concatenation.</p>
+<div class="highlight"><pre><span></span><code><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Samuel&quot;</span>
+<span class="n">first_string</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">last_string</span> <span class="o">=</span> <span class="s2">&quot;How are you?&quot;</span>
+<span class="n">concatenated</span> <span class="o">=</span> <span class="n">first_string</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">my_name</span> <span class="o">+</span> <span class="s2">&quot;! &quot;</span> <span class="o">+</span> <span class="n">last_string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">concatenated</span><span class="p">)</span> <span class="c1"># will print `Hello Samuel! How are you?`</span>
+</code></pre></div>
+<h3 id="formatted-strings">Formatted strings</h3>
+<p>Strings in combination with the print statement are extremely useful to track what your program is doing.
+To handle strings dynamically, python allows to predefined strings that can be later formatted.
+Mathematically these are function of the kind</p>
+<div class="arithmatex">\[
+f(name, date) = \text{Hello }\{name\}\text{! Today we are }\{date\}
+\]</div>
+<p>which produces</p>
+<div class="arithmatex">\[
+f(\text{Samuel}, \text{2024-02-14}) = \text{Hello Samuel! Today we are 2024-02-14}
+\]</div>
+<p>You can declare strings to be formatted with double quotes, triple single quotes or triple double quotes.
+It is usually better to use triple double quotes.
+Place holders for the variables are indicated with curly brakets <code>{&lt;...&gt;}</code>
+Since strings are class object, you can access to the function format to format it</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Declare the string to be formated.</span>
+<span class="c1"># The place holders and names for each variables are between curly brakets</span>
+<span class="n">to_format_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Hello </span><span class="si">{name}</span><span class="s2">!</span>
+<span class="s2">Your birthdate is </span><span class="si">{birthdate}</span>
+<span class="s2">You are </span><span class="si">{age}</span><span class="s2"> years old.</span>
+<span class="s2">You weight </span><span class="si">{weight}</span><span class="s2">.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># you can pass strings, integers, floats as well as simple operations in the variables.</span>
+<span class="n">first_string</span> <span class="o">=</span> <span class="n">to_format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span>
+    <span class="n">birthdate</span> <span class="o">=</span> <span class="s1">&#39;1977-05-23&#39;</span><span class="p">,</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mi">46</span><span class="p">,</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="mi">60</span><span class="o">+</span><span class="mi">25</span>
+<span class="p">)</span>
+<span class="n">second_string</span> <span class="o">=</span> <span class="n">to_format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Irina&#39;</span><span class="p">,</span>
+    <span class="n">birthdate</span> <span class="o">=</span> <span class="s1">&#39;1992-09-15&#39;</span><span class="p">,</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="mi">70</span><span class="o">-</span><span class="mi">15</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">first_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second_string</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="shortcut-f-strings">Shortcut: <code>f-strings</code></h3>
+<p>Instead of using a formatted string as above, another way is to use the shortcut of <code>f-strings</code>.
+The main difference is that the variable inside an <code>f-string</code> must be defined before.
+The declaration is usually done with a single double quote of a triple double quote if the string might be complex.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># pre-declare the variables</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Samuel&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="c1"># get the formated string without the format function</span>
+<span class="n">my_string</span>  <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="advanced-formatting">Advanced formatting</h3>
+<p>Beyond just putting variables at different places, the format functionality allows to provide additional formating, in particular for numbers.
+This is usually done by adding <code>{&lt;...&gt;:&lt;some format code&gt;}</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="mi">73</span><span class="o">/</span><span class="mi">7</span>
+<span class="n">num3</span> <span class="o">=</span> <span class="mf">0.45622</span>
+
+<span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">We have:</span>
+<span class="s2">An integer: </span><span class="si">{number1}</span>
+<span class="s2">two floats: </span><span class="si">{number2}</span><span class="s2"> and </span><span class="si">{number3}</span>
+
+<span class="s2">I can appy formating with :.xf or :.x% where</span>
+<span class="s2"> - x represent the number of significant digits</span>
+<span class="s2"> - f/</span><span class="si">% r</span><span class="s2">epresent if float formating or percent formating (will multiply by 100)</span>
+
+<span class="s2">Formated Floats (works for int): </span><span class="si">{number1:.2f}</span><span class="s2"> </span><span class="si">{number2: .4f}</span>
+<span class="s2">Formated percent: </span><span class="si">{number3:.2%}</span><span class="s2"> and </span><span class="si">{number3:.0%}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">my_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number1</span> <span class="o">=</span> <span class="n">num1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">num2</span><span class="p">,</span> <span class="n">number3</span> <span class="o">=</span> <span class="n">num3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="operators">Operators</h2>
+<p>Now that we have datatype and can define variable, we must describe the basic operators necessary for manipulating these variables.</p>
+<h3 id="arithmetic-operators">Arithmetic operators</h3>
+<p>The simple Arithmetic operators are just what it means.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Task Performed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">+</td>
+<td style="text-align: left;">Addition</td>
+</tr>
+<tr>
+<td style="text-align: center;">-</td>
+<td style="text-align: left;">Subtraction</td>
+</tr>
+<tr>
+<td style="text-align: center;">/</td>
+<td style="text-align: left;">Division</td>
+</tr>
+<tr>
+<td style="text-align: center;">*</td>
+<td style="text-align: left;">Multiplication</td>
+</tr>
+<tr>
+<td style="text-align: center;">%</td>
+<td style="text-align: left;">Modulus</td>
+</tr>
+<tr>
+<td style="text-align: center;">//</td>
+<td style="text-align: left;">Floor division</td>
+</tr>
+<tr>
+<td style="text-align: center;">**</td>
+<td style="text-align: left;">To the power of</td>
+</tr>
+</tbody>
+</table>
+<p>As for the euclidean division, remember that for two integers <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\neq 0\)</span>, there exists unique integers <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(n\)</span> such that</p>
+<ul>
+<li><span class="arithmatex">\(a = m  b + n\)</span></li>
+<li><span class="arithmatex">\(0\leq n &lt; |b|\)</span></li>
+</ul>
+<p>In python this euclidean division is performed using the floor division and the mod, that is <code>a = a//b * b + a%b</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># in the following f-string the symbol \t stands for a tab space (usually 4 spaces)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">addition:</span><span class="se">\t</span><span class="s2"> a+b = </span><span class="si">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="si">}</span>
+<span class="s2">substraction:</span><span class="se">\t</span><span class="s2"> a-b = </span><span class="si">{</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="si">}</span>
+<span class="s2">division:</span><span class="se">\t</span><span class="s2"> a/b = </span><span class="si">{</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="si">}</span>
+<span class="s2">multiplication:</span><span class="se">\t</span><span class="s2"> a*b = </span><span class="si">{</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="si">}</span>
+<span class="s2">power:</span><span class="se">\t</span><span class="s2"> a^b = </span><span class="si">{</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="si">}</span>
+<span class="s2">modulus:</span><span class="se">\t</span><span class="s2"> a mod b = </span><span class="si">{</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="si">}</span>
+<span class="s2">floor division:</span><span class="se">\t</span><span class="s2"> a &#39;//&#39; b = </span><span class="si">{</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="si">}</span>
+<span class="s2">Hence: </span><span class="se">\t</span><span class="s2"> a//b * b+ a%b = </span><span class="si">{</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="relational-operators">Relational Operators</h3>
+<p>The relational operators are binary relations.
+In math, a binary relation <span class="arithmatex">\(R\)</span> on some set <span class="arithmatex">\(X\times Y\)</span> returns for each tuple <span class="arithmatex">\((x,y)\)</span> either <span class="arithmatex">\(1\)</span> (true) or <span class="arithmatex">\(0\)</span> (false) written as <span class="arithmatex">\(xRy\)</span>.</p>
+<p>The classical but fundamental operators are as follows</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Task Performed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">==</td>
+<td style="text-align: left;">True, if left and right sides are equal</td>
+</tr>
+<tr>
+<td style="text-align: center;">!=</td>
+<td style="text-align: left;">True, if left and right are not equal</td>
+</tr>
+<tr>
+<td style="text-align: center;">&lt;</td>
+<td style="text-align: left;">Less than</td>
+</tr>
+<tr>
+<td style="text-align: center;">&gt;</td>
+<td style="text-align: left;">Greater than</td>
+</tr>
+<tr>
+<td style="text-align: center;">&lt;=</td>
+<td style="text-align: left;">Less than or equal to</td>
+</tr>
+<tr>
+<td style="text-align: center;">&gt;=</td>
+<td style="text-align: left;">Greater than or equal to</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="c1"># define z with equal</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># test is z is equal to 1 WITH two consecutive equal ==</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">z is equal to 1: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span>
+<span class="s2">z is equal to 1: </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">z</span><span class="si">}</span><span class="s2"> # note that it is as expected symetric</span>
+<span class="s2">z is different of 2: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span>
+<span class="s2">z is strictly greater than 4: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="bitwise-operators">Bitwise Operators</h3>
+<p>Bitwize operation are also binary relations related to logic.
+They are called bitwize since they are defined on the logic Boolean algebra <code>{True, False}</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol</th>
+<th style="text-align: left;">Task Performed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">&amp;</td>
+<td style="text-align: left;">Logical And</td>
+</tr>
+<tr>
+<td style="text-align: center;">l</td>
+<td style="text-align: left;">Logical OR</td>
+</tr>
+<tr>
+<td style="text-align: center;">^</td>
+<td style="text-align: left;">XOR</td>
+</tr>
+<tr>
+<td style="text-align: center;">~</td>
+<td style="text-align: left;">Negate</td>
+</tr>
+</tbody>
+</table>
+<p>Note that XOR is True only when the left and right are strictly different.
+However XOR can be derived from elementary operation </p>
+<p><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">True or False is: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
+<span class="s2">True and False is: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
+<span class="s2">The negation of True is: </span><span class="si">{</span><span class="o">~</span><span class="kc">True</span><span class="si">}</span>
+<span class="s2">True xor False (exclusive or): </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
+<span class="s2">True xor True: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="kc">True</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+The main use of those bitwize operators is within control flows we will see later in combination with the relational operators
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a is equal to 1 and b is different of 3 is </span><span class="si">{</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a is negative and b is different of 3 is </span><span class="si">{</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="data-structures">Data Structures</h2>
+<p>Aside basic data types such as int, floats or strings, python allows for more advanced data structures, which can be considered as containers of variables.
+They come in four forms: tuple, lists, sets, dictionaries.
+They distinguish themselves by the properties</p>
+<ul>
+<li>Mutable: can be modified (append, delete, change value)</li>
+<li>Ordered: if an inherent order is defined for the objects in the container</li>
+<li>Duplicates: if elements in the container can have duplicated values.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Tuple</th>
+<th style="text-align: center;">Lists</th>
+<th style="text-align: center;">Dictionaries</th>
+<th style="text-align: center;">Sets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mutable</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ordered</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Duplicate</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+</tr>
+</tbody>
+</table>
+<p>With these properties in mind, the most widely used object remains lists and dictionaries.
+Tuple are sometimes good as function returns or arguments and sets are used if you want to prevent duplicates and do not care about ordering.</p>
+<p>We therefore present lists and dictionary thereafter and shortly tuple and sets in the end.</p>
+<h3 id="lists">Lists</h3>
+<p>Lists can be viewed as arrays of variables that can be of mixed type.
+Those arrays can be expanded or shrunken, modified.
+They are ordered as the elements are all associated with an index starting from <code>0</code> and ending with <code>N-1</code> where <code>N</code> is the length of the list.</p>
+<ul>
+<li><strong>Declare</strong>: between squared parenthesis <code>x = [x0, x1, ..., x_{N-1}]</code></li>
+<li><strong>Properties</strong>: function length <code>len(x)</code> returns the length of the list <code>N</code></li>
+<li><strong>Access</strong>: <ul>
+<li>element <code>x[k]</code> represent the value of the array at the <code>k</code>th. position</li>
+<li>backward: <code>x[-1]</code> is for <code>x[N-1]</code>, <code>x[-2]</code> is for <code>x[N-2]</code> etc.</li>
+</ul>
+</li>
+<li><strong>Slice</strong>: extract sub array:<ul>
+<li><code>x[start:end]</code> is equal to the array <code>[x[start], x[start+1],..., x[end-1]]</code></li>
+<li><code>x[:end]</code> is equal to the array <code>[x[0], ..., x[end-1]]</code></li>
+<li><code>x[start:]</code> is equal to the array <code>[x[start], ..., x[N-1]]</code></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remember that arrays in python are enumerated starting from <code>0</code> and not <code>1</code> like is usual in math. Hence, the last element of an array is <code>x[N-1]</code> for an array of size <code>N</code></p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1"># declare an empty array</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empty array </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> of length </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2"> and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># declare a heterogeneous array</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Hetegrogeneous array: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">of length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Access values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">First element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Third element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Last element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Slice</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Slice from 1 to 3 (exclusive): </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Slice from begining to 3 (exclusive): </span><span class="si">{</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Slice from 2 (inclusive) to end: </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Since lists are mutable, you can </p>
+<ul>
+<li><strong>Change values</strong>: 
+    <code>x[k] = some_val</code> change the value of the element at the <code>k</code>th position to <code>some_val</code></li>
+<li><strong>Append values</strong>: 
+    <code>x.append(some_val)</code> append <code>some_val</code> at the end of the array.
+    The new length is modified to <code>N+1</code></li>
+<li><strong>Insert values</strong>: 
+    <code>x.insert(k, some_val)</code> insert <code>some_val</code> at position <code>k</code>.
+    Each previous value between <code>k</code> and <code>N-1</code> is shifted to positions <code>k+1</code> and <code>N</code> with a new length of <code>N+1</code></li>
+<li>
+<p><strong>Remove specific item</strong>: 
+    <code>x.remove(some_val)</code> removes <code>some_val</code> from the array if it is present.
+    If there are multiple instance of which, it will remove the first occurrence.</p>
+<p><em>Be careful with this function as the objective is not bijective due to the fact that duplicate values might be in the array.</em>
+* <strong>Remove specific indexed value</strong>:
+<code>x.pop(k)</code> remove the <code>k</code>th element resulting in <code>N-1</code> length array.
+This is the prefered way as it is explicit.
+Furthermore, while the function <code>x.pop(k)</code> remove the item it also returns the value.
+In other term <code>val = x.pop(k)</code> result in <code>x</code> without the <code>k</code>th value and <code>val</code> containing the former value <code>x[k]</code>.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">]</span>
+
+<span class="c1"># append the string &quot;new value&quot; at the 4th position of the array</span>
+<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;new value&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">x after appending &quot;new value&quot; at the last position:</span>
+<span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># insert an integer 25 at position 1</span>
+<span class="n">x</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">x after inserting 25 at position 1:</span>
+<span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># remove the value 25 from the array (be carefull there are two so it removes the first)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">x after removeing (the first occurence of) 25:</span>
+<span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># remove the element at position 1</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">x after removing the value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2"> at position 1:</span>
+<span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Since list elements can be made of every elements, you can also construct list of lists as well as concatenate them as strings.</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;carrot&#39;</span><span class="p">,</span><span class="s1">&#39;potato&#39;</span><span class="p">]</span>
+<span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">]</span>
+<span class="n">concat</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">First list x:</span><span class="se">\t</span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">Second list y:</span><span class="se">\t</span><span class="si">{</span><span class="n">y</span><span class="si">}</span>
+<span class="s2">List of lists [x, y] =</span><span class="se">\t</span><span class="si">{</span><span class="n">z</span><span class="si">}</span>
+<span class="s2">Accessing the second element of the first list in [x, y]:</span><span class="se">\t</span><span class="si">{</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Concatenation of lists x + y:</span><span class="se">\t</span><span class="si">{</span><span class="n">concat</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="dictionaries">Dictionaries</h3>
+<p>Dictionaries are collections of <code>key/value</code> pairs.
+Like in a classical dictionary where a specific word is associated to a definition.
+As words in a classical dictionary, keys are unique, however values can be non unique.
+It is similar to a list where the integer indices of the list are replaced by unique however arbitrary keys.</p>
+<ul>
+<li><strong>Declare</strong>: between curly brakets <code>x = {'keys': val1, 'key2' = val2}</code></li>
+<li><strong>Properties</strong>:<ul>
+<li>function length <code>len(x)</code> returns the length of the dictionary (is however of limited use)</li>
+<li>function listing keys <code>x.keys()</code> returns the list of the keys.</li>
+</ul>
+</li>
+<li><strong>Access</strong>: <ul>
+<li>element <code>x['key']</code> represent the value of the dictionary for the key <code>key</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># declare an empty dictionary</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empty dictionary </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> of length </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2"> and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># declare a dictionary</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Dictionary: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">of length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Access values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Value of key fruit:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;fruit&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">Value of key vegetable:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;vegetable&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">List of the keys:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+<p>As lists, dictionary are mutable, you can </p>
+<ul>
+<li><strong>Change values</strong>: 
+    <code>x['key'] = some_val</code> change the value for the key <code>key</code> to <code>some_val</code></li>
+<li><strong>Add values</strong>: 
+    <code>x['new_key'] = val</code> adds a new key (if it does not exists otherwize it overwrites the existing value) with value <code>new_val</code>.</li>
+<li><strong>Remove specific key/value</strong>:
+    <code>x.pop('key')</code> remove the key value for key <code>key</code>.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>There are other methods for dictionary such as <code>x.popitem()</code> that removes the last inserted key.
+Even if in Python a dictionary is considered as not ordered, it keeps internally an order.
+Therefore in terms of philosophy this method should not be used.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
+
+<span class="c1"># change the value &#39;apple&#39; of key `fruit` to `orange`</span>
+<span class="n">x</span><span class="p">[</span><span class="s1">&#39;fruit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orange</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Dictionary with new value orange for key fruit: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Add a new item `meat` with value `steak`</span>
+<span class="n">x</span><span class="p">[</span><span class="s1">&#39;meat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;steak&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">x after adding a new key/value pair:</span>
+<span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="c1"># remove the key `vegetable` from the dictionary</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">[</span><span class="s1">&#39;vegetable&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">x after removing the key `vegetable` with value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2">:</span>
+<span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>As lists, the value of every key/value pair in a dictionary can be of every nature.
+In other terms you can build for instance dictionaries of dictionaries that are quite often used for web development (a form of no-sql structure for data).</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
+
+<span class="c1"># Adding a subdictionary</span>
+<span class="n">x</span><span class="p">[</span><span class="s2">&quot;condiments&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;salty&quot;</span><span class="p">:</span> <span class="s2">&quot;salt&quot;</span><span class="p">,</span> <span class="s2">&quot;sugary&quot;</span><span class="p">:</span> <span class="s2">&quot;caramel&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">We now have a dictionary with a sub dictionary</span>
+<span class="si">{</span><span class="n">x</span><span class="si">}</span>
+<span class="s2">The subdictionarry can be accessed</span>
+<span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;condiments&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">and its elements too</span>
+<span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;condiments&#39;</span><span class="p">][</span><span class="s1">&#39;salty&#39;</span><span class="p">]</span><span class="si">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
 
 
 
