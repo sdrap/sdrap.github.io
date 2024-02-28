@@ -626,7 +626,7 @@
 
 
 <h1 id="scientific-programming-an-introduction">Scientific Programming - An Introduction</h1>
-<p>The present lecture notes, <em>heavily under construction</em>,s are on-going notes for a class taught at SJTU for Math undergraduate students.</p>
+<p>The present lecture notes, <em>heavily under construction</em>, are on-going notes for a class taught at SJTU for Math undergraduate students.</p>
 <h2 id="what-is-this-lecture-not-about">What is this lecture NOT about</h2>
 <ul>
 <li>NOT about computer theory</li>
@@ -636,11 +636,12 @@
 </ul>
 <h2 id="who-is-this-lecture-for">Who is this lecture for</h2>
 <ul>
-<li>Introdution to programming with emphasis from a mathematical viewpoint and formalism</li>
-<li>Understanding programming from a fundamental viewpoint rather than technical one (ChatGPT does the technique)</li>
+<li>Anyone without or modest background in programming</li>
 <li>Don't need to be a math wizz just basic calculus and algebra are needed</li>
-<li>Implement scientic computations</li>
-<li>Handling data in an organized fashion</li>
+<li>Emphasis from a mathematical viewpoint and formalism. Is however not compulsory to follow.</li>
+<li>Anyone who wants to understand programming from a fundamental rather than technical viewpoint (ChatGPT does the technique)</li>
+<li>Anyone who wants to implement scientic computations</li>
+<li>Anyone who want to handle data in an organized fashion</li>
 </ul>
 <h2 id="what-to-expect">What to expect</h2>
 <p>At the end of this lecture you should be able among others to</p>
@@ -651,28 +652,31 @@
 <li>Organize and implement a complex project with the right choice of tools and architecture.</li>
 </ul>
 <h2 id="python-as-main-programming-language">Python as main programming language</h2>
-<p>The choive of the programming language for this lecture is <a href="https://www.python.org/">Python</a> for the following reasons:</p>
+<p>The choice of the programming language for this lecture is <a href="https://www.python.org/">Python</a> for the following reasons:</p>
 <h3 id="natural-syntax">Natural Syntax:</h3>
 <p>Compare C++
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream.h&gt;</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
+<div class="language-C++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream.h&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</span></code></pre></div>
 with Python
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
-</code></pre></div></p>
-<p>As mathematicians it is also one of the languages that is the closest to the mathematical formalism which usually require <strong>write less, express more conceptually</strong>.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+<p>As mathematicians it is also a language that is close to the colloquial mathematical formalism: <strong>write less, express more conceptually</strong>.</p>
 <h3 id="portable">Portable:</h3>
 <ul>
-<li>Python, as R for instance, is a scripting language. You can run pieces of code <em>on the go</em> and see the result. This makes it easy to prototype and test ideas. It has however several drawbacks if not used correctly.</li>
-<li>Since there is no need to compile the code can be ported on any operating system supporting python (Linux, Mac, Windows, Android, IOS, etc.)</li>
+<li>Python, as R for instance, is a scripting language.
+    You can run pieces of code <em>on the go</em> and see the result.
+    This makes it easy to prototype and test ideas.
+    This comes however with several drawbacks if not used correctly.</li>
+<li>Since there is no need to compile, the code can be ported on any operating system supporting python (Linux, Mac, Windows, Android, IOS, etc.)</li>
 </ul>
 <h3 id="versatile">Versatile</h3>
 <ul>
-<li>General purpose language (OO or functional programing can be used formally)</li>
-<li>Application for data analysis and ML but also website, automating tasks, etc.</li>
+<li>General purpose language (OO or functional programming can be used formally for instance)</li>
+<li>Application for data analysis, automation, machine learning, but also website, API deployment, etc.</li>
 <li>Can interact with other languages relatively easily</li>
 <li>Good balance between low and high level language</li>
 </ul>
@@ -681,7 +685,8 @@ with Python
 <li>Presently among the top 3 most used programming language</li>
 <li>First language of choice for data analysis, machine learning, AI</li>
 <li>
-<p>Immense, well maintained and <strong>open sourced</strong> major libraries to name but a few:</p>
+<p>Immense, well maintained and <strong>open sourced</strong> major libraries.
+    To name but a few:</p>
 <ul>
 <li><code>numpy</code>, <code>pyarrow</code>, <code>pandas</code> for multidimensional arrays and tabular data</li>
 <li><code>scipy</code>, <code>statsmodels</code>, <code>nlop</code> for scientific computing</li>
@@ -697,11 +702,11 @@ with Python
 <p>Familiarity with python and the related data anlysis libraries is now required for most jobs</p>
 <ul>
 <li>Financial industry, CS, data analysis companies, etc.</li>
-<li>Automation tasks, web.</li>
-<li>As a basic command of excel was required several years ago, now it is Python.</li>
+<li>Web UI, app, API companies.</li>
+<li>A basic command of excel was required several years ago, now it is Python.</li>
 </ul>
 <h3 id="open-source"><strong>OPEN SOURCE</strong></h3>
-<p>Python has been created as a programming language by <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> who released the program language and maintained it for over 30 years as an open source language.</p>
+<p>Python has been created as a programming language by <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> who released the program language and maintained it for over 30 years as an <strong>open source</strong> project.</p>
 <p><img alt="Image title" src="images/beer.jpg" /></p>
 <p>Open source ecosystem allowed to have large communities working across the world to develop the ecosystem.
 Furthermore, it is an essential auditing process so as to see if the language does what it shall.</p>
@@ -753,7 +758,7 @@ Furthermore, it is an essential auditing process so as to see if the language do
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate", "content.tabs.link"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
