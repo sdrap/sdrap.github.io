@@ -465,7 +465,7 @@
         <li class="md-nav__item">
   <a href="#if-then-else" class="md-nav__link">
     <span class="md-ellipsis">
-      If then else
+      If, then, else
     </span>
   </a>
   
@@ -571,12 +571,11 @@
 
 
 <h1 id="control-flow-statements">Control Flow Statements</h1>
-<p>So far we have some basic operation with a computer with data (simple or structured).
-However, in order to du computations beyond simple arithemtic we need deal with objects such as recursive sequences</p>
+<p>So far we have datatype for variables and basic operations to deal with.
+However, in order to perform computations beyond simple arithmetic we need to deal with things such as</p>
 <div class="arithmatex">\[
 \begin{align}
-u_0 &amp; = x&amp;
-\text{and for }n \geq 0 &amp; &amp;
+u_0 &amp; = x\\
 u_{n+1} &amp;= 
 \begin{cases}
 \alpha u_n + \beta &amp; \text{ if } u_n&gt;0\\
@@ -584,196 +583,210 @@ u_{n+1} &amp;=
 \end{cases}
 \end{align}
 \]</div>
-<p>Such a simple construction requires for the computer to master two things</p>
+<p>which are the backbones for functions and computation overall.
+Such a simple construction requires the computer to master two things</p>
 <ol>
 <li>Conditional evaluation (the if section)</li>
 <li>Induction (go from n to n+1)</li>
 </ol>
-<p>From a programming langauge viewpoint these two fundamental flows are implemented in different form but are all present.
+<p>From a programming language viewpoint these two fundamental flows are implemented in different form but are all present.
 The two basic ones are</p>
 <ul>
 <li><code>if then else</code> Conditional evaluation</li>
 <li><code>for loops</code> inductions</li>
 </ul>
-<p>Several alternative that can be derived from them are
-* <code>case</code> choice between alternatives
-* <code>go to</code> (fortran style) allows to jump in the code
-* <code>while</code> do something while a condition is True
-* etc.</p>
-<p>In python we will only concentrate on <code>if then else</code> as well as <code>for loops</code> as they are sufficient to express all conditions. (with exception of while that are some sorm of unbounded inductions but can lead to issues in a bounded environment such as a computer)</p>
-<h2 id="if-then-else">If then else</h2>
-<p>This conditional function allows to evaluate if something is true or false and acts upon it</p>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is indeed greater than 5, fantastic&quot;</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fantastic&#39;</span><span class="p">)</span>  <span class="c1"># is not printed since now x&lt;5</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this line is executed since it is out of the scope of the if statement&quot;</span><span class="p">)</span>
-</code></pre></div>
+<p>For the moment we will concentrate on these two as they are the prominent ones.</p>
+<details class="note">
+<summary>Other control flows</summary>
+<p>Control flows are not bounded to these two ones.
+You also have in different programming languages as well as python some of those</p>
+<ul>
+<li><code>while</code> do something while a condition is true</li>
+<li><code>case</code> choice between alternatives (no in python in this form but in combination with match)</li>
+<li><code>match</code> match a condition to a branch of code</li>
+<li><code>go to</code> (fortran style, not in python) allows to jump in the code</li>
+<li><code>while</code> do something while a condition is True</li>
+</ul>
+<p>One can also mention <code>try</code> in combination with <code>except</code> to catch errors.</p>
+<p>Furthermore those control flows are paired with <code>break</code>, <code>continue</code>, <code>pass</code> etc. which we will see later in the lecture.</p>
+</details>
+<h2 id="if-then-else">If, then, else</h2>
+<p>This conditional flow allows to evaluate if something is true or false and acts upon it</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is indeed greater than 5, fantastic&quot;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fantastic&#39;</span><span class="p">)</span>  <span class="c1"># is not printed since now x&lt;5</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this line is executed since it is out of the scope of the if statement&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The evaluation is given by <code>if ....:</code> and then the code to implement if <code>True</code> is processed below but with indentation (at least 2 space, usually one tab which is 4 spaces).
 Normally your code editor register it.
-It is elegant however prone to errors since the begining and the end of the condition is given by this indentation.
-Indeed, wether true or false everything after which is not indented will be processed. </p>
+It is elegant however prone to errors since the beginning and the end of the condition is given by this indentation.
+Indeed, whether true or false everything after which is not indented will be processed. </p>
 </div>
 <p>We can add an alternative execution if the result of the evaluation is <code>False</code> using the keyword <code>else</code>.
-We can also compose the condition executions.
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">6</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cool </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is indeed different of 6&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Uncool </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is equal to 6&#39;</span><span class="p">)</span>
-
-<span class="c1"># Combining conditions</span>
-<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;super cool&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Also ok&#39;</span><span class="p">)</span>
-<span class="k">else</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cool&#39;</span><span class="p">)</span>
-</code></pre></div>
+We can also compose the control flow with corresponding indentation.
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">6</span><span class="p">:</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cool </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is indeed different of 6&#39;</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Uncool </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1"> is equal to 6&#39;</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># Combining conditions</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;super cool&quot;</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Also ok&#39;</span><span class="p">)</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="k">else</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;cool&#39;</span><span class="p">)</span>
+</span></code></pre></div>
 You can also combine several conditions using the <code>elif</code> statement that will evaluate an alternative statement before going forward
-<div class="highlight"><pre><span></span><code><span class="n">x</span><span class="o">=</span> <span class="mi">5</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cool </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is equal to 6&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;that ok, </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is still smaller than 6&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;that&#39;s not cool </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is greater than 6&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The program continues&quot;</span><span class="p">)</span>
-</code></pre></div></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">x</span><span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">6</span><span class="p">:</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cool </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is equal to 6&quot;</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">6</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;that ok, </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is still smaller than 6&quot;</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;that&#39;s not cool </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> is greater than 6&quot;</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The program continues&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Be aware that this control flow will be executed sequentially.
-In other terms it evaluate one condition after the other and if one is <code>True</code> it will execute it and jump out of the control flow</p>
+In other terms it evaluates one condition after the other.
+The first branch evaluated as <code>True</code> will be executed and the program then jumps out of the control flow to continue at the first lower level of indentation.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="c1"># if x is smaller than 1 you want to print cool</span>
-<span class="c1"># if x is smaller than 0 you want to print super cool</span>
-<span class="c1"># otherwize this is uncool</span>
-
-<span class="c1"># wrong implementation for x = 0.5 where you should print super cool</span>
-<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cool&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Super cool&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not ok it is greater or equal than 1 &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End of wrong condition flow&quot;</span><span class="p">)</span>
-<span class="c1"># in this conditional sequence the first evaluation is true and executed</span>
-<span class="c1"># and then the statement is exited</span>
-
-<span class="c1"># The right way to do it is to evaluate from larger to narrower condition</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Super cool&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cool&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not ok it is greater or equal than 1 &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End of correct condition flow&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># if x is smaller than 1 you want to print cool</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># if x is smaller than 0 you want to print super cool</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># otherwize this is uncool</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># wrong implementation for x = 0.5 where you should print super cool</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cool&quot;</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Super cool&quot;</span><span class="p">)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not ok it is greater or equal than 1 &quot;</span><span class="p">)</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End of wrong condition flow&quot;</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="c1"># in this conditional sequence the first evaluation is true and executed</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1"># and then the statement is exited</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1"># The right way to do it is to evaluate from larger to narrower condition</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Super cool&quot;</span><span class="p">)</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="k">elif</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cool&quot;</span><span class="p">)</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not ok it is greater or equal than 1 &quot;</span><span class="p">)</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;End of correct condition flow&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="for-loop">For loop</h2>
 <p>For loops allows to realize induction (at least bounded).
 The idea is to iterate through numbers and do something.
 In order to do so, we need to define the object over which we iterate (is called an iterator).
 In any programming languages you can iterate through a range of integers.
 In python such an iterator of integers is called a <code>range</code>.
-With such iterator at hand we can loop through them one element after the other using <code>for n in range(5)</code></p>
-<div class="highlight"><pre><span></span><code><span class="n">my_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># a range of integers from 0 to 4</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_range</span><span class="p">)</span>
-
-<span class="c1"># we can now loop through it</span>
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We are at the stage </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> of the loop&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We can conduct operations for instance squaring </span><span class="si">{</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">myrange</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># a range of integers from 1 to 4</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_range</span><span class="p">)</span>
-</code></pre></div>
-<p>In any programming languages, integer iterators are defined and the backbone of computations.
-However as python is a higher level programming language, iterators can be of higher levels.
-In particular, lists or dictionaries are iterator (be aware that dictionaries are assumed to be unordered, however have an internal counter about the sequence at which key/values have bee inserted and the iterator will take this order).</p>
-<div class="highlight"><pre><span></span><code><span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-                 <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
-                 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
-
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">list_of_lists</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sublist </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># alternative</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">)):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sublist </span><span class="si">{</span><span class="n">list_of_lists</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
+With such an iterator at hand we can loop through them one element after the other using <code>for n in range(5)</code></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">my_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># a range of integers from 0 to 4</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_range</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># we can now loop through it</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We are at the stage </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2"> of the loop&quot;</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;We can conduct operations for instance squaring n resulting in </span><span class="si">{</span><span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">myrange</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># a range of integers from 1 to 4</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_range</span><span class="p">)</span>
+</span></code></pre></div>
+<p class="annotate">In any programming languages, integer iterators are defined and the backbone of computations.
+However as python is a higher level programming language, iterators can also be of higher levels.
+In particular, lists or dictionaries are iterators.(1)</p>
+<ol>
+<li><img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> Be aware that dictionaries are assumed to be unordered.
+    However they have an internal counter about the sequence at which key/values have been inserted and the iterator will take this order.</li>
+</ol>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                 <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                 <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">list_of_lists</span><span class="p">:</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sublist </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># alternative</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nb">len</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">)):</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sublist </span><span class="si">{</span><span class="n">list_of_lists</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Remember that for lists and dictionary both are the same with the exception that the index in lists is a key in dictionary.
 When you enumerate in both of them you can access to the (index or key)/value using a tuple.</p>
 <ul>
 <li>Lists: <code>enumerate(x)</code> returns an interator <code>(n, x[n])</code> for  <code>n</code> in <code>range(len(x))</code></li>
 <li>Dictionary: <code>x.items()</code> returns an iterator <code>(key, val)</code> for each <code>key</code> in <code>x.keys()</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;first val&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">5.6</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2"> of the list at index </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
-
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2"> of the dictionary for the key </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;first val&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">5.6</span><span class="p">]</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2"> of the list at index </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2"> of the dictionary for the key </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="example-the-fibonacci-numbers">Example, the Fibonacci Numbers</h2>
-<p>The Fibonacci sequence, is a recursive sequence of depth two.</p>
-<p>Given start values <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, the sequence <span class="arithmatex">\(u_0,u_1,\ldots, u_n,\ldots\)</span> is defined as</p>
+<p>The Fibonacci sequence, is a recursive sequence <span class="arithmatex">\(u_0,u_1,\ldots, u_n,\ldots\)</span> given by</p>
 <div class="arithmatex">\[
 \begin{equation}
-  u_{n+2}=u_{n+1}+u_n \quad \text{for }n\geq 0
+  u_{n+2}=u_{n+1}+u_n 
 \end{equation}
 \]</div>
 <p>with start values <span class="arithmatex">\(u_0=a\)</span> and <span class="arithmatex">\(u_1=b\)</span>.</p>
-<p>We compute and print the ten first fibonacci numbers</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-    <span class="c1"># temporary store the value of u_{n+1} into c</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">b</span>
-    <span class="c1"># assign u_n + u{n+1} into b</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="c1"># assign the value u_{n+1} into b</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">c</span>
-    <span class="c1"># after these operations, given a = u_n and b = u_{n+1}</span>
-    <span class="c1"># you shift a = u_{n+1} and b = u_n + u_{n+1} = u_{n+2}</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">th Fibonacci number if </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># more elegant implementation using the fact that you can allocate tuples</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">th Fibonacci number if </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
+<p>We compute and print the ten first Fibonacci numbers</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="c1"># temporary store the value of u_{n+1} into c</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">c</span> <span class="o">=</span> <span class="n">b</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="c1"># assign u_n + u{n+1} into b</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="c1"># assign the value u_{n+1} into b</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">c</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="c1"># after these operations, given a = u_n and b = u_{n+1}</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="c1"># you shift a = u_{n+1} and b = u_n + u_{n+1} = u_{n+2}</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">th Fibonacci number if </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="c1"># more elegant implementation using the fact that you can allocate tuples</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The </span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">th Fibonacci number if </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="assignment-by-loops">Assignment by loops</h2>
 <p>Python has a very handy way to build up objects with <code>in line</code> loops.
-This is handy but can not be extended to complex construction.</p>
-<p>Suppose that we want to plot at some point the function <span class="arithmatex">\(x \mapsto f(x) = x^2\)</span>.
+This is practical but can not be extended to complex constructions.</p>
+<p>Suppose that we want to plot the function <span class="arithmatex">\(x \mapsto f(x) = x^2\)</span>.
 In order to do so, you need the graph, that is a list a values of <span class="arithmatex">\(x\)</span> in a given range as well as a list of corresponding values of <span class="arithmatex">\(x^2\)</span>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># construct a list of equidistant 11 values of x between 0 and 1 iterating over some range</span>
-<span class="n">x_axis</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="o">/</span><span class="mi">10</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
-<span class="c1"># get the square of them by iterating over x_axis</span>
-<span class="n">y_axis</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_axis</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">The x axis values are:</span><span class="se">\t</span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">The y axis values are:</span><span class="se">\t</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> </span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># construct a list of equidistant 11 values of x between 0 and 1 iterating over some range</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">x_axis</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="o">/</span><span class="mi">10</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)]</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1"># get the square of them by iterating over x_axis</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="n">y_axis</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_axis</span><span class="p">]</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="s2">The x axis values are:</span><span class="se">\t</span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="s2">The y axis values are:</span><span class="se">\t</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> </span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 
 
 
@@ -817,7 +830,7 @@ In order to do so, you need the graph, that is a list a values of <span class="a
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>

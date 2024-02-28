@@ -589,6 +589,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuples
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -688,106 +697,114 @@
 
 
 <h1 id="basic-operations-data-types">Basic Operations, Data Types</h1>
-<p>We start with the most simple example, namely a constant function that will print a message
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
-</code></pre></div></p>
-<p>Note that you can put comments in the code that is ignored by python.
-These pieces of code to ignore are indicated by <code>#</code> character</p>
-<p><div class="highlight"><pre><span></span><code><span class="c1"># We want to print Hello world</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
-<span class="c1"># We next print a date</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Today is 2024-02-14&quot;</span><span class="p">)</span>
-</code></pre></div>
-As your code will start to get longer and longer it is well advised to comment the most important steps so that you can come back and understand what you do, as well as other people can rapidly follow what you are coding.</p>
+<p>Beforehand, let us just write our first program
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+Fairly easy, it is a constant function that prints a message.</p>
+<p>Note that you can put comments in the code that is then ignored by python.
+These lines to be ignored are indicated by <code>#</code> character</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># We want to print Hello world</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># We next print a date</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Today is 2024-02-14&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>As your code starts to get longer, it is well advised to comment the most important steps.</p>
+<ol>
+<li>When you come back to this code several months later, you can rapidly understand what you did.</li>
+<li>When others use your code (you just don't code for yourself) they can also rapidly follow what you are coding.</li>
+</ol>
 <h2 id="variables">Variables</h2>
 <p>In math, declaring variables is bottom line and done like</p>
 <div class="arithmatex">\[
 \text{Let }a =\sqrt{\pi}
 \]</div>
 <p>In python this is the same way
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is now:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></div></p>
-<div class="admonition warning">
-<p class="admonition-title">Equal is not Equal</p>
-<p>In math the symbol <span class="arithmatex">\(=\)</span> has a very special meaning, it is a binary relation which is transitive, symetric and antisymetric.
-But it is also colloquialy used as definition such as let <span class="arithmatex">\(x = \sqrt{\pi}\)</span>.
-In python <code>=</code> means definition or assignment.
-It is not a reflexive relation meaning that <code>1 =a</code> (if <code>a</code> was not defined before) will not work.
-Also <code>a =1</code> and <code>b=2</code>, then <code>a=b</code> is not true mathematically, while in python it just reassign <code>b</code> to <code>a</code>.</p>
-</div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is now:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</span></code></pre></div></p>
 <p>Variables are mutable, means that another assignation will override it</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value of a is&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is now&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value of a is&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is now&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Variable can be assigned to other variables.
 Those assignations are copies and therefore independent objects</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;and the value of b is&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="c1"># If I reassign a it will change a but not b --&gt;</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is now&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;and the value of b remains&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;and the value of b is&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># If I reassign a it will change a but not b --&gt;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">6</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The value of a is now&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;and the value of b remains&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Equal is not Equal</p>
+<p>In math the symbol <span class="arithmatex">\(=\)</span> has a very special meaning, it is a binary relation which is in particular symmetric.
+But it is also colloquially used as definition such as let <span class="arithmatex">\(x = \sqrt{\pi}\)</span> whereby some use the notation <span class="arithmatex">\(x:=\sqrt{\pi}\)</span>.
+In python <code>=</code> means definition or assignment.
+It is not a symmetric relation meaning that <code>1 =a</code> (if <code>a</code> was not defined before) will not work.
+Also <code>a =1</code> and <code>b=2</code>, then <code>a=b</code> is not true mathematically, while in python it just reassigning <code>b</code> to <code>a</code>.</p>
+</div>
 <h2 id="data-types">Data types</h2>
-<p>Every programming language distinguishes between the nature of data.
-The basic datatypes in python are</p>
+<p>Every programming language distinguishes between the nature of inputs.
+The basic datatype in python are</p>
 <ul>
 <li>boolean: either <code>True</code> or <code>False</code></li>
 <li>integers: elements of <span class="arithmatex">\(\mathbb{Z}\)</span></li>
 <li>floats: elements of <span class="arithmatex">\(\mathbb{R}\)</span></li>
 <li>strings: sequence of characters <code>"Hello this is Samuel"</code></li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<details class="warning">
+<summary><span class="arithmatex">\(\mathbb{N}\)</span> still remains out of reach.</summary>
 <p>It is clear from the description of a computer that the range of available numbers is bounded (by memory).
 In particular integers will only be a bounded subset of <span class="arithmatex">\(\mathbb{Z}\)</span>.
 For floats it is even more complicated.
-Remember that <span class="arithmatex">\(\mathbb{Q}\)</span> is constructed from <span class="arithmatex">\(\mathbb{Z}\)</span> and <span class="arithmatex">\(\mathbb{R}\)</span> is constructed as the quotient of all limits of Cauchy sequences in <span class="arithmatex">\(\mathbb{Q}\)</span>.
-Since we only have access to a bounded elements of <span class="arithmatex">\(\mathbb{Z}\)</span> we can not even construct full <span class="arithmatex">\(\mathbb{Q}\)</span>.
-Furthermore quotient of limits of Cauchy sequences, since those are limit objects, can not be considered on a computer.
-Hence floats is just a subset of <span class="arithmatex">\(\mathbb{Q}\)</span> which is even discrete, meaning that the minimal distance between two floats is strictly positive which is not the case of arbitrary subsets of <span class="arithmatex">\(\mathbb{Q}\)</span>.</p>
-</div>
+Remember that <span class="arithmatex">\(\mathbb{Q}\)</span> is constructed from <span class="arithmatex">\(\mathbb{Z}\)</span> and <span class="arithmatex">\(\mathbb{R}\)</span> is constructed as the quotient of all Cauchy sequences in <span class="arithmatex">\(\mathbb{Q}\)</span>.
+Since we only have access to a bounded subset of <span class="arithmatex">\(\mathbb{Z}\)</span> we can not even construct full <span class="arithmatex">\(\mathbb{Q}\)</span>.
+Furthermore quotients of Cauchy sequences is an operation involving infinity (or the cardinality of <span class="arithmatex">\(\mathbb{N}\)</span>) since those are limit objects.
+Hence, they are not within the realm of a computer.
+Hence floats is just a subset of <span class="arithmatex">\(\mathbb{Q}\)</span> which is even discrete, meaning that the minimal distance between two floats is strictly positive which is not the case of any arbitrary subsets of <span class="arithmatex">\(\mathbb{Q}\)</span>.</p>
+<p>Those limitations do also have an impact of operations. Indeed, addition, multiplication are not stable within bounded subsets. Hence, there is a lot of theory (fundamental and applied as well) how to handle this correctly, but from our small viewpoint we assume that we have verry large numbers and that everything we do remains within an <span class="arithmatex">\(\epsilon\)</span> error.
+For instance computers do not have <span class="arithmatex">\(0\)</span> usually...</p>
+</details>
 <p>At any time, given a variable <code>x</code> you can assess what type python is considering for it by using the function <code>type(x)</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">my_bollean</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">my_integer</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">my_float</span> <span class="o">=</span> <span class="mf">3.1</span>
-<span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;My string&quot;</span>
-<span class="c1"># and you can print them as well as the type</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_boolean = &quot;</span><span class="p">,</span> <span class="n">my_bollean</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_integer = &quot;</span><span class="p">,</span> <span class="n">my_integer</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_float = &quot;</span><span class="p">,</span> <span class="n">my_float</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_string =&quot;</span><span class="p">,</span> <span class="n">my_string</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;With types:&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_bollean</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_integer</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_float</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_string</span><span class="p">))</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">my_bollean</span> <span class="o">=</span> <span class="kc">False</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">my_integer</span> <span class="o">=</span> <span class="mi">25</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="n">my_float</span> <span class="o">=</span> <span class="mf">3.1</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;My string&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># and you can print them as well as the type</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_boolean = &quot;</span><span class="p">,</span> <span class="n">my_bollean</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_integer = &quot;</span><span class="p">,</span> <span class="n">my_integer</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_float = &quot;</span><span class="p">,</span> <span class="n">my_float</span><span class="p">)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;my_string =&quot;</span><span class="p">,</span> <span class="n">my_string</span><span class="p">)</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;With types:&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_bollean</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_integer</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_float</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_string</span><span class="p">))</span>
+</span></code></pre></div>
 <p>Note that some operations propagate accross types.
-In math, since <span class="arithmatex">\(\mathbb{Z}\subseteq \mathbb{R}\)</span> as a group, the addition between and integer <span class="arithmatex">\(n \in \mathbb{Z}\)</span> and a real number <span class="arithmatex">\(x \in \mathbb{R}\)</span> is well defined as an element of <span class="arithmatex">\(n+x \in \mathbb{R}\)</span>
+In math, since <span class="arithmatex">\(\mathbb{Z}\subseteq \mathbb{R}\)</span> as a group, the addition between an integer <span class="arithmatex">\(n\)</span>  in <span class="arithmatex">\(\mathbb{Z}\)</span> and a real number <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span> is well defined as an element of <span class="arithmatex">\(n+x\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span>.
 Python does the same automatically by casting the type in the correct space whenever it is unambiguous.
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mf">3.2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">))</span>
-</code></pre></div></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mf">3.2</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">))</span>
+</span></code></pre></div></p>
 <details class="note">
 <summary>Further use</summary>
-<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Integer positive negative&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;of type&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Floats with different declarations&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span> <span class="mf">10e-2</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;of type&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">1.7</span><span class="p">))</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Integer positive negative&quot;</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;of type&quot;</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">))</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Floats with different declarations&quot;</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nb">print</span><span class="p">(</span><span class="mf">1.7</span><span class="p">,</span> <span class="mf">10e-2</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">)</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;of type&quot;</span><span class="p">)</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">1.7</span><span class="p">))</span>
+</span></code></pre></div>
 </details>
 <h2 id="the-special-case-of-strings">The special case of strings</h2>
-<p>Strings in programming languages are difficult datatypes.
-Indeed, their length is not exactly defined (from a couple of characters for a name, to a milions of characters for a book).
-In python, each datatype is a class (we will see that later) hence they have many additional functionalities.
-This is in particular the case for strings which can be partially declared and formated later.</p>
+<p>Strings in programming languages are difficult datatype.
+Indeed, their length is not exactly defined (from a couple of characters for a name, to several millions for a book).
+In python, each datatype is a class (we will see that later), hence they have many additional functions that can be called on themselves.
+A particular one in the case of strings is that they can be partially declared and formatted afterwards.</p>
 <h3 id="declaration">Declaration</h3>
 <p>Strings are declared in several ways</p>
 <ul>
@@ -796,37 +813,37 @@ This is in particular the case for strings which can be partially declared and f
 <li>Between double quotes: <code>"my string"</code></li>
 <li>Between triple double quotes: <code>"""my string"""</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">string1</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
-<span class="n">string2</span> <span class="o">=</span> <span class="s2">&quot;Samuel.&quot;</span>
-<span class="n">string3</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Your email address is &#39;sdrapeau@saif.sjtu.edu.cn&#39;. How are you doing on this &quot;2024-02-19&quot;?&quot;&quot;&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">,</span> <span class="n">string3</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">string1</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">string2</span> <span class="o">=</span> <span class="s2">&quot;Samuel.&quot;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">string3</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Your email address is &#39;sdrapeau@saif.sjtu.edu.cn&#39;. How are you doing on this &quot;2024-02-19&quot;?&quot;&quot;&quot;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">string1</span><span class="p">,</span> <span class="n">string2</span><span class="p">,</span> <span class="n">string3</span><span class="p">)</span>
+</span></code></pre></div>
 <details class="note">
 <summary>Single, double, triple, triple double quotes? What the heck!</summary>
-<p>There is kilometers of documentation and webpage about it, you can have a look.
-However the basic principle is that if a string contains itself a character like <code>'</code> or <code>"</code> the declaration becomes ambiguous: <code>'I'm Samuel'</code>, <code>"Let us meet at the "Da Pino" restaurant"</code>.
-In this case, those characters conflicting with the declaration of string should be <em>escaped</em> (with another character which again raises the question how to escape and escape character...)
-For ease of use, the triple (single/double) quotes allow you to define inside quotes as long as they are stricly less than three: <code>'''I'm Samuel'''</code>, <code>"""Let us meet at the "Da Pino" restaurant"""</code>
+<p>There are kilometers of documentation and webpage about it, you can have a look.
+However the basic issue is that if a string contains itself a character like <code>'</code> or <code>"</code> the declaration becomes ambiguous: <code>'I'm Samuel'</code>, <code>"Let us meet at the "Da Pino" restaurant"</code>.
+In this case, those characters conflicting with the declaration of the string should be <em>escaped</em> (with another character, which again raises the question how to escape this escape character...).
+For the sake of simplicity, the triple (single/double) quotes allow you to define inside the string quotes as long as they are strictly less than three: <code>'''I'm Samuel'''</code>, <code>"""Let us meet at the "Da Pino" restaurant"""</code>
 Rule of thumb:</p>
 <ul>
 <li>Use double quotes for simple strings or messages where you know that there won't be double quotes inside</li>
-<li>if you want to use single quotes, no pb, just follow the same argumentation than for the first point</li>
+<li>If you want to use single quotes, no pb, just follow the same argumentation than for the first point</li>
 <li>Use double quote for simple <code>f-strings</code> (see after)</li>
 <li>For large string or complex <code>f-strings</code> or formated strings use triple double quote</li>
 </ul>
 </details>
 <h3 id="concatenate-strings">Concatenate strings</h3>
-<p>You can try in python that while <code>1+3.5</code> works as expected, <code>1 + "Samuel"</code> will result into an error telling that addition is not well defined between and integer and a string.
-However, the addition between strings is well defined and result in concatenation.</p>
-<div class="highlight"><pre><span></span><code><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Samuel&quot;</span>
-<span class="n">first_string</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
-<span class="n">last_string</span> <span class="o">=</span> <span class="s2">&quot;How are you?&quot;</span>
-<span class="n">concatenated</span> <span class="o">=</span> <span class="n">first_string</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">my_name</span> <span class="o">+</span> <span class="s2">&quot;! &quot;</span> <span class="o">+</span> <span class="n">last_string</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">concatenated</span><span class="p">)</span> <span class="c1"># will print `Hello Samuel! How are you?`</span>
-</code></pre></div>
+<p>While <code>1+3.5</code> works as expected as mentioned above, <code>1 + "Samuel"</code> will result into an error that addition is not well defined between and integer and a string.
+However, the addition between strings is well defined in the sense that it results in concatenation.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">my_name</span> <span class="o">=</span> <span class="s2">&quot;Samuel&quot;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">first_string</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">last_string</span> <span class="o">=</span> <span class="s2">&quot;How are you?&quot;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">concatenated</span> <span class="o">=</span> <span class="n">first_string</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">my_name</span> <span class="o">+</span> <span class="s2">&quot;! &quot;</span> <span class="o">+</span> <span class="n">last_string</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">concatenated</span><span class="p">)</span> <span class="c1"># will print `Hello Samuel! How are you?`</span>
+</span></code></pre></div>
 <h3 id="formatted-strings">Formatted strings</h3>
-<p>Strings in combination with the print statement are extremely useful to track what your program is doing.
-To handle strings dynamically, python allows to predefined strings that can be later formatted.
+<p>Strings in combination with the print statement are extremely useful to track what your program is doing and a first order debugging method.
+To handle strings dynamically, python allows to predefine strings that can be later formatted.
 Mathematically these are function of the kind</p>
 <div class="arithmatex">\[
 f(name, date) = \text{Hello }\{name\}\text{! Today we are }\{date\}
@@ -838,68 +855,68 @@ f(\text{Samuel}, \text{2024-02-14}) = \text{Hello Samuel! Today we are 2024-02-1
 <p>You can declare strings to be formatted with double quotes, triple single quotes or triple double quotes.
 It is usually better to use triple double quotes.
 Place holders for the variables are indicated with curly brakets <code>{&lt;...&gt;}</code>
-Since strings are class object, you can access to the function format to format it</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Declare the string to be formated.</span>
-<span class="c1"># The place holders and names for each variables are between curly brakets</span>
-<span class="n">to_format_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Hello </span><span class="si">{name}</span><span class="s2">!</span>
-<span class="s2">Your birthdate is </span><span class="si">{birthdate}</span>
-<span class="s2">You are </span><span class="si">{age}</span><span class="s2"> years old.</span>
-<span class="s2">You weight </span><span class="si">{weight}</span><span class="s2">.</span>
-<span class="s2">&quot;&quot;&quot;</span>
-
-<span class="c1"># you can pass strings, integers, floats as well as simple operations in the variables.</span>
-<span class="n">first_string</span> <span class="o">=</span> <span class="n">to_format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span>
-    <span class="n">birthdate</span> <span class="o">=</span> <span class="s1">&#39;1977-05-23&#39;</span><span class="p">,</span>
-    <span class="n">age</span> <span class="o">=</span> <span class="mi">46</span><span class="p">,</span>
-    <span class="n">weight</span> <span class="o">=</span> <span class="mi">60</span><span class="o">+</span><span class="mi">25</span>
-<span class="p">)</span>
-<span class="n">second_string</span> <span class="o">=</span> <span class="n">to_format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Irina&#39;</span><span class="p">,</span>
-    <span class="n">birthdate</span> <span class="o">=</span> <span class="s1">&#39;1992-09-15&#39;</span><span class="p">,</span>
-    <span class="n">age</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span>
-    <span class="n">weight</span> <span class="o">=</span> <span class="mi">70</span><span class="o">-</span><span class="mi">15</span>
-<span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">first_string</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">second_string</span><span class="p">)</span>
-</code></pre></div>
+Since strings are class object, you can access to the function <code>format</code> to format it</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Declare the string to be formatted.</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1"># The place holders and names for each variables are between curly brackets</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">to_format_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="s2">Hello </span><span class="si">{name}</span><span class="s2">!</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="s2">Your birthdate is </span><span class="si">{birthdate}</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="s2">You are </span><span class="si">{age}</span><span class="s2"> years old.</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="s2">You weight </span><span class="si">{weight}</span><span class="s2">.</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1"># you can pass strings, integers, floats as well as simple operations in the variables.</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">first_string</span> <span class="o">=</span> <span class="n">to_format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Samuel&#39;</span><span class="p">,</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    <span class="n">birthdate</span> <span class="o">=</span> <span class="s1">&#39;1977-05-23&#39;</span><span class="p">,</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>    <span class="n">age</span> <span class="o">=</span> <span class="mi">46</span><span class="p">,</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    <span class="n">weight</span> <span class="o">=</span> <span class="mi">60</span><span class="o">+</span><span class="mi">25</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="p">)</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="n">second_string</span> <span class="o">=</span> <span class="n">to_format_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Irina&#39;</span><span class="p">,</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    <span class="n">birthdate</span> <span class="o">=</span> <span class="s1">&#39;1992-09-15&#39;</span><span class="p">,</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    <span class="n">age</span> <span class="o">=</span> <span class="mi">31</span><span class="p">,</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>    <span class="n">weight</span> <span class="o">=</span> <span class="mi">70</span><span class="o">-</span><span class="mi">15</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="p">)</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="nb">print</span><span class="p">(</span><span class="n">first_string</span><span class="p">)</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="nb">print</span><span class="p">(</span><span class="n">second_string</span><span class="p">)</span>
+</span></code></pre></div>
 <h3 id="shortcut-f-strings">Shortcut: <code>f-strings</code></h3>
-<p>Instead of using a formatted string as above, another way is to use the shortcut of <code>f-strings</code>.
-The main difference is that the variable inside an <code>f-string</code> must be defined before.
+<p>Instead of using a formatted string as above, another way is to use the shortcut <code>f-strings</code>.
+The main difference is that the variable inside an <code>f-string</code> must be declared before.
 The declaration is usually done with a single double quote of a triple double quote if the string might be complex.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># pre-declare the variables</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Samuel&quot;</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">36</span>
-<span class="c1"># get the formated string without the format function</span>
-<span class="n">my_string</span>  <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># pre-declare the variables</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Samuel&quot;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">age</span> <span class="o">=</span> <span class="mi">36</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1"># get the formated string without the format function</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="n">my_string</span>  <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, you are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old.&quot;</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
+</span></code></pre></div>
 <h3 id="advanced-formatting">Advanced formatting</h3>
 <p>Beyond just putting variables at different places, the format functionality allows to provide additional formating, in particular for numbers.
 This is usually done by adding <code>{&lt;...&gt;:&lt;some format code&gt;}</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">num2</span> <span class="o">=</span> <span class="mi">73</span><span class="o">/</span><span class="mi">7</span>
-<span class="n">num3</span> <span class="o">=</span> <span class="mf">0.45622</span>
-
-<span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">We have:</span>
-<span class="s2">An integer: </span><span class="si">{number1}</span>
-<span class="s2">two floats: </span><span class="si">{number2}</span><span class="s2"> and </span><span class="si">{number3}</span>
-
-<span class="s2">I can appy formating with :.xf or :.x% where</span>
-<span class="s2"> - x represent the number of significant digits</span>
-<span class="s2"> - f/</span><span class="si">% r</span><span class="s2">epresent if float formating or percent formating (will multiply by 100)</span>
-
-<span class="s2">Formated Floats (works for int): </span><span class="si">{number1:.2f}</span><span class="s2"> </span><span class="si">{number2: .4f}</span>
-<span class="s2">Formated percent: </span><span class="si">{number3:.2%}</span><span class="s2"> and </span><span class="si">{number3:.0%}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">my_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number1</span> <span class="o">=</span> <span class="n">num1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">num2</span><span class="p">,</span> <span class="n">number3</span> <span class="o">=</span> <span class="n">num3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">num1</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">num2</span> <span class="o">=</span> <span class="mi">73</span><span class="o">/</span><span class="mi">7</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">num3</span> <span class="o">=</span> <span class="mf">0.45622</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">my_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="s2">We have:</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="s2">An integer: </span><span class="si">{number1}</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="s2">two floats: </span><span class="si">{number2}</span><span class="s2"> and </span><span class="si">{number3}</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="s2">I can appy formating with :.xf or :.x% where</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="s2"> - x represent the number of significant digits</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="s2"> - f/</span><span class="si">% r</span><span class="s2">epresent if float formating or percent formating (will multiply by 100)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="s2">Formated Floats (works for int): </span><span class="si">{number1:.2f}</span><span class="s2"> </span><span class="si">{number2: .4f}</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="s2">Formated percent: </span><span class="si">{number3:.2%}</span><span class="s2"> and </span><span class="si">{number3:.0%}</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="n">result</span> <span class="o">=</span> <span class="n">my_string</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number1</span> <span class="o">=</span> <span class="n">num1</span><span class="p">,</span> <span class="n">number2</span> <span class="o">=</span> <span class="n">num2</span><span class="p">,</span> <span class="n">number3</span> <span class="o">=</span> <span class="n">num3</span><span class="p">)</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="operators">Operators</h2>
-<p>Now that we have datatype and can define variable, we must describe the basic operators necessary for manipulating these variables.</p>
+<p>Now that we have datatype and can define variable, we address the basic operators necessary for manipulating these variables.</p>
 <h3 id="arithmetic-operators">Arithmetic operators</h3>
 <p>The simple Arithmetic operators are just what it means.</p>
 <table>
@@ -940,31 +957,34 @@ This is usually done by adding <code>{&lt;...&gt;:&lt;some format code&gt;}</cod
 </tr>
 </tbody>
 </table>
-<p>As for the euclidean division, remember that for two integers <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\neq 0\)</span>, there exists unique integers <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(n\)</span> such that</p>
+<details class="note">
+<summary>Euclidean division</summary>
+<p>As for the Euclidean division, remember that for two integers <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\neq 0\)</span>, there exists unique integers <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(n\)</span> such that</p>
 <ul>
 <li><span class="arithmatex">\(a = m  b + n\)</span></li>
 <li><span class="arithmatex">\(0\leq n &lt; |b|\)</span></li>
 </ul>
-<p>In python this euclidean division is performed using the floor division and the mod, that is <code>a = a//b * b + a%b</code></p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="c1"># in the following f-string the symbol \t stands for a tab space (usually 4 spaces)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">addition:</span><span class="se">\t</span><span class="s2"> a+b = </span><span class="si">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="si">}</span>
-<span class="s2">substraction:</span><span class="se">\t</span><span class="s2"> a-b = </span><span class="si">{</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="si">}</span>
-<span class="s2">division:</span><span class="se">\t</span><span class="s2"> a/b = </span><span class="si">{</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="si">}</span>
-<span class="s2">multiplication:</span><span class="se">\t</span><span class="s2"> a*b = </span><span class="si">{</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="si">}</span>
-<span class="s2">power:</span><span class="se">\t</span><span class="s2"> a^b = </span><span class="si">{</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="si">}</span>
-<span class="s2">modulus:</span><span class="se">\t</span><span class="s2"> a mod b = </span><span class="si">{</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="si">}</span>
-<span class="s2">floor division:</span><span class="se">\t</span><span class="s2"> a &#39;//&#39; b = </span><span class="si">{</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="si">}</span>
-<span class="s2">Hence: </span><span class="se">\t</span><span class="s2"> a//b * b+ a%b = </span><span class="si">{</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</code></pre></div>
+<p>In python this Euclidean division is performed using the floor division and the modulus, that is <code>a = a//b * b + a%b</code></p>
+</details>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># in the following f-string the symbol \t stands for a tab space (usually 4 spaces)</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="s2">addition:</span><span class="se">\t</span><span class="s2"> a+b = </span><span class="si">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="s2">substraction:</span><span class="se">\t</span><span class="s2"> a-b = </span><span class="si">{</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="s2">division:</span><span class="se">\t</span><span class="s2"> a/b = </span><span class="si">{</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="s2">multiplication:</span><span class="se">\t</span><span class="s2"> a*b = </span><span class="si">{</span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="s2">power:</span><span class="se">\t</span><span class="s2"> a^b = </span><span class="si">{</span><span class="n">a</span><span class="o">**</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="s2">modulus:</span><span class="se">\t</span><span class="s2"> a mod b = </span><span class="si">{</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="s2">floor division:</span><span class="se">\t</span><span class="s2"> a &#39;//&#39; b = </span><span class="si">{</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="s2">Hence: </span><span class="se">\t</span><span class="s2"> a//b * b+ a%b = </span><span class="si">{</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h3 id="relational-operators">Relational Operators</h3>
 <p>The relational operators are binary relations.
-In math, a binary relation <span class="arithmatex">\(R\)</span> on some set <span class="arithmatex">\(X\times Y\)</span> returns for each tuple <span class="arithmatex">\((x,y)\)</span> either <span class="arithmatex">\(1\)</span> (true) or <span class="arithmatex">\(0\)</span> (false) written as <span class="arithmatex">\(xRy\)</span>.</p>
-<p>The classical but fundamental operators are as follows</p>
+In math, a binary relation <span class="arithmatex">\(R\)</span> on some product set <span class="arithmatex">\(X\times Y\)</span> returns for each tuple <span class="arithmatex">\((x,y)\)</span> either <span class="arithmatex">\(1\)</span> (true) or <span class="arithmatex">\(0\)</span> (false) written as <span class="arithmatex">\(xRy\)</span> if <span class="arithmatex">\(1\)</span>.
+The classical but fundamental operators are as follows</p>
 <table>
 <thead>
 <tr>
@@ -983,33 +1003,33 @@ In math, a binary relation <span class="arithmatex">\(R\)</span> on some set <sp
 </tr>
 <tr>
 <td style="text-align: center;">&lt;</td>
-<td style="text-align: left;">Less than</td>
+<td style="text-align: left;">Strictly less than</td>
 </tr>
 <tr>
 <td style="text-align: center;">&gt;</td>
-<td style="text-align: left;">Greater than</td>
+<td style="text-align: left;">Strictly greater than</td>
 </tr>
 <tr>
 <td style="text-align: center;">&lt;=</td>
-<td style="text-align: left;">Less than or equal to</td>
+<td style="text-align: left;">Less than</td>
 </tr>
 <tr>
 <td style="text-align: center;">&gt;=</td>
-<td style="text-align: left;">Greater than or equal to</td>
+<td style="text-align: left;">Greater than</td>
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre><span></span><code><span class="c1"># define z with equal</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="c1"># test is z is equal to 1 WITH two consecutive equal ==</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">z is equal to 1: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span>
-<span class="s2">z is equal to 1: </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">z</span><span class="si">}</span><span class="s2"> # note that it is as expected symetric</span>
-<span class="s2">z is different of 2: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span>
-<span class="s2">z is strictly greater than 4: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># define z with equal</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># test is z is equal to 1 WITH two consecutive equal ==</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="s2">z is equal to 1: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="s2">z is equal to 1: </span><span class="si">{</span><span class="mi">1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">z</span><span class="si">}</span><span class="s2"> # note that it is as expected symetric</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="s2">z is different of 2: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="si">}</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="s2">z is strictly greater than 4: </span><span class="si">{</span><span class="n">z</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">4</span><span class="si">}</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h3 id="bitwise-operators">Bitwise Operators</h3>
 <p>Bitwize operation are also binary relations related to logic.
 They are called bitwize since they are defined on the logic Boolean algebra <code>{True, False}</code></p>
@@ -1023,15 +1043,15 @@ They are called bitwize since they are defined on the logic Boolean algebra <cod
 <tbody>
 <tr>
 <td style="text-align: center;">&amp;</td>
-<td style="text-align: left;">Logical And</td>
+<td style="text-align: left;">Logical and</td>
 </tr>
 <tr>
 <td style="text-align: center;">l</td>
-<td style="text-align: left;">Logical OR</td>
+<td style="text-align: left;">Logical or</td>
 </tr>
 <tr>
 <td style="text-align: center;">^</td>
-<td style="text-align: left;">XOR</td>
+<td style="text-align: left;">xor</td>
 </tr>
 <tr>
 <td style="text-align: center;">~</td>
@@ -1039,24 +1059,33 @@ They are called bitwize since they are defined on the logic Boolean algebra <cod
 </tr>
 </tbody>
 </table>
-<p>Note that XOR is True only when the left and right are strictly different.
-However XOR can be derived from elementary operation </p>
-<p><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">True or False is: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
-<span class="s2">True and False is: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
-<span class="s2">The negation of True is: </span><span class="si">{</span><span class="o">~</span><span class="kc">True</span><span class="si">}</span>
-<span class="s2">True xor False (exclusive or): </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
-<span class="s2">True xor True: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="kc">True</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="p">)</span>
-</code></pre></div>
+<details class="note">
+<summary>Note</summary>
+<p>Note that <code>xor</code> also called exclusive <code>or</code> is True only when the left and right are strictly different.
+In math these operators are usually denoted by <span class="arithmatex">\(\wedge\)</span> for <code>and</code>, <span class="arithmatex">\(\vee\)</span> for <code>or</code> and <span class="arithmatex">\(\neg\)</span> for <code>~</code> and <span class="arithmatex">\(\not \leftrightarrow\)</span> for <code>xor</code>.
+<code>xor</code> is redundant as it can be expressed in terms of the three other operators</p>
+<div class="arithmatex">\[
+\begin{equation}
+    A \not \leftrightarrow B = (A \vee B)\wedge \neg(A \wedge B) = (A\wedge \neg B)\vee(\neg A \wedge B)
+\end{equation}
+\]</div>
+</details>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="s2">True or False is: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="s2">True and False is: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="s2">The negation of True is: </span><span class="si">{</span><span class="o">~</span><span class="kc">True</span><span class="si">}</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="s2">True xor False (exclusive or): </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="kc">False</span><span class="si">}</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="s2">True xor True: </span><span class="si">{</span><span class="kc">True</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="kc">True</span><span class="si">}</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="p">)</span>
+</span></code></pre></div>
 The main use of those bitwize operators is within control flows we will see later in combination with the relational operators
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a is equal to 1 and b is different of 3 is </span><span class="si">{</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a is negative and b is different of 3 is </span><span class="si">{</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a is equal to 1 and b is different of 3 is </span><span class="si">{</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;a is negative and b is different of 3 is </span><span class="si">{</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
 <h2 id="data-structures">Data Structures</h2>
 <p>Aside basic data types such as int, floats or strings, python allows for more advanced data structures, which can be considered as containers of variables.
 They come in four forms: tuple, lists, sets, dictionaries.
@@ -1065,6 +1094,7 @@ They distinguish themselves by the properties</p>
 <li>Mutable: can be modified (append, delete, change value)</li>
 <li>Ordered: if an inherent order is defined for the objects in the container</li>
 <li>Duplicates: if elements in the container can have duplicated values.</li>
+<li>Heterogeneous: if elements can have different types</li>
 </ul>
 <table>
 <thead>
@@ -1098,14 +1128,22 @@ They distinguish themselves by the properties</p>
 <td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
 <td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
 </tr>
+<tr>
+<td style="text-align: left;">Heterogeneous</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59 21 7Z"/></svg></span></td>
+</tr>
 </tbody>
 </table>
 <p>With these properties in mind, the most widely used object remains lists and dictionaries.
-Tuple are sometimes good as function returns or arguments and sets are used if you want to prevent duplicates and do not care about ordering.</p>
-<p>We therefore present lists and dictionary thereafter and shortly tuple and sets in the end.</p>
+Tuple are also often used but less in the sense of a data structure, but rather as input/output of functions..
+Sets are seldom used, only if you want to constructs collections without duplicates and do not care about ordering.</p>
+<p>We therefore present tuple, lists and dictionary thereafter and shortly tuple and sets in the end.</p>
 <h3 id="lists">Lists</h3>
 <p>Lists can be viewed as arrays of variables that can be of mixed type.
-Those arrays can be expanded or shrunken, modified.
+Those arrays can be expanded, shrunken, modified.
 They are ordered as the elements are all associated with an index starting from <code>0</code> and ending with <code>N-1</code> where <code>N</code> is the length of the list.</p>
 <ul>
 <li><strong>Declare</strong>: between squared parenthesis <code>x = [x0, x1, ..., x_{N-1}]</code></li>
@@ -1124,35 +1162,36 @@ They are ordered as the elements are all associated with an index starting from 
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember that arrays in python are enumerated starting from <code>0</code> and not <code>1</code> like is usual in math. Hence, the last element of an array is <code>x[N-1]</code> for an array of size <code>N</code></p>
+<p>Remember that arrays in python are enumerated starting from <code>0</code> and not <code>1</code> like is usual in math.
+Hence, the last element of an array is <code>x[N-1]</code> for an array of size <code>N</code></p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="c1"># declare an empty array</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empty array </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> of length </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2"> and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># declare a heterogeneous array</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Hetegrogeneous array: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">of length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
-<span class="s2">and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-<span class="c1"># Access values</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">First element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">Third element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">Last element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="p">)</span>
-
-<span class="c1"># Slice</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Slice from 1 to 3 (exclusive): </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">Slice from begining to 3 (exclusive): </span><span class="si">{</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">Slice from 2 (inclusive) to end: </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># declare an empty array</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empty array </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> of length </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2"> and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1"># declare a heterogeneous array</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">]</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="s2">Hetegrogeneous array: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="s2">of length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="s2">and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="c1"># Access values</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="s2">First element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="s2">Third element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="s2">Last element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-17-18"><a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-17-19"><a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="p">)</span>
+</span><span id="__span-17-20"><a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>
+</span><span id="__span-17-21"><a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="c1"># Slice</span>
+</span><span id="__span-17-22"><a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-17-23"><a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a><span class="s2">Slice from 1 to 3 (exclusive): </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-17-24"><a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="s2">Slice from begining to 3 (exclusive): </span><span class="si">{</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-17-25"><a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="s2">Slice from 2 (inclusive) to end: </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span><span class="si">}</span>
+</span><span id="__span-17-26"><a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>Since lists are mutable, you can </p>
 <ul>
 <li><strong>Change values</strong>: 
@@ -1164,61 +1203,67 @@ They are ordered as the elements are all associated with an index starting from 
     <code>x.insert(k, some_val)</code> insert <code>some_val</code> at position <code>k</code>.
     Each previous value between <code>k</code> and <code>N-1</code> is shifted to positions <code>k+1</code> and <code>N</code> with a new length of <code>N+1</code></li>
 <li>
-<p><strong>Remove specific item</strong>: 
+<p class="annotate"><strong>Remove specific item</strong>: 
     <code>x.remove(some_val)</code> removes <code>some_val</code> from the array if it is present.
-    If there are multiple instance of which, it will remove the first occurrence.</p>
-<p><em>Be careful with this function as the objective is not bijective due to the fact that duplicate values might be in the array.</em>
-* <strong>Remove specific indexed value</strong>:
-<code>x.pop(k)</code> remove the <code>k</code>th element resulting in <code>N-1</code> length array.
-This is the prefered way as it is explicit.
-Furthermore, while the function <code>x.pop(k)</code> remove the item it also returns the value.
-In other term <code>val = x.pop(k)</code> result in <code>x</code> without the <code>k</code>th value and <code>val</code> containing the former value <code>x[k]</code>.</p>
+    If there are multiple instance of which, it will remove the first occurrence.(1)</p>
+<ol>
+<li><img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> Be careful with this function as it is not bijective due to the fact that duplicate values might be in the array</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Remove specific indexed value</strong>:
+    <code>x.pop(k)</code> remove the <code>k</code>th element resulting in <code>N-1</code> length array.(1)
+    Furthermore, while the function <code>x.pop(k)</code> remove the item it also returns the value.
+    In other term <code>val = x.pop(k)</code> result in <code>x</code> without the <code>k</code>th value and <code>val</code> containing the former value <code>x[k]</code>.</p>
+<ol>
+<li><img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> This is the preferred way as it is explicit.</li>
+</ol>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">]</span>
-
-<span class="c1"># append the string &quot;new value&quot; at the 4th position of the array</span>
-<span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;new value&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">x after appending &quot;new value&quot; at the last position:</span>
-<span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-<span class="c1"># insert an integer 25 at position 1</span>
-<span class="n">x</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">x after inserting 25 at position 1:</span>
-<span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-<span class="c1"># remove the value 25 from the array (be carefull there are two so it removes the first)</span>
-<span class="n">x</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">x after removeing (the first occurence of) 25:</span>
-<span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-<span class="c1"># remove the element at position 1</span>
-<span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">x after removing the value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2"> at position 1:</span>
-<span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p>Since list elements can be made of every elements, you can also construct list of lists as well as concatenate them as strings.</p>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;carrot&#39;</span><span class="p">,</span><span class="s1">&#39;potato&#39;</span><span class="p">]</span>
-<span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">]</span>
-<span class="n">concat</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">First list x:</span><span class="se">\t</span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">Second list y:</span><span class="se">\t</span><span class="si">{</span><span class="n">y</span><span class="si">}</span>
-<span class="s2">List of lists [x, y] =</span><span class="se">\t</span><span class="si">{</span><span class="n">z</span><span class="si">}</span>
-<span class="s2">Accessing the second element of the first list in [x, y]:</span><span class="se">\t</span><span class="si">{</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">Concatenation of lists x + y:</span><span class="se">\t</span><span class="si">{</span><span class="n">concat</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">]</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c1"># append the string &quot;new value&quot; at the 4th position of the array</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;new value&quot;</span><span class="p">)</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="s2">x after appending &quot;new value&quot; at the last position:</span>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="c1"># insert an integer 25 at position 1</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="n">x</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="s2">x after inserting 25 at position 1:</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="c1"># remove the value 25 from the array (be carefull there are two so it removes the first)</span>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="n">x</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="s2">x after removing (the first occurence of) 25:</span>
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>
+</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="c1"># remove the element at position 1</span>
+</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-18-26"><a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-18-27"><a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="s2">x after removing the value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2"> at position 1:</span>
+</span><span id="__span-18-28"><a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-18-29"><a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Since list elements can be made of any type, you can also construct list of lists as well as concatenate them as strings.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;carrot&#39;</span><span class="p">,</span><span class="s1">&#39;potato&#39;</span><span class="p">]</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">]</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">concat</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="s2">First list x:</span><span class="se">\t</span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="s2">Second list y:</span><span class="se">\t</span><span class="si">{</span><span class="n">y</span><span class="si">}</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="s2">List of lists [x, y] =</span><span class="se">\t</span><span class="si">{</span><span class="n">z</span><span class="si">}</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="s2">Accessing the second element of the first list in [x, y]:</span><span class="se">\t</span><span class="si">{</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="s2">Concatenation of lists x + y:</span><span class="se">\t</span><span class="si">{</span><span class="n">concat</span><span class="si">}</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="p">)</span>
+</span></code></pre></div>
 <h3 id="dictionaries">Dictionaries</h3>
 <p>Dictionaries are collections of <code>key/value</code> pairs.
 Like in a classical dictionary where a specific word is associated to a definition.
@@ -1236,26 +1281,26 @@ It is similar to a list where the integer indices of the list are replaced by un
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1"># declare an empty dictionary</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empty dictionary </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> of length </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2"> and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="c1"># declare a dictionary</span>
-<span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Dictionary: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">of length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
-<span class="s2">and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-<span class="c1"># Access values</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Value of key fruit:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;fruit&#39;</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">Value of key vegetable:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;vegetable&#39;</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">List of the keys:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># declare an empty dictionary</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="n">x</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empty dictionary </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> of length </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2"> and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="c1"># declare a dictionary</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="s2">Dictionary: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="s2">of length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="s2">and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="c1"># Access values</span>
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="s2">Value of key fruit:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;fruit&#39;</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="s2">Value of key vegetable:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;vegetable&#39;</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="s2">List of the keys:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span><span class="si">}</span>
+</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-20-19"><a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="p">)</span>
+</span></code></pre></div>
 <p>As lists, dictionary are mutable, you can </p>
 <ul>
 <li><strong>Change values</strong>: 
@@ -1265,50 +1310,92 @@ It is similar to a list where the integer indices of the list are replaced by un
 <li><strong>Remove specific key/value</strong>:
     <code>x.pop('key')</code> remove the key value for key <code>key</code>.</li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
+<details class="info">
+<summary>Info</summary>
 <p>There are other methods for dictionary such as <code>x.popitem()</code> that removes the last inserted key.
 Even if in Python a dictionary is considered as not ordered, it keeps internally an order.
 Therefore in terms of philosophy this method should not be used.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
-
-<span class="c1"># change the value &#39;apple&#39; of key `fruit` to `orange`</span>
-<span class="n">x</span><span class="p">[</span><span class="s1">&#39;fruit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orange</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Dictionary with new value orange for key fruit: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-<span class="c1"># Add a new item `meat` with value `steak`</span>
-<span class="n">x</span><span class="p">[</span><span class="s1">&#39;meat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;steak&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">x after adding a new key/value pair:</span>
-<span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-
-<span class="c1"># remove the key `vegetable` from the dictionary</span>
-<span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">[</span><span class="s1">&#39;vegetable&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">x after removing the key `vegetable` with value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2">:</span>
-<span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
-</code></pre></div>
+</details>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1"># change the value &#39;apple&#39; of key `fruit` to `orange`</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">x</span><span class="p">[</span><span class="s1">&#39;fruit&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orange</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="s2">Dictionary with new value orange for key fruit: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="c1"># Add a new item `meat` with value `steak`</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="n">x</span><span class="p">[</span><span class="s1">&#39;meat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;steak&#39;</span>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="s2">x after adding a new key/value pair:</span>
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="c1"># remove the key `vegetable` from the dictionary</span>
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a><span class="n">val</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">pop</span><span class="p">[</span><span class="s1">&#39;vegetable&#39;</span><span class="p">]</span>
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="s2">x after removing the key `vegetable` with value </span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s2">:</span>
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <p>As lists, the value of every key/value pair in a dictionary can be of every nature.
 In other terms you can build for instance dictionaries of dictionaries that are quite often used for web development (a form of no-sql structure for data).</p>
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
-
-<span class="c1"># Adding a subdictionary</span>
-<span class="n">x</span><span class="p">[</span><span class="s2">&quot;condiments&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;salty&quot;</span><span class="p">:</span> <span class="s2">&quot;salt&quot;</span><span class="p">,</span> <span class="s2">&quot;sugary&quot;</span><span class="p">:</span> <span class="s2">&quot;caramel&quot;</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">We now have a dictionary with a sub dictionary</span>
-<span class="si">{</span><span class="n">x</span><span class="si">}</span>
-<span class="s2">The subdictionarry can be accessed</span>
-<span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;condiments&#39;</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">and its elements too</span>
-<span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;condiments&#39;</span><span class="p">][</span><span class="s1">&#39;salty&#39;</span><span class="p">]</span><span class="si">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="p">)</span>
-</code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;fruit&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;vegetable&#39;</span><span class="p">:</span> <span class="s1">&#39;cucumber&#39;</span><span class="p">}</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="c1"># Adding a subdictionary</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">x</span><span class="p">[</span><span class="s2">&quot;condiments&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;salty&quot;</span><span class="p">:</span> <span class="s2">&quot;salt&quot;</span><span class="p">,</span> <span class="s2">&quot;sugary&quot;</span><span class="p">:</span> <span class="s2">&quot;caramel&quot;</span><span class="p">}</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="s2">We now have a dictionary with a sub dictionary</span>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="s2">The subdictionarry can be accessed</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;condiments&#39;</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="s2">and its elements too</span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;condiments&#39;</span><span class="p">][</span><span class="s1">&#39;salty&#39;</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="tuples">Tuples</h3>
+<p>Tuples are similar to list up to the fact that once declared they are immutable.
+Values can not be changed, tuples can not be extended or shrunk.</p>
+<ul>
+<li><strong>Declare</strong>: between parenthesis <code>x = (x0, x1, ..., x_{N-1})</code> or just as sequence separated by commas <code>x = x0, x1, ..., x_{N-1}</code>.</li>
+<li><strong>Properties</strong>: function length <code>len(x)</code> returns the length of the list <code>N</code></li>
+<li><strong>Access</strong>: <ul>
+<li>element <code>x[k]</code> represent the value of the tuple at the <code>k</code>th. position</li>
+<li>backward: <code>x[-1]</code> is for <code>x[N-1]</code>, <code>x[-2]</code> is for <code>x[N-2]</code> etc.</li>
+</ul>
+</li>
+</ul>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># declare an empty tuple</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="n">x</span> <span class="o">=</span> <span class="p">()</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Empty tuple </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> of length </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2"> and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="c1"># declare a heterogeneous tuple</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">)</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="c1"># alternatively</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">5.4</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="s2">Hetegrogeneous tuple: </span><span class="si">{</span><span class="n">x</span><span class="si">}</span>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="s2">of length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="s2">and type </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-23-15"><a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>
+</span><span id="__span-23-16"><a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="c1"># Access values</span>
+</span><span id="__span-23-17"><a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-23-18"><a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="s2">First element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-23-19"><a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="s2">Third element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-23-20"><a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="s2">Last element:</span><span class="se">\t</span><span class="s2"> </span><span class="si">{</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span>
+</span><span id="__span-23-21"><a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-23-22"><a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>Tuple can be decomposed
+<div class="language-py highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mi">0</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">x</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</span></code></pre></div></p>
 
 
 
@@ -1352,7 +1439,7 @@ In other terms you can build for instance dictionaries of dictionaries that are 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
