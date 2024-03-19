@@ -1,172 +1,143 @@
--
-    name : Dorinel Bastide
-    IDInstitution : BNP Parisbas Stress Testing Methodologies and Models  
-    mail : dorinel.2.bastide@bnpparisbas.com
+- name: Zhengqiang Li
+  IDInstitution: University of International Business and Economics (UIBE)
 
--
-    name : Liming Yin
-    IDInstitution : Shanghai Jiao Tong University    
-    mail : gacktkaga@sjtu.edu.cn 
+- name: Dorinel Bastide
+  IDInstitution: BNP Parisbas Stress Testing Methodologies and Models
+  mail: dorinel.2.bastide@bnpparisbas.com
 
--
-    name : Xuan Tao
-    IDInstitution : Shanghai Jiao Tong University    
-    mail : taoxuan@sjtu.edu.cn 
+- name: Liming Yin
+  IDInstitution: Shanghai Jiao Tong University
+  mail: gacktkaga@sjtu.edu.cn
 
--
-    name : Andrew Day
-    IDInstitution : Western University    
-    mail : aday46@uwo.ca
+- name: Xuan Tao
+  IDInstitution: Shanghai Jiao Tong University
+  mail: taoxuan@sjtu.edu.cn
 
--
-    name : Lan Ling
-    IDInstitution : Shanghai Jiao Tong University    
-    mail : lan.ling@sjtu.edu.cn
+- name: Andrew Day
+  IDInstitution: Western University
+  mail: aday46@uwo.ca
 
--
-    name : Jan Obloj
-    IDInstitution : Oxford University    
-    mail : jan.obloj@maths.ox.ac.uk 
-    url : "https://www.maths.ox.ac.uk/people/jan.obloj" 
+- name: Lan Ling
+  IDInstitution: Shanghai Jiao Tong University
+  mail: lan.ling@sjtu.edu.cn
 
--
-    name : Johannes Wiesel
-    IDInstitution : Oxford University  
-    mail : johannes.wiesel@sjc.ox.ac.uk  
-    url : "https://www.maths.ox.ac.uk/people/johannes.wiesel" 
+- name: Jan Obloj
+  IDInstitution: Oxford University
+  mail: jan.obloj@maths.ox.ac.uk
+  url: "https://www.maths.ox.ac.uk/people/jan.obloj"
 
+- name: Johannes Wiesel
+  IDInstitution: Oxford University
+  mail: johannes.wiesel@sjc.ox.ac.uk
+  url: "https://www.maths.ox.ac.uk/people/johannes.wiesel"
 
--
-    name : Tan Wang
-    IDInstitution : Shanghai Advanced Institute for Finance, Shanghai Jiao Tong University  
-    mail : tanwang@saif.sjtu.edu.cn
-    url : "http://en.saif.sjtu.edu.cn/content/show/103-27.html" 
+- name: Tan Wang
+  IDInstitution: Shanghai Advanced Institute for Finance, Shanghai Jiao Tong University
+  mail: tanwang@saif.sjtu.edu.cn
+  url: "http://en.saif.sjtu.edu.cn/content/show/103-27.html"
 
--
-    name : Tao Wang
-    IDInstitution : Shanghai Advanced Institute for Finance, Shanghai Jiao Tong University  
-    mail : wangtao@saif.sjtu.edu.cn
-    url : "http://en.saif.sjtu.edu.cn/content/show/103-17.html"
+- name: Tao Wang
+  IDInstitution: Shanghai Advanced Institute for Finance, Shanghai Jiao Tong University
+  mail: wangtao@saif.sjtu.edu.cn
+  url: "http://en.saif.sjtu.edu.cn/content/show/103-17.html"
 
--
-    name : Yunbo Zhang
-    IDInstitution : Shanghai Jiao Tong University  
-    mail : zybsjtu@sjtu.edu.cn
+- name: Yunbo Zhang
+  IDInstitution: Shanghai Jiao Tong University
+  mail: zybsjtu@sjtu.edu.cn
 
--
-    name : Mekonnen Tadese
-    IDInstitution : Shanghai Jiao Tong University  
-    mail : mekonnenta@sjtu.edu.cn  
+- name: Mekonnen Tadese
+  IDInstitution: Shanghai Jiao Tong University
+  mail: mekonnenta@sjtu.edu.cn
 
--
-    name : Chao Zhou
-    IDInstitution : National University of Singapore
-    mail : matzc@nus.edu.sg  
-    url : "http://www.math.nus.edu.sg/~matzc/"
+- name: Chao Zhou
+  IDInstitution: National University of Singapore
+  mail: matzc@nus.edu.sg
+  url: "http://www.math.nus.edu.sg/~matzc/"
 
--
-    name : Daniel Bartl
-    IDInstitution : Vienna University
-    mail : daniel.bartl@univie.ac.at 
-    url : "https://sites.google.com/site/danielbartlmath/" 
+- name: Daniel Bartl
+  IDInstitution: Vienna University
+  mail: daniel.bartl@univie.ac.at
+  url: "https://sites.google.com/site/danielbartlmath/"
 
--
-    name : Peng Luo
-    IDInstitution : ETH Zurich
-    mail : peng.luo@math.ethz.ch 
-    url : "https://sites.google.com/site/pengluo1207/"
+- name: Peng Luo
+  IDInstitution: ETH Zurich
+  mail: peng.luo@math.ethz.ch
+  url: "https://sites.google.com/site/pengluo1207/"
 
--
-    name : Xiong Dewen
-    IDInstitution : Shanghai Jiao Tong University
-    mail : xiongdewen@sjtu.edu.cn
-    url : "http://www.math.sjtu.edu.cn/faculty/show.php?id=28"
+- name: Xiong Dewen
+  IDInstitution: Shanghai Jiao Tong University
+  mail: xiongdewen@sjtu.edu.cn
+  url: "http://www.math.sjtu.edu.cn/faculty/show.php?id=28"
 
--
-    name : Stéphane Crépey
-    IDInstitution : Université d'Evry
-    mail : stephane.crepey@univ-evry.fr
-    url : "http://grozny.maths.univ-evry.fr/pages_perso/crepey/"
+- name: Stéphane Crépey
+  IDInstitution: Université d'Evry
+  mail: stephane.crepey@univ-evry.fr
+  url: "http://grozny.maths.univ-evry.fr/pages_perso/crepey/"
 
--
-    name : Yannick Armenti
-    IDInstitution : Université d'Evry
-    mail : yannick.armenti@gmail.com
+- name: Yannick Armenti
+  IDInstitution: Université d'Evry
+  mail: yannick.armenti@gmail.com
 
--
-    name : Asgar Jamneshan
-    IDInstitution : Konstanz
-    mail : asgar.jamneshan@uni-konstanz.de
-    url : "http://cms.uni-konstanz.de/math/asgar-jamneshan/home/"
+- name: Asgar Jamneshan
+  IDInstitution: Konstanz
+  mail: asgar.jamneshan@uni-konstanz.de
+  url: "http://cms.uni-konstanz.de/math/asgar-jamneshan/home/"
 
--
-    name : Michael Kupper
-    IDInstitution : Konstanz
-    mail : kupper@uni-konstanz.de
-    url : "http://cms.uni-konstanz.de/math/kupper/"
+- name: Michael Kupper
+  IDInstitution: Konstanz
+  mail: kupper@uni-konstanz.de
+  url: "http://cms.uni-konstanz.de/math/kupper/"
 
--
-    name : Antonis Papapantoleon
-    IDInstitution : TUB
-    mail : papapan@math.tu-berlin.de
-    url : "http://page.math.tu-berlin.de/~papapan/"
+- name: Antonis Papapantoleon
+  IDInstitution: TUB
+  mail: papapan@math.tu-berlin.de
+  url: "http://page.math.tu-berlin.de/~papapan/"
 
--
-    name : Martin Karlizeck
-    IDInstitution : HUB
-    mail : martin.karlizeck@gmail.com
+- name: Martin Karlizeck
+  IDInstitution: HUB
+  mail: martin.karlizeck@gmail.com
 
--
-    name : Patrick Cheridito
-    IDInstitution : Princeton
-    mail : dito@princeton.edu
-    url : "http://www.princeton.edu/~dito/"
+- name: Patrick Cheridito
+  IDInstitution: Princeton
+  mail: dito@princeton.edu
+  url: "http://www.princeton.edu/~dito/"
 
--
-    name : Freddy Delbaen
-    IDInstitution : ETH
-    mail : delbaen@math.ethz.ch
-    url : "https://people.math.ethz.ch/~delbaen/"
+- name: Freddy Delbaen
+  IDInstitution: ETH
+  mail: delbaen@math.ethz.ch
+  url: "https://people.math.ethz.ch/~delbaen/"
 
--
-    name : Gregor Heyne
-    IDInstitution : HUB
-    mail : gh.heyne@gmail.com
+- name: Gregor Heyne
+  IDInstitution: HUB
+  mail: gh.heyne@gmail.com
 
--
-    name : Tomasz R. Bielecki
-    IDInstitution : IIT
-    mail : bielecki@iit.edu
-    url : "http://math.iit.edu/~bielecki/index.html"
+- name: Tomasz R. Bielecki
+  IDInstitution: IIT
+  mail: bielecki@iit.edu
+  url: "http://math.iit.edu/~bielecki/index.html"
 
--
-    name : Igor Cialenco
-    IDInstitution: IIT
-    mail : igor@math.iit.edu
-    url : "http://www.math.iit.edu/~igor/"
+- name: Igor Cialenco
+  IDInstitution: IIT
+  mail: igor@math.iit.edu
+  url: "http://www.math.iit.edu/~igor/"
 
--
-    name : Christoph Mainberger
-    IDInstitution : TUB
-    mail : mainberg@math.hu-berlin.de
-    url :  "https://sites.google.com/site/christophmainberger/"
+- name: Christoph Mainberger
+  IDInstitution: TUB
+  mail: mainberg@math.hu-berlin.de
+  url: "https://sites.google.com/site/christophmainberger/"
 
--
-    name : Emanuela Rosazza Gianin
-    IDInstitution : Bicocca
-    mail : emanuela.rosazza1@unimib.it
-    url : "http://www.dismeq.unimib.it/default.asp?idPagine=657&funzione=scheda_persona&personale=111"
+- name: Emanuela Rosazza Gianin
+  IDInstitution: Bicocca
+  mail: emanuela.rosazza1@unimib.it
+  url: "http://www.dismeq.unimib.it/default.asp?idPagine=657&funzione=scheda_persona&personale=111"
 
--
-    name : Ludovic Tangpi
-    IDInstitution : University of Vienna
-    mail : ludovic.tangpi@univie.ac.at
-    url : "http://www.mat.univie.ac.at/~tangpi/"
+- name: Ludovic Tangpi
+  IDInstitution: University of Vienna
+  mail: ludovic.tangpi@univie.ac.at
+  url: "http://www.mat.univie.ac.at/~tangpi/"
 
--
-    name : Martin Streckfuss
-    IDInstitution : HUB
-    mail : streckfu@math.hu-berlin.de
+- name: Martin Streckfuss
+  IDInstitution: HUB
+  mail: streckfu@math.hu-berlin.de
 
--
-    name : Ranja Reda
+- name: Ranja Reda

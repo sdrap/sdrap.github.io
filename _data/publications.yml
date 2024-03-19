@@ -1,3 +1,31 @@
+- id: taoxuan2024
+  title: Evolution of Chinese Futures Markets from a High Frequency Perspective
+  author:
+    - family: Li
+      given: Zhengqiang
+    - family: Wang
+      given: Tao
+    - family: Drapeau
+      given: Samuel
+    - family: Tao
+      given: Xuan
+
+  container-title: "Preprint"
+  issued:
+    date-parts:
+      - - 2024
+  type: article-journal
+  rank: "32"
+
+  URL_Open: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4726425"
+  abstract: >
+    High-frequency trading (HFT) and algorithmic trading (AT) have garnered significant interest within the academic and regulatory communities, often being recognized for their positive contributions to market liquidity. However, the unique market framework in China influences the operational dynamics of intraday trading, suggesting that traditional HFT/AT paradigms may not be entirely applicable. This paper examines the evolution of market quality in China from an HFT/AT perspective, utilizing publicly available high-frequency data for six futures products traded on the Shanghai Futures Exchange (SHFE) and the Dalian Commodity Exchange (DCE). Our analysis reveals improvements in contract continuity and liquidity diversification from a daily viewpoint. Moreover, the intraday analysis, particularly post the availability of more granular data to market participants, indicates the emergence of more sophisticated algorithmic traders who enhance liquidity provision and contribute to reduced slippage costs for investors and hedgers.
+
+  keywords:
+    - High Frequency Trading
+    - Algorithmic Trading
+    - Liquidity
+
 - id: dorinel2023
   title: Resolving a Clearing Member's Default, A Radner Equilibrium Approach
   author:
