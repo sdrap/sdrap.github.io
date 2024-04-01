@@ -556,6 +556,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#monte-carlo-convergence-and-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monte Carlo: Convergence and Error
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#generation-of-pseudo-random-numbers" class="md-nav__link">
     <span class="md-ellipsis">
       Generation of Pseudo Random Numbers
@@ -724,6 +733,7 @@
 
 
 <h1 id="random-numbers-and-monte-carlo">Random Numbers and Monte Carlo</h1>
+<h2 id="monte-carlo-convergence-and-error">Monte Carlo: Convergence and Error</h2>
 <p>We saw that to integrate a function we have access to standard method of quadrature for <em>exact approximation</em> that is, a converging algorithm with exact error estimation.</p>
 <p>The method however suffers from the curse of dimensionality as the computational complexity increases exponentially with the dimension.
 Since most of the integrations nowadays involve large dimensional objects, this method is not appropriate.</p>
@@ -1096,7 +1106,7 @@ These one are known for most of the classical distributions and accessible throu
 </span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">RV</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
 </span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">K</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="k">return</span> <span class="n">term</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="k">return</span> <span class="n">result</span>
 </span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
 </span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="c1">#</span>
 </span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
