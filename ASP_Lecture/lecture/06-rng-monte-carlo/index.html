@@ -1,0 +1,1214 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:10001/lecture/06-rng-monte-carlo/">
+      
+      
+        <link rel="prev" href="../05-scipy/">
+      
+      
+        <link rel="next" href="../../material/material/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Random Numbers and Monte Carlo - Scientific Programing - An Introduction</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#random-numbers-and-monte-carlo" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Scientific Programing - An Introduction" class="md-header__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Scientific Programing - An Introduction
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Random Numbers and Monte Carlo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00-introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../material/material/" class="md-tabs__link">
+          
+  
+    
+  
+  Material
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Scientific Programing - An Introduction" class="md-nav__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Scientific Programing - An Introduction
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-first-steps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Operations, Data Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-control-flows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control Flows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-functions-classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions and Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-numpy-plotly-scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Scientific Libraries
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    First Scientific Computations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Random Numbers and Monte Carlo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Random Numbers and Monte Carlo
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generation-of-pseudo-random-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generation of Pseudo Random Numbers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generation of Pseudo Random Numbers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sampling-from-a-uniform-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling from a uniform distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling-from-another-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling from another distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variance-reduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variance Reduction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Material
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/material/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/hw01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercises 01
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="random-numbers-and-monte-carlo">Random Numbers and Monte Carlo</h1>
+<p>We saw that to integrate a function we have access to standard method of quadrature for <em>exact approximation</em> that is, a converging algorithm with exact error estimation.</p>
+<p>The method however suffers from the curse of dimensionality as the computational complexity increases exponentially with the dimension.
+Since most of the integrations nowadays involve large dimensional objects, this method is not appropriate.</p>
+<p>A true revolution in that direction is the so called Monte-Carlo methods which are based on the fundamental mathematical results</p>
+<ul>
+<li><strong>Law of Large Numbers:</strong> taking the arithmetic mean of of independent realisation of the same random variable converges to its mean.</li>
+<li><strong>Central Limit Theorem:</strong> The adjusted error converges to a standard normal distribution.</li>
+</ul>
+<details class="note">
+<summary>Law of Large Numbers and Central Limit Theorem</summary>
+<p>Suppose that we have a sequence <span class="arithmatex">\(X_1, X_2, \ldots, X_n, \ldots\)</span> of square integrable random variables on some probability space <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span>.
+Assume that this sequence is <strong>independent</strong> and <strong>identically distributed</strong> (iid) that is</p>
+<ul>
+<li>
+<p><strong>Independent:</strong> for any finite choice of random variable in the sequence, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    P[X_{n_1} \in A_{1}, \ldots, X_{n_l} \in  A_l] = P[X_{n_1} \in  A_1]\cdots P[X_{n_l} \in A_l] = \prod_{k=1}^l P[X_{n_k} \in A_{n_k}]
+\end{equation*}
+\]</div>
+</li>
+<li>
+<p><strong>Identically distributed:</strong> Each random variable has the same CDF, that is</p>
+<div class="arithmatex">\[
+\begin{equation}
+    F_{X_n}(x) := P[X_n \leq x] = P[X_1\leq x] = F_{X_1}(x)
+\end{equation}
+\]</div>
+</li>
+</ul>
+<p>When this sequence is iid we denote by <span class="arithmatex">\(X:=X_1\)</span> with <span class="arithmatex">\(\mu =E[X]\)</span> as well as <span class="arithmatex">\(\sigma = E[(X - \mu)^2]^{1/2}\)</span> the mean and standard deviation of this random variable.
+We further denote by <span class="arithmatex">\(S_N\)</span> the random variable given by the arithmetic mean</p>
+<div class="arithmatex">\[
+\begin{equation}
+    S_N = \frac{1}{N}\sum_{k=1}^N X_k 
+\end{equation}
+\]</div>
+<p>And the residual error <span class="arithmatex">\(\varepsilon_N\)</span> given by</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \varepsilon_N = S_N -\mu
+\end{equation}
+\]</div>
+<dl>
+<dt><strong>Law of Large Number Theorem:</strong></dt>
+<dd>
+<p>The arithmetic (or sample) mean converges almost surely against the mean <span class="arithmatex">\(\mu\)</span>, that is</p>
+<div class="arithmatex">\[
+\begin{equation}
+    S_N(\omega) = \frac{1}{N}\sum_{k=1}^N X_k(\omega) \longrightarrow E[X] = \mu
+\end{equation}
+\]</div>
+<p>for (almost) whatever chosen state <span class="arithmatex">\(\omega \in \Omega\)</span>.</p>
+</dd>
+<dt><strong>Central Limit Theorem:</strong></dt>
+<dd>
+<p>The normalized error converges in distribution to a standard normal distribution, that is</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \frac{\sqrt{N}}{\sigma}\varepsilon_N = \frac{\sqrt{N}}{\sigma}\left(S_N - \mu\right) \longrightarrow \mathcal{N}(0, 1)
+\end{equation}
+\]</div>
+<p>Or in other terms</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \varepsilon_N \approx \mathcal{N}\left(0,\frac{\sigma^2}{N}\right)
+\end{equation}
+\]</div>
+<p>For <span class="arithmatex">\(N\)</span> large enough.</p>
+</dd>
+</dl>
+</details>
+<p>Given an iid sequence of square integrable random variables <span class="arithmatex">\(X_1, \ldots, X_n, \ldots\)</span>, we denote by <span class="arithmatex">\(X:=X_1\)</span> with <span class="arithmatex">\(\mu =E[X]\)</span> as well as <span class="arithmatex">\(\sigma = E[(X - \mu)^2]^{1/2}\)</span> the mean and standard deviation of this random variable and further denote by <span class="arithmatex">\(S_N\)</span> the random variable given by the arithmetic mean</p>
+<div class="arithmatex">\[
+\begin{equation}
+    S_N = \frac{1}{N}\sum_{k=1}^N X_k 
+\end{equation}
+\]</div>
+<p>And the residual error <span class="arithmatex">\(\varepsilon_N\)</span> given by</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \varepsilon_N = S_N -\mu
+\end{equation}
+\]</div>
+<p>It follows that (Law of Large Numbers)</p>
+<div class="arithmatex">\[
+\begin{equation}
+S_N(\omega) = \frac{1}{N}\sum_{k=1}^N X_k(\omega) \longrightarrow E[X] = \mu
+\end{equation}
+\]</div>
+<p>for (almost) whatever chosen state <span class="arithmatex">\(\omega \in \Omega\)</span> and (central limit theorem):</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \varepsilon_N \approx \mathcal{N}\left(0,\frac{\sigma^2}{N}\right)
+\end{equation}
+\]</div>
+<p>for <span class="arithmatex">\(N\)</span> large enough.</p>
+<p>In terms of integration, we therefore have a way to approximate the integral of <span class="arithmatex">\(X\)</span> with <span class="arithmatex">\(S_N\)</span>, and have an estimate of the approximation error <span class="arithmatex">\(\varepsilon_N\)</span>.
+However, in comparison to the standard integration, our approximation of the integral is now a random variable <span class="arithmatex">\(S_N(\omega)\)</span>.
+Even if for every state <span class="arithmatex">\(\omega\)</span> it converges, the rate of the convergence depends on <span class="arithmatex">\(\omega\)</span>.
+Looking at the error <span class="arithmatex">\(\varepsilon_N\)</span> it is similar, it is also a random variable that converges in distribution to a normal distribution.</p>
+<p>Let us have a look at the error.
+Since it is a random variable, I want to know what is the probability that this error will be larger than <span class="arithmatex">\(\delta&gt;0\)</span>.
+Since <span class="arithmatex">\(\frac{\sqrt{N}}{\sigma}\varepsilon_N \approx \mathcal{N}(0, 1)\)</span> which is the normal distribution, we denote by</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \varphi(x) = \frac{e^{-x^2/2}}{\sqrt{2\pi}} \quad \text{and}\quad \Phi(x) = \int_{-\infty}^x \varphi(y) dy
+\end{equation*}
+\]</div>
+<p>which are respectively the <code>pdf</code> and the <code>cdf</code> of a standart normal distribution.
+Note that since the standard normal distribution is symetric, it follows that if <span class="arithmatex">\(Z\sim \mathcal{N}(0,1)\)</span>:</p>
+<div class="arithmatex">\[
+\begin{equation}
+    P[|Z|&gt;\alpha] = \int_{-\infty}^{-\alpha} \varphi(x) dx + \int_{\alpha}^\infty \varphi(x)dx = 2\int_{-\infty}^{-\alpha}\varphi(x)dx = 2\Phi(-\alpha)
+\end{equation}
+\]</div>
+<p>Now looking at the error, we want to estimate the probability that it is going to be smaller than <span class="arithmatex">\(\delta\)</span>.
+We have the following estimate</p>
+<div class="arithmatex">\[
+\begin{align}
+    P\left[\left|S_N - \mu \right|\geq \delta\right] &amp; = P\left[\left|\varepsilon_N\right|\geq \delta\right]\\
+     &amp; = P\left[\frac{\sqrt{N}}{\sigma}\left|\varepsilon_N\right|\geq \frac{\sqrt{N}}{\sigma}\delta\right]\\
+    &amp;\approx P\left[\left|Z\right|\geq \frac{\sqrt{N}}{\sigma}\delta\right]\\
+    &amp; = 2\Phi\left(-\frac{\sqrt{N}}{\sigma}\delta\right)\\
+\end{align}
+\]</div>
+<p>Note that for whatever value of <span class="arithmatex">\(\delta\)</span> and <span class="arithmatex">\(\sigma\)</span>, since <span class="arithmatex">\(\Phi(x)\to 1\)</span> when <span class="arithmatex">\(x\to \infty\)</span>, hence, the probability of the error being larger than <span class="arithmatex">\(\delta\)</span> will converge to <span class="arithmatex">\(0\)</span> as <span class="arithmatex">\(N\)</span> is large.</p>
+<p>What is often done is the following: for an accuracy error <span class="arithmatex">\(\delta\)</span> given (for instance <span class="arithmatex">\(\delta = 10^{-9}\)</span>), and a confidence level <span class="arithmatex">\(\alpha\)</span> (for instance <span class="arithmatex">\(\alpha = 1\%\)</span>), we want to estimate <span class="arithmatex">\(N\)</span> such that</p>
+<div class="arithmatex">\[
+\begin{equation}
+    P\left[\left|\varepsilon_N\right|\geq \delta\right] \leq \alpha
+\end{equation}
+\]</div>
+<p>It follows that <span class="arithmatex">\(N\)</span> must satisfy</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    2\Phi\left(-\frac{\sqrt{N}}{\sigma}\delta\right) = 2\left(1- \Phi\left(\frac{\sqrt{N}}{\sigma}\delta\right)\right) \leq \alpha
+\end{equation*}
+\]</div>
+<p>which is equivalent to</p>
+<div class="arithmatex">\[
+\begin{equation}
+\sqrt{N} \geq \frac{\sigma}{\delta} q\left(1-\frac{\alpha}{2}\right)
+\end{equation}
+\]</div>
+<p>Where <span class="arithmatex">\(q = \Phi^{-1}\)</span> is the quantile of the standard normal distribution.</p>
+<div class="admonition warning">
+<p class="admonition-title">Convergence speed</p>
+<p>The error is now given in terms of probability within a confidence interval.
+However, from the error rate, it turns out that the convergence speed is in square root of <span class="arithmatex">\(N\)</span> which is particularly slow.</p>
+</div>
+<p>Why are these results fundamental in order to solve our problem of dimensionality in terms of integration?</p>
+<p>Consider a function <span class="arithmatex">\(f:\mathbb{R}^d \to \mathbb{R}\)</span> and a vector of random variables <span class="arithmatex">\(\mathbf{X} = (X^1, \ldots, X^d)\)</span>.
+We want to compute</p>
+<div class="arithmatex">\[
+\begin{equation}
+I = E\left[f(\mathbf{X})\right] = \int_{\mathbb{R}^d} f(x^1, \ldots, x^d)dF_{(X^1, \ldots, X^d)}(x^1, \ldots, x^d)
+\end{equation}
+\]</div>
+<p>Define now <span class="arithmatex">\(Z = f(X_1,ldots, X_d)\)</span> and consider independent copies <span class="arithmatex">\(\mathbf{X}_1, \ldots, \mathbf{X}_N, \ldots\)</span> of <span class="arithmatex">\(\mathbf{X}\)</span>, it follows that <span class="arithmatex">\(Z^1, \ldots, Z^N, \ldots\)</span> are iid.
+Hence, considering <span class="arithmatex">\(N\)</span> independent samples <span class="arithmatex">\(\mathbf{x}_k = (x^1_k, \ldots, x^d_k)\)</span> of <span class="arithmatex">\(\mathbf{X}\)</span> yields</p>
+<div class="arithmatex">\[
+\begin{equation}
+\frac{1}{N} \sum_{k=1}^N f(\mathbf{x}_k) \approx E\left[f(\mathbf{X})\right] 
+\end{equation}
+\]</div>
+<p>where <span class="arithmatex">\(N\)</span> is independent of <span class="arithmatex">\(d\)</span>.</p>
+<p>Out of the main questions</p>
+<ol>
+<li>Does the Monte Carlo integral converges to the ture value of the integral?</li>
+<li>If so, how fast and how accurate?</li>
+<li>How do I generate indepedent samples of a distribution?</li>
+</ol>
+<p>We already answered theoretically to the first 2.
+It remains the central question number 3 which is a priori quite difficult since a computer (the standard ones) are deterministic machine and per definition can not generate random numbers.</p>
+<h2 id="generation-of-pseudo-random-numbers">Generation of <strong>Pseudo Random Numbers</strong></h2>
+<h3 id="sampling-from-a-uniform-distribution">Sampling from a uniform distribution</h3>
+<p>We first we address the problem of independent realisations of a uniform distribution <span class="arithmatex">\(U\)</span>.
+A computer that is working with finite arythmetic and rational numbers can naturally not provide algorythmicaly true random numbers.
+The task is to find deterministic sequences of numbers which distribution can not be distinguished from a uniform distribution by programatic statistical tests.
+Once again, it is obvious that if you know the trick generating the random numbers, you can always program a test that will violate the uniformity, but we assume that we are agnostic from this viewpoint.</p>
+<details class="warning">
+<summary>Don't program it by yourself for applications!</summary>
+<p>We present here techniques on how random numbers can be generated.
+Be aware that the random number generators -- RNG -- are highly tested for robustnes and refined.
+If you have a wrong or weak RNG, this may have dramatical consequences in terms of accuracy.
+Furthermore, these RNG are optimized so as to be fast.
+Indeed, for some medelization problems the number of random numbers needed may well reach several billions.
+Just to warn you that it is a VERY bad idea to program your homemade RNG for Monte Carlo pruposes, we just present the idea and shortcomings of some of the techniques.</p>
+</details>
+<p>Given a set <span class="arithmatex">\(\{0,1,\ldots,M-1\}\)</span>, we want to find a sequence <span class="arithmatex">\((i_l)\)</span> in this set such that <span class="arithmatex">\((x_l)=(i_l/M)\)</span> is uniformly distributed on <span class="arithmatex">\([0,1]\)</span>.</p>
+<dl>
+<dt>Definition:</dt>
+<dd>A RNG consists of a state space <span class="arithmatex">\(X\)</span>, a transition function <span class="arithmatex">\(T:X\to X\)</span> as well as a mapping <span class="arithmatex">\(G:X\to \{0,\ldots,M-1\}\)</span>.
+Given an element <span class="arithmatex">\(x_0 \in X\)</span> -- the <em>seed</em> -- the pseudorandom numbers <span class="arithmatex">\(i_l=G(x_l)\)</span> are computed recursively by <span class="arithmatex">\(x_l=T(x_{l-1})\)</span>.</dd>
+</dl>
+<p>By definition, since <span class="arithmatex">\(X\)</span> is finite, it follows that the sequence of pseudo-random numbers is periodic.
+Indeed, there must exists <span class="arithmatex">\(l\)</span> such that <span class="arithmatex">\(x_l=x_0\)</span> and so you will get a period of <span class="arithmatex">\(l\)</span>.
+Note also that <span class="arithmatex">\(G\)</span> is not a bijection, so it may well happen that <span class="arithmatex">\(i_l=i_k\)</span> without necessarily having <span class="arithmatex">\(x_l=x_k\)</span>.</p>
+<p>A RNG is tested along the following lines:</p>
+<ul>
+<li>Statistical uniformity: not distinguishable by feaseable statistical tests from uniformity</li>
+<li>Speed: sometimes <span class="arithmatex">\(10e18\)</span> numbers are needed...</li>
+<li>Period length: Rule of thumb it should be larger than the square of the number necessary to construct.</li>
+<li>Reproducibility: For debugging and testing reason, a random number should be reproducible.</li>
+<li>Jumping ahead: Possibility to generate <span class="arithmatex">\(x_{l+n}\)</span> for a given <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(l\)</span> without the intermidiary values. Important for parallelization.</li>
+</ul>
+<p>The Prototypical class are the linear where <span class="arithmatex">\(X=\{0,\ldots,M-1\}\)</span>, <span class="arithmatex">\(G=Id\)</span> and </p>
+<div class="arithmatex">\[
+T(x)=(ax+c) \quad\text{modulo }M
+\]</div>
+<p>By basic number theory, the period length is exactly <span class="arithmatex">\(M\)</span> if </p>
+<ul>
+<li><span class="arithmatex">\(c\neq 0\)</span>.</li>
+<li>every prime number dividing <span class="arithmatex">\(M\)</span> also divide <span class="arithmatex">\(a-1\)</span>.</li>
+<li>if <span class="arithmatex">\(M\)</span> is divisible by <span class="arithmatex">\(4\)</span> then so is <span class="arithmatex">\(a-1\)</span>.</li>
+</ul>
+<p>Depending on the architecture and OS of your computer, different random number generator are implmented.
+For Linux and many other scientific libraries, the GCC implementation uses</p>
+<div class="arithmatex">\[
+M = 2^{32} \quad a = 1103515245 \quad c = 12345
+\]</div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># basic parameters</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">a</span><span class="o">=</span> <span class="mi">1103515245</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">c</span><span class="o">=</span> <span class="mi">12345</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">M</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">32</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">def</span> <span class="nf">T</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1103515245</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">12345</span> <span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="mi">32</span><span class="p">):</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">term</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">c</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">return</span> <span class="n">term</span> <span class="o">%</span> <span class="n">M</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="k">def</span> <span class="nf">RN</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">seed</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            <span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">T</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="k">return</span> <span class="n">X</span><span class="o">/</span><span class="n">M</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># SEED:</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">seed</span> <span class="o">=</span> <span class="mi">14</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RN: </span><span class="si">{</span><span class="n">RN</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Let us compare the speed between our implementation and numpy implementation</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">%</span><span class="n">timeit</span> <span class="n">RN</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100000</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">%</span><span class="n">timeit</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
+</span></code></pre></div>
+<p>We generate some random numbers and provide a scatter plot of which</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># set the number</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">X1</span> <span class="o">=</span> <span class="n">RN</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">X2</span> <span class="o">=</span> <span class="n">RN</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">X1</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">X2</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;markers&#39;</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">800</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="mi">800</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Some estimation technique from John von Neuman</p>
+<p>Consider the following code, what does it estimate?
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">estimate_what</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        <span class="k">if</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">Y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            <span class="n">m</span><span class="o">+=</span><span class="mi">1</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="k">return</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">m</span> <span class="o">/</span> <span class="n">N</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">estimate_what</span><span class="p">(</span><span class="mi">200000000</span><span class="p">)</span>
+</span></code></pre></div></p>
+</div>
+<h3 id="sampling-from-another-distribution">Sampling from another distribution</h3>
+<p>We have seen how to sample from a uniform distribution.
+Sampling from another one relies on the following proposition:</p>
+<dl>
+<dt>Proposition:</dt>
+<dd>
+<p>Let <span class="arithmatex">\(X\)</span> be a random variable with CDF <span class="arithmatex">\(F_X\colon \mathbb{R}\to [0,1]\)</span>, <span class="arithmatex">\(x \mapsto F_X(x) = P[X\leq x]\)</span> and <span class="arithmatex">\(U\)</span> a uniformly distributed random variable.
+Considering the quantile <span class="arithmatex">\(q_X \colon (0,1)\to \mathbb{R}\)</span></p>
+<div class="arithmatex">\[
+\begin{equation}
+q_X(u) = \inf \{m\colon F_L(m)\geq u\} =F_X^{-1}(u)
+\end{equation}
+\]</div>
+<p>it follows that the random variable <span class="arithmatex">\(q_X(U)\)</span> has the same distribution as <span class="arithmatex">\(X\)</span>, that is, both random variable have the same CDF.</p>
+</dd>
+</dl>
+<details class="note">
+<summary>Proof</summary>
+<p>By definition of the quantile function, it follows that <span class="arithmatex">\(q_X(u)\leq x\)</span> if and only if <span class="arithmatex">\(u\leq F_X(x)\)</span>.
+Furthermore, <span class="arithmatex">\(q_X\colon (0,1) \to \mathbb{R}\)</span> can be considered as a random variable on <span class="arithmatex">\((\tilde{\Omega}, \tilde{F}, \tilde{P})\)</span> where <span class="arithmatex">\(\tilde{\Omega} = (0,1)\)</span>, <span class="arithmatex">\(\tilde{F}= \mathcal{B}(0,1)\)</span> is the borel <span class="arithmatex">\(\sigma\)</span>-algebra generated by open subsets of <span class="arithmatex">\((0,1)\)</span> and <span class="arithmatex">\(\tilde{P}=\lambda\)</span> the Lebesgue measure on <span class="arithmatex">\((0,1)\)</span>, that is the measure of intervals with <span class="arithmatex">\(d\lambda = dx\)</span>.
+Considering the CDF of <span class="arithmatex">\(q_X\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation}
+    F_{q_X}(x)=\lambda (\{u \colon q_X(u)\leq x\})=\lambda(\{u\colon u\leq F_X(x)\}=\lambda (0,F_X(x)]=F_X(x)
+\end{equation}
+\]</div>
+</details>
+<p>If we know the quantile distribution explicitely, then we can generate any sample of that distribution.
+If we consider the exponential distribution for instance where</p>
+<div class="arithmatex">\[
+\begin{equation}
+F_X(x) = 1- e^{-\lambda x}, \quad x\geq 0
+\end{equation}
+\]</div>
+<p>Then it follows that</p>
+<div class="arithmatex">\[
+\begin{equation}
+q_X(u) = -\ln\left(1-u\right) / \lambda
+\end{equation}
+\]</div>
+<p>From our proposition, sampling from <span class="arithmatex">\(X\)</span> is the same as sampling from <span class="arithmatex">\(q_X(U)\)</span> where <span class="arithmatex">\(U\)</span> is a <span class="arithmatex">\((0,1)\)</span> uniform distribution.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Example with the exponential distribution.</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">lamb</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">def</span> <span class="nf">q</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">lamb</span><span class="p">):</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">return</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">u</span><span class="p">)</span> <span class="o">/</span> <span class="n">lamb</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># as comparison we consider the scipy exponential distribution (scale = 1/lamb)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">RV</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">expon</span><span class="p">(</span><span class="n">scale</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">lamb</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="c1"># generate N samples from the uniform distribution</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="c1"># plug those random numbers into the quantile</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">X</span><span class="o">=</span> <span class="n">q</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">lamb</span><span class="p">)</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="c1"># generate N samples from the exponential RV</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="n">Y</span> <span class="o">=</span> <span class="n">RV</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="c1"># Plot the histogram for both samples</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_histogram</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;quantile&#39;</span><span class="p">)</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_histogram</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;rvs&#39;</span><span class="p">)</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p>There is however usually no analytical form for the quantile distribution, therefore one has to use numerical inverse of it.
+These one are known for most of the classical distributions and accessible through <code>python.stats</code> by means of the <code>ppf</code> method.</p>
+<p>In the following we compute the following integral</p>
+<div class="arithmatex">\[
+\begin{equation}
+    E[(X-K)^+] = \int_K^\infty (x-K)dF_X(x)
+\end{equation}
+\]</div>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># standard integration of the random variable with quad</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">def</span> <span class="nf">Int1</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">RV</span><span class="p">):</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="k">def</span> <span class="nf">integrand</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        <span class="n">term</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">K</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">RV</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="k">return</span> <span class="n">term</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">integrand</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">Inf</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="k">return</span> <span class="n">result</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="c1"># Same integration using monte carlo</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="k">def</span> <span class="nf">Int2</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">RV</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    <span class="c1"># generate $N$ samples</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">RV</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">K</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    <span class="k">return</span> <span class="n">term</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="c1">#</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="n">RV</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="n">K</span> <span class="o">=</span> <span class="mf">1.5</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Standard integral </span><span class="si">{</span><span class="n">Int1</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">RV</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MC integral </span><span class="si">{</span><span class="n">Int2</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">RV</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="variance-reduction">Variance Reduction</h3>
+<p>While integrating, the domain or the nature of the function to integrate influence a lot the convergence of Monte-Carlo.
+Consider the following simple example.
+Suppose that <span class="arithmatex">\(X\)</span> is Cauchy distributed, that is, have a pdf of the form</p>
+<div class="arithmatex">\[
+\begin{equation}
+dF_X(x)=f_X(x)=\frac{1}{\pi (1+x^2)}
+\end{equation}
+\]</div>
+<p>and we want to compute <span class="arithmatex">\(P_X[L&gt;5] = 1-F_X(5)\)</span>, that it compute the expectation</p>
+<div class="arithmatex">\[
+\begin{equation}
+    P_X[L&gt;5]=E[1_{\{X&gt;5\}}]=\int_{5}^\infty f_X(x) dx
+\end{equation}
+\]</div>
+<p>If we draw a sample of the distribution, only very few of them will enter in the relevant part of the computation of the integral</p>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">cauchy</span><span class="p">()</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># here is the true value P[L&gt;3]</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">h_true</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value we are searching for </span><span class="si">{</span><span class="n">h_true</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+It means that only 6% of the sample of our Monte-Carlo will be useful in the computation of this integral.
+This is quite often a problem as many applications involves evaluation with respect to extreme values of a random variables, events that are large but rare.
+And since the Monte-Carlo method is typically slow in terms of convergence like <span class="arithmatex">\(\sqrt{N}\)</span>, we will need a huge amount of samples. </p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># %%</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">X</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># We count the average number of the sample above 5</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">absolute</span><span class="p">(</span><span class="n">h_true</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="n">N</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">X</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">))</span><span class="o">/</span> <span class="n">h_true</span><span class="p">)</span>
+</span></code></pre></div>
+<p>However, a simple change of variables lets us use 100% of draws
+We are trying to estimate the quantity</p>
+<div class="arithmatex">\[
+\int_5^\infty \frac{1}{\pi (1 + x^2)} dx
+\]</div>
+<p>Using the substitution <span class="arithmatex">\(y = 5/x\)</span> (and a little algebra), we get</p>
+<div class="arithmatex">\[
+\int_0^1 \frac{5}{\pi(25 + y^2)} dy
+\]</div>
+<p>Hence, a much more efficient MC estimator is </p>
+<div class="arithmatex">\[
+\frac{1}{N} \sum_{k=0}^{N-1} \frac{5}{\pi(25 + y_k^2)}
+\]</div>
+<p>where the sample <span class="arithmatex">\(y_0, y_1, \ldots, y_N\)</span> is drawn from a uniform <span class="arithmatex">\((0,1)\)</span> random variable.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">h_cv</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">n</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="mi">25</span> <span class="o">+</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Integral relative error: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">h_cv</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">h_true</span><span class="p">)</span><span class="o">/</span><span class="n">h_true</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
