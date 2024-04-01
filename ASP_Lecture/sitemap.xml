@@ -46,6 +46,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://127.0.0.1:10001/material/ex01/</loc>
+         <lastmod>2024-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://127.0.0.1:10001/material/hw01/</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
