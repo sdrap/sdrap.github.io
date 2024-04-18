@@ -1,0 +1,1215 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../abstracts/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Program - Recent Advances in Stochastic Control, Machine Learning and Quantitative Finance</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-12 6 6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6L10 18Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Recent Advances in Stochastic Control, Machine Learning and Quantitative Finance" class="md-header__button md-logo" aria-label="Recent Advances in Stochastic Control, Machine Learning and Quantitative Finance" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Recent Advances in Stochastic Control, Machine Learning and Quantitative Finance
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Program
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Program
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../abstracts/" class="md-tabs__link">
+        
+  
+    
+  
+  Abstracts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../venue/" class="md-tabs__link">
+        
+  
+    
+  
+  Venue
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Recent Advances in Stochastic Control, Machine Learning and Quantitative Finance" class="md-nav__button md-logo" aria-label="Recent Advances in Stochastic Control, Machine Learning and Quantitative Finance" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Recent Advances in Stochastic Control, Machine Learning and Quantitative Finance
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Program
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abstracts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Abstracts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../venue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Venue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="lecture">Lecture</h1>
+<p>On Sunday April 14th from 14:00 to 16:00, <strong>Professor Peng Shige</strong> from <em>Shandong University</em> will give a lecture</p>
+<ul>
+<li>Time: 14:30 &mdash; 16:00</li>
+<li>Place: Shanghai Jiao Tong University, Minhang Campus</li>
+<li>Room: Room 300, Nr. 5&amp;6 Science Building</li>
+</ul>
+<h1 id="workshop">Workshop</h1>
+<p>The Workshop takes place at the <em>Shanghai Jiao Tong University</em>, <strong>Xuhui campus</strong>:</p>
+<ul>
+<li>Place: <strong>Xuhui Campus</strong>, <strong>Engineering Building (工程馆)</strong></li>
+<li>Room:<ul>
+<li>Mon-Wed: Room 100</li>
+<li>Thu-Fri: Room 104</li>
+</ul>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mon 15</label><label for="__tabbed_1_2">Tue 16</label><label for="__tabbed_1_3">Wed 17</label><label for="__tabbed_1_4">Thu 18</label><label for="__tabbed_1_5">Fri 19</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">08:15</td>
+<td style="text-align: left;"><em>Registration</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">08:45</td>
+<td style="text-align: left;"><em>Opening</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">09:00</td>
+<td style="text-align: left;">Xin Guo</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-xinguo">Alpha Potential Games: A New Paradigm for N-Player Games</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">09:45</td>
+<td style="text-align: left;">Paolo Guasoni</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-paologuasoni">Evaluating and Mitigating Transaction Costs with Recurrent Neural Networks</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">10:30</td>
+<td style="text-align: left;"><em>Tea/Coffee break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:00</td>
+<td style="text-align: left;">Jianfeng Zhang</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-jianfengzhang">Set Values for Nonzero Sum Games</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:45</td>
+<td style="text-align: left;">Ruixun Zhang</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-ruixunzhang">On Consistency of Signatures Using Lasso and Applications in Option Pricing</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">12:30</td>
+<td style="text-align: left;"><em>Lunch</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:00</td>
+<td style="text-align: left;">Min Dai</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-mindai">Learning Optimal Investment Strategy with Transaction Costs via a Randomized Dynkin Game</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:45</td>
+<td style="text-align: left;">Zuoquan Xu</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-zuoquanxu">State-dependent temperature control for Langevin diffusions</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">15:30</td>
+<td style="text-align: left;"><em>Tea/Coffee break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">16:00</td>
+<td style="text-align: left;">Juan Li</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-juanli">Mean field stochastic control problems under sublinear expectation</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">16:45</td>
+<td style="text-align: left;">Xiang Yu</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-xiangyu">Continuous time <span class="arithmatex">\(q\)</span>-learning for mean-field control problems</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">18:30</td>
+<td style="text-align: left;"><em>Conference dinner</em></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">09:00</td>
+<td style="text-align: left;">Nizar Touzi</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-nizartouzi">Mean Field Games Approach to Systemic Risk</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">09:45</td>
+<td style="text-align: left;">Lan Wu</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-lanwu">TBA</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">10:30</td>
+<td style="text-align: left;"><em>Tea/Coffee break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:00</td>
+<td style="text-align: left;">Mathieu Rosenbaum</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-mathieurosenbaum">The Two Square Root Laws of Market Impact and the Role of Sophisticated Market Participants</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:45</td>
+<td style="text-align: left;">Ping Li</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-pingli">Compound Heat-drought Risk and the Issuing Spread of China’s Municipal Corporate Bonds</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">12:30</td>
+<td style="text-align: left;"><em>Lunch</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:00</td>
+<td style="text-align: left;">Johannes Muhle-Karbe</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-johannesmuhle-karbe">Concave Cross Impact</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:45</td>
+<td style="text-align: left;">Yufeng Shi</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-yufengshi">Deep learning approaches in numerical computation of backward stochastic differential equation and applications in financial asset pricing</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">15:30</td>
+<td style="text-align: left;"><em>Tea/Coffee break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">16:00</td>
+<td style="text-align: left;">David Proemel</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-davidproemel">Well-Posedness of Stochastic Volterra Equations with non-Lipschitz Coefficients</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">16:45</td>
+<td style="text-align: left;">Johannes Wiesel</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-johanneswiesel">Empirical Martingale Projections via the Adapted Wasserstein Distance</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">17:15</td>
+<td style="text-align: left;">Jingjie Zhang</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-jingjiezhang">A Quantitative Comparison of Unemployment Benefit Extension and Level Increase</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">09:00</td>
+<td style="text-align: left;">Bruno Bouchard</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-brunobouchard">A <span class="arithmatex">\(C^1\)</span>-Ito's Formula for Flows of Semimartingale Distributions</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">09:45</td>
+<td style="text-align: left;">Xianhua Peng</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-xianhuapeng">Reinforcement learning for financial index tracking</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">10:30</td>
+<td style="text-align: left;"><em>Tea/Coffee break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:00</td>
+<td style="text-align: left;">Zhenya Liu</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-zhenyaliu">When will China’s economy overtake the United States?</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:45</td>
+<td style="text-align: left;">Jean-Pierre Fouque</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-jean-pierrefouque">Reinforcement Learning for Mean Field Game and Control Problems</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">12:30</td>
+<td style="text-align: left;"><em>Lunch</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:00</td>
+<td style="text-align: left;">Michael Kupper</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-michaelkupper">Discrete Approximation of Risk-Based Pricing under Uncertainty</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:45</td>
+<td style="text-align: left;">Xingye Yue</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-xingyeyue">Trinomial tree method for <span class="arithmatex">\(G\)</span>-Expectation and sampling for <span class="arithmatex">\(G\)</span>-normal random variable after Measurement</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">15:30</td>
+<td style="text-align: left;"><em>Tea/Coffee break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">16:00</td>
+<td style="text-align: left;">Christoph Czyslowsky</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-christophczyslowsky">Equilibrium Asset Pricing with Stochastic Investment Opportunities and Proportional Transaction Costs</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">16:45</td>
+<td style="text-align: left;">Ziteng Cheng</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-zitengcheng">Deep Learning Conditional Distributions on Continuous Spaces</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">17:15</td>
+<td style="text-align: left;">Xiaoli Wei</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-xiaoliwei">Continuous-Time <span class="arithmatex">\(q\)</span>-Learning for Mean-Field Control Problems with Common Noise</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">09:00</td>
+<td style="text-align: left;">Martin Schweizer</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-martinschweizer">A Stochastic Fubini Theorem via Measure-Valued Integrands</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">09:45</td>
+<td style="text-align: left;">Hoi Ying Wong</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-hoiyingwong">Robust Dividend Policy: Equivalence of Epstein-Zin and Meanhout Preferences</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">10:30</td>
+<td style="text-align: left;"><em>Tea/Coffee break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:00</td>
+<td style="text-align: left;">Xiaolu Tan</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-xiaolutan">On the Regularity of Solutions of some Linear Parabolic Path-Dependent PDEs</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:45</td>
+<td style="text-align: left;">Guojing Wang</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-guojingwang">Pricing CDS Index Tranches under Contagion Model with Regime Switching</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">12:30</td>
+<td style="text-align: left;"><em>Lunch</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:00</td>
+<td style="text-align: left;">Ariel Neufeld</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-arielneufeld">Markov Decision Processes under Model Uncertainty</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:45</td>
+<td style="text-align: left;">Zhenjie Ren</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-zhenjieren">Self-Interacting Approximation to McKean-Vlasov Long Time Limit</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">15:45</td>
+<td style="text-align: left;"><em>Afternoon break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Speaker</th>
+<th style="text-align: left;">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">09:00</td>
+<td style="text-align: left;">Yan Zeng</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-yanzeng">The Impact of Intermediaries on Insurance Demand and Pricing</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">09:45</td>
+<td style="text-align: left;">Tianyang Nie</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-tianyangnie">Indefinite partially observed <span class="arithmatex">\(LQ\)</span> mean-field game</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">10:30</td>
+<td style="text-align: left;"><em>Tea/Coffee break</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:00</td>
+<td style="text-align: left;">Yufei Zhang</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-yufeizhang">Some Recent Progress in Continuous-Time Reinforcement Learning</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">11:30</td>
+<td style="text-align: left;">Fenghui Yu</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-fenghuiyu">Execution Probabilities in a Limit Order Book with State-Dependent Order Flows</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">12:00</td>
+<td style="text-align: left;">Andrew Allan</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-andrewallan">Rough Stochastic Differential Equations with Jumps</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">12:30</td>
+<td style="text-align: left;"><em>Lunch</em></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:00</td>
+<td style="text-align: left;">Julien Claisse</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-julienclaisse">Mean-field Optimization Regularized by Fisher Information</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">14:30</td>
+<td style="text-align: left;">Sizhou Wu</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-sizhouwu">Modern numerical methods for semilinear PIDEs using Monte Carlo and random neural networks for high-dimensional option pricing</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">15:00</td>
+<td style="text-align: left;">Zihao Gu</td>
+<td style="text-align: left;"><a href="../abstracts/#anchor-zihaogu">Quadratic BSDEs with mean reflection driven by G-Brownian motion</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h1 id="speakers">Speakers</h1>
+<ul>
+<li>
+<p class="annotate"><strong>Andrew Allan</strong> <em>Durham University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Rough Stochastic Differential Equations with Jumps"</strong></p>
+<p>The theory of rough paths provides a framework for the study of nonlinear systems driven by highly oscillatory (deterministic) signals. The corresponding analysis is inherently distinct from that of classical stochastic calculus, and neither theory alone is able to satisfactorily handle hybrid systems driven by both rough and stochastic noise (as sometimes appear, e.g., in stochastic filtering, pathwise stochastic control, and mixed Black-Scholes models). The introduction of the stochastic sewing lemma (Khoa Lê, 2020) has paved the way for a theory which can efficiently handle such hybrid systems. In this talk, we will discuss how this can be done in a general setting which allows for jump discontinuities in both sources of noise. The talk is based on joint work with Jost Pieper.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Ariel Neufeld</strong> <em>Nanyang Technical University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Markov Decision Processes under Model Uncertainty"</strong></p>
+<p>In this talk we introduce a general framework for Markov decision problems under model uncertainty in a discrete-time infinite horizon setting. By providing a dynamic programming principle we obtain a local-to-global paradigm, namely solving a local, i.e., a one time-step robust optimization problem leads to an optimizer of the global (i.e. infinite time-steps) robust stochastic optimal control problem, as well as to a corresponding worst-case measure.Moreover, we apply this framework to portfolio optimization involving data of the S&amp;P 500. We present two different types of ambiguity sets; one is fully data-driven given by a Wasserstein-ball around the empirical measure, the second one is described by a parametric set of multivariate normal distributions, where the corresponding uncertainty sets of the parameters are estimated from the data. It turns out that in scenarios where the market is volatile or bearish, the optimal portfolio strategies from the corresponding robust optimization problem outperforms the ones without model uncertainty, showcasing the importance of taking model uncertainty into account. This talk is based on joint work with Julian Sester and Mario Sikic.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Bruno Bouchard</strong> <em>Paris Dauphine University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"A <span class="arithmatex">\(C^1\)</span>-Ito's Formula for Flows of Semimartingale Distributions"</strong></p>
+<p>We provide an Ito's formula for <span class="arithmatex">\(C^1\)</span>-functionals on the flows of conditional marginal distributions of a continuous semimartingale. This is based on the notion of the weak Dirichlet process and extends the <span class="arithmatex">\(C^1\)</span>-Ito's formula in Gozzi and Russo (2006) to functionals which depend also on marginal distributions of semimartingales. As a first application, we study a class of McKean-Vlasov optimal control problems, and establish a verification theorem by requiring only <span class="arithmatex">\(C^1\)</span>-regularity of its value function, which is equivalently the (viscosity) solution of the associated HJB master equation. Co-authors: Xiaolu Tan and Jixin Wang, Department of Mathematics, The Chinese University of Hong Kong.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Christoph Czyslowsky</strong> <em>London School of Economics</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Equilibrium Asset Pricing with Stochastic Investment Opportunities and Proportional Transaction Costs"</strong></p>
+<p>In view of the increasing automatisation of financial markets, understanding the tradeoff between frequent trading and transaction costs becomes more and more important. In this talk, we consider the impact of proportional transaction costs on risk-sharing equilibria between two agents with mean-variance preferences. The state of the economy is modelled by an underlying diffusion process leading to stochastic investment opportunities for the agents. Our model allows us to observe new effects resulting from the interplay between the transaction costs and the stochastic investment opportunities. This includes solving a new two-dimensional free boundary problem rather than the one-dimensional versions that appear in models with constant coefficients. The talk is based on joint work with Justin Gwee and Mihalis Zervos.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>David Proemel</strong> <em>Mannheim University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Well-Posedness of Stochastic Volterra Equations with non-Lipschitz Coefficients"</strong></p>
+<p>The study of stochastic Volterra equations with non-Lipschitz continuous coefficients has recently attracted quite some attention, motivated by their very successful applications as well-suited volatility models in mathematical finance. While stochastic Volterra equations with Lipschitz continuous coefficients are well-studied integral equations, in the case of less regular coefficients many fundamental questions are still open. In this talk we discuss the existence of strong and weak solutions as well as pathwise uniqueness of stochastic Volterra equations with time-inhomogeneous non-Lipschitz continuous coefficients. The talk is based on joint work with David Scheffels.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Fenghui Yu</strong> <em>Technical University Delft</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Execution Probabilities in a Limit Order Book with State-Dependent Order Flows"</strong></p>
+<p>We delve into the computation of execution probabilities for limit orders positioned at various price levels within the limit order book, a critical aspect in execution optimization. We adopt a generic stochastic model to capture the dynamics of the order book as a series of queueing systems. This generic model is state-dependent and encompasses stylized factors. We subsequently derive semi-analytical expressions to compute the relevant probabilities within the context of state-dependent stochastic order flows. These probabilities cover various scenarios, including the probability of a change in the mid-price, the execution probabilities of orders posted at the best quotes, and those posted at a price level deeper in the book, before the opposite best quote moves. Lastly, we conduct extensive numerical experiments using real order book data from the foreign exchange spot market.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Guojing Wang</strong> <em>Soochow University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Pricing CDS Index Tranches under Contagion Model with Regime Switching"</strong></p>
+<p>The contagion credit risk model is usually used to describe the contagion effect among different financial institutions. In this paper, we introduce a default contagion model in which the default process is described by a Cox process with regime switching, and the default intensity process will increase with a positive jump once a considered firm defaults. We derive some closed form expressions for the distribution of default times and for the pricing formulas of the CDS index tranches. Based on market data we present some numerical results for the CDS index tranches. (a joint work with Ms Jiayuan Qian)</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Hoi Ying Wong</strong> <em>The Chinese University of Hong Kong</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Robust Dividend Policy: Equivalence of Epstein-Zin and Meanhout Preferences"</strong></p>
+<p>The classic optimal dividend problem aims to maximize the expected discounted dividend stream over the lifetime of a company. Since dividend payments are irreversible, this problem corresponds to a singular control problem with a risk-neutral utility function applied to the discounted dividend stream. In cases where the company's surplus process encounters model ambiguity under the Brownian filtration, we explore robust dividend payment strategies in worst-case scenarios. Two possible robust preferences are examined and compared. Using Epstein-Zin (EZ) preferences, we formulate the robust dividend problem as a recursive utility function with the EZ aggregator within a singular control framework. We investigate the existence and uniqueness of the EZ dividend problem. By employing Backward Stochastic Differential Equation theory, we demonstrate that the EZ formulation is equivalent to the maximin problem involving risk-neutral utility on the discounted dividend stream, incorporating Meanhout's regularity that reflects investors' ambiguity aversion. In other words, we establish a connection between ambiguity aversion in a robust singular control problem and risk aversion in EZ preferences. Additionally, considering the equivalent Meanhout's preferences, we solve the robust dividend problem using a Hamilton-Jacobi-Bellman approach combined with a variational inequality (VI). Our solution is obtained through a novel shooting method that simultaneously satisfies the VI and boundary conditions. This is a joint work with Kexin Chen and Kyunghyun Park.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Jean-Pierre Fouque</strong> <em>University of California Santa Barbara</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Reinforcement Learning for Mean Field Game and Control Problems"</strong></p>
+<p>We present our recent results on multi-scale reinforcement learning algorithms for mean field game and mean field control problems in finite state and action spaces. The proof of convergence sheds some light on the difference between MFG and MFC. Joint work with Andrea Angiuli, Mathieu Laurière, and Mengrui Zhang.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Jianfeng Zhang</strong> <em>University of Southern California</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Set Values for Nonzero Sum Games"</strong></p>
+<p>Nonzero sum games typically have multiple Nash equilibria, and more importantly, different equilibria may induce different values. In this talk we propose to study the set of values over all possible equilibria, called the set value of games. This set value is by nature unique, and it shares many nice properties of the value function for a standard control problem. In particular, it satisfies the dynamic programming principle and the regularity/stability. We shall also discuss how to characterize the dynamic set value function of games through set valued Hamiltonians and set valued PDEs. The talk is based on a series of works, joint with Feinstein, Iseri, Qiao, and Rudloff.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Jingjie Zhang</strong> <em>University of International Business and Economics</em> (1)</p>
+<ol>
+<li>
+<p><strong>"A Quantitative Comparison of Unemployment Benefit Extension and Level Increase"</strong></p>
+<p>We use mean-field game theory to quantitatively compare two unemployment insurance (UI) extension policies commonly used during recessions: raising benefit levels versus extending the duration of benefits. Our heterogenous-agent model features costly job search and individual savings. Our calibrated model matches the savings distribution observed in the U.S. After requiring that the two UI policies have the same cost, we find: (1) a large, one-time lumpsum payment results in lower unemployment rates relative to a moderate, long-lived increase in benefits and (2) both policies deliver approximately the same ex-ante expected utility to unemployed individuals. (Joint work with Erhan Bayraktar and Indrajit Mitra)</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Johannes Muhle-Karbe</strong> <em>Imperial College London</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Concave Cross Impact"</strong></p>
+<p>The price impact of large orders is well known to be a concave function of trade size. We discuss how to extend models consistent with this “square-root law” to multivariate settings with cross impact, where trading each asset also impacts the prices of the others. In this context, we derive consistency conditions that rule out price manipulation, discuss how cross impact affects optimal trading strategies, and illustrate these results using CFM metaorder data.  (Joint work in progress with Natascha Hey and Iacopo Mastromatteo)</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Johannes Wiesel</strong> <em>Carnegie Mellon University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Empirical Martingale Projections via the Adapted Wasserstein Distance"</strong></p>
+<p>Given a collection of multidimensional pairs <span class="arithmatex">\((Xi,Yi)_{1\leq i\leq n}\)</span>, we study the problem of projecting the associated suitably smoothed empirical measure onto the space of martingale couplings (i.e. distributions satisfying <span class="arithmatex">\(\mathbb{E}[Y|X]=X\)</span>) using the adapted Wasserstein distance. We call the resulting distance the smoothed empirical martingale projection distance (SE-MPD), for which we obtain an explicit characterization. We also show that the space of martingale couplings remains invariant under the smoothing operation. We study the asymptotic limit of the SE-MPD, which converges at a parametric rate as the sample size increases if the pairs are either i.i.d. or satisfy appropriate mixing assumptions. Additional finite-sample results are also investigated. Using these results, we introduce a novel consistent martingale coupling hypothesis test, which we apply to test the existence of arbitrage opportunities in recently introduced neural network-based generative models for asset pricing calibration.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Juan Li</strong> <em>Shandong University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Mean field stochastic control problems under sublinear expectation"</strong></p>
+<p>In this talk we study Pontryagin's stochastic maximum principle for a mean-field optimal control problem under Peng's <span class="arithmatex">\(G\)</span>-expectation. The dynamics of the controlled state process is given by a stochastic differential equation driven by a <span class="arithmatex">\(G\)</span>-Brownian motion, whose coefficients depend not only on the control, the controlled state process but also on its law under the <span class="arithmatex">\(G\)</span>-expectation. Also the associated cost functional is of mean-field type. Under the assumption of a convex control state space we study the stochastic maximum principle, which gives a necessary optimality condition for control processes. Under additional convexity assumptions on the Hamiltonian it is shown that this necessary condition is also a sufficient one. The main difficulty which we have to overcome in our work consists in the differentiation of the <span class="arithmatex">\(G\)</span>-expectation of parameterized random variables. Based on a joint work with Rainer Buckdahn (UBO, France), Bowen He (SDU, China).</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Julien Claisse</strong> <em>Paris Dauphine University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Mean-field Optimization Regularized by Fisher Information"</strong></p>
+<p>Recently there is a rising interest in the research of mean-field optimization, in particular because of its role in analyzing the training of neural networks. In this talk, by adding the Fisher information (in other word, the Schrodinger kinetic energy) as the regularizer, we relate the mean-field optimization problem with a so-called mean field Schrodinger (MFS) dynamics. We develop a free energy method to show that the marginal distributions of the MFS dynamics converge exponentially quickly towards the unique minimizer of the regularized optimization problem. We shall see that the MFS is a gradient flow on the probability measure space with respect to the relative entropy. Finally we propose a Monte Carlo method to sample the marginal distributions of the MFS dynamics. This is a joint work with Giovanni Conforti, Zhenjie Ren and Songbo Wang.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Lan Wu</strong> <em>Peking University</em> (1)</p>
+<ol>
+<li><strong>TBA</strong></li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Martin Schweizer</strong> <em>ETH Zurich</em> (1)</p>
+<ol>
+<li>
+<p><strong>"A Stochastic Fubini Theorem via Measure-Valued Integrands"</strong></p>
+<p>We present a new stochastic Fubini theorem in a setting where the stochastic Fubini property is obtained in a weak sense. This involves defining a stochastic integral, with respect to a fixed semimartingale, of measure-valued integrand processes. Potential applications will perhaps be mentioned.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Mathieu Rosenbaum</strong> <em>Ecole Polytechnique</em> (1)</p>
+<ol>
+<li>
+<p><strong>"The Two Square Root Laws of Market Impact and the Role of Sophisticated Market Participants"</strong></p>
+<p>The goal of this work is to disentangle the roles of volume and participation rate in the price response of the market to a sequence of orders. To do so, we use an approach where price dynamics are derived from the order flow via no arbitrage constraints and make connections with the rough volatility paradigm. We also introduce in the model sophisticated market participants having superior abilities to analyse market dynamics. Our results lead to two square root laws of market impact, with respect to executed volume and with respect to participation rate. This is joint work with Bruno Durin and Grégoire Szymanski.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Michael Kupper</strong> <em>University of Konstanz</em> (1)</p>
+<ol>
+<li><strong>Discrete Approximation of Risk-Based Pricing under Uncertainty</strong></li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Min Dai</strong> <em>The Hong Kong Polytechnic University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Learning Optimal Investment Strategy with Transaction Costs via a Randomized Dynkin Game"</strong></p>
+<p>We develop a reinforcement learning method to learn optimal investment strategy in the presence of transaction costs. Using a connection between singular control and a Dynkin game for portfolio choice with transaction costs, we design a reinforcement learning algorithm to learn the optimal strategy through a related randomized Dynkin game, where a regularization term is incorporated to encourage exploration. Numerical results are presented to demonstrate our algorithm.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Nizar Touzi</strong> <em>New York University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Mean Field Games Approach to Systemic Risk"</strong></p>
+<p>Connections between economic agents are desirable for risk diversification purposes. However, they may also be responsible for default contagion, a major concern at the heart of the financial stability of the system. We develop a model of system connection based on the strategic interaction between economic agents. We solve explicitly the mean field limit of the problem in the case of uncorrelated idiosyncratic risks, and we provide a quasi explicit solution of the mean field game. This allows to provide an approximate Nash equilibrium for the finite population problem. We also solve the case of correlated idiosyncratic risk through some common factor by analyzing an appropriate notion of no arbitrage in this context.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Paolo Guasoni</strong> <em>Dublin City University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Evaluating and Mitigating Transaction Costs with Recurrent Neural Networks"</strong></p>
+<p>We develop a method for evaluating and mitigating the effect of transaction costs on trading strategies with many assets. An iteration procedure yields cost-adjusted portfolio returns, enabling the formulation of portfolio-choice problems as optimization of Recurrent Neural Networks (RNN). This method reproduces the theoretical results available for one risky asset and the numerical approximations available for two risky assets through finite-elements. Crucially, the RNN model scales to several assets and is fully interpretable, as its parameters identify their no-trade region. Importance-sampling significantly enhances the model’s performance, especially with several assets. An application to equally-weighted funds demonstrates the method's ability to reduce both tracking error and tracking difference from an empirical target. (Joint work with Ran Li.)</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Ping Li</strong> <em>Beihang University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Compound Heat-drought Risk and the Issuing Spread of China’s Municipal Corporate Bonds"</strong></p>
+<p>This paper uses a dynamic copula model to measure compound heat-drought risk and examines its relationship with the issuing spread of China’s municipal corporate bonds. Local government financing vehicles that are more likely to be affected by compound heat-drought risk pay more costs to issue municipal corporate bonds compared to vehicles unlikely to be affected by compound heat-drought risk. Mechanism analyses find that the compound heat-drought risk damages the solvency of local government financing vehicles and the implicit guarantee ability of local governments. Higher investor attention increases the spread of municipal corporate bonds. Further, the green coverage rates of prefecture-level city can mitigate the negative compound heat-drought risk premium. The conclusion is of great significance for understanding the economic consequences of compound heat-drought risk.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Ruixun Zhang</strong> <em>Peking University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"On Consistency of Signatures Using Lasso and Applications in Option Pricing"</strong></p>
+<p>Signature transforms are iterated path integrals of continuous and discrete-time time series data, and their universal nonlinearity linearizes the problem of feature selection. This paper revisits some statistical properties of signature transform under stochastic integrals with a Lasso regression framework, both theoretically and numerically. Our study shows that, for processes and time series that are closer to Brownian motion or random walk with weaker inter-dimensional correlations, the Lasso regression is more consistent for their signatures defined by Ito integrals; for mean reverting processes and time series, their signatures defined by Stratonovich integrals have more consistency in the Lasso regression. We apply these results to learning nonlinear functions and option pricing. Our findings highlight the importance of choosing appropriate definitions of signatures and stochastic models in statistical inference and machine learning. This is joint work with Xin Guo, Binnan Wang, and Chaoyi Zhao.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Sizhou Wu</strong> <em>Nanyang Technical University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Modern numerical methods for semilinear PIDEs using Monte Carlo and random neural networks for high-dimensional option pricing"</strong></p>
+<p>In this talk, we introduce two modern numerical algorithms to approximate semilinear parabolic partial integro-differential equations (PIDEs). The first algorithm is the so-called multilevel Picard (MLP) approximation based on Monte Carlo simulation, and the other one is the random deep-splitting algorithm using random neural networks. For both algorithms, we provide full error analysis and complexity analysis. Furthermore, we present a numerical example in which both algorithms are applied to price high-dimensional financial derivatives in a jump-diffusion model.
+This talk is based on joint works with Ariel Neufeld and Philipp Schmocker</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Tianyang Nie</strong> <em>Shandong University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Indefinite partially observed <span class="arithmatex">\(LQ\)</span> mean-field game"</strong></p>
+<p>We investigate an indefinite linear-quadratic partially observed mean-field game with common noise, where both the state-average and control-average are considered. All weighting matrices in the cost functional can be indefinite. We obtain the decentralized optimal strategies by the Hamiltonian approach and demonstrate the well-posedness of Hamiltonian system by virtue of relaxed compensator. The related Consistency Condition and the feedback form of decentralized optimal strategies are derived. Moreover, we prove that the decentralized optimal strategies are <span class="arithmatex">\(\varepsilon\)</span>-Nash equilibrium by using the relaxed compensator. The talk is based on the joint work with Dr, Tian Chen and Prof. Zhen Wu.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Xiang Yu</strong> <em>The Hong Kong Polytechnic University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Continuous time <span class="arithmatex">\(q\)</span>-learning for mean-field control problems"</strong></p>
+<p>In this talk, we study <span class="arithmatex">\(q\)</span>-learning, recently coined as the continuous time counterpart of <span class="arithmatex">\(Q\)</span>-learning by Jia and Zhou (2023), for mean-field control problems in the setting of entropy-regularized reinforcement learning. In contrast to the single agent's control problem in Jia and Zhou (2023), the mean-field interaction of agents renders the definition of the q-function more subtle, for which we reveal that two distinct <span class="arithmatex">\(q\)</span>-functions naturally arise: (i) the integrated q-function as the first-order approximation of the integrated <span class="arithmatex">\(Q\)</span>-function introduced in Gu, Guo, Wei and Xu (2023), which can be learnt by a weak martingale condition involving test policies; and (ii) the essential q-function that is employed in policy improvement iterations. We show that two <span class="arithmatex">\(q\)</span>-functions are related via an integral representation under all test policies. Based on the weak martingale condition and our proposed searching method of test policies, some model-free learning algorithms are devised. In two financial application examples, one in <span class="arithmatex">\(LQ\)</span> control framework and one beyond <span class="arithmatex">\(LQ\)</span> control framework, we can obtain the exact parameterization of the optimal value function and <span class="arithmatex">\(q\)</span>-functions and illustrate our algorithms with simulation experiments. This is a joint work with Xiaoli Wei (Harbin Institute of Technology). </p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Xianhua Peng</strong> <em>Peking University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Reinforcement learning for financial index tracking"</strong></p>
+<p>We propose the first discrete-time infinite-horizon dynamic formulation of the financial index tracking problem under both return-based tracking error and value-based tracking error. The formulation overcomes the limitations of existing models by incorporating the intertemporal dynamics of market information variables not limited to prices, allowing exact calculation of transaction costs, accounting for the tradeoff between overall tracking error and transaction costs, allowing effective use of data in a long time period, etc. The formulation also allows novel decision variables of cash injection or withdraw. We propose to solve the portfolio rebalancing equation using a Banach fixed point iteration, which allows to accurately calculate the transaction costs specified as nonlinear functions of trading volumes in practice. We propose an extension of deep reinforcement learning (RL) method to solve the dynamic formulation. Our RL method resolves the issue of data limitation resulting from the availability of a single sample path of financial data by a novel training scheme. A comprehensive empirical study based on a 17-year-long testing set demonstrates that the proposed method outperforms a benchmark method in terms of tracking accuracy and has the potential for earning extra profit through cash withdraw strategy. This is a joint work with Chenyin Gong, Xuedong He, and Yi Wu. </p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Xiaoli Wei</strong> <em>Harbin Institute of Technology</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Continuous-Time <span class="arithmatex">\(q\)</span>-Learning for Mean-Field Control Problems with Common Noise"</strong></p>
+<p>This paper investigates the continuous-time entropy-regularized reinforcement learning (RL) for mean-field control problems with common noise. We study the continuous-time counterpart of the <span class="arithmatex">\(Q\)</span>-function in the mean-field model, coined as <span class="arithmatex">\(q\)</span>-function in Jia and Zhou (2023) in the single agents model. It is shown that the controlled common noise gives rise to a nonlocal term of the policy in the exploratory HJB equation, rendering the policy improvement iteration intricate. To devise the model-free RL algorithm, we introduce the integrated <span class="arithmatex">\(q\)</span>-function (<span class="arithmatex">\(Iq\)</span>-function) on distributions of both state and action, and an optimal policy can be identified as a two-layer fixed point to the argmax operator of the Iq-function. The martingale characterization of the value function and <span class="arithmatex">\(Iq\)</span>-function is established by exhausting all test policies. This allows us to propose several algorithms including the Actor-Critic learning algorithm, in which the policy is updated in the Actor-step based on the policy improvement rule induced by the linear derivative of the Iq-function with respect to the action distribution, and the value function and Iq-function are updated in the Critic-step based on the orthogonal martingale loss function involving all test policies. In two examples, within and beyond LQ-control framework, we implement and compare some simulation experiments of our RL algorithms with satisfactory performance. This a joint work with Zhenjie Ren, Xiang Yu and Xunyu Zhou</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Xiaolu Tan</strong> <em>The Chinese University of Hong Kong</em> (1)</p>
+<ol>
+<li>
+<p><strong>"On the Regularity of Solutions of some Linear Parabolic Path-Dependent PDEs"</strong></p>
+<p>We study a class of linear parabolic path-dependent PDEs (PPDEs) defined on the space of càdlàg paths <span class="arithmatex">\(x\)</span>, in which the coefficient functions at time <span class="arithmatex">\(t\)</span> depend on <span class="arithmatex">\(x(t)\)</span> and <span class="arithmatex">\(\int_0^t x(s) dA_s\)</span>, for some (deterministic) continuous function <span class="arithmatex">\(A\)</span> with bounded variations. Under uniform ellipticity and Hölder regularity conditions on the coefficients, together with some technical conditions on <span class="arithmatex">\(A\)</span>, we obtain the existence of a smooth solution to the PPDE by appealing to the notion of Dupire's derivatives. It provides a generalization to the existing literature studying the case where <span class="arithmatex">\(A_t = t\)</span>, and complements our previous work on the regularity of approximate viscosity solutions for parabolic PPDEs. As a by-product, we also obtain existence and uniqueness of weak solutions for a class of path-dependent SDEs. This is a joint work with Bruno Bouchard.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Xin Guo</strong> <em>Berkeley University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Alpha Potential Games: A New Paradigm for N-Player Games"</strong></p>
+<p>Static potential games, pioneered by Monderer and Shapley (1996) are non-cooperative static games in which there exists an auxiliary function called static potential function, so that any player's change in utility function upon unilaterally deviating from her policy can be evaluated through the change in the value of this potential function. The introduction of the potential function is powerful as it simplifies  the otherwise challenging task of searching for Nash equilibria in  multi-agent non-cooperative games:  maximizers of potential functions lead to the game's Nash equilibria.
+In this talk, we propose an analogous and new framework called <span class="arithmatex">\(\alpha\)</span>-potential game for  dynamic <span class="arithmatex">\(N\)</span>-Player games, with the potential function in the static setting replaced by an  <span class="arithmatex">\(\alpha\)</span>-potential function. We will present the analytical criteria for any game to be an <span class="arithmatex">\(\alpha\)</span>-potential game, and identify several important classes of Markov <span class="arithmatex">\(\alpha\)</span>-potential games. 
+ We will provide detailed analysis for games with mean-field interactions, distributed games, and  crowd aversion games, in which <span class="arithmatex">\(\alpha\)</span> is shown to depend on the number of players, the admissible policies, and the cost structure. We will also show the changes of  <span class="arithmatex">\(\alpha\)</span> from open-loop to closed-loop settings. </p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Xingye Yue</strong> <em>Soochow University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Trinomial tree method for <span class="arithmatex">\(G\)</span>-Expectation and sampling for <span class="arithmatex">\(G\)</span>-normal random variable after Measurement"</strong></p>
+<p>Given a <span class="arithmatex">\(1\)</span>-Dimensional <span class="arithmatex">\(G\)</span>-normal random variable (RV) <span class="arithmatex">\(X\)</span>, a trinomial tree method is proposed to approximate the <span class="arithmatex">\(G\)</span>-Expectation <span class="arithmatex">\(E[\phi(X)]\)</span> for any test function. The method is stable and convergent. There is no need to worry about the boundary condition. Furthermore, the whole numerical process actually yields the samples to estimate the expectation <span class="arithmatex">\(E[\phi(X)]\)</span>. As we know, direct sampling for a <span class="arithmatex">\(G\)</span>-normal RV <span class="arithmatex">\(X\)</span> is infeasible due to the uncertainty of its distribution. But for a “measurement” <span class="arithmatex">\(E[\phi(X)]\)</span>, the sampling is feasible. This is just like an measurement on quantum state: before measurement, the state is uncertain and unknown, after measurement, the state is definite.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Yan Zeng</strong> <em>Sun Yat-sen University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"The Impact of Intermediaries on Insurance Demand and Pricing"</strong></p>
+<p>This paper studies the impact of an independent insurance intermediary who holds a fiduciary duty to an unsophisticated insurance buyer on insurance demand and pricing. The intermediary utilizes two remuneration systems, namely, a fee-for-advice system and a commission system. Insurance contracting between the buyer (represented by the intermediary) and an insurer, is formulated as a Stackelberg insurance game. We obtain the buyer’s equilibrium indemnity and the insurer’s equilibrium pricing strategy in closed forms, and subsequently conduct comparative statics analysis with respect to the intermediary’s level of fiduciary duty and remuneration. Our results show that the phenomenon of over-insuring despite high premium, a long-standing paradox in insurance economics, also attributes to the deficiency of the intermediary’s fiduciary duty.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Yufei Zhang</strong> <em>Imperial College London</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Some Recent Progress in Continuous-Time Reinforcement Learning"</strong></p>
+<p>Recently, reinforcement learning (RL) has attracted substantial research interests. Much of the attention and success, however, has been for the discrete-time setting. Continuous-time RL, despite its natural analytical connection to stochastic controls, has been largely unexplored and with limited progress. In particular, characterising sample efficiency for continuous-time RL algorithms remains a challenging and open problem. In this talk, we will discuss some recent advances in the convergence rate analysis for the episodic linear-convex RL problem, and report regret bounds of various learning algorithms.  The approach is probabilistic, involving analysing learning efficiency using concentration inequalities for correlated observations, and quantifying the performance of feedback controls derived from estimated models. The latter is achieved via the stability of the associated forward-backward stochastic differential equation. </p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Yufeng Shi</strong> <em>Shandong University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Deep learning approaches in numerical computation of backward stochastic differential equation and applications in financial asset pricing"</strong></p>
+<p>Deep learning can effectively overcome dimensional disasters in the numerical methods of Nonlinear partial differential equation and backward Stochastic differential equation, and has become an important research direction of numerical computation in recent years. We study the numerical calculation methods of high-dimensional backward doubly stochastic differential equations and high-dimensional mean field backward doubly stochastic differential equations, in which the deep neural network is introduced as the key step to achieve numerical solution. Based on the numerical method of backward Stochastic differential equation, this paper studies the option data driven g-pricing modeling method, and verifies the model performance with SPX options. At the same time, with the help of deep learning data mining capabilities, a model for mining high-frequency order book price change information was established, and empirical research was conducted using high-frequency order book data.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Zhenjie Ren</strong> <em>Paris Dauphine University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Self-Interacting Approximation to McKean-Vlasov Long Time Limit"</strong></p>
+<p>Motivated by the mean-field optimization model of the training of two-layer neural networks, we propose a novel method to approximate the invariant measures of a class of McKean-Vlasov diffusions. We introduce a proxy process that substitutes the mean-field interaction with self-interaction through a weighted occupation measure of the particle's past. If the McKean-Vlasov diffusion is the gradient flow of a convex mean-field potential functional, we show that the self-interacting process exponentially converges towards its unique invariant measure close to that of the McKean-Vlasov diffusion. As an application, we show how to learn the optimal weights of a two-layer neural network by training a single neuron.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Zhenya Liu</strong> <em>Renmin University of China</em> (1)</p>
+<ol>
+<li>
+<p><strong>"When will China’s economy overtake the United States?"</strong></p>
+<p>The uncertainty of the world economy is increasing due to various kinds of shocks. As the two largest economies in the world, the United States and China, their competition and power transition will impact the international economic order. We have constructed stochastic process models to predict the GDP paths of both countries. Based on historical data into the future, we estimate the model's parameters and predict when China's GDP will surpass that of the United States based on the first passage time theory. We have used the change point detection method to handle different economic situations. The changes in our model parameters provide valuable economic information, and our predictions become more reliable once we have considered the change point.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Zihao Gu</strong> <em>Shanghai Jiao Tong University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Quadratic BSDEs with mean reflection driven by G-Brownian motion"</strong></p>
+<p>In this talk, we present the well-posedness of a kind of backward stochastic differential equation driven by G-Brownian motions (G-BSDEs for short) with mean reflection. In particular, the generator is allowed having quadratic growth in z. Combining a representation of the solution with G-BMO martingale techniques, fixed point argument, and θ-method, existence and uniqueness results for such G-BSDEs are provided under bounded and unbounded terminal condition. In addition, the mean constraint can be generalized to a risk constraint for financial application. This is a joint work with Yiqing Lin and Kun Xu.</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Ziteng Cheng</strong> <em>University of Toronto</em> (1)</p>
+<ol>
+<li>
+<p><strong>"Deep Learning Conditional Distributions on Continuous Spaces"</strong></p>
+<p>We investigate sample-based learning of conditional distributions on multi-dimensional unit boxes, allowing for different dimensions of the input and output spaces. Our approach leverages grouping data in proximity to varying query points, employing two distinct methods: one based on a fixed-radius ball and the other on nearest neighbors. We establish upper bounds for the convergence rates of both methods and, from these bounds, deduce optimal configurations for the radius and the number of neighbors. To obtain a Lipschitz continuous estimator of the conditional distribution for enhanced certifiability, we incorporate the nearest neighbor method into neural network training. For improved efficiency, the training process utilizes approximate nearest neighbor search with random binary space partitioning. Additionally, it employs Sinkhorn algorithm and sparsity-enforced transport plan for training objective computation. Our empirical findings reveal that, with a suitably designed structure, the neural network displays adaptive continuity. This is joint work with Cyril Benezet (ENSIIE) and Sebastian Jaimungal (University of Toronto).</p>
+</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><strong>Zuoquan Xu</strong> <em>The Hong Kong Polytechnic University</em> (1)</p>
+<ol>
+<li>
+<p><strong>"State-dependent temperature control for Langevin diffusions"</strong></p>
+<p>We study the temperature control problem for Langevin diffusions in the context of non-convex optimization. The classical optimal control of such a problem is of the bang-bang type, which is overly sensitive to errors. A remedy is to allow the diffusions to explore other temperature values and hence smooth out the bang-bang control. We accomplish this by a stochastic relaxed control formulation incorporating randomization of the temperature control and regularizing its entropy. We derive a state-dependent, truncated exponential distribution, which can be used to sample temperatures in a Langevin algorithm, in terms of the solution to an HJB partial differential equation. We carry out a numerical experiment on a one- dimensional baseline example, in which the HJB equation can be easily solved, to compare the performance of the algorithm with three other available algorithms in search of a global optimum. This is a joint work with Xuefeng Gao (The Chinese University of Hong Kong) and Xun Yu Zhou (Columbia University).</p>
+</li>
+</ol>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
