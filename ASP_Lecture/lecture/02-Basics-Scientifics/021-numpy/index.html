@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="http://127.0.0.1:10001/lecture/04-numpy-plotly-scipy/">
+        <link rel="canonical" href="http://127.0.0.1:10001/lecture/02-Basics-Scientifics/021-numpy/">
       
       
-        <link rel="prev" href="../03-functions-classes/">
+        <link rel="prev" href="../../01-Basics-Programing/013-functions-classes/">
       
       
-        <link rel="next" href="../05-scipy/">
+        <link rel="next" href="../022-plotly/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
-        <title>Basic Scientific Libraries - Scientific Programing - An Introduction</title>
+        <title>Arrays - Numpy - Scientific Programing - An Introduction</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-scientific-libraries" class="md-skip">
+        <a href="#arrays-numpy" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Scientific Programing - An Introduction" class="md-header__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
+    <a href="../../.." title="Scientific Programing - An Introduction" class="md-header__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Basic Scientific Libraries
+              Arrays - Numpy
             
           </span>
         </div>
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -222,7 +222,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../00-introduction/" class="md-tabs__link">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
           
   
     
@@ -242,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../material/material/" class="md-tabs__link">
+        <a href="../../../material/material/" class="md-tabs__link">
           
   
     
@@ -285,7 +285,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Scientific Programing - An Introduction" class="md-nav__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
+    <a href="../../.." title="Scientific Programing - An Introduction" class="md-nav__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -303,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,20 +335,12 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
       
         
         
       
-      
-        
       
     
     
@@ -384,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00-introduction/" class="md-nav__link">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,8 +396,54 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic of Programing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic of Programing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../01-first-steps/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/011-first-steps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -426,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-control-flows/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/012-control-flows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-functions-classes/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/013-functions-classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,6 +498,64 @@
   
 
               
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic Scientific Computations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Scientific Computations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -481,7 +577,7 @@
           
   
   <span class="md-ellipsis">
-    Basic Scientific Libraries
+    Arrays - Numpy
   </span>
   
 
@@ -492,7 +588,7 @@
         
   
   <span class="md-ellipsis">
-    Basic Scientific Libraries
+    Arrays - Numpy
   </span>
   
 
@@ -514,16 +610,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#numpy" class="md-nav__link">
+  <a href="#basics" class="md-nav__link">
     <span class="md-ellipsis">
-      Numpy
+      Basics
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Numpy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#generating-arrays" class="md-nav__link">
     <span class="md-ellipsis">
       Generating arrays
@@ -531,17 +626,17 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#slicing-on-conditions" class="md-nav__link">
     <span class="md-ellipsis">
-      slicing on conditions
+      Slicing on Conditions
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#broadcasting" class="md-nav__link">
     <span class="md-ellipsis">
       Broadcasting
@@ -549,8 +644,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#linear-algebra" class="md-nav__link">
     <span class="md-ellipsis">
       Linear algebra
@@ -558,8 +653,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#randomness" class="md-nav__link">
     <span class="md-ellipsis">
       Randomness
@@ -567,25 +662,11 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#fake-vs-true-copy" class="md-nav__link">
     <span class="md-ellipsis">
       Fake vs True Copy
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#producing-some-nice-graphs-we-truly-like-it" class="md-nav__link">
-    <span class="md-ellipsis">
-      Producing Some Nice Graphs (we truly like it)
     </span>
   </a>
   
@@ -607,11 +688,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-scipy/" class="md-nav__link">
+      <a href="../022-plotly/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    First Scientific Computations
+    Plotting
   </span>
   
 
@@ -628,7 +709,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-rng-monte-carlo/" class="md-nav__link">
+      <a href="../023-scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Computations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../024-rng-monte-carlo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -637,6 +739,154 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Handeling Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Handeling Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Data/031-pandas-first-steps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Data/032-pandas-computations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Data/033-pandas-manipulations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Manipulations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Data/034-datetime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Date and Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -667,8 +917,6 @@
     
     
       
-      
-        
       
     
     
@@ -704,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material/material/" class="md-nav__link">
+      <a href="../../../material/material/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material/hw01/" class="md-nav__link">
+      <a href="../../../material/hw01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -746,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material/hw02/" class="md-nav__link">
+      <a href="../../../material/hw02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +1030,7 @@
                   
 
 
-<h1 id="basic-scientific-libraries">Basic Scientific Libraries</h1>
+<h1 id="arrays-numpy">Arrays - Numpy</h1>
 <p>With the basic of programming so far we can do scientific computing, basic scientific computing.
 Theoretically we can compute approximation of any function such as <span class="arithmatex">\(x \mapsto e^x\)</span>.
 This would however be very difficult to implement all the classical mathematics such as basic functions <code>exp</code>, <code>ln</code>, <code>sin</code>, <code>arccos</code> etc.
@@ -794,7 +1042,6 @@ Those libraries are most of the time open source and provide pre built functions
 <li><strong>install</strong> it (either through <code>anaconda</code> or <code>pip</code>)</li>
 <li><strong>import</strong> it at the begining of the script using <code>import xxx</code></li>
 </ul>
-<h2 id="numpy">Numpy</h2>
 <p><a href="https://numpy.org/">NumPy</a> is a cornerstones of scientific computing in the python community.
 The <code>numpy</code> library is used in almost all numerical computation using Python.
 It is a library that provide high-performance vector, matrix and higher-dimensional data manipulation for Python (tensors).
@@ -805,6 +1052,7 @@ The objects are arrays and handled as lists with many additional functionalities
 <p class="admonition-title">Note</p>
 <p>As a convention over time the <code>numpy</code> library is imported with a nickname <code>np</code>.</p>
 </div>
+<h2 id="basics">Basics</h2>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># import the library numpy with nickname np</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -922,7 +1170,7 @@ You can not allocate values which are not of the predeclared type to an array.</
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;array </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> with type </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
 </div>
-<h3 id="generating-arrays">Generating arrays</h3>
+<h2 id="generating-arrays">Generating arrays</h2>
 <p>Quite often you need to generate array from specific shape and structure such as an identity matrix.
 Numpy provides handy ways to construct them, the list of which can be found <a href="https://numpy.org/doc/stable/reference/routines.array-creation.html">here</a></p>
 <p>It includes among others</p>
@@ -964,7 +1212,7 @@ Numpy provides handy ways to construct them, the list of which can be found <a h
 </span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="slicing-on-conditions">slicing on conditions</h3>
+<h2 id="slicing-on-conditions">Slicing on Conditions</h2>
 <p>We already saw several examples of slicing for list that are basically done with respect to the domain of indices of the list itself.
 Numpy allows to generate efficiently slicing based on the values of the array, basically retrieving indices of the kind</p>
 <div class="arithmatex">\[
@@ -996,7 +1244,7 @@ Numpy allows to generate efficiently slicing based on the values of the array, b
 </span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="c1"># Do it directly for instance for the values between 0.2 and 0.6</span>
 </span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[(</span><span class="n">x</span><span class="o">&gt;</span><span class="mf">0.2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;=</span><span class="mf">0.6</span><span class="p">)])</span>
 </span></code></pre></div>
-<h3 id="broadcasting">Broadcasting</h3>
+<h2 id="broadcasting">Broadcasting</h2>
 <p>Where <code>numpy</code> shines from a scientific computational viewpoint, is about so called <em>broadcasting</em>.
 In math you would define a function </p>
 <div class="arithmatex">\[
@@ -1099,7 +1347,7 @@ Beyond this scope, if you need to write a function, think twice before you input
 </span><span id="__span-9-39"><a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="c1"># Naturally this is naive, you have a numpy function maximum that provides this result direclty</span>
 </span><span id="__span-9-40"><a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="n">printf</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Using numpy maximum: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="linear-algebra">Linear algebra</h3>
+<h2 id="linear-algebra">Linear algebra</h2>
 <ul>
 <li>elementwise multiplication and power</li>
 <li>transpose</li>
@@ -1138,7 +1386,7 @@ Beyond this scope, if you need to write a function, think twice before you input
 </span><span id="__span-10-28"><a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;multiplicative inverse of B </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="p">)</span>
 </span><span id="__span-10-29"><a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B B^(-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">B</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">B</span><span class="p">))</span> <span class="p">)</span>
 </span></code></pre></div>
-<h3 id="randomness">Randomness</h3>
+<h2 id="randomness">Randomness</h2>
 <p>We already saw that we can generate random numbers.
 With this at hand, you have easy access to basis statistical information such as the mean, variance, standard deviation (you can have a look at quantiles, etc.)</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
@@ -1151,7 +1399,7 @@ With this at hand, you have easy access to basis statistical information such as
 </span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cumulative sum: &quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">cumsum</span><span class="p">())</span>
 </span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;correlation matrix: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">corrcoef</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 </span></code></pre></div>
-<h3 id="fake-vs-true-copy">Fake vs True Copy</h3>
+<h2 id="fake-vs-true-copy">Fake vs True Copy</h2>
 <p>Remember that with basic python, equality means allocation and therefore declaration of a new variable</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
@@ -1196,110 +1444,6 @@ If you want a tru new value of an array, you need to <em>tell</em> <code>numpy</
 </span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value of a:</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value of b: </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="producing-some-nice-graphs-we-truly-like-it">Producing Some Nice Graphs (we truly like it)</h2>
-<p>It is underestimated how graphs representation can help to tackle some complex problems.
-If the graph is ugly, you just don't want to see it, while if the graphs is appealing, you might want to explore more the problematic.
-Colors, and clear representations allows to express complex relations therefore a good graph library is fundamental to data analysis and scientific computing.</p>
-<p>Historically, <code>matplotlib</code> is the library that is dedicated at producing every possible plots based on data.
-It is however quite complicated (with very difficult way of modifying making a graph nicer).
-Think of <code>matplotlib</code> as a powerful but low level programming language.</p>
-<p>Based on this library, or independently developed, several plot libraries have emerged:</p>
-<ul>
-<li><code>seaborn</code>: <a href="https://seaborn.pydata.org/">plotting library</a> encapsulating <code>matplotlib</code> but with a nice touch.</li>
-<li><code>bokeh</code>:  <a href="https://bokeh.org/">plotting library</a> more advanced but to my mid a bit difficult to master however with beautiful results (in particular for dynamic graphs)</li>
-<li><code>plotly</code>: <a href="https://plotly.com/graphing-libraries/">Plotting library</a> company providing solution for data representation and analysis. Their graph library is open source for python.</li>
-</ul>
-<p>There are several others (let me know if you find a nice one), but for this lecture I will mainly use <code>plotly</code> as it is easily usable with python and for out purposes.</p>
-<p>The basic of <code>plotly</code> (we will present rapidly plotly express which is a one stop way to represent data from a pandas dataframe) is to define a <code>graph</code> as an object and add components interactively one after the other (like a dictionary).</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Import the libraryt</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1"># we create a graph with x\mapsto sin(x)</span>
-</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
-</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="c1"># Declare the graph</span>
-</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="c1"># add a scatter plot (x, y)</span>
-</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">)</span>
-</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1"># show the graph</span>
-</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></code></pre></div>
-<p>Let us make use of the library with a simple example of a stock price modeled as a random walk.</p>
-<p>We first define our Random walk which is mathematically given as</p>
-<div class="arithmatex">\[
-\begin{equation}
-S_0=s,\quad S_t = X_t+S_{t-1}=S_0+\sum_{s=1}^t X_s
-\end{equation}
-\]</div>
-<p>Where </p>
-<div class="arithmatex">\[\begin{equation}
-X_t=
-\begin{cases}
-1 &amp;\text{If I get head for my coin toss}\\
--1 &amp;\text{If I get tail}
-\end{cases}
-\end{equation}\]</div>
-<p>The basic element you need is a sequence of independent coin tosses delivering <span class="arithmatex">\(\pm 1\)</span>.
-We know how to generate uniformly random numbers between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span>.
-Given a sequence <span class="arithmatex">\(\mathbf{x} = (x_0, \ldots, x_{N-1})\)</span> of such random numbers, I can transform them into an independent sequence of <span class="arithmatex">\(\pm 1\)</span> where each probability is <span class="arithmatex">\(1/2\)</span> as follows</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">shock</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">shock</span><span class="p">)</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">shock</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-</span></code></pre></div>
-<p>We now define the function that returns the stock price for a given amount of times.
-<div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">random_walk</span><span class="p">(</span><span class="n">startprice</span><span class="p">,</span> <span class="n">days</span><span class="p">):</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="n">price</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    <span class="n">shock</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">days</span><span class="p">))</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="n">price</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">startprice</span>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">days</span><span class="p">):</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>        <span class="n">price</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">price</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">shock</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    <span class="k">return</span> <span class="n">price</span>
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="c1"># This gives us the generation of sample random walks that we can print</span>
-</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
-</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">random_walk</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
-</span></code></pre></div></p>
-<p>We can now plot a sample path</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">days</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="c1"># Define the X and Y axis</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>
-</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="n">Y</span> <span class="o">=</span> <span class="n">random_walk</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">days</span><span class="p">)</span>
-</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
-</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="c1"># Define a figure object</span>
-</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Y</span><span class="p">)</span>
-</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;My random walk&quot;</span>
-</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></code></pre></div>
-<p>We can plot several random path since every time we run the function a new random sample is drawn (this function is per se not a function by the way).</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">days</span> <span class="o">=</span> <span class="mi">1000</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">X</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1">#define an object</span>
-</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="c1"># add scatters to the figure</span>
-</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>    <span class="n">Y</span> <span class="o">=</span> <span class="n">random_walk</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">days</span><span class="p">)</span>
-</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>    <span class="c1"># append the new scatter with a name for each trace</span>
-</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Y</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;RW number </span><span class="si">%i</span><span class="s1">&#39;</span><span class="o">%</span><span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;width&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">})</span>
-</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>
-</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="c1"># add a title</span>
-</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="n">fig</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;Sample paths of the random walks&quot;</span>
-</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="c1"># display the random walks</span>
-</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></code></pre></div>
-<p>We can generate a huge amount of different graphs with plotly.
-We will see the different types, but as illustration we can plot the some histogram.</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># generate samples from a normal distribution</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100000</span><span class="p">)</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="c1"># plot them</span>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_histogram</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">histnorm</span> <span class="o">=</span> <span class="s1">&#39;probability&#39;</span><span class="p">)</span>
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></code></pre></div>
 
 
 
@@ -1343,14 +1487,14 @@ We will see the different types, but as illustration we can plot the some histog
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
       
     
   </body>

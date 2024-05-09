@@ -8,16 +8,16 @@
       
       
       
-        <link rel="canonical" href="http://127.0.0.1:10001/lecture/06-rng-monte-carlo/">
+        <link rel="canonical" href="http://127.0.0.1:10001/lecture/02-Basics-Scientifics/024-rng-monte-carlo/">
       
       
-        <link rel="prev" href="../05-scipy/">
+        <link rel="prev" href="../023-scipy/">
       
       
-        <link rel="next" href="../../material/material/">
+        <link rel="next" href="../../03-Data/031-pandas-first-steps/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
@@ -26,10 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -92,7 +92,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Scientific Programing - An Introduction" class="md-header__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
+    <a href="../../.." title="Scientific Programing - An Introduction" class="md-header__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -201,7 +201,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -222,7 +222,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../00-introduction/" class="md-tabs__link">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
           
   
     
@@ -242,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../material/material/" class="md-tabs__link">
+        <a href="../../../material/material/" class="md-tabs__link">
           
   
     
@@ -285,7 +285,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Scientific Programing - An Introduction" class="md-nav__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
+    <a href="../../.." title="Scientific Programing - An Introduction" class="md-nav__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -303,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,20 +335,12 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
       
         
         
       
-      
-        
       
     
     
@@ -384,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00-introduction/" class="md-nav__link">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,8 +396,54 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic of Programing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Basic of Programing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../01-first-steps/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/011-first-steps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -426,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-control-flows/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/012-control-flows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-functions-classes/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/013-functions-classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,6 +499,64 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Basic Scientific Computations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Basic Scientific Computations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -468,11 +564,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-numpy-plotly-scipy/" class="md-nav__link">
+      <a href="../021-numpy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Basic Scientific Libraries
+    Arrays - Numpy
   </span>
   
 
@@ -489,11 +585,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-scipy/" class="md-nav__link">
+      <a href="../022-plotly/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    First Scientific Computations
+    Plotting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../023-scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basic Computations
   </span>
   
 
@@ -571,19 +688,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Generation of Pseudo Random Numbers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sampling-from-a-uniform-distribution" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sampling from a uniform distribution
-    </span>
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#sampling-from-another-distribution" class="md-nav__link">
     <span class="md-ellipsis">
       Sampling from another distribution
@@ -591,8 +698,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#variance-reduction" class="md-nav__link">
     <span class="md-ellipsis">
       Variance Reduction
@@ -600,15 +707,158 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Handeling Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Handeling Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Data/031-pandas-first-steps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Data/032-pandas-computations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Data/033-pandas-manipulations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Manipulations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Data/034-datetime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Date and Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -640,8 +890,6 @@
     
     
       
-      
-        
       
     
     
@@ -677,7 +925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material/material/" class="md-nav__link">
+      <a href="../../../material/material/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -698,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material/hw01/" class="md-nav__link">
+      <a href="../../../material/hw01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../material/hw02/" class="md-nav__link">
+      <a href="../../../material/hw02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,15 +1004,40 @@
 
 
 <h1 id="random-numbers-and-monte-carlo">Random Numbers and Monte Carlo</h1>
-<h2 id="monte-carlo-convergence-and-error">Monte Carlo: Convergence and Error</h2>
 <p>We saw that to integrate a function we have access to standard method of quadrature for <em>exact approximation</em> that is, a converging algorithm with exact error estimation.</p>
 <p>The method however suffers from the curse of dimensionality as the computational complexity increases exponentially with the dimension.
 Since most of the integrations nowadays involve large dimensional objects, this method is not appropriate.</p>
-<p>A true revolution in that direction is the so called Monte-Carlo methods which are based on the fundamental mathematical results</p>
+<p>A true revolution in that direction is the so called Monte-Carlo method which is based on the fundamental mathematical results</p>
 <ul>
 <li><strong>Law of Large Numbers:</strong> taking the arithmetic mean of of independent realisation of the same random variable converges to its mean.</li>
 <li><strong>Central Limit Theorem:</strong> The adjusted error converges to a standard normal distribution.</li>
 </ul>
+<h2 id="monte-carlo-convergence-and-error">Monte Carlo: Convergence and Error</h2>
+<p>Given an iid sequence of square integrable random variables <span class="arithmatex">\(X_1, \ldots, X_n, \ldots\)</span>, we denote by <span class="arithmatex">\(X:=X_1\)</span> with <span class="arithmatex">\(\mu =E[X]\)</span> as well as <span class="arithmatex">\(\sigma = E[(X - \mu)^2]^{1/2}\)</span> the mean and standard deviation of this random variable and further denote by <span class="arithmatex">\(S_N\)</span> the random variable given by the arithmetic mean</p>
+<div class="arithmatex">\[
+\begin{equation}
+    S_N = \frac{1}{N}\sum_{k=1}^N X_k 
+\end{equation}
+\]</div>
+<p>And the residual error <span class="arithmatex">\(\varepsilon_N\)</span> given by</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \varepsilon_N = S_N -\mu
+\end{equation}
+\]</div>
+<p>It follows that (Law of Large Numbers)</p>
+<div class="arithmatex">\[
+\begin{equation}
+S_N(\omega) = \frac{1}{N}\sum_{k=1}^N X_k(\omega) \longrightarrow E[X] = \mu
+\end{equation}
+\]</div>
+<p>for (almost) whatever chosen state <span class="arithmatex">\(\omega \in \Omega\)</span> and (central limit theorem):</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \varepsilon_N \approx \mathcal{N}\left(0,\frac{\sigma^2}{N}\right)
+\end{equation}
+\]</div>
+<p>for <span class="arithmatex">\(N\)</span> large enough.</p>
 <details class="note">
 <summary>Law of Large Numbers and Central Limit Theorem</summary>
 <p>Suppose that we have a sequence <span class="arithmatex">\(X_1, X_2, \ldots, X_n, \ldots\)</span> of square integrable random variables on some probability space <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span>.
@@ -829,31 +1102,6 @@ We further denote by <span class="arithmatex">\(S_N\)</span> the random variable
 </dd>
 </dl>
 </details>
-<p>Given an iid sequence of square integrable random variables <span class="arithmatex">\(X_1, \ldots, X_n, \ldots\)</span>, we denote by <span class="arithmatex">\(X:=X_1\)</span> with <span class="arithmatex">\(\mu =E[X]\)</span> as well as <span class="arithmatex">\(\sigma = E[(X - \mu)^2]^{1/2}\)</span> the mean and standard deviation of this random variable and further denote by <span class="arithmatex">\(S_N\)</span> the random variable given by the arithmetic mean</p>
-<div class="arithmatex">\[
-\begin{equation}
-    S_N = \frac{1}{N}\sum_{k=1}^N X_k 
-\end{equation}
-\]</div>
-<p>And the residual error <span class="arithmatex">\(\varepsilon_N\)</span> given by</p>
-<div class="arithmatex">\[
-\begin{equation}
-    \varepsilon_N = S_N -\mu
-\end{equation}
-\]</div>
-<p>It follows that (Law of Large Numbers)</p>
-<div class="arithmatex">\[
-\begin{equation}
-S_N(\omega) = \frac{1}{N}\sum_{k=1}^N X_k(\omega) \longrightarrow E[X] = \mu
-\end{equation}
-\]</div>
-<p>for (almost) whatever chosen state <span class="arithmatex">\(\omega \in \Omega\)</span> and (central limit theorem):</p>
-<div class="arithmatex">\[
-\begin{equation}
-    \varepsilon_N \approx \mathcal{N}\left(0,\frac{\sigma^2}{N}\right)
-\end{equation}
-\]</div>
-<p>for <span class="arithmatex">\(N\)</span> large enough.</p>
 <p>In terms of integration, we therefore have a way to approximate the integral of <span class="arithmatex">\(X\)</span> with <span class="arithmatex">\(S_N\)</span>, and have an estimate of the approximation error <span class="arithmatex">\(\varepsilon_N\)</span>.
 However, in comparison to the standard integration, our approximation of the integral is now a random variable <span class="arithmatex">\(S_N(\omega)\)</span>.
 Even if for every state <span class="arithmatex">\(\omega\)</span> it converges, the rate of the convergence depends on <span class="arithmatex">\(\omega\)</span>.
@@ -916,8 +1164,9 @@ We want to compute</p>
 I = E\left[f(\mathbf{X})\right] = \int_{\mathbb{R}^d} f(x^1, \ldots, x^d)dF_{(X^1, \ldots, X^d)}(x^1, \ldots, x^d)
 \end{equation}
 \]</div>
-<p>Define now <span class="arithmatex">\(Z = f(X_1,ldots, X_d)\)</span> and consider independent copies <span class="arithmatex">\(\mathbf{X}_1, \ldots, \mathbf{X}_N, \ldots\)</span> of <span class="arithmatex">\(\mathbf{X}\)</span>, it follows that <span class="arithmatex">\(Z^1, \ldots, Z^N, \ldots\)</span> are iid.
-Hence, considering <span class="arithmatex">\(N\)</span> independent samples <span class="arithmatex">\(\mathbf{x}_k = (x^1_k, \ldots, x^d_k)\)</span> of <span class="arithmatex">\(\mathbf{X}\)</span> yields</p>
+<p>Define now <span class="arithmatex">\(Z = f(X^1,\ldots, X^d)\)</span> and consider independent copies <span class="arithmatex">\(\mathbf{X}_1, \ldots, \mathbf{X}_N, \ldots\)</span> of <span class="arithmatex">\(\mathbf{X}=(X^1, \ldots, X^d)\)</span>.
+It follows that <span class="arithmatex">\(Z^1, \ldots, Z^N, \ldots\)</span> are iid.
+Hence, considering <span class="arithmatex">\(N\)</span> independent samples <span class="arithmatex">\(\mathbf{x}_1, \ldots, \mathbf{x}_N\)</span> where <span class="arithmatex">\(\mathbf{x}_k = (x^1_k, \ldots, x^d_k)\)</span> of <span class="arithmatex">\(\mathbf{X}\)</span> yields</p>
 <div class="arithmatex">\[
 \begin{equation}
 \frac{1}{N} \sum_{k=1}^N f(\mathbf{x}_k) \approx E\left[f(\mathbf{X})\right] 
@@ -930,10 +1179,9 @@ Hence, considering <span class="arithmatex">\(N\)</span> independent samples <sp
 <li>If so, how fast and how accurate?</li>
 <li>How do I generate indepedent samples of a distribution?</li>
 </ol>
-<p>We already answered theoretically to the first 2.
+<p>We already answered theoretically to the first 2 questions.
 It remains the central question number 3 which is a priori quite difficult since a computer (the standard ones) are deterministic machine and per definition can not generate random numbers.</p>
 <h2 id="generation-of-pseudo-random-numbers">Generation of <strong>Pseudo Random Numbers</strong></h2>
-<h3 id="sampling-from-a-uniform-distribution">Sampling from a uniform distribution</h3>
 <p>We first we address the problem of independent realisations of a uniform distribution <span class="arithmatex">\(U\)</span>.
 A computer that is working with finite arythmetic and rational numbers can naturally not provide algorythmicaly true random numbers.
 The task is to find deterministic sequences of numbers which distribution can not be distinguished from a uniform distribution by programatic statistical tests.
@@ -948,11 +1196,11 @@ Indeed, for some medelization problems the number of random numbers needed may w
 Just to warn you that it is a VERY bad idea to program your homemade RNG for Monte Carlo pruposes, we just present the idea and shortcomings of some of the techniques.</p>
 </details>
 <p>Given a set <span class="arithmatex">\(\{0,1,\ldots,M-1\}\)</span>, we want to find a sequence <span class="arithmatex">\((i_l)\)</span> in this set such that <span class="arithmatex">\((x_l)=(i_l/M)\)</span> is uniformly distributed on <span class="arithmatex">\([0,1]\)</span>.</p>
-<dl>
-<dt>Definition:</dt>
-<dd>A RNG consists of a state space <span class="arithmatex">\(X\)</span>, a transition function <span class="arithmatex">\(T:X\to X\)</span> as well as a mapping <span class="arithmatex">\(G:X\to \{0,\ldots,M-1\}\)</span>.
-Given an element <span class="arithmatex">\(x_0 \in X\)</span> -- the <em>seed</em> -- the pseudorandom numbers <span class="arithmatex">\(i_l=G(x_l)\)</span> are computed recursively by <span class="arithmatex">\(x_l=T(x_{l-1})\)</span>.</dd>
-</dl>
+<div class="admonition success">
+<p class="admonition-title"><strong>Definition: Random Number Generator</strong></p>
+<p>A RNG consists of a state space <span class="arithmatex">\(X\)</span>, a transition function <span class="arithmatex">\(T:X\to X\)</span> as well as a mapping <span class="arithmatex">\(G:X\to \{0,\ldots,M-1\}\)</span>.
+Given an element <span class="arithmatex">\(x_0 \in X\)</span> -- the <em>seed</em> -- the pseudorandom numbers <span class="arithmatex">\(i_l=G(x_l)\)</span> are computed recursively by <span class="arithmatex">\(x_l=T(x_{l-1})\)</span>.</p>
+</div>
 <p>By definition, since <span class="arithmatex">\(X\)</span> is finite, it follows that the sequence of pseudo-random numbers is periodic.
 Indeed, there must exists <span class="arithmatex">\(l\)</span> such that <span class="arithmatex">\(x_l=x_0\)</span> and so you will get a period of <span class="arithmatex">\(l\)</span>.
 Note also that <span class="arithmatex">\(G\)</span> is not a bijection, so it may well happen that <span class="arithmatex">\(i_l=i_k\)</span> without necessarily having <span class="arithmatex">\(x_l=x_k\)</span>.</p>
@@ -1034,15 +1282,14 @@ M = 2^{32} \quad a = 1103515245 \quad c = 12345
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            <span class="n">m</span><span class="o">+=</span><span class="mi">1</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="k">return</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">m</span> <span class="o">/</span> <span class="n">N</span>
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">estimate_what</span><span class="p">(</span><span class="mi">200000000</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="n">estimate_what</span><span class="p">(</span><span class="mi">200000</span><span class="p">)</span>
 </span></code></pre></div></p>
 </div>
-<h3 id="sampling-from-another-distribution">Sampling from another distribution</h3>
+<h2 id="sampling-from-another-distribution">Sampling from another distribution</h2>
 <p>We have seen how to sample from a uniform distribution.
 Sampling from another one relies on the following proposition:</p>
-<dl>
-<dt>Proposition:</dt>
-<dd>
+<div class="admonition danger">
+<p class="admonition-title">Proposition</p>
 <p>Let <span class="arithmatex">\(X\)</span> be a random variable with CDF <span class="arithmatex">\(F_X\colon \mathbb{R}\to [0,1]\)</span>, <span class="arithmatex">\(x \mapsto F_X(x) = P[X\leq x]\)</span> and <span class="arithmatex">\(U\)</span> a uniformly distributed random variable.
 Considering the quantile <span class="arithmatex">\(q_X \colon (0,1)\to \mathbb{R}\)</span></p>
 <div class="arithmatex">\[
@@ -1051,9 +1298,8 @@ q_X(u) = \inf \{m\colon F_L(m)\geq u\} =F_X^{-1}(u)
 \end{equation}
 \]</div>
 <p>it follows that the random variable <span class="arithmatex">\(q_X(U)\)</span> has the same distribution as <span class="arithmatex">\(X\)</span>, that is, both random variable have the same CDF.</p>
-</dd>
-</dl>
-<details class="note">
+</div>
+<details class="quote">
 <summary>Proof</summary>
 <p>By definition of the quantile function, it follows that <span class="arithmatex">\(q_X(u)\leq x\)</span> if and only if <span class="arithmatex">\(u\leq F_X(x)\)</span>.
 Furthermore, <span class="arithmatex">\(q_X\colon (0,1) \to \mathbb{R}\)</span> can be considered as a random variable on <span class="arithmatex">\((\tilde{\Omega}, \tilde{F}, \tilde{P})\)</span> where <span class="arithmatex">\(\tilde{\Omega} = (0,1)\)</span>, <span class="arithmatex">\(\tilde{F}= \mathcal{B}(0,1)\)</span> is the borel <span class="arithmatex">\(\sigma\)</span>-algebra generated by open subsets of <span class="arithmatex">\((0,1)\)</span> and <span class="arithmatex">\(\tilde{P}=\lambda\)</span> the Lebesgue measure on <span class="arithmatex">\((0,1)\)</span>, that is the measure of intervals with <span class="arithmatex">\(d\lambda = dx\)</span>.
@@ -1140,7 +1386,7 @@ These one are known for most of the classical distributions and accessible throu
 </span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Standard integral </span><span class="si">{</span><span class="n">Int1</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">RV</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span><span id="__span-6-27"><a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MC integral </span><span class="si">{</span><span class="n">Int2</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">RV</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<h3 id="variance-reduction">Variance Reduction</h3>
+<h2 id="variance-reduction">Variance Reduction</h2>
 <p>While integrating, the domain or the nature of the function to integrate influence a lot the convergence of Monte-Carlo.
 Consider the following simple example.
 Suppose that <span class="arithmatex">\(X\)</span> is Cauchy distributed, that is, have a pdf of the form</p>
@@ -1233,14 +1479,14 @@ We are trying to estimate the quantity</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
       
     
   </body>
