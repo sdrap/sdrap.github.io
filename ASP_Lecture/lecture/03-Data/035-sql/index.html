@@ -11,6 +11,10 @@
         <link rel="canonical" href="http://127.0.0.1:10001/lecture/03-Data/035-sql/">
       
       
+        <link rel="prev" href="../034-datetime/">
+      
+      
+        <link rel="next" href="../036-applications/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Databases and SQL - Scientific Programing - An Introduction</title>
+        <title>Databases - Scientific Programing - An Introduction</title>
       
     
     
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Databases and SQL
+              Databases
             
           </span>
         </div>
@@ -212,10 +216,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../00-Introduction/000-index/" class="md-tabs__link">
           
   
@@ -314,8 +320,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -330,17 +338,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -351,7 +362,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -640,8 +651,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -653,17 +666,21 @@
       
         
       
+        
+      
+        
+      
     
     
       
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -677,7 +694,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Handeling Data
@@ -759,6 +776,205 @@
   
   <span class="md-ellipsis">
     Date and Time
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tuple-calculus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuple Calculus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Language
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      Insert
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-or-delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update or Delete
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    <span class="md-ellipsis">
+      Query
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Join Tables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perform-computationsaggregations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perform Computations/Aggregations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-pandas" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL &amp; Pandas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../036-applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications
   </span>
   
 
@@ -915,6 +1131,415 @@
 
 
 <h1 id="databases-and-sql">Databases and SQL</h1>
+<p>Pandas is a handy and advanced way to handle data.
+However, storing, organizing and querying data has a long history related to databases.
+There are many ways to consider data as objects in a computer and in a broad sense they can be distinguished between two categories:</p>
+<ul>
+<li><strong>SQL</strong>: tabular data with predefined structure (collection of tuples with predefined columns and types).
+    For instance collection of student names (string), student id (int) and grades (float).</li>
+<li><strong>NoSQL</strong>: As the name indicates, it is not of the previous type. Those datasets are of variable length, content. They can be thought as dictionaries with key values inputs.</li>
+</ul>
+<p>In the following we will mainly introduce the concept of SQL databases.</p>
+<details class="note">
+<summary>What SQL stands for?</summary>
+<p>The three letters SQL stands for <strong>standardized query language</strong>.
+It has a long history dating back to the 70ies and is based on tuple calculus.
+It has been standardized and the language itself is, modulo some minor modifications, similar across all platforms and database provider. </p>
+</details>
+<h2 id="tuple-calculus">Tuple Calculus</h2>
+<p>The foundation of SQL language is based on tuple calculus that is a handy representation in set theoretical sense.
+We won't enter into the full details of it, we present however a succinct overview how it works.</p>
+<p>In this context, we consider two sets of data:</p>
+<ul>
+<li><span class="arithmatex">\(A\subseteq X \times Y\)</span>;</li>
+<li><span class="arithmatex">\(B\subseteq X \times Z\)</span>;</li>
+</ul>
+<p>that is collections of tuples in the sets <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(Y\)</span> and <span class="arithmatex">\(Z\)</span>.
+The generic elements of those sets are labelled as <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(z\)</span>, respectively.</p>
+<p>For instance:</p>
+<ul>
+<li><span class="arithmatex">\(X= \mathbb{N}\)</span> is a set of students id</li>
+<li><span class="arithmatex">\(Y\)</span> is the set of all possible names</li>
+<li><span class="arithmatex">\(Z = \mathbb{R}\)</span> is the set of grades in the lecture </li>
+</ul>
+<p>In this case:</p>
+<ul>
+<li><span class="arithmatex">\(A\)</span> is the set of tuples students id and corresponding names of SJTU Bachelor students</li>
+<li><span class="arithmatex">\(B\)</span> is the set of tuples students id and corresponding grades of those students that took the lecture Advanced programming SS2024</li>
+</ul>
+<p>If you want to get the set of all students id, names and grades in the lecture for those students that took the lecture, you look at the following set</p>
+<div class="arithmatex">\[
+\begin{equation}
+\left\{(x, y, z)\colon (x, y) \in A \text{ and }(x, z) \in B\right\}\subseteq X \times Y \times Z
+\end{equation}
+\]</div>
+<p>If you just want the name and grade you want</p>
+<div class="arithmatex">\[
+\begin{equation}
+\left\{(y, z)\colon (x, y) \in A \text{ and }(x, z) \in B\right\}\subseteq Y \times Z
+\end{equation}
+\]</div>
+<p>These operation can be summarized as intersection/union between cartesian products and then projections.
+We define</p>
+<div class="arithmatex">\[
+\begin{equation}
+\begin{split}
+    \sigma_{X} \colon X \times Y \times Z &amp; \longrightarrow X\\
+(x, y, z) &amp;\mapsto \sigma_X(x, y, z) = x
+\end{split}
+\end{equation}
+\]</div>
+<p>which is the projection of <span class="arithmatex">\(X\times Y\times Z\)</span> to <span class="arithmatex">\(X\)</span> and similarly <span class="arithmatex">\(\sigma_{XY}\)</span>, <span class="arithmatex">\(\sigma_{YZ}\)</span>, etc.
+It follows that</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \left\{(x, y, z)\colon (x, y) \in A \text{ and }(x, z) \in B\right\} = \sigma^{-1}_{XY}(A)\cap \sigma^{-1}_{XZ}(B)
+\end{equation}
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \left\{(x, y, z)\colon (x, y) \in A \text{ and }(x, z) \in B\right\} = \sigma_{YZ}\left(\sigma^{-1}_{XY}(A)\cap \sigma^{-1}_{XZ}(B)\right)
+\end{equation}
+\]</div>
+<p>The intersection and projections are the easiest set operation on cartesian sets.
+Things gets more complicated when you want to get all the students id and names and if they are in table <span class="arithmatex">\(B\)</span>, then the grades of those students otherwize en empty value.</p>
+<p>The exact formalism of SQL language is based on <em><a href="https://en.wikipedia.org/wiki/Relational_algebra">relational algebra</a></em> and is relatively complex in terms of definition and operations.</p>
+<p>However, we present here after the basics using <a href="https://www.sqlite.org/">SQLite</a>.
+As the name indicates, it is a very portable sql database stored in a single text file and is open sourced.
+It implements most of the SQL functionalities and is very efficient.
+You can start using sqlite by just installing a database query program such as <a href="https://github.com/beekeeper-studio/beekeeper-studio/releases">Beekeeper Studio Community Edition</a> which is open sourced.</p>
+<h2 id="sql-language">SQL Language</h2>
+<h3 id="create-tables">Create Tables</h3>
+<p>A database is a collection of tables.</p>
+<p>Three main actions can be used:</p>
+<ul>
+<li><code>CREATE</code>: create a new table in the database</li>
+<li><code>DROP</code>: drop an existing table</li>
+<li><code>ALTER</code>: modify the structure of a table</li>
+</ul>
+<p>A table is declared as a list of columns labels and a type (like a panda dataframe).
+The available datatypes in SQL are very limited:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NULL</td>
+<td>Null value standing for no data</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>Integers</td>
+</tr>
+<tr>
+<td>REAL</td>
+<td>Floats</td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>Strings</td>
+</tr>
+<tr>
+<td>BLOB</td>
+<td>Pieces of data in binary form</td>
+</tr>
+</tbody>
+</table>
+<p>The SQL Commands are usually in capital letters (but do not have to).
+The command to create a table is as follows</p>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">--- The dashes are condidered as escaped characters like the # for python</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">lev</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">TEXT</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">--- A command is terminated with a semi column ;</span>
+</span></code></pre></div>
+<p>This code will create a table students with the columns</p>
+<ul>
+<li><code>id</code>: represent the student id. It is an integer and we say that it is a primary key in the sense that the value will be unique.</li>
+<li><code>name</code>: name of the student is text. We precise that the value shall not be empty</li>
+<li><code>lev</code>: level of the student (Bachelor, Master, PhD). Shall not be null</li>
+<li><code>email</code>: email of the student</li>
+</ul>
+<p>Be careful with the following command, it deletes the table with all the data inside.
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p>If you deleted the table create it again.</p>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">--- Will rename the table students to student</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">student</span><span class="p">;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">--- revert to the original name</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">--- Will add a new column age</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="data">Data</h3>
+<p>Now that we have our students table, we can do the following</p>
+<ul>
+<li><code>INSERT</code>: insert data in the table</li>
+<li><code>UPDATE</code>: update data in the table</li>
+<li><code>DELETE</code>: delete data in the table</li>
+<li><code>SELECT</code>: query data in the table</li>
+</ul>
+<p>The last one is the most important so we will see it in a separate section.
+However let us have a look at the most simple select function that will show the current content of the table.</p>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">--- Show the content of the table students</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Delete and recreate the table students.</p>
+<h4 id="insert">Insert</h4>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">--- We insert one student in the table</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">lev</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;WANG Xin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Master&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wch@some_address.cn&#39;</span><span class="p">);</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">--- We insert several students in the table</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">lev</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">VALUES</span><span class="w"> </span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;LI Xuan&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Master&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;lxu@some_address.cn&#39;</span><span class="p">),</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DRAPEAU Samuel&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bachelor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sd@some_address.cn&#39;</span><span class="p">),</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;TURGEDIEV Maximilian&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;PhD&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tm@some_address.cn&#39;</span><span class="p">),</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;FISCHER Johannes&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bachelor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fj@some_address.cn&#39;</span><span class="p">);</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1">--- Check the content of the table</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span></code></pre></div>
+<h4 id="update-or-delete">Update or Delete</h4>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">--- We update Samuel from Bachelor to Master and change its email address</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">SET</span><span class="w"> </span><span class="n">lev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Master&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;sdrapeau@some_address.cn&#39;</span><span class="w">     </span><span class="c1">--- set the values for the columns to be updated</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">                                              </span><span class="c1">--- select the rows to be updated</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1">--- We delete FISHER Johannes since he left</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;FISCHER Johannes&#39;</span><span class="p">;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1">--- Check the content of the table</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="query">Query</h3>
+<h4 id="simple">Simple</h4>
+<p>The basic functionality to query data is the <code>SELECT</code> statement.
+It can become very complicated but in a basic form it is of the kind </p>
+<p><code>SELECT &lt;what&gt; FROM &lt;which_table&gt; WHERE &lt;some_constraints&gt;</code></p>
+<p>In the following code you have to run each statement independently to see the result.
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">--- query everything (* stands for all)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">--- query only name and level (indentation is easier to read)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">SELECT</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">name</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="n">lev</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">FROM</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="n">students</span><span class="p">;</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1">--- query only name and level and rename the column names</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="k">SELECT</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Name</span><span class="p">,</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="n">lev</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">Level</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="k">FROM</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="n">students</span><span class="p">;</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="c1">--- Query id, name, mail for all the master students</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="k">SELECT</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="n">id</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">StudentID</span><span class="p">,</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Name</span><span class="p">,</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Email</span>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a><span class="k">FROM</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="n">students</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="k">WHERE</span><span class="w">                       </span><span class="c1">--- here we put the condition clause</span>
+</span><span id="__span-6-26"><a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">    </span><span class="n">lev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Master&#39;</span><span class="p">;</span>
+</span></code></pre></div></p>
+<h4 id="join-tables">Join Tables</h4>
+<p>The interest of SQL is to orgainzed data in more than tabular (2d form) format.
+Those tables can then be logically connected in the following way</p>
+<p>Let us consider the following example with 4 tables.</p>
+<ol>
+<li><code>students</code>: with columns <code>student_id</code>, <code>name</code></li>
+<li><code>informations</code>: with columns <code>student_id</code>, <code>email</code>, <code>phone</code>, <code>lev</code></li>
+<li><code>lectures</code>: with columns <code>lecture_id</code>, <code>lecture_name</code></li>
+<li><code>grades</code>: with columns <code>lecture_id</code>, <code>student_id</code>, <code>grade</code></li>
+</ol>
+<p>The relation between tables can be of different nature</p>
+<ul>
+<li>1 -&gt; 1: one record in table <span class="arithmatex">\(A\)</span> is uniquely mapped to a record in table <span class="arithmatex">\(B\)</span>.
+    For instance <code>students</code> has a unique corresponding record in <code>informations</code> with <code>student_id</code> linking both.</li>
+<li>1 -&gt; n: one record in table <span class="arithmatex">\(C\)</span> can be mapped to different records in table <span class="arithmatex">\(D\)</span>.
+    For instance a record in <code>lectures</code> can have several grades records in <code>grades</code>. 
+    However a single grade record in <code>grades</code> can only be mapped to a single record in <code>lectures</code>.</li>
+<li>n -&gt; n: different record in table <span class="arithmatex">\(A\)</span> are mapped to different records in table <span class="arithmatex">\(C\)</span>.
+    In order to do so you need a so called intermediary table to realize n-&gt;1 and 1-&gt;n.
+    For example, different students can attend different lectures.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the exact 1&lt;-&gt;1 is redundant and could be put into a single table, eventually with <code>NULL</code> values for missing informations if it is just a 1-&gt;1</p>
+</div>
+<p>Let us generate different tables for the previous example</p>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">student_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">lev</span><span class="w"> </span><span class="nb">TEXT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">TEXT</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">);</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">lectures</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">lecture_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="nb">TEXT</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">);</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">grades</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="n">lecture_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="n">student_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="n">grade</span><span class="w"> </span><span class="nb">INT</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">);</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="p">(</span><span class="n">student_id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">lev</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">)</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="k">VALUES</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;WANG Xin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Master&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;wch@some_address.cn&#39;</span><span class="p">),</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;LI Xuan&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Master&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;lxu@some_address.cn&#39;</span><span class="p">),</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DRAPEAU Samuel&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bachelor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;sd@some_address.cn&#39;</span><span class="p">),</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">    </span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;TURGEDIEV Maximilian&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;PhD&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;tm@some_address.cn&#39;</span><span class="p">),</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;FISCHER Johannes&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bachelor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;fj@some_address.cn&#39;</span><span class="p">),</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">    </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;XYZ Theo&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Bachelor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;xyz@some_address.cn&#39;</span><span class="p">);</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">lectures</span><span class="w"> </span><span class="p">(</span><span class="n">lecture_id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="k">VALUES</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Stochastic Processes&#39;</span><span class="p">),</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Advanced Programming&#39;</span><span class="p">);</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">grades</span><span class="w"> </span><span class="p">(</span><span class="n">lecture_id</span><span class="p">,</span><span class="w"> </span><span class="n">student_id</span><span class="p">,</span><span class="w"> </span><span class="n">grade</span><span class="p">)</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="k">VALUES</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">78</span><span class="p">),</span>
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">87</span><span class="p">),</span>
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">56</span><span class="p">),</span>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">98</span><span class="p">),</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">97</span><span class="p">),</span>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">93</span><span class="p">),</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">84</span><span class="p">);</span>
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a><span class="c1">--- Note that Li Xuan did not follow any lectures</span>
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a><span class="c1">--- Run the following statement one after the other to check each table</span>
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span>
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">lectures</span><span class="p">;</span>
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">grades</span><span class="p">;</span>
+</span></code></pre></div>
+<p>There are many different kind of join (how to combine data from different tables with common content).</p>
+<ul>
+<li><code>INNER JOIN</code>: (has default when <code>JOIN</code> is called). It takes the intersection on both tables on the condition.</li>
+<li><code>LEFT JOIN</code>: takes all the keys from the left table and add the data from the right table if the condition is met otherwize it fills with <code>NULL</code> data.</li>
+<li><code>RIGHT JOIN</code>: Same as left join but on the right table condition.</li>
+<li><code>FULL JOIN</code>: generate the union of the rows in each (basically union of left and right join).</li>
+<li><code>CROSS JOIN</code>: generate the cartesian product of the two tables. To be prevented since it might get very large and is not that useful.</li>
+</ul>
+<p>We just illustrate here inner and left join:</p>
+<ul>
+<li>Inner Join:</li>
+</ul>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">--- We want the student_id, grade and lecture name</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="n">grades</span><span class="p">.</span><span class="n">student_id</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">student_ID</span><span class="p">,</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="n">grades</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Grade</span><span class="p">,</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="n">lectures</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">LectureName</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">FROM</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="n">grades</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">lectures</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="n">lecture_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lectures</span><span class="p">.</span><span class="n">lecture_id</span><span class="p">;</span>
+</span></code></pre></div>
+<ul>
+<li>Left Join:</li>
+</ul>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">--- We want all the students name who are Master</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1">--- if they have lectures we show lecture_id and grade otherwize none</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">SELECT</span><span class="w"> </span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="n">students</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Name</span><span class="p">,</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="n">students</span><span class="p">.</span><span class="n">lev</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">Level</span><span class="p">,</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n">grades</span><span class="p">.</span><span class="n">lecture_id</span><span class="p">,</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">grades</span><span class="p">.</span><span class="n">grade</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Grade</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">FROM</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="n">students</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">grades</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">students</span><span class="p">.</span><span class="n">student_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="n">student_id</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="k">WHERE</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="n">students</span><span class="p">.</span><span class="n">lev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Master&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+<h4 id="perform-computationsaggregations">Perform Computations/Aggregations</h4>
+<p>As for Pandas, data can be aggregated in order to perform computations.
+As for pandas, the keyword is <code>GROUPBY</code>.</p>
+<p>For instance, get for each lecture name the average grade, maximum and minimum.
+We need to join with the table <code>lectures</code> in order to get the name and will aggregate on it</p>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">lectures</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">LectureName</span><span class="p">,</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">MEAN</span><span class="p">(</span><span class="n">grades</span><span class="p">.</span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">mean</span><span class="p">,</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">grades</span><span class="p">.</span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">max</span><span class="p">,</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="n">grades</span><span class="p">.</span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">min</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">FROM</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="n">grades</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">lectures</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="n">lecture_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lectures</span><span class="p">.</span><span class="n">lecture_id</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="n">lectures</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
+</span></code></pre></div>
+<p>We complicate a bit by getting the same results however detailed by level of the students.
+In this case we need two joins</p>
+<div class="language-SQL highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="n">lectures</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">LectureName</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">students</span><span class="p">.</span><span class="n">lev</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">Level</span><span class="p">,</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">MEAN</span><span class="p">(</span><span class="n">grades</span><span class="p">.</span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">mean</span><span class="p">,</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="k">MAX</span><span class="p">(</span><span class="n">grades</span><span class="p">.</span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">max</span><span class="p">,</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="k">MIN</span><span class="p">(</span><span class="n">grades</span><span class="p">.</span><span class="n">grade</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">min</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="k">FROM</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="n">grades</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">lectures</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="n">lecture_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lectures</span><span class="p">.</span><span class="n">lecture_id</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="k">JOIN</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">grades</span><span class="p">.</span><span class="n">student_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">students</span><span class="p">.</span><span class="n">student_id</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">    </span><span class="n">lectures</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">students</span><span class="p">.</span><span class="n">lev</span><span class="p">;</span>
+</span></code></pre></div>
+<h3 id="sql-pandas">SQL &amp; Pandas</h3>
+<p>Depending on your needs, you can consider SQL as a large container of many dataframes.
+Some computations can be performed directly in SQL but the main purpose it to query data directly from SQL and get them in pandas for further use.</p>
+<p>Any database has libraries that allows to connect to any programming language.
+In the case of SQLite the library is called <code>sqlite3</code> which can be installed with anaconda or using pip <code>pip install sqlite3</code>.
+With this API at hand, pandas can directly retrieve data from the database.</p>
+<p>In our example, we have a database <code>test.db3</code> stored in the folder <code>./data/</code> with a table <code>grades</code> as in the previous example.</p>
+<p>Read the table grades from the database</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">import</span> <span class="nn">sqlite3</span> 
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># you first need to establish a connection to the database</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">con</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;./data/test.db3&#39;</span><span class="p">)</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># write the query</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="n">QUERY</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="s2">SELECT </span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="s2">    *</span>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="s2">FROM </span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="s2">    students</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="s2">WHERE</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="s2">    students.lev = &#39;Master&#39;</span>
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>
+</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="c1"># get the result of the query in the dataframe</span>
+</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">QUERY</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>
+</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></code></pre></div>
+<p>You can design complex queries against many tables to get the result in the dataframe.
+You can also just query the full table</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kn">import</span> <span class="nn">sqlite3</span> 
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># connection to the database</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="n">con</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;./data/test.db3&#39;</span><span class="p">)</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># get the full table grades in the dataframe</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_table</span><span class="p">(</span><span class="s1">&#39;grades&#39;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</span></code></pre></div>
 
 
 
