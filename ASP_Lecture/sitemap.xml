@@ -81,7 +81,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>http://127.0.0.1:10001/lecture/04-Derivatives/041-differentiation/</loc>
+         <loc>http://127.0.0.1:10001/lecture/04-ML-101/041-LR/</loc>
+         <lastmod>2024-05-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:10001/lecture/04-ML-101/042-PCA/</loc>
+         <lastmod>2024-05-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:10001/lecture/04-ML-101/043-Cluster/</loc>
+         <lastmod>2024-05-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:10001/lecture/05-Derivatives/041-differentiation/</loc>
          <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>

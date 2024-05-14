@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="http://127.0.0.1:10001/">
+        <link rel="canonical" href="http://127.0.0.1:10001/lecture/04-ML-101/043-Cluster/">
       
       
+        <link rel="prev" href="../041-LR/">
       
-        <link rel="next" href="lecture/00-Introduction/000-index/">
+      
+        <link rel="next" href="../../../material/material/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
-        <title>Scientific Programing - An Introduction</title>
+        <title>Clustering - Scientific Programing - An Introduction</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scientific-programming-an-introduction" class="md-skip">
+        <a href="#clustering" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Scientific Programing - An Introduction" class="md-header__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
+    <a href="../../.." title="Scientific Programing - An Introduction" class="md-header__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Clustering
             
           </span>
         </div>
@@ -197,11 +199,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -216,11 +216,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="lecture/00-Introduction/000-index/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
           
   
     
@@ -240,7 +242,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="material/material/" class="md-tabs__link">
+        <a href="../../../material/material/" class="md-tabs__link">
           
   
     
@@ -270,9 +272,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -285,7 +285,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Scientific Programing - An Introduction" class="md-nav__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
+    <a href="../../.." title="Scientific Programing - An Introduction" class="md-nav__button md-logo" aria-label="Scientific Programing - An Introduction" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -300,30 +300,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -332,122 +312,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-this-lecture-is-not-about" class="md-nav__link">
-    <span class="md-ellipsis">
-      What This Lecture Is Not About
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#intended-audience" class="md-nav__link">
-    <span class="md-ellipsis">
-      Intended Audience
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#learning-outcomes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learning Outcomes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-as-the-primary-language" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python as the Primary Language
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Python as the Primary Language">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#natural-syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      Natural Syntax
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#portability" class="md-nav__link">
-    <span class="md-ellipsis">
-      Portability
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#versatility" class="md-nav__link">
-    <span class="md-ellipsis">
-      Versatility
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#extensive-community-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      Extensive Community Support
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#job-market-demand" class="md-nav__link">
-    <span class="md-ellipsis">
-      Job Market Demand
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#open-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      OPEN SOURCE
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -456,8 +320,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -474,17 +340,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -495,7 +364,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -509,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/00-Introduction/000-index/" class="md-nav__link">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Basics-Programing/011-first-steps/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/011-first-steps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -597,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Basics-Programing/012-control-flows/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/012-control-flows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Basics-Programing/013-functions-classes/" class="md-nav__link">
+      <a href="../../01-Basics-Programing/013-functions-classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Basics-Scientifics/021-numpy/" class="md-nav__link">
+      <a href="../../02-Basics-Scientifics/021-numpy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Basics-Scientifics/022-plotly/" class="md-nav__link">
+      <a href="../../02-Basics-Scientifics/022-plotly/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Basics-Scientifics/023-scipy/" class="md-nav__link">
+      <a href="../../02-Basics-Scientifics/023-scipy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Basics-Scientifics/024-rng-monte-carlo/" class="md-nav__link">
+      <a href="../../02-Basics-Scientifics/024-rng-monte-carlo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Data/031-pandas-first-steps/" class="md-nav__link">
+      <a href="../../03-Data/031-pandas-first-steps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Data/032-pandas-computations/" class="md-nav__link">
+      <a href="../../03-Data/032-pandas-computations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -879,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Data/033-pandas-manipulations/" class="md-nav__link">
+      <a href="../../03-Data/033-pandas-manipulations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Data/034-datetime/" class="md-nav__link">
+      <a href="../../03-Data/034-datetime/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -921,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Data/035-sql/" class="md-nav__link">
+      <a href="../../03-Data/035-sql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -947,8 +816,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -962,11 +833,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -980,7 +851,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Machine Learning 101
@@ -994,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-ML-101/041-LR/" class="md-nav__link">
+      <a href="../041-LR/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1012,10 +883,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="lecture/04-ML-101/043-Cluster/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Clustering
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1024,6 +915,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 1.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 2.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 2.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1099,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="material/material/" class="md-nav__link">
+      <a href="../../../material/material/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1120,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="material/hw01/" class="md-nav__link">
+      <a href="../../../material/hw01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="material/hw02/" class="md-nav__link">
+      <a href="../../../material/hw02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1162,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="material/hw03/" class="md-nav__link">
+      <a href="../../../material/hw03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1198,77 +1136,107 @@
                   
 
 
-<h1 id="scientific-programming-an-introduction">Scientific Programming: An Introduction</h1>
-<p>These lecture notes, still a work in progress, are for a course taught at SJTU to Math undergraduate students.</p>
-<h2 id="what-this-lecture-is-not-about">What This Lecture Is Not About</h2>
+<h1 id="clustering">Clustering</h1>
+<p>The principle of clustering is as follows.
+Given a set <span class="arithmatex">\(X = \{x_1, \ldots, x_N\}\)</span> of <span class="arithmatex">\(N\)</span> points in <span class="arithmatex">\(\mathbb{R}^d\)</span>, the goal is to find a partition (cluster) <span class="arithmatex">\(C_1, \ldots C_K \subseteq X\)</span> which somehow group <em>similar</em> points.</p>
+<p>There are several ways to cluster in one way or another depending on how you want to define similarity and also how is your dataset.
+For instance</p>
 <ul>
-<li>Computer theory</li>
-<li>The inner workings of programming</li>
-<li>Specific programming methodologies (procedural, functional, OO, etc.)</li>
-<li>Algorithm complexity theory</li>
+<li><strong>Perspecified Cluster:</strong> or basic classification of data.
+    For instance partition companies in different categories (<code>banking</code>, <code>insurance</code>, <code>construction</code>, etc.).
+    Those categories are pre given, the only action is to allocate each point to the closest category.
+    This is not really what people understand under clustering as the cluster itself should be derived rather than given.</li>
+<li><strong>Hierarchical Clustering:</strong> Build a hierarchy of clusters from coarse to fine, similar to a tree.</li>
+<li><strong>Centroid Clustering:</strong> Cluster data according to geometry and distance.</li>
+<li>etc.</li>
 </ul>
-<h2 id="intended-audience">Intended Audience</h2>
+<p>In the following we will mainly concentrate on a simple but prominent clustering method involving grouping points where the within distance in the set is the smallest.</p>
+<p>Similarity between points is defined in terms of some distance <span class="arithmatex">\(d(x,y)\)</span>.
+The clustering aims to find an optimal cluster <span class="arithmatex">\(C_1^\ast, \ldots, C_K^\ast\)</span> such that</p>
+<div class="arithmatex">\[
+\begin{equation}
+\sum_{k=1}^K \frac{1}{\# C^\ast_k}\sum_{x, y \in C_k^\ast} d(x, y) \leq \sum_{k=1}^K \frac{1}{\# C_k}\sum_{x, y \in C_k} d(x, y)
+\end{equation}
+\]</div>
+<p>for any other cluster <span class="arithmatex">\(C_1, \ldots, C_K\)</span>.</p>
+<p>We denote by <span class="arithmatex">\(\mathfrak{C}\)</span> the set of all clusters (or partitions) <span class="arithmatex">\(\mathcal{C} = \{C_1, \ldots, C_K\}\)</span> of <span class="arithmatex">\(X\)</span> in <span class="arithmatex">\(K\)</span> elements and define</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    F(\mathcal{C}) = \sum_{C \in \mathcal{C}} \frac{1}{\# C}\sum_{x, y \in C} d(x, y)
+\end{equation*}
+\]</div>
+<p>the problem can therefore be reformulated into an optimization problem</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathcal{C}^\ast = (C_1^\ast, \ldots, C_K^\ast) = \mathrm{argmin}\left\{F(\mathcal{C})\colon \mathcal{C} \in \mathfrak{C}\right\}
+\end{equation*}
+\]</div>
+<p>Computing <span class="arithmatex">\(F\)</span> for a given cluster <span class="arithmatex">\(\mathcal{C}\)</span> is relatively fast as long as the distance is quick to compute.
+However, the optimization problem itself is very difficult.
+Indeed, it is a minimization problem on a set <span class="arithmatex">\(\mathfrak{C}\)</span> which does not have a suitable topology to define derivatives for instance.
+Hence, the only way a priori would be a brute force optimization, that is running through every possible partition, which is however not suitable since the cardinality of <span class="arithmatex">\(\mathfrak{C}\)</span> is gigantic.
+It corresponds to the <a href="https://en.wikipedia.org/wiki/Stirling_numbers_of_the_second_kind">stirling number of the second kind</a> <span class="arithmatex">\({ N \brace K}\)</span>:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \#\mathfrak{C} := {N\brace K} = \sum_{k=0}^K \frac{(-1)^{K-k} k^N}{(K-k)!k!} \sim_{N\to \infty} \frac{K^N}{K!}
+\end{equation*}
+\]</div>
+<p>meaning that for a fixed number <span class="arithmatex">\(K\)</span>, the cardinality is growing exponentially in the size of the set.
+The problem can be refined and some better approximation can be found but in general this is NP-Hard.</p>
+<p>However, with some assumptions about the distance, and geometrical consideration, an honnest and fast algorithm can be designed to achieve some local optimum.</p>
+<p>We consider as ''distance''' the square of the euclidean norm, that is <span class="arithmatex">\(d(x,y) = \|x - y\|^2\)</span>.</p>
+<h3 id="question-1">Question 1.</h3>
+<p>Show that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \frac{1}{\# C} \sum_{x, y \in C} \| x - y \|^2 = 2 \sum_{x \in c} \|x - \mu\|^2
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(\mu = \frac{1}{\# C} \sum x\)</span> is the average/barycenter or centroid of <span class="arithmatex">\(C\)</span>.</p>
+<h3 id="question-2">Question 2.</h3>
+<p>It follows that </p>
+<div class="arithmatex">\[
+\begin{equation*}
+    F(\mathcal{C}) = \sum_{C \in \mathcal{C}} \sum_{x \in X} \|x - \mu_{C}\|^2
+\end{equation*}
+\]</div>
+<p>With this reformulation in term of geometric center of <span class="arithmatex">\(C\)</span> leads to the following idea for an algorithm to select a partition.</p>
+<blockquote>
+<ol>
+<li>Initialize <span class="arithmatex">\(K\)</span> centers <span class="arithmatex">\(\mu_1(0), \ldots, \mu_K(0)\)</span> by choosing <span class="arithmatex">\(K\)</span>-points in <span class="arithmatex">\(X\)</span>.</li>
+<li>
+<p>Recursively: While <span class="arithmatex">\(\mathcal{C}(n+1) \neq \mathcal{C}(n)\)</span> at the end of the following do:</p>
 <ul>
-<li>Individuals with little to no programming experience</li>
-<li>Basic calculus and algebra are sufficient; being a math wizard is not necessary</li>
-<li>A mathematical perspective is emphasized but not mandatory</li>
-<li>Those interested in understanding programming fundamentals over technicalities</li>
-<li>Aspiring scientific computation implementers</li>
-<li>Individuals seeking to manage data systematically</li>
-</ul>
-<h2 id="learning-outcomes">Learning Outcomes</h2>
-<p>By the end of this course, you should be able to:</p>
-<ul>
-<li>Perform scientific computations (optimization, integration, dynamical systems, Monte Carlo simulations, some ML, etc.)</li>
-<li>Efficiently organize, clean, and query data</li>
-<li>Debug and optimize your code</li>
-<li>Plan and execute complex projects with appropriate tools and architecture</li>
-</ul>
-<h2 id="python-as-the-primary-language">Python as the Primary Language</h2>
-<p>We use <a href="https://www.python.org/">Python</a> for its:</p>
-<h3 id="natural-syntax">Natural Syntax</h3>
-<p>Comparing C++:</p>
-<div class="language-c++ highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
-</span></code></pre></div>
-<p>With Python:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-<p>As mathematicians it is also a language that is close to the colloquial mathematical formalism: <strong>write less, express more conceptually</strong>.</p>
-<h3 id="portability">Portability</h3>
-<ul>
-<li>Python is an interpreted language, allowing for immediate execution and rapid prototyping, although with potential trade-offs if misused.</li>
-<li>Code is cross-platform compatible (Linux, macOS, Windows, Android, iOS, etc.) without needing recompilation.</li>
-</ul>
-<h3 id="versatility">Versatility</h3>
-<ul>
-<li>Supports various programming paradigms (object-oriented, functional)</li>
-<li>Suitable for data analysis, automation, machine learning, web development, API deployment, etc.</li>
-<li>Facilitates interaction with other programming languages</li>
-<li>Strikes a balance between low-level and high-level programming</li>
-</ul>
-<h3 id="extensive-community-support">Extensive Community Support</h3>
-<ul>
-<li>Among the top 3 most utilized programming languages</li>
-<li>Preferred for data analysis, machine learning, AI</li>
-<li>Rich ecosystem of well-maintained, open-source libraries, including but not limited to:<ul>
-<li><code>numpy</code>, <code>pandas</code> for data manipulation</li>
-<li><code>scipy</code>, <code>statsmodels</code> for scientific computing</li>
-<li><code>matplotlib</code>, <code>seaborn</code> for visualization</li>
-<li><code>pytorch</code>, <code>tensorflow</code> for machine learning and AI</li>
+<li>
+<p>Given <span class="arithmatex">\(K\)</span> <span class="arithmatex">\(\mu_1(n), \ldots \mu_K(n)\)</span> define <span class="arithmatex">\(K\)</span> sets <span class="arithmatex">\(C_1(n+1), \ldots, C_K(n+1)\)</span>:</p>
+<p><span class="arithmatex">\(C_k(n+1) = \left\{x \in X\colon \|x - \mu_K(k)\|^2 \leq \|x - \mu_K(j)\|^2 \text{ for any }j\neq k\right\}\)</span></p>
+<p>If some point is assigned to two or more then set it to a single one. The best way to do it, is to assign the points to the first cluster, then assign the remaining points to the second one, etc.</p>
+</li>
+<li>
+<p>update the new centers <span class="arithmatex">\(\mu_1(n+1), \ldots, \mu_K(n+1)\)</span>:</p>
+<p><span class="arithmatex">\(\mu_k(n+1) = \frac{1}{\# C_k(n+1)} \sum_{x \in C_k(n+1)} x\)</span></p>
+</li>
 </ul>
 </li>
-<li>Highly active on GitHub, unlike Matlab</li>
+</ol>
+</blockquote>
+<ul>
+<li>Show that at each step <span class="arithmatex">\(F(\mathcal{C}(n+1))\leq F(\mathcal{C}(n)\)</span>, hence we find a sequence along which the cost function is decreasing.</li>
+<li>Show that the algorythm finishes after a finite number of steps.</li>
+<li>implement the algorythm in numpy by choosing randomly <span class="arithmatex">\(k\)</span> elements of the set <span class="arithmatex">\(X\)</span>. (the set <span class="arithmatex">\(X\)</span> can be represented by a numpy array <code>Nxd</code>.)</li>
 </ul>
-<h3 id="job-market-demand">Job Market Demand</h3>
-<p>Familiarity with Python and related libraries is increasingly a prerequisite in various fields, replacing basic requirements like Excel proficiency from years past.</p>
-<h3 id="open-source"><strong>OPEN SOURCE</strong></h3>
-<p>Python was created by <a href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a> who released it and maintained it for over 30 years as open-source project.
-This fostered a global community of contributors ensuring transparency, reliability through constant auditing process, and huge diversity of the ecosystem.</p>
-<p><img alt="Image title" src="images/beer.jpg" /></p>
+<h3 id="question-2_1">Question 2.</h3>
+<p>Consider the dataset <a href="../../../data/housing.csv">California Housing</a> which represents the housing data for California.</p>
+<ul>
+<li>Load the dataset and select the columns <code>longitude</code>, <code>lattitude</code> and <code>medianIncome</code> as final dataframe <code>df</code>.</li>
+<li>Install (using conda or pip) the package <code>scikit-learn</code> which is a standard machine learning library.</li>
+<li>Cluster the data with 4 clusters using Kmeans: <code>from sklearn.cluster import KMeans</code>. <ul>
+<li>given a numpy array <code>X</code> of size <code>N x d</code>, computing the cluster with <code>Kmeans</code> is done as follows <code>result = KMeans(n_clusters = 4).fit(X)</code> and the labels for the cluster are given by <code>result.labels_</code> which is an array of size <code>N</code>.</li>
+</ul>
+</li>
+<li>join the cluster values in the dataframe as a new column.</li>
+<li>plot using <a href="https://plotly.com/python/line-and-scatter/">plotly express scatter</a> the scatter plot latitude against longitude with a different color for each cluster.</li>
+</ul>
 
 
 
@@ -1276,13 +1244,8 @@ This fostered a global community of contributors ensuring transparency, reliabil
 
 
 
-  
-  
 
 
-
-
-  
 
 
 
@@ -1317,14 +1280,14 @@ This fostered a global community of contributors ensuring transparency, reliabil
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
       
     
   </body>
