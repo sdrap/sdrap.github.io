@@ -948,6 +948,8 @@
       
         
       
+        
+      
     
     
       
@@ -1042,6 +1044,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../material/hw03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homework 03
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1103,17 +1126,18 @@
 </details>
 <p>In reality this relation is not clear cut (either there is some noise, or the model is just the <em>best</em> linear approximation of <span class="arithmatex">\(\mathbf{Y}\)</span> as a function of <span class="arithmatex">\(\mathbf{X}\)</span>.).
 Searching for the best linear relationship between both, and assuming that both are random vector, a first guess is to find the best vector <span class="arithmatex">\(\mathbf{b}\)</span> that minimizes the distance between <span class="arithmatex">\(\mathbf{b}\cdot \mathbf{X}\)</span> and <span class="arithmatex">\(Y\)</span>.
-In the square sense (more precisely in the <span class="arithmatex">\(L^2\)</span> sense) , this amounts to solve the following optimization problem</p>
+In the square sense, assuming you have an inner product such as euclidean norm in finite dimention or some <span class="arithmatex">\(L^2\)</span> norm for random variables, this amounts to solve the following optimization problem</p>
 <div class="arithmatex">\[
 \begin{equation*}
-  \mathrm{argmin} \left\{ E\left[\left( Y - \mathbf{b}\cdot \mathbf{X} \right)^2\right]\colon \mathbf{b} \in \mathbb{R}^{p} \right\}  
+  \mathrm{argmin} \left\{ \left\| Y - \mathbf{b}\cdot \mathbf{X} \right\|^2 \colon \mathbf{b} \in \mathbb{R}^{p} \right\}  
 \end{equation*}
 \]</div>
-<p>As a function of <span class="arithmatex">\(\mathbf{b}\)</span>, the function <span class="arithmatex">\(E[(Y - \mathbf{b}\cdot \mathbf{X})^2]\)</span> is convex, bounded by <span class="arithmatex">\(0\)</span> from below and (modulo simple assumptions) coercive.
-The minimum is characterised by the first order conditions, that is</p>
+<p>As a function of <span class="arithmatex">\(\mathbf{b}\)</span>, the function <span class="arithmatex">\(\left\|Y - \mathbf{b}\cdot \mathbf{X}\right\|^2\)</span> is convex, bounded by <span class="arithmatex">\(0\)</span> from below.
+For a smooth convex function, having a zero gradient is equivalent to be a local minimum and equivalent to be a local maximum.
+Hence, the best <span class="arithmatex">\(\mathbb{b}\)</span> is characterised by the first order conditions, that is</p>
 <div class="arithmatex">\[
 \begin{equation*}
-    \nabla_{\mathbf{b}} E\left[\left(Y - \mathbf{b}\cdot \mathbf{X}\right)^2\right] = 2E\left[ \left(Y - \mathbf{b} \cdot \mathbf{X}\right) \mathbf{X}^\top\right] = 0
+    \nabla_{\mathbf{b}} \left\|Y - \mathbf{b}\cdot \mathbf{X}\right\|^2 = 2E\left[ \left(Y - \mathbf{b} \cdot \mathbf{X}\right) \mathbf{X}^\top\right] = 0
 \end{equation*}
 \]</div>
 <p>Which means that </p>

@@ -2,107 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://127.0.0.1:10001/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/javascripts/node_modules/mathjax/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/00-Introduction/000-index/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/01-Basics-Programing/011-first-steps/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/01-Basics-Programing/012-control-flows/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/01-Basics-Programing/013-functions-classes/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/02-Basics-Scientifics/021-numpy/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/02-Basics-Scientifics/022-plotly/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/02-Basics-Scientifics/023-scipy/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/02-Basics-Scientifics/024-rng-monte-carlo/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/03-Data/031-pandas-first-steps/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/03-Data/032-pandas-computations/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/03-Data/033-pandas-manipulations/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/03-Data/034-datetime/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/03-Data/035-sql/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/03-Data/036-applications/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/lecture/04-Derivatives/041-differentiation/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/material/ex01/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/material/hw01/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/material/hw02/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:10001/material/hw03/</loc>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:10001/material/material/</loc>
-         <lastmod>2024-05-13</lastmod>
+         <lastmod>2024-05-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
