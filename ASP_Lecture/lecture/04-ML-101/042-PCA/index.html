@@ -11,6 +11,10 @@
         <link rel="canonical" href="http://127.0.0.1:10001/lecture/04-ML-101/042-PCA/">
       
       
+        <link rel="prev" href="../041-LR/">
+      
+      
+        <link rel="next" href="../043-Cluster/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>042 PCA - Scientific Programing - An Introduction</title>
+        <title>Principal Component Analysis - Scientific Programing - An Introduction</title>
       
     
     
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#principal-component-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              042 PCA
+              Principal Component Analysis
             
           </span>
         </div>
@@ -207,10 +216,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../00-Introduction/000-index/" class="md-tabs__link">
           
   
@@ -309,8 +320,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -324,20 +337,25 @@
       
         
       
-    
-    
-      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -348,7 +366,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -800,8 +818,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -809,17 +829,19 @@
       
         
       
+        
+      
     
     
       
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -833,7 +855,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Machine Learning 101
@@ -851,11 +873,99 @@
         
   
   <span class="md-ellipsis">
-    Regression
+    Linear Regression
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Principal Component Analysis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Principal Component Analysis
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theory
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numpy-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Numpy Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-scikitlearn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Scikitlearn
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -873,6 +983,123 @@
   
   <span class="md-ellipsis">
     Clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Derivative
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Derivative
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/051-differentiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Differentiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/052-PDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/053-gradient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gradient Descent
   </span>
   
 
@@ -1051,9 +1278,197 @@
                   
 
 
-  <h1>042 PCA</h1>
-
-
+<h1 id="principal-component-analysis">Principal Component Analysis</h1>
+<p>Principal component analysis, commonly referred to as PCA, is a linear method to reduce dimension in large sets of data.
+For instance, in linear regression, you want to approximate the output by a linear combination of inputs.
+Two problems then come to mind:</p>
+<ol>
+<li>The dimension <span class="arithmatex">\(d\)</span> might be extremely large resulting into overfiting problems.</li>
+<li>Some of the inputs might themselves be collinear reducing the explanatory power of one factor with respect to the other one.</li>
+</ol>
+<p>The idea is to proceed to an orthonormal basis change under which the inputs will be orthogonal and select the vectors with the largest eigenvalue.</p>
+<h2 id="theory">Theory</h2>
+<div class="admonition danger">
+<p class="admonition-title">Theorem: Spectral Decomposition</p>
+<p>Any <span class="arithmatex">\(d\times d\)</span> dimensional real valued <strong>symetric</strong> matrix <span class="arithmatex">\(\mathbf{A}\)</span> can be decomposed into.</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathbf{A} = \mathbf{\Gamma} \mathbf{\Lambda} \mathbf{\Gamma}^\top
+\end{equation*}
+\]</div>
+<p>where</p>
+<ol>
+<li><span class="arithmatex">\(\mathbf{\Lambda} = \mathrm{diag}(\lambda_1, \ldots, \lambda_d)\)</span> is a matrix of real valued eigenvalues.</li>
+<li><span class="arithmatex">\(\mathbf{\Gamma}\)</span> is an orthogonal matrix whose columns are normalized eigenvectors satisfying <span class="arithmatex">\(\mathbf{\Gamma}^\top \mathbf{\Gamma} = \mathbf{\Gamma} \mathbf{\Gamma}^\top = I\)</span>.</li>
+</ol>
+<p>Furthermore, if the matrix is positive semi-definite, that is <span class="arithmatex">\(\mathbf{x}^\top \mathbf{A}\mathbf{x} \geq 0\)</span> for any column vector <span class="arithmatex">\(\mathbf{x}\)</span>, the eigenvalues are then positives and strictly positive in case of positive definiteness.</p>
+</div>
+<p>Consider a column vector <span class="arithmatex">\(\mathbf{X}\)</span> of random variable and define the mean vector and covariance matrix</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathbf{\mu} = E\left[\mathbf{X}\right] \quad \text{and} \quad \mathbf{\Sigma} :=\mathrm{Cov}(\mathbf{X})= E\left[\left(\mathbf{X}-\mathbf{\mu}\right)\left(\mathbf{X} - \mathbf{\mu}\right)^\top\right]
+\end{equation*}
+\]</div>
+<details class="note">
+<summary>Properties of Covariance and Mean</summary>
+<p>Clearly, the covariance is a real valued symetric matrix.</p>
+<p>However, since for a matrix <span class="arithmatex">\(\mathbf{B} \in \mathbb{R}^{l\times d}\)</span> and a column vector <span class="arithmatex">\(\mathbf{a}\in \mathbb{R}^l\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E\left[ \mathbf{B}\mathbf{X} + \mathbf{a} \right] = \mathbf{B}\mathbf{\mu} + \mathbf{a}\quad \text{and}\quad \mathrm{Cov}\left(\mathbf{B}\mathbf{X} + \mathbf{a}\right) = \mathbf{B}\mathrm{Cov}(\mathbf{X})\mathbf{B}^\top
+\end{equation*}
+\]</div>
+<p>it follows that <span class="arithmatex">\(\mathrm{Cov}(\mathbf{X})\)</span> is positive semi-definite.
+Indeed, for any column vector <span class="arithmatex">\(\mathbf{y}\)</span>, it follows that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathbf{y}^\top \mathbf{\Sigma}\mathbf{y} = \mathrm{Cov}(\mathbf{y}^\top \mathbf{X}) = \mathrm{Var}(\mathbf{y}^\top \mathbf{X})\geq 0
+\end{equation*}
+\]</div>
+</details>
+<p>Since <span class="arithmatex">\(\mathbf{\Sigma}\)</span> is positive semidefinite, let <span class="arithmatex">\(\lambda_{1}, \ldots, \lambda_{d}\)</span> be the real valued eigenvalues and <span class="arithmatex">\(\mathbf{\Gamma}_1, \ldots,\mathbf{\Gamma}_d\)</span> be the the corresponding eigenvectors for which holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathbf{\Sigma} = 
+    \begin{bmatrix}
+    \mathbf{\Gamma}_1 &amp; \ldots &amp; \mathbf{\Gamma}_d
+    \end{bmatrix}
+    \begin{bmatrix}
+    \lambda_1 &amp; \cdots &amp; 0 \\
+    \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; \cdots &amp; \lambda_d
+    \end{bmatrix}
+    \begin{bmatrix}
+    \mathbf{\Gamma}^\top_1 \\ \vdots \\ \mathbf{\Gamma}^\top_d
+    \end{bmatrix}
+\end{equation*}
+\]</div>
+<p>Without loss of generality up to permutation of the columns of <span class="arithmatex">\(\mathbf{\Gamma}\)</span> we can consider that <span class="arithmatex">\(\lambda_1\geq \ldots \geq \lambda_0 =0\)</span>.</p>
+<details class="note">
+<summary>Permuting the Representation</summary>
+<p>The spectral decomposition holds under permutation.
+Indeed, let <span class="arithmatex">\(\sigma\)</span> be a permutation of <span class="arithmatex">\(\{1, \ldots, d\}\)</span>, we define the column permutation matrix <span class="arithmatex">\(P\)</span> as <span class="arithmatex">\(P_{ij} = 1\)</span> if <span class="arithmatex">\(j =\sigma(i)\)</span> and zero otherwise.
+This permutation matrix is invertible with inverse <span class="arithmatex">\(P^\top\)</span> which coincide with the row permutation matrix.
+In particular <span class="arithmatex">\(P\)</span> is orthonormal.</p>
+<p>Given a matrix <span class="arithmatex">\(A\)</span>, the product <span class="arithmatex">\(P^\top A\)</span> permuts the rows of <span class="arithmatex">\(A\)</span> while the product <span class="arithmatex">\(AP\)</span> permuts the columns of <span class="arithmatex">\(A\)</span>.
+Hence, it follows that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathbf{\Sigma} = \mathbf{\Gamma}\mathbf{\Lambda}\mathbf{\Gamma} = \mathbf{\Gamma}P P^\top \mathbf{\Lambda}P P^\top \mathbf{\Gamma} = (\mathbf{\Gamma}P) (P^\top \Lambda P)(\mathbf{\Gamma}P)
+\end{equation*}
+\]</div>
+<p>Since the set of orthogonal matrices is a group we can define <span class="arithmatex">\(\tilde{\mathbf{\Gamma}} = \mathbf{\Gamma}P\)</span> and <span class="arithmatex">\(\tilde{\mathbf{\Lambda}}=P^\top \mathbf{\Lambda}P\)</span>.</p>
+</details>
+<div class="admonition success">
+<p class="admonition-title"><strong>PCA Decomposition</strong></p>
+<p>The <em>Principal component transform</em> of <span class="arithmatex">\(\mathbf{X}\)</span> is the random vector</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathbf{Y} = \mathbf{\Gamma}^\top\left(\mathbf{X} - \mathbf{\mu}\right)
+\end{equation*}
+\]</div>
+</div>
+<p>It clearly follows that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E\left[\mathbf{Y}\right] = 0 \quad \text{and}\quad \mathrm{COV}(\mathbf{Y}) = \mathbf{\Lambda}
+\end{equation*}
+\]</div>
+<p>In particular, with a total variance <span class="arithmatex">\(\sum_{k=1}^d \mathrm{VAR}\left(Y_k\right) = \sum_{k=1}^d \lambda_k = \mathrm{Trace}(\mathbf{\Lambda}) = \mathrm{Trace}(\mathbf{X}) = \sum_{k=1}^d \mathrm{VAR}(X_k)\)</span> for which we define the ratio</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathrm{tv}(k):=\frac{\sum_{l=1}^k \lambda_k}{\mathrm{Trace}(\mathbf{\Lambda})}
+\end{equation*}
+\]</div>
+<p>that can be interpreted as the percentage of variance explained by the first <span class="arithmatex">\(k\)</span> components.
+This ratio is clearly increasing from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(100\%\)</span> and concave since we ordered the components decreasingly.
+Given a threshold <span class="arithmatex">\(\theta\)</span> (for instance <span class="arithmatex">\(\theta = 50\%\)</span>), the smallest <span class="arithmatex">\(k_0\)</span> such that <span class="arithmatex">\(\mathrm{tv}(k)\geq \theta\)</span> is such that the first <span class="arithmatex">\(k_0\)</span> components explains at least <span class="arithmatex">\(\theta \%\)</span> of the total variation of <span class="arithmatex">\(\mathbf{X}\)</span>.</p>
+<p>We then define <span class="arithmatex">\(\mathbf{Y}^{(1)}\)</span> and <span class="arithmatex">\(\mathbf{Y}^{(2)}\)</span> as the first <span class="arithmatex">\(k_0\)</span> and last <span class="arithmatex">\(d-k_0+1\)</span> rows of <span class="arithmatex">\(\mathbf{Y}\)</span> respectively as well as (remember <span class="arithmatex">\(\Gamma\)</span> is the orthogonal matrix of eigenvectors after permuting the columns) <span class="arithmatex">\(\mathbf{\Gamma}^{(1)}\)</span> and <span class="arithmatex">\(\mathbf{\Gamma}^{(2)}\)</span> as the matrix with the first <span class="arithmatex">\(k_0\)</span> and last <span class="arithmatex">\(d-k_0+1\)</span> eigenvectors, respectively.
+It holds that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \mathbf{X} = \mathbf{\mu} + \mathbf{\Gamma}^{(1)}\mathbf{Y}^{(1)}+ \mathbf{\Gamma}^{(2)}\mathbf{Y}^{(2)} = \mathbf{\mu} + \mathbf{\Gamma}^{(1)}\mathbf{Y}^{(1)} + \mathbf{\varepsilon}
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(\mathbf{\varepsilon}\)</span> is a random vector only contributing to less than <span class="arithmatex">\((1-\theta)\%\)</span> of the total variance of <span class="arithmatex">\(\mathbf{X}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Normalization</p>
+<p>Note that the PCA is not invariant with scaling of one or the other input.
+Depending on the situation (in particular when there is a large variation in terms of the amplitude of the inputs) a normalization (by the standard deviation or with quantiles) can be performed.
+However the interpretation is totally different as the projection might differ a lot.</p>
+</div>
+<h2 id="numpy-implementation">Numpy Implementation</h2>
+<p>To perform a PCA decomposition, the functionalities of <code>np.linalg.eig</code> are entirely sufficient to provide a PCA decomposition.
+For this we will make use of the dataset <a href="../../../data/CSI.csv">CSI</a> that represents the price of 208 stocks over 7 years of the CSI Index.
+We want to consider as <span class="arithmatex">\(\mathbf{X}\)</span> the normalized returns of these stock prices and proceed to a PCA decomposition of which (basically we do a PCA of the correlation matrix rather than covariance matrix.)</p>
+<p>Import the data and </p>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># import numpy, pandas to load data and plotly to plot</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># load the dataset, convert the dates to datetime and set as index</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">dfstocks</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/CSI.csv&#39;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">dfstocks</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dfstocks</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">])</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">dfstocks</span> <span class="o">=</span> <span class="n">dfstocks</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># get the returns and dropna as it destroys positive definiteness</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">dfret</span> <span class="o">=</span> <span class="n">dfstocks</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># compute the correlation matrix</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">Corr</span> <span class="o">=</span> <span class="n">dfret</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span> 
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># and plot it as a heat map</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">Corr</span><span class="p">,</span> <span class="n">color_continuous_scale</span><span class="o">=</span><span class="s1">&#39;Inferno_r&#39;</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+The correlation matrix is quite mixed most of which are positive.
+We now proceed to the PCA decomposition of this matrix.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># use linalg.eig to get eigenvalues and eigenvectors (eigenvector[:, i] is the ith eigenvector)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">Corr</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># %% plot the cumulative normalized eigenvalues and their relative weights with two different y-axi</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">specs</span><span class="o">=</span><span class="p">[[{</span><span class="s2">&quot;secondary_y&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}]])</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">go</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="n">x</span><span class="o">=</span><span class="n">dfeigenval</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="n">y</span><span class="o">=</span><span class="n">dfeigenval</span> <span class="o">/</span> <span class="n">dfeigenval</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Eigenvalues Relative Weights&quot;</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="p">),</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">secondary_y</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">)</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="n">x</span><span class="o">=</span><span class="n">dfeigenval</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        <span class="n">y</span><span class="o">=</span><span class="n">dfeigenval</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> <span class="o">/</span> <span class="n">dfeigenval</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;lines&quot;</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Eigenvalues Cumulative Weights&quot;</span><span class="p">,</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="p">),</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="p">)</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="c1"># update the axis layout for each axis</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">tickformat</span><span class="o">=</span><span class="s2">&quot;,.0%&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Relative Weights&quot;</span><span class="p">,</span> <span class="n">secondary_y</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">tickformat</span><span class="o">=</span><span class="s2">&quot;,.0%&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Cumulative Weights&quot;</span><span class="p">,</span> <span class="n">secondary_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p>Now decide for a threshold (here <span class="arithmatex">\(60\%\)</span>) and define the principal factor loading matrix.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># set the threshold</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">theta</span> <span class="o">=</span> <span class="mf">0.6</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># get the index of those factor that only contributes beyond theta</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">idx</span> <span class="o">=</span> <span class="n">dfeigenval</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> <span class="o">/</span> <span class="n">dfeigenval</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">theta</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The index of those factors that explain at least </span><span class="si">{</span><span class="n">theta</span><span class="si">:</span><span class="s2">.0%</span><span class="si">}</span><span class="s2"> of the variance are:</span><span class="si">{</span><span class="o">~</span><span class="n">idx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># now slice the dfeigenvectors dataframe by keeping only the columns that are in ~idx</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">pca</span> <span class="o">=</span> <span class="n">dfeigenvec</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">display</span><span class="p">(</span><span class="n">pca</span><span class="p">)</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The original dimension of </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">dfeigenvec</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="si">}</span><span class="s2"> has been reduced to </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="using-scikitlearn">Using Scikitlearn</h2>
+<p>Scikit learn provides a package performing PCA entirely.</p>
 
 
 

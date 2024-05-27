@@ -11,10 +11,10 @@
         <link rel="canonical" href="http://127.0.0.1:10001/lecture/04-ML-101/043-Cluster/">
       
       
-        <link rel="prev" href="../041-LR/">
+        <link rel="prev" href="../042-PCA/">
       
       
-        <link rel="next" href="../../../material/material/">
+        <link rel="next" href="../../05-Derivatives/051-differentiation/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -326,6 +326,8 @@
   
     
     
+      
+        
       
         
       
@@ -827,6 +829,8 @@
       
         
       
+        
+      
     
     
       
@@ -869,7 +873,28 @@
         
   
   <span class="md-ellipsis">
-    Regression
+    Linear Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../042-PCA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal Component Analysis
   </span>
   
 
@@ -932,27 +957,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#question-1" class="md-nav__link">
+  <a href="#implementation-in-numpy-and-pandas" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 1.
+      Implementation in Numpy and Pandas
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#question-2" class="md-nav__link">
+  <a href="#using-k-mean-on-real-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Question 2.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#question-2_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Question 2.
+      Using K-Mean on real data
     </span>
   </a>
   
@@ -962,6 +978,123 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Derivative
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Derivative
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/051-differentiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Differentiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/052-PDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/053-gradient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gradient Descent
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1137,8 +1270,8 @@
 
 
 <h1 id="clustering">Clustering</h1>
-<p>The principle of clustering is as follows.
-Given a set <span class="arithmatex">\(X = \{x_1, \ldots, x_N\}\)</span> of <span class="arithmatex">\(N\)</span> points in <span class="arithmatex">\(\mathbb{R}^d\)</span>, the goal is to find a partition (cluster) <span class="arithmatex">\(C_1, \ldots C_K \subseteq X\)</span> which somehow group <em>similar</em> points.</p>
+<p>The principle of clustering is to gether <em>similar</em> data points among groups.
+Given a set <span class="arithmatex">\(X = \{x_1, \ldots, x_N\}\)</span> of <span class="arithmatex">\(N\)</span> points in <span class="arithmatex">\(\mathbb{R}^d\)</span>, the goal is to find a partition (cluster) <span class="arithmatex">\(C_1, \ldots, C_K \subseteq X\)</span> which somehow group <em>similar</em> points.</p>
 <p>There are several ways to cluster in one way or another depending on how you want to define similarity and also how is your dataset.
 For instance</p>
 <ul>
@@ -1150,8 +1283,8 @@ For instance</p>
 <li><strong>Centroid Clustering:</strong> Cluster data according to geometry and distance.</li>
 <li>etc.</li>
 </ul>
-<p>In the following we will mainly concentrate on a simple but prominent clustering method involving grouping points where the within distance in the set is the smallest.</p>
-<p>Similarity between points is defined in terms of some distance <span class="arithmatex">\(d(x,y)\)</span>.
+<p>In the following we concentrate on a simple but prominent clustering method involving grouping points according to within distance in a group.
+Similarity between points is defined in terms of a <em>(pseudo) distance</em> <span class="arithmatex">\(d(x,y)\)</span>.
 The clustering aims to find an optimal cluster <span class="arithmatex">\(C_1^\ast, \ldots, C_K^\ast\)</span> such that</p>
 <div class="arithmatex">\[
 \begin{equation}
@@ -1165,7 +1298,7 @@ The clustering aims to find an optimal cluster <span class="arithmatex">\(C_1^\a
     F(\mathcal{C}) = \sum_{C \in \mathcal{C}} \frac{1}{\# C}\sum_{x, y \in C} d(x, y)
 \end{equation*}
 \]</div>
-<p>the problem can therefore be reformulated into an optimization problem</p>
+<p>Clustering can therefore be reformulated into an optimization problem</p>
 <div class="arithmatex">\[
 \begin{equation*}
     \mathcal{C}^\ast = (C_1^\ast, \ldots, C_K^\ast) = \mathrm{argmin}\left\{F(\mathcal{C})\colon \mathcal{C} \in \mathfrak{C}\right\}
@@ -1173,8 +1306,9 @@ The clustering aims to find an optimal cluster <span class="arithmatex">\(C_1^\a
 \]</div>
 <p>Computing <span class="arithmatex">\(F\)</span> for a given cluster <span class="arithmatex">\(\mathcal{C}\)</span> is relatively fast as long as the distance is quick to compute.
 However, the optimization problem itself is very difficult.
-Indeed, it is a minimization problem on a set <span class="arithmatex">\(\mathfrak{C}\)</span> which does not have a suitable topology to define derivatives for instance.
-Hence, the only way a priori would be a brute force optimization, that is running through every possible partition, which is however not suitable since the cardinality of <span class="arithmatex">\(\mathfrak{C}\)</span> is gigantic.
+Indeed, it is a minimization problem on a set <span class="arithmatex">\(\mathfrak{C}\)</span> which does not have a suitable topology to define derivatives, for instance.
+Hence, the only a priory way is a brute force optimization, that is, running through every possible partition.
+It is however not suitable since the cardinality of <span class="arithmatex">\(\mathfrak{C}\)</span> is gigantic.
 It corresponds to the <a href="https://en.wikipedia.org/wiki/Stirling_numbers_of_the_second_kind">stirling number of the second kind</a> <span class="arithmatex">\({ N \brace K}\)</span>:</p>
 <div class="arithmatex">\[
 \begin{equation*}
@@ -1182,25 +1316,17 @@ It corresponds to the <a href="https://en.wikipedia.org/wiki/Stirling_numbers_of
 \end{equation*}
 \]</div>
 <p>meaning that for a fixed number <span class="arithmatex">\(K\)</span>, the cardinality is growing exponentially in the size of the set.
-The problem can be refined and some better approximation can be found but in general this is NP-Hard.</p>
-<p>However, with some assumptions about the distance, and geometrical consideration, an honnest and fast algorithm can be designed to achieve some local optimum.</p>
-<p>We consider as ''distance''' the square of the euclidean norm, that is <span class="arithmatex">\(d(x,y) = \|x - y\|^2\)</span>.</p>
-<h3 id="question-1">Question 1.</h3>
-<p>Show that</p>
-<div class="arithmatex">\[
-\begin{equation*}
-    \frac{1}{\# C} \sum_{x, y \in C} \| x - y \|^2 = 2 \sum_{x \in c} \|x - \mu\|^2
-\end{equation*}
-\]</div>
-<p>where <span class="arithmatex">\(\mu = \frac{1}{\# C} \sum x\)</span> is the average/barycenter or centroid of <span class="arithmatex">\(C\)</span>.</p>
-<h3 id="question-2">Question 2.</h3>
-<p>It follows that </p>
+The problem can be refined and some better approximation can be found but in general this is NP-Hard.
+However, with some assumptions about the distance, and geometrical considerations, an honnest and fast algorithm can be designed to achieve some local optimum.
+We consider as <em>distance</em> the square of the euclidean norm, that is <span class="arithmatex">\(d(x,y) = \|x - y\|^2\)</span>.</p>
+<p>In this specific case, it turns out that the problem can be reformulated in terms of barycenter or centroid with respect to the distance</p>
 <div class="arithmatex">\[
 \begin{equation*}
     F(\mathcal{C}) = \sum_{C \in \mathcal{C}} \sum_{x \in X} \|x - \mu_{C}\|^2
 \end{equation*}
 \]</div>
-<p>With this reformulation in term of geometric center of <span class="arithmatex">\(C\)</span> leads to the following idea for an algorithm to select a partition.</p>
+<p>where <span class="arithmatex">\(\mu_C = \frac{1}{\# C} \sum x\)</span> is the average/barycenter or centroid of <span class="arithmatex">\(C\)</span>.</p>
+<p>With this reformulation in term of the geometric center of <span class="arithmatex">\(C\)</span>, it leads to the following idea for an algorithm to select a partition.</p>
 <blockquote>
 <ol>
 <li>Initialize <span class="arithmatex">\(K\)</span> centers <span class="arithmatex">\(\mu_1(0), \ldots, \mu_K(0)\)</span> by choosing <span class="arithmatex">\(K\)</span>-points in <span class="arithmatex">\(X\)</span>.</li>
@@ -1208,9 +1334,8 @@ The problem can be refined and some better approximation can be found but in gen
 <p>Recursively: While <span class="arithmatex">\(\mathcal{C}(n+1) \neq \mathcal{C}(n)\)</span> at the end of the following do:</p>
 <ul>
 <li>
-<p>Given <span class="arithmatex">\(K\)</span> <span class="arithmatex">\(\mu_1(n), \ldots \mu_K(n)\)</span> define <span class="arithmatex">\(K\)</span> sets <span class="arithmatex">\(C_1(n+1), \ldots, C_K(n+1)\)</span>:</p>
+<p>Given <span class="arithmatex">\(\mu_1(n), \ldots \mu_K(n)\)</span> define the sets <span class="arithmatex">\(C_1(n+1), \ldots, C_K(n+1)\)</span>: </p>
 <p><span class="arithmatex">\(C_k(n+1) = \left\{x \in X\colon \|x - \mu_K(k)\|^2 \leq \|x - \mu_K(j)\|^2 \text{ for any }j\neq k\right\}\)</span></p>
-<p>If some point is assigned to two or more then set it to a single one. The best way to do it, is to assign the points to the first cluster, then assign the remaining points to the second one, etc.</p>
 </li>
 <li>
 <p>update the new centers <span class="arithmatex">\(\mu_1(n+1), \ldots, \mu_K(n+1)\)</span>:</p>
@@ -1220,23 +1345,110 @@ The problem can be refined and some better approximation can be found but in gen
 </li>
 </ol>
 </blockquote>
-<ul>
-<li>Show that at each step <span class="arithmatex">\(F(\mathcal{C}(n+1))\leq F(\mathcal{C}(n)\)</span>, hence we find a sequence along which the cost function is decreasing.</li>
-<li>Show that the algorythm finishes after a finite number of steps.</li>
-<li>implement the algorythm in numpy by choosing randomly <span class="arithmatex">\(k\)</span> elements of the set <span class="arithmatex">\(X\)</span>. (the set <span class="arithmatex">\(X\)</span> can be represented by a numpy array <code>Nxd</code>.)</li>
-</ul>
-<h3 id="question-2_1">Question 2.</h3>
-<p>Consider the dataset <a href="../../../data/housing.csv">California Housing</a> which represents the housing data for California.</p>
-<ul>
-<li>Load the dataset and select the columns <code>longitude</code>, <code>lattitude</code> and <code>medianIncome</code> as final dataframe <code>df</code>.</li>
-<li>Install (using conda or pip) the package <code>scikit-learn</code> which is a standard machine learning library.</li>
-<li>Cluster the data with 4 clusters using Kmeans: <code>from sklearn.cluster import KMeans</code>. <ul>
-<li>given a numpy array <code>X</code> of size <code>N x d</code>, computing the cluster with <code>Kmeans</code> is done as follows <code>result = KMeans(n_clusters = 4).fit(X)</code> and the labels for the cluster are given by <code>result.labels_</code> which is an array of size <code>N</code>.</li>
-</ul>
-</li>
-<li>join the cluster values in the dataframe as a new column.</li>
-<li>plot using <a href="https://plotly.com/python/line-and-scatter/">plotly express scatter</a> the scatter plot latitude against longitude with a different color for each cluster.</li>
-</ul>
+<p>With this algorithm, modulo care about common points in clusters, at each step <span class="arithmatex">\(F(\mathcal{C}(n+1))\leq F(\mathcal{C}(n)\)</span>.
+Hence, there exists a sequence of clusters along which the cost function is decreasing.
+Since the number of cluster, though large, is finite, the algorithm ends after a finite number of steps.</p>
+<h2 id="implementation-in-numpy-and-pandas">Implementation in Numpy and Pandas</h2>
+<p>In the following implementation, we assume that we have <span class="arithmatex">\(N\)</span> samples of <span class="arithmatex">\(d\)</span>-dimensional data points, that is, a <code>Nxd</code>-array</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># we assume that we have a set of data N*d with N&gt;d</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">def</span> <span class="nf">basic_cluster</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">max_it</span> <span class="o">=</span> <span class="mf">1e3</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="mf">1e-4</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">N</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="c1"># we check that there are enough datapoints.</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">if</span> <span class="n">N</span> <span class="o">&lt;</span> <span class="n">K</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The number of datapoints </span><span class="si">{</span><span class="n">N</span><span class="si">}</span><span class="s2"> is not sufficient to group in </span><span class="si">{</span><span class="n">K</span><span class="si">}</span><span class="s2"> clusters.&quot;</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">break</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="c1"># create a numpy array of size N which entries will corresponds to the cluster value for data point n</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">cluster</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="c1"># initialize a set of centroids taken randomly from the data using random choice without replacement</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">()</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">mu</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">K</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="c1"># perform the while loop until centers are the same or max_it is reached</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">diff</span> <span class="o">=</span> <span class="mf">1e8</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">max_it</span> <span class="ow">or</span> <span class="n">diff</span> <span class="o">&lt;</span> <span class="n">tol</span><span class="p">:</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="c1"># we make a copy of the data</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        <span class="n">old_mu</span> <span class="o">=</span> <span class="n">mu</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        <span class="n">data_tmp</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        <span class="c1"># Compute the distance matrix (KxN) of the joint distance between each point and each centroid.</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        <span class="n">distmatrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mu</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)[</span><span class="o">...</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">data</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)[</span><span class="kc">None</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        <span class="c1"># update the labels for the clusters </span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        <span class="n">cluster</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> 
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>        <span class="c1"># update the centroids</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>        <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">K</span><span class="p">):</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>            <span class="n">mu</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">cluster</span> <span class="o">==</span> <span class="n">k</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>        <span class="c1"># update the difference between the old centers and the new ones.</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>        <span class="n">diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">mu</span> <span class="o">-</span> <span class="n">old_mu</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="using-k-mean-on-real-data">Using K-Mean on real data</h2>
+<p>K-Mean has many refinements: the algorithm above does not guarantee for instance that at each step an element of a cluster is non-empty.
+Also, the algorithm only converges to a local minimum and is therefore highly dependent on the initialization, therefore some procedure with some randomization and running several rounds to get closer to a possible global minimum.</p>
+<p>The library <code>sklearn</code>, install the package <code>scikit-learn</code> with <code>conda</code> or <code>pip</code>, has a functionality for clustering.
+We consider the dataset <a href="../../../data/housing.csv">California Housing</a> which represents the housing data for California.
+It contains housing location (<code>longitude</code>, <code>latitude</code>) as well as <code>medianIncome</code> for each house.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># some package to deal with the following</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">import</span> <span class="nn">ploty.express</span> <span class="k">as</span> <span class="nn">px</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span> <span class="k">as</span> <span class="n">km</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># we import the data</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/housing.csv&quot;</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># it has many fields</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># We plot the median income as a function of the location </span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    <span class="n">df</span><span class="p">,</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;longitude&quot;</span><span class="p">,</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;median_income&quot;</span><span class="p">,</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;population&quot;</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>There is a discrepancy in the housing income and the location but not that clear.
+We want to group the datapoints according to the features if we can see a clearer picture.
+Beforehand, we clean the data (we remove the field <code>ocean_proximity</code>, though you could give him a label) and we normalize the data (the values are not in the same range).
+<code>sklearn</code> has a functionality for it with <code>preprocessing.normalize</code> but we do it by hand.
+We then process Kmean.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># drop the column ocean_rpoximity</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="s2">&quot;ocean_proximity&quot;</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># drop nan values</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1"># normalize the values</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># perform Kmean into three regions</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">kmean</span> <span class="o">=</span> <span class="n">km</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="n">kmean</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1"># we add the labels in the original dataframe</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kmean</span><span class="o">.</span><span class="n">labels_</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">df</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;K&quot;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># we scatter plot the labels in terms of group</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="n">df</span><span class="p">,</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;longitude&quot;</span><span class="p">,</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;latitude&quot;</span><span class="p">,</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;labels&quot;</span><span class="p">,</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;population&quot;</span><span class="p">,</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="p">)</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="c1"># We can provide the statistical description per group</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</span></code></pre></div>
 
 
 

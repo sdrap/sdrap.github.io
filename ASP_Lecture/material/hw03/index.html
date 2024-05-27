@@ -333,6 +333,8 @@
       
         
       
+        
+      
     
     
       
@@ -818,6 +820,8 @@
       
         
       
+        
+      
     
     
       
@@ -860,7 +864,28 @@
         
   
   <span class="md-ellipsis">
-    Regression
+    Linear Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/04-ML-101/042-PCA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal Component Analysis
   </span>
   
 
@@ -882,6 +907,123 @@
   
   <span class="md-ellipsis">
     Clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Derivative
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Derivative
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/05-Derivatives/051-differentiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Differentiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/05-Derivatives/052-PDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/05-Derivatives/053-gradient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gradient Descent
   </span>
   
 
@@ -1227,10 +1369,10 @@
     Y = a + b_1 X_1 +b_2 X_2 + \varepsilon = \mathbf{X}\mathbf{b} + \varepsilon
 \end{equation*}
 \]</div>
-<p>where </p>
+<p>where</p>
 <div class="arithmatex">\[
 \begin{equation*}
-    \mathbf{b} = 
+    \mathbf{b} =
     \begin{bmatrix}
         a\\
         b_1\\
@@ -1239,20 +1381,20 @@
     \quad
     \text{and}
     \quad
-    \mathbf{X} = 
+    \mathbf{X} =
     \begin{bmatrix}
         1 &amp; X_1 &amp;  X_2
     \end{bmatrix}
 \end{equation*}
 \]</div>
-<p>We assume that </p>
+<p>We assume that</p>
 <div class="arithmatex">\[
 \begin{equation*}
     \begin{bmatrix}
         X_1 \\
         X_2
     \end{bmatrix}
-    \sim 
+    \sim
     \mathcal{N}\left(
     \begin{bmatrix}
         \mu_1 \\
@@ -1315,22 +1457,24 @@
 <p>Two source of error can come into the linear regression: The randomness in the sample (the seed) as well as the number of samples <code>N</code>.</p>
 <ul>
 <li>
-<p>Define a function <code>f(N, M)</code> where <code>N</code> is the number of samples, and <span class="arithmatex">\(M\)</span> is the number of trials where you draw this sample. This function shall return </p>
-<ul>
-<li>an array <span class="arithmatex">\(\hat{\mathbf{b}}(N)\)</span> of size <code>3xM</code> for each computation of the regression coefficient (in the random generator you set <code>seed = None</code>)  </li>
-<li>an array <span class="arithmatex">\(\hat{\varepsilon}(N)\)</span> of size <code>NxM</code> of the corresponding residual for each sample drawn.</li>
-</ul>
+<p>Define a function <code>f(N, M)</code> where <code>N</code> is the number of samples, and <span class="arithmatex">\(M\)</span> is the number of trials where you draw this sample. This function shall return</p>
+</li>
+<li>
+<p>an array <span class="arithmatex">\(\hat{\mathbf{b}}(N)\)</span> of size <code>3xM</code> for each computation of the regression coefficient (in the random generator you set <code>seed = None</code>)</p>
+</li>
+<li>
+<p>an array <span class="arithmatex">\(\hat{\varepsilon}(N)\)</span> of size <code>NxM</code> of the corresponding residual for each sample drawn.</p>
 </li>
 <li>
 <p>Fix <code>M=100</code> and for <code>N = 10, 100</code> and <code>1000</code> plot the histogram of</p>
-<ul>
-<li><code>a(N)</code>, <code>b_1(N)</code> and <code>b_2(N)</code> (they are arrays of <code>M=100</code> values)</li>
+</li>
+<li>
+<p><code>a(N)</code>, <code>b_1(N)</code> and <code>b_2(N)</code> (they are arrays of <code>M=100</code> values)</p>
+</li>
 <li>mean and standard deviation in the direction of the <code>N</code> axis of <span class="arithmatex">\(\hat{\varepsilon}(N)\)</span> (you get two arrays of <code>M=100</code> values)</li>
 </ul>
-</li>
-</ul>
 <h2 id="2-linear-regression-real-data">2. Linear Regression Real Data</h2>
-<p>As seen in the lecture, we are given a set of data in a dataframe <code>df</code> with </p>
+<p>As seen in the lecture, we are given a set of data in a dataframe <code>df</code> with</p>
 <ul>
 <li>a column <code>y</code> for the serie of outputs;</li>
 <li><code>d</code> columns <code>x_0</code>, ..., <code>x_d</code> for the series of outputs</li>
@@ -1341,7 +1485,7 @@
 <ul>
 <li>Load the dataset with pandas, check if the data are correct and provide some descriptive statistics.</li>
 </ul>
-<p>The output is <code>quality</code>, the column type is either <code>red</code> or <code>white</code> and the other columns are characteristics of the wine.</p>
+<p>The output <span class="arithmatex">\(\mathbf{y}\)</span> is <code>quality</code>, the column <code>type</code> stands for the rows that are either <code>red</code> or <code>white</code>, all the other columns are characteristics of the wine.</p>
 <ul>
 <li>
 <p>Using plotly scatter plot, visualize for <code>red</code> and <code>white</code> the relation between each input dimension and output dimension.</p>
@@ -1364,8 +1508,8 @@ One indicator for the goodness of a linear regression is <code>rsquared</code> w
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Normally you should also consider if the new feature collected is not strongly colinear with the first one. To do so you should double check the VIF factor, see <a href="https://www.statsmodels.org/dev/generated/statsmodels.stats.outliers_influence.variance_inflation_factor.html"><code>variance_inflation_factor</code></a>.</p>
 </div>
+<p>Normally you should also consider if the new feature collected is not strongly colinear with the first one. To do so you should double check the VIF factor, see <a href="https://www.statsmodels.org/dev/generated/statsmodels.stats.outliers_influence.variance_inflation_factor.html"><code>variance_inflation_factor</code></a>.</p>
 <h2 id="3-clustering">3. Clustering</h2>
 <p>The principle of clustering is as follows.
 Given a set <span class="arithmatex">\(X = \{x_1, \ldots, x_N\}\)</span> of <span class="arithmatex">\(N\)</span> points in <span class="arithmatex">\(\mathbb{R}^d\)</span>, the goal is to find a partition (cluster) <span class="arithmatex">\(C_1, \ldots C_K \subseteq X\)</span> which somehow group <em>similar</em> points.</p>
@@ -1412,7 +1556,7 @@ The problem can be refined and some better approximation can be found but in gen
 \]</div>
 <p>where <span class="arithmatex">\(\mu = \frac{1}{\# C} \sum x\)</span> is the average/barycenter or centroid of <span class="arithmatex">\(C\)</span>.</p>
 <h3 id="question-2_2">Question 2.</h3>
-<p>It follows that </p>
+<p>It follows that</p>
 <div class="arithmatex">\[
 \begin{equation*}
     F(\mathcal{C}) = \sum_{C \in \mathcal{C}} \sum_{x \in X} \|x - \mu_{C}\|^2
@@ -1424,7 +1568,7 @@ The problem can be refined and some better approximation can be found but in gen
 <li>Initialize <span class="arithmatex">\(K\)</span> centers <span class="arithmatex">\(\mu_1(0), \ldots, \mu_K(0)\)</span> by choosing <span class="arithmatex">\(K\)</span>-points in <span class="arithmatex">\(X\)</span>.</li>
 <li>
 <p>Recursively: While <span class="arithmatex">\(\mathcal{C}(n+1) \neq \mathcal{C}(n)\)</span> at the end of the following do:</p>
-<ul>
+</li>
 <li>
 <p>Given <span class="arithmatex">\(K\)</span> <span class="arithmatex">\(\mu_1(n), \ldots \mu_K(n)\)</span> define <span class="arithmatex">\(K\)</span> sets <span class="arithmatex">\(C_1(n+1), \ldots, C_K(n+1)\)</span>:</p>
 <p><span class="arithmatex">\(C_k(n+1) = \left\{x \in X\colon \|x - \mu_K(k)\|^2 \leq \|x - \mu_K(j)\|^2 \text{ for any }j\neq k\right\}\)</span></p>
@@ -1433,8 +1577,6 @@ The problem can be refined and some better approximation can be found but in gen
 <li>
 <p>update the new centers <span class="arithmatex">\(\mu_1(n+1), \ldots, \mu_K(n+1)\)</span>:</p>
 <p><span class="arithmatex">\(\mu_k(n+1) = \frac{1}{\# C_k(n+1)} \sum_{x \in C_k(n+1)} x\)</span></p>
-</li>
-</ul>
 </li>
 </ol>
 </blockquote>
@@ -1448,10 +1590,8 @@ The problem can be refined and some better approximation can be found but in gen
 <ul>
 <li>Load the dataset and select the columns <code>longitude</code>, <code>lattitude</code> and <code>medianIncome</code> as final dataframe <code>df</code>.</li>
 <li>Install (using conda or pip) the package <code>scikit-learn</code> which is a standard machine learning library.</li>
-<li>Cluster the data with 4 clusters using Kmeans: <code>from sklearn.cluster import KMeans</code>. <ul>
+<li>Cluster the data with 4 clusters using Kmeans: <code>from sklearn.cluster import KMeans</code>.</li>
 <li>given a numpy array <code>X</code> of size <code>N x d</code>, computing the cluster with <code>Kmeans</code> is done as follows <code>result = KMeans(n_clusters = 4).fit(X)</code> and the labels for the cluster are given by <code>result.labels_</code> which is an array of size <code>N</code>.</li>
-</ul>
-</li>
 <li>join the cluster values in the dataframe as a new column.</li>
 <li>plot using <a href="https://plotly.com/python/line-and-scatter/">plotly express scatter</a> the scatter plot latitude against longitude with a different color for each cluster.</li>
 </ul>

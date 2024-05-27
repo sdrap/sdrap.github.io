@@ -14,7 +14,7 @@
         <link rel="prev" href="../../03-Data/035-sql/">
       
       
-        <link rel="next" href="../043-Cluster/">
+        <link rel="next" href="../042-PCA/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Regression - Scientific Programing - An Introduction</title>
+        <title>Linear Regression - Scientific Programing - An Introduction</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#regression" class="md-skip">
+        <a href="#linear-regression" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Regression
+              Linear Regression
             
           </span>
         </div>
@@ -326,6 +326,8 @@
   
     
     
+      
+        
       
         
       
@@ -827,6 +829,8 @@
       
         
       
+        
+      
     
     
       
@@ -878,7 +882,7 @@
           
   
   <span class="md-ellipsis">
-    Regression
+    Linear Regression
   </span>
   
 
@@ -889,7 +893,7 @@
         
   
   <span class="md-ellipsis">
-    Regression
+    Linear Regression
   </span>
   
 
@@ -911,28 +915,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linear-regression" class="md-nav__link">
+  <a href="#some-math-preliminaries" class="md-nav__link">
     <span class="md-ellipsis">
-      Linear Regression
+      Some Math Preliminaries
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Linear Regression">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-random-variables-to-data-and-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Random Variables to Data (and Back)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-in-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation in Numpy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation in Numpy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#some-preliminaries" class="md-nav__link">
+  <a href="#model" class="md-nav__link">
     <span class="md-ellipsis">
-      Some Preliminaries
+      Model
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
+  <a href="#asymptotical-accuracy-of-ols-with-respect-to-n" class="md-nav__link">
     <span class="md-ellipsis">
-      Implementation
+      Asymptotical Accuracy of OLS with respect to N
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distributional-behavior-of-the-ols-for-given-n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributional Behavior of the OLS for given N
     </span>
   </a>
   
@@ -940,6 +971,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statsmodels-with-real-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statsmodels with Real Data
+    </span>
+  </a>
   
 </li>
       
@@ -959,11 +999,149 @@
   
   
     <li class="md-nav__item">
+      <a href="../042-PCA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal Component Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../043-Cluster/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Derivative
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Derivative
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/051-differentiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Differentiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/052-PDE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PDE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Derivatives/053-gradient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gradient Descent
   </span>
   
 
@@ -1142,85 +1320,565 @@
                   
 
 
-<h1 id="regression">Regression</h1>
-<p>Regressing data is a wiedly used way of trying to decompose some output <span class="arithmatex">\(Y\)</span> into a meaningfull function of inputs <span class="arithmatex">\(\mathbf{X}\)</span> or signals and some noise <span class="arithmatex">\(\varepsilon\)</span></p>
+<h1 id="linear-regression">Linear Regression</h1>
+<p>Regression is a widely used way to decompose some output <span class="arithmatex">\(Y\)</span> into a meaningful function <span class="arithmatex">\(f\)</span> of inputs <span class="arithmatex">\(\mathbf{X}= (X_1 , \ldots , X_d)\)</span> and some noise <span class="arithmatex">\(\varepsilon\)</span></p>
 <div class="arithmatex">\[
 \begin{equation*}
     Y \approx f(\mathbf{X}) + \varepsilon
 \end{equation*}
 \]</div>
-<p>where <span class="arithmatex">\(f\)</span> is a function that needs to be found.</p>
 <p>Ideally, <span class="arithmatex">\(\varepsilon\)</span> should be somehow "orthogonal" to <span class="arithmatex">\(f(\mathbf{X})\)</span>.
-In this sense, the first idea would be to minimize some euclidean (in the finite case) or <span class="arithmatex">\(L^2\)</span> (for random variables) between <span class="arithmatex">\(Y\)</span> and <span class="arithmatex">\(f(\mathbf{X})\)</span> since it is an Hilbert space and projection is easily understandable.
-In other terms, one search for the best <span class="arithmatex">\(\hat{f}\)</span> such that</p>
+A natural way is to consider the <span class="arithmatex">\(L^2\)</span> norm between <span class="arithmatex">\(Y\)</span> and <span class="arithmatex">\(f(\mathbf{X})\)</span> as <span class="arithmatex">\(L^2\)</span> is an Hilbert space and projections are easily understandable.
+In other terms, the best function <span class="arithmatex">\(f^\ast\colon \mathbb{R}^d \to \mathbb{R}\)</span> shall satisfy</p>
 <div class="arithmatex">\[
 \begin{equation*}
-    \left\| Y - \hat{f}(\mathbf{X}) \right\| \leq \|Y - f(\mathbf{X})\|
+    f^\ast = \mathrm{argmin} \left\{E\left[\left(Y - f(\mathbf{X}) \right)^2\right] \colon f \in \mathcal{C}\right\}
 \end{equation*}
 \]</div>
-<p>for every other <span class="arithmatex">\(f\)</span>.</p>
-<p>Now this problem is way to large if you allow every possible class of function <span class="arithmatex">\(f\)</span>.
-Therefore, most regression problems attempt to reduce the set of considered function <span class="arithmatex">\(f\)</span> to a smaller parametrized subset.</p>
-<h2 id="linear-regression">Linear Regression</h2>
-<h3 id="some-preliminaries">Some Preliminaries</h3>
-<p>The principle of linear regration is to find if there is a linear relationship between an <strong>input</strong> <span class="arithmatex">\(\mathbf{X}\)</span> of dimension <span class="arithmatex">\(p\)</span> and some <strong>output</strong> <span class="arithmatex">\(Y\)</span>, that is</p>
+<p>where <span class="arithmatex">\(\mathcal{C}\)</span> is a set of possible functions.
+If considering any possible function <span class="arithmatex">\(f\)</span>, the optimization problem is too large.
+Therefore, most regression approaches consider a smaller parametrized subset of functions of finite dimension.
+The most prominent example are the affine functions</p>
 <div class="arithmatex">\[
 \begin{equation*}
-    Y = \mathbf{b}\cdot \mathbf{X}
+    \mathcal{C} = \left\{f(\mathbf{x})=a + \mathbf{b}\cdot \mathbf{x}: (a, b) \in \mathbb{R}\times \mathbb{R}^d\right\}
 \end{equation*}
 \]</div>
-<p>where <span class="arithmatex">\(\mathbf{b}\)</span> is a vector of dimension <span class="arithmatex">\(p\)</span>.</p>
+<p>refered to as <strong>Ordinary Least Square</strong> regression.</p>
 <details class="note">
-<summary>Where is the intersept?</summary>
-<p>Usually linear regression assumes an affine model, that is</p>
+<summary>Further Constraints or Specifications can be Considered</summary>
+<p>For additional robustness, further constraints are imposed on the set <span class="arithmatex">\(\mathcal{A}\)</span> of those <span class="arithmatex">\((a, \mathbf{b})\)</span> allowed in the linear regression, or fixed transformation of the input variables <span class="arithmatex">\(\mathbf{x}\)</span>.
+But the problem is still linear or convex in <span class="arithmatex">\((a, \mathbf{b})\)</span>.</p>
+<ul>
+<li>
+<p><strong>Ridge Regression:</strong> intends to keep the possible factors into some constraint set in the <span class="arithmatex">\(\ell^2\)</span> sense</p>
 <div class="arithmatex">\[
 \begin{equation*}
-    Y = a + \mathbf{b}\cdot \mathbf{X}
+    \mathcal{A} = \left\{(a, \mathbf{b})\colon \sum |b_k|^2 = \|\mathbf{b}\|_2^2 \leq \lambda\right\}
 \end{equation*}
 \]</div>
-<p>However by simply adding a dimension and defining</p>
+<p>for a given smoothing factor <span class="arithmatex">\(\lambda\)</span>.
+Convex constraint to prevent dispersion of the coefficients.</p>
+</li>
+<li>
+<p><strong>Lasso Regression:</strong> same as Lasso but in terms of absolute value or <span class="arithmatex">\(\ell^1\)</span> sense, that is</p>
 <div class="arithmatex">\[
 \begin{equation*}
-\bar{\mathbf{X}} = 
-\begin{bmatrix}
-1 \\
-\mathbf{X}
-\end{bmatrix},
-\quad \text{and}\quad
-\bar{\mathbf{b}} = 
-\begin{bmatrix}
-    a\\
-    \mathbf{b}
-\end{bmatrix}
+    \mathcal{A} = \left\{(a, \mathbf{b})\colon \sum |b_k| = \|\mathbf{b}\|_1 \leq \lambda\right\}
 \end{equation*}
 \]</div>
-<p>this reduces to the same problem.</p>
+<p>For a given smoothing factor <span class="arithmatex">\(\lambda\)</span>.</p>
+</li>
+</ul>
+<p>Some mix of Lasso and Ridge yields to further regression types (elastic net, group lasso, fuse lasso, etc.).</p>
+<p>Sometimes the data output in clearly not linear in the input, but of polynomial order <span class="arithmatex">\(n\)</span>.
+If we define <span class="arithmatex">\(\bar{\mathbf{x}}\)</span> as the vector of all monomial powers of <span class="arithmatex">\(\mathbf{x}\)</span> (that is the vector of those <span class="arithmatex">\(\prod_{i=1}^d x_i^{\alpha_i}\)</span> where <span class="arithmatex">\(\sum \alpha_i\leq n\)</span>), then we can consider the polynomial regression where</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \left\{f(\mathbf{x}) = a + \bar{b}\cdot \bar{x}\right\}
+\end{equation*}
+\]</div>
+<p>which remains linear in the factors <span class="arithmatex">\((a, \bar{\mathbf{x}})\)</span> even if we try to match <span class="arithmatex">\(Y\)</span> as a polynomial function of the factor.
+Note that the number of factors increases very fast in that case, and can lead to a problem of over fitting.</p>
 </details>
-<p>In reality this relation is not clear cut (either there is some noise, or the model is just the <em>best</em> linear approximation of <span class="arithmatex">\(\mathbf{Y}\)</span> as a function of <span class="arithmatex">\(\mathbf{X}\)</span>.).
-Searching for the best linear relationship between both, and assuming that both are random vector, a first guess is to find the best vector <span class="arithmatex">\(\mathbf{b}\)</span> that minimizes the distance between <span class="arithmatex">\(\mathbf{b}\cdot \mathbf{X}\)</span> and <span class="arithmatex">\(Y\)</span>.
-In the square sense, assuming you have an inner product such as euclidean norm in finite dimention or some <span class="arithmatex">\(L^2\)</span> norm for random variables, this amounts to solve the following optimization problem</p>
+<h2 id="some-math-preliminaries">Some Math Preliminaries</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For ease of notations and further computations (in the end <span class="arithmatex">\(\mathbf{b}\)</span> is a gradient), we assume that <span class="arithmatex">\(\mathbf{b}\)</span> is a column vector and write the affine function in terms of matrix calculus <span class="arithmatex">\(a + \mathbf{b}\cdot \mathbf{x} = a + \mathbf{x}\mathbf{b}\)</span>.</p>
+<p>Furthermore, the affine problem can be transformed into a linear one by adding a dimension.
+Indeed, for <span class="arithmatex">\(\bar{\mathbf{X}} =(1, \mathbf{X})\)</span> and <span class="arithmatex">\(\bar{\mathbf{b}} = [a,  \mathbf{b}^\top]^\top\)</span> we have <span class="arithmatex">\(a + \mathbf{X}\mathbf{b} = \bar{\mathbf{X}}\bar{\mathbf{b}}\)</span>.
+Hence modulo adding a dimension, we just consider linear functions, and throughout we will always assume that the first entry of <span class="arithmatex">\(\mathbf{X}\)</span> is identically <span class="arithmatex">\(1\)</span>.</p>
+</div>
+<p>In the OLS case, solving the minimization problem <span class="arithmatex">\(\mathbf{b}^\ast = \mathrm{argmin} \{E[(Y - \mathbf{b}\cdot \mathbf{X}) )^2] \colon \mathbf{b} \in \mathbb{R}^d\}\)</span> is straightforward.
+The objective function is convex and smooth in <span class="arithmatex">\(\mathbf{b}\)</span> and uniformly bounded from below by <span class="arithmatex">\(0\)</span>.
+Hence, the global minimum if it exists is characterized by the gradient (column vector) of the objective function being equal to <span class="arithmatex">\(0\)</span>, that is</p>
 <div class="arithmatex">\[
 \begin{equation*}
-  \mathrm{argmin} \left\{ \left\| Y - \mathbf{b}\cdot \mathbf{X} \right\|^2 \colon \mathbf{b} \in \mathbb{R}^{p} \right\}  
+    \nabla_{\mathbf{b}} E\left[\left(Y - \mathbf{X}\mathbf{b}\right)^2\right] = -2E\left[ \mathbf{X}^\top\left(Y - \mathbf{X} \mathbf{b} \right)\right] = 0
 \end{equation*}
 \]</div>
-<p>As a function of <span class="arithmatex">\(\mathbf{b}\)</span>, the function <span class="arithmatex">\(\left\|Y - \mathbf{b}\cdot \mathbf{X}\right\|^2\)</span> is convex, bounded by <span class="arithmatex">\(0\)</span> from below.
-For a smooth convex function, having a zero gradient is equivalent to be a local minimum and equivalent to be a local maximum.
-Hence, the best <span class="arithmatex">\(\mathbb{b}\)</span> is characterised by the first order conditions, that is</p>
+<div class="admonition danger">
+<p class="admonition-title">Proposition</p>
+<p>Given square integrable random variables <span class="arithmatex">\(Y\)</span> and <span class="arithmatex">\(\mathbf{X}\)</span> (<span class="arithmatex">\(d\)</span>-dimensional).
+Provided that the <em>Gram</em> matrix <span class="arithmatex">\(\mathbf{Q}:=E[\mathbf{X}^\top\mathbf{X}]\)</span> (which is positive semidefinite) is invertible, it follows that</p>
 <div class="arithmatex">\[
 \begin{equation*}
-    \nabla_{\mathbf{b}} \left\|Y - \mathbf{b}\cdot \mathbf{X}\right\|^2 = 2E\left[ \left(Y - \mathbf{b} \cdot \mathbf{X}\right) \mathbf{X}^\top\right] = 0
+    \mathbf{b}^\ast =E\left[\mathbf{X}^\top\mathbf{X}\right]^{-1}E\left[\mathbf{X}^\top Y\right] \quad \text{and} \quad \mathbf{\varepsilon}^\ast := Y - \mathbf{X}\mathbf{b}^\ast
 \end{equation*}
 \]</div>
-<p>Which means that </p>
+<p>are the optimal OLS coefficient and error value, respectively.
+It holds</p>
 <div class="arithmatex">\[
 \begin{equation*}
-\mathbf{b} = E\left[\mathbf{X}\mathbf{X}^\top\right]^{-1}E\left[Y\mathbf{X}^\top\right]     
+    E\left[ \mathbf{X}^\top \varepsilon^\ast \right] =  E\left[ X^\top\left(Y - \mathbf{X} \mathbf{b}^\ast \right)\right]=0
 \end{equation*}
 \]</div>
-<p>Under the strong assumption that your data are generated by drwaing <span class="arithmatex">\(N\)</span> independent samples <span class="arithmatex">\((\mathbf{y}(t, \mathbf{x}(t))\)</span> drawn from the joint law <span class="arithmatex">\(Law(\mathbf{X}, \mathbf{Y})\)</span>, following what we saw with Monte-Carlo we have</p>
-<h3 id="implementation">Implementation</h3>
-<p>The implementation is fairly standard as it just amounts to compute the Moore Penrose Pseudoinverse of <span class="arithmatex">\(\mathbf{X}\)</span>.</p>
+</div>
+<p>In order to estimate the quality of the error, we consider the following</p>
+<ul>
+<li>
+<p class="annotate"><strong>Residual Variance:</strong> variance of the residual error <span class="arithmatex">\(\varepsilon\)</span>. (1)</p>
+<ol>
+<li>Since we extended the problem by one dimension for the linear regression, the mean of the error is equal to <span class="arithmatex">\(0\)</span>.</li>
+</ol>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathrm{RVAR} = \mathrm{VAR}(\varepsilon) = E\left[ (Y - \mathbf{X}\mathbf{b}^\ast)^2 \right]
+\end{equation*}
+\]</div>
+</li>
+<li>
+<p><strong>Total Variance:</strong> variance of <span class="arithmatex">\(Y\)</span></p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathrm{TVAR} = \mathrm{VAR}(Y) = E[(Y - E[Y])^2]
+\end{equation*}
+\]</div>
+</li>
+<li>
+<p><strong>Coefficient of Determination:</strong> number between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span></p>
+<div class="arithmatex">\[
+\begin{equation*}
+    R^2 = 1 - \frac{\mathrm{RVAR}}{\mathrm{TVAR}} = 1 - \frac{\mathrm{VAR}(\varepsilon)}{\mathrm{VAR}(Y)}
+\end{equation*}
+\]</div>
+</li>
+</ul>
+<p>In particular if the approximation is perfect, then <span class="arithmatex">\(\mathrm{RVAR}\)</span> is equal to <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(R^2 = 1\)</span>.
+If the approximation can only explain the mean, then <span class="arithmatex">\(\mathrm{RVAR} = \mathrm{TVAR}\)</span> and <span class="arithmatex">\(R^2 = 0\)</span>.</p>
+<h2 id="from-random-variables-to-data-and-back">From Random Variables to Data (and Back)</h2>
+<p>Random variables are idealized objects, while in reality we usually observe samples from those.</p>
+<div class="admonition danger">
+<p class="admonition-title">What does it mathematically mean "Sampling"?</p>
+<p>Drawing <span class="arithmatex">\(N\)</span> iid samples <span class="arithmatex">\(x_1, \ldots, x_N\)</span> from the distribution of a random variable <span class="arithmatex">\(X\)</span> is as follows.</p>
+<ol>
+<li>Take <span class="arithmatex">\(N\)</span> iid copies <span class="arithmatex">\(X_1, \ldots, X_N\)</span> of <span class="arithmatex">\(X\)</span>.</li>
+<li>Choose a state <span class="arithmatex">\(\omega\)</span> in <span class="arithmatex">\(\Omega\)</span>.</li>
+<li>Define <span class="arithmatex">\(x_1 = X_1(\omega)\)</span>, ...,<span class="arithmatex">\(x_N = X_N(\omega)\)</span></li>
+</ol>
+<p>From this definition, a sample is itself a sequence of the evaluation in a given state <span class="arithmatex">\(\omega\)</span> of those identical and independent copies of <span class="arithmatex">\(X\)</span>.
+From now on we denote by <span class="arithmatex">\(\mathbf{x}^{(N)}\)</span> a sample of size <span class="arithmatex">\(N\)</span> of the random variable and if we want to stress the dependence of the choice of <span class="arithmatex">\(\omega\)</span>, we write <span class="arithmatex">\(\mathbf{x}^{(N)}(\omega)\)</span>.</p>
+<p>From a computer perspective, you fix a <strong>seed</strong> that you can think of <span class="arithmatex">\(\omega\)</span>, and then generate the random sequence <span class="arithmatex">\(\mathbf{x}^{(N)} = \mathbf{x}^{(N)}(\omega) = (x_1,\ldots, x_N)\)</span> which corresponds to <span class="arithmatex">\(x_n = X_n(\omega)\)</span>.</p>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># fix the number of samples</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># fix a seed omega</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">omega</span> <span class="o">=</span> <span class="mi">150</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span> <span class="o">=</span> <span class="n">omega</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Generate N random samples from a normal distribution with mean 0 and standard deviation 0.2</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span><span class="p">)</span>      <span class="c1"># generate N independent copies of N(1, 0.2) evaluated at omega</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;First draw with omega = </span><span class="si">{</span><span class="n">omega</span><span class="si">}</span><span class="s2"> result into:</span><span class="se">\n</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># draw again with the same omega</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">omega</span> <span class="o">=</span> <span class="mi">150</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span> <span class="o">=</span> <span class="n">omega</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Second draw with omega = </span><span class="si">{</span><span class="n">omega</span><span class="si">}</span><span class="s2"> result into:</span><span class="se">\n</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># change omega</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">omega</span> <span class="o">=</span> <span class="mi">20</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span> <span class="o">=</span> <span class="n">omega</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Third draw with omega = </span><span class="si">{</span><span class="n">omega</span><span class="si">}</span><span class="s2"> result into:</span><span class="se">\n</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1"># set omega to a &#39;random&#39; choice depending on the clock of the computer</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">omega</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span> <span class="o">=</span> <span class="n">omega</span><span class="p">)</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;fourth draw with None (random) omega = </span><span class="si">{</span><span class="n">omega</span><span class="si">}</span><span class="s2"> result into:</span><span class="se">\n</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c1"># Draw again with omega set to None</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">omega</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span> <span class="o">=</span> <span class="n">omega</span><span class="p">)</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="n">N</span><span class="p">)</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Another draw with None set as omega = </span><span class="si">{</span><span class="n">omega</span><span class="si">}</span><span class="s2"> result into:</span><span class="se">\n</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<!--  -->
+<!-- By the law of large number and central limit theorem (modulo square integrability condition), it holds: -->
+<!--  -->
+<!-- $$ -->
+<!-- \frac{1}{N}\sum_{n=1}^N X^k(\omega) \xrightarrow[N \to \infty]{\text{For almost all }\omega} E[X] \quad \text{and} \quad \frac{\sqrt{N}}{\sigma}\left(\frac{1}{N}\sum_{n=1}^N X^k(\omega) - \mu\right) \xrightarrow[N \to \infty]{\text{In distribution}} \mathcal{N}(0, 1) -->
+<!-- $$ -->
+<!----></p>
+</div>
+<details class="warning">
+<summary>Warning</summary>
+<p>Throughout, we assume that those samples are identically drawn from the joint distribution <span class="arithmatex">\(\mathcal{L}aw(Y, \mathbf{X})\)</span>.
+This doesn't always need to be the case.
+For instance for time series, there night be some past dependence between consecutive draws, but in that case the arguments below strongly need to be modified.</p>
+</details>
+<p>For ease of notations, we stack the sample <span class="arithmatex">\((\mathbf{y}^N, \mathbf{x}^{(N)})\)</span> into vectors and matrices</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \mathbf{y} := \mathbf{y}^{(N)}=
+    \begin{bmatrix}
+        y_1\\
+        \vdots
+        \\
+        y_N
+    \end{bmatrix}
+    \quad
+    \text{and}
+    \quad
+    \mathbf{x}:= \mathbf{x}^{(N)} =
+    \begin{bmatrix}
+    \mathbf{x}_1\\
+    \vdots\\
+    \mathbf{x}_N
+    \end{bmatrix}=
+    \begin{bmatrix}
+        x_{11}&amp; \cdots &amp; x_{1d}\\
+        \vdots &amp; \ddots &amp; \vdots\\
+        x_{N1}&amp; \cdots &amp; x_{Nd}\\
+    \end{bmatrix}
+\end{equation*}
+\]</div>
+<p>By the law of large numbers it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  E\left[\mathbf{X}^\top Y\right] \approx \frac{1}{N}\sum_{n=1}^N \mathbf{x}_n^\top y_n = \mathbf{x}^\top\mathbf{y} \quad \text{and} \quad E\left[\mathbf{X}^\top \mathbf{X}\right] \approx \frac{1}{N}\sum_{n=1}^N \mathbf{x}_n^\top \mathbf{x}_n = \frac{1}{N} \mathbf{x}^\top \mathbf{x}
+\end{equation*}
+\]</div>
+<p>showing that given a sample <span class="arithmatex">\((\mathbf{y}^{(N)}, \mathbf{x}^{(N)})\)</span> we have an approximation of the OLS given by</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \hat{\mathbf{b}}^{(N)} = \left(\mathbf{x}^\top \mathbf{x}\right)^{-1}\mathbf{x}^\top \mathbf{y}  \quad \text{and} \quad \hat{\varepsilon}^{(N)} := \mathbf{y} - \mathbf{x}\hat{\mathbf{b}}
+\end{equation*}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">How Good is the Sample Approximation?</p>
+<p>Two things happened here.</p>
+<ol>
+<li>We have a number <span class="arithmatex">\(N\)</span> of independent copies of <span class="arithmatex">\((Y, \mathbf{X})\)</span></li>
+<li>We choose a state <span class="arithmatex">\(\omega\)</span> and get the sample <span class="arithmatex">\(\mathbf{y}^{(N)}(\omega)\)</span>, <span class="arithmatex">\(\mathbf{x}^{(N)}(\omega)\)</span>.</li>
+</ol>
+<p>From the law of large numbers we know that when <span class="arithmatex">\(N\)</span> goes to infinity then <span class="arithmatex">\(\hat{\mathbf{b}}^{(N)}(\omega) \to \mathbf{b}^\ast\)</span> for almost any choice of <span class="arithmatex">\(\omega\)</span>.</p>
+<p>However, this error depends on the choice of <span class="arithmatex">\(\omega\)</span> as well as the number <span class="arithmatex">\(N\)</span> of samples drawn.</p>
+</div>
+<p>To estimate the quality of the error we define</p>
+<ul>
+<li>
+<p><strong>reduced <span class="arithmatex">\(\chi\)</span>-square statistics</strong>:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \hat{s}^2 = \hat{s}^{2, (N)}(\omega) = \frac{\hat{\varepsilon}^\top \hat{\varepsilon}}{N-d}
+\end{equation*}
+\]</div>
+<p>which is an unbiased estimation of the variance <span class="arithmatex">\(\hat{\sigma}^2 = \hat{\varepsilon}^\top \hat{\varepsilon}/N\)</span> which almost coincide for <span class="arithmatex">\(N\)</span> large.</p>
+<p>Furthermore, by the law of large numbers, <span class="arithmatex">\(\hat{s}^{2, (N)}(\omega)\)</span> <span class="arithmatex">\(\hat{\sigma}^{2,(N)}(\omega)\)</span> both converges to the residual variance <span class="arithmatex">\(\mathrm{RVAR}\)</span>.</p>
+</li>
+<li>
+<p><strong>Empirical Coefficient of Determination</strong>:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \hat{R}^2 = \hat{R}^{2, (N)} = 1 - \frac{\mathrm{VAR}(\hat{\epsilon}^{(N)})}{\mathrm{VAR}(\mathbf{y}^{(N)})}
+\end{equation*}
+\]</div>
+<p>It also holds that <span class="arithmatex">\(\hat{R}^{2, (N)}(\omega)\)</span> converges for almost all <span class="arithmatex">\(\omega\)</span> as <span class="arithmatex">\(N\)</span> goes to <span class="arithmatex">\(\infty\)</span> to <span class="arithmatex">\(R^2\)</span>.</p>
+</li>
+</ul>
+<h2 id="implementation-in-numpy">Implementation in Numpy</h2>
+<p>A naive implementation of the OLS linear regression is relatively simple and is done as follows.
+In this context, we just generate some random data to illustrate the situation.
+We give ourselves a fixed dimension <span class="arithmatex">\(d\)</span> and consider the model</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    Y = \mathbf{X} \mathbf{b} + \varepsilon
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(\mathbf{b}\)</span> is given, <span class="arithmatex">\(\mathbf{X} \sim \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma})\)</span> is a multidimensional normal distribution with given mean <span class="arithmatex">\(\mathbf{\mu}\)</span> in <span class="arithmatex">\(\mathbb{R}^d\)</span> and given covariance matrix <span class="arithmatex">\(\mathbf{\Sigma}\)</span> in <span class="arithmatex">\(R^{d\times d}\)</span>.
+However, we augment <span class="arithmatex">\(\mathbf{X}\)</span> by a dimension equal to <span class="arithmatex">\(1\)</span>.</p>
+<h3 id="model">Model</h3>
+<p>We will fix</p>
+<ol>
+<li><code>d</code> is fixed as the begining for the dimension</li>
+<li><code>N</code> is the number of samples</li>
+<li><code>omega0</code>: is a seed to generate and fix given <span class="arithmatex">\(d\)</span> the parameters <code>b</code>, <code>mu</code> and <code>Sigma</code>.</li>
+<li><code>omega1</code>: is a seed to draw <code>N</code> random samples <code>x</code> and <code>epsilon</code> from <span class="arithmatex">\(\mathbf{X}\)</span> and <span class="arithmatex">\(\varepsilon\)</span>.</li>
+</ol>
+<details class="note">
+<summary>Generating an arbitrary multidimensional random variable</summary>
+<p>There are many multivariate random variable specifications in terms of their distribution, moment generating function or copulas.
+One of the easiest way is in the class of elliptical distributions that mainly depends on giving a positive semi-definite matrix <span class="arithmatex">\(\Sigma\)</span> in <span class="arithmatex">\(R^{d\times d}\)</span>.
+It is cumbersome to generate a an arbitrary (random) positive semi definite matrix for a given dimension for testing purposes that is sufficiently random so that it does not influence too much the effect we want to see from real world data problems.</p>
+<p>A simple way is to take an orthonormal matrix <span class="arithmatex">\(Q\)</span> (for instance from the QR factorization of a random matrix which with probability one is going to be orthonormal) and a diagonal matrix of positive eigenvalues.</p>
+</details>
+<p>Set the parameters of the theoretical model.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># import the libraries</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># for nice printing use rich library (pip install rich)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="kn">from</span> <span class="nn">rich</span> <span class="kn">import</span> <span class="nb">print</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="kn">from</span> <span class="nn">rich.markdown</span> <span class="kn">import</span> <span class="n">Markdown</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># set the fixed variables</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">d</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">omega0</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># seed to generate the constants</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># set the fixed variables</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">d</span> <span class="o">=</span> <span class="mi">10</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">omega0</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># seed to generate the constants</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">omega1</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># seed to generate the sample.</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1"># %%</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># We set the constant for our test by fixing the random number generator</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">rng0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">omega0</span><span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="c1"># b, and mu, Sigma and sigma (for the error)</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="n">b</span> <span class="o">=</span> <span class="n">rng0</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># random vector between -2 and 2</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">mu</span> <span class="o">=</span> <span class="n">rng0</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">d</span><span class="p">)</span>  <span class="c1"># random vector between -0.1 and 0.1</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="c1"># create a random d*d matrix, a random eigenvalue one, get q from qr and generate Sigma</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="n">eigenval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">rng0</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">d</span><span class="p">))</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="n">q</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">qr</span><span class="p">(</span><span class="n">rng0</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">)))</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="n">Sigma</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">eigenval</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="c1"># We compute the theoretical values of sigma2 and r2</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="n">sigma2</span> <span class="o">=</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="n">r2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Sigma</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="nb">print</span><span class="p">(</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    <span class="n">Markdown</span><span class="p">(</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>        <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="s2"># Model values</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="s2">* Characteristics of the input:</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="s2">    * Mean:</span><span class="se">\n</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="s2">        </span><span class="si">{</span><span class="n">mu</span><span class="si">}</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="s2">    * Covariance:</span><span class="se">\n</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="s2">        </span><span class="si">{</span><span class="n">Sigma</span><span class="si">}</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="s2">    * Error volatility:</span><span class="se">\n</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="s2">        </span><span class="si">{</span><span class="n">sigma</span><span class="si">:</span><span class="s2"> 0.2f</span><span class="si">}</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="s2">* Characteristic of the output:</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="s2">    * Coefficient:</span><span class="se">\n</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="s2">        </span><span class="si">{</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="s2"># Theoretical values</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="s2">| Name       | Variable   | Value         |</span>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="s2">|:-----------|:-----------|--------------:|</span>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="s2">| s^2        | sigma2     | </span><span class="si">{</span><span class="n">sigma2</span><span class="si">:</span><span class="s2">.02f</span><span class="si">}</span><span class="s2"> |</span>
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="s2">| R^2        | r2         | </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s2">.02%</span><span class="si">}</span><span class="s2">     |</span>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>    <span class="p">)</span>
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>For a given number of sample <code>N</code> and a seed <code>omega1</code> generate the model and run the linear regression.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Fix N and the random number generator</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">50</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">rng1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">omega1</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Data generation</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">epsilon</span> <span class="o">=</span> <span class="n">rng1</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">x</span> <span class="o">=</span> <span class="n">rng1</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">cov</span><span class="o">=</span><span class="n">Sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># expand x and get y</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">x</span><span class="p">))</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="n">epsilon</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># Perform linear regresssion</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">b_hat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">epsilon_hat</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b_hat</span><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="c1"># Empirical sigma2 and r2</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="n">sigma2_hat</span> <span class="o">=</span> <span class="n">epsilon_hat</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">epsilon_hat</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="n">d</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">r2_hat</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">epsilon_hat</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="nb">print</span><span class="p">(</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="n">Markdown</span><span class="p">(</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="s2"># Result</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="s2">* Coefficient:</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="s2">    * Theoretical:</span><span class="se">\n</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="s2">    </span><span class="si">{</span><span class="n">b</span><span class="si">}</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="s2">    * Empirical:</span><span class="se">\n</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="s2">    </span><span class="si">{</span><span class="n">b_hat</span><span class="si">}</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="s2">| Name       | Empirical          | Theoretical   |</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="s2">| :--------- | :---------         | ----------:   |</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="s2">| s^2        | </span><span class="si">{</span><span class="n">sigma2_hat</span><span class="si">:</span><span class="s2"> .02f</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">sigma2</span><span class="si">:</span><span class="s2">.02f</span><span class="si">}</span><span class="s2"> |</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="s2">| R^2        | </span><span class="si">{</span><span class="n">r2_hat</span><span class="si">:</span><span class="s2">.02%</span><span class="si">}</span><span class="s2">      | </span><span class="si">{</span><span class="n">r2</span><span class="si">:</span><span class="s2">.02%</span><span class="si">}</span><span class="s2">     |</span>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>    <span class="p">)</span>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="p">)</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="c1"># Plot difference between empirical and theoretical coeficients</span>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Theoretical&quot;</span><span class="p">)</span>
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">b_hat</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Empirical&quot;</span><span class="p">)</span>
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p>The results depends on the choice of <code>N</code> and the seed <code>omega1</code> at the beginning.</p>
+<h3 id="asymptotical-accuracy-of-ols-with-respect-to-n">Asymptotical Accuracy of OLS with respect to <code>N</code></h3>
+<p>We first have a look at the influence of the number of samples.
+For ease of data manipulation we use pandas</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">plotting</span><span class="o">.</span><span class="n">backend</span> <span class="o">=</span> <span class="s2">&quot;plotly&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># create a series of different number of samples</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="n">dfN</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">d</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;N&quot;</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">dfN</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">dfN</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1"># we use pandas apply to generate and store the values</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">def</span> <span class="nf">lin_reg</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="n">N</span> <span class="o">=</span> <span class="n">row</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">rng1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">omega1</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">epsilon</span> <span class="o">=</span> <span class="n">rng1</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">rng1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">omega1</span><span class="p">)</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">rng1</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">cov</span><span class="o">=</span><span class="n">Sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="c1"># expand the dimension of x by adding a column of ones</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">x</span><span class="p">))</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="c1"># compute y</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="n">epsilon</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="c1"># We now estimate the parameters of the model</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="n">b_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="n">epsilon_tmp</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b_tmp</span><span class="p">)</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    <span class="c1"># error estimation</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="n">sigma2_tmp</span> <span class="o">=</span> <span class="n">epsilon_tmp</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">epsilon_tmp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="n">d</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="n">r2_tmp</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">epsilon_tmp</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    <span class="c1"># put the constant value</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="n">b_tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    <span class="c1"># put the further coeeficients</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="sa">f</span><span class="s2">&quot;b_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">b_tmp</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)})</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;sigma2&quot;</span><span class="p">:</span> <span class="n">sigma2_tmp</span><span class="p">,</span> <span class="s2">&quot;r2&quot;</span><span class="p">:</span> <span class="n">r2_tmp</span><span class="p">})</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="n">result</span> <span class="o">=</span> <span class="n">dfN</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">)</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="n">display</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="c1"># plot the empirical coefficients as a function of N with their theoretical values</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="c1"># the constant coefficient</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;a_hat&quot;</span><span class="p">)</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_hline</span><span class="p">(</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>    <span class="n">line_dash</span><span class="o">=</span><span class="s2">&quot;dot&quot;</span><span class="p">,</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>    <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>    <span class="n">annotation_text</span><span class="o">=</span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>    <span class="n">annotation_position</span><span class="o">=</span><span class="s2">&quot;top right&quot;</span>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="p">)</span>
+</span><span id="__span-3-47"><a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+</span><span id="__span-3-48"><a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>    <span class="c1"># the variable coefficients</span>
+</span><span id="__span-3-49"><a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;b_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;b_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">_hat&quot;</span><span class="p">)</span>
+</span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">add_hline</span><span class="p">(</span>
+</span><span id="__span-3-51"><a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>        <span class="n">y</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="n">k</span><span class="p">],</span>
+</span><span id="__span-3-52"><a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>        <span class="n">line_dash</span> <span class="o">=</span> <span class="s2">&quot;dot&quot;</span><span class="p">,</span>
+</span><span id="__span-3-53"><a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>        <span class="n">line_color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">,</span>
+</span><span id="__span-3-54"><a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>        <span class="n">annotation_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;b_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+</span><span id="__span-3-55"><a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>        <span class="n">annotation_position</span><span class="o">=</span><span class="s2">&quot;top right&quot;</span>
+</span><span id="__span-3-56"><a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>    <span class="p">)</span>
+</span><span id="__span-3-57"><a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-3-58"><a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>
+</span><span id="__span-3-59"><a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a><span class="c1"># Plot the empirical s2 and r2 as a function of N with their theoretical values</span>
+</span><span id="__span-3-60"><a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-3-61"><a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;sigma2&quot;</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;s2_hat&quot;</span><span class="p">)</span>
+</span><span id="__span-3-62"><a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_hline</span><span class="p">(</span>
+</span><span id="__span-3-63"><a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">sigma2</span><span class="p">,</span>
+</span><span id="__span-3-64"><a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>    <span class="n">line_dash</span> <span class="o">=</span> <span class="s2">&quot;dot&quot;</span><span class="p">,</span>
+</span><span id="__span-3-65"><a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>    <span class="n">line_color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">,</span>
+</span><span id="__span-3-66"><a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>    <span class="n">annotation_text</span> <span class="o">=</span> <span class="s2">&quot;s2&quot;</span><span class="p">,</span>
+</span><span id="__span-3-67"><a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>    <span class="n">annotation_position</span> <span class="o">=</span> <span class="s2">&quot;top right&quot;</span>
+</span><span id="__span-3-68"><a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a><span class="p">)</span>
+</span><span id="__span-3-69"><a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-3-70"><a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>
+</span><span id="__span-3-71"><a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-3-72"><a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;r2&quot;</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;r2_hat&quot;</span><span class="p">)</span>
+</span><span id="__span-3-73"><a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_hline</span><span class="p">(</span>
+</span><span id="__span-3-74"><a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">r2</span><span class="p">,</span>
+</span><span id="__span-3-75"><a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>    <span class="n">line_dash</span> <span class="o">=</span> <span class="s2">&quot;dot&quot;</span><span class="p">,</span>
+</span><span id="__span-3-76"><a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>    <span class="n">line_color</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">,</span>
+</span><span id="__span-3-77"><a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>    <span class="n">annotation_text</span> <span class="o">=</span> <span class="s2">&quot;r2&quot;</span><span class="p">,</span>
+</span><span id="__span-3-78"><a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>    <span class="n">annotation_position</span> <span class="o">=</span> <span class="s2">&quot;top right&quot;</span>
+</span><span id="__span-3-79"><a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a><span class="p">)</span>
+</span><span id="__span-3-80"><a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<p>This gives you a <em>feeling</em> how the convergence of the different parameters and error estimations behaves as a function of the number of samples <code>N</code>.</p>
+<h3 id="distributional-behavior-of-the-ols-for-given-n">Distributional Behavior of the OLS for given <code>N</code></h3>
+<p>A similar question is related to the fact that given a number of <code>N</code> of samples, how <em>"accurate"</em> are your estimations?
+In the previous example even while modifying <code>N</code> we kept using the same random generator with a fixed seed (you can run the code many times, the result will be the same).
+We now, fix <code>N</code> but let the computer choose a seed at will at each draw (either draw random seeds or set it to <code>None</code>)</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">100</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">number_seeds</span> <span class="o">=</span> <span class="mi">5000</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">dfomega</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">number_seeds</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;omega&quot;</span><span class="p">)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">dfomega</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">dfomega</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># we use pandas apply to generate and store the values</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">def</span> <span class="nf">lin_reg</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">rng1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="n">epsilon</span> <span class="o">=</span> <span class="n">rng1</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">rng1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">rng1</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">cov</span><span class="o">=</span><span class="n">Sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="c1"># expand the dimension of x by adding a column of ones</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">x</span><span class="p">))</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="c1"># compute y</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="n">epsilon</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="c1"># We now estimate the parameters of the model</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    <span class="n">b_tmp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>    <span class="n">epsilon_tmp</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b_tmp</span><span class="p">)</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>    <span class="c1"># error estimation</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="n">sigma2_tmp</span> <span class="o">=</span> <span class="n">epsilon_tmp</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">epsilon_tmp</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span> <span class="o">-</span> <span class="n">d</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    <span class="n">r2_tmp</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">epsilon_tmp</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    <span class="c1"># put the constant value</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    <span class="n">result</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="n">b_tmp</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    <span class="c1"># put the further coeeficients</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="sa">f</span><span class="s2">&quot;b_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">b_tmp</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)})</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;sigma2&quot;</span><span class="p">:</span> <span class="n">sigma2_tmp</span><span class="p">,</span> <span class="s2">&quot;r2&quot;</span><span class="p">:</span> <span class="n">r2_tmp</span><span class="p">})</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="n">result</span> <span class="o">=</span> <span class="n">dfomega</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">lin_reg</span><span class="p">)</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="c1"># plot the histogram of the variables</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="n">data</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="o">~</span><span class="n">result</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;r2&quot;</span><span class="p">,</span> <span class="s2">&quot;sigma2&quot;</span><span class="p">])]</span> <span class="o">-</span> <span class="n">b</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="n">cols</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">%</span> <span class="n">cols</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>    <span class="n">rows</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">//</span> <span class="n">cols</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>    <span class="n">rows</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">//</span> <span class="n">cols</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="nb">print</span><span class="p">(</span><span class="n">rows</span><span class="p">)</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>    <span class="n">rows</span><span class="o">=</span><span class="n">rows</span><span class="p">,</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    <span class="n">cols</span><span class="o">=</span><span class="n">cols</span><span class="p">,</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>    <span class="n">shared_xaxes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>    <span class="n">vertical_spacing</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    <span class="n">shared_yaxes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>    <span class="n">horizontal_spacing</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+</span><span id="__span-4-50"><a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="p">)</span>
+</span><span id="__span-4-51"><a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>
+</span><span id="__span-4-52"><a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">):</span>
+</span><span id="__span-4-53"><a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>    <span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+</span><span id="__span-4-54"><a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>        <span class="n">go</span><span class="o">.</span><span class="n">Histogram</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="n">col</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">histnorm</span><span class="o">=</span><span class="s2">&quot;probability&quot;</span><span class="p">),</span>
+</span><span id="__span-4-55"><a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>        <span class="n">row</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">//</span> <span class="n">cols</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-4-56"><a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>        <span class="n">col</span><span class="o">=</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">cols</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-4-57"><a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>    <span class="p">)</span>
+</span><span id="__span-4-58"><a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>
+</span><span id="__span-4-59"><a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-4-60"><a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>
+</span><span id="__span-4-61"><a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a><span class="c1"># plot the histogram of r2 and sigma2</span>
+</span><span id="__span-4-62"><a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">make_subplots</span><span class="p">(</span><span class="n">rows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">shared_yaxes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-4-63"><a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+</span><span id="__span-4-64"><a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>    <span class="n">go</span><span class="o">.</span><span class="n">Histogram</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;sigma2&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sigma2&quot;</span><span class="p">,</span> <span class="n">histnorm</span><span class="o">=</span><span class="s2">&quot;probability&quot;</span><span class="p">),</span>
+</span><span id="__span-4-65"><a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>    <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-4-66"><a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>    <span class="n">col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-4-67"><a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a><span class="p">)</span>
+</span><span id="__span-4-68"><a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+</span><span id="__span-4-69"><a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>    <span class="n">go</span><span class="o">.</span><span class="n">Histogram</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;r2&quot;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;r2&quot;</span><span class="p">,</span> <span class="n">histnorm</span><span class="o">=</span><span class="s2">&quot;probability&quot;</span><span class="p">),</span> <span class="n">row</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="mi">2</span>
+</span><span id="__span-4-70"><a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a><span class="p">)</span>
+</span><span id="__span-4-71"><a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<h2 id="statsmodels-with-real-data">Statsmodels with Real Data</h2>
+<p>The statistical package <code>statsmodels</code> as well as the machinlearning one <code>sklearn</code> do have implementations of any linear regressions.</p>
+<p>For illustration, we make use of <code>statsmodel</code> with a wine dataset (see homework)</p>
 
 
 
