@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://127.0.0.1:10001/lecture/05-Derivatives/041-differentiation/">
+        <link rel="canonical" href="http://127.0.0.1:10001/lecture/05-Derivatives/052-PDE/">
       
       
+        <link rel="prev" href="../051-differentiation/">
+      
+      
+        <link rel="next" href="../053-gradient/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>041 differentiation - Scientific Programing - An Introduction</title>
+        <title>PDE - Scientific Programing - An Introduction</title>
       
     
     
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#partial-differential-equations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -103,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              041 differentiation
+              PDE
             
           </span>
         </div>
@@ -207,10 +216,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../00-Introduction/000-index/" class="md-tabs__link">
           
   
@@ -309,8 +320,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -324,20 +337,25 @@
       
         
       
-    
-    
-      
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -348,7 +366,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -809,6 +827,8 @@
       
         
       
+        
+      
     
     
       
@@ -851,7 +871,28 @@
         
   
   <span class="md-ellipsis">
-    Regression
+    Linear Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-ML-101/042-PCA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Principal Component Analysis
   </span>
   
 
@@ -873,6 +914,135 @@
   
   <span class="md-ellipsis">
     Clustering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Derivative
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Derivative
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../051-differentiation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Differentiation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    PDE
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../053-gradient/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gradient Descent
   </span>
   
 
@@ -1051,9 +1221,18 @@
                   
 
 
-  <h1>041 differentiation</h1>
-
-
+<h1 id="partial-differential-equations">Partial Differential Equations</h1>
+<p>Partial differential equations are an extension of ODE where the evolution depends not only on time but takes into account the environment values in a neighborhood.</p>
+<p>The most prominent example of which is the diffusion of temperature in space which in its simplest form (one dimensional) is given by</p>
+<div class="arithmatex">\[
+\partial_t u = \frac{1}{2}\partial_{xx} u
+\]</div>
+<p>This equation involves the second derivative for which we will consider the central difference:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  f^{\prime\prime}(x) \approx \frac{f(x+h) + f(x-h) - f(x)}{2 h^2}
+\end{equation*}
+\]</div>
 
 
 
