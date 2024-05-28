@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="http://127.0.0.1:10001/material/hw02/">
+        <link rel="canonical" href="http://127.0.0.1:10001/material/hw04/">
       
       
-        <link rel="prev" href="../hw01/">
+        <link rel="prev" href="../hw03/">
       
-      
-        <link rel="next" href="../hw03/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Homework 02 - Scientific Programing - An Introduction</title>
+        <title>Homework 04 - Scientific Programing - An Introduction</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#homework-02" class="md-skip">
+        <a href="#homework-04" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Homework 02
+              Homework 04
             
           </span>
         </div>
@@ -1151,30 +1149,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Homework 02
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../hw02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,35 +1161,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-monte-carlo-convergence" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Monte Carlo Convergence
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1242,10 +1191,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../hw04/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Homework 04
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1254,6 +1223,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ode-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ODE implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-forward-vs-backward-explicit-vs-implicit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Forward vs Backward (explicit vs implicit).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-gradient-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Gradient Descent
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1281,196 +1297,116 @@
                   
 
 
-<h1 id="homework-02">Homework 02</h1>
+<h1 id="homework-04">Homework 04</h1>
 <dl>
 <dt>Overall Info</dt>
-<dd>Due date: 2024-04-22</dd>
+<dd>Due date: 2024-06-26</dd>
 <dd>Returns in terms of a <code>*.py</code> file with comments for the code</dd>
 <dd>By group of 5-6 students</dd>
 </dl>
-<h2 id="1-monte-carlo-convergence">1. Monte Carlo Convergence</h2>
-<p>We compute the following expectation</p>
+<h2 id="1-ode-implementation">1. ODE implementation</h2>
+<p>Harmonic Oscillator:</p>
 <div class="arithmatex">\[
-\begin{equation}
-E[(X - K)^+] = \int_{-\infty}^{\infty}(x-K)^+ dF_X(x) = \int_{-\infty}^{\infty}(x-K)^+ f_X(x)dx
-\end{equation}
+\begin{equation*}
+  x^{\prime\prime} + \omega^2 x = 0
+\end{equation*}
 \]</div>
-<p>where <span class="arithmatex">\(K\)</span> is a constant, <span class="arithmatex">\(F_X\)</span> is the <code>cdf</code> of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(f_X=dF_X/dx\)</span> is the <code>pdf</code> of <span class="arithmatex">\(X\)</span>.</p>
-<p>We assume throughout that <span class="arithmatex">\(X\sim \mathcal{N}(\mu, \sigma^2)\)</span> is a guaussian distribution with mean <span class="arithmatex">\(\mu\)</span> and standard deviation <span class="arithmatex">\(\sigma\)</span>.
-Such a random variable is declared in <code>scipy</code> as follows</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+<ul>
+<li>setting <span class="arithmatex">\(v = x^\prime\)</span>, convert this second order ode into a two dimensional first order ODE <span class="arithmatex">\((x, v)\)</span>.</li>
+<li>Use Euler scheme to compute the solution with <span class="arithmatex">\(\omega=1\)</span> with <span class="arithmatex">\(x(0) = 1\)</span>, <span class="arithmatex">\(v(0) =1\)</span></li>
+<li>plot the curve <span class="arithmatex">\(t\mapsto (x(t), v(t))\)</span> for <span class="arithmatex">\(0\leq t \leq 10\)</span>.</li>
+</ul>
+<p>Consider the Damped harmonic oscillator:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  x^{\prime\prime} + 2\gamma x^\prime +  \omega^2 x = 0
+\end{equation*}
+\]</div>
+<ul>
+<li>same notation convert this equation into first order ode in two dimensions.</li>
+<li>Use RK 4th order to compute the solution <span class="arithmatex">\(\omega = 1\)</span> and <span class="arithmatex">\(\gamma = 0.1\)</span> and <span class="arithmatex">\(x(0) = v(0)=1\)</span>.</li>
+<li>plot the solution and compare with the previous solution</li>
+</ul>
+<h2 id="2-forward-vs-backward-explicit-vs-implicit">2. Forward vs Backward (explicit vs implicit).</h2>
+<p>Explicit Euler</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  y(t+h) = y(t) + h f(t, y(t))
+\end{equation*}
+\]</div>
+<p>Implicit Euler</p>
+<div class="arithmatex">\[
+y(t+h) = y(t) + h f(t+h, y(t+h))
+\]</div>
+<p>This second method involves solving a root problem to get <span class="arithmatex">\(y(t+h)\)</span>.</p>
+<ul>
+<li>Using <code>root</code> from <code>scipy.minimize</code> implement the implicit Euler</li>
+</ul>
+<p>Consider the ODE</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  y^\prime = -\lambda y, \quad y(0) = 1
+\end{equation*}
+\]</div>
+<p>with solution <span class="arithmatex">\(y(t) = e^{-\lambda t}\)</span></p>
+<ul>
+<li>use explicit Euler, RK 4th to compare with implicit Euler (precision and speed)</li>
+</ul>
+<h2 id="3-gradient-descent">3. Gradient Descent</h2>
+<p>We implement the gradient descent on the blurred <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span> images from <code>sklearn</code> package.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">mu</span> <span class="o">=</span> <span class="mf">0.5</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.2</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">RV</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="n">mu</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="n">sigma</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="kn">import</span> <span class="nn">sklearn.datasets</span> <span class="k">as</span> <span class="nn">dt</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># load the images and their feature (if it is 0 or 1)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">digits</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">load_digits</span><span class="p">(</span><span class="n">n_class</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># the shape of the dataset</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nb">print</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># We plot a short sample </span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">px</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">360</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">)[:</span><span class="mi">10</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:],</span> <span class="n">facet_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">binary_string</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </span></code></pre></div>
-<p>1.1 Define a function <code>expectation</code> that takes as input the random variable <code>RV</code>, the constant <code>K</code> and return the value of the integral using <code>quad</code>.</p>
-<p>1.2 Define a function <code>mc_expectation</code> that takes as input the random variable <code>RV</code>, the constant <code>K</code> and the natural number <code>N</code> (the number of samples) that retuns a <code>numpy</code> vector <code>[I_0, ..., I_{N-1}]</code> where</p>
+<p>The goal it to perform a simple linear regression but using gradient descent by minimizing among all <span class="arithmatex">\(\mathbf{w} = [w_0, \ldots, w_{64}]^\top\)</span> the objective function</p>
 <div class="arithmatex">\[
-\begin{equation}
-I_k = \frac{1}{k} \sum_{l=0}^{k-1} (x_k-K)^+
-\end{equation}
+\frac{1}{N}\sum (y_n - \mathbf{w}^\top \bar{\mathbf{x}}_n)^2
 \]</div>
-<p>where <code>x = [x_0, \ldots, x_{N-1}]</code> is a random sample from the distribution of <span class="arithmatex">\(X\)</span>.</p>
-<p>1.3 For <span class="arithmatex">\(N = 100000\)</span>, with a plotly graph, plot</p>
+<p>where <span class="arithmatex">\(y_n\)</span> is either <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span> for the label of the <span class="arithmatex">\(n\)</span>-th image and <span class="arithmatex">\(\bar{\mathbf{x}}_n = [1, \mathbf{x}_n]\)</span> is the array of the image augmented with a <span class="arithmatex">\(1\)</span>.</p>
 <ul>
-<li>The constant function <code>expectation(RV, K)</code> for <code>n=0, ..., N-1</code></li>
-<li>10 functions <code>mc_expectation(RV, K, N)</code> (they already return a vector <code>I = [I_0, ..., I_{N-1}]</code>)</li>
+<li>modify the objective function and gradient of which so that it takes as input <span class="arithmatex">\(\mathbf{w}\)</span> <span class="arithmatex">\(\mathbf{x}\)</span> and <span class="arithmatex">\(\mathbf{y}\)</span> and modify the gradient descent function.</li>
 </ul>
-<p>Comment on the speed of convergence of monte carlo method (you can vary <span class="arithmatex">\(N\)</span> as well as the number of monte carlo samples you compute).</p>
-<h1 id="2-quantile-exact-vs-mc-methods">2. Quantile: exact vs MC methods</h1>
-<p>From the lecture we know</p>
-<dl>
-<dt><strong>Value at Risk:</strong></dt>
-<dd>The value at risk is defined as <span class="arithmatex">\(V@R_{\alpha}(X) = q_X(1-\alpha) = F_X^{-1}(1-\alpha)\)</span> where <span class="arithmatex">\(q_X\)</span> is the quantile of <span class="arithmatex">\(X\)</span>.</dd>
-</dl>
-<p>Leads to three methods to compute it.</p>
+<p>Since our goal is to find a correct specification to further classify data, we calibrate the model on a training set and evaluate its accuracy on a testing set.
+To split the two set of data we use <code>sklearn</code></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="n">digits</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="n">target</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="n">random_state</span><span class="o">=</span><span class="mi">10</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">)</span>
+</span></code></pre></div>
 <ul>
-<li>You already have a <code>ppf</code> function at hand for the quantile</li>
-<li>You compute the inverse of the <code>cdf</code> using <code>root</code></li>
-<li>You have just random sample of the distribution and compute the empirical quantile.</li>
+<li>Using the gradient descent calibrate on the training set <code>x_train</code>, <code>y_train</code> the optimal value of <span class="arithmatex">\(\mathbf{w}\)</span>. Plot the value of <code>f_history</code> (choose a maximum number of iteration of 100 and 0.1 as threshold and tweak a little bit with momentum and learning rate until you reach a satisfactory convergence rate and error)</li>
 </ul>
-<p>2.1 Define a <code>quantile00</code> function that takes as input a known <code>RV</code> and a number <code>0&lt;u&lt;1</code> and return the quantile with a root finding method to invert the <code>cdf</code></p>
-<p>2.2 Compare the speed of computation for different <code>RV</code> (normal, student, normal inverse guaussian from the <code>scipy.stats</code> library) of this function with respect to the <code>ppf</code> function of those random variable.</p>
-<p>2.3 Sometimes, you do not have access to the <code>ppf</code> or <code>cdf</code> explicitely but just have <span class="arithmatex">\(N\)</span> random samples <span class="arithmatex">\(x^N = (x_0^N, ..., x^N_{N-1})\)</span> of this random variable.
-Numpy has a functionality to return the quantile of a random sample (there are many ways to interpolate it, see documnetation).
-Given a random sample (as a numpy array) <code>x=[x_0, ..., x_{N-1}]</code> the quantile is given by <code>np.quantile(x, u)</code>.
-This empirical quantile converges to the normal quantile.
-Experiment with different random samples from a normal random variable (<code>rvs</code>) and plot the convergence as a function of <span class="arithmatex">\(N\)</span> of the empirical quantile to the theoretical quantile.</p>
-<details class="note">
-<summary>Empirical Quantile</summary>
-<p>Note that the general definition of the (right) quantile is given by</p>
-<div class="arithmatex">\[
-\begin{equation}
-    q_X(u) := \inf \left\{ x \in \mathbb{R}\colon P[X\leq x] \geq u \right\} = \inf \left\{ x \in \mathbb{R}\colon F_X(x) \geq u \right\}
-\end{equation}
-\]</div>
-<p>If you have a a random sample <span class="arithmatex">\((x_0, \ldots, x_{N-1})\)</span> of <span class="arithmatex">\(X\)</span>, denote by </p>
-<div class="arithmatex">\[
-\begin{equation}
-    F^N(x) = \frac{\# \{k \colon x_k \leq x\}}{N}
-\end{equation}
-\]</div>
-<p>It holds that <span class="arithmatex">\(F^N \to F_X\)</span> if <span class="arithmatex">\(F_X\)</span> is continuous (is not easy to show, it holds in general gut in a distributional sense).</p>
-<p>Hence, the quantile <span class="arithmatex">\(q^N\)</span> of <span class="arithmatex">\(F^N\)</span> converges too to <span class="arithmatex">\(q_X\)</span> as <span class="arithmatex">\(N\)</span> is large.</p>
-<p>If you denote by <span class="arithmatex">\((y_0, \ldots, y_{N-1})\)</span> the reordering of <span class="arithmatex">\((x_0, \ldots, x_{N-1})\)</span> from the smallest to the largest value, then it holds</p>
-<div class="arithmatex">\[
-    q^N(u) = y_{k_u}
-\]</div>
-<p>where </p>
-<div class="arithmatex">\[
-    k_u = 
-    \begin{cases}
-        \inf\{k \colon k\geq Nu\} &amp; \text{if }Nu\leq N-1\\
-        N-1 &amp; \text{otherwize}
-    \end{cases}
-\]</div>
-</details>
-<h1 id="3-average-value-at-risk">3. Average Value at Risk</h1>
-<p>We discussed in the lecture that the value at risk (which is a quantile) is not appropriate to estimate the risk.
-It has been replaced by the average value at risk which has different representations</p>
-<div class="arithmatex">\[
-\begin{align}
-AV@R_{\alpha}(X) &amp; = \frac{1}{\alpha}\int_{1-\alpha}^1 q_X(u) du\\
-&amp; = \inf\left\{x + \frac{1}{\alpha}E\left[(X - x)^+\right]\colon x \in \mathbb{R}\right\}\\
-&amp; = q_X(1-\alpha) + \frac{1}{\alpha}E\left[ (X - q_X(1-\alpha))^+ \right]
-\end{align}
-\]</div>
-<p>3.1 Implement the <code>AVaR0</code>, <code>AVaR1</code> and <code>AV@R2</code> functions with input <code>RV</code> and <code>alpha</code> and return with <code>quad</code> the result for the first, second and third representation using <code>ppf</code> and/or <code>minimize</code> depending on the representation</p>
-<p>3.2 Implement the <code>mc_AVaR0</code>, <code>mc_AVaR1</code> and <code>mc_AVaR2</code> functions with input <code>x = [x_0, \ldots, x_{N-1}]</code> numpy random sample of <span class="arithmatex">\(X\)</span> and <code>alpha</code> using Monte carlo and empirical quantile for each representations</p>
-<p>3.3 Compare numerically the speed and accuracy of each method.</p>
-<h1 id="4-multidimensional">4. Multidimensional</h1>
-<p>Usually in risk managment, the random variable <span class="arithmatex">\(X\)</span> is a combination of many random variables</p>
-<div class="arithmatex">\[
-\begin{equation}
-X = \sum_{k=1}^d w^k X^k
-\end{equation}
-\]</div>
-<p>where the vector <span class="arithmatex">\((X^1, \ldots, X^d)\)</span> has a given <code>cdf</code> or random samples, and <span class="arithmatex">\(w^1, \ldots, w^d\)</span> are numbers representing the contribution of each factor <span class="arithmatex">\(X^k\)</span> to the total risk <span class="arithmatex">\(X\)</span>.</p>
-<p>Throughout, we will consider that <span class="arithmatex">\((X^1, \ldots, X^d)\)</span> is a <span class="arithmatex">\(d\)</span>-dimensional normal Gaussian random variable.</p>
-<details class="note">
-<summary>Multivariate Gaussian distribution</summary>
-<p>The multivariate Gaussian distribution is the multidimensional extension of a Gaussian distribution for a vector of random variables <span class="arithmatex">\(X=(X^1, \ldots, X^d)\)</span>.
-The parameters are the mean <span class="arithmatex">\(\mathbf{\mu} = (\mu^1, \ldots, \mu^d)\)</span> and the covariance matrix (positive semi definite matrix) <span class="arithmatex">\(\mathbf{\Sigma} \in \mathbb{R}^{d\times d}\)</span>.</p>
-<p>The <code>pdf</code> of this multidimensional random variable is given by</p>
-<div class="arithmatex">\[
-\begin{equation}
-f(\mathbf{x}) = \frac{1}{(2\pi)^{d/2} \sqrt{\det(\mathbf{\Sigma})}} \exp\left(-\frac{1}{2}\left(\mathbf{x} - \mathbf{\mu}\right)^\top \mathbf{\Sigma}\left(\mathbf{x} - \mathbf{\mu}\right)\right) 
-\end{equation}
-\]</div>
-<p>Denoting by <span class="arithmatex">\(\sigma^k = \sqrt{\mathbf{\Sigma}^{k,k}}\)</span> the square root of the diagonal of <span class="arithmatex">\(\mathbf{\Sigma}\)</span>, then each random variable <span class="arithmatex">\(X^k\)</span> is a normal distribution <span class="arithmatex">\(\mathcal{N}(\mu^k, (\sigma^k)^2)\)</span>.</p>
-<p>However, the different components of the random vector might be dependent as </p>
-<div class="arithmatex">\[
-\begin{equation}
-E[(X^k - \mu^k)(X^l - \mu^l)] = \mathbf{\Sigma}^{k,l}
-\end{equation}
-\]</div>
-</details>
-<p>4.1 Extend the functions <code>mc_AVaR0</code>, <code>mc_AVaR1</code> and <code>mc_AVaR2</code> to multidimensional samples. Use the following two case scenarios to compare accuracy and execution time by varying <span class="arithmatex">\(N\)</span> the number of samples </p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># case of 2 dimensions</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">multivariate_normal</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">Sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">[</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="p">[</span> <span class="mf">1.</span>        <span class="p">,</span> <span class="o">-</span><span class="mf">0.26315789</span><span class="p">],</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="p">[</span><span class="o">-</span><span class="mf">0.26315789</span><span class="p">,</span>  <span class="mf">1.</span>        <span class="p">]</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">]</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">)</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">RV_2dim</span> <span class="o">=</span> <span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span> <span class="o">=</span> <span class="n">mu</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">Sigma</span><span class="p">)</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1"># generate N random samples (you get a numpy array Nx2)</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">samples</span> <span class="o">=</span> <span class="n">RV_2dim</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># case of 5 dimensions</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">])</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="n">Sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    <span class="p">[</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>        <span class="p">[</span><span class="mf">1.</span>        <span class="p">,</span> <span class="mf">0.2688825</span> <span class="p">,</span> <span class="mf">0.401427</span>  <span class="p">,</span> <span class="mf">0.19473116</span><span class="p">,</span> <span class="mf">0.66256879</span><span class="p">],</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>        <span class="p">[</span><span class="mf">0.2688825</span> <span class="p">,</span> <span class="mf">1.</span>        <span class="p">,</span> <span class="mf">0.3907619</span> <span class="p">,</span> <span class="mf">0.43373298</span><span class="p">,</span> <span class="mf">0.43199657</span><span class="p">],</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>        <span class="p">[</span><span class="mf">0.401427</span>  <span class="p">,</span> <span class="mf">0.3907619</span> <span class="p">,</span> <span class="mf">1.</span>        <span class="p">,</span> <span class="mf">0.27893741</span><span class="p">,</span> <span class="mf">0.61330745</span><span class="p">],</span>
-</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>        <span class="p">[</span><span class="mf">0.19473116</span><span class="p">,</span> <span class="mf">0.43373298</span><span class="p">,</span> <span class="mf">0.27893741</span><span class="p">,</span> <span class="mf">1.</span>        <span class="p">,</span> <span class="mf">0.46849892</span><span class="p">],</span>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>        <span class="p">[</span><span class="mf">0.66256879</span><span class="p">,</span> <span class="mf">0.43199657</span><span class="p">,</span> <span class="mf">0.61330745</span><span class="p">,</span> <span class="mf">0.46849892</span><span class="p">,</span> <span class="mf">1.</span>        <span class="p">]</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    <span class="p">]</span>
-</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="p">)</span>
-</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
-</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>
-</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="n">RV_5dim</span> <span class="o">=</span> <span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span> <span class="o">=</span> <span class="n">mu</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">Sigma</span><span class="p">)</span>
-</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
-</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="c1"># generate N random samples (you get a numpy array Nx5)</span>
-</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="n">samples</span> <span class="o">=</span> <span class="n">RV_5dim</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</span></code></pre></div>
-<p><em>Hint:</em> Do not forget that numpy gives you access to the <code>dot</code> product to compute <span class="arithmatex">\(\sum w^k X^k\)</span>.</p>
-<p>4.2 Optional: you can try for the two dimensional case to implement with <code>dblquad</code> the direct computation of the <code>AVaR1</code> to compare speed and accuracy.</p>
-<details class="note">
-<summary>Any dimensional multidimensional Gaussian distributions</summary>
-<p>To create a multidimensional guassian vector, you need to provide the mean vector <span class="arithmatex">\(\mathbf{\mu} = (\mu^1, \ldots, \mu^d)\)</span> as well as the covariance matrix <span class="arithmatex">\(\mathbf{\Sigma}\)</span> which is usually calibrated to data.
-In our case we can generate some of these distribution using <code>numpy</code> and <code>scipy</code></p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># we import the multivariate normal as well as a function to generate Sigma</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">multivariate_normal</span><span class="p">,</span> <span class="n">random_correlation</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># create a random vector of positive eigenvalues and then random covariance</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">d</span><span class="o">=</span><span class="mi">4</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">eigenvalues</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">Sigma</span> <span class="o">=</span> <span class="n">random_correlation</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span> <span class="c1"># covariance matrix</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">mu</span> <span class="o">=</span> <span class="n">no</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>                      <span class="c1"># vector of mean</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">RV</span> <span class="o">=</span> <span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span> <span class="o">=</span> <span class="n">mu</span><span class="p">,</span> <span class="n">cov</span> <span class="o">=</span> <span class="n">Sigma</span><span class="p">)</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># generate random samples (N random vectors or dimension d each so Nxd numpy array)</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">samples</span> <span class="o">=</span> <span class="n">RV</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
-</span></code></pre></div>
-</details>
+<p>Now we want to be able to classify the data.
+We proceed as follows</p>
+<p>If <span class="arithmatex">\(\mathbf{w}^\top \bar{\mathbf{x}} \geq 0.5\)</span> it is classified as <span class="arithmatex">\(1\)</span> otherwise it is classified as <span class="arithmatex">\(0\)</span>.</p>
+<ul>
+<li>
+<p>Given <span class="arithmatex">\(\mathbf{w}\)</span>, <span class="arithmatex">\(N\)</span> samples <span class="arithmatex">\((\mathbf{x}_1, y_1), \ldots,(\mathbf{x}_N, y_N)\)</span>, design a function <code>accuracy(w, x, y)</code> that returns the percentage of correctly classified values.</p>
+</li>
+<li>
+<p>Using this function, provide the accuracy of your solutions on the testing set <code>(x_train, y_train)</code> and on the test set <code>(x_test, y_test)</code>.</p>
+</li>
+<li>
+<p><strong>Optional Question:</strong> compare the gradient descent method with the traditional OLS linear regression method.</p>
+</li>
+</ul>
 
 
 
