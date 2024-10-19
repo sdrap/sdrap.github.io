@@ -1,5 +1,35 @@
+- occasion: "Bachelier Seminar"
+  place: Paris, France"
+  title: "On/Off Shore Currency Rate Discrepancy"
+  date: Oct 2024
+  score: 6
+
+- occasion: "Finance Seminar LSPM"
+  place: Paris, France"
+  title: "Robust Uncertainty Analysis"
+  date: Oct 2024
+  score: 6
+
+- occasion: "QRT Seminar"
+  place: Singapore"
+  title: "On Detecting Spoofing Strategies in High Frequency Trading"
+  date: Aug 2024
+  score: 6
+
+- occasion: "Quantitative Finance Conference"
+  place: NUS, Singapore"
+  title: "On/Off Shore Currency Rate Discrepancy"
+  date: Aug 2024
+  score: 6
+
+- occasion: "International Workshop on Probability Theory and Stochastic Analysis"
+  place: Weihai, China"
+  title: "On/Off Shore Currency Rate Discrepancy"
+  date: Jul 2024
+  score: 6
+
 - occasion: "ICIAM"
-  place: "Tokyo, China"
+  place: "Tokyo, Japan"
   title: "On/Off Shore Currency Rate Discrepancy"
   date: Aug 2023
   score: 6
