@@ -1,0 +1,1104 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/lecture/01-One-Period/012-arbitrage-pricing/">
+      
+      
+        <link rel="prev" href="../011-mathematical-model/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Arbitrage and Pricing - Financial Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arbitrage-and-pricing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Financial Mathematics" class="md-header__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Financial Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arbitrage and Pricing
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Financial Mathematics" class="md-nav__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Financial Mathematics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/001-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            One Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../011-mathematical-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematical Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Arbitrage and Pricing
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Arbitrage and Pricing
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arbitrage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arbitrage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pricing Measure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-theorem-of-asset-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental Theorem of Asset Pricing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="arbitrage-and-pricing">Arbitrage and Pricing</h1>
+<p>A fundamental concept in financial market is the notion of <strong>Arbitrage</strong>.
+Consider the following example</p>
+<div class="admonition example">
+<p class="admonition-title">Arbitrage in a coint toss model</p>
+<p>Consider the example of a simple coin toss model. Formally:</p>
+<ul>
+<li><span class="arithmatex">\(\Omega = \{-1, 1\}\)</span></li>
+<li><span class="arithmatex">\(\mathcal{F} = \{\emptyset, \{1\}, \{-1\}, \{-1, 1\}\}\)</span></li>
+<li>
+<p>Given <span class="arithmatex">\(0&lt;p&lt;1\)</span></p>
+<div class="arithmatex">\[
+P[\{\omega\}] =
+\begin{cases}
+    p &amp; \text{if } \omega = 1, \\
+    1-p &amp; \text{if } \omega = -1
+\end{cases}
+\]</div>
+</li>
+</ul>
+<p>We define for our bank account <span class="arithmatex">\(B_0 = 1\)</span> and <span class="arithmatex">\(B_1 = 1 + r\)</span> where <span class="arithmatex">\(r &gt; -1\)</span>.
+We also consider a single stock with:</p>
+<div class="arithmatex">\[
+S_0 &gt; 0, \quad S_1(\omega) = S_0(1 + R(\omega))
+\]</div>
+<p>where the return <span class="arithmatex">\(R\)</span> is given by:</p>
+<div class="arithmatex">\[
+R(\omega) =
+\begin{cases}
+    u &amp; \text{if } \omega = 1, \\
+    d &amp; \text{if } \omega = -1
+\end{cases}
+\]</div>
+<p>with <span class="arithmatex">\(d &lt; u\)</span>. We assume that <span class="arithmatex">\(S_1\)</span> is strictly positive, so <span class="arithmatex">\(d &gt; -1\)</span>.</p>
+<p>Suppose I enter the market with no money and observe that <span class="arithmatex">\(r \leq d\)</span>. I borrow <span class="arithmatex">\(\eta S_0\)</span> from the bank to buy <span class="arithmatex">\(\eta&gt;0\)</span> shares of the stock.
+At time <span class="arithmatex">\(1\)</span>, the value of my portfolio is:</p>
+<div class="arithmatex">\[
+    \bar{V}_1(\omega) = -\eta S_0(1 + r) + \eta S_1(\omega) =
+    \begin{cases}
+        \eta S_0(u - r) &amp; \text{if } \omega = 1, \\
+        \eta S_0(d - r) &amp; \text{if } \omega = -1
+    \end{cases}
+\]</div>
+<p>Since <span class="arithmatex">\(r \leq d &lt; u\)</span>, my strategy does not lose money in any cases and I always make a strictly positive gain with probability <span class="arithmatex">\(p&gt;0\)</span>.
+By scaling this strategy, I could generate unlimited wealth without risk.
+A similar scenario arises if <span class="arithmatex">\(d &lt; u \leq r\)</span>, where I could short-sell the stock infinitely.</p>
+</div>
+<p>As this example shows, such a market would be dysfunctional.
+Economically, arbitrageurs would exploit this situation, driving the stock price back within boundaries to eliminate these opportunities. Hence, we require the concept of an <strong>arbitrage-free market</strong>.</p>
+<h2 id="arbitrage">Arbitrage</h2>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Definition</strong> Arbitrage and Arbitrage Free Market</p>
+<p>A portfolio <span class="arithmatex">\(\bar{V}\)</span> with initial value <span class="arithmatex">\(\bar{V}_0 \in \mathbb{R}\)</span> and strategy <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span> is called an <strong>arbitrage</strong> if</p>
+<div class="arithmatex">\[
+\begin{equation*}
+        \underbrace{P\left[\bar{V}_1(\omega) \geq \bar{V}_0(1 + r)\right] = 1}_{\text{No downside risk}}\quad \text{and}\quad \underbrace{P\left[\bar{V}_1(\omega) &gt; \bar{V}_0(1 + r)\right] &gt;0}_{\text{Strict positive gains with strict positive probability}}
+\end{equation*}
+\]</div>
+<p>A financial market is call <strong>arbitrage free</strong>, if there exists no arbitrage.</p>
+</div>
+<p>In other words, a self-financing strategy is an arbitrage if it guarantees a net gain at time <span class="arithmatex">\(1\)</span> in every possible state and a strictly positive gain with nonzero probability.</p>
+<p>There exists several equivalent way to express arbitrage as the following proposition states</p>
+<div class="admonition danger">
+<p class="admonition-title"><strong>Proposition</strong> Arbitrage Equivalence</p>
+<p>The following statements are equivalent:</p>
+<ol>
+<li>The financial market admits an arbitrage portfolio.</li>
+<li>
+<p>There exists a discounted portfolio <span class="arithmatex">\(V\)</span> such that:</p>
+<div class="arithmatex">\[
+P\left[V_1 \geq V_0\right] = 1
+\quad \text{and} \quad
+P\left[V_1 &gt; V_0\right] &gt; 0
+\]</div>
+</li>
+<li>
+<p>There exists a strategy <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span> such that:</p>
+<div class="arithmatex">\[
+P\left[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \geq 0\right] = 1
+\quad \text{and} \quad
+P\left[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 &gt; 0\right] &gt; 0
+\]</div>
+</li>
+</ol>
+</div>
+<details class="quote">
+<summary>Proof</summary>
+<ol>
+<li>
+<p><strong>Equivalence of (i) and (ii):</strong>
+    For a portfolio <span class="arithmatex">\(\bar{V}\)</span>, <span class="arithmatex">\(\bar{V}_1 \geq (1 + r)\bar{V}_0\)</span> is equivalent to <span class="arithmatex">\(V_1 \geq V_0\)</span> by dividing the inequality by <span class="arithmatex">\(1 + r &gt; 0\)</span>. The same holds for the strict inequality.</p>
+</li>
+<li>
+<p><strong>Equivalence of (ii) and (iii):</strong>
+    For a discounted portfolio <span class="arithmatex">\(V\)</span>, <span class="arithmatex">\(V_1 = V_0 + \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \geq V_0\)</span> is equivalent to <span class="arithmatex">\(\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \geq 0\)</span> by subtracting <span class="arithmatex">\(V_0\)</span>.</p>
+</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercise</summary>
+<p>Recall that the returns vector <span class="arithmatex">\(\boldsymbol{R}_1\)</span> are defined as</p>
+<div class="arithmatex">\[
+    R^k_1 = \frac{S_1^k - S_0^k}{S_0^k}\quad \text{for }k=1, \ldots, d
+\]</div>
+<p>Show that the following assertions are equivalent:</p>
+<ol>
+<li>
+<p><strong>The financial market admits and arbitrage.</strong></p>
+</li>
+<li>
+<p><strong>There exists <span class="arithmatex">\(\boldsymbol{h} \in \mathbb{R}^d\)</span> such that:</strong></p>
+<div class="arithmatex">\[
+    P\left[ \boldsymbol{h} \cdot \left(\boldsymbol{R}_1 - r\right) \geq 0 \right] = 1 
+    \quad \text{and} \quad 
+    P\left[ \boldsymbol{h} \cdot \left(\boldsymbol{R}_1 - r\right) &gt; 0 \right] = 1 
+\]</div>
+</li>
+</ol>
+</details>
+<h2 id="pricing-measure">Pricing Measure</h2>
+<p>As we will consequently see in the Fundamental Theorem of Asset Pricing, another central concept in financial market are <strong>pricing measures</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Pricing Measure</p>
+<p class="annotate">A probability measure <span class="arithmatex">\(P^\ast\)</span> is called a <strong>pricing measure</strong>(1) if:</p>
+<ol>
+<li><img alt="🙋‍♂️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> Also known as a <em>pricing kernel</em> in financial engineering or <em>martingale measure</em> in mathematics.</li>
+</ol>
+<div class="arithmatex">\[
+    E^{P^\ast}\left[\frac{S_1^k}{1 + r}\right] = S_0^k, \quad \text{for } k = 1, \ldots, d
+\]</div>
+</div>
+<p>In other words, under a pricing measure the discounted expected value of each asset equals its present price.</p>
+<div class="admonition note">
+<p class="admonition-title">Vector notation and equivalent formulations</p>
+<p>For a vector of random variables <span class="arithmatex">\(\boldsymbol{Z} = (Z^1, \ldots, Z^d)\)</span> and a probability measure <span class="arithmatex">\(Q\)</span>, we denote:</p>
+<div class="arithmatex">\[
+E^Q[\boldsymbol{Z}] := \left(E^Q[Z^1], \ldots, E^Q[Z^d]\right)
+\]</div>
+<p>In particular, <span class="arithmatex">\(P^\ast\)</span> is a pricing measure if:</p>
+<div class="arithmatex">\[
+E^{P^\ast}\left[\frac{\boldsymbol{S}_1}{1 + r}\right] = \boldsymbol{S}_0,
+\quad \text{or equivalently}\quad
+E^{P^\ast}[\Delta \boldsymbol{X}_1] = 0
+\]</div>
+<p>This implies that under a pricing measure, the average return of each financial asset equals the bank's interest rate:</p>
+<div class="arithmatex">\[
+E^{P^\ast}[R_1^k] = r, \quad \text{for every } k = 1, \ldots, d
+\]</div>
+</div>
+<div class="admonition danger">
+<p class="admonition-title"><strong>Lemma</strong></p>
+<p>Suppose that the financial market admits a pricing measure <span class="arithmatex">\(P^\ast\)</span>.
+Then</p>
+<ol>
+<li>
+<p>for every portfolio <span class="arithmatex">\(\bar{V}\)</span>, it holds</p>
+<div class="arithmatex">\[
+    \bar{V}_0 = E^{P^\ast}\left[ \frac{\bar{V}_1}{1+r} \right]
+\]</div>
+</li>
+<li>
+<p>for every (discounted) portfolio <span class="arithmatex">\(V\)</span>, it holds</p>
+<div class="arithmatex">\[
+    V_0 = E^{P^\ast}\left[ V_1 \right]
+\]</div>
+</li>
+<li>
+<p>for every strategy <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span>, it holds</p>
+<div class="arithmatex">\[
+    E^{P^\ast}\left[ \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1 \right] = 0
+\]</div>
+</li>
+</ol>
+</div>
+<details class="quote">
+<summary>Proof</summary>
+<p>We just show the last assertion, the other two follows directly.
+Let <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span> and <span class="arithmatex">\(P^\ast\)</span> be a pricing measure.
+By definition of <span class="arithmatex">\(P^\ast\)</span> and the properties of the expectation, it follows that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E^{P^\ast}\left[ \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1 \right]  = E^{P^\ast}\left[ \sum \eta^k \Delta X_1^k \right]= \sum \eta^k E^{P^\ast}\left[ \Delta X_1^k  \right] = \boldsymbol{\eta}\cdot E^{P^\ast}\left[ \Delta \boldsymbol{X}_1 \right] = 0
+\end{equation*}
+\]</div>
+</details>
+<p class="annotate">In the following, we will consider those pricing measures <span class="arithmatex">\(P^\ast\)</span> that are equivalent to <span class="arithmatex">\(P\)</span>.(1)
+By the very definition, it follows in particular that if <span class="arithmatex">\(P^\ast\sim P\)</span> and <span class="arithmatex">\(\boldsymbol{\eta}\)</span> is an arbitrage strategy, then </p>
+<ol>
+<li>
+<p>See appendix on probability theory for details and consequence in terms of Radon-Nykodym derivative.</p>
+<p>Just recalling the definition, a probability measure <span class="arithmatex">\(Q\)</span> is equivalent to <span class="arithmatex">\(P\)</span> and denoted by <span class="arithmatex">\(Q\sim P\)</span> if</p>
+<div class="arithmatex">\[P[A] = 0 \quad \text{if and only if} \quad Q[A]=0\]</div>
+<p>In other terms the two measures agrees on negligible events.</p>
+<p>This is however equivalent to</p>
+<div class="arithmatex">\[P[A] = 1 \quad \text{if and only if} \quad Q[A]=1\]</div>
+<p>or</p>
+<div class="arithmatex">\[P[A] &gt; 0 \quad \text{if and only if} \quad Q[A]&gt;0\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{cases}
+  P\left[ \boldsymbol{\eta}\cdot \Delta\boldsymbol{X}_1  \geq 0\right] &amp;= 1\\
+  P\left[ \boldsymbol{\eta}\cdot \Delta\boldsymbol{X}_1  &gt; 0\right] &amp;&gt;0
+\end{cases}
+\quad \text{is equivalent to } \quad
+\begin{cases}
+  P^\ast\left[ \boldsymbol{\eta}\cdot \Delta\boldsymbol{X}_1  \geq 0\right] &amp;= 1\\
+  P^\ast\left[ \boldsymbol{\eta}\cdot \Delta\boldsymbol{X}_1  &gt; 0\right] &amp;&gt;0
+\end{cases}
+\end{equation*}
+\]</div>
+<h2 id="fundamental-theorem-of-asset-pricing">Fundamental Theorem of Asset Pricing</h2>
+<div class="admonition danger">
+<p class="admonition-title">Fundamental Theorem of Asset Pricing (FTAP)</p>
+<p>In a financial market, the following conditions are equivalent:</p>
+<ol>
+<li><a id="cond:FTAP1">The market is arbitrage-free.</a></li>
+<li><a id="cond:FTAP2">There exists at least one pricing measure <span class="arithmatex">\(P^\ast \sim P\)</span> with bounded density <span class="arithmatex">\(dP^\ast/dP\)</span>.</a></li>
+</ol>
+</div>
+<details class="quote">
+<summary>Proof sketch</summary>
+<ol>
+<li>
+<p><strong>Step 1 (easy direction):</strong> condition <a href="#cond:FTAP2">2.</a> implies <a href="#cond:FTAP1">1.</a>.<br />
+    By contradiction, assume that there exists a pricing measure <span class="arithmatex">\(P^\ast \sim P\)</span> and an arbitrage strategy <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span>. We show that this is not possible.</p>
+<p>On one hand, having a pricing measure <span class="arithmatex">\(P^\ast\)</span> implies that <span class="arithmatex">\(E^{P^\ast}[\Delta \boldsymbol{X}_1] = 0\)</span>. It follows that for the arbitrage strategy <span class="arithmatex">\(\boldsymbol{\eta}\)</span>, we have:</p>
+<div class="arithmatex">\[
+  E^{P^\ast}\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \right] = E^{P^\ast}\left[ \sum \eta^k \Delta X_1^k \right] = 0
+\]</div>
+<p>On the other hand, since <span class="arithmatex">\(\boldsymbol{\eta}\)</span> is an arbitrage strategy, it holds that:</p>
+<div class="arithmatex">\[
+\begin{cases}
+  P\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \geq 0 \right] = 1, \\
+  P\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 &gt; 0 \right] &gt; 0
+\end{cases}
+\]</div>
+<p>Since <span class="arithmatex">\(P^\ast \sim P\)</span>, this is equivalent to:</p>
+<div class="arithmatex">\[
+\begin{cases}
+  P^\ast\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \geq 0 \right] = 1, \\
+  P^\ast\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 &gt; 0 \right] &gt; 0
+\end{cases}
+\]</div>
+<p>The first line implies that the random variable <span class="arithmatex">\(\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1\)</span> is positive <span class="arithmatex">\(P^\ast\)</span>-almost surely. The second line indicates that this variable is strictly positive somewhere. Taking the expectation of this strictly positive random variable results in a strictly positive expectation:</p>
+<div class="arithmatex">\[
+  E^{P^\ast}\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \right] &gt; 0
+\]</div>
+<p>However, this contradicts the earlier result that <span class="arithmatex">\(E^{P^\ast}\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \right] = 0\)</span>. This shows that <a href="#cond:FTAP2">2.</a> implies <a href="#cond:FTAP1">1.</a>.</p>
+</li>
+<li>
+<p><strong>Step 2 (difficult direction):</strong> condition <a href="#cond:FTAP1">1.</a> implies <a href="#cond:FTAP2">2.</a>. </p>
+<p>Here, we show that if <a href="#cond:FTAP1">1.</a>$ does not hold (i.e., there exists no pricing measure <span class="arithmatex">\(P^\ast\)</span> with bounded density), then there exists an arbitrage.<br />
+To state that there exists no pricing measure <span class="arithmatex">\(P^\ast\)</span> with bounded density, consider the set:</p>
+<div class="arithmatex">\[
+  \mathcal{C} = \left\{ E^Q[\Delta \boldsymbol{X}_1] : Q \sim P \text{ and } \frac{dQ}{dP} \text{ is bounded} \right\}
+\]</div>
+<p>This set includes all vectors of expectations of discounted gains under pricing measures with bounded density <span class="arithmatex">\(Q\)</span>. There exists a pricing measure <span class="arithmatex">\(P^\ast \sim P\)</span> with bounded density if and only if the vector <span class="arithmatex">\(0\)</span> is in <span class="arithmatex">\(\mathcal{C}\)</span>.<br />
+Hence, the condition that <a href="#cond:FTAP2">2.</a> does not hold is equivalent to <span class="arithmatex">\(0 \notin \mathcal{C}\)</span>.</p>
+<p>We show that the set <span class="arithmatex">\(\mathcal{C} \subseteq \mathbb{R}^d\)</span> has the following properties:</p>
+<ul>
+<li>
+<p class="annotate"><strong>Non-emptiness:</strong> <span class="arithmatex">\(\mathcal{C} \neq \emptyset\)</span>. Since <span class="arithmatex">\(P \sim P\)</span> and <span class="arithmatex">\(\frac{dP}{dP} = 1\)</span>, it follows that <span class="arithmatex">\(E^P[\Delta \boldsymbol{X}_1] \in \mathcal{C}\)</span>(1).</p>
+</li>
+<li>
+<p>Note: We never assumed <span class="arithmatex">\(\boldsymbol{X}_1\)</span> is integrable under <span class="arithmatex">\(P\)</span>. This can be addressed in the appendix.</p>
+</li>
+<li>
+<p class="annotate"><strong>Convexity:</strong> 
+    <span class="arithmatex">\(\mathcal{C}\)</span> is convex(1).</p>
+<ol>
+<li>That is, for any two points <span class="arithmatex">\(\boldsymbol{x}, \boldsymbol{y} \in \mathcal{C}\)</span> and any <span class="arithmatex">\(\lambda \in [0, 1]\)</span>, the interval <span class="arithmatex">\(\lambda \boldsymbol{x} + (1 - \lambda) \boldsymbol{y}\)</span> is also in <span class="arithmatex">\(\mathcal{C}\)</span>.  </li>
+</ol>
+<p>By definition, there exist <span class="arithmatex">\(Q^{\boldsymbol{x}}\)</span> and <span class="arithmatex">\(Q^{\boldsymbol{y}}\)</span> equivalent to <span class="arithmatex">\(P\)</span> with bounded density such that <span class="arithmatex">\(E^{Q^{\boldsymbol{x}}}[\Delta \boldsymbol{X}_1] = \boldsymbol{x}\)</span> and <span class="arithmatex">\(E^{Q^{\boldsymbol{y}}}[\Delta \boldsymbol{X}_1] = \boldsymbol{y}\)</span>.<br />
+By the Radon-Nikodym theorem, define:</p>
+<div class="arithmatex">\[
+  \frac{dQ}{dP} = \lambda \frac{dQ^{\boldsymbol{x}}}{dP} + (1 - \lambda) \frac{dQ^{\boldsymbol{y}}}{dP}
+\]</div>
+<p>This <span class="arithmatex">\(dQ/dP\)</span> is a strictly positive bounded random variable (since <span class="arithmatex">\(dQ^{\boldsymbol{x}}/dP\)</span> and <span class="arithmatex">\(dQ^{\boldsymbol{y}}/dP\)</span> are) with expectation equal to <span class="arithmatex">\(1\)</span>:</p>
+<div class="arithmatex">\[
+  E^P\left[ \frac{dQ}{dP} \right] = \lambda E^P\left[ \frac{dQ^{\boldsymbol{x}}}{dP} \right] + (1 - \lambda) E^P\left[ \frac{dQ^{\boldsymbol{y}}}{dP} \right] = \lambda + (1 - \lambda) = 1
+\]</div>
+<p>Hence, <span class="arithmatex">\(dQ/dP\)</span> defines a probability measure <span class="arithmatex">\(Q \sim P\)</span> with bounded density, and:</p>
+<div class="arithmatex">\[
+  \boldsymbol{z} = E^Q[\Delta \boldsymbol{X}_1] \in \mathcal{C}
+\]</div>
+<p>Moreover:</p>
+<div class="arithmatex">\[
+  \boldsymbol{z} = \lambda \boldsymbol{x} + (1 - \lambda) \boldsymbol{y}
+\]</div>
+<p>showing that <span class="arithmatex">\(\lambda \boldsymbol{x} + (1 - \lambda) \boldsymbol{y} \in \mathcal{C}\)</span>.</p>
+</li>
+</ul>
+<p>If <span class="arithmatex">\(0 \notin \mathcal{C}\)</span>, the Hahn-Banach separation theorem implies that there exists a vector <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span> such that:</p>
+<div class="arithmatex">\[
+\begin{cases}
+   \boldsymbol{\eta} \cdot \boldsymbol{x} \geq 0 &amp; \text{for all } \boldsymbol{x} \in \mathcal{C}, \\
+   \boldsymbol{\eta} \cdot \boldsymbol{x}_0 &gt; 0 &amp; \text{for some } \boldsymbol{x}_0 \in \mathcal{C}.
+\end{cases}
+\]</div>
+<p>By definition of <span class="arithmatex">\(\mathcal{C}\)</span>, this translates to:</p>
+<div class="arithmatex">\[
+\begin{cases}
+   E^Q\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \right] \geq 0 &amp; \text{for all } Q \sim P \text{ with bounded } \frac{dQ}{dP}, \\
+   E^{Q_0}\left[ \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \right] &gt; 0 &amp; \text{for some } Q_0 \sim P \text{ with bounded } \frac{dQ_0}{dP}.
+\end{cases}
+\]</div>
+<p>The last condition implies that <span class="arithmatex">\(Q_0[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 &gt; 0] &gt; 0\)</span>, and since <span class="arithmatex">\(Q_0\)</span> is equivalent to <span class="arithmatex">\(P\)</span>, it also implies that </p>
+<div class="arithmatex">\[P[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 &gt; 0] &gt; 0\]</div>
+<p>As for the first condition, we claim that it implies </p>
+<div class="arithmatex">\[P[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \geq 0] = 1\]</div>
+<p>showing then that <span class="arithmatex">\(\boldsymbol{\eta}\)</span> is an arbitrage.</p>
+<p>To this end, define <span class="arithmatex">\(A = \{\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 &lt; 0\}\)</span> and consider the sequence of strict positive random variables:</p>
+<div class="arithmatex">\[
+  Y_n := \left( 1 - \frac{1}{n} \right)1_A + \frac{1}{n}1_{A^c}
+\]</div>
+<p>which is bounded by <span class="arithmatex">\(1\)</span> and satisfies <span class="arithmatex">\(Y_n \to 1_A\)</span> <span class="arithmatex">\(P\)</span>-almost surely.<br />
+Since <span class="arithmatex">\(Y_n &gt; 0\)</span>, it generates a sequence of probability measures <span class="arithmatex">\(Q_n\)</span> equivalent to <span class="arithmatex">\(P\)</span> with bounded densities:</p>
+<div class="arithmatex">\[
+  \frac{dQ_n}{dP} = \frac{Y_n}{E[Y_n]}
+\]</div>
+<p>Hence</p>
+<div class="arithmatex">\[
+  0 \leq E^{Q_n}\left[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1\right] = \frac{1}{E[Y_n]} E\left[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 Y_n\right].
+\]</div>
+<p class="annotate">Taking the limit (1), it follows that:</p>
+<ol>
+<li>To be rigorous you invoke the dominated convergence theorem applied to <span class="arithmatex">\(Y_n\)</span>.</li>
+</ol>
+<div class="arithmatex">\[
+  0 \leq E\left[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 Y_n\right] \to E\left[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 1_A\right]
+\]</div>
+<p>which, by the definition of <span class="arithmatex">\(A\)</span>, shows that <span class="arithmatex">\(P[A] = 0\)</span>.
+In other words, <span class="arithmatex">\(P[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \geq 0] = 1\)</span>.<br />
+Hence, <span class="arithmatex">\(\boldsymbol{\eta}\)</span> is an arbitrage strategy, contradicting the assumption of an arbitrage-free market.  </p>
+<p>Thus, there exists a pricing measure equivalent to <span class="arithmatex">\(P\)</span> with bounded density, which concludes the proof.</p>
+</li>
+</ol>
+</details>
+<p>This Theorem is called a theorem and fundamental because it states an <strong>if and only if</strong> assertion between a somehow economical concept (no arbitrage) and a mathematical concept (the existence of a pricing measure).
+This statement will have many consequences that will unfold while studying derivative pricing.</p>
+<p>However an immediate consequence of which is the so called <strong>Law of One Price</strong> which is often stated as given in finance, which however is a consequence of the FTAP.</p>
+<div class="admonition danger">
+<p class="admonition-title">Law of One Price</p>
+<p>If the market is arbitrage free, then for any two portfolios <span class="arithmatex">\(\bar{V}\)</span> and <span class="arithmatex">\(\tilde{V}\)</span> with exact same outcome tomorrow, that is</p>
+<div class="language-text highlight"><pre><span></span><code>$$
+  P\left[ \bar{V}_1 = \tilde{V}_1\right] = 1
+$$
+</code></pre></div>
+<p>the value of each portfolio at time <span class="arithmatex">\(0\)</span> is the same, that is <span class="arithmatex">\(\bar{V}_0 = \tilde{V}_0\)</span></p>
+</div>
+<details class="quote">
+<summary>Proof</summary>
+<p>By the fundamental theorem of asset pricing, no arbitrage is equivalent to the existence of a pricing measure <span class="arithmatex">\(P^\ast\)</span> equivalent to <span class="arithmatex">\(P\)</span>. Let further <span class="arithmatex">\(\bar{V}\)</span> and <span class="arithmatex">\(\tilde{V}\)</span> be two portfolio such that</p>
+<div class="arithmatex">\[
+  P\left[ \bar{V}_1 =\tilde{V}_1\right]=1
+\]</div>
+<p>Since <span class="arithmatex">\(P^\ast \sim P\)</span>, it follows that</p>
+<div class="arithmatex">\[
+  P^\ast\left[ \bar{V}_1 =\tilde{V}_1\right]=1
+\]</div>
+<p>showing that <span class="arithmatex">\(E^{P^\ast}\left[ \bar{V}_1 \right] = E^{P^\ast}\left[ \tilde{V}_1 \right]\)</span>.</p>
+<p>Furthermore, it holds that</p>
+<div class="arithmatex">\[
+  \frac{\bar{V}_1}{1+r} = \bar{V}_0 + \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1 \quad \text{and}\quad \frac{\tilde{V}_1}{1+r} = \tilde{V}_0 + \tilde{\boldsymbol{\eta}}\cdot \Delta \boldsymbol{X}_1
+\]</div>
+<p>for some <span class="arithmatex">\(\boldsymbol{\eta}\)</span> and <span class="arithmatex">\(\tilde{\boldsymbol{\eta}}\)</span> in <span class="arithmatex">\(\mathbb{R}^d\)</span>.</p>
+<p>Taking expectation under the pricing measure, it follows that</p>
+<div class="arithmatex">\[
+\begin{align*}
+  \bar{V}_0 &amp; = \bar{V}_0 + \underbrace{\boldsymbol{\eta}\cdot E^{P^\ast}\left[ \Delta \boldsymbol{X}_1 \right]}_{=0\text{ since }P^\ast \text{ is a pricing measure}}\\
+  &amp; = E^{P^\ast}\left[  \bar{V}_0 + \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1\right]\\
+  &amp; = E^{P^\ast}\left[ \frac{\bar{V}_1}{1+r} \right]\\
+  &amp; = E^{P^\ast}\left[ \frac{\tilde{V}_1}{1+r} \right]\\
+  &amp; = E^{P^\ast}\left[  \tilde{V}_0 + \tilde{\boldsymbol{\eta}}\cdot \Delta \boldsymbol{X}_1\right]\\
+  &amp; = \tilde{V}_1
+\end{align*}
+\]</div>
+</details>
+<p>This statement stipulates that if a market is arbitrage free, regardless the portfolio you have in the market, if those deliver the same outcome, then their financing costs has to be the same.</p>
+<p>The statement of the FTAP seems to be quite abstract, but is has a very easy interpretation in terms of linear algebra when the set of possible states is finite.
+Indeed, consider the following financial market where </p>
+<ul>
+<li><span class="arithmatex">\(\Omega = \{\omega_1, \ldots, \omega_N\}\)</span></li>
+<li><span class="arithmatex">\(\mathcal{F} = 2^\Omega\)</span>.  </li>
+<li><span class="arithmatex">\(P\)</span> is a probability measure specified by the vector <span class="arithmatex">\(\boldsymbol{p}=(p_1, \ldots, p_N)\)</span> where <span class="arithmatex">\(p_i = P[\{\omega_i\}] &gt;0\)</span> and <span class="arithmatex">\(\sum p_i =1\)</span>.</li>
+</ul>
+<p>We have a bank account with:</p>
+<div class="arithmatex">\[
+B_0 = 1, \quad B_1 = 1 + r
+\]</div>
+<p>for some <span class="arithmatex">\(r&gt;-1\)</span>.</p>
+<p>As for the finanical asset, suppose that we have a single one:</p>
+<div class="arithmatex">\[
+S_0 &gt; 0 \quad \text{and} \quad S_1(\omega_i) = s_i &gt; 0.
+\]</div>
+<p>Up to reordering, we assume that <span class="arithmatex">\(0 &lt; s_1 &lt; s_2 &lt; \ldots &lt; s_N\)</span>, and denote <span class="arithmatex">\(s = (s_1, \ldots, s_N)\)</span> as the vector of payoffs for <span class="arithmatex">\(S^1\)</span> at time <span class="arithmatex">\(1\)</span>.  </p>
+<p>The market is arbitrage-free if:</p>
+<div class="arithmatex">\[
+(1 + r)S_0 \in \left\{E^Q[S_1] = q \cdot s \colon Q = (q_1, \ldots, q_N) \in \mathbb{R}^d, \sum q_i =1 , \; q_i &gt; 0 \text{ for every } i\right\} = ]s_1, s_n[
+\]</div>
+<p>This means the market is arbitrage-free if and only if the following system of equations:</p>
+<div class="arithmatex">\[
+\begin{cases}
+    q_1 s_1 + \cdots + q_n s_n = (1 + r)S_0 \\
+    q_1 + \cdots + q_n = 1 \\
+    q_i &gt; 0 &amp; \text{for all } i
+\end{cases}
+\]</div>
+<p>admits at least one solution.  </p>
+<p>If a solution exists, it is unique if and only if <span class="arithmatex">\(N = 2\)</span>.</p>
+<p>If you extend to several assets <span class="arithmatex">\(d\)</span>, then you will end up with <span class="arithmatex">\(d+1\)</span> equations in the system. 
+If a solution exists then it is unique if and only if <span class="arithmatex">\(N = d+1\)</span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
