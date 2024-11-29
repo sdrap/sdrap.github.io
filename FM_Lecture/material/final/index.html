@@ -1,0 +1,945 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/material/final/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Final Report - Financial Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#final-report" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Financial Mathematics" class="md-header__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Financial Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Final Report
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lecture/00-Introduction/000-index/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Financial Mathematics" class="md-nav__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Financial Mathematics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/00-Introduction/000-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/00-Introduction/001-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            One Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/01-One-Period/011-mathematical-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematical Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/01-One-Period/012-arbitrage-pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbitrage and Pricing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="final-report">Final Report</h1>
+<dl>
+<dt>Overall Info</dt>
+<dd>Due date: 2024-06-23</dd>
+<dd>Returns in terms of a <code>*.py</code> file with comments for the code</dd>
+<dd>One report per person</dd>
+</dl>
+<h2 id="question-1-numpy">Question 1: Numpy</h2>
+<ul>
+<li>
+<p>Write a function <code>random_choice_matrix</code>:</p>
+<ul>
+<li>Input: <code>omega</code> which will be an integer fixing the random seed</li>
+<li>Output: <code>10x10</code> numpy array</li>
+</ul>
+<p>This function:</p>
+<p>a) fixes a seed using <code>np.random.default_rng</code>.</p>
+<p>b) create a random matrix with this seed where each row is an independent shuffeling of numbers between <code>1</code> and <code>10</code></p>
+<p>For instance</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">[</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">1</span> <span class="p">],</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="p">[</span> <span class="mi">7</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span> <span class="p">],</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="p">[</span> <span class="mi">6</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">1</span> <span class="p">],</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="p">[</span> <span class="mi">6</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">4</span> <span class="p">],</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="p">[</span> <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">3</span> <span class="p">],</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="p">[</span> <span class="mi">7</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">2</span> <span class="p">],</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="p">[</span> <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">4</span> <span class="p">],</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="p">[</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">6</span> <span class="p">],</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="p">[</span> <span class="mi">8</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">2</span> <span class="p">],</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="p">[</span> <span class="mi">5</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">8</span> <span class="p">]</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">]</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Write a function <code>markov_game</code></p>
+<ul>
+<li>Input: <code>omega</code> which is an integer fixing the random seed</li>
+<li>Output: <code>final</code> which is a one dimensional array of size <code>10</code></li>
+</ul>
+<p>This function:</p>
+<p>a) generate a matrix <code>matrix</code> from <code>random_choice_matrix(omega)</code></p>
+<p>b) for each number of the first row of matrix, it moves forward in the matrix by the exact number of index of this number until it finishes and record the last number.</p>
+<p>For instance in the example above, if I start with <code>10</code> on the first row, I move from left to right and up to down by <code>10</code> to end at the number <code>9</code> in the second row, then I move from <code>9</code> to end up at the number <code>6</code> on the third row, etc. until you end up on a number on the last row where you can not go further.</p>
+<p>c) return the array for each terminal value starting from each number from the first row.</p>
+</li>
+<li>
+<p>what do you notice when you run the program for several seeds <code>omega</code>?</p>
+</li>
+<li>
+<p><code>%timeit</code> your function and see if you can improve the efficiency of the program by using numba.</p>
+</li>
+</ul>
+<h2 id="question-2-performance">Question 2: Performance</h2>
+<ul>
+<li>
+<p>Write a function <code>mat_mult_slow</code>:</p>
+<ul>
+<li>Input: two matrices <code>A</code> of size <code>NxM</code> and <code>B</code> of size <code>MxK</code></li>
+<li>Output: matrix <code>C</code> of size <code>NxK</code></li>
+</ul>
+<p>The function returns the matrix multiplication <code>AB</code> using <strong>exclusively</strong> <code>for loop</code> and basic additions/multiplications.</p>
+</li>
+<li>
+<p>Write a function <code>mat_mult_numpy</code>:</p>
+<p>Same input and output as above but use numpy to compute the product</p>
+</li>
+<li>
+<p>With two random matrices that you generate of size <code>1000x10000</code> and <code>10000x5000</code> report the speed of each function using <code>%timeit</code>.</p>
+</li>
+<li>
+<p>Use <code>numba</code> with the decorator <code>@nb.njit</code> and copy the function <code>mat_mult_slow</code> to define a <code>mat_mult_fast</code> and compare the speed of each function.</p>
+</li>
+</ul>
+<h2 id="question-3-pandas">Question 3: Pandas</h2>
+<p>We clean and analyse the breast cancer dataset and prepare the data in pandas first</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">breast</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">breast</span><span class="p">)</span>
+</span></code></pre></div>
+<p>The data is a dictionary with keys
+* <code>data</code>: numpy array of size <code>Nxd</code> (values)
+* <code>target</code>: numpy array of size <code>N</code> (label <code>0</code> and <code>1</code> for not serious and serious cancer)
+* <code>feature_names</code>: numpy array of size <code>d</code> naming the nature of the columns in data</p>
+<ul>
+<li>
+<p>Create a panda dataframe with <code>d+1</code> columns and <code>N</code> rows where the first <code>d</code> columns have names <code>feature_names</code> and the last column name <code>label</code>. The content of the first <code>d</code> columns are data, the content of the <code>label</code> column is <code>target</code></p>
+</li>
+<li>
+<p>transform the dataframe of <code>d</code> columns by removing the mean from each column and dividing by the standard deviation.</p>
+</li>
+<li>Perform a PCA of these <code>d</code> columns and get the first two components <code>y1</code> and <code>y2</code> of dimension <code>d</code> each.</li>
+<li>
+<p>Generate a dataframe with three columns</p>
+<ul>
+<li><code>pc1</code>: matrix multiplication of the first component against the data</li>
+<li><code>pc2</code>: matrix multiplication of the second component against the data</li>
+<li><code>label</code></li>
+</ul>
+</li>
+<li>
+<p>provide a scatter plot <code>pc1</code> against <code>pc2</code> by setting a color blue when the label is <code>0</code> and a color red when the label is <code>1</code></p>
+</li>
+<li>
+<p>Provide mathematically what happened, and how from the results, the PCA in this case allows to classify the data.</p>
+</li>
+</ul>
+<hr />
+<h1 id="projects">Projects</h1>
+<p>Out of the two following questions, choose one for your report.</p>
+<h2 id="project-1-ode">Project 1: ODE</h2>
+<p>The following Oscillator</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  y^{\prime\prime} - \mu(1-y^2)y^\prime +y = 0 
+\end{equation*}
+\]</div>
+<p>For large <span class="arithmatex">\(\mu\)</span> this equation exhibit rapid changes in speed and therefore is difficult to approximate.
+With the following variable change <span class="arithmatex">\(y^\prime = z\)</span> we get the first order ODE system</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{cases}
+y^{\prime} = z\\
+z^\prime = \mu(1-y^2)z - y
+\end{cases}
+\end{equation*}
+\]</div>
+<ul>
+<li>
+<p>Taking <code>mu = 1000</code> use your implementation of <code>euler_scheme</code> and <code>RK</code> for this equation with <span class="arithmatex">\(y(0) =1\)</span>, <span class="arithmatex">\(z(0) = 0\)</span> starting from <span class="arithmatex">\(t=0\)</span> to <span class="arithmatex">\(t=10\)</span> and plot the numerical solution for different time steps <span class="arithmatex">\(0.5\)</span>, <span class="arithmatex">\(0.1\)</span>, <span class="arithmatex">\(0.01\)</span>, <span class="arithmatex">\(0.001\)</span>, ... <span class="arithmatex">\(0.0001\)</span>.</p>
+</li>
+<li>
+<p>Implement the implicit <code>euler_implicit_scheme</code> where</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{cases}
+y(t+h) &amp;= y(t) + h z(t+h)\\
+z(t+h) &amp;= z(t) + h(\mu(1-y^2(t+h))z(t+h) - y(t+h))
+\end{cases}
+\end{equation*}
+\]</div>
+<p>This involves solving a root finding at every step for which you can use <code>scipy.optimize.root</code></p>
+<ul>
+<li>
+<p>Compare the result of the implicit Euler Scheme with the previous scheme for each time step as well as the speed of each methods.</p>
+</li>
+<li>
+<p>Use <code>numba</code> to speed up your <code>euler_scheme</code> and <code>RK</code> scheme and see the speed improvement results.</p>
+</li>
+<li>Can you use <code>numba</code> to improve the <code>euler_implicit_scheme</code>?</li>
+</ul>
+<h2 id="project-2-systemic-risk-computation">Project 2: Systemic Risk Computation</h2>
+<p>Given a <span class="arithmatex">\(d\)</span> dimensional random variable <span class="arithmatex">\(\mathbf{X}\)</span> the goal is to compute the values <span class="arithmatex">\(\mathbf{m} = (m_1, \ldots, m_d)\)</span> argmin in <span class="arithmatex">\(\mathbf{m}\)</span> of </p>
+<div class="arithmatex">\[
+\begin{equation*}
+  F(\mathbf{m}, \mathbf{X})= E\left[\ell\left(X_1 - m_1, \ldots, X_d - m_d\right)\right]
+\end{equation*}
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \ell(z_1, \ldots, z_d) = \sum_{k,l} \alpha \left((x_k+x_l)^+\right)^2 +(1-\alpha)\left((x_k + x_l)^-\right)^2
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(x^+ = \max\{x, 0\}\)</span> and <span class="arithmatex">\(x^- = \max\{-x, 0\}\)</span> are the positive and negative parts of <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(1/2 &lt; \alpha &lt; 1\)</span> is a parameter.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The result of this function is computed daily as to decide how much different financial institution have to pay in insurance to cover the systemic risk they provide to the financial system.
+If institution <span class="arithmatex">\(k\)</span> is very risky for the overall system, it has to pay an amount <span class="arithmatex">\(m_k\)</span> larger to the common insurance.</p>
+<p>Now the problem of this computation is that usually <span class="arithmatex">\(d\)</span> is quite large (from 100 to thousands) and <span class="arithmatex">\(\mathbf{X}\)</span> which represents the returns of each institution changes every day.</p>
+<p>The expectation in <span class="arithmatex">\(F\)</span> takes joint integrals which are quite expensive to compute while you search for the argmin.</p>
+</div>
+<ul>
+<li>
+<p>Define a function <code>loss</code> that takes as input <code>alpha</code> a number and <code>z</code> a <code>d</code> dimensional array and returns <span class="arithmatex">\(\ell(\mathbf{z})\)</span>.</p>
+</li>
+<li>
+<p>Given </p>
+</li>
+<li>
+<p><code>N</code> samples <code>x_n</code> of dimension <code>d</code></p>
+</li>
+<li>A vector <code>m</code> of dimension <code>d</code></li>
+<li><code>alpha</code> number</li>
+</ul>
+<p>Provide a function that returns the Monte Carlo estimation of <span class="arithmatex">\(F(m, X)\)</span></p>
+<ul>
+<li>Implement the numerical gradient of the previous function</li>
+<li>Implement the gradient descent function (take a tolerance of <code>1e-4</code> and max iterations of <code>10000</code>.).</li>
+<li>Run tests using the following code to generate <code>N</code> samples of <code>d</code> dimensional normal distributed normal distribution (use <code>d = 3, 5, 10</code>)</li>
+</ul>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># fix dimension</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">d</span> <span class="o">=</span> <span class="mi">4</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">omega0</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># seed to generate the constants</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="n">omega1</span> <span class="o">=</span> <span class="mi">20</span>  <span class="c1"># seed to generate the sample.</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># create a random d*d matrix, a random eigenvalue one, get q from qr and generate Sigma</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">rng0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">omega0</span><span class="p">)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">eigenval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">rng0</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">low</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">high</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">d</span><span class="p">))</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">q</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">qr</span><span class="p">(</span><span class="n">rng0</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">d</span><span class="p">)))</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="n">Sigma</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">eigenval</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="c1"># generate N random samples from multivariate</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="n">rng1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">omega1</span><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="n">x</span> <span class="o">=</span> <span class="n">rng1</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="n">cov</span><span class="o">=</span><span class="n">Sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+</span></code></pre></div>
+<ul>
+<li>
+<p>Check the accuracy of the results by changing the value of <code>omega1</code> (different samples) as well as the speed.</p>
+</li>
+<li>
+<p>improve the speed of your application using <code>numba</code></p>
+</li>
+<li>
+<p>implement the stochastic gradient descent on this example and compare the speed and accuracy.</p>
+</li>
+</ul>
+<h2 id="project-3-image-classification">Project 3: Image Classification</h2>
+<p>We consider the <em>Hello World</em> problem of machine learning, namely classifying from images of handwritten digits the value of the digit from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(9\)</span>.
+We use a small set of ML procedures to decide given an image (input <span class="arithmatex">\(\mathbf{x}\)</span>) if is a <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span> (output <span class="arithmatex">\(y\)</span>), that is</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  y \approx f(\mathbf{x})
+\end{equation*}
+\]</div>
+<p>We will try</p>
+<ol>
+<li>Linear Regression</li>
+<li>Logistic (multivariate) regression</li>
+<li>Support Vector Machine</li>
+<li>(optional) Neural Network</li>
+</ol>
+<p>(you can also try PCA as for the cancer test problem)</p>
+<h3 id="data-preparation">Data preparation</h3>
+<p>We use a small dataset provided by <code>sklearn</code> package:
+The data is a dictionary with keys
+* <code>data</code>: numpy array of size <code>Nxd</code> (values) <span class="arithmatex">\(N\)</span> for the number of images <span class="arithmatex">\(d=64 = 8x8\)</span> for the value of each pixel.
+* <code>target</code>: numpy array of size <code>N</code> (label <code>0</code> and <code>1</code>)</p>
+<p>We split the data into a training and testing set using a functionality of scikit learn.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_digits</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1"># load the data set</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">digits</span> <span class="o">=</span> <span class="n">load_digits</span><span class="p">()</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># We split the set (data and target) into a 50/50% train and test set</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="1-linear-regression">1. Linear regression</h3>
+<ul>
+<li>
+<p>Implement and perform the linear regression on the training set such that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  Y \approx \mathbf{w}\cdot \bar{\mathbf{X}}
+\end{equation*}
+\]</div>
+<p>in the square sense where <span class="arithmatex">\(\bar{\mathbf{X}}\)</span> is augmented by one dimension with a constant <span class="arithmatex">\(1\)</span>.</p>
+</li>
+</ul>
+<p>An image is successfully classified as being a number <span class="arithmatex">\(k\)</span> if <span class="arithmatex">\(k-1/20&lt;\mathbf{w}^\ast \cdot \bar{\mathbf{x}}&lt;k+1/20\)</span> (if <span class="arithmatex">\(k=0\)</span> then no lower bound and if <span class="arithmatex">\(k=9\)</span> no upper bound).</p>
+<ul>
+<li>
+<p>Create two dataframes:</p>
+<ul>
+<li><code>df_train</code>: with two columns <code>label</code> and <code>prediction</code> where <code>label</code> contains the values of <code>y_train</code> and <code>prediction</code> contains <code>prediction(x_train)</code></li>
+<li><code>df_test</code>: with two columns <code>label</code> and <code>prediction</code> where <code>label</code> contains the values of <code>y_test</code> and <code>prediction</code> contains <code>prediction(x_test)</code></li>
+</ul>
+</li>
+<li>
+<p>Compute the dataframes <code>conf_train</code> and <code>conf_test</code> with index and columns <code>0, 1, ..., 9</code> and with values <code>a[i,j]</code> equal to the ratio of the number of images <code>i</code> predicted as <code>j</code>.</p>
+</li>
+<li>
+<p>plot using <code>imxshow</code> the heatmap of this confusion matrix for the train and test set.</p>
+</li>
+</ul>
+<h3 id="2-multivariate-logistic-regression">2. Multivariate logistic regression</h3>
+<p>Our problem is of categorical type and therefore approximating with a linear functional is not that adequate.
+We adopt another strategy where we try to approximate <span class="arithmatex">\(y\)</span> in terms of probability.</p>
+<p>In other terms we intend to find a distribution depending on the input that approximate the probability that the output is equal to <span class="arithmatex">\(k\)</span>.
+For this we make a parametrized guess for the such a probability density <span class="arithmatex">\(P[Y=k] \approx p_k(\mathbf{x}|\mathbf{w}_1, \ldots, \mathbf{w}_9)\)</span> and given by</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{cases}
+  p_k(\mathbf{x})&amp;= \frac{e^{\mathbf{w}_k\cdot \mathbf{x}}}{1+\sum_{l=1}^9 e^{\mathbf{w}_l\cdot \mathbf{x}}} &amp; k=1, \ldots 9\\
+p_0(\mathbf{x}) &amp;=1-\sum_{k=1}^9 P[Y=k]
+\end{cases}
+\end{equation*}
+\]</div>
+<p>We want to find <span class="arithmatex">\(\mathbf{w}_1, \ldots, \mathbf{w}_9\)</span> in <span class="arithmatex">\(\mathbb{R}^{64}\)</span> that matches the most the empirical observed probability.
+This corresponds to maximizing the (log) likelihood function</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\ell(\mathbf{w}_1, \ldots, \mathbf{w}_9) = \sum_{n=1}^N \sum_{k=0}^9 \Delta(k, y_n)p_k(\mathbf{x}_n)
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(\Delta(k, y_n)\)</span> is equal to <span class="arithmatex">\(1\)</span> is <span class="arithmatex">\(y_n = k\)</span> and <span class="arithmatex">\(y_n = 0\)</span> otherwise.</p>
+<ul>
+<li>Implement the log likelhood function and its gradient.</li>
+<li>using gradient descent, find the vectors <span class="arithmatex">\(\mathbf{w}_1,\ldots, \mathbf{w}_9\)</span> that minimize <span class="arithmatex">\(-\ell\)</span>.</li>
+</ul>
+<p>As for the prediction function, an image <span class="arithmatex">\(y\)</span> is classified as being <span class="arithmatex">\(k\)</span> if <span class="arithmatex">\(p_k(\mathbf{x}) &gt; p_l(x)\)</span> for any other <span class="arithmatex">\(l\)</span>.</p>
+<p>As above, </p>
+<ul>
+<li>
+<p>Create two dataframes:</p>
+<ul>
+<li><code>df_train</code>: with two columns <code>label</code> and <code>prediction</code> where <code>label</code> contains the values of <code>y_train</code> and <code>prediction</code> contains <code>prediction(x_train)</code></li>
+<li><code>df_test</code>: with two columns <code>label</code> and <code>prediction</code> where <code>label</code> contains the values of <code>y_test</code> and <code>prediction</code> contains <code>prediction(x_test)</code></li>
+</ul>
+</li>
+<li>
+<p>Compute the dataframes <code>conf_train</code> and <code>conf_test</code> with index and columns <code>0, 1, ..., 9</code> and with values <code>a[i,j]</code> equal to the ratio of the number of images <code>i</code> predicted as <code>j</code>.</p>
+</li>
+<li>
+<p>plot using <code>imxshow</code> the heatmap of this confusion matrix for the train and test set.</p>
+</li>
+</ul>
+<h3 id="3-support-vector-machine">3. Support vector Machine</h3>
+<p>We won't see the implementation of support vector machine (though it is not difficult but involves constrained optimization problems that we didn't see), the idea is to separate group of points by an hyper plane to classify them into two or more categories.</p>
+<p>In a two classification framework with data points <span class="arithmatex">\((\mathbf{x}_n, y_n)\)</span> where <span class="arithmatex">\(y_n = \pm 1\)</span>, we want to find and hyper plane <span class="arithmatex">\(\mathbf{w}\cdot \mathbf{x} - b\)</span> such that <span class="arithmatex">\(\mathbf{x}\cdot \mathbf{x}_n - b \geq 0\)</span> if <span class="arithmatex">\(y_n =1\)</span> and <span class="arithmatex">\(\mathbf{w}\cdot \mathbf{x}_n - b&lt;0\)</span> if <span class="arithmatex">\(y_n = -1\)</span>.</p>
+<p>It involves simple quadratic optimization problem with linear constraints that are quite efficient to solve even in high dimensions.
+Extensions are done in the multidimensional case.</p>
+<ul>
+<li>Follow the <a href="https://scikit-learn.org/dev/auto_examples/classification/plot_digits_classification.html">example</a> from scikit learn to perform the svm clustering and compare the results with your previous implementations.</li>
+</ul>
+<p>Follow the </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

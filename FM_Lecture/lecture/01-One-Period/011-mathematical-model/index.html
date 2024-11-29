@@ -1,0 +1,954 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/lecture/01-One-Period/011-mathematical-model/">
+      
+      
+        <link rel="prev" href="../../00-Introduction/001-notations/">
+      
+      
+        <link rel="next" href="../012-arbitrage-pricing/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Mathematical Model - Financial Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mathematical-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Financial Mathematics" class="md-header__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Financial Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mathematical Model
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Financial Mathematics" class="md-nav__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Financial Mathematics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/001-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            One Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Mathematical Model
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Mathematical Model
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bank-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bank Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#financial-assets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Financial Assets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-financing-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-Financing Portfolio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discounting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discounting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uncertainty" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncertainty
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../012-arbitrage-pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbitrage and Pricing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="mathematical-model">Mathematical Model</h1>
+<p>In this section, we model a one-period financial market evolving between two points in time:</p>
+<ul>
+<li><strong>Today:</strong> The current state of the world is known, including the prices of equities, commodities, and the overall economic condition.</li>
+<li><strong>Tomorrow:</strong> Various possible states of the world may emerge, where changes in the economy or the prices of stocks and commodities occur based on these states.</li>
+</ul>
+<p>In this financial market, we have <span class="arithmatex">\(d\)</span> <em>risky assets</em> available for investment and a <em>bank account</em> to store or borrow liquidity.</p>
+<ul>
+<li><strong>At time <span class="arithmatex">\(0\)</span>:</strong> The prices of these <span class="arithmatex">\(d\)</span> financial assets and the amount in the bank account are known.
+    Investors can decide on a <em>strategy</em>, specifying how much to invest in each asset by purchasing a certain number of <em>shares</em>. The bank account is used to <em>finance</em> these investments.</li>
+<li><strong>At time <span class="arithmatex">\(1\)</span>:</strong> The portfolio's value is determined by:<ul>
+<li>The remaining balance in the bank account after buying the shares at time <span class="arithmatex">\(0\)</span>, including interest earned.</li>
+<li>The <em>uncertain</em> value of the financial assets at time <span class="arithmatex">\(1\)</span>, multiplied by the number of shares held.</li>
+</ul>
+</li>
+</ul>
+<h2 id="bank-account">Bank Account</h2>
+<p>The bank account is denoted by <span class="arithmatex">\(B\)</span>, where <span class="arithmatex">\(B_0 = 1\)</span> represents the price of one unit of currency at time <span class="arithmatex">\(0\)</span>.<br />
+The bank offers an interest rate <span class="arithmatex">\(r\)</span>, announced at time <span class="arithmatex">\(0\)</span> and applied at time <span class="arithmatex">\(1\)</span>.
+With one unit deposited at time <span class="arithmatex">\(0\)</span>, the amount in the account at time <span class="arithmatex">\(1\)</span> becomes:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  B_1 = B_0(1 + r) = 1 + r
+\end{equation*}
+\]</div>
+<p>We assume <span class="arithmatex">\(r &gt; -1\)</span>, meaning the bank does not default.
+The bank account evolution is summarized as:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \begin{cases}
+    B_0 = 1 \\
+    B_1 = 1 + r
+  \end{cases}
+\end{equation*}
+\]</div>
+<h2 id="financial-assets">Financial Assets</h2>
+<p>These assets are represented by the vector:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \boldsymbol{S} = (S^1, \ldots, S^d)
+\end{equation*}
+\]</div>
+<p>Each <span class="arithmatex">\(S^k\)</span> for <span class="arithmatex">\(k = 1, \ldots, d\)</span> describes the price evolution of financial asset <span class="arithmatex">\(k\)</span> between time <span class="arithmatex">\(0\)</span> and time <span class="arithmatex">\(1\)</span>.</p>
+<ul>
+<li>
+<p><strong>At time <span class="arithmatex">\(0\)</span>:</strong> The price of asset <span class="arithmatex">\(k\)</span> is <span class="arithmatex">\(S_0^k\)</span>, which is strictly positive and known:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \boldsymbol{S}_0 = (S_0^1, \ldots, S_0^d) \quad \text{where} \quad S_0^k &gt; 0 \; \text{for all }k
+\end{equation*}
+\]</div>
+</li>
+<li>
+<p><strong>At time <span class="arithmatex">\(1\)</span>:</strong> The price of asset <span class="arithmatex">\(k\)</span> is <span class="arithmatex">\(S_1^k\)</span>, which is uncertain but non-negative (if <span class="arithmatex">\(S_1^k = 0\)</span>, the asset <span class="arithmatex">\(k\)</span> has defaulted):</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \boldsymbol{S}_1 = (S_1^1, \ldots, S_1^d) \quad \text{where} \quad S_1^k \geq 0 \; \text{for all }k
+\end{equation*}
+\]</div>
+</li>
+</ul>
+<h2 id="self-financing-portfolio">Self-Financing Portfolio</h2>
+<p>A <em>portfolio</em> consists of holdings in each financial asset and the balance in the bank account. The portfolio's total value is denoted by <span class="arithmatex">\(\bar{V}\)</span>.</p>
+<ul>
+<li>
+<p><strong>At time <span class="arithmatex">\(0\)</span>:</strong> You observe the prices <span class="arithmatex">\(S_0^k\)</span> for <span class="arithmatex">\(k = 1, \ldots, d\)</span> and decide on a strategy, holding <span class="arithmatex">\(\eta^k \in \mathbb{R}\)</span> shares of each asset. The cost of purchasing these assets is:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \sum_{k=1}^d \eta^k S_0^k = \boldsymbol{\eta} \cdot \boldsymbol{S}_0
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(\boldsymbol{\eta} = (\eta^1, \ldots, \eta^d)\)</span> represents your holdings.<br />
+The <em>self-financing</em> condition requires that this cost is fully covered by the bank account. Thus:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \bar{V}_0 \leadsto \underbrace{\bar{V}_0 - \sum_{k=1}^d \eta^k S^k_0}_{\text{Bank account value}} +  \underbrace{\sum_{k=1}^d \eta^k S^k_0}_{\text{Asset holdings value}}= \bar{V}_0 - \boldsymbol{\eta}\cdot \boldsymbol{S}_0 + \boldsymbol{\eta}\cdot \boldsymbol{S}_0 = \bar{V}_0
+\end{equation*}
+\]</div>
+</li>
+<li>
+<p><strong>At time <span class="arithmatex">\(1\)</span>:</strong> The portfolio value evolves as asset prices change:</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \bar{V}_1 &amp; = \left(\bar{V}_0 - \sum_{k=1}^d \eta^k S^k_0\right)(1+r) + \sum_{k=1}^d \eta^k S^k_1 \\
+              &amp; = \left( \bar{V}_0 - \boldsymbol{\eta} \cdot \boldsymbol{S}_0 \right)(1+r) +\boldsymbol{\eta} \cdot \boldsymbol{S}_1  \\
+              &amp; = \bar{V}_0(1+r) +\boldsymbol{\eta} \cdot \left( \boldsymbol{S}_1 - \boldsymbol{S}_0(1+r) \right)
+\end{align*}
+\]</div>
+</li>
+</ul>
+<p>Hence a portfolio over time is entirely determined by its start value <span class="arithmatex">\(\bar{V}_0\)</span> as well as the strategy <span class="arithmatex">\(\boldsymbol{\eta} = (\eta^1, \ldots, \eta^d)\)</span>.</p>
+<details class="note">
+<summary>How realistic are those assumptions?</summary>
+<p>In this setting, we make somewhat restrictive assumptions that are disputable namely:</p>
+<ul>
+<li>No dividends.</li>
+<li>No transaction costs when buying assets: fixed fees, taxes, transaction fees, liquidity.</li>
+<li>The amount of shares in a financial asset is a real number.
+      Usually you are only allowed to buy/sell a round lot.
+      Furthermore, you are allowed to hold a negative amount of shares.
+      In other terms short selling is allowed and without particular transaction costs related to it.</li>
+<li>You can buy/sell unlimited amount of shares, in particular for very large amount you face no liquidity costs.</li>
+<li>The bank account provides the same rate <span class="arithmatex">\(r\)</span> for deposit and lending which is very unlikely.
+    And this rate is independent of the amount.</li>
+<li>You can lend infinite amount of money from the bank.</li>
+</ul>
+<p>We consider the ideal scenario of a small investor operating in a frictionless financial market—an assumption that closely approximates modern realities.
+Some aspects, such as taxes, transaction fees, dividends, and round lot restrictions, are either negligible or can be incorporated with minimal adjustments.
+However, factors like differing lending and deposit rates, liquidity costs, short-selling constraints, and price impacts are more complex and can significantly influence the results.    </p>
+</details>
+<h2 id="discounting">Discounting</h2>
+<p>It is often convenient to consider <em>discounted values</em> of financial assets and the portfolio to express their worth in terms of today's currency.
+Define the discounted prices <span class="arithmatex">\(\boldsymbol{X}=\boldsymbol{S}/B\)</span> and portfolio value <span class="arithmatex">\(V=\bar{V}/B\)</span> as follows:</p>
+<div class="arithmatex">\[
+\begin{align*}
+    X_0^k &amp; = \frac{S^k_0}{B_0}=S^k_0         &amp; \text{and} &amp;  &amp; X_1^k &amp; = \frac{S_1^k}{B_1}=\frac{S_1^k}{1+r}         \\
+    V_0   &amp; = \frac{\bar{V}_0}{B_0}=\bar{V}_0 &amp; \text{and} &amp;  &amp; V_1   &amp; = \frac{\bar{V}_1}{B_1}=\frac{\bar{V}_1}{1+r}
+\end{align*}
+\]</div>
+<p>In particular, it follows that</p>
+<div class="arithmatex">\[
+\begin{align*}
+    V_1     &amp; = \frac{\bar{V}_1}{1+r}\\
+            &amp; = \frac{1}{1+r}\left(\bar{V}_0(1+r) +\sum_{k=1}^d \eta^k\left( S^k_1  - (1+r)S_0^k\right)\right)\\
+            &amp; = \bar{V}_0(1+r) +\sum_{k=1}^d \eta^k\left( \frac{S^k_1}{1+r}  - S_0^k\right)\\
+                &amp; = V_0 + \sum_{k=1}^n \eta_k\left( X^k_1 - X^k_0 \right)\\
+          &amp; = V_0 + \boldsymbol{\eta} \cdot \left( \boldsymbol{X}_1 - \boldsymbol{X}_0 \right) = V_0 + \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1
+\end{align*}
+\]</div>
+<p>for which we get an interpretation of the evolution of the discounted value of the portfolio:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  V_1 = \underbrace{V_0}_{\text{Initial Value}} + \underbrace{\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1}_{\text{Incremental gain/loss of discounted prices}}
+\end{equation*}
+\]</div>
+<h2 id="uncertainty">Uncertainty</h2>
+<p>So far, we have described a simple financial market and how investments can be made while adhering to self-financing principles. However, while we acknowledged that the prices of assets at time <span class="arithmatex">\(1\)</span> are subject to uncertainty, we have not detailed how this uncertainty is modeled. 
+In other words, while we treated the financial assets at time <span class="arithmatex">\(1\)</span> as a vector of prices, we have not specified how this vector reflects the uncertainty associated with its values.</p>
+<p>The price evolution depends on the "state of the world" that will be realized.
+If we denote by <span class="arithmatex">\(\omega\)</span> one such possible state, then <span class="arithmatex">\(S_1^k(\omega)\)</span> represents the price of asset <span class="arithmatex">\(k\)</span> at time <span class="arithmatex">\(1\)</span> in state <span class="arithmatex">\(\omega\)</span>.
+If <span class="arithmatex">\(\Omega\)</span> denotes the collection of all possible states, the stock price <span class="arithmatex">\(S_1^k\)</span> is a function:</p>
+<div class="arithmatex">\[
+\begin{align*}
+  S_1^k\colon \Omega &amp;\longrightarrow \mathbb{R}_+\\
+  \omega &amp; \longmapsto \underbrace{S_1^k(\omega)}_{\text{Price of financial asset $k$ at time $1$ in state $\omega$}}
+\end{align*}
+\]</div>
+<p>Combining all such functions, we obtain state-dependent price vectors:</p>
+<div class="arithmatex">\[
+\begin{align*}
+  \boldsymbol{S}_1\colon \Omega &amp; \longrightarrow \mathbb{R}_+^d\\
+  \omega &amp; \longmapsto \boldsymbol{S}_1(\omega) = (S_1^1(\omega), \ldots, S_1^d(\omega))
+\end{align*}
+\]</div>
+<p>Similarly, the discounted self-financing portfolio value at time <span class="arithmatex">\(1\)</span> and the discounted asset prices become state-dependent functions:</p>
+<div class="arithmatex">\[
+\begin{align*}
+  \boldsymbol{X}_1\colon \Omega &amp;\longrightarrow \mathbb{R}_{++}^d &amp; V_1 \colon \Omega &amp;\longrightarrow \mathbb{R} \\
+  \omega &amp; \longmapsto \boldsymbol{X}_1(\omega) = \left( \frac{S_1^1(\omega)}{1+r}, \ldots, \frac{S_1^d(\omega)}{1+r} \right) &amp; \omega &amp;\longmapsto V_1(\omega) = V_0 + \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1(\omega)
+\end{align*}
+\]</div>
+<p>The objective of financial mathematics is to estimate or price these state-dependent portfolios. To achieve this, we need further assessments of how likely each event is to occur. This is where stochastic theory plays a crucial role.</p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Definition:</strong> One period financial market</p>
+<p>Given a probability space <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span>, a <strong>financial market</strong> is defined as follows:</p>
+<ul>
+<li>
+<p><strong>A bank account</strong> <span class="arithmatex">\(B\)</span>, where:</p>
+<div class="arithmatex">\[
+B_0 = 1 \quad \text{and} \quad B_1 = 1 + r
+\]</div>
+<p>for <span class="arithmatex">\(r&gt;-1\)</span></p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(d\)</span>-financial assets</strong> <span class="arithmatex">\(\boldsymbol{S} = (S^1, \ldots, S^d)\)</span>, where:</p>
+<div class="arithmatex">\[
+  S_0^k &gt; 0 \quad \text{and} \quad S_1^k : \Omega \to \mathbb{R}_+
+\]</div>
+<p>for <span class="arithmatex">\(k = 1, \ldots, d\)</span>, with <span class="arithmatex">\(S_1^k\)</span> being a measurable random variable.</p>
+</li>
+</ul>
+<p>A <strong>Portfolio</strong> <span class="arithmatex">\(\bar{V}\)</span> is given by a start value <span class="arithmatex">\(\bar{V}_0 \in \mathbb{R}\)</span> and a holding <strong>strategy</strong> <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span>.
+Self financing condition implies</p>
+<div class="arithmatex">\[
+  \bar{V}_1 = \bar{V}_0(1+r) + \sum \eta^k \left(S_1^k - S_0^k(1+r)\right) = \bar{V}_0 + \boldsymbol{\eta}\cdot \left(\boldsymbol{S}_1 - \boldsymbol{S}_0(1+r)\right)
+\]</div>
+<p>The discounded portfolio <span class="arithmatex">\(V = \bar{V}/B\)</span> and financial assets <span class="arithmatex">\(\boldsymbol{X} = \boldsymbol{S}/B\)</span> allows to write</p>
+<div class="arithmatex">\[
+  V_1 = V_0 + \sum \eta^k \left(X_1^k - X_0^k\right) = V_0 + \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1
+\]</div>
+</div>
+<details class="warning">
+<summary>What about returns, portfolio weights?</summary>
+<p>Very often in finance, the exposition is done in terms of returns and portfolio weights.
+Talking in terms of returns and weights requires some particular care.</p>
+<p>It is possible to speak of returns for the financial market as the prices at time <span class="arithmatex">\(0\)</span> are strictly positive.
+In other terms, if we define the interest rate <span class="arithmatex">\(r\)</span> as:</p>
+<div class="arithmatex">\[
+r = \frac{B_1 - B_0}{B_0}, \quad \text{then it holds} \quad B_1 = B_0(1 + r)
+\]</div>
+<p>Similarly, for the return <span class="arithmatex">\(R_1^k\)</span> of a financial asset <span class="arithmatex">\(k\)</span>, we define:</p>
+<div class="arithmatex">\[
+R_1^k = \frac{S_1^k - S_0^k}{S_0^k}, \quad \text{then it holds} \quad S_1^k = S_0^k(1 + R_1^k)
+\]</div>
+<p>Thus, the definition of a financial market as described earlier is equivalent to specifying:</p>
+<ul>
+<li>A vector <span class="arithmatex">\(\boldsymbol{S}_0\)</span> of strictly positive initial prices.</li>
+<li>An interest rate <span class="arithmatex">\(r &gt; -1\)</span>, with <span class="arithmatex">\(r \in \mathbb{R}\)</span>.</li>
+<li>
+<p>A vector <span class="arithmatex">\(\boldsymbol{R}_1 = (R_1^1, \ldots, R_1^d)\)</span> of random returns, where:</p>
+<div class="arithmatex">\[
+R_1^k: \Omega \longrightarrow [-1, \infty), \quad \omega \longmapsto R_1^k(\omega)
+\]</div>
+<p>for each <span class="arithmatex">\(k = 1, \ldots, d\)</span>.</p>
+</li>
+</ul>
+<p>It is also possible for a portfolio to speak in terms of holding value rather than number of shares, that is <span class="arithmatex">\(\boldsymbol{h} = \boldsymbol{\eta}\boldsymbol{S}_0 = (\eta^1 S_0^1, \ldots, \eta^d S_0^d)\)</span>.
+In this case we can write the portfolio evolution as</p>
+<div class="arithmatex">\[
+\begin{align*}
+  \bar{V_1} &amp; = \bar{V}_0(1+r) + \sum \eta^k\left(S_1^k - S_0^k (1+r)\right)\\
+            &amp; = \bar{V}_0(1+r) + \sum \eta^k S_0^k \left(\frac{S_1^k}{S_0^k} - (1+r)\right)\\
+            &amp; = \bar{V}_0(1+r) + \sum h^k \left(R_1^k - r\right)\\
+            &amp; = \bar{V}_0(1+r) + \boldsymbol{h}\cdot \left(\boldsymbol{R}_1 - r\right)
+\end{align*}
+\]</div>
+<p>Now we would like to consider the returns of the portfolio <span class="arithmatex">\((\bar{V}_1 - \bar{V}_0)/\bar{V}_0\)</span> as well as the portfolio weight <span class="arithmatex">\(\boldsymbol{w} = \boldsymbol{h}/\bar{V_0}\)</span>.
+Indeed, the portfolio weight in asset <span class="arithmatex">\(k\)</span> is equal to the asset value holding divided by the portfolio value at time <span class="arithmatex">\(0\)</span>.
+Following on the previous computation we have</p>
+<div class="arithmatex">\[
+\begin{align*}
+  \frac{\bar{V}_1 - \bar{V}_0}{\bar{V}_0} &amp; = r + \sum \frac{h^k}{\bar{V}_0}\left(R^k_1 - r\right)\\
+      &amp; = r + \boldsymbol{w}\cdot \left(\boldsymbol{R}_1 - r\right)
+\end{align*}
+\]</div>
+<p>We get the classical interpretation that the portfolio returns is equal to the risk free rate plus the weighted excess returns in the financial assets.
+In particular if <span class="arithmatex">\(\sum w^k = 1\)</span>, meaning that you hold your portfolio entirely in assets, the returns of the portfolio is equal to <span class="arithmatex">\(\boldsymbol{w}\cdot \boldsymbol{R}_1\)</span>.</p>
+<p>This looks familar and used widely, it is however <span style="color:red"> <strong>mathematically not correct without further assumptions</strong></span>.
+Consider the following situations where <span class="arithmatex">\(\bar{V}_0 &lt;0\)</span> or <span class="arithmatex">\(\bar{V}_0 = 0\)</span>, returns and weights do not make much sense isn't it?</p>
+<p>Furthermore, even if you assume that <span class="arithmatex">\(\bar{V}_0&gt;0\)</span> (usually <span class="arithmatex">\(\bar{V}_0 = 1\)</span>), suppose that you can short, then you may well end-up with a strictly negative or zero portfolio value at time <span class="arithmatex">\(1\)</span>.
+How would you then compute the portfolio returns between time <span class="arithmatex">\(1\)</span> and time <span class="arithmatex">\(2\)</span>?</p>
+<p>Such a way to look at portfolio returns are consistent mathematically if some strong assumptions are made to garantee that <span class="arithmatex">\(\bar{V}_0\)</span> and <span class="arithmatex">\(\bar{V}_1\)</span> remain strictly positive (no shorting plus budget constraint for instance).
+This is the reason why we do not consider during this lecture this kind of approach (portfolio returns or portfolio weights).</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
