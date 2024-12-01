@@ -2,67 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://127.0.0.1:8000/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/javascripts/node_modules/mathjax/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/lecture/00-Introduction/000-index/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/lecture/00-Introduction/001-notations/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/lecture/01-One-Period/011-mathematical-model/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/lecture/01-One-Period/012-arbitrage-pricing/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://127.0.0.1:8000/lecture/01-One-Period/013-derivative-securities/</loc>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/material/ex01/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/material/final/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/material/hw01/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/material/hw02/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/material/hw03/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/material/hw04/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://127.0.0.1:8000/material/material/</loc>
-         <lastmod>2024-11-29</lastmod>
+         <lastmod>2024-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
