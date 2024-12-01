@@ -14,6 +14,8 @@
         <link rel="prev" href="../011-mathematical-model/">
       
       
+        <link rel="next" href="../013-derivative-securities/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
@@ -463,6 +465,8 @@
       
         
       
+        
+      
     
     
       
@@ -598,6 +602,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../013-derivative-securities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Derivative Securities
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -927,7 +952,10 @@ By the Radon-Nikodym theorem, define:</p>
 <p>showing that <span class="arithmatex">\(\lambda \boldsymbol{x} + (1 - \lambda) \boldsymbol{y} \in \mathcal{C}\)</span>.</p>
 </li>
 </ul>
-<p>If <span class="arithmatex">\(0 \notin \mathcal{C}\)</span>, the Hahn-Banach separation theorem implies that there exists a vector <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span> such that:</p>
+<p>The fact that <span class="arithmatex">\(0 \notin \mathcal{C}\)</span>, where <span class="arithmatex">\(\mathcal{C}\)</span> is not a convex set, the Hahn-Banach theorem allows to separate with a line (an hyperplane) the point from the convex set.</p>
+<p><img alt="Separation" src="../../../images/separation_dark.svg#only-dark" />
+<img alt="Separation" src="../../../images/separation_white.svg#only-light" /></p>
+<p>It translates mathematicaly into the existence of a vector <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span> such that:</p>
 <div class="arithmatex">\[
 \begin{cases}
    \boldsymbol{\eta} \cdot \boldsymbol{x} \geq 0 &amp; \text{for all } \boldsymbol{x} \in \mathcal{C}, \\
@@ -1030,10 +1058,17 @@ B_0 = 1, \quad B_1 = 1 + r
 <div class="arithmatex">\[
 S_0 &gt; 0 \quad \text{and} \quad S_1(\omega_i) = s_i &gt; 0.
 \]</div>
-<p>Up to reordering, we assume that <span class="arithmatex">\(0 &lt; s_1 &lt; s_2 &lt; \ldots &lt; s_N\)</span>, and denote <span class="arithmatex">\(s = (s_1, \ldots, s_N)\)</span> as the vector of payoffs for <span class="arithmatex">\(S^1\)</span> at time <span class="arithmatex">\(1\)</span>.  </p>
-<p>The market is arbitrage-free if:</p>
+<p>Up to reordering, we assume that <span class="arithmatex">\(0 &lt; s_1 &lt; s_2 &lt; \ldots &lt; s_N\)</span>, and denote <span class="arithmatex">\(\boldsymbol{s} = (s_1, \ldots, s_N)\)</span> as the vector of payoffs for <span class="arithmatex">\(S^1\)</span> at time <span class="arithmatex">\(1\)</span>. </p>
+<p>Since the state space is finite, any expectation of the asset price can be written as</p>
 <div class="arithmatex">\[
-(1 + r)S_0 \in \left\{E^Q[S_1] = q \cdot s \colon Q = (q_1, \ldots, q_N) \in \mathbb{R}^d, \sum q_i =1 , \; q_i &gt; 0 \text{ for every } i\right\} = ]s_1, s_n[
+\begin{equation*}
+  E^{Q}\left[ S_1 \right] = \boldsymbol{s}\cdot \boldsymbol{q}
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(\boldsymbol{q} = (q_1, \ldots, q_N)\)</span> represent a probability equivalent to <span class="arithmatex">\(P\)</span> if and only if <span class="arithmatex">\(q_i&gt;0\)</span> for every <span class="arithmatex">\(i\)</span>.</p>
+<p>Hence the  market is arbitrage-free if and only if</p>
+<div class="arithmatex">\[
+(1 + r)S_0 \in \left\{\boldsymbol{s} \cdot \boldsymbol{q} \colon \boldsymbol{q} \in \mathbb{R}^d, \sum q_i =1 , \; q_i &gt; 0 \text{ for every } i\right\} = (s_1, s_N)
 \]</div>
 <p>This means the market is arbitrage-free if and only if the following system of equations:</p>
 <div class="arithmatex">\[

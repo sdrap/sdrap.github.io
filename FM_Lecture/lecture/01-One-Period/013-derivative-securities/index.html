@@ -1,0 +1,931 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/lecture/01-One-Period/013-derivative-securities/">
+      
+      
+        <link rel="prev" href="../012-arbitrage-pricing/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Derivative Securities - Financial Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#derivative-securities" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Financial Mathematics" class="md-header__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Financial Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Derivative Securities
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Financial Mathematics" class="md-nav__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Financial Mathematics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/001-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            One Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../011-mathematical-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematical Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../012-arbitrage-pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbitrage and Pricing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Derivative Securities
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Derivative Securities
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pricing-a-contingent-claim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pricing a Contingent Claim
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="derivative-securities">Derivative Securities</h1>
+<p>A <em>contingent claim</em> is a contract between a seller and a buyer where the seller agrees to deliver a certain payoff at a future time.
+A contingent claim is called a <em>derivative</em> if this contract is written as a payoff depending on some underlying, such as stocks, bonds, indices, portfolios, or funds.
+Options are specific derivatives characterized by parameters like strike price and expiration date.
+While definitions may vary, the mathematical interpretation remains consistent.</p>
+<div class="admonition example">
+<p class="admonition-title">Examples of Derivatives</p>
+<p>In the presentation of the different derivatives we consider a financial market with a generic asset <span class="arithmatex">\(S\)</span>.</p>
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>Forward/Future Contract</strong></p>
+<hr />
+<p>A forward contract is an agreement between two parties to buy or sell an asset <span class="arithmatex">\(S\)</span> at a future time for a price <span class="arithmatex">\(K\)</span> fixed today.
+The payoff for the contract owner is determined by the difference between the asset price and the agreed price:  </p>
+<div class="arithmatex">\[
+    C^{fw} = S - K
+\]</div>
+</li>
+<li>
+<p><strong>Forward Payoff</strong></p>
+<hr />
+<p><img align="align" alt="Forward Payoff" src="../../../images/forward_payoff_dark.svg#only-dark" />
+<img align="right" alt="Forward Payoff" src="../../../images/forward_payoff_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>European Put/Call Option</strong></p>
+<hr />
+<p>A European Call or Put option grants the right, but not the obligation, to buy or sell an asset <span class="arithmatex">\(S\)</span> at a future time for a <em>strike price</em> <span class="arithmatex">\(K\)</span> fixed today.      <br />
+The payoff is</p>
+<div class="arithmatex">\[
+    \begin{align*}
+      C^{call} &amp; = (S - K)^+
+                =
+    \begin{cases}
+      S - K &amp; \text{if } S \geq K, \\
+      0 &amp; \text{otherwise}.
+    \end{cases}\\
+    C^{put} &amp; = (K - S)^+
+             =
+    \begin{cases}
+      K - S &amp; \text{if } K \geq S, \\
+      0 &amp; \text{otherwise}.
+    \end{cases}
+    \end{align*}
+\]</div>
+<p>European call and put options are related by the formula </p>
+<div class="arithmatex">\[
+  C^{call} - C^{put} = S - K
+\]</div>
+</li>
+<li>
+<p><strong>European Call/Put Payoff</strong></p>
+<hr />
+<p><img align="align" alt="Call/Put Payoff" src="../../../images/call_put_payoff_dark.svg#only-dark" />
+<img align="right" alt="Call/Put Payoff" src="../../../images/call_put_payoff_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>Straddle Option</strong></p>
+<hr />
+<p>The goal of a straddle option is to profit from significant price movements of the underlying asset, regardless of the direction.
+It grants the right to get the price deviation (positive or negative) of the underlying asset with respect to a strike <span class="arithmatex">\(K\)</span>.</p>
+<p>The payoff is:</p>
+<div class="arithmatex">\[
+  C^{straddle} = |S - K| =
+  \begin{cases}
+    S-K &amp; \text{ if } S\geq K\\
+    K-S &amp; \text{ if } S &lt;K
+  \end{cases}
+\]</div>
+<p>Note that a straddle option is equivalent to holding a call and a put option with the same strike.</p>
+<div class="arithmatex">\[
+  C^{straddle}(K) = C^{call}(K) + C^{put}(K)
+\]</div>
+</li>
+<li>
+<p><strong>Straddle Option Payoff</strong></p>
+<hr />
+<p><img align="align" alt="Straddle Payoff" src="../../../images/straddle_payoff_dark.svg#only-dark" />
+<img align="right" alt="Straddle Payoff" src="../../../images/straddle_payoff_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>Butterfly Option</strong></p>
+<hr />
+<p>A butterfly option has somehow the counter effect to a straddle option in the sense that it is designed to profit from price movement around a given target <span class="arithmatex">\(K\)</span> within an interval <span class="arithmatex">\(\underline{K} &lt; K &lt;\overline{K}\)</span>.</p>
+<p>The payoff is:</p>
+<div class="arithmatex">\[
+  C^{butterfly} = 
+  \begin{cases}
+    0 &amp; \text{if }S&lt;\underline{K} \text{ or }S&gt;\overline{K}\\
+    S-\underline{K} &amp; \text{if } \underline{K}\leq S\leq K\\
+    \overline{K} - S &amp; \text{if } K&lt;S \leq \overline{K}
+  \end{cases}
+\]</div>
+<p>Note that such a straddle option can also be written as a combination of put and call options strikes</p>
+<div class="arithmatex">\[
+  C^{butterfly}(\underline{K}, K, \overline{K}) = C^{call}(\underline{K}) + C^{call}(\overline{K}) - 2 C^{call}(K)
+\]</div>
+<p>Usually, the strike <span class="arithmatex">\(K\)</span> is at the mid point between <span class="arithmatex">\(\underline{K}\)</span> and <span class="arithmatex">\(\overline{K}\)</span>.</p>
+</li>
+<li>
+<p><strong>Straddle Option Payoff</strong></p>
+<hr />
+<p><img align="align" alt="Straddle Payoff" src="../../../images/butterfly_payoff_dark.svg#only-dark" />
+<img align="right" alt="Straddle Payoff" src="../../../images/butterfly_payoff_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+</div>
+<p>Note that each of these options can be expressed as <span class="arithmatex">\(f(S)\)</span>, where <span class="arithmatex">\(S\)</span> is the underlying asset, and <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> is some continuous function.</p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Definition:</strong> Contingent Claim</p>
+<ul>
+<li>
+<p class="annotate">A <em>contingent claim</em> <span class="arithmatex">\(C\)</span> is a positive random variable.(1)</p>
+<ol>
+<li>In a strictly more general sense it does not need to be strictly positive but usually bounded from below. See for instance forward contracts.</li>
+</ol>
+</li>
+<li>
+<p class="annotate">A <em>derivative</em> <span class="arithmatex">\(C\)</span> is a contingent claim that depends only on the information provided by the underlying on which it is written.
+    In other terms, <span class="arithmatex">\(C = f(\boldsymbol{S}_1)\)</span> for some continuous function <span class="arithmatex">\(f:\mathbb{R}^d \to [0, \infty)\)</span>.(1)</p>
+<ol>
+<li>In a more general fashion, it means that <span class="arithmatex">\(C\)</span> is <span class="arithmatex">\(\sigma(\boldsymbol{S}_1)\)</span>-measurable, which with some proof work can be shown to be equivalent to <span class="arithmatex">\(C = f(\boldsymbol{S}_1)\)</span> for some measurable function <span class="arithmatex">\(f\)</span>.</li>
+</ol>
+</li>
+</ul>
+</div>
+<h2 id="pricing-a-contingent-claim">Pricing a Contingent Claim</h2>
+<p>Given a contingent claim <span class="arithmatex">\(C\)</span>, the goal is to determine a <em>fair price</em> <span class="arithmatex">\(\pi(C)\)</span> at which it can be sold.
+To do this, we analyze the situation from the seller's perspective:</p>
+<ol>
+<li>
+<p><strong>Time 0:</strong> 
+    The seller receives <span class="arithmatex">\(\pi(C)\)</span> and deposits it into their bank account. This amount is used to invest in a strategy <span class="arithmatex">\(\boldsymbol{\eta}\)</span> in <span class="arithmatex">\(\mathbb{R}^d\)</span>.
+    The holdings in the bank account become <span class="arithmatex">\(\pi(C) - \boldsymbol{\eta} \cdot \boldsymbol{S}_0\)</span> and the golding in assets becomes <span class="arithmatex">\(\boldsymbol{\eta}\cdot \boldsymbol{S}_0\)</span>.
+    The initial portfolio value is <span class="arithmatex">\(\bar{V}_0(\boldsymbol{\eta}) = \pi(C)\)</span>.</p>
+</li>
+<li>
+<p><strong>Time 1:</strong>
+    The seller delivers the payoff <span class="arithmatex">\(C\)</span> to the buyer while benefiting from their investment strategy <span class="arithmatex">\(\boldsymbol{\eta}\)</span>.
+    The discounted portfolio value minus the discounted payoff is:</p>
+<div class="arithmatex">\[
+  V_1(\boldsymbol{\eta}) - \frac{C}{1 + r} = \pi(C) + \boldsymbol{\eta} \cdot \Delta\boldsymbol{X}_1 - \frac{C}{1 + r}
+\]</div>
+</li>
+</ol>
+<p>In an ideal situation, the seller of the option would like to get out with gains without downside risk, that is, <em>fully hedge</em> the position.
+Hence, the seller aims to ensure:</p>
+<div class="arithmatex">\[
+\pi(C) + \boldsymbol{\eta} \cdot \Delta\boldsymbol{X}_1 \geq \frac{C}{1 + r} 
+\]</div>
+<p>Such a price <span class="arithmatex">\(\pi(C)\)</span> together with the smart strategy <span class="arithmatex">\(\boldsymbol{\eta}\)</span> means that the seller super hedge his position.
+Considering all the possible prices and smart strategies that super hedge the position allows to define the lowest price at which the seller is willing to sell the option without taking risk, the <strong>super-hedging price</strong></p>
+<div class="arithmatex">\[
+\bar{\pi}(C) = \inf \left\{ x \in \mathbb{R} : x + \boldsymbol{\eta} \cdot \Delta\boldsymbol{X}_1 \geq \frac{C}{1 + r}, \; \text{for some } \boldsymbol{\eta} \in \mathbb{R}^d \right\}.
+\]</div>
+<p>Conversely, the buyer's perspective leads to the <strong>sub-hedging price</strong>, <span class="arithmatex">\(\underline{\pi}(C)\)</span>:</p>
+<div class="arithmatex">\[
+\underline{\pi}(C) = \sup \left\{ y \in \mathbb{R} : y + \boldsymbol{\nu} \cdot \Delta\boldsymbol{X}_1 \leq \frac{C}{1 + r}, \; \text{for some } \boldsymbol{\nu} \in \mathbb{R}^d \right\}.
+\]</div>
+<p>It seems economically reasonable that prices <span class="arithmatex">\(y\)</span> from the buyer that sub-hedge their position should be lower that the prices <span class="arithmatex">\(x\)</span> of the seller that super-hedge their positions.
+This is however true if the market is arbitrage free as seen in the subsequent proposition.</p>
+<p>To simplify our exposition, let us provide the notation for pricing measures</p>
+<div class="arithmatex">\[
+\mathcal{P}^\ast := \left\{ P^\ast \sim P \colon E^{P^\ast}\left[ \Delta \boldsymbol{X}_1 \right] = 0 \text{ and } dP^\ast/dP \text{ is bounded}\right\}
+\]</div>
+<p>In particular, the FTAP can be formulated as "The market is arbitrage free if and only if <span class="arithmatex">\(\mathcal{P}^\ast\)</span> is not empty".</p>
+<details class="note">
+<summary>Geometric Interpretation I</summary>
+<p>Define <span class="arithmatex">\(I\)</span> and <span class="arithmatex">\(J\)</span> as the set of super- and sub-hedging prices, respectively:</p>
+<div class="arithmatex">\[
+\begin{align*}
+    I &amp; := \left\{ x \in \mathbb{R}\colon x+\boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1 \geq \frac{C}{1+r}\text{ for some smart strategy }\boldsymbol{\eta} \in \mathbb{R}^d \right\}\\
+    J &amp; := \left\{ y \in \mathbb{R}\colon y+\boldsymbol{\nu}\cdot \Delta \boldsymbol{X}_1 \leq \frac{C}{1+r}\text{ for some smart strategy }\boldsymbol{\nu} \in \mathbb{R}^d \right\}\\
+\end{align*}
+\]</div>
+<p>For which holds <span class="arithmatex">\(\bar{\pi}(C) = \inf I\)</span> and <span class="arithmatex">\(\underline{\pi}(C) = \sup J\)</span>.</p>
+<p>These two sets, <span class="arithmatex">\(I\)</span> and <span class="arithmatex">\(J\)</span>, are eventually intervals</p>
+<div class="admonition danger">
+<p class="admonition-title"><strong>Lemma</strong></p>
+<ul>
+<li><span class="arithmatex">\(I\)</span> is either an interval of the form <span class="arithmatex">\([\bar{\pi}(C), \infty)\)</span> or <span class="arithmatex">\((\bar{\pi}(C), \infty)\)</span></li>
+<li><span class="arithmatex">\(J\)</span> is either an interval of the form <span class="arithmatex">\((-\infty, \underline{\pi}(C)]\)</span> or <span class="arithmatex">\((-\infty, \underline{\pi}(C))\)</span></li>
+</ul>
+</div>
+<div class="admonition quote">
+<p class="admonition-title"><strong>Proof</strong></p>
+<p>We show only the first assertion, the second follows the same argumentation.
+Clearly <span class="arithmatex">\(\bar{\pi}(C)\)</span> is the lower bound of the set <span class="arithmatex">\(I\)</span>, whether or not it is a minimum or an infimum.
+We just have to show that for any <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(I\)</span>, if <span class="arithmatex">\(m&gt;0\)</span>, then <span class="arithmatex">\(x+m\)</span> is also in <span class="arithmatex">\(I\)</span>.
+This follows however from the definition, as for a smart strategy <span class="arithmatex">\(\boldsymbol{\eta}\)</span> such that</p>
+<div class="arithmatex">\[x + \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1 \geq \frac{C}{1+r}\]</div>
+<p>It follows immediately that </p>
+<div class="arithmatex">\[x +m + \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1 \geq m +\frac{C}{1+r} \geq \frac{C}{1+r}\]</div>
+<p>showing that <span class="arithmatex">\(x+m\)</span> is in <span class="arithmatex">\(I\)</span>.</p>
+</div>
+</details>
+<p>We are now in position to show the first proposition regarding the super- and sub-hedging price</p>
+<div class="admonition danger">
+<p class="admonition-title"><strong>Proposition</strong></p>
+<p>If the market is arbitrage free, then for any super-hedging price <span class="arithmatex">\(x\)</span>, sub-hedging price <span class="arithmatex">\(y\)</span> and any pricing measure <span class="arithmatex">\(P^\ast\)</span> it holds</p>
+<div class="arithmatex">\[
+    x \leq E^{P^\ast}\left[ \frac{C}{1+r} \right] \leq y
+\]</div>
+<p>In particular, we get</p>
+<div class="arithmatex">\[
+    \underline{\pi}(C) \leq \inf_{P^\ast \in \mathcal{P}^\ast} E^{P^\ast}\left[ \frac{C}{1+r} \right]\leq \sup_{P^\ast \in \mathcal{P}^\ast} E^{P^\ast}\left[ \frac{C}{1+r} \right]\leq \bar{\pi}(C)
+\]</div>
+</div>
+<details class="quote">
+<summary><strong>Proof</strong></summary>
+<p>Let <span class="arithmatex">\(x\)</span> be a super-hedging price and <span class="arithmatex">\(y\)</span> be a subhedgin price.
+By definition, there exists smart strategies <span class="arithmatex">\(\boldsymbol{\eta}\)</span> and <span class="arithmatex">\(\boldsymbol{\nu}\)</span> in <span class="arithmatex">\(\mathbb{R}^d\)</span> such that</p>
+<div class="arithmatex">\[
+    y + \boldsymbol{\nu}\cdot \Delta \boldsymbol{X}_1 \leq \frac{C}{1+r} \leq x + \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1
+\]</div>
+<p>Now, since the market is arbitrage free, according to the FTAP, for any pricing measure <span class="arithmatex">\(P^\ast\)</span> in <span class="arithmatex">\(\mathcal{P}^\ast\)</span> which is not empty, by taking expectation of this inequality, it holds</p>
+<div class="arithmatex">\[
+    y + \underbrace{E^{P^\ast}\left[\boldsymbol{\nu}\cdot \Delta \boldsymbol{X}_1\right]}_{=0} \leq E^{P^\ast}\left[\frac{C}{1+r} \right]\leq x + \underbrace{E^{P^\ast}\left[\boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1\right]}_{=0}
+\]</div>
+<p>showing the first assertion.</p>
+<p>Since this inequality holds for any super hedging price <span class="arithmatex">\(x\)</span>, any sub hedging price <span class="arithmatex">\(y\)</span> and any pricing measure <span class="arithmatex">\(P^\ast\)</span>, by the definition of <span class="arithmatex">\(\bar{\pi}(C)\)</span> and <span class="arithmatex">\(\underline{\pi}(C)\)</span> the second assertion follows.</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
