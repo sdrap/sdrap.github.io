@@ -767,8 +767,8 @@ The <em>self-financing</em> condition requires that this cost is fully covered b
 </li>
 </ul>
 <p>Hence a portfolio over time is entirely determined by its start value <span class="arithmatex">\(\bar{V}_0\)</span> as well as the strategy <span class="arithmatex">\(\boldsymbol{\eta} = (\eta^1, \ldots, \eta^d)\)</span>.</p>
-<details class="note">
-<summary>How realistic are those assumptions?</summary>
+<details class="remark">
+<summary>Remark: How realistic are those assumptions?</summary>
 <p>In this setting, we make somewhat restrictive assumptions that are disputable namely:</p>
 <ul>
 <li>No dividends.</li>
@@ -800,8 +800,8 @@ Define the discounted prices <span class="arithmatex">\(\boldsymbol{X}=\boldsymb
 \begin{align*}
     V_1     &amp; = \frac{\bar{V}_1}{1+r}\\
             &amp; = \frac{1}{1+r}\left(\bar{V}_0(1+r) +\sum_{k=1}^d \eta^k\left( S^k_1  - (1+r)S_0^k\right)\right)\\
-            &amp; = \bar{V}_0(1+r) +\sum_{k=1}^d \eta^k\left( \frac{S^k_1}{1+r}  - S_0^k\right)\\
-                &amp; = V_0 + \sum_{k=1}^n \eta_k\left( X^k_1 - X^k_0 \right)\\
+            &amp; = \bar{V}_0 +\sum_{k=1}^d \eta^k\left( \frac{S^k_1}{1+r}  - S_0^k\right)\\
+                &amp; = V_0 + \sum_{k=1}^n \eta^k\left( X^k_1 - X^k_0 \right)\\
           &amp; = V_0 + \boldsymbol{\eta} \cdot \left( \boldsymbol{X}_1 - \boldsymbol{X}_0 \right) = V_0 + \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1
 \end{align*}
 \]</div>
@@ -833,13 +833,13 @@ If <span class="arithmatex">\(\Omega\)</span> denotes the collection of all poss
 <p>Similarly, the discounted self-financing portfolio value at time <span class="arithmatex">\(1\)</span> and the discounted asset prices become state-dependent functions:</p>
 <div class="arithmatex">\[
 \begin{align*}
-  \boldsymbol{X}_1\colon \Omega &amp;\longrightarrow \mathbb{R}_{++}^d &amp; V_1 \colon \Omega &amp;\longrightarrow \mathbb{R} \\
+  \boldsymbol{X}_1\colon \Omega &amp;\longrightarrow \mathbb{R}_{+}^d &amp; V_1 \colon \Omega &amp;\longrightarrow \mathbb{R} \\
   \omega &amp; \longmapsto \boldsymbol{X}_1(\omega) = \left( \frac{S_1^1(\omega)}{1+r}, \ldots, \frac{S_1^d(\omega)}{1+r} \right) &amp; \omega &amp;\longmapsto V_1(\omega) = V_0 + \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1(\omega)
 \end{align*}
 \]</div>
 <p>The objective of financial mathematics is to estimate or price these state-dependent portfolios. To achieve this, we need further assessments of how likely each event is to occur. This is where stochastic theory plays a crucial role.</p>
-<div class="admonition tip">
-<p class="admonition-title"><strong>Definition:</strong> One period financial market</p>
+<div class="admonition definition">
+<p class="admonition-title"><strong>Definition:</strong> One Period Financial Market</p>
 <p>Given a probability space <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span>, a <strong>financial market</strong> is defined as follows:</p>
 <ul>
 <li>
@@ -868,7 +868,7 @@ Self financing condition implies</p>
 \]</div>
 </div>
 <details class="warning">
-<summary>What about returns, portfolio weights?</summary>
+<summary><strong>Warning:</strong> What about returns, portfolio weights?</summary>
 <p>Very often in finance, the exposition is done in terms of returns and portfolio weights.
 Talking in terms of returns and weights requires some particular care.</p>
 <p>It is possible to speak of returns for the financial market as the prices at time <span class="arithmatex">\(0\)</span> are strictly positive.
