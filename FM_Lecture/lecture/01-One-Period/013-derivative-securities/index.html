@@ -599,6 +599,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#european-call-and-put-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      European Call and Put Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="European Call and Put Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#put-call-parity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Put Call Parity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#universal-price-bounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Universal Price Bounds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jargon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jargon
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -988,11 +1030,13 @@ Defining <span class="arithmatex">\(\boldsymbol{\nu} = -\boldsymbol{\eta}/\mu \i
     \sup \Pi(C) \geq \bar{\pi}(C).
 \]</div>
 <p>The same argumentation shows that <span class="arithmatex">\(\overline{\pi}(C) = \inf \Pi(C)\)</span>.</p>
+<details class="warning">
+<summary>Warning, the last part of the assertion calls for compactness arguments</summary>
 <p>We are left to show that <span class="arithmatex">\(\overline{\pi}(C)\)</span> is in <span class="arithmatex">\(I\)</span>.
 Without loss of generality, due to the law of one price, we may assume that there is no redundancy; that is, <span class="arithmatex">\(\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 = 0\)</span> implies <span class="arithmatex">\(\boldsymbol{\eta} = 0\)</span>.  </p>
 <p>Pick a sequence <span class="arithmatex">\((m_n)\)</span> of elements in <span class="arithmatex">\(I\)</span> such that <span class="arithmatex">\(m_n \downarrow \overline{\pi}(C)\)</span> and denote by <span class="arithmatex">\(\boldsymbol{\eta}^n\)</span> the corresponding sequence of strategies such that:</p>
 <div class="arithmatex">\[
-    m_n + \boldsymbol{\eta}^n \cdot \Delta \boldsymbol{{X}_1 \geq \frac{C}{1 + r}.
+    m_n + \boldsymbol{\eta}^n \cdot \Delta \boldsymbol{X}_1 \geq \frac{C}{1 + r}.
 \]</div>
 <p>If <span class="arithmatex">\((\boldsymbol{\eta}^n)\)</span> is bounded, up to a subsequence, we may assume that <span class="arithmatex">\(\boldsymbol{\eta}^n \to \boldsymbol{\eta} \in \mathbb{R}^d\)</span>, for which it holds:</p>
 <div class="arithmatex">\[
@@ -1000,11 +1044,12 @@ Without loss of generality, due to the law of one price, we may assume that ther
 \]</div>
 <p>showing that <span class="arithmatex">\(\bar{\pi}(C)\)</span> is in I.</p>
 <p>If <span class="arithmatex">\(\lim \|\boldsymbol{\eta}^n\| = \infty\)</span>, up to a subsequence, it follows that <span class="arithmatex">\(\boldsymbol{\eta}^n / \|\boldsymbol{\eta}^n\| \to \boldsymbol{\mu}\)</span> with <span class="arithmatex">\(\|\boldsymbol{\mu}\| = 1\)</span>.</p>
-<p>However, it follows that:
-[
-    0 \leq \lim \frac{C}{|\boldsymbol{\eta}^n|(1 + r)} = \lim \frac{\boldsymbol{\eta}^n}{|\boldsymbol{\eta}^n|} \cdot \Delta \boldsymbol{X}_1 + \frac{m_n}{|\boldsymbol{\eta}^n|} = \boldsymbol{\mu} \cdot \Delta \bs{X}_1
-]</p>
+<p>However, it follows that:</p>
+<div class="arithmatex">\[
+    0 \leq \lim \frac{C}{\|\boldsymbol{\eta}^n\|(1 + r)} = \lim \frac{\boldsymbol{\eta}^n}{\|\boldsymbol{\eta}^n\|} \cdot \Delta \boldsymbol{X}_1 + \frac{m_n}{\|\boldsymbol{\eta}^n\|} = \boldsymbol{\mu} \cdot \Delta \boldsymbol{X}_1
+\]</div>
 <p>Since the market is arbitrage-free, it must follow that <span class="arithmatex">\(\boldsymbol{\mu} \cdot \Delta \boldsymbol{X}_1 = 0\)</span>, which by the non-redundancy assumption implies <span class="arithmatex">\(\boldsymbol{\mu} = 0\)</span>, leading to a contradiction since <span class="arithmatex">\(\|\boldsymbol{\mu}\| = 1\)</span>.</p>
+</details>
 </details>
 <div class="admonition definition">
 <p class="admonition-title">Definition</p>
@@ -1058,6 +1103,152 @@ A market with a unique pricing measure is called a <strong>complete</strong> mar
 <p>On the other hand, the proposition shows that unless the claim is attainable, then fair prices of a contingent claim are not unique.
 The choice of a fair price (and therefore a deal) for such a contingent claim is henceforth due to an agreement between the buyer and the seller to choose a price within the interval <span class="arithmatex">\(\Pi(C)\)</span>.
 Therefore, they both have to accept some downside risk since neither will have a price in their confort risk free zone.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: Forward Contract</p>
+<p class="annotate">Recall that forward contract are contingent claims of the form(1)</p>
+<ol>
+<li>Note first that forward contract are not necessarily positive random variable, but usually for contingent claims we can assume that they are greater than some constant.</li>
+</ol>
+<div class="arithmatex">\[
+  C^{fw}(K) = S_1 - K 
+\]</div>
+<p>Suppose that our market is arbitrage free and choose any pricing measure <span class="arithmatex">\(P^\ast\)</span> equivalent to <span class="arithmatex">\(P\)</span>.
+Taking expectation of the the discounted value of the contingent claim yields</p>
+<div class="arithmatex">\[
+  E^{P^\ast}\left[ \frac{C^{fw}}{1+r} \right] = E^{P^\ast}\left[ \frac{S_1}{1+r} \right] - \frac{K}{1+r} = S_0 - \frac{K}{1+r}
+\]</div>
+<p>showing that the fair price of the forward contract is unique.
+It is not surpising as the payoff can be immediately replicated by a portfolio.</p>
+<p>However in financial markets, people speaks and quote the so called <strong>forward price</strong>.
+The definition of a forward price <span class="arithmatex">\(F\)</span> is the value of the strike <span class="arithmatex">\(K\)</span> such that the fair price of the forward contract is equal to <span class="arithmatex">\(0\)</span>.
+In other term, the forward price <span class="arithmatex">\(F\)</span> is given by</p>
+<div class="arithmatex">\[
+  F = (1+r) S_0
+\]</div>
+</div>
+<h2 id="european-call-and-put-options">European Call and Put Options</h2>
+<p>The European call and put options are ubiquitous in finance as the most simple types of options.</p>
+<p>Recall the payoff of such options</p>
+<div class="arithmatex">\[
+\begin{align*}
+  C^{call}(K) &amp; = (S_1-K)^+ &amp; 
+  C^{put}(K) &amp; = (K-S_1)^+
+\end{align*}
+\]</div>
+<p>We suppose that the market is arbitrage free and denote with <span class="arithmatex">\(\pi^{call}(K)\)</span> and <span class="arithmatex">\(\pi^{put}(K)\)</span> the fair prices for each option.</p>
+<p>Since both prices are fair, there exists a pricing measure <span class="arithmatex">\(P^\ast \sim P\)</span> in the extended market where those two options are traded together with the underlying.
+It holds in particular that</p>
+<div class="arithmatex">\[
+\pi^{call}(K) = E^{P^\ast}\left[ \frac{(S_1 - K)^+}{1+r} \right] \quad \text{and}\quad \pi^{put}(K) = E^{P^\ast}\left[ \frac{(K - S_1)^+}{1+r} \right]
+\]</div>
+<h3 id="put-call-parity">Put Call Parity</h3>
+<p>Using the fact that <span class="arithmatex">\((S_1-K)^+ - (K-S_1)^- = S_1-K\)</span> we can derive the so called put/call parity by taking expectation under <span class="arithmatex">\(P^\ast\)</span>:</p>
+<div class="arithmatex">\[
+\pi^{call}(K) - \pi^{put}(K) =  E^{P^\ast}\left[\frac{(S_1-K)^+ - (K-S_1)^+}{1+r}\right] = E^{P^\ast}\left[ \frac{S_1-K}{1+r} \right] = S_0 - \frac{K}{1+r}
+\]</div>
+<div class="admonition danger">
+<p class="admonition-title">Put Call Parity</p>
+<div class="arithmatex">\[
+  \pi^{call}(K) - \pi^{put}(K) = S_0 - \frac{K}{1+r}
+\]</div>
+</div>
+<h3 id="universal-price-bounds">Universal Price Bounds</h3>
+<p>In an arbitrage free market, let <span class="arithmatex">\(\pi^{call} = E^{P^\ast}[C^{call}/(1+r)]\)</span> be any fair price for this call option.
+We are interested at providing bounds for the fair price of this call option.</p>
+<p>On the one hand, it holds that <span class="arithmatex">\(S-K \leq (S-K)^+\)</span>.
+Taking the expectation under <span class="arithmatex">\(P\)</span> of the discounted value of this inequality together with the fact that <span class="arithmatex">\(\pi^{call} \geq 0\)</span> yields</p>
+<div class="arithmatex">\[
+  \left(S_0 - \frac{K}{1+r}\right)^+ \leq \pi
+\]</div>
+<p>On the other hand, it holds that <span class="arithmatex">\((S_1-K)^+ \leq S_1\)</span>, taking expectation of the discounted value of this inequality yields</p>
+<div class="arithmatex">\[
+    \pi^{call} \leq S_0
+\]</div>
+<p>showing the universal bounds for call options <span class="arithmatex">\((S_0 - K/(1+r))^+ \leq \pi{call}\leq S_0\)</span> for any fair price for the call.</p>
+<p>Using put call parity, for any fair price for the put <span class="arithmatex">\(\pi^{put}\)</span> it holds that <span class="arithmatex">\(K/{1+r}\geq \pi^{put}\geq (S_0-K/(1+r))^+ + K/(1+r) - S_0 = (K/(1+r) - S_0)^+\)</span>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Universal Price Bounds</p>
+<div class="arithmatex">\[
+  \begin{equation*}
+  \begin{cases}
+     \left( S_0 -\frac{K}{1+r} \right)^+ \leq \underline{\pi}\left( C^{call}(K) \right) \leq \overline{\pi}\left( C^{call}(K) \right)\leq S_0\\
+      \\
+      \frac{K}{1+r} \leq \underline{\pi}\left( C^{put}(K) \right) \leq \overline{\pi}\left( C^{put}(K) \right)\leq \left( \frac{K}{1+r} - S_0 \right)^+
+  \end{cases}
+  \end{equation*}
+\]</div>
+</div>
+<h3 id="jargon">Jargon</h3>
+<p>A lot of jargon is connected to these options.</p>
+<ul>
+<li>
+<p><strong>Intrinsic Value:</strong> The intrinsic value of the option is the value if it were executed now, that is</p>
+<div class="arithmatex">\[IV^{call} = (S_0-K)^+ \quad \text{and}\quad IV^{put} = (K-S_0)^+\]</div>
+</li>
+<li>
+<p><strong>In/At/Out of the Money:</strong> An option is called <em>in the money</em> if its intrinsic value is strictly positive, <em>at the money</em> if the underlying price equal the strike, <em>out of the money</em> if the intrinsic value is <span class="arithmatex">\(0\)</span> and the underlying price is not equal to the strike.</p>
+</li>
+<li>
+<p><strong>Moneyness:</strong> Moneyness is a concept that has no rigorous definition but stems from a particular property of the call/put option, the positive homogeneity of their payoff, that it <span class="arithmatex">\((\lambda x)^+ = \lambda x^+\)</span> for any <span class="arithmatex">\(\lambda &gt;0\)</span>.</p>
+<p>We can therefore normalize the payoff of options by either <span class="arithmatex">\(K\)</span>, <span class="arithmatex">\(S_0\)</span> or <span class="arithmatex">\(K/(1+r)\)</span>, etc.
+Most of those normalizations are brought in connection with the resulting Black-Scholes-Merton formula, but let us stress some aspects of this definition.
+The simple version of moneyness is related to the intrinsic value of the option.
+In the case of a call, we can normalize by the strike where the simple spot moneyness is defined as <span class="arithmatex">\(S_0/K\)</span>.
+Indeed, it holds</p>
+<div class="arithmatex">\[
+  \pi^{call}(K) = K E^{P^\ast}\left[ \frac{1}{1+r}\left( \frac{S_1}{K} - 1 \right)^+ \right] 
+\]</div>
+<p>The intrinsic value of the normalize option in the inner part of the expectation is <span class="arithmatex">\((S_0/K-1)^+\)</span> and therefore is in the money iff the simple (call) spot moneyness is greater than one and out of the money otherwise.</p>
+<p>In the case of the put option we normalize by the current underlying price <span class="arithmatex">\(S_0\)</span>, that is, the simple spot moneyness is defined as <span class="arithmatex">\(K/S_0\)</span>:</p>
+<div class="arithmatex">\[
+  \pi^{put}(K) = S_0 E^{P^\ast}\left[ \frac{1}{1+r}\left(\frac{K}{S_0}- \frac{S_1}{S_0} \right)^+ \right] 
+\]</div>
+<p>The intrinsic value of this normalized option in the inner part of the expectation is <span class="arithmatex">\((K/S_0 -1)^+\)</span> which is positive iff the simple (put) spot moneyness is greater than one and out of the money otherwise.</p>
+<p>Since those definition is rather confusing, always rely on your mathematical knowledge about what each should mean.</p>
+</li>
+</ul>
+<!-- * **Moneyness:** A particular property of the call/put option comes from the positive homogeneity of their payoff, that it $(\lambda x)^+ = \lambda x^+$ for any $\lambda >0$ -->
+<!-- A second property of those options is the *positive homogeneity* of the payoff since $\lambda x^+ = (\lambda x)^+$ for every $\lambda >0$. -->
+<!--     It follows that we can normalize the price of call/put options by the strike as follows -->
+<!---->
+<!--     \[ -->
+<!--       \begin{align*} -->
+<!--           \pi^{call}(K) & = \frac{K}{1+r} E^{P^\ast}\left[ \left( \frac{S_1}{K} - 1\right)^+ \right]\\ -->
+<!--           \pi^{put}(K) & = \frac{K}{1+r} E^{P^\ast}\left[ \left( 1- \frac{S_1}{K} \right)^+ \right] -->
+<!--       \end{align*} -->
+<!--     \] -->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!-- !!! example "Example: Call Option price bounds" -->
+<!---->
+<!--     Recall the payoff of a European call option $C^{call}(K) = (S_1 - K)^+$. -->
+<!--     In an arbitrage free market, let $\pi = E^{P^\ast}[C^{call}/(1+r)]$ be any fair price for this call option. -->
+<!--     We are interested at providing bounds for the fair price of this call option. -->
+<!---->
+<!--     On the one hand, it holds that $S-K \leq (S-K)^+$. -->
+<!--     Taking the expectation under $P$ of the discounted value of this inequality together with the fact that $\pi \geq 0$ yields -->
+<!---->
+<!--     \[ -->
+<!--       \left(S_0 - \frac{K}{1+r}\right)^+ \leq \pi -->
+<!--     \] -->
+<!---->
+<!--     On the other hand, it holds that $(S_1-K)^+ \leq S_1$, taking expectation of the discounted value of this inequality yields -->
+<!---->
+<!--     \[ -->
+<!--         \pi \leq S_0 -->
+<!--     \] -->
+<!---->
+<!--     showing the universal bounds for call options $(S_0 - K/(1+r))^+ \leq \pi \leq S_0$ for any fair prices. -->
+<!--     In other terms, it holds -->
+<!---->
+<!--     \[ -->
+<!--         \underbrace{\left( S_0 -\frac{K}{1+r} \right)^+}_{\text{Intrinsic value of the call option}}\leq \underline{\pi}\left( C^{call}(K) \right) \leq \overline{\pi}\left( C^{call}(K) \right)\leq S_0 -->
+<!--     \] -->
+<!---->
 
 
 
