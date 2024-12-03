@@ -751,17 +751,17 @@ It grants the right to get the price deviation (positive or negative) of the und
 <p>Usually, the strike <span class="arithmatex">\(K\)</span> is at the mid point between <span class="arithmatex">\(\underline{K}\)</span> and <span class="arithmatex">\(\overline{K}\)</span>.</p>
 </li>
 <li>
-<p><strong>Straddle Option Payoff</strong></p>
+<p><strong>Butterfly Option Payoff</strong></p>
 <hr />
-<p><img align="align" alt="Straddle Payoff" src="../../../images/butterfly_payoff_dark.svg#only-dark" />
-<img align="right" alt="Straddle Payoff" src="../../../images/butterfly_payoff_white.svg#only-light" /></p>
+<p><img align="align" alt="Butterfly Payoff" src="../../../images/butterfly_payoff_dark.svg#only-dark" />
+<img align="right" alt="Butterfly Payoff" src="../../../images/butterfly_payoff_white.svg#only-light" /></p>
 </li>
 </ul>
 </div>
 </div>
 <p>Note that each of these options can be expressed as <span class="arithmatex">\(f(S)\)</span>, where <span class="arithmatex">\(S\)</span> is the underlying asset, and <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> is some continuous function.</p>
-<div class="admonition tip">
-<p class="admonition-title"><strong>Definition:</strong> Contingent Claim</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Contingent Claim</p>
 <ul>
 <li>
 <p class="annotate">A <em>contingent claim</em> <span class="arithmatex">\(C\)</span> is a positive random variable.(1)</p>
@@ -818,8 +818,8 @@ This is however true if the market is arbitrage free as seen in the subsequent p
 \mathcal{P}^\ast := \left\{ P^\ast \sim P \colon E^{P^\ast}\left[ \Delta \boldsymbol{X}_1 \right] = 0 \text{ and } dP^\ast/dP \text{ is bounded}\right\}
 \]</div>
 <p>In particular, the FTAP can be formulated as "The market is arbitrage free if and only if <span class="arithmatex">\(\mathcal{P}^\ast\)</span> is not empty".</p>
-<details class="note">
-<summary>Geometric Interpretation I</summary>
+<details class="remark">
+<summary>Remark: Geometric Interpretation I</summary>
 <p>Define <span class="arithmatex">\(I\)</span> and <span class="arithmatex">\(J\)</span> as the set of super- and sub-hedging prices, respectively:</p>
 <div class="arithmatex">\[
 \begin{align*}
@@ -849,19 +849,19 @@ This follows however from the definition, as for a smart strategy <span class="a
 </div>
 </details>
 <p>We are now in position to show the first proposition regarding the super- and sub-hedging price</p>
-<div class="admonition danger">
-<p class="admonition-title"><strong>Proposition</strong></p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
 <p>If the market is arbitrage free, then for any super-hedging price <span class="arithmatex">\(x\)</span>, sub-hedging price <span class="arithmatex">\(y\)</span> and any pricing measure <span class="arithmatex">\(P^\ast\)</span> it holds</p>
 <div class="arithmatex">\[
-    x \leq E^{P^\ast}\left[ \frac{C}{1+r} \right] \leq y
+    y \leq E^{P^\ast}\left[ \frac{C}{1+r} \right] \leq x
 \]</div>
 <p>In particular, we get</p>
 <div class="arithmatex">\[
     \underline{\pi}(C) \leq \inf_{P^\ast \in \mathcal{P}^\ast} E^{P^\ast}\left[ \frac{C}{1+r} \right]\leq \sup_{P^\ast \in \mathcal{P}^\ast} E^{P^\ast}\left[ \frac{C}{1+r} \right]\leq \bar{\pi}(C)
 \]</div>
 </div>
-<details class="quote">
-<summary><strong>Proof</strong></summary>
+<details class="proof">
+<summary>Proof</summary>
 <p>Let <span class="arithmatex">\(x\)</span> be a super-hedging price and <span class="arithmatex">\(y\)</span> be a subhedgin price.
 By definition, there exists smart strategies <span class="arithmatex">\(\boldsymbol{\eta}\)</span> and <span class="arithmatex">\(\boldsymbol{\nu}\)</span> in <span class="arithmatex">\(\mathbb{R}^d\)</span> such that</p>
 <div class="arithmatex">\[
@@ -874,6 +874,190 @@ By definition, there exists smart strategies <span class="arithmatex">\(\boldsym
 <p>showing the first assertion.</p>
 <p>Since this inequality holds for any super hedging price <span class="arithmatex">\(x\)</span>, any sub hedging price <span class="arithmatex">\(y\)</span> and any pricing measure <span class="arithmatex">\(P^\ast\)</span>, by the definition of <span class="arithmatex">\(\bar{\pi}(C)\)</span> and <span class="arithmatex">\(\underline{\pi}(C)\)</span> the second assertion follows.</p>
 </details>
+<p>We however still need to define the notion of of a fair price for a contingent claim and how it relates to the super-/sub-hedging price.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Fair Price of Contingent Claims</p>
+<p>Given a contingent claim <span class="arithmatex">\(C\)</span>, a price <span class="arithmatex">\(\pi(C)\)</span> is called a <em>fair price</em> if the original financial market extended with the new financial instrument <span class="arithmatex">\(S^{d+1}\)</span> given by</p>
+<div class="arithmatex">\[
+  S^{d+1}_0 = \pi(C) \quad \text{and}\quad S^{d+1}_1 = C
+\]</div>
+<p>is arbitrage free.</p>
+<p>We denote by <span class="arithmatex">\(\Pi(C)\)</span> the set of all possible fair prices for the contingent claim <span class="arithmatex">\(C\)</span>.</p>
+</div>
+<p>In other terms, if the financial market considers the new financial instrument <span class="arithmatex">\(C\)</span> traded at price <span class="arithmatex">\(\pi(C)\)</span> it remains arbitrage free.
+As pendant to the super- and sub-hedging price, with the help of the FTAP we can connect arbitrage free prices to pricing measures as follows.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(C\)</span> be a contingent claim on an arbitrage-free financial market.
+Then the set of fair prices for the contingent claim <span class="arithmatex">\(C\)</span> is non-empty and given by:</p>
+<div class="arithmatex">\[
+  \Pi(C) := \left\{ E^{P^\ast}\left[ \frac{C}{1+r} \right] : P^\ast \sim P \text{ pricing measure with bounded density}  \right\}.
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>A price <span class="arithmatex">\(\pi(C)\)</span> for <span class="arithmatex">\(C\)</span> is fair if the extended financial market is arbitrage-free.
+By the <strong>FTAP</strong>, it follows that there exists a pricing measure <span class="arithmatex">\(\hat{P}\)</span> equivalent to <span class="arithmatex">\(P\)</span> with bounded density such that:</p>
+<div class="arithmatex">\[
+    E^{\hat{P}}\left[\frac{\boldsymbol{S}_1}{1+r}\right] = \boldsymbol{S}_0, \quad \text{and} \quad E^{\hat{P}}\left[\frac{C}{1+r}\right] = \pi(C).
+\]</div>
+<p>In particular, <span class="arithmatex">\(\hat{P}\)</span> is a pricing measure equivalent to <span class="arithmatex">\(P\)</span> for the smaller market <span class="arithmatex">\(\boldsymbol{S}\)</span>, that is, an element of <span class="arithmatex">\(\mathcal{P}^\ast\)</span>, showing that:</p>
+<div class="arithmatex">\[
+    \Pi(C) \subseteq \{ E^{P^\ast}[C/(1+r)] : P^\ast \in \mathcal{P}^\ast \}.
+\]</div>
+<p class="annotate">Reciprocally, let <span class="arithmatex">\(\pi(C)\)</span> be an element of <span class="arithmatex">\(\{ E^{P^\ast}[C/(1+r)] : P^\ast \in \mathcal{P}^\ast \}\)</span>.
+It follows that <span class="arithmatex">\(\pi(C) = E^{P^\ast}[C/(1+r)]\)</span> for some <span class="arithmatex">\(P^\ast \sim P\)</span> with bounded density.
+Hence, <span class="arithmatex">\(P^\ast\)</span> is a pricing measure equivalent to <span class="arithmatex">\(P\)</span> for the extended market, showing by the <strong>FTAP</strong> that the extended market is arbitrage-free.
+Hence, <span class="arithmatex">\(\pi(C) \in \Pi(C)\)</span>, proving the reverse inclusion.(1)</p>
+<ol>
+<li>
+<p>The proof is not fully complete unless we can show that we can show that <span class="arithmatex">\(\Pi(C)\)</span> is non-empty.
+    As done previously, we pick a probability measure <span class="arithmatex">\(\tilde{P}\)</span> equivalent to <span class="arithmatex">\(P\)</span> such that <span class="arithmatex">\(E^{\tilde{P}}[C] &lt; \infty\)</span>. Under <span class="arithmatex">\(\tilde{P}\)</span>, the market is arbitrage-free.
+    The <strong>FTAP</strong> guarantees the existence of a pricing measure <span class="arithmatex">\(P^\ast\)</span> equivalent to <span class="arithmatex">\(P\)</span> with bounded density. 
+    In particular, <span class="arithmatex">\(E^{P^\ast}[C] &lt; \infty\)</span>, and therefore:</p>
+<div class="arithmatex">\[
+    \pi(C) = E^{P^\ast}[C/(1+r)] \in \Pi(C).
+\]</div>
+</li>
+</ol>
+</details>
+<p>We are now in place to show the relation ship between super- sub-hedging prices, pricing measures and fair prices.
+In a nuttshell that the following illustration holds</p>
+<p><img alt="Super- Sub-Hedging" src="../../../images/superhedging_dark.svg#only-dark" />
+<img alt="Super- Sub-Hedging" src="../../../images/superhedging_white.svg#only-light" /></p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem: Super/Sub Hedging and Fair Prices</p>
+<p>Let <span class="arithmatex">\(C\)</span> be a contingent claim.
+For</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        J &amp; = \left\{ y\in \mathbb{R}\colon y + \boldsymbol{\eta}\cdot \Delta \boldsymbol{X}_1 \leq \frac{C}{1+r} \text{ for some }\boldsymbol{\eta}\in \mathbb{R}^d \right\} &amp;&amp; \text{Risk free subhedging prices}\\
+        \underline{\pi}(C) &amp; = \sup J &amp;&amp; \text{Sub-hedging price}\\
+        I &amp; = \left\{ x\in \mathbb{R}\colon x + \boldsymbol{\nu}\cdot \Delta \boldsymbol{X}_1 \leq \frac{C}{1+r} \text{ for some }\boldsymbol{\nu}\in \mathbb{R}^d \right\} &amp;&amp; \text{Risk free superhedging prices}\\
+        \underline{\pi}(C) &amp; = \inf I &amp;&amp; \text{Super-hedging price}\\
+        \Pi(C) &amp; = \left\{ \pi(C)\colon \text{fair prices} \right\} &amp;&amp; \text{Fair prices}\\
+        \mathcal{P}^\ast &amp; = \left\{ P^\ast \sim P \colon P^\ast \text{ is a pricing measure} \right\} &amp;&amp; \text{Pricing measures}
+    \end{align*}
+\]</div>
+<p>If the market is arbitrage free, then it holds that <span class="arithmatex">\(J\)</span>, <span class="arithmatex">\(I\)</span>, and <span class="arithmatex">\(\Pi(C)\)</span> are intervals such that <span class="arithmatex">\(J\leq \Pi(C) \leq I\)</span>.
+Furthermore </p>
+<div class="arithmatex">\[
+    \begin{align*}
+        J &amp; = (-\infty, \underline{\pi}(C)] &amp;
+        \Pi(C) &amp; = \left\{ E^{P^\ast}\left[ \frac{C}{1+r} \right] \colon P^\ast \in \mathcal{P}^\ast \right\} &amp;
+        I &amp; = [\overline{\pi}(C), \infty ) 
+    \end{align*}
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        \underline{\pi}(C) &amp; = \inf \Pi(C) &amp; \overline{\pi}(C) &amp; = \sup \Pi(C)
+    \end{align*}
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>We already saw that <span class="arithmatex">\(J\)</span> and <span class="arithmatex">\(I\)</span> are intervals (see geometric interpretation remark above).
+We also say that <span class="arithmatex">\(\Pi(C) = \{E^{P^\ast}[C/(1+r)]\colon P^\ast \in \mathcal{P}^\ast\}\)</span> and that <span class="arithmatex">\(J \leq \Pi(C) \leq I\)</span>.
+The fact that <span class="arithmatex">\(\Pi(C)\)</span> is also an interval follows directly from <span class="arithmatex">\(\mathcal{P}^\ast\)</span> is a convex set, same argumentation as for <span class="arithmatex">\(\mathcal{C}\)</span> in the proof of the <strong>FTAP</strong>.</p>
+<p>We are left to show that <span class="arithmatex">\(\underline{\pi}(C) \in J\)</span> and <span class="arithmatex">\(\overline{\pi}(C) \in I\)</span> and that <span class="arithmatex">\(\underline{\pi}(C) = \inf \Pi(C)\)</span> as well as <span class="arithmatex">\(\overline{\pi}(C)  = \sup \Pi(C)\)</span>.</p>
+<p>Let us proove that <span class="arithmatex">\(\overline{\pi}(C) = \sup \Pi(C)\)</span>.
+We already know that <span class="arithmatex">\(\overline{\pi}(C) \geq \sup \Pi(C)\)</span>
+Suppose <span class="arithmatex">\(\sup \Pi(C) &lt; \infty\)</span>, otherwise the equality is trivial.
+Let <span class="arithmatex">\(m &gt; \sup \Pi(C)\)</span>.
+By definition, the market extended with <span class="arithmatex">\((m, C)\)</span> admits an arbitrage opportunity.
+That is, there exist <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span> and <span class="arithmatex">\(\mu \in \mathbb{R}\)</span> such that:</p>
+<div class="arithmatex">\[
+    \begin{cases}
+        P\left[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 + \mu \left(\frac{C}{1+r} - m\right) \geq 0\right] = 1, \\
+        P\left[\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 + \mu \left(\frac{C}{1+r} - m\right) &gt; 0\right] &gt; 0.
+    \end{cases}
+\]</div>
+<p>Since the original market is arbitrage-free, it follows that <span class="arithmatex">\(\mu \neq 0\)</span>.
+Taking the expectation of the positive random variable <span class="arithmatex">\(\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 + \mu \left(\frac{C}{1+r} - m\right)\)</span> with respect to <span class="arithmatex">\(P^\ast \in \mathcal{P}^\ast\)</span> yields:</p>
+<div class="arithmatex">\[
+    \mu E^{P^\ast}\left[\frac{C}{1+r} - m\right] \geq 0.
+\]</div>
+<p>By definition of <span class="arithmatex">\(m\)</span>, this implies <span class="arithmatex">\(\mu &lt; 0\)</span>.
+Defining <span class="arithmatex">\(\boldsymbol{\nu} = -\boldsymbol{\eta}/\mu \in \mathbb{R}^d\)</span> yields:</p>
+<div class="arithmatex">\[
+    m + \boldsymbol{\nu} \cdot \Delta \boldsymbol{X}_1 \geq \frac{C}{1+r},
+\]</div>
+<p>showing that <span class="arithmatex">\(m\)</span> is in <span class="arithmatex">\(I\)</span>, and therefore <span class="arithmatex">\(m \geq \bar{\pi}(C)\)</span>. Consequently:</p>
+<div class="arithmatex">\[
+    \sup \Pi(C) \geq \bar{\pi}(C).
+\]</div>
+<p>The same argumentation shows that <span class="arithmatex">\(\overline{\pi}(C) = \inf \Pi(C)\)</span>.</p>
+<p>We are left to show that <span class="arithmatex">\(\overline{\pi}(C)\)</span> is in <span class="arithmatex">\(I\)</span>.
+Without loss of generality, due to the law of one price, we may assume that there is no redundancy; that is, <span class="arithmatex">\(\boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 = 0\)</span> implies <span class="arithmatex">\(\boldsymbol{\eta} = 0\)</span>.  </p>
+<p>Pick a sequence <span class="arithmatex">\((m_n)\)</span> of elements in <span class="arithmatex">\(I\)</span> such that <span class="arithmatex">\(m_n \downarrow \overline{\pi}(C)\)</span> and denote by <span class="arithmatex">\(\boldsymbol{\eta}^n\)</span> the corresponding sequence of strategies such that:</p>
+<div class="arithmatex">\[
+    m_n + \boldsymbol{\eta}^n \cdot \Delta \boldsymbol{{X}_1 \geq \frac{C}{1 + r}.
+\]</div>
+<p>If <span class="arithmatex">\((\boldsymbol{\eta}^n)\)</span> is bounded, up to a subsequence, we may assume that <span class="arithmatex">\(\boldsymbol{\eta}^n \to \boldsymbol{\eta} \in \mathbb{R}^d\)</span>, for which it holds:</p>
+<div class="arithmatex">\[
+    \frac{C}{1 + r} \leq m_n + \boldsymbol{\eta}^n \cdot \Delta \boldsymbol{X}_1 \to \bar{\pi}(C) + \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1,
+\]</div>
+<p>showing that <span class="arithmatex">\(\bar{\pi}(C)\)</span> is in I.</p>
+<p>If <span class="arithmatex">\(\lim \|\boldsymbol{\eta}^n\| = \infty\)</span>, up to a subsequence, it follows that <span class="arithmatex">\(\boldsymbol{\eta}^n / \|\boldsymbol{\eta}^n\| \to \boldsymbol{\mu}\)</span> with <span class="arithmatex">\(\|\boldsymbol{\mu}\| = 1\)</span>.</p>
+<p>However, it follows that:
+[
+    0 \leq \lim \frac{C}{|\boldsymbol{\eta}^n|(1 + r)} = \lim \frac{\boldsymbol{\eta}^n}{|\boldsymbol{\eta}^n|} \cdot \Delta \boldsymbol{X}_1 + \frac{m_n}{|\boldsymbol{\eta}^n|} = \boldsymbol{\mu} \cdot \Delta \bs{X}_1
+]</p>
+<p>Since the market is arbitrage-free, it must follow that <span class="arithmatex">\(\boldsymbol{\mu} \cdot \Delta \boldsymbol{X}_1 = 0\)</span>, which by the non-redundancy assumption implies <span class="arithmatex">\(\boldsymbol{\mu} = 0\)</span>, leading to a contradiction since <span class="arithmatex">\(\|\boldsymbol{\mu}\| = 1\)</span>.</p>
+</details>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A contingent claim <span class="arithmatex">\(C\)</span> is called <em>replicable</em> — <em>attainable</em>, <em>hedgeable</em>, or <em>redundant</em> — if there exists a portfolio with start value <span class="arithmatex">\(\bar{V}_0\)</span> and strategy <span class="arithmatex">\(\boldsymbol{\eta} \in \mathbb{R}^d\)</span> such that:</p>
+<div class="arithmatex">\[
+    C = \bar{V}_1 = \bar{V}_0 + \boldsymbol{\eta} \cdot \left(\boldsymbol{S}_1 - \boldsymbol{S}_0(1+r)\right).
+\]</div>
+</div>
+<p>In other term, a contingent claim is replicable if its outcome can be fully attained by a self financing portfolio.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(C\)</span> be a contingent claim in an arbitrage-free market. Then:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(C\)</span> is replicable if and only if <span class="arithmatex">\(\overline{\pi}(C) = \underline{\pi}(C)\)</span> which is the unique price of the contingent claim</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(C\)</span> is not replicable, then <span class="arithmatex">\(\overline{\pi}(C) &gt; \underline{\pi}(C)\)</span>, and:</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+    \Pi(C) = \left(\overline{\pi}(C), \underline{\pi}(C)\right).
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>Clearly, if <span class="arithmatex">\(C\)</span> is replicable, it follows that <span class="arithmatex">\(\underline{\pi}(C) = \overline{\pi}(C)\)</span> by the definition of <span class="arithmatex">\(\underline{\pi}\)</span> and <span class="arithmatex">\(\overline{\pi}\)</span>.
+The reciprocal follows from the second assertion.
+To prove the second assertion:</p>
+<ol>
+<li><strong><span class="arithmatex">\(\Pi(C)\)</span> is an interval</strong></li>
+<li>
+<p><strong>Non-replicability implies that <span class="arithmatex">\(\bar{\pi}(C) \not\in \Pi(C)\)</span></strong>:
+    Indeed, by the previous theorem, there exists a strategy <span class="arithmatex">\(\boldsymbol{\eta}\)</span> such that:</p>
+<div class="arithmatex">\[
+    \bar{\pi}(C) + \boldsymbol{\eta} \cdot \Delta \boldsymbol{X}_1 \geq \frac{C}{1+r}.
+\]</div>
+<p>Since <span class="arithmatex">\(C\)</span> is not replicable, this inequality cannot hold with equality <span class="arithmatex">\(P\)</span>-almost surely.
+This demonstrates <span class="arithmatex">\(\bar{\pi}(C) \not\in \Pi(C)\)</span>.</p>
+</li>
+</ol>
+<p>Since <span class="arithmatex">\(\overline{\pi}(C) = \sup \Pi(C)\)</span>, it follows that <span class="arithmatex">\(\Pi(C)\)</span> forms an open interval:</p>
+<div class="arithmatex">\[
+    \Pi(C) = \left(\underline{\pi}(C), \overline{\pi}(C)\right)
+\]</div>
+</details>
+<p>A condition that garantees that every contingent claim is replicable and henceforth with a unique price is when <span class="arithmatex">\(\mathcal{P}^\ast\)</span> contains a unique pricing measure.
+In such a market every contingent claim is uniquely priced and hedgable.
+In other terms every contingent claim in a complete financial market is redundant since they can all be achieved by a portfolio.
+A market with a unique pricing measure is called a <strong>complete</strong> market</p>
+<p>On the other hand, the proposition shows that unless the claim is attainable, then fair prices of a contingent claim are not unique.
+The choice of a fair price (and therefore a deal) for such a contingent claim is henceforth due to an agreement between the buyer and the seller to choose a price within the interval <span class="arithmatex">\(\Pi(C)\)</span>.
+Therefore, they both have to accept some downside risk since neither will have a price in their confort risk free zone.</p>
 
 
 
