@@ -1,0 +1,1278 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/lecture/02-risk-management/021-what-is-risk/">
+      
+      
+        <link rel="prev" href="../../01-One-Period/013-derivative-securities/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>What is Risk - Financial Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-risk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Financial Mathematics" class="md-header__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Financial Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              What is Risk
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Financial Mathematics" class="md-nav__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Financial Mathematics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/001-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            One Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-One-Period/011-mathematical-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematical Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-One-Period/012-arbitrage-pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbitrage and Pricing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-One-Period/013-derivative-securities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Derivative Securities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Risk Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Risk Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    What is Risk
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    What is Risk
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#two-examples-for-risk-assessment-instruments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Examples for Risk Assessment Instruments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Examples for Risk Assessment Instruments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#markowitz-mean-variance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markowitz Mean Variance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-at-risk-vr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Value at Risk (V@R)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sound-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sound Properties?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="what-is-risk">What is Risk</h1>
+<p>Even if the notion of risk is colloquial and everyone intuitively understands it, it is far from clear what it is the exact definition.</p>
+<p>We saw in the previous chapter how to price contingent claims in a "risk-neutral way" ensured by an arbitrage-free financial market. However, such pricing does not tell us much about the amount of "risk" one undertakes when investing in one product or another.</p>
+<p>Let us consider the following example.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <span class="arithmatex">\(\Omega=\{\omega_1,\omega_2,\omega_3\}\)</span>, <span class="arithmatex">\(\mathcal{F}=2^\Omega\)</span>, and the "objective probability" measure <span class="arithmatex">\(P\)</span> given by <span class="arithmatex">\(P[\{\omega_1\}]=0.1\)</span>, <span class="arithmatex">\(P[\{\omega_2\}]=0.85\)</span>, and <span class="arithmatex">\(P[\{\omega_3\}]=0.05\)</span>. Our bank account <span class="arithmatex">\(B_0=1\)</span> and <span class="arithmatex">\(B_1=(1+r)\)</span>. We have two stocks with the same start price <span class="arithmatex">\(S_0^1=S_0^2=100\)</span> and prices tomorrow:</p>
+<div class="arithmatex">\[
+S_1^1(\omega)=
+\begin{cases}
+    110 &amp; \text{if } \omega = \omega_1 \\
+    105 &amp; \text{if } \omega = \omega_2 \\
+    100 &amp; \text{if } \omega = \omega_3
+\end{cases}
+\quad \text{and} \quad
+S_1^2(\omega)=
+\begin{cases}
+    160 &amp; \text{if } \omega = \omega_1 \\
+    110 &amp; \text{if } \omega = \omega_2 \\
+    0   &amp; \text{if } \omega = \omega_3
+\end{cases}
+\]</div>
+<p>Simple computation shows that for <span class="arithmatex">\(r=\frac{1}{15} \approx 6.66\%\)</span>, there exists a unique risk-neutral pricing measure <span class="arithmatex">\(P^\ast\)</span> given by:</p>
+<div class="arithmatex">\[
+P^\ast[\{\omega_1\}] = p_1^\ast = \frac{2}{3}, \quad P^\ast[\{\omega_3\}] = p_3^\ast = \frac{1}{3}, \quad \text{and} \quad P^\ast[\{\omega_2\}] = p_2^\ast = 0
+\]</div>
+<p>Now, as a portfolio manager, you face the dilemma of which stock you would choose or what proportion you would allocate to one or the other. If the only rationale underlying your decision process is given in terms of the risk-neutral pricing, there is no difference between the two stocks, and you are indifferent.</p>
+<p>However, you intuitively see that the first stock is a blue chip, whereas the second one is rather the hot but "risky" kid on the playground—a startup or so. Your decision process would likely be driven by a "risk/reward" analysis in the face of "uncertainty," whatever that means.</p>
+</div>
+<p>We make the analysis even simpler with the following second example.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>You own 1,000 RMB and have the choice between the following games:</p>
+<ol>
+<li>
+<p>Pay 1,000 and get immediately:</p>
+<div class="arithmatex">\[
+\begin{cases}
+    2,000 &amp; \text{with probability } 50\% \\
+    0     &amp; \text{otherwise}
+\end{cases}
+\]</div>
+</li>
+<li>
+<p>Pay 1,000 and get immediately:</p>
+<div class="arithmatex">\[
+ \begin{cases}
+     1,200 &amp; \text{with probability } \frac{5}{6} \approx 83.33\% \\
+     0     &amp; \text{otherwise}
+ \end{cases}
+\]</div>
+</li>
+<li>
+<p>Pay 1,000 and get immediately:</p>
+<div class="arithmatex">\[
+ \begin{cases}
+     1,300 &amp; \text{with probability } 25\% \\
+     900   &amp; \text{otherwise}
+ \end{cases}
+\]</div>
+</li>
+<li>
+<p>Pay 1,000 and get immediately:</p>
+<div class="arithmatex">\[
+ \begin{cases}
+     1,100 &amp; \text{with probability } 50\% \\
+     900   &amp; \text{otherwise}
+ \end{cases}
+\]</div>
+</li>
+<li>
+<p>Do nothing and keep your 1,000.</p>
+</li>
+</ol>
+<p>All these games have an expected return of 0. However, you would likely have a preference regarding which one is the best. Considering their standard deviations—that is, <span class="arithmatex">\(E[(X - E[X])^2]^{1/2}\)</span>—it holds:</p>
+<div class="arithmatex">\[
+  \begin{aligned}
+      \mathrm{STD}(\text{game 1}) &amp; \approx 1,000, \\
+      \mathrm{STD}(\text{game 2}) &amp; \approx 447.21, \\
+      \mathrm{STD}(\text{game 3}) &amp; \approx 173.21, \\
+      \mathrm{STD}(\text{game 4}) &amp; \approx 100, \\
+      \mathrm{STD}(\text{game 5}) &amp; \approx 0.
+  \end{aligned}
+\]</div>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Risk perception is a subjective view of how you assess uncertain prospective outcomes.
+This may differ from one person to another as well as from one context to another.
+How can we model this fact mathematically?</p>
+</div>
+<h2 id="two-examples-for-risk-assessment-instruments">Two Examples for Risk Assessment Instruments</h2>
+<h3 id="markowitz-mean-variance">Markowitz Mean Variance</h3>
+<p>The deviation from the mean appears to be a good indicator of our aversion to uncertainty. This is why Markowitz introduced the following criterion to assess the trade-off between risk and rewards in terms of variance and means.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Given a square integrable random variable <span class="arithmatex">\( X \)</span>—modeling some payoff such as a portfolio strategy, industrial projects, or any management decision—the <em>Markowitz mean/variance</em> measure is defined as:</p>
+<div class="arithmatex">\[
+MV_{\alpha}(X) = E[X] - \frac{\alpha}{2} \text{VAR}(X)
+\]</div>
+<p>where:</p>
+<div class="arithmatex">\[
+\text{VAR}(X) = E\left[(X - E[X])^2\right]
+\]</div>
+<p>is the variance of the random variable, and <span class="arithmatex">\( \alpha \)</span> is a positive number.</p>
+</div>
+<p>For any value of <span class="arithmatex">\( \alpha \)</span>, you can check that assessing previous games in terms of mean and variance will rank them, with the largest standard deviation corresponding to the worst game and the smallest standard deviation corresponding to the best game. </p>
+<p>The Markowitz mean-variance approach was a highly successful instrument for finding optimal portfolio strategies.
+It can also be used as a risk assessment measure.
+However, since we are more interested in the downside risks, we consider risk measures defined for the random variable <span class="arithmatex">\( L = -X \)</span>, where <span class="arithmatex">\( X \)</span> represents returns.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>The <em>Markowitz risk measure</em> is defined as:</p>
+<div class="arithmatex">\[
+  RMV_{\alpha}(L) = E[L] + \frac{\alpha}{2} \text{VAR}(L)
+\]</div>
+<p>where <span class="arithmatex">\( L \)</span> is a square integrable loss profile.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>The Markowitz risk measure satisfies the following properties:</p>
+<ol>
+<li>
+<p><strong>Cash-invariance</strong>: For every loss profile <span class="arithmatex">\( L \)</span> and <span class="arithmatex">\( m \in \mathbb{R} \)</span>,</p>
+<div class="arithmatex">\[
+  RMV_{\alpha}(L - m) = RMV_{\alpha}(L) - m.
+\]</div>
+</li>
+<li>
+<p><strong>Convexity</strong>: For any two loss profiles <span class="arithmatex">\( L_1, L_2 \)</span> and <span class="arithmatex">\( \lambda \in [0, 1] \)</span>,</p>
+<div class="arithmatex">\[
+  RMV_{\alpha}(\lambda L_1 + (1 - \lambda)L_2) \leq \lambda RMV_{\alpha}(L_1) + (1 - \lambda)RMV_{\alpha}(L_2) \leq \max \left\{ RMV_{\alpha}(L_1), RMV_{\alpha}(L_2)\right\}.
+\]</div>
+</li>
+<li>
+<p><strong>Law Invariance</strong>: If two loss profiles <span class="arithmatex">\( L_1 \)</span> and <span class="arithmatex">\( L_2 \)</span> have the same CDF, then:</p>
+<div class="arithmatex">\[
+  RMV_{\alpha}(L_1) = RMV_{\alpha}(L_2).
+\]</div>
+</li>
+</ol>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<ol>
+<li>
+<p><strong>Cash-invariance:</strong> For every <span class="arithmatex">\( m \in \mathbb{R} \)</span>, and loss <span class="arithmatex">\( L \)</span>, it holds:</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     RMV_{\alpha}(L-m) &amp; = E[L-m] + \frac{\alpha}{2} E\left[\left(L-m-E[L-m]\right)^2\right]\\
+                       &amp; = E[L] + \frac{\alpha}{2} E\left[\left(L - E[L]\right)^2\right] - m = RMV_{\alpha}(L) - m
+  \end{align*}
+\]</div>
+</li>
+<li>
+<p><strong>Convexity:</strong> Let <span class="arithmatex">\( 0 \leq \lambda \leq 1 \)</span> and <span class="arithmatex">\( L_1 \)</span> and <span class="arithmatex">\( L_2 \)</span> be two loss profiles. </p>
+<p>Since the function <span class="arithmatex">\( x \mapsto x^2 \)</span> is convex, it follows that:</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     \left(\lambda L_1 + (1-\lambda)L_2 - E[\lambda L_1 + (1-\lambda)L_2]\right)^2 
+      &amp;=\left(\lambda(L_1 - E[L_1]) + (1-\lambda)(L_2 - E[L_2])\right)^2\\
+      &amp;\leq \lambda \left(L_1 - E[L_1]\right)^2 + (1-\lambda)\left(L_2 - E[L_2]\right)^2
+  \end{align*}
+\]</div>
+<p>Taking expectation, it follows that:</p>
+<div class="arithmatex">\[
+  \text{VAR}(\lambda L_1 + (1-\lambda)L_2) \leq \lambda \text{VAR}(L_1) + (1-\lambda) \text{VAR}(L_2)
+\]</div>
+<p>showing that:</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     RMV_{\alpha}(\lambda L_1 + (1-\lambda)L_2) &amp; = \lambda E[L_1] + (1-\lambda)E[L_2] + \frac{\alpha}{2} \text{VAR}(\lambda L_1 + (1-\lambda)L_2)\\
+      &amp;\leq \lambda\left(E[L_1] + \frac{\alpha}{2} \text{VAR}(L_1)\right) + (1-\lambda)\left(E[L_2] + \frac{\alpha}{2} \text{VAR}(L_2)\right)\\
+      &amp; = \lambda RMV_{\alpha}(L_1) + (1-\lambda)RMV_{\alpha}(L_2)\\
+      &amp; \leq \max \left\{ RMV_{\alpha}(L_1), RMV_{\alpha}(L_2) \right\}
+  \end{align*}
+\]</div>
+</li>
+<li>
+<p><strong>Law Invariance:</strong> For the last assertion, let <span class="arithmatex">\( L_1 \)</span> and <span class="arithmatex">\( L_2 \)</span> be such that <span class="arithmatex">\( F_{L_1} = F_{L_2} \)</span>.
+  It follows that:</p>
+<div class="arithmatex">\[
+\begin{align*}
+   RMV_{\alpha}(L_1) &amp; = \int_{\mathbb{R}} x dF_{L_1}(x) + \frac{\alpha}{2}\int_{\mathbb{R}} \left[x - \int_{\mathbb{R}}x dF_{L_1}(x)\right]^2 dF_{L_1}(x) \\
+      &amp; = \int_{\mathbb{R}} x dF_{L_2}(x) + \frac{\alpha}{2}\int_{\mathbb{R}} \left[x - \int_{\mathbb{R}}x dF_{L_2}(x)\right]^2 dF_{L_2}(x) \\
+      &amp; = RMV_{\alpha}(L_2)
+\end{align*}
+\]</div>
+</li>
+</ol>
+</details>
+<h3 id="value-at-risk-vr">Value at Risk (V@R)</h3>
+<p>The value at risk (V@R) is a widely used risk assessment measure introduced in the finance industry by JP Morgan around 1995.
+It measures downside risk as follows:</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Let <span class="arithmatex">\( L \)</span> be a loss profile. The value at risk (<span class="arithmatex">\( V@R_{\alpha} \)</span>) with parameter <span class="arithmatex">\( 0 &lt; \alpha &lt; 1 \)</span> is defined as:</p>
+<div class="arithmatex">\[
+  V@R_{\alpha}(L) = \inf\{m \in \mathbb{R} : P[L &gt; m] \leq \alpha\}.
+\]</div>
+</div>
+<p>This can also be expressed as:</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    V@R_{\alpha}(L) &amp; = \inf\{m \in \mathbb{R} : P[L &gt; m] \leq \alpha\}\\
+                    &amp; = \inf\{m \in \mathbb{R} : 1-P[L\leq m] \leq \alpha\}\\
+                    &amp; = \inf\{m \in \mathbb{R} : F_L(m) \geq 1-\alpha\}
+  \end{align*}
+\]</div>
+<p>where <span class="arithmatex">\( F_L(m):= P[L\leq m] \)</span> is the cumulative distribution function (CDF) of <span class="arithmatex">\( L \)</span>.</p>
+<p><img alt="Value at Risk" src="../../../images/var_dark.svg#only-dark" />
+<img alt="Value at Risk" src="../../../images/var_white.svg#only-light" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note: Quantile Function</p>
+<p>Note that the CDF <span class="arithmatex">\(F_L\)</span> is an increasing function from <span class="arithmatex">\(0\)</span> to <span class="arithmatex">\(1\)</span>.
+Furthermore, it is right continuous meaning that <span class="arithmatex">\(F_L(m_n)\downarrow F_L(m)\)</span> for any sequence <span class="arithmatex">\(m_n \downarrow m\)</span>.
+Indeed, let <span class="arithmatex">\(A_n = \{L \leq m_n\}\)</span> and <span class="arithmatex">\(A =\{L\leq m\}\)</span>, it follows that <span class="arithmatex">\(A_1\supseteq A_2 \ldots \supseteq A_n \supseteq \ldots\)</span> with <span class="arithmatex">\(\cap A_n =A\)</span>.
+As a consequence of the <span class="arithmatex">\(\sigma\)</span>-additivity of the probability measure, it follows that <span class="arithmatex">\(P[A_n]\downarrow P[A]\)</span>.</p>
+<p>Now, if <span class="arithmatex">\(F_L\)</span> is strictly increasing and continuous, it has an inverse <span class="arithmatex">\(F_L^{-1}\colon (0, 1)\to \mathbb{R}\)</span> which is also strictly increasing and continuous.
+Such an inverse is called the quantile of <span class="arithmatex">\(L\)</span> and denoted by <span class="arithmatex">\(q_L\colon (0,1)\to \mathbb{R}\)</span>.
+It follows that we can write the value at risk in terms of quantile:</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    V@R_{\alpha}(L) &amp; = \inf\{m \in \mathbb{R} : F_L(m) \geq 1-\alpha\}\\
+                    &amp; = \inf\{m \in \mathbb{R} : F^{-1}_L(F_L(m)) \geq F^{-1}_L(1-\alpha)\}\\
+                    &amp; = \inf\{m \in \mathbb{R} : m \geq F^{-1}_L(1-\alpha)\}\\
+                    &amp; = F^{-1}_L(1-\alpha)
+  \end{align*}
+\]</div>
+<p>In other terms, <span class="arithmatex">\(V@R_{\alpha}(L)=q_L(1-\alpha)\)</span> is the <span class="arithmatex">\(1-\alpha\)</span> quantile of the distribution.</p>
+<p>In the case where <span class="arithmatex">\(F_L\)</span> is not strictly increasing and continuous, we can still define the so called (right) pseudo-inverse or quantile as</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Quantile</p>
+<p>The quantile of the random variable <span class="arithmatex">\(L\)</span> is defined as</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \begin{split}
+    q_L \colon (0,1) &amp; \longrightarrow \mathbb{R}\\
+                s &amp; \longmapsto q_L(\alpha) = \inf\left\{ m \in \mathbb{R}\colon P\left[ L\leq m \right] \geq s\right\}
+  \end{split}
+\end{equation*}
+\]</div>
+</div>
+<p>The quantile is an increasing and right continuous function for which holds</p>
+<div class="arithmatex">\[
+  F_L(q_L(s)-) \leq s\leq F_L(q_L(s))  
+\]</div>
+</div>
+<p>The value at risk indicates the amount of cash or liquidity needed to reduce the loss size so that the probability of making losses exceeds <span class="arithmatex">\( \alpha \)</span> is small.
+Typical values for <span class="arithmatex">\( \alpha \)</span> are 5%, 1%, or 0.5%, depending on the horizon.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <span class="arithmatex">\( \Omega = \{\omega_1, \omega_2, \omega_3, \omega_4\} \)</span> with probabilities <span class="arithmatex">\( p = (0.7\%, 3.3\%, 46\%, 50\%) \)</span>, and let <span class="arithmatex">\( L \)</span> be a loss profile defined as:</p>
+<div class="arithmatex">\[
+L(\omega) =
+\begin{cases}
+10,000 &amp; \text{if } \omega = \omega_1, \\
+-50    &amp; \text{if } \omega = \omega_2, \\
+-200   &amp; \text{if } \omega = \omega_3, \\
+-1,000 &amp; \text{if } \omega = \omega_4.
+\end{cases}
+\]</div>
+<p>The corresponding CDF <span class="arithmatex">\( F_L(m) \)</span> is:</p>
+<div class="arithmatex">\[
+F_L(m) =
+\begin{cases}
+0       &amp; \text{if } m &lt; -1,000, \\
+50\%    &amp; \text{if } -1,000 \leq m &lt; -200, \\
+96\%    &amp; \text{if } -200 \leq m &lt; -50, \\
+99.3\%  &amp; \text{if } -50 \leq m &lt; 10,000, \\
+1       &amp; \text{if } m \geq 10,000.
+\end{cases}
+\]</div>
+<p>From this, the quantile function is:</p>
+<div class="arithmatex">\[
+q_L(x) =
+\begin{cases}
+-1,000 &amp; \text{if } 0 &lt; x \leq 50\%, \\
+-200   &amp; \text{if } 50\% &lt; x \leq 96\%, \\
+-50    &amp; \text{if } 96\% &lt; x \leq 99.3\%, \\
+10,000 &amp; \text{if } 99.3\% &lt; x \leq 1.
+\end{cases}
+\]</div>
+<p>Thus:
+[
+V@R_{5\%} = q_L(95\%) = -200, \quad V@R_{1\%} = q_L(99\%) = -50, \quad V@R_{0.5\%} = q_L(99.5\%) = 10,000.
+]</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note: Practical Computation of Value at Risk</p>
+<p>Unlike risk mean variance that only implies the computation of expectations (analytical or with monte carlo for instance), the case of V@R is slightly more complex.
+Indeed, even if a random variable does have a probability density function, there does not exist in general an analytical form for the quantile function.
+Therefore in case of a strictly increasing and continuous CDF, to compute the Value at risk you need to invert the function <span class="arithmatex">\(m \mapsto F_L(m)\)</span>.
+Inverting a function implies finding the solution <span class="arithmatex">\(m^\ast\)</span> to the equation</p>
+<div class="arithmatex">\[
+  F_L(m^\ast) = = s 
+\]</div>
+<p>which is a classical root finding.
+Every scientific library has methods for (either newton methods or bisecant of advanced mixed therefore like Brentq).</p>
+<p>Note however that we are trying to find high quantiles (0.99 or 0.999) for the CDF, which lies very close to the boundary of the inverse.
+The problem is therefore quite difficult as the derivative there starts to be very close to <span class="arithmatex">\(0\)</span> in the limits of computer accuracy.
+There exists however in most scientific libraries having statistical functions, predefined way to compute quantile which are heavily optimized.</p>
+<p>We illustrate this in the following using <code>python</code> and <code>scipy.optimize</code> and <code>scipy.stats</code>.</p>
+<p class="annotate"><div class="language-python highlight"><span class="filename">Computation of value at risk</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># import libraries</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">t</span>             <span class="c1"># Normal and Student distribution</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">root</span><span class="p">,</span> <span class="n">brentq</span>     <span class="c1"># root-&gt;newton method, brentq-&gt;bissecant flavor</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>              <span class="c1"># professional but easy plotting</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Straightforward quantile computation implementation</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">def</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">cdf</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="c1"># definition of the root function(1) </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">cdf</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">-</span> <span class="n">s</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">return</span> <span class="n">result</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  <span class="c1"># return the root(2)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  <span class="n">result</span> <span class="o">=</span> <span class="n">root</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># Define two random variables</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">X</span> <span class="o">=</span> <span class="n">norm</span><span class="p">()</span>      <span class="c1"># standard normal</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">Y</span> <span class="o">=</span> <span class="n">t</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>   <span class="c1"># student with 2 as degree of freedom</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># plot the cdf of both</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linespace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">y1</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">y2</span> <span class="o">=</span> <span class="n">Y</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y1</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;normal distribution&quot;</span><span class="p">)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y2</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;student distribution&quot;</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;CDF of normal and student&#39;</span><span class="p">)</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c1"># compute the var 0.01 and 0.01 for each</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="s2">1% V@R for Normal:</span><span class="se">\t</span><span class="si">{</span><span class="n">quantile</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">cdf</span><span class="p">,</span><span class="w"> </span><span class="mf">0.99</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="s2">0.01% V@R for Normal:</span><span class="se">\t</span><span class="si">{</span><span class="n">quantile</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">cdf</span><span class="p">,</span><span class="w"> </span><span class="mf">0.999</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="s2">1% V@R for Student:</span><span class="se">\t</span><span class="si">{</span><span class="n">quantile</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">cdf</span><span class="p">,</span><span class="w"> </span><span class="mf">0.99</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="s2">0.01% V@R for Student:</span><span class="se">\t</span><span class="si">{</span><span class="n">quantile</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">cdf</span><span class="p">,</span><span class="w"> </span><span class="mf">0.999</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="c1"># using the pre programmed `ppf` functions</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="s2">1% V@R for Normal:</span><span class="se">\t</span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="s2">0.01% V@R for Normal:</span><span class="se">\t</span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.999</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="s2">1% V@R for Student:</span><span class="se">\t</span><span class="si">{</span><span class="n">Y</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.99</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="s2">0.01% V@R for Student:</span><span class="se">\t</span><span class="si">{</span><span class="n">Y</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.999</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="c1"># You can compare the speed between your implementation and the pre programmed using %timeit</span>
+</span></code></pre></div></p>
+<ol>
+<li>Find <code>m</code> such that <code>F(m) = s</code> is equivalent to finding <code>m</code> such that <code>F(m) - s = 0</code> which is the usual implementation.</li>
+<li>We use here the Newton variant of root optimization problem. It only requires a start point and is usually fast. 
+    However it might not converge if the derivative is quite close to <code>0</code> so it might not always be adequate.
+    Using <code>brentq</code>, as a bissecant type, requires to provide two bounds <code>a&lt;b</code> within which that root shall be found. In particular it should hold that <code>fun(a)</code> has a different sign as <code>fun(b)</code>.
+    Both have advantages and inconvenience.</li>
+</ol>
+</div>
+<p>As for mean-variance, value at risk also fulfills some properties</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>The Value at Risk V@R satisfies the following properties:</p>
+<ol>
+<li>
+<p><strong>Cash-invariance</strong>: For every loss profile <span class="arithmatex">\( L \)</span> and <span class="arithmatex">\( m \in \mathbb{R} \)</span>,</p>
+<div class="arithmatex">\[
+  V@R_{\alpha}(L - m) = V@R_{\alpha}(L) - m.
+\]</div>
+</li>
+<li>
+<p><strong>Monotonicity</strong>: For any two loss profiles <span class="arithmatex">\( L_1, L_2 \)</span> with <span class="arithmatex">\(L_1(\omega) \leq L_2(\omega)\)</span> it holds,</p>
+<div class="arithmatex">\[
+  V@R_{\alpha}(L_1) \leq V@R_{\alpha}(L_2).
+\]</div>
+</li>
+<li>
+<p><strong>Law Invariance</strong>: If two loss profiles <span class="arithmatex">\( L_1 \)</span> and <span class="arithmatex">\( L_2 \)</span> have the same CDF, then:</p>
+<div class="arithmatex">\[
+  V@R_{\alpha}(L_1) = V@R_{\alpha}(L_2).
+\]</div>
+</li>
+</ol>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<ol>
+<li>
+<p><strong>Cash-invariance:</strong> For every <span class="arithmatex">\( m \in \mathbb{R} \)</span>, and loss <span class="arithmatex">\( L \)</span>, it holds with variable change <span class="arithmatex">\(\hat{m} = \tilde{m} - m\)</span>:</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     V@R_{\alpha}(L-m) &amp; = \inf\left\{ \tilde{m} \in \mathbb{R} \colon P[L-m&gt;\tilde{m}] \leq \alpha \right\}\\
+                    &amp; = \inf \left\{ \hat{m} - m \colon P[L&gt;\hat{m}] \leq \alpha  \right\}\\
+                    &amp; = \inf \left\{ \hat{m} \colon P[L&gt;\hat{m}] \leq \alpha  \right\} - m = V@R_{\alpha}(L) - m
+  \end{align*}
+\]</div>
+</li>
+<li>
+<p><strong>Monotonicity:</strong> Let <span class="arithmatex">\( L_1 \leq L_2 \)</span> be two loss profiles.</p>
+<p>For any <span class="arithmatex">\(m\)</span>, it holds</p>
+<div class="arithmatex">\[
+    \left\{ \omega \colon L_1(\omega)\leq m \right\} \supseteq \left\{ \omega \colon L_2(\omega)\leq m \right\}
+\]</div>
+<p>showing that for every <span class="arithmatex">\(m\)</span> we have <span class="arithmatex">\(P[L_1\leq m] \geq P[L_2 \leq m]\)</span>.
+Hence, we have</p>
+<div class="arithmatex">\[
+    \left\{ m \in \mathbb{R} \colon P\left[ L_1\leq m \right]\geq 1-\alpha \right\} \subseteq  \left\{ m \in \mathbb{R} \colon P\left[ L_2\leq m \right]\geq 1-\alpha \right\}
+\]</div>
+<p>showing that the infimum of the the left handside is smaller than the infimum of the right hand side, that is <span class="arithmatex">\(V@R_{\alpha}(L_1)\leq V@R_{\alpha}(L_2)\)</span>. </p>
+</li>
+<li>
+<p><strong>Law Invariance:</strong> This follows immediately since the value at risk depends only on the CDF.</p>
+</li>
+</ol>
+</details>
+<h2 id="sound-properties">Sound Properties?</h2>
+<p>Both risk assessement do make sense and have a certain appeal.
+Let us discuss some of the properties they fulfill.</p>
+<ul>
+<li>
+<p><strong>Cash Invariance:</strong> given a risk assessment instrument <span class="arithmatex">\(L \mapsto R(L)\)</span>, being cash invariant means that <span class="arithmatex">\(R(L-m) = R(L) - m\)</span>.
+    This is a property that economists as well as regulator do like as it confers a certain monetary meaning to the risk assessment.</p>
+<p>Indeed, usually regulators wants financial institutions to keep their total risk below <span class="arithmatex">\(0\)</span>.
+Now as a financial institution, I have a loss exposure <span class="arithmatex">\(L\)</span> in financial assets.
+The question is how much liquidiy (or cash) shall be in the bank account to make the overall risk lower than <span class="arithmatex">\(0\)</span>.
+Together with cash <span class="arithmatex">\(m\)</span> and risky exposure <span class="arithmatex">\(L\)</span>, the resulting loss profile is <span class="arithmatex">\(L-m\)</span> for which the risk is equal to <span class="arithmatex">\(R(L-m)\)</span>.
+A risk acceptance being smaller than <span class="arithmatex">\(0\)</span> means that <span class="arithmatex">\(m\geq R(L)\)</span>.
+In other terms, the minimal cash requirement to make the risky exposure acceptable in terms of liquidity is <span class="arithmatex">\(m = R(L)\)</span>.</p>
+</li>
+<li>
+<p><strong>Law Invariance:</strong></p>
+<p>The law invariance is important in so far that even if we consider random variables, in practive we can only observe the realization of which and therefore an approximation of the CDF.
+Hence a risk assessment instrument shall only depend on the CDF of the loss profile.</p>
+</li>
+<li>
+<p><strong>Monotonicity:</strong> Monotonicity means that whenever the loss profile of one position is in any case larger than another position, i.e. loose more money in any cases, then its risk should be higher.</p>
+</li>
+<li>
+<p><strong>Diversification:</strong> (here convexity) means that diversifying between to risky assets (a convex combination), the resulting risk is going to be lower than the worse of the other two risks.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center"><span class="arithmatex">\(MVR_{\alpha}\)</span></th>
+<th align="center"><span class="arithmatex">\(V@R_{\alpha}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Cash Invariance</td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+</tr>
+<tr>
+<td align="left">Law Invariance</td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+</tr>
+<tr>
+<td align="left">Monotonicity</td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+</tr>
+<tr>
+<td align="left">Diversification</td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.41 13.41 6 19l1.41-1.42L1.83 12m20.41-6.42L11.66 16.17 7.5 12l-1.43 1.41L11.66 19l12-12M18 7l-1.41-1.42-6.35 6.35 1.42 1.41L18 7Z"/></svg></span></td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg></span></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

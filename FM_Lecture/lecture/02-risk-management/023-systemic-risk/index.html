@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="http://127.0.0.1:8000/lecture/00-Introduction/000-index/">
+        <link rel="canonical" href="http://127.0.0.1:8000/lecture/02-risk-management/023-systemic-risk/">
       
       
-        <link rel="prev" href="../../..">
-      
-      
-        <link rel="next" href="../001-notations/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Introduction - Financial Mathematics</title>
+        <title>023 systemic risk - Financial Mathematics</title>
       
     
     
@@ -75,11 +71,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#introduction" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -112,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              023 systemic risk
             
           </span>
         </div>
@@ -216,21 +207,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
           
   
     
@@ -311,10 +298,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -327,20 +312,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -351,7 +333,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -362,10 +344,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -379,11 +359,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -397,7 +377,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Introduction
@@ -408,19 +388,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -429,7 +400,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -442,7 +412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../001-notations/" class="md-nav__link">
+      <a href="../../00-Introduction/001-notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-risk-management/021-what-is-risk/" class="md-nav__link">
+      <a href="../021-what-is-risk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,98 +644,9 @@
                   
 
 
-<h1 id="introduction">Introduction</h1>
-<h1 id="what-is-mathematical-finance">What is Mathematical Finance?</h1>
-<p>Finance concerns the allocation and pricing of <strong>assets</strong>—goods, stocks, etc.—and <strong>liabilities</strong>—debts, loans, bonds, etc.—in the presence of <strong>uncertainty</strong> and <strong>risk</strong>. This definition raises several fundamental questions:</p>
-<ul>
-<li>What is trade, money, or pricing?  </li>
-<li>What are uncertainty and risk?  </li>
-<li>Which academic fields address these questions?  </li>
-<li>What role does mathematics—particularly stochastics—play in finance?  </li>
-</ul>
-<h2 id="a-brief-and-biased-history-of-trade-money-and-finance">A Brief and Biased History of Trade, Money, and Finance</h2>
-<h3 id="trade-of-goods-and-the-emergence-of-money">Trade of Goods and the Emergence of Money</h3>
-<ul>
-<li>
-<p><strong>Exchange of goods</strong> (around 150,000 BC):</p>
-<ul>
-<li><strong>Advantages</strong>: Better allocation of comparative advantages.  </li>
-<li><strong>Question</strong>:  <ul>
-<li>How is exchange value determined (bilateral agreement)?  </li>
-<li>Need for intermediaries.  </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Money as a medium of exchange</strong> (around 12,000 BC):  </p>
-<ul>
-<li><strong>Advantages</strong>:  <ul>
-<li>Solves the double coincidence problem, enabling efficient allocation.  </li>
-<li>Serves as a unit of account (<em>numéraire</em>).  </li>
-<li>Stores value over time.  </li>
-</ul>
-</li>
-<li><strong>Questions</strong>:  <ul>
-<li>How is value established (multilateral agreements between numerous goods)? Law of demand and supply.  </li>
-<li>How does money preserve value over time?  </li>
-<li>Introduces the concept of the time value of money.  </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="assessing-uncertainty-the-rise-of-financial-markets">Assessing Uncertainty: The Rise of Financial Markets</h3>
-<ul>
-<li>
-<p><strong>Commodity markets</strong> (4,000 BC):<br />
-    Development of forward contracts to hedge against price fluctuations.  </p>
-<ul>
-<li><strong>Question</strong>: How are prices determined?  </li>
-</ul>
-</li>
-<li>
-<p><strong>Loans and banking systems</strong> (2,000 BC):<br />
-    Facilitated leveraged investments.  </p>
-<ul>
-<li><strong>Question</strong>: How to price future payments?  </li>
-</ul>
-</li>
-<li>
-<p><strong>Insurance</strong> (1400s):<br />
-    Emerged during overseas trading, with premiums exchanged for risk.  </p>
-<ul>
-<li>Sparked the beginnings of probability theory.  </li>
-</ul>
-</li>
-<li>
-<p><strong>Stock markets</strong> (1600s):<br />
-    Enabled capital raising and introduced challenges such as dividend payments and stock price modeling (e.g., Bachelier model, Brownian motion).  </p>
-</li>
-<li>
-<p><strong>Options</strong> (1600s, standardized in 1973):<br />
-    Put and call options provided bounded insurance against price movements.  </p>
-</li>
-<li>
-<p><strong>Derivatives</strong>:<br />
-    Broader contracts written on assets, indices, interest rates, etc.  </p>
-</li>
-</ul>
-<p>Pricing remains the central problem for all these financial instruments. While agreements between counterparties can set prices, mathematical models provide fair and robust valuations. A specialized subfield of mathematical finance also focuses on assessing financial risk.</p>
-<h3 id="academic-fields-involved-in-finance">Academic Fields Involved in Finance</h3>
-<ul>
-<li><strong>Economics</strong>: Macroeconomics, microeconomics, decision theory.  </li>
-<li><strong>Psychology</strong>: Behavioral finance.  </li>
-<li><strong>Law</strong>.  </li>
-<li><strong>Computer Science</strong>: Algorithmic trading, machine learning.  </li>
-<li><strong>Mathematics</strong>:  <ul>
-<li>Stochastics (modeling).  </li>
-<li>Statistics (calibration, machine learning...).  </li>
-<li>Optimization.  </li>
-<li>Functional analysis and partial differential equations (e.g., Black-Scholes model).  </li>
-</ul>
-</li>
-</ul>
+  <h1>023 systemic risk</h1>
+
+
 
 
 
