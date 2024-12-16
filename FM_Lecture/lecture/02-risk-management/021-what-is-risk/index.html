@@ -14,6 +14,8 @@
         <link rel="prev" href="../../01-One-Period/013-derivative-securities/">
       
       
+        <link rel="next" href="../022-risk-preferences/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
@@ -580,6 +582,8 @@
       
         
       
+        
+      
     
     
       
@@ -709,6 +713,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../022-risk-preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk Preferences and Measures
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -974,7 +999,7 @@ It follows that we can write the value at risk in terms of quantile:</p>
   \end{align*}
 \]</div>
 <p>In other terms, <span class="arithmatex">\(V@R_{\alpha}(L)=q_L(1-\alpha)\)</span> is the <span class="arithmatex">\(1-\alpha\)</span> quantile of the distribution.</p>
-<p>In the case where <span class="arithmatex">\(F_L\)</span> is not strictly increasing and continuous, we can still define the so called (right) pseudo-inverse or quantile as</p>
+<p>In the case where <span class="arithmatex">\(F_L\)</span> is not strictly increasing and continuous, we can still define the so called (left) pseudo-inverse or quantile as</p>
 <div class="admonition definition">
 <p class="admonition-title">Definition: Quantile</p>
 <p>The quantile of the random variable <span class="arithmatex">\(L\)</span> is defined as</p>
@@ -987,7 +1012,7 @@ It follows that we can write the value at risk in terms of quantile:</p>
 \end{equation*}
 \]</div>
 </div>
-<p>The quantile is an increasing and right continuous function for which holds</p>
+<p>The quantile is an increasing and left continuous function for which holds</p>
 <div class="arithmatex">\[
   F_L(q_L(s)-) \leq s\leq F_L(q_L(s))  
 \]</div>
@@ -1221,6 +1246,82 @@ Hence a risk assessment instrument shall only depend on the CDF of the loss prof
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Warning: Value at Risk might lead to Concentration</p>
+<p>The Value at Risk goes in some cases against diversification.
+The main reason is that the quantile is just a single point in the CDF of the loss distribution and can not account for the whole risk contained in the tail of the distribution.</p>
+<p>The following single example illustrate the concentration in the tail.</p>
+<p>In the first situation, you lend <span class="arithmatex">\(1000\)</span> RMB to a friend with payment back in one year with <span class="arithmatex">\(4%\)</span> interest.
+If the friend repays the loan you make a gain of <span class="arithmatex">\(40\)</span> RMB, if the friend goes away your make a loss of <span class="arithmatex">\(1000\)</span> RMB.
+We assume that the friend will run away with a probability of <span class="arithmatex">\(4\%\)</span>.
+In terms of loss it, it reads as follows </p>
+<div class="arithmatex">\[
+    \begin{equation*}
+        L = 
+        \begin{cases}
+            -40 &amp; \text{with probability }96\% \\
+            1000 &amp; \text{with probability }4\%
+        \end{cases}
+    \end{equation*}
+\]</div>
+<p>which leads to the following CDF and quantile</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        F_L(m) &amp; = \begin{cases}
+            0 &amp; \text{for }m&lt; -40\\
+            96\% &amp; \text{for }-40 \leq m &lt; 1000 \\
+            100\% &amp; \text{for } m \geq 1000
+        \end{cases}
+        &amp;
+        q_L(s) &amp; = \begin{cases}
+            -40 &amp; \text{for } 0&lt;s \leq 96\%\\
+            1000 &amp; \text{for } s &gt; 96\%
+        \end{cases}
+    \end{align*}
+\]</div>
+<p>which in other terms yields a value at risk at <span class="arithmatex">\(5\%\)</span> level of</p>
+<div class="arithmatex">\[
+    V@R_{5\%}(L) = q_L(95\%) = -40 
+\]</div>
+<p>Now in view of the potential default of this friend, instead of lending <span class="arithmatex">\(1000\)</span> to one, you diversify your exposure by lending <span class="arithmatex">\(500\)</span> to two different (supposedly independent) friends.
+In terms of loss it gives</p>
+<div class="arithmatex">\[
+    \begin{equation*}
+        L = 
+        \begin{cases}
+            -40 &amp; \text{with probability }92.16\% \\
+            480 &amp; \text{with probability } 7.68\% \\
+            1000 &amp; \text{with probability }0.16\%
+        \end{cases}
+    \end{equation*}
+\]</div>
+<p>showing that the probability of large losses reduced radically to <span class="arithmatex">\(0.16\%\)</span> in trade off for medium loss of 480 with a <span class="arithmatex">\(7.68\%\)</span> probabliity.</p>
+<p>This leads to the following CDF and quantile</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        F_L(m) &amp; = \begin{cases}
+            0 &amp; \text{for }m&lt; -40\\
+            92.16\% &amp; \text{for } -40 \leq m &lt; 480 \\
+            99.84\% &amp; \text{for } 480 \leq m &lt; 1000 \\
+            100\% &amp; \text{for } m \geq 1000
+        \end{cases}
+        &amp;
+        q_L(s) &amp; = \begin{cases}
+            -40 &amp; \text{for } 0&lt;s \leq 92.16\%\\
+            480 &amp; \text{for } 92.16\% &lt; s \leq 99.84 \%\\
+            1000 &amp; \text{for } s &gt; 99.84\%
+        \end{cases}
+    \end{align*}
+\]</div>
+<p>which yields a value at risk at <span class="arithmatex">\(5\%\)</span> level of</p>
+<div class="arithmatex">\[
+    V@R_{5\%}(L) = q_L(95\%) = 480
+\]</div>
+<p>In other terms, the value at risk jumps from <span class="arithmatex">\(-40\)</span> to <span class="arithmatex">\(480\)</span> while diversifying our investment which goes against what is expected from a risk assessment measure.</p>
+<p>The main reason is that the losses in the non diversified situation are all concentrated in the tail of the distribution beyond the quantile level choosen.
+In other terms, value at risk is <em>blind</em> to the loss size (or tail of the distribution) beyond the choosen quantile level.</p>
+</div>
+<p>Even if those two instruments have intuitively a certain appeal as assessment of risk (and they are useful in their own rights), it turns out that a closer look shows that both are do violate one or another fundamental properties we are expecting from a risk measure.</p>
 
 
 
