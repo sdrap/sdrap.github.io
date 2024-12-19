@@ -719,216 +719,210 @@
 
 
 <h1 id="risk-preferences-and-measures">Risk Preferences and Measures</h1>
-<p>Up to now, we have presented potential examples of risk measures and discussed their shortcomings regarding particular properties we consider sound for risk assessment.
-Furthermore, the selection of these measures might appear arbitrary.
-In the following, we aim to formalize what <em>risk</em> and <em>uncertainty</em> mean.</p>
-<p>On the one hand, <em>uncertainty</em> refers to the fact that multiple outcomes might occur.
-In other terms, this can be understood as the consideration of a set <span class="arithmatex">\(\Omega\)</span> within a probability space.
-The concept of uncertainty is thus an <em>objective</em> matter, inherently related to the nature of the world.</p>
+<p>So far, we have introduced potential examples of risk measures and discussed their shortcomings regarding properties deemed sound for risk assessment.
+Additionally, the selection of these measures might appear arbitrary.
+In the following, we aim to formalize the concepts of <em>risk</em> and <em>uncertainty</em>.</p>
+<p>On the one hand, <em>uncertainty</em> refers to the possibility of multiple outcomes.
+In other words, it considers the set <span class="arithmatex">\( \Omega \)</span> within a probability space.
+This concept is inherently an <em>objective</em> matter, tied to the nature of the world.</p>
 <p>On the other hand, <em>risk</em> represents a <em>subjective</em> or personal perception of uncertainty.
-It depends on one's viewpoint and can be seen as a prudent response to uncertainty.
-To model this in a consistent mathematical framework, we rely on the so-called <em>decision theory</em>, which captures preferences among different possible choices.
-We denote the set of possible choices <span class="arithmatex">\(x\)</span> by <span class="arithmatex">\(\mathcal{X}\)</span>
-In our context, uncertain outcomes are modeled as random variables, meaning we consider a vector space <span class="arithmatex">\(\mathcal{X}\)</span> of random variables (primarily bounded for mathematical convenience).</p>
+It depends on an individual's viewpoint and can be understood as a cautious response to uncertainty.
+To model this consistently within a mathematical framework, we rely on <em>decision theory</em>, which captures preferences among various choices.
+The set of possible choices is denoted by <span class="arithmatex">\( \mathcal{X} \)</span>.
+In this context, uncertain outcomes are modeled as random variables, meaning we work with a vector space <span class="arithmatex">\( \mathcal{X} \)</span> of random variables (primarily bounded for mathematical convenience).</p>
 <div class="admonition definition">
 <p class="admonition-title">Definition: Preference Order and Numerical Representation</p>
-<p>A <em>preference order</em> <span class="arithmatex">\(\preccurlyeq\)</span> on <span class="arithmatex">\(\mathcal{X}\)</span> is a binary relation <span class="arithmatex">\(x \preccurlyeq y\)</span> that states choice <span class="arithmatex">\(y\)</span> is preferred to choice <span class="arithmatex">\(x\)</span>.
-We assume this relation fulfills the following <em>normative</em> properties:</p>
+<p>A <em>preference order</em> <span class="arithmatex">\( \preccurlyeq \)</span> on <span class="arithmatex">\( \mathcal{X} \)</span> is a binary relation <span class="arithmatex">\( x \preccurlyeq y \)</span> indicating that choice <span class="arithmatex">\( y \)</span> is preferred to choice <span class="arithmatex">\( x \)</span>.<br />
+We assume this relation satisfies the following <em>normative</em> properties:</p>
 <ul>
-<li><strong>Transitivity</strong>: <span class="arithmatex">\(x \preccurlyeq y\)</span> and <span class="arithmatex">\(y \preccurlyeq z\)</span> implies <span class="arithmatex">\(x \preccurlyeq z\)</span>;</li>
-<li><strong>Completeness</strong>: for any two possible choices <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, then either <span class="arithmatex">\(x \preccurlyeq y\)</span> or <span class="arithmatex">\(y \preccurlyeq x\)</span>.</li>
+<li><strong>Transitivity</strong>: <span class="arithmatex">\( x \preccurlyeq y \)</span> and <span class="arithmatex">\( y \preccurlyeq z \)</span> imply <span class="arithmatex">\( x \preccurlyeq z \)</span>;</li>
+<li><strong>Completeness</strong>: For any two possible choices <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span>, either <span class="arithmatex">\( x \preccurlyeq y \)</span> or <span class="arithmatex">\( y \preccurlyeq x \)</span>.</li>
 </ul>
-<p>A function <span class="arithmatex">\(U\colon \mathcal{X} \to \mathbb{R}\)</span> is called a <em>numerical representation</em> (sometimes called utility) of a preference order <span class="arithmatex">\(\preccurlyeq\)</span> if </p>
+<p>A function <span class="arithmatex">\( U\colon \mathcal{X} \to \mathbb{R} \)</span> is called a <em>numerical representation</em> (or utility) of a preference order <span class="arithmatex">\( \preccurlyeq \)</span> if:</p>
 <div class="arithmatex">\[
-    x \preccurlyeq y \quad \text{if and only if} \quad U(x)\leq U(y)
+    x \preccurlyeq y \quad \text{if and only if} \quad U(x) \leq U(y)
 \]</div>
 </div>
-<p>Preference orders are generic to represent the subjective view on those outcomes.
-The first property tells you that if you find <span class="arithmatex">\(y\)</span> preferable to <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(z\)</span> preferable to <span class="arithmatex">\(y\)</span>, then you should also find <span class="arithmatex">\(z\)</span> preferable to <span class="arithmatex">\(y\)</span>.
-This property seems quite natural.
-The second property tells you that if you are given any two elements, you are always able to express a preference between them.
-This second property is eventually strong as it requires you to always be  able to decide among any two out of a possibly infinitly large set <span class="arithmatex">\(\mathcal{X}\)</span> which one is the more risky.
-These two rational (decision theorist would call them <em>normative</em>) assumptions are often falsified in empirical decision theory but these are meant to model a fully rational behavior in terms of decision towards these prospective outcomes.
-A for a numerical representation it is a mapping of this preference ranking into <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<p>Preference orders are a generic way to represent subjective views on outcomes.
+The first property, <strong>transitivity</strong>, ensures consistency: if <span class="arithmatex">\( y \)</span> is preferred to <span class="arithmatex">\( x \)</span>, and <span class="arithmatex">\( z \)</span> is preferred to <span class="arithmatex">\( y \)</span>, then <span class="arithmatex">\( z \)</span> must also be preferred to <span class="arithmatex">\( x \)</span>.
+This property appears quite intuitive.
+The second property, <strong>completeness</strong>, requires that, for any two elements, one must always express a preference between them.
+This is a strong assumption, as it mandates the ability to decide between any two elements in a potentially infinite set <span class="arithmatex">\( \mathcal{X} \)</span>.  </p>
+<p>These two rational (or <em>normative</em>, as decision theorists would say) assumptions often fail in empirical decision-making.
+However, they are intended to model fully rational behavior in decision-making processes involving prospective outcomes.  </p>
+<p>A <em>numerical representation</em> maps the preference ranking into <span class="arithmatex">\( \mathbb{R} \)</span>, providing a quantitative measure of preferences.</p>
 <details class="note">
 <summary>Note</summary>
-<p>Note first, that if we have a numerical representation <span class="arithmatex">\(U\)</span> for a preference order <span class="arithmatex">\(\preccurlyeq\)</span>, it is not unique.
-Any strictly increasing function <span class="arithmatex">\(\phi \colon \mathbb{R} \to \mathbb{R}\)</span> will define another numerical representation <span class="arithmatex">\(\tilde{U} = \phi \circ U\)</span>.
-Indeed, <span class="arithmatex">\(x \preccurlyeq y\)</span> is equivalent to <span class="arithmatex">\(U(x)\leq U(y)\)</span> which is equivalent to <span class="arithmatex">\(\phi(U(x)) = \tilde{U}(x) \geq \tilde{U}(y) = \phi(U(y))\)</span>.</p>
-<p>Second, starting directly with a function <span class="arithmatex">\(U \colon \mathcal{X} \to \mathbb{R}\)</span> it defines a preference order <span class="arithmatex">\(\succcurlyeq\)</span> by </p>
+<p>Note first that if we have a numerical representation <span class="arithmatex">\( U \)</span> for a preference order <span class="arithmatex">\( \preccurlyeq \)</span>, it is not unique.
+Any strictly increasing function <span class="arithmatex">\( \phi \colon \mathbb{R} \to \mathbb{R} \)</span> defines another numerical representation <span class="arithmatex">\( \tilde{U} = \phi \circ U \)</span>.
+Indeed, <span class="arithmatex">\( x \preccurlyeq y \)</span> is equivalent to <span class="arithmatex">\( U(x) \leq U(y) \)</span>, which is equivalent to <span class="arithmatex">\( \phi(U(x)) = \tilde{U}(x) \leq \tilde{U}(y) = \phi(U(y)) \)</span>.</p>
+<p>Second, starting directly with a function <span class="arithmatex">\( U \colon \mathcal{X} \to \mathbb{R} \)</span>, it defines a preference order <span class="arithmatex">\( \preccurlyeq \)</span> by:</p>
 <div class="arithmatex">\[
-    x \preccurlyeq y : \Leftrightarrow U(x)\leq U(y)
+    x \preccurlyeq y \Leftrightarrow U(x) \leq U(y)
 \]</div>
-<p>As an exercice, show that <span class="arithmatex">\(\succcurlyeq\)</span> so defined through a function <span class="arithmatex">\(R\)</span> is a preference order, that is, satisfies transitivity and completness.</p>
+<p>As an exercise, show that <span class="arithmatex">\( \preccurlyeq \)</span>, so defined through a function <span class="arithmatex">\( U \)</span>, is a preference order, satisfying transitivity and completeness.</p>
 <p>Third, even if a numerical function defines a preference order, the reciprocal is not necessarily true.
-Indeed, it requires some additional assumptions so that for a given preference order you can find a numerical representation <span class="arithmatex">\(R\)</span> of which.
-This is however most of the time the case under resonable assumptions.</p>
+Additional assumptions are required to ensure that, for a given preference order, a numerical representation <span class="arithmatex">\( U \)</span> exists.
+However, under reasonable assumptions, this is often the case.</p>
 <div class="admonition proposition">
 <p class="admonition-title">Proposition</p>
-<p class="annotate">If the set <span class="arithmatex">\(\mathcal{X}\)</span> is countable(1) then any preference order <span class="arithmatex">\(\preccurlyeq\)</span> on <span class="arithmatex">\(\mathcal{X}\)</span> admits a numerical representation.</p>
+<p class="annotate">If the set <span class="arithmatex">\( \mathcal{X} \)</span> is countable (1), then any preference order <span class="arithmatex">\( \preccurlyeq \)</span> on <span class="arithmatex">\( \mathcal{X} \)</span> admits a numerical representation.<br /></p>
 <ol>
-<li>Meaning that you can enumerate it by a subset of <span class="arithmatex">\(\mathbb{N}\)</span>.</li>
+<li>Meaning that <span class="arithmatex">\( \mathcal{X} \)</span> can be enumerated as a subset of <span class="arithmatex">\( \mathbb{N} \)</span>.</li>
 </ol>
 </div>
 <div class="admonition proof">
 <p class="admonition-title">Proof</p>
-<p>Without loss of generality, we assume that <span class="arithmatex">\(\mathcal{X} = \{x_1, \ldots, x_n, \ldots\}\)</span>.</p>
-<p>On <span class="arithmatex">\(\mathbb{N}\)</span> we consider the probability measure <span class="arithmatex">\(P[\{n\}] = p_n = 1/{2^n}\)</span> since <span class="arithmatex">\(\sum p_n = 1\)</span>.
-Now, for each <span class="arithmatex">\(x_n\)</span>, define <span class="arithmatex">\(A_n = \{k\colon x_k \preccurlyeq x_n\}\)</span> which is the set of indices <span class="arithmatex">\(k\)</span> of those elements in <span class="arithmatex">\(\mathcal{X}\)</span> which are less prefered than <span class="arithmatex">\(x_n\)</span>.
-By definition, it holds that <span class="arithmatex">\(x_n \preccurlyeq x_m\)</span> if and only if <span class="arithmatex">\(A_n \subseteq A_m\)</span>.
-The function</p>
+<p>Without loss of generality, assume <span class="arithmatex">\( \mathcal{X} = \{x_1, x_2, \ldots\} \)</span>.
+On <span class="arithmatex">\( \mathbb{N} \)</span>, define a probability measure <span class="arithmatex">\( P[\{n\}] = p_n = 1 / 2^n \)</span>, since <span class="arithmatex">\( \sum p_n = 1 \)</span>.
+For each <span class="arithmatex">\( x_n \)</span>, define <span class="arithmatex">\( A_n = \{k \colon x_k \preccurlyeq x_n\} \)</span>, the set of indices <span class="arithmatex">\( k \)</span> for elements in <span class="arithmatex">\( \mathcal{X} \)</span> that are less preferred than <span class="arithmatex">\( x_n \)</span>.
+By definition, <span class="arithmatex">\( x_n \preccurlyeq x_m \)</span> if and only if <span class="arithmatex">\( A_n \subseteq A_m \)</span>.
+The function:</p>
 <div class="arithmatex">\[
-  \begin{equation*}
-    \begin{split}
-      U \colon \mathcal{X} &amp; \longrightarrow \mathbb{R}\\
-                x_n &amp; \longmapsto U(x_n) = P\left[ A_n \right] = \sum_{\{k\colon L_k \preccurlyeq L_n\}} p_k
-    \end{split}
-  \end{equation*}
+    \begin{equation*}
+        \begin{split}
+            U \colon \mathcal{X} &amp;\longrightarrow \mathbb{R}\\
+                x_n &amp; \longmapsto U(x_n) = P[A_n] = \sum_{\{k \colon x_k \preccurlyeq x_n\}} p_k
+        \end{split}
+    \end{equation*}
 \]</div>
-<p>defines a numerical representation of <span class="arithmatex">\(\preccurlyeq\)</span>.
-Indeed, <span class="arithmatex">\(x_n \preccurlyeq x_m\)</span> if and only if <span class="arithmatex">\(A_n \subseteq A_m\)</span>.
-Since the probability measure <span class="arithmatex">\(P\)</span> assign a strict probability to any element of <span class="arithmatex">\(\mathbb{N}\)</span>, it also holds that <span class="arithmatex">\(A_n \subseteq A_m\)</span> if and only if <span class="arithmatex">\(U(x_n) = P[A_n] \leq P[A_m] = U(x_m)\)</span> which ends the proof. </p>
+<p>defines a numerical representation of <span class="arithmatex">\( \preccurlyeq \)</span>.
+Indeed, <span class="arithmatex">\( x_n \preccurlyeq x_m \)</span> if and only if <span class="arithmatex">\( A_n \subseteq A_m \)</span>.
+Since <span class="arithmatex">\( P \)</span> assigns a unique probability to each element of <span class="arithmatex">\( \mathbb{N} \)</span>, it follows that <span class="arithmatex">\( A_n \subseteq A_m \)</span> if and only if <span class="arithmatex">\( U(x_n) = P[A_n] \leq P[A_m] = U(x_m) \)</span>. This completes the proof.</p>
 </div>
-<p>This proposition makes use of probability measures to define the numerical representation.
-Such an argumentation extends to more general sets as long as you can connect somehow the sublevel sets <span class="arithmatex">\(\{\tilde{x}\colon \tilde{x}\preccurlyeq x\}\)</span>, usually using some topological arguments with smoothness.</p>
-<p>If such smoothness does not hold, then it is possible to construct examples of preference orders that might not have a numerical representation.</p>
+<p>This proposition uses probability measures to define a numerical representation.
+The argument extends to more general sets, provided you can relate sublevel sets <span class="arithmatex">\( \{\tilde{x} \colon \tilde{x} \preccurlyeq x\} \)</span> using topological arguments like smoothness.
+If such smoothness is absent, preference orders may exist without a numerical representation.</p>
 <div class="admonition example">
-<p class="admonition-title">The lexicographical order does not admit a numerical representation</p>
-<p>Consider <span class="arithmatex">\(\mathcal{X} = [0, 1]\times [0, 1]\)</span> and define the lexicographical order as</p>
+<p class="admonition-title">The Lexicographical Order Does Not Admit a Numerical Representation</p>
+<p>Consider <span class="arithmatex">\( \mathcal{X} = [0, 1] \times [0, 1] \)</span> and define the lexicographical order as:</p>
 <div class="arithmatex">\[
-    x = (x_1, x_2) \preccurlyeq (y_1, y_2)=y \quad \text{if and only if}\quad 
+    x = (x_1, x_2) \preccurlyeq y = (y_1, y_2) \quad \text{if and only if} \quad 
     \begin{cases}
-      \text{either } &amp;x_1 &lt; x_2 \\
-      \text{or } &amp;x_1 = x_2 \quad \text{and}\quad y_1\leq y_2
+      \text{either } &amp; x_1 &lt; y_1, \\
+      \text{or } &amp; x_1 = y_1 \text{ and } x_2 \leq y_2.
     \end{cases}
 \]</div>
-<p>It is relatively easy to show that this is indeed a preference order (akin to the book ordering in a library).
-However since the set if not countable and the preference order is somehow not very smooth, it is possible to show that there can not be a numerical representation of <span class="arithmatex">\(\preccurlyeq\)</span>.
-You can give a try as an exercise by assuming that there exists such a numerical representation and show that you get a contradiction.</p>
+<p>This is a preference order (similar to library book ordering). However, since <span class="arithmatex">\( \mathcal{X} \)</span> is uncountable and the preference order lacks smoothness, it can be shown that no numerical representation exists.
+Try this as an exercise: assume a numerical representation exists and derive a contradiction.</p>
 </div>
 </details>
-<p>Decision theory usually takes the viewpoint of preference and utility (the higher the better).
-To speak about risk we however think in terms of risk and consider as choices the possible loss profiles <span class="arithmatex">\(\mathcal{L}\)</span>, that is, random variables representing losses.
-Furthermore for just notatios, we consider complete binary relations <span class="arithmatex">\(\succcurlyeq\)</span> in the sense of <span class="arithmatex">\(L_1 \succcurlyeq L_2\)</span> meaning that "<span class="arithmatex">\(L_1\)</span> is more risky than <span class="arithmatex">\(L_2\)</span>".
-In other terms you rank loss profiles with <span class="arithmatex">\(\succcurlyeq\)</span> according to the preception of risk you have of both.
-However, the simple properties of a preference order <span class="arithmatex">\(\succcurlyeq\)</span> on <span class="arithmatex">\(\mathcal{L}\)</span> do tno really tell us about risk perception per-se.</p>
+<p>Decision theory typically frames preferences and utilities (where higher values are better). However, when discussing risk, we consider possible loss profiles <span class="arithmatex">\( \mathcal{L} \)</span>—random variables representing losses.
+For simplicity, we consider complete binary relations <span class="arithmatex">\( \preccurlyeq \)</span>, where <span class="arithmatex">\( L_1 \preccurlyeq L_2 \)</span> means "<span class="arithmatex">\( L_1 \)</span> is less risky than <span class="arithmatex">\( L_2 \)</span>."
+Thus, loss profiles are ranked by <span class="arithmatex">\( \preccurlyeq \)</span> based on perceived risk.
+However, the basic properties of a preference order <span class="arithmatex">\( \preccurlyeq \)</span> on <span class="arithmatex">\( \mathcal{L} \)</span> do not inherently convey insights about risk perception.</p>
 <div class="admonition definition">
 <p class="admonition-title">Definition: Risk Order and Risk Measures</p>
-<p>A preference order <span class="arithmatex">\(\succcurlyeq\)</span> on <span class="arithmatex">\(\mathcal{L}\)</span> is called a <em>risk order</em> if the following two additional assumptions are fulfilled:</p>
+<p>A preference order <span class="arithmatex">\( \succcurlyeq \)</span> on <span class="arithmatex">\( \mathcal{L} \)</span> is called a <em>risk order</em> if the following two additional assumptions are satisfied:</p>
 <ul>
 <li>
-<p><strong>Diversification</strong>: if <span class="arithmatex">\(L_1\)</span> is more risky than <span class="arithmatex">\(L_2\)</span> then any diversified position between the two is less risky than the worse one:</p>
+<p><strong>Diversification</strong>: If <span class="arithmatex">\( L_1 \)</span> is more risky than <span class="arithmatex">\( L_2 \)</span>, then any diversified position between the two is less risky than the worse one:</p>
 <div class="arithmatex">\[
-    \text{if } L_1 \succcurlyeq L_2 \quad \text{then}\quad L_1 \succcurlyeq \lambda L_1 + (1-\lambda) L_2, \quad \text{for every } 0 \leq \lambda \leq 1
+    \text{if } L_1 \succcurlyeq L_2, \quad \text{then}\quad L_1 \succcurlyeq \lambda L_1 + (1-\lambda) L_2, \quad \text{for every } 0 \leq \lambda \leq 1.
 \]</div>
 </li>
 <li>
-<p><strong>Monotonicity (worse for sure is more risky)</strong>: if the loss of <span class="arithmatex">\(L_1\)</span> are worse than the loss of <span class="arithmatex">\(L_2\)</span> in any states of the world, then <span class="arithmatex">\(L_1\)</span> is more risky than <span class="arithmatex">\(L_2\)</span>:</p>
+<p><strong>Monotonicity (worse for sure is more risky)</strong>: If the losses of <span class="arithmatex">\( L_1 \)</span> are worse than those of <span class="arithmatex">\( L_2 \)</span> in every state of the world, then <span class="arithmatex">\( L_1 \)</span> is more risky than <span class="arithmatex">\( L_2 \)</span>:</p>
 <div class="arithmatex">\[
-    \text{if } L_1(\omega) \geq L_2 (\omega) \text{ for every } \omega \quad \text{then }\quad L_1 \succcurlyeq L_2
+    \text{if } L_1(\omega) \geq L_2(\omega) \text{ for every } \omega, \quad \text{then } L_1 \succcurlyeq L_2.
 \]</div>
 </li>
 </ul>
-<p>A numerical representation <span class="arithmatex">\(R\colon \mathcal{L} \to \mathbb{R}\)</span> of a risk order is called a <em>risk measure</em>.</p>
+<p>A numerical representation <span class="arithmatex">\( R \colon \mathcal{L} \to \mathbb{R} \)</span> of a risk order is called a <em>risk measure</em>.</p>
 </div>
-<p>These two additional properties are expressing quite reasonable key features of what one might expect as a risk perception.</p>
-<p>They do have consequences in terms of resulting properties for risk measure. </p>
+<p>These two additional properties express reasonable and intuitive features of risk perception. They also have implications for the properties of risk measures.</p>
 <div class="admonition proposition">
 <p class="admonition-title">Proposition</p>
-<p>Let <span class="arithmatex">\(R\)</span> be a numerical representation of a preference order <span class="arithmatex">\(\succcurlyeq\)</span> on <span class="arithmatex">\(\mathcal{L}\)</span>.
+<p>Let <span class="arithmatex">\( R \)</span> be a numerical representation of a preference order <span class="arithmatex">\( \succcurlyeq \)</span> on <span class="arithmatex">\( \mathcal{L} \)</span>.
 Then the following assertions are equivalent:</p>
 <ul>
-<li><span class="arithmatex">\(\succcurlyeq\)</span> is a risk order;</li>
-<li><span class="arithmatex">\(R\)</span> is:<ul>
-<li><em>Quasi-convex</em>: <span class="arithmatex">\(\max\{R(L_1), R(L_2)\} \geq R(\lambda L_1 + (1-\lambda) L_2)\)</span> for every <span class="arithmatex">\(0 \leq \lambda \leq 1\)</span>;</li>
-<li><em>Monotone</em>: <span class="arithmatex">\(L_1(\omega) \geq L_2(\omega)\)</span> for every <span class="arithmatex">\(\omega\)</span> implies <span class="arithmatex">\(R(L_1) \geq R(L_2)\)</span>.</li>
+<li><span class="arithmatex">\( \succcurlyeq \)</span> is a risk order;</li>
+<li><span class="arithmatex">\( R \)</span> satisfies:<ul>
+<li><em>Quasi-convexity</em>: <span class="arithmatex">\( \max\{R(L_1), R(L_2)\} \geq R(\lambda L_1 + (1-\lambda) L_2) \)</span> for every <span class="arithmatex">\( 0 \leq \lambda \leq 1 \)</span>;</li>
+<li><em>Monotonicity</em>: If <span class="arithmatex">\( L_1(\omega) \geq L_2(\omega) \)</span> for every <span class="arithmatex">\( \omega \)</span>, then <span class="arithmatex">\( R(L_1) \geq R(L_2) \)</span>.</li>
 </ul>
 </li>
 </ul>
 </div>
 <details class="proof">
 <summary>Proof</summary>
-<p>Let <span class="arithmatex">\(L_1\)</span> and <span class="arithmatex">\(L_2\)</span> be two loss profiles.
-Assume that <span class="arithmatex">\(\succcurlyeq\)</span> is a risk order.
-As for the quasi-convexity, due to the completeness of the relation, we may assume without loss of generality that <span class="arithmatex">\(L_1 \succcurlyeq L_2\)</span> which is equivalent to <span class="arithmatex">\(R(L_1) = \max\{R(L_1), R(L_2)\}\)</span>.
-Now for every <span class="arithmatex">\(0 \leq \lambda \leq 1\)</span> it follows from the diversification property that <span class="arithmatex">\(L_1 \succcurlyeq \lambda L_1 + (1-\lambda) L_2\)</span> which implies <span class="arithmatex">\(\max\{R(L_1), R(L_2)\} = R(L_1) \geq R(\lambda L_1 + (1-\lambda) L_2)\)</span> showing quasi-convexity of <span class="arithmatex">\(R\)</span>.</p>
-<p>As for the monotonicity, assume that <span class="arithmatex">\(L_1(\omega) \geq L_2(\omega)\)</span> for every <span class="arithmatex">\(\omega\)</span>.
-It follows from the monotonicity assumtion that <span class="arithmatex">\(L_1 \succcurlyeq L_2\)</span> which implies that <span class="arithmatex">\(R(L_1) \geq R(L_2)\)</span> showing the monotonicity of <span class="arithmatex">\(R\)</span>.</p>
-<p>The fact that a numerical representation is quasi-convex and monotone implies that <span class="arithmatex">\(\succcurlyeq\)</span> is a risk order follows the reverse argumentation and is straightforward to verify.</p>
+<p>Let <span class="arithmatex">\( L_1 \)</span> and <span class="arithmatex">\( L_2 \)</span> be two loss profiles. Assume that <span class="arithmatex">\( \succcurlyeq \)</span> is a risk order.  </p>
+<p>For quasi-convexity, due to the completeness of the relation, assume without loss of generality that <span class="arithmatex">\( L_1 \succcurlyeq L_2 \)</span>, which is equivalent to <span class="arithmatex">\( R(L_1) = \max\{R(L_1), R(L_2)\} \)</span>.<br />
+For any <span class="arithmatex">\( 0 \leq \lambda \leq 1 \)</span>, the diversification property implies <span class="arithmatex">\( L_1 \succcurlyeq \lambda L_1 + (1-\lambda) L_2 \)</span>, which gives:</p>
+<div class="arithmatex">\[
+    \max\{R(L_1), R(L_2)\} = R(L_1) \geq R(\lambda L_1 + (1-\lambda) L_2),
+\]</div>
+<p>showing quasi-convexity of <span class="arithmatex">\( R \)</span>.</p>
+<p>For monotonicity, assume <span class="arithmatex">\( L_1(\omega) \geq L_2(\omega) \)</span> for every <span class="arithmatex">\( \omega \)</span>.
+By the monotonicity assumption, <span class="arithmatex">\( L_1 \succcurlyeq L_2 \)</span>, which implies <span class="arithmatex">\( R(L_1) \geq R(L_2) \)</span>.  </p>
+<p>The reverse implication—that a numerical representation being quasi-convex and monotone implies <span class="arithmatex">\( \succcurlyeq \)</span> is a risk order—is straightforward to verify.</p>
 </details>
-<p>This proposition states in particular that neither the mean variance risk measure nor the value at risk do represent in any way an order that is a risk order.
-Some additional properties can be required from a risk measure, however they might not be representative of the risk order itself.</p>
+<p>This proposition shows that neither the mean-variance risk measure nor the Value at Risk represents a risk order.
+Additional properties may be required of a risk measure, but they might not always align with the underlying risk order.</p>
 <div class="admonition definition">
 <p class="admonition-title">Definition</p>
-<p>A risk measure <span class="arithmatex">\(R\)</span> is called</p>
+<p>A risk measure <span class="arithmatex">\( R \)</span> is called:</p>
 <ul>
-<li><strong>Cash-Invariance:</strong> if <span class="arithmatex">\(R(L-m) = R(L) - m\)</span> for every <span class="arithmatex">\(m\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span>;</li>
-<li><strong>Positive-Homogeneous:</strong> if <span class="arithmatex">\(R(\lambda L) = \lambda R(L)\)</span> for every <span class="arithmatex">\(\lambda &gt;0\)</span>;</li>
-<li><strong>Law-Invariant:</strong> if <span class="arithmatex">\(R(L) = R(\tilde{L})\)</span> whenever the CDF of <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(\tilde{L}\)</span> coincide.</li>
+<li><strong>Cash-Invariant</strong>: if <span class="arithmatex">\( R(L-m) = R(L) - m \)</span> for every <span class="arithmatex">\( m \in \mathbb{R} \)</span>;</li>
+<li><strong>Positive-Homogeneous</strong>: if <span class="arithmatex">\( R(\lambda L) = \lambda R(L) \)</span> for every <span class="arithmatex">\( \lambda &gt; 0 \)</span>;</li>
+<li><strong>Law-Invariant</strong>: if <span class="arithmatex">\( R(L) = R(\tilde{L}) \)</span> whenever the CDFs of <span class="arithmatex">\( L \)</span> and <span class="arithmatex">\( \tilde{L} \)</span> coincide.</li>
 </ul>
 </div>
-<p>Aside from the law-invariance, the other two properties do no longer hold if I transform the risk measure with a strictly increasing transformation.
-Nevertheless they are common and useful for practical reasons.</p>
+<p>Aside from law invariance, the other two properties do not hold if the risk measure is transformed by a strictly increasing function. Nevertheless, they are commonly used and practical.</p>
 <div class="admonition remark">
 <p class="admonition-title">Cash-Invariance</p>
-<p>The cash-invariance is something that is usually required from a regulatory or financial viewpoint.
-The reasoning goes as follows: a financial institution has a position <span class="arithmatex">\(X\)</span> in risky assets.
-The question is how much liquidity (cash) <span class="arithmatex">\(m\)</span> shall be present in the bank account so that the overall position (cash plus risky assets) yields an acceptable risk.
-The threshold required is that an overall position is deemed acceptable if the total risk assessment is below <span class="arithmatex">\(0\)</span>.
-The total loss profile being <span class="arithmatex">\(L-m\)</span> where <span class="arithmatex">\(L= - X\)</span>, it means that <span class="arithmatex">\(0\geq R(L-m) = R(L) - m\)</span> due to cash invariance or <span class="arithmatex">\(m\geq R(L)\)</span>.
-In other terms, the minimal amount of liquidity so that the risky position in assets of the institution is deemd acceptable is <span class="arithmatex">\(m = R(L)\)</span>.
-Therefore the interpretation of the risk measure as a capital requirement.
-The cash-invariance has also some interesting consequences for a risk measure since cash-invariance plus quasi-convexity implies convexity.</p>
+<p>Cash-invariance is typically required from regulatory or financial perspectives. For instance, consider a financial institution with a risky position <span class="arithmatex">\( X \)</span>.
+The question is how much liquidity <span class="arithmatex">\( m \)</span> is needed in the bank account to ensure the overall position (cash plus risky assets) has acceptable risk.<br />
+The threshold is that the total risk must be below zero. The total loss profile is <span class="arithmatex">\( L - m \)</span>, where <span class="arithmatex">\( L = -X \)</span>.
+By cash-invariance:</p>
+<div class="arithmatex">\[
+    0 \geq R(L - m) = R(L) - m \implies m \geq R(L).
+\]</div>
+<p>Thus, the minimal liquidity required to make the risky position acceptable is <span class="arithmatex">\( m = R(L) \)</span>.
+This interpretation ties the risk measure to capital requirements.</p>
+<p>Moreover, cash-invariance, combined with quasi-convexity, implies convexity.</p>
 <div class="admonition lemma">
 <p class="admonition-title">Lemma</p>
-<p>Let <span class="arithmatex">\(R\)</span> be a cash-invariant risk measure, then <span class="arithmatex">\(R\)</span> is convex.</p>
+<p>If <span class="arithmatex">\( R \)</span> is a cash-invariant risk measure, then <span class="arithmatex">\( R \)</span> is convex.</p>
 </div>
 <details class="proof">
 <summary>Proof</summary>
-<p>Let <span class="arithmatex">\(R\)</span> be a cash-invariant risk measure, <span class="arithmatex">\(0\leq \lambda \leq 1\)</span> and <span class="arithmatex">\(L_1\)</span>, <span class="arithmatex">\(L_2\)</span> be two loss profiles.
-We want to show that <span class="arithmatex">\(R(\lambda L_1 + (1-\lambda)L_2)\leq \lambda R(L_1) + (1-\lambda)R(L_2)\)</span>.
-Defining <span class="arithmatex">\(m_1 = R(L_1)\)</span> and <span class="arithmatex">\(m_2 = R(L_2)\)</span>, it is equivalent to show <span class="arithmatex">\(R(\lambda L_1 + (1-\lambda)L_2) - \lambda m_1 - (1-\lambda)m_2 \leq 0\)</span>.
-By cash invariance and quasiconvexity we get</p>
+<p>Let <span class="arithmatex">\( R \)</span> be a cash-invariant risk measure, <span class="arithmatex">\( 0 \leq \lambda \leq 1 \)</span>, and <span class="arithmatex">\( L_1, L_2 \)</span> be loss profiles.
+To prove <span class="arithmatex">\( R(\lambda L_1 + (1-\lambda) L_2) \leq \lambda R(L_1) + (1-\lambda) R(L_2) \)</span>, define <span class="arithmatex">\( m_1 = R(L_1) \)</span> and <span class="arithmatex">\( m_2 = R(L_2) \)</span>.
+By cash-invariance and quasi-convexity:</p>
 <div class="arithmatex">\[
-  \begin{align*}
-    R(\lambda L_1 + (1-\lambda)L_2) - \lambda m_1 - (1-\lambda)m_2 &amp; = R\left( \lambda L_1 + (1-\lambda) L_2 - \lambda m_1 - (1-\lambda)L_2 \right) &amp;&amp; \text{(Cash Invariance)}\\
-      &amp; = R\left( \lambda (L_1 - m_1) + (1-\lambda)(L_2 - m_2) \right)\\
-      &amp; \leq \max \left\{ R(L_1 - m_1), R(L_2 - m_2) \right\} &amp;&amp; \text{(Quasiconvexity)}\\
-      &amp; = \max \left\{ R(L_1) - m_1, R(L_2) - m_2 \right\} &amp;&amp; \text{(Cash Invariance)}\\
-      &amp; = \max \{0, 0\} = 0 &amp;&amp; (m_i = R(L_i))\\
-      &amp; = 0
-  \end{align*}
+    \begin{align*}
+        R(\lambda L_1 + (1-\lambda) L_2) - \lambda m_1 - (1-\lambda)m_2 &amp; = R\left( \lambda L_1 + (1-\lambda) L_2 - \lambda m_1 - (1-\lambda)m_2 \right) \\
+        &amp; = R\left( \lambda (L_1 - m_1) + (1-\lambda)(L_2 - m_2) \right) \\
+        &amp; \leq \max\{R(L_1 - m_1), R(L_2 - m_2)\} \\
+        &amp; = \max\{0, 0\} = 0.
+    \end{align*}
 \]</div>
 </details>
 </div>
 <div class="admonition remark">
 <p class="admonition-title">Positive Homogeneity</p>
-<p>Positive homogeneity also has a financial interpretation.
-If <span class="arithmatex">\(L\)</span> represents the loss exposure of an investment with risk <span class="arithmatex">\(R(L)\)</span>, then scaling this investment by a factor <span class="arithmatex">\(\lambda &gt;0\)</span> will also scale the corresponding risk by <span class="arithmatex">\(\lambda\)</span>.
-That such a property is desirable is not totally clear, one would rather expect a super linear scaling of the risk.
-However positive homogeneity do have many properties that are desirable from a mathematical/implementation viewpoint. 
-As seen later in the next chapter, it is the underlying reason that one can get a decomposition in terms of marginal risk of the total risk.
-Furthermore it has the property of sub-additivity</p>
+<p>Positive homogeneity has a financial interpretation: if <span class="arithmatex">\( L \)</span> represents the loss exposure of an investment with risk <span class="arithmatex">\( R(L) \)</span>, scaling the investment by <span class="arithmatex">\( \lambda &gt; 0 \)</span> scales the corresponding risk by <span class="arithmatex">\( \lambda \)</span>.
+While desirable for mathematical reasons, super-linear scaling might be expected in some contexts.
+Positive homogeneity also implies sub-additivity, ensuring that risk is not exacerbated by combining positions.</p>
 <div class="admonition lemma">
 <p class="admonition-title">Lemma</p>
-<p>Let <span class="arithmatex">\(R\)</span> be a cash-invariant risk measure.
-If <span class="arithmatex">\(R\)</span> is positive homogeneous, it holds that</p>
+<p>Let <span class="arithmatex">\( R \)</span> be a cash-invariant risk measure. If <span class="arithmatex">\( R \)</span> is positive homogeneous, then:</p>
 <div class="arithmatex">\[
-    R(L_1 + L_2) \leq R(L_1) + R(L_2)
+    R(L_1 + L_2) \leq R(L_1) + R(L_2).
 \]</div>
 </div>
 <details class="proof">
 <summary>Proof</summary>
-<p>Let <span class="arithmatex">\(R\)</span> be a cash-invariant risk measure which is positive homogeneous.
-Due to the cash invariance, <span class="arithmatex">\(R\)</span> is convex.
-It follows from convexity and positive homogeneity that</p>
+<p>Let <span class="arithmatex">\( R \)</span> be a cash-invariant and positive-homogeneous risk measure.
+By convexity:</p>
 <div class="arithmatex">\[
-  \begin{align*}
-    R( L_1 + L_2) &amp; = R\left( 2 \left(\frac{1}{2}L_1 +\frac{1}{2}L_2\right)\right)\\
-      &amp; = 2 R\left(\frac{1}{2}L_1 +\frac{1}{2}L_2\right)&amp;&amp; \text{(Positive Homogeneity)}\\
-      &amp; \leq 2 \left( \frac{1}{2}R(L_1) + \frac{1}{2}R(L_2)\right) &amp;&amp; \text{(Convexity)}\\
-      &amp; = R(L_1) +R(L_2)
-  \end{align*}
+    \begin{align*}
+        R(L_1 + L_2) &amp; = R\left( 2 \cdot \frac{1}{2}(L_1 + L_2) \right) \\
+        &amp; = 2 R\left(\frac{1}{2}L_1 + \frac{1}{2}L_2 \right) \quad \text{(Positive Homogeneity)} \\
+        &amp; \leq 2 \left( \frac{1}{2}R(L_1) + \frac{1}{2}R(L_2) \right) \quad \text{(Convexity)} \\
+        &amp; = R(L_1) + R(L_2).
+    \end{align*}
 \]</div>
 </details>
 </div>
