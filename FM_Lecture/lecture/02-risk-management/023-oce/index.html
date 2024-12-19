@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../022-risk-preferences/">
+      
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>023 oce - Financial Mathematics</title>
+        <title>Expected Shortfall - Financial Mathematics</title>
       
     
     
@@ -69,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#expected-shortfall" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              023 oce
+              Expected Shortfall
             
           </span>
         </div>
@@ -205,16 +212,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../00-Introduction/000-index/" class="md-tabs__link">
           
   
@@ -296,8 +307,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -310,17 +323,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -331,7 +347,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -553,8 +569,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -562,17 +580,19 @@
       
         
       
+        
+      
     
     
       
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -586,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Risk Management
@@ -635,6 +655,94 @@
 
               
             
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Expected Shortfall
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Expected Shortfall
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#expected-shortfall_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Shortfall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimized-certainty-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimized Certainty Equivalent
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-shortfall-and-optimized-certainty-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Shortfall and Optimized Certainty Equivalent
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -665,9 +773,453 @@
                   
 
 
-  <h1>023 oce</h1>
-
-
+<h1 id="expected-shortfall">Expected Shortfall</h1>
+<p>We have thus far explored the fundamentals of risk assessment, focusing on the key principles it must satisfy to achieve sound quantification: <strong>monotonicity</strong>, <strong>diversification</strong>, and, for financial purposes, <strong>cash-invariance</strong>. This foundation has enabled us to highlight the fundamental flaws of mean-variance analysis and value at risk (VaR) in meeting these criteria. However, from a practical standpoint, we are still far from identifying a fully satisfactory approach.</p>
+<p>When considering a risk quantification instrument <span class="arithmatex">\( R \)</span>, the following points are crucial:</p>
+<ol>
+<li><strong>Soundness:</strong> The instrument <span class="arithmatex">\( R \)</span> must satisfy the properties of <strong>diversification</strong> and <strong>monotonicity</strong> to ensure robust risk quantification.</li>
+<li><strong>Understandability:</strong> <span class="arithmatex">\( R \)</span> should be intuitively comprehensible from a financial perspective, even for individuals not deeply versed in the intricacies of mathematics. Ultimately, you need to convince your boss, the regulator, and the public that the methodology you employ is sensible and reliable.</li>
+<li><strong>Implementability:</strong> The computation of <span class="arithmatex">\( R \)</span> must be feasible. At the end of the day, you need to produce a quantifiable result. This means it should be possible to create a programmatic function, based on available data, to compute the value of your risk measure (prototyping).</li>
+<li><strong>Efficiency and Robustness:</strong> The implementation of <span class="arithmatex">\( R \)</span> should meet industry standards—being fast, reliable, and free of bugs. Risk computations are not a one-time experiment; they need to be conducted daily. Large financial institutions, by regulatory requirement, must aggregate and assess vast and complex positions to provide timely results on a daily basis.</li>
+</ol>
+<p>As for now, our focus has been primarily on the first point—establishing the groundwork for soundness.
+However, the other points are equally vital in practice.
+Since the 2008 financial crisis, the shortcomings of value at risk (VaR) have been widely acknowledged.
+While these shortcomings (particularly related to soundness) were long known to academics, addressing the other points took time before a new industry standard could emerge.
+This standard is the <strong>expected shortfall</strong> (also known under equivalent terms such as <strong>average value at risk</strong> or <strong>conditional value at risk</strong>).</p>
+<h2 id="expected-shortfall_1">Expected Shortfall</h2>
+<p>As the main issue of value at risk being the fact that it only provides information at one point of the CDF and being blind beyond it, the idea is to consider the tail beyond value at risk</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Expected Shortfall</p>
+<p>The expected shortfall of a random variable (integrable) at level <span class="arithmatex">\(\alpha\)</span> is defined as</p>
+<div class="arithmatex">\[
+    ES_{\alpha}(L) = \frac{1}{\alpha}\int_0^\alpha V@R_{s}(L) ds = \frac{1}{\alpha}\int_{1-\alpha}^1 q_L(s) ds
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The expected shortfall has been introduced by Artzner, Delbaen, Eber and Heath in 1999 to address the aforementioned shortcomings of V@R.
+The <strong>Expected Shortfall (ES)</strong> comes under several names (and equivalent definitions modulo some subtelties), namely <strong>Average Value at Risk (AV@R)</strong>, <strong>conditional value at risk (CV@R)</strong>, <strong>Expected Tail Loss (ETL)</strong> or <strong>Superquantile</strong>.</p>
+</div>
+<p><img alt="Expected Shortfall" src="../../../images/ES_dark.svg#only-dark" />
+<img alt="Expected Shortfall" src="../../../images/ES_white.svg#only-light" /></p>
+<p>As shown in the picture, the <strong>expected shortfall (ES)</strong> addresses the shortcomings of <strong>value at risk (V@R)</strong> by accounting for the loss area beyond V@R.
+Indeed, if two loss distributions, <span class="arithmatex">\( \tilde{L} \)</span> and <span class="arithmatex">\( L \)</span>, share the same value at risk but <span class="arithmatex">\( \tilde{L} \)</span> exhibits larger losses beyond the V@R (i.e., has fatter tails than <span class="arithmatex">\( L \)</span>), then even with identical V@R values, the expected shortfall (the area beyond V@R) of <span class="arithmatex">\( \tilde{L} \)</span> will exceed that of <span class="arithmatex">\( L \)</span>.</p>
+<p>This observation addresses the second point in our wish list, as it naturally rectifies V@R's limitations regarding tail risk.
+However, it does not resolve the first issue on our list.
+Specifically, it remains puzzling that while V@R fails to satisfy <strong>diversification</strong>, ES should. </p>
+<p>It is straightforward to observe that the desirable properties of V@R—<strong>monotonicity</strong>, <strong>law invariance</strong>, <strong>cash-invariance</strong>, and <strong>positive homogeneity</strong>—extend to ES through the integral formulation.
+However, since V@R is not convex, it is unclear why ES should be convex based on this representation.</p>
+<p>Furthermore, even though this representation satisfies the third point (as ES is just an integral of a computable object), there are strong doubts about its efficiency.
+Computing the integral of the quantile requires calculating many quantiles between <span class="arithmatex">\( 1-\alpha \)</span> and <span class="arithmatex">\( 1 \)</span>, which is computationally intensive and prone to error.
+This is particularly true for extreme quantiles (e.g., <span class="arithmatex">\( 99.999\% \)</span> or <span class="arithmatex">\( 99.99999\% \)</span>), where sampling the distribution in highly unlikely areas becomes unstable.</p>
+<p>To address these concerns, let us study another class of risk assessment instruments introduced by operations research scientists Ben-Tal and Teboulle, namely, the <strong>optimized certainty equivalent</strong>.</p>
+<h2 id="optimized-certainty-equivalent">Optimized Certainty Equivalent</h2>
+<p>At the core of the definition of the optimized certainty equivalent is a special penalization function called loss function.</p>
+<div class="grid cards">
+<ul>
+<li>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Loss Function</p>
+<p>A function <span class="arithmatex">\(\ell \colon \mathbb{R} \to \mathbb{R}\)</span> is called a loss function if</p>
+<ul>
+<li><span class="arithmatex">\(\ell\)</span> is convex</li>
+<li><span class="arithmatex">\(\ell\)</span> is increasing    </li>
+<li>
+<p class="annotate"><span class="arithmatex">\(\ell(0) = 0\)</span> and <span class="arithmatex">\(\ell^\prime(0) = 1\)</span>(1)</p>
+<ol>
+<li>Note that <span class="arithmatex">\(\ell\)</span> does not necessarily need to be differentiable such as <span class="arithmatex">\(\ell(x) = x^+/\alpha\)</span> for <span class="arithmatex">\(0&lt; \alpha &lt;1\)</span>. It just needs to have <span class="arithmatex">\(\ell^{\prime}_-(0) \leq 1 \leq \ell^\prime_+(0)\)</span> where <span class="arithmatex">\(\ell_-^\prime\)</span> and <span class="arithmatex">\(\ell^\prime_+\)</span> are the left and right derivative that always exists for convex functions.</li>
+</ol>
+</li>
+<li>
+<p><span class="arithmatex">\(\lim_{x \to \infty}\ell(x)/x &gt;1\)</span> and <span class="arithmatex">\(\lim_{x \to -\infty} \ell(x)/x &lt;1\)</span>.</p>
+</li>
+</ul>
+</div>
+<p>Classical examples following this definition</p>
+<ul>
+<li><em>piecewise linear:</em> <span class="arithmatex">\(\ell(x)= x^+/ \alpha\)</span> with <span class="arithmatex">\(0&lt; \alpha &lt;1\)</span>;</li>
+<li><em>quadratic:</em> <span class="arithmatex">\(\ell(x)=x^++(x^+)^2/2\)</span>;</li>
+<li><em>exponential:</em> <span class="arithmatex">\(\ell(x)=e^x-1\)</span></li>
+</ul>
+</li>
+</ul>
+<p class="card"><img align="align" alt="Loss Functions" src="../../../images/loss_dark.svg#only-dark" />
+<img align="align" alt="Loss Functions" src="../../../images/loss_white.svg#only-light" /></p>
+</div>
+<p>The loss function penalizes a loss (losses are considered positive in our case) <span class="arithmatex">\(x \geq 0\)</span> by assigning a value <span class="arithmatex">\(\ell(x) \geq x\)</span>.
+For gains (negative values), it also penalizes by assigning an amount smaller than the gain itself.
+Hence, given a loss profile <span class="arithmatex">\(L\)</span>, you compute <span class="arithmatex">\(E[\ell(L)] \geq E[L]\)</span> which is the penalized loss estimation of your loss profile.
+The idea of Ben-Tal and Teboulle is to say that we can reduce the value of this penalized losses by assigning some cash <span class="arithmatex">\(m\)</span>, that is, <span class="arithmatex">\(E[\ell(L)] \leadsto E[\ell(L-m)]\)</span>.
+However in terms of total costs, you have account for the cash you allocated leading to the total cost valuation:</p>
+<div class="arithmatex">\[
+m + E[\ell(L-m)]
+\]</div>
+<p>The decision variable being the amount of cash you allocate, minimizing the costs leads to the definition of the optimized certainty equivalent.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Optimized Certainty Equivalent</p>
+<p>Given a loss function <span class="arithmatex">\(\ell\)</span>, the optimized certainty equivalent <span class="arithmatex">\(R\)</span> of a bounded random variable (appropriate integrability conditions can be considered) is defined as</p>
+<div class="arithmatex">\[
+  R(L) = \inf \left\{ m + E\left[ \ell(L - m) \right] \colon m \in \mathbb{R}\right\}
+\]</div>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Given a loss function <span class="arithmatex">\(\ell\)</span>, the optimized certainty equivalent <span class="arithmatex">\(R\)</span> is a cash- and law-invariant risk measure.</p>
+<p>Furthermore it holds that</p>
+<div class="arithmatex">\[
+  R(L) = m^\ast +E\left[ \ell(L- m^\ast) \right]
+\]</div>
+<p class="annotate">where(1)</p>
+<ol>
+<li>
+<p>If <span class="arithmatex">\(\ell\)</span> is not differentiable at <span class="arithmatex">\(0\)</span>, then it changes to </p>
+<div class="arithmatex">\[E[\ell^\prime_-(L-m^\ast)] \leq 1 \leq E\left[ \ell^\prime_+(L-m^\ast) \right]\]</div>
+</li>
+</ol>
+<div class="arithmatex">\[
+  E[\ell^\prime(L - m^\ast)] = 1
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>We show that <span class="arithmatex">\(R\)</span> thus defined is monotone, cash-invariant and convex.</p>
+<p>As for the <strong>monotonicity</strong>, suppose that <span class="arithmatex">\( L_1(\omega) \geq L_2(\omega) \)</span> for all <span class="arithmatex">\( \omega \)</span>.
+Since <span class="arithmatex">\( \ell \)</span> is increasing, it follows that</p>
+<div class="arithmatex">\[
+m + \ell\left( L_1 - m \right)  \geq m + \ell\left( L_2 - m \right)
+\]</div>
+<p>Taking the expectation on both sides, it follows that</p>
+<div class="arithmatex">\[
+m + E\left[\ell\left( L_1 - m \right)\right]  \geq m + E\left[\ell\left( L_2 - m \right)\right]
+\]</div>
+<p>which holds for every <span class="arithmatex">\( m \)</span>.
+Since <span class="arithmatex">\(m+E[\ell(L_2 -m)] \geq R(L_2)\)</span>, it follows that </p>
+<div class="arithmatex">\[
+m+E\left[\ell\left( L_1 - m \right)\right] \geq  R(L_2)
+\]</div>
+<p>for every <span class="arithmatex">\(m\)</span>.
+The right hand-side being independent of <span class="arithmatex">\(m\)</span>, taking the infimum over <span class="arithmatex">\(m\)</span> on the left hand-side yields </p>
+<div class="arithmatex">\[
+R(L_1) = \inf\left\{ m +  E\left[\ell\left( L_1 - m \right)\colon m \in \mathbb{R} \right] \right\} \geq R(L_2),
+\]</div>
+<p>showing monotonicity.</p>
+<p>As for the <strong>cash-invariance</strong>, let <span class="arithmatex">\( m \)</span> in <span class="arithmatex">\(\mathbb{R} \)</span>.
+It holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+   R(L - m) &amp; = \inf\left\{ \tilde{m} + E\left[\ell\left( L - m - \tilde{m} \right)\right]\colon \tilde{m} \in \mathbb{R} \right\}\\
+    &amp; = \inf\left\{ \tilde{m} + E\left[\ell\left( L - (m +\tilde{m}) \right)\right]\colon \tilde{m} \in \mathbb{R} \right\}\\
+    &amp; = \inf\left\{ \hat{m} - m + E\left[\ell\left( L - \hat{m} \right)\right] \colon \hat{m} \in \mathbb{R} \right\} &amp;&amp; \text{Variable change }\hat{m} = m +\tilde{m}\\
+    &amp; = \inf\left\{ \hat{m} + E\left[\ell\left( L - \hat{m} \right)\right] \colon \hat{m} \in \mathbb{R} \right\} -m \\
+    &amp; = R(L) - m
+\end{align*}
+\]</div>
+<p>As for the <strong>convexity</strong>, let <span class="arithmatex">\( L_1 \)</span> and <span class="arithmatex">\( L_2 \)</span> be two loss profiles, and <span class="arithmatex">\( 0 \leq \lambda \leq 1 \)</span>.
+Since <span class="arithmatex">\( \ell \)</span> is convex, for every <span class="arithmatex">\( m_1 \)</span> and <span class="arithmatex">\( m_2 \)</span>, defining <span class="arithmatex">\(m = \lambda m_1 +(1-\lambda)m_2\)</span>, and <span class="arithmatex">\(L = \lambda L_1 + (1-\lambda)L_2\)</span> it holds </p>
+<div class="arithmatex">\[
+m + \ell(L - m) \leq \lambda\left( m_1 + E\left[ \ell(L_1 - m_1) \right] \right) + (1-\lambda)\left( m_2 + E[\ell(L_2 - m_2)] \right)
+\]</div>
+<p>Since <span class="arithmatex">\(R(L) \leq m + E[\ell(L - m)]]\)</span>, it follows that</p>
+<div class="arithmatex">\[
+R(L) \leq \lambda\left( m_1 + E\left[ \ell(L_1 - m_1) \right] \right) + (1-\lambda)\left( m_2 + E[\ell(L_2 - m_2)] \right)
+\]</div>
+<p>Now <span class="arithmatex">\(R(L)\)</span> is independent of <span class="arithmatex">\(m_1\)</span> and <span class="arithmatex">\(m_2\)</span>, taking first the infimum with respect to <span class="arithmatex">\(m_1\)</span> yields</p>
+<div class="arithmatex">\[
+R(L) \leq \lambda R(L_1) + (1-\lambda)\left( m_2 + E[\ell(L_2 - m_2)] \right)
+\]</div>
+<p>followed by the infimum over <span class="arithmatex">\(m_2\)</span> yields</p>
+<div class="arithmatex">\[
+R(\lambda L_1 + (1-\lambda)L_2) = R(L) \leq \lambda R(L_1) + (1-\lambda)R(L_2)
+\]</div>
+<p>showing convexity.</p>
+<p>As for the <strong>law-invariance</strong> it immediately follows as the optimized certainty equivalent is defined as a function of the expectation which only depends on the CDF of <span class="arithmatex">\(L\)</span>.</p>
+<p>Let us now show the final assertion.
+For this purpose, for a fixed bounded random variable <span class="arithmatex">\(L\)</span> we define the function</p>
+<div class="arithmatex">\[
+g(m) = m + E\left[ \ell(L-m) \right]
+\]</div>
+<p>for which holds that <span class="arithmatex">\(R(L) = \inf g(m)\)</span>.
+Since <span class="arithmatex">\(\ell\)</span> is convex, it follows that <span class="arithmatex">\(g\)</span> is convex too.
+It follows from <span class="arithmatex">\(\ell\)</span> being increasing and the asymptotic assumptions on <span class="arithmatex">\(\ell\)</span> that <span class="arithmatex">\(\ell(x) \geq a_1 x -c_1\)</span> for <span class="arithmatex">\(x\)</span> positively large enough with <span class="arithmatex">\(a_1&gt;1\)</span> and <span class="arithmatex">\(\ell(x)\geq a_2 x -c_2\)</span> for <span class="arithmatex">\(x\)</span> negatively large enough and <span class="arithmatex">\(a_2&lt;1\)</span>.
+Since <span class="arithmatex">\(L\)</span> is bounded, it follows that for <span class="arithmatex">\(m\)</span> positively large enough (more than the bounds of <span class="arithmatex">\(L\)</span> at least) we have</p>
+<div class="arithmatex">\[
+g(m) = m + E[\ell(L-m)] \geq m + a_2E\left[ L -m \right] - c_2 = \underbrace{(1-a_2)}_{&gt;0} \underbrace{m}_{&gt;0} + a_2 E[L] - c_2 \xrightarrow[m \to \infty]{} \infty
+\]</div>
+<p>The same argumentation for large enough negative values of <span class="arithmatex">\(m\)</span> yields</p>
+<div class="arithmatex">\[
+g(m) = m + E[\ell(L-m)] \geq m + a_1E\left[ L -m \right] - c_1 = \underbrace{(1-a_1)}_{&lt;0} \underbrace{m}_{&lt;0} + a_1 E[L] - c_1 \xrightarrow[m \to -\infty]{} \infty
+\]</div>
+<p>All together, it shows that <span class="arithmatex">\(g(m) \to \infty\)</span> for <span class="arithmatex">\(m\to \pm \infty\)</span>, that is, in mathematical terms, <span class="arithmatex">\(g\)</span> is coercive.</p>
+<p>Now since <span class="arithmatex">\(g\)</span> is convex and coercive, there exists <span class="arithmatex">\(m^\ast\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span> such that <span class="arithmatex">\(g(m^\ast) = \inf g(m)\)</span>.</p>
+<p><img align="align" alt="Minimum convex" src="../../../images/ocefun_dark.svg#only-dark" />
+<img align="align" alt="Minimum convex" src="../../../images/ocefun_white.svg#only-light" /></p>
+<p>Since <span class="arithmatex">\(g\)</span> is convex, this minimum is exactly characterized by the first order condition.</p>
+<p>More explicitly, let <span class="arithmatex">\(m^\ast\)</span> be the infimum, then for any <span class="arithmatex">\(\varepsilon &gt;0\)</span>, then it holds</p>
+<div class="arithmatex">\[
+g(m^\ast - \varepsilon) \geq  g(m^\ast) \quad \text{and}\quad g(m^\ast + \varepsilon) \geq g(m^\ast)
+\]</div>
+<p>By the definition of <span class="arithmatex">\(g\)</span> and dividing by <span class="arithmatex">\(\varepsilon\)</span> it holds that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \begin{cases}
+    0 &amp; \leq -1 + E\left[ \frac{\ell(L-(m^\ast - \varepsilon)) - \ell(L-m^\ast)}{\varepsilon} \right] \xrightarrow[\varepsilon\downarrow 0]{} -1 + E\left[ \ell^\prime_+(L-m^\ast) \right]\\
+    0 &amp; \leq 1 + E\left[ \frac{\ell(L-(m^\ast + \varepsilon)) - \ell(L-m^\ast)}{\varepsilon} \right] \xrightarrow[\varepsilon\downarrow 0]{} 1 - E\left[ \ell^\prime_-(L-m^\ast) \right]
+  \end{cases}
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(\ell^\prime(x) = \lim_{\varepsilon\downarrow 0} (\ell(x + \varepsilon)-\ell(x))/\varepsilon\)</span> and <span class="arithmatex">\(\ell^\prime_-(x) = \lim_{\varepsilon \downarrow 0}(\ell(x)-\ell(x-\varepsilon))/\varepsilon\)</span> are the left and right derivative of the function <span class="arithmatex">\(\ell\)</span> (if <span class="arithmatex">\(\ell\)</span> is differentiable then they coincide).</p>
+<p>It follows that the first order condition is given by</p>
+<div class="arithmatex">\[
+E\left[ \ell^\prime_-(L-m^\ast) \right] \leq 1 \leq E\left[ \ell^\prime_+\left( L-m^ast \right) \right]
+\]</div>
+<p>Naturally, if <span class="arithmatex">\(\ell\)</span> is differentiable, those left and right derivatives coincide and yields the simpler condition</p>
+<div class="arithmatex">\[
+E\left[ \ell^\prime(L-m^\ast) \right] =1 
+\]</div>
+<p>which concludes the proof.</p>
+</details>
+<p>This proposition provides several important take one.
+First, the optimized certainty equivalent is itself a risk measure independent of the definition of <span class="arithmatex">\(\ell\)</span> as long as it is a loss function.
+Secondly, by its definition and the convexity of the problem, its computation is easy as it turns out to be a simple one dimensional unconstrained convex potimization problem for which there exists top-notch algorythm to solve.
+Finally, the simplicity of this optimization problem can circumvent the classical gradient descent to solve by providing an explicit expression for the first order condition.</p>
+<div class="admonition example">
+<p class="admonition-title">The Exponential Function: Entropic risk measure</p>
+<p>We consider the case where <span class="arithmatex">\(\ell(x) = (e^{\gamma x} - 1)/\gamma\)</span>.
+by the first order condition it holds</p>
+<div class="arithmatex">\[
+  1=E[\ell^\prime(L-m^\ast)] = E[e^{\gamma (L - m^\ast)}] = e^{-\gamma m^\ast}E\left[ e^{\gamma L} \right]
+\]</div>
+<p>showing that <span class="arithmatex">\(m^\ast = \ln(E[e^{\gamma L}])/\gamma\)</span> which pluged back into <span class="arithmatex">\(R\)</span> yields</p>
+<div class="arithmatex">\[
+  R(L) = \frac{1}{\gamma}\ln \left( E\left[ e^{\gamma L} \right]\right)
+\]</div>
+<p>Hence in the particular case of the exponential, the corresponding oce can be computed explicitly.
+For this particular choice of loss function, the risk measure is called the entropic risk measure.</p>
+<p>Even if this object is actually present beyond finance (statistical mechanics, physics, machine learning), and easy to compute, it is however not adequate as a risk measure from a financial viewpoint.
+Indeed, the penalization is exponential and will attribute extreme large values to losses.
+Consider for instance the risk of</p>
+<div class="arithmatex">\[
+  \begin{equation*}
+    L = 
+      \begin{cases}
+          1000000000 &amp; \text{with probability }0.00001 \\
+          -10000 &amp; \text{otherwize}
+      \end{cases}
+  \end{equation*}
+\]</div>
+<p>which is a large loss occured however with an unlikely small probability.
+Nevertheless it becomes impossible to compute the corresponding risk as it will blow out the computational abilities of a computer.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">The Piecewise Linear Function</p>
+<p>The previous example shows how a too strong penalization loss function, though leading to an explicit and nice representation, is unlikely to provide a practical risk measure in finance.
+We therefore turn to the other extreme case where the function penalize less, namly only linearly, that it</p>
+<div class="arithmatex">\[
+    \ell(x) = \frac{1}{\alpha}x^+
+\]</div>
+<p>where <span class="arithmatex">\(0&lt;\alpha &lt;1\)</span>.
+In this case, the function is not differentiable, we therefore need the characterization in terms of left and right derivative of the loss function.
+It turns out that</p>
+<div class="arithmatex">\[
+  \ell_-^\prime(x) = \frac{1}{\alpha}1_{(0, \infty)} (x) = 
+      \begin{cases}
+        \frac{1}{\alpha} &amp; x &gt; 0\\
+        0 &amp;\text{otherwize}
+      \end{cases}
+  \quad \text{and}\quad 
+  \ell_+^\prime(x) = \frac{1}{\alpha}1_{[0, \infty)} (x) = 
+      \begin{cases}
+        \frac{1}{\alpha} &amp; x \geq 0\\
+        0 &amp;\text{otherwize}
+      \end{cases}
+\]</div>
+<p>Hence the first order condition <span class="arithmatex">\(E[\ell^\prime_-(L-m^\ast)] \leq 1 \leq E[\ell^\prime_+(L-m^\ast)]\)</span> leads to</p>
+<div class="arithmatex">\[
+  \frac{1}{\alpha}P[L&gt;m^\ast] = E\left[\frac{1}{\alpha}1_{L&gt;m^\ast}\right] \leq 1 \leq E\left[\frac{1}{\alpha}1_{L\geq m^\ast}\right] = \frac{1}{\alpha}P[L\geq m^\ast]
+\]</div>
+<p>which is equivalent to </p>
+<div class="arithmatex">\[
+  P\left[ L &lt; m^\ast \right]\leq 1-\alpha \leq P\left[ L\leq  m^\ast \right]
+\]</div>
+<p>which is equivalent to the fact that <span class="arithmatex">\(m^\ast\)</span> is a <span class="arithmatex">\(1-\alpha\)</span> quantile of <span class="arithmatex">\(L\)</span> (if you are confused about it, think about a strictly increasing and continuous CDF).</p>
+<p>Hence it holds that</p>
+<div class="arithmatex">\[
+  m^\ast = q_L(1-\alpha) = V@R_{\alpha}(L)
+\]</div>
+<p>We therefore conclude that in the case of a piecewise linear function we get</p>
+<div class="arithmatex">\[
+    R(L) = \inf\left\{ m + \frac{1}{\alpha}E\left[ (L-m)^+ \right] \right\} = V@R_{\alpha}(L) + \frac{1}{\alpha}E\left[ (L-V@R_{\alpha}(L))^+ \right]
+\]</div>
+</div>
+<h2 id="expected-shortfall-and-optimized-certainty-equivalent">Expected Shortfall and Optimized Certainty Equivalent</h2>
+<p>On the one hand, we saw from the integral of V@R that it is not totally clear how to show that ES is a risk measure.
+On the other hand, the optimized certainty equivalent with piecewise function shows some components repated to V@R.</p>
+<p>It turns out that they are strongly connected as the following proposition shows</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>For bounded loss profiles (even for integrable ones), it holds that the expected shortfall with confidence level <span class="arithmatex">\(0&lt;\alpha&lt;1\)</span> coincides with the optimized certainty equivalent with piecewise loss function with factor <span class="arithmatex">\(1/\alpha\)</span>.</p>
+<p>In other terms it holds</p>
+<div class="arithmatex">\[
+  ES_{\alpha}(L) = \frac{1}{\alpha}\int_{0}^\alpha V@R_{s}(L)ds = \inf \{m +\frac{1}{\alpha}E[(L-m)^+] \colon m \in \mathbb{R}\} = V@R_{\alpha}(L) + \frac{1}{\alpha}E\left[ \left( L-V@R_{\alpha}(L) \right)^+ \right]
+\]</div>
+<p>In particular, the expected shortfall is a cash- and law-invariant risk measure.</p>
+</div>
+<p>This quite astonishing result answers the main remaining points we had, namely that is a sound risk measure, and that despite the numerical difficulty to compute the integral of quantile, it can be reduced to a computation of the V@R (which was already industry standard) plus the expectation of the loss profile beyond the V@R which can be easily be done (either you know the pdf of <span class="arithmatex">\(L\)</span> or you can use Monte Carlo with additional important sampling techniques).</p>
+<details class="proof">
+<summary>Proof</summary>
+<p>The main reason for the connection between the two objects is the major result that the quantile of <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(L\)</span> itself do share the same CDF.
+This well known and used widely for anything related to sampling and machine learning.
+Clearly stated, given a loss profile (or random variable) <span class="arithmatex">\(L\)</span> with CDF <span class="arithmatex">\(F_L(m) = P[L \leq m]\)</span> and quantile function <span class="arithmatex">\(q_L(s) = \inf\{m \colon F_L(m)\geq s\}\)</span>.
+Now <span class="arithmatex">\(q_L \colon (0,1)\to \mathbb{R}\)</span> is an increasing function that can be considered as a random variable on the probability space <span class="arithmatex">\((\tilde{\Omega}, \tilde{F}, \tilde{P})\)</span> where <span class="arithmatex">\(\tilde{\Omega} = (0,1)\)</span>, <span class="arithmatex">\(\tilde{F} = \mathcal{B}((0,1))\)</span> the <span class="arithmatex">\(\sigma\)</span>-algebra generated by intervals and <span class="arithmatex">\(\tilde{P}\)</span> is the lebesgue measure <span class="arithmatex">\(dx\)</span> that measure interval length, that it <span class="arithmatex">\(\tilde{P}[(a, b]] = b-a\)</span>.
+It turns out that the quantile <span class="arithmatex">\(q_L\)</span> of <span class="arithmatex">\(L\)</span> has the same CDF as <span class="arithmatex">\(L\)</span> itself, that is, <span class="arithmatex">\(\tilde{P}[q_L\leq m]:=F_{q_L}(m) = F_L(m)=:P[L\leq m]\)</span>.
+Indeed, by definition of the quantile it holds</p>
+<div class="arithmatex">\[
+(0, F_L(m)) = \{s \in (0,1) \colon 0&lt;F_L(m) &lt;s \} \subseteq \{s \in (0,1)\colon q_L(s) \leq m\} \subseteq \{s \in (0,1) \colon F_L(m)\leq s\} = (0, F_L(m)]
+\]</div>
+<p>Measuring these sets under the probability <span class="arithmatex">\(\tilde{P}\)</span> yields</p>
+<div class="arithmatex">\[
+F_L(m) -0 = \tilde{P}[(0, F_L(m))] \leq \underbrace{\tilde{P}\left[ q_L \leq m \right]}_{=:F_{q_L}(m)\text{ the CDF of }q_L} \leq \tilde{P} [(0, F_L(m)]] = F_L(m) - 0
+\]</div>
+<p>showing that <span class="arithmatex">\(F_{q_L}(m) = F_L(m)\)</span>.
+Using this fact and that <span class="arithmatex">\(q_L(s)\geq q_L(1-\alpha)\)</span> for every <span class="arithmatex">\(s \geq q_L(1-\alpha)\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+  ES_{\alpha}(L) &amp; = \frac{1}{\alpha} \int_{0}^{\alpha}V@R_{s}ds \\
+    &amp; = \frac{1}{\alpha} \int_{1-\alpha}^{\alpha} q_L(s) ds \\
+    &amp; = q_L(1-\alpha) + \frac{1}{\alpha}\int_{1-\alpha}^1 \left( q_L(s) - q_{L}(1-\alpha) \right)ds\\
+    &amp; = q_L(1-\alpha) + \frac{1}{\alpha}\int_{0}^1 \left( q_L(s) - q_{L}(1-\alpha)^+ \right)ds\\
+    &amp; = V@R_{\alpha}(L) + \frac{1}{\alpha}\int_{\mathbb{R}} \left(m - q_{L}(1-\alpha)^+ \right)dF_{q_L}(m)\\
+    &amp; = V@R_{\alpha}(L) + \frac{1}{\alpha}\int_{\mathbb{R}} \left(m - q_{L}(1-\alpha)^+ \right)dF_{L}(m)\\
+    &amp; = V@R_{\alpha}(L) + \frac{1}{\alpha}E \left[ \left( L - V@R_{\alpha}(L) \right)^+ \right]
+\end{align*}
+\]</div>
+</details>
+<div class="admonition remark">
+<p class="admonition-title">Remark on the distribution of the quantile and random sampling</p>
+<p>This kind of <em>magic trick</em> to show the relationship between the piecewise linear optimized certainty equivalent and the expected shortfall relies on the fundamental fact that the distribution of a random variable <span class="arithmatex">\(X\)</span> on some probability space <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> is the same as the distribution of its quantile <span class="arithmatex">\(q_X\)</span> on <span class="arithmatex">\((\tilde{\Omega}, \tilde{\mathcal{F}}, \tilde{P})\)</span> where <span class="arithmatex">\(\tilde{\Omega} = (0,1)\)</span>, <span class="arithmatex">\(\tilde{F} = \mathcal{B}((0,1))\)</span> the <span class="arithmatex">\(\sigma\)</span>-algebra generated by intervals and <span class="arithmatex">\(\tilde{P}\)</span> is the lebesgue measure <span class="arithmatex">\(dx\)</span> that measure interval length, that it <span class="arithmatex">\(\tilde{P}[(a, b]] = b-a\)</span>.</p>
+<p>This is widly known and used extensively in particular for sampling.
+Suppose that you want to sample randomly numbers <span class="arithmatex">\(x_1, \ldots, x_N\)</span> from the distribution of a random variable <span class="arithmatex">\(X\)</span> (for instance normal, student-t, gamma, etc).
+A computer however samples (quasi) random numbers <span class="arithmatex">\(u_1, \ldots, u_N\)</span> uniformly between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span>.
+By this theorem that the quantile and <span class="arithmatex">\(X\)</span> have the same distribution, it follows that defining <span class="arithmatex">\(x_n = q_X(u_n)\)</span> for <span class="arithmatex">\(n=1, \ldots, N\)</span>, you obtain a random sample <span class="arithmatex">\(x_1, \ldots, x_N\)</span> from the distribution of <span class="arithmatex">\(X\)</span>.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>      <span class="c1"># (1)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>    <span class="c1"># (2)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>             <span class="c1"># uniform sample</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">x0</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>                  <span class="c1"># quantile of normal distribution of u</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">x1</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>             <span class="c1"># sample from normal</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Plot the two histograms</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_histogram</span><span class="p">(</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">x</span><span class="o">=</span><span class="n">x0</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">histnorm</span><span class="o">=</span><span class="s1">&#39;probability&#39;</span><span class="p">,</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Quantile of Uniform Sample&#39;</span><span class="p">,</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">fig</span><span class="o">.</span><span class="n">add_histogram</span><span class="p">(</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">x</span><span class="o">=</span><span class="n">x1</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">histnorm</span><span class="o">=</span><span class="s1">&#39;probability&#39;</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Standard Normal Sample&#39;</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="p">)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+<ol>
+<li>The <code>scipy.stats</code> sublibrary contains many distributions with their <code>cdf</code>, <code>pdf</code>, <code>ppf</code> (quantile) in particular</li>
+<li>Using <code>plotly</code> library to plot graphs. You can also use <code>matplotlib</code>.</li>
+</ol>
+<p>This fact is the cornerstone of Monte-Carlo integration where you want to compute <span class="arithmatex">\(E[f(X)]\)</span>.
+Normally, due to <em>the law of large numbers</em> and <em>the central limit theorem</em>, it holds that</p>
+<div class="arithmatex">\[
+    \frac{1}{N}\sum_{n=1}^N f(x_n) \xrightarrow[N\to \infty]{} E[f(X)]
+\]</div>
+<p>where <span class="arithmatex">\(x_1, \ldots, x_N\)</span> is a random sample of the distribution of <span class="arithmatex">\(X\)</span>.
+What is happening though is that a random sample <span class="arithmatex">\(u_1, \ldots, u_N\)</span> is drawn from a uniform distribution between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(1\)</span> and then <span class="arithmatex">\(x_n = q_X(u_n)\)</span> will be computed and inserted into the arytmetic mean of <span class="arithmatex">\(f(x_n)\)</span>, <span class="arithmatex">\(n=1, \ldots, N\)</span>.</p>
+</div>
+<p>As for now, we know that the expected shortfall is a sound risk measure, understandable, implementable and due to the last representation, it is also efficient to compute.
+Previous to the introduction of expected shortfall, financial institutions where used to compute <span class="arithmatex">\(V@R\)</span>.
+Now to adjust to expected shortfall, they just have to compute (analytically or with Monte Carlo) the additional term <span class="arithmatex">\(E[(L-V@R_{\alpha}(L))^+]/\alpha\)</span> which is very efficient to compute.</p>
+<p>The computation of the expected shortfall in simple case runs as follows</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">t</span>       <span class="c1"># norm and student t distributions</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">root</span>       <span class="c1"># computation of the root of a function</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>      <span class="c1"># one dimensional integration</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>        <span class="c1"># plotting stuff</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># define the basic computation of quantile (X is a random variable)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">def</span> <span class="nf">quantile</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="c1"># definition of the root function</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        <span class="n">result</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">-</span> <span class="n">s</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        <span class="k">return</span> <span class="n">result</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="c1"># return the root</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="n">result</span> <span class="o">=</span> <span class="n">root</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># computation of the expected shortfall using integral of quantile</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="k">def</span> <span class="nf">ES1</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="c1"># define the quantile function to integrate</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>        <span class="k">return</span> <span class="n">quantile</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    <span class="c1"># integrate the quantile between 1-alpha and 1</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    <span class="k">return</span> <span class="n">result</span> <span class="o">/</span> <span class="n">alpha</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="c1"># computation of the expected shortfal using oce representation</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="k">def</span> <span class="nf">ES2</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">alpha</span><span class="p">):</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    <span class="n">var</span> <span class="o">=</span> <span class="n">quantile</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>    <span class="c1"># define the second part to integrate</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>    <span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">var</span><span class="p">)</span> <span class="o">*</span> <span class="n">X</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>    <span class="c1"># integrate the function between var and infinite</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    <span class="n">result</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span><span class="p">)</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>    <span class="k">return</span> <span class="n">var</span> <span class="o">+</span> <span class="n">result</span> <span class="o">/</span> <span class="n">alpha</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="n">X1</span> <span class="o">=</span> <span class="n">norm</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="n">X2</span> <span class="o">=</span> <span class="n">t</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>    <span class="c1"># a student t distribution with df=2 has variance equal to 1</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.01</span>    <span class="c1"># 1%</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="s2">V@R normal:</span><span class="se">\t</span><span class="si">{</span><span class="n">quantile</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="s2">ES slow normal:</span><span class="se">\t</span><span class="si">{</span><span class="n">ES1</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="s2">ES fast normal:</span><span class="se">\t</span><span class="si">{</span><span class="n">ES2</span><span class="p">(</span><span class="n">X1</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="s2">V@R student:</span><span class="se">\t</span><span class="si">{</span><span class="n">quantile</span><span class="p">(</span><span class="n">X2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">-</span><span class="n">alpha</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="s2">ES slow student:</span><span class="se">\t</span><span class="si">{</span><span class="n">ES1</span><span class="p">(</span><span class="n">X2</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="s2">ES fast student:</span><span class="se">\t</span><span class="si">{</span><span class="n">ES2</span><span class="p">(</span><span class="n">X2</span><span class="p">,</span><span class="w"> </span><span class="n">alpha</span><span class="p">)</span><span class="si">}</span>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="c1"># Exercise</span>
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="c1"># Compare and plot the difference between value at risk and es for normal and student for 0.0001 &lt; alpha &lt; 0.05</span>
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="c1"># Compare using %timeit the speed of ES1 and ES2</span>
+</span></code></pre></div>
+<p>As we can see we obtained for the expected shortfall different representations.
+Simple transformations yields additional representations</p>
+<div class="admonition proposition">
+<p>The expected shortfall has the following representations</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    ES_{\alpha}(L)  &amp; = \frac{1}{\alpha}\int_0^\alpha V@R_{s}(L)ds &amp;&amp; \text{Quantile representation}\\
+                    &amp; = \inf\{m + \frac{1}{\alpha}E[(L-m)^+]\colon m \in \mathbb{R}\} &amp;&amp; \text{OCE representation}\\
+                    &amp; = V@R_{\alpha}(L) + \frac{1}{\alpha}E\left[ \left( L - V@R_{\alpha}(L) \right)^+ \right] \\
+                    &amp; = \frac{1}{\alpha}\int_{V@R_{\alpha}(L)}^\infty x dF_L(x)
+  \end{align*}
+\]</div>
+<p>Furthermore, the expected shortfall is positive homogeneous, that is</p>
+<div class="arithmatex">\[ ES_{\alpha}(\lambda L) = \lambda ES_{\alpha}(L)\]</div>
+<p>for every <span class="arithmatex">\(\lambda&gt;0\)</span>.
+In particular <span class="arithmatex">\(ES_{\alpha}(L_1 + L_2)\leq ES_{\alpha}(L_1) + ES_{\alpha}(L_2)\)</span>.</p>
+</div>
 
 
 
