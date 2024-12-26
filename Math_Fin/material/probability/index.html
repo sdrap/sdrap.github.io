@@ -1,0 +1,2569 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../lecture/03-Multi-Period/033-ruin-probability/">
+      
+      
+        <link rel="next" href="../stochastic/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>Probability - Mathematical Finance</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#probability" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mathematical Finance" class="md-header__button md-logo" aria-label="Mathematical Finance" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathematical Finance
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Probability
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../lecture/00-Introduction/000-index/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Math Add On
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../ex01/" class="md-tabs__link">
+          
+  
+    
+  
+  Exercises
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mathematical Finance" class="md-nav__button md-logo" aria-label="Mathematical Finance" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mathematical Finance
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/00-Introduction/000-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/00-Introduction/001-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            One Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/01-One-Period/011-mathematical-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematical Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/01-One-Period/012-arbitrage-pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbitrage and Pricing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/01-One-Period/013-derivative-securities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Derivative Securities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Risk Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Risk Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/02-risk-management/021-what-is-risk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is Risk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/02-risk-management/022-risk-preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk Preferences and Measures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/02-risk-management/023-oce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expected Shortfall
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Multi Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Multi Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/03-Multi-Period/031-multi-period-financial-markets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi Period Financial Market
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/03-Multi-Period/032-american-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    American Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/03-Multi-Period/033-ruin-probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ruin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math Add On
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Math Add On
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Probability
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Probability
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#probability-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability Space
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability Measure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measure-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Independence
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stochastic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Exercises
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex_math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Probability and Stochastic Processes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="probability">Probability</h1>
+<h2 id="probability-space">Probability Space</h2>
+<p>In probability, we consider:</p>
+<ul>
+<li><strong>A state space</strong> <span class="arithmatex">\( \Omega \)</span> of <strong>states</strong> <span class="arithmatex">\( \omega \in \Omega \)</span>: 
+    Description of possible states of an outcome for which there is uncertainty.</li>
+<li><strong>Events</strong> <span class="arithmatex">\( A \subseteq \Omega \)</span> as a collection of states that can happen.
+    The family of all considered events <span class="arithmatex">\( A \subseteq \Omega \)</span> is denoted by <span class="arithmatex">\( \mathcal{F} \)</span>.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
+<ol>
+<li>
+<p><strong>Coin Flipping:</strong></p>
+<ul>
+<li>
+<p><strong>State space:</strong> <span class="arithmatex">\( \Omega = \{H, T\} \)</span>, where <span class="arithmatex">\( H \)</span> and <span class="arithmatex">\( T \)</span> denote the states "Head occurs" and "Tail occurs" as the possible outcomes of throwing a coin.</p>
+</li>
+<li>
+<p><strong>Events:</strong> <span class="arithmatex">\( A = \{H\} \)</span> is the event that head will occur.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Temperature tomorrow:</strong></p>
+<ul>
+<li>
+<p><strong>State space:</strong> <span class="arithmatex">\( \Omega = \mathbb{R} \)</span>, where <span class="arithmatex">\( x \in \Omega \)</span> represents the possible temperature at 8:00 am tomorrow.</p>
+</li>
+<li>
+<p><strong>Events:</strong> <span class="arithmatex">\( A = [13,19] \)</span> is the event that tomorrow at 8:00 am, the temperature will lie between <span class="arithmatex">\( 13 \)</span> and <span class="arithmatex">\( 19 \)</span> degrees.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Financial decision:</strong> </p>
+<ul>
+<li>
+<p><strong>State space:</strong> <span class="arithmatex">\( \Omega = [-1,10]^2 \)</span>, where for <span class="arithmatex">\( (x, y) \in \Omega \)</span>, <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span> represent the interest rates that the central banks of the USA and EU, respectively, will fix next month.</p>
+</li>
+<li>
+<p><strong>Events:</strong> <span class="arithmatex">\( A = [0.25,0.75] \times [0.9,1.8] \cup \{1\} \times [1.7,2.1] \)</span> is the event that next month the USA fixes an interest rate between <span class="arithmatex">\( 0.25\% \)</span> and <span class="arithmatex">\( 0.75\% \)</span> while the EU fixes one between <span class="arithmatex">\( 0.9\% \)</span> and <span class="arithmatex">\( 1.8\% \)</span>, OR the USA fixes an interest rate of <span class="arithmatex">\( 1\% \)</span> while the EU fixes one between <span class="arithmatex">\( 1.7\% \)</span> and <span class="arithmatex">\( 2.1\% \)</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Texas Holdem:</strong></p>
+<p>For Texas Holdem, we have 52 cards deck <span class="arithmatex">\(D\)</span> with cards <span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path style="fill:#D71E00;" d="M256,238.345c9.507-24.214,29.625-44.138,54.881-44.138c21.257,0,40.201,9.993,52.966,26.483
+			c16.013,20.692,27.33,66.754-7.715,101.8C338.353,340.268,256,423.724,256,423.724s-82.353-83.456-100.131-101.235
+			c-35.046-35.046-23.729-81.108-7.715-101.8c12.765-16.49,31.709-26.483,52.966-26.483
+			C226.375,194.207,246.493,214.131,256,238.345"/>
+		<path style="fill:#D71E00;" d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31
+			c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path style="fill:#D71E00;" d="M165.599,41.055c3.173-3.702,2.744-9.274-0.957-12.447s-9.274-2.744-12.447,0.957L99.229,91.359
+			c-3.173,3.702-2.744,9.274,0.957,12.447c3.702,3.173,9.274,2.744,12.447-0.957L165.599,41.055z"/>
+		<path style="fill:#D71E00;" d="M130.77,74.317c-2.834-3.967-8.347-4.886-12.314-2.052c-3.967,2.834-4.886,8.347-2.052,12.314
+			l44.138,61.793c2.834,3.967,8.347,4.886,12.314,2.052c3.967-2.834,4.886-8.347,2.052-12.314L130.77,74.317z"/>
+	</g>
+</g>
+</svg></span>, <span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,361.931L282.483,361.931c0,0,44.323,44.323,79.448-8.828c18.282-27.666,5.888-54.616-13.603-73.242
+			l-83.906-82.635c-4.723-4.025-11.979-4.025-16.711,0l-85.124,82.635c-16.746,17.523-31.011,45.506-12.518,73.242
+			c35.31,52.966,79.448,8.828,79.448,8.828c0,22.625-6.444,51.703-8.324,59.683c-0.256,1.112,0.6,2.11,1.739,2.11h66.145
+			c1.139,0,1.986-0.997,1.73-2.101C288.936,413.617,282.483,384.415,282.483,361.931"/>
+		<path d="M149.616,32.519c-2.683-8.048-14.066-8.048-16.749,0L97.556,138.45c-1.542,4.625,0.958,9.624,5.583,11.166
+			c4.625,1.542,9.624-0.958,11.166-5.583l35.31-105.931h-16.749l35.31,105.931c1.542,4.625,6.541,7.125,11.166,5.583
+			c4.625-1.542,7.125-6.541,5.583-11.166L149.616,32.519z"/>
+		<path d="M158.897,114.759c4.875,0,8.828-3.952,8.828-8.828c0-4.875-3.952-8.828-8.828-8.828h-35.31
+			c-4.875,0-8.828,3.952-8.828,8.828c0,4.875,3.952,8.828,8.828,8.828H158.897z"/>
+	</g>
+</g>
+</svg></span>, <span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,370.759c0,21.91,6.038,43.82,8.13,50.732c0.344,1.139-0.521,2.233-1.704,2.233h-65.827
+			c-1.183,0-2.039-1.095-1.704-2.225c2.074-6.947,8.139-29.096,8.139-50.741c-8.73,6.321-18.803,9.578-29.917,9.578
+			c-32.274,0-60.275-27.101-58.253-59.78c1.13-18.379,12.835-34.145,28.425-43.926c15.651-9.825,30.164-10.611,43.14-7.459
+			c-8.298-9.825-13.312-22.502-13.312-36.361c0-34.834,31.576-62.296,67.663-55.314c22.59,4.361,40.536,22.925,44.332,45.612
+			c2.948,17.602-2.304,33.986-12.5,46.062c13.065-3.169,27.692-2.348,43.467,7.662c15.519,9.852,27.18,25.582,28.248,43.926
+			c1.889,32.591-26.2,59.577-58.403,59.577C301.444,380.337,291.046,376.947,282.483,370.759"/>
+		<path d="M158.897,44.138c4.875,0,8.828-3.952,8.828-8.828s-3.952-8.828-8.828-8.828h-52.966c-4.875,0-8.828,3.952-8.828,8.828
+			s3.952,8.828,8.828,8.828H158.897z"/>
+		<path d="M114.759,35.31c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828v8.828c0,4.875,3.952,8.828,8.828,8.828
+			c4.875,0,8.828-3.952,8.828-8.828V35.31z"/>
+		<path d="M114.881,122.122c-0.809,4.808,2.433,9.361,7.241,10.17s9.361-2.433,10.17-7.241
+			c6.146-36.533,13.104-53.566,33.951-84.845c2.704-4.057,1.607-9.538-2.45-12.241s-9.538-1.607-12.241,2.45
+			C129.358,63.714,121.451,83.07,114.881,122.122z"/>
+	</g>
+</g>
+</svg></span>, ...</p>
+<p>After pre-flop, flop, turn and river (if you're still there), you have to choose 5 best cards out of the best combinations you can get from the 5 on the table and the two in your hand.</p>
+<ul>
+<li>
+<p><strong>State space:</strong> <span class="arithmatex">\( \Omega = \{\{c_1, c_2, c_3, c_4, c_5\} \colon c_i \in D, \text{ and } c_i \neq c_j\} \)</span>.
+  Note here the notation in terms of set, since the order does not count. Furthermore, each card is different since distributing occurs without replacement.</p>
+</li>
+<li>
+<p><strong>Event:</strong> The event <span class="arithmatex">\(A\)</span> that I have a royal flush corresponds to <span class="arithmatex">\(A\)</span> containing the elements <span class="arithmatex">\(\{\)</span><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,370.759c0,21.91,6.038,43.82,8.13,50.732c0.344,1.139-0.521,2.233-1.704,2.233h-65.827
+			c-1.183,0-2.039-1.095-1.704-2.225c2.074-6.947,8.139-29.096,8.139-50.741c-8.73,6.321-18.803,9.578-29.917,9.578
+			c-32.274,0-60.275-27.101-58.253-59.78c1.13-18.379,12.835-34.145,28.425-43.926c15.651-9.825,30.164-10.611,43.14-7.459
+			c-8.298-9.825-13.312-22.502-13.312-36.361c0-34.834,31.576-62.296,67.663-55.314c22.59,4.361,40.536,22.925,44.332,45.612
+			c2.948,17.602-2.304,33.986-12.5,46.062c13.065-3.169,27.692-2.348,43.467,7.662c15.519,9.852,27.18,25.582,28.248,43.926
+			c1.889,32.591-26.2,59.577-58.403,59.577C301.444,380.337,291.046,376.947,282.483,370.759"/>
+		<path d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31c0-4.875-3.952-8.828-8.828-8.828
+			c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path d="M132.414,61.793v52.966c0,19.441,15.869,35.31,35.31,35.31s35.31-15.869,35.31-35.31V61.793
+			c0-19.441-15.869-35.31-35.31-35.31S132.414,42.352,132.414,61.793z M185.379,61.793v52.966c0,9.69-7.965,17.655-17.655,17.655
+			c-9.69,0-17.655-7.965-17.655-17.655V61.793c0-9.69,7.965-17.655,17.655-17.655C177.414,44.138,185.379,52.103,185.379,61.793z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,370.759c0,21.91,6.038,43.82,8.13,50.732c0.344,1.139-0.521,2.233-1.704,2.233h-65.827
+			c-1.183,0-2.039-1.095-1.704-2.225c2.074-6.947,8.139-29.096,8.139-50.741c-8.722,6.321-18.803,9.578-29.917,9.578
+			c-32.274,0-60.275-27.101-58.253-59.78c1.13-18.379,12.835-34.145,28.425-43.926c15.651-9.825,30.164-10.611,43.14-7.459
+			c-8.298-9.825-13.312-22.502-13.312-36.361c0-34.834,31.576-62.296,67.663-55.314c22.59,4.361,40.536,22.925,44.332,45.612
+			c2.948,17.602-2.304,33.986-12.5,46.062c13.065-3.169,27.692-2.348,43.467,7.662c15.519,9.852,27.18,25.582,28.248,43.926
+			c1.889,32.591-26.2,59.577-58.403,59.577C301.444,380.337,291.046,376.947,282.483,370.759"/>
+		<path d="M132.414,141.241c19.441,0,35.31-15.869,35.31-35.31V35.31c0-4.875-3.952-8.828-8.828-8.828s-8.828,3.952-8.828,8.828
+			v70.621c0,9.69-7.965,17.655-17.655,17.655c-9.69,0-17.655-7.965-17.655-17.655c0-4.875-3.952-8.828-8.828-8.828
+			c-4.875,0-8.828,3.952-8.828,8.828C97.103,125.372,112.973,141.241,132.414,141.241z"/>
+		<path d="M176.552,44.138c4.875,0,8.828-3.952,8.828-8.828s-3.952-8.828-8.828-8.828h-35.31c-4.875,0-8.828,3.952-8.828,8.828
+			s3.952,8.828,8.828,8.828H176.552z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,370.759c0,21.91,6.038,43.82,8.13,50.732c0.344,1.139-0.521,2.233-1.704,2.233h-65.827
+			c-1.183,0-2.039-1.095-1.704-2.225c2.074-6.947,8.139-29.096,8.139-50.741c-8.73,6.321-18.803,9.578-29.917,9.578
+			c-32.274,0-60.275-27.101-58.253-59.78c1.13-18.379,12.835-34.145,28.425-43.926c15.651-9.825,30.164-10.611,43.14-7.459
+			c-8.298-9.825-13.312-22.502-13.312-36.361c0-34.834,31.576-62.296,67.663-55.314c22.59,4.361,40.536,22.925,44.332,45.612
+			c2.948,17.602-2.304,33.986-12.5,46.062c13.065-3.169,27.692-2.348,43.467,7.662c15.519,9.852,27.18,25.582,28.248,43.926
+			c1.889,32.591-26.2,59.577-58.403,59.577C301.444,380.337,291.046,376.947,282.483,370.759"/>
+		<path d="M97.103,61.793v52.966c0,19.441,15.869,35.31,35.31,35.31s35.31-15.869,35.31-35.31V61.793
+			c0-19.441-15.869-35.31-35.31-35.31S97.103,42.352,97.103,61.793z M150.069,61.793v52.966c0,9.69-7.965,17.655-17.655,17.655
+			c-9.69,0-17.655-7.965-17.655-17.655V61.793c0-9.69,7.965-17.655,17.655-17.655C142.104,44.138,150.069,52.103,150.069,61.793z"/>
+		<path d="M162.428,148.303c3.9,2.925,9.433,2.135,12.359-1.766c2.925-3.9,2.135-9.433-1.766-12.359l-35.31-26.483
+			c-3.9-2.925-9.433-2.135-12.359,1.766c-2.925,3.9-2.135,9.433,1.766,12.359L162.428,148.303z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.482,370.759c0,21.91,6.047,43.82,8.13,50.732c0.344,1.139-0.521,2.233-1.704,2.233h-65.827
+			c-1.183,0-2.039-1.095-1.704-2.225c2.074-6.947,8.139-29.096,8.139-50.741c-8.722,6.321-18.803,9.578-29.917,9.578
+			c-32.274,0-60.275-27.101-58.253-59.78c1.13-18.379,12.835-34.145,28.425-43.926c15.651-9.825,30.164-10.611,43.14-7.459
+			c-8.298-9.825-13.312-22.502-13.312-36.361c0-34.834,31.576-62.296,67.663-55.314c22.59,4.361,40.545,22.925,44.332,45.612
+			c2.948,17.602-2.304,33.986-12.5,46.062c13.065-3.169,27.692-2.348,43.467,7.662c15.519,9.852,27.18,25.582,28.248,43.926
+			c1.889,32.591-26.2,59.577-58.403,59.577C301.444,380.337,291.045,376.947,282.482,370.759"/>
+		<path d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31c0-4.875-3.952-8.828-8.828-8.828
+			c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path d="M165.599,41.055c3.173-3.702,2.744-9.274-0.957-12.447s-9.274-2.744-12.447,0.957L99.229,91.359
+			c-3.173,3.702-2.744,9.274,0.957,12.447c3.702,3.173,9.274,2.744,12.447-0.957L165.599,41.055z"/>
+		<path d="M130.77,74.317c-2.834-3.967-8.347-4.886-12.314-2.052c-3.967,2.834-4.886,8.347-2.052,12.314l44.138,61.793
+			c2.834,3.967,8.347,4.886,12.314,2.052c3.967-2.834,4.886-8.347,2.052-12.314L130.77,74.317z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,370.759c0,21.91,6.038,43.82,8.13,50.732c0.344,1.139-0.521,2.233-1.704,2.233h-65.827
+			c-1.183,0-2.039-1.095-1.704-2.225c2.074-6.947,8.139-29.096,8.139-50.741c-8.722,6.321-18.803,9.578-29.917,9.578
+			c-32.274,0-60.275-27.101-58.253-59.78c1.13-18.379,12.835-34.145,28.425-43.926c15.651-9.825,30.164-10.611,43.14-7.459
+			c-8.298-9.825-13.312-22.502-13.312-36.361c0-34.834,31.576-62.296,67.663-55.314c22.59,4.361,40.536,22.925,44.332,45.612
+			c2.948,17.602-2.304,33.986-12.5,46.062c13.065-3.169,27.692-2.348,43.467,7.662c15.519,9.852,27.18,25.582,28.248,43.926
+			c1.889,32.591-26.2,59.577-58.403,59.577C301.444,380.337,291.046,376.947,282.483,370.759"/>
+		<path d="M149.616,32.519c-2.683-8.048-14.066-8.048-16.749,0L97.556,138.45c-1.542,4.625,0.958,9.624,5.583,11.166
+			c4.625,1.542,9.624-0.958,11.166-5.583l35.31-105.931h-16.749l35.31,105.931c1.542,4.625,6.541,7.125,11.166,5.583
+			c4.625-1.542,7.125-6.541,5.583-11.166L149.616,32.519z"/>
+		<path d="M158.897,114.759c4.875,0,8.828-3.952,8.828-8.828c0-4.875-3.952-8.828-8.828-8.828h-35.31
+			c-4.875,0-8.828,3.952-8.828,8.828c0,4.875,3.952,8.828,8.828,8.828H158.897z"/>
+	</g>
+</g>
+</svg></span><span class="arithmatex">\(\}\)</span>, <span class="arithmatex">\(\{\)</span><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path style="fill:#D71E00;" d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31
+			c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path style="fill:#D71E00;" d="M132.414,61.793v52.966c0,19.441,15.869,35.31,35.31,35.31s35.31-15.869,35.31-35.31V61.793
+			c0-19.441-15.869-35.31-35.31-35.31S132.414,42.352,132.414,61.793z M185.379,61.793v52.966c0,9.69-7.965,17.655-17.655,17.655
+			c-9.69,0-17.655-7.965-17.655-17.655V61.793c0-9.69,7.965-17.655,17.655-17.655C177.414,44.138,185.379,52.103,185.379,61.793z"/>
+		<path style="fill:#D71E00;" d="M256,238.345c9.507-24.214,29.625-44.138,54.881-44.138c21.257,0,40.201,9.993,52.966,26.483
+			c16.013,20.692,27.33,66.754-7.715,101.8C338.353,340.268,256,423.724,256,423.724s-82.353-83.456-100.131-101.235
+			c-35.046-35.046-23.729-81.108-7.715-101.8c12.765-16.49,31.709-26.483,52.966-26.483
+			C226.375,194.207,246.493,214.131,256,238.345"/>
+		<path style="fill:#D71E00;" d="M114.759,35.31c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828v8.828
+			c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path style="fill:#D71E00;" d="M256,238.345c9.507-24.214,29.625-44.138,54.881-44.138c21.257,0,40.201,9.993,52.966,26.483
+			c16.013,20.692,27.33,66.754-7.715,101.8C338.353,340.268,256,423.724,256,423.724s-82.353-83.456-100.131-101.235
+			c-35.046-35.046-23.729-81.108-7.715-101.8c12.765-16.49,31.709-26.483,52.966-26.483
+			C226.375,194.207,246.493,214.131,256,238.345"/>
+		<path style="fill:#D71E00;" d="M132.414,141.241c19.441,0,35.31-15.869,35.31-35.31V35.31c0-4.875-3.952-8.828-8.828-8.828
+			s-8.828,3.952-8.828,8.828v70.621c0,9.69-7.965,17.655-17.655,17.655c-9.69,0-17.655-7.965-17.655-17.655
+			c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828C97.103,125.372,112.973,141.241,132.414,141.241z"/>
+		<path style="fill:#D71E00;" d="M176.552,44.138c4.875,0,8.828-3.952,8.828-8.828s-3.952-8.828-8.828-8.828h-35.31
+			c-4.875,0-8.828,3.952-8.828,8.828s3.952,8.828,8.828,8.828H176.552z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path style="fill:#D71E00;" d="M256,238.345c9.507-24.214,29.625-44.138,54.881-44.138c21.257,0,40.201,9.993,52.966,26.483
+			c16.013,20.692,27.33,66.754-7.715,101.8C338.353,340.268,256,423.724,256,423.724s-82.353-83.456-100.131-101.235
+			c-35.046-35.046-23.729-81.108-7.715-101.8c12.765-16.49,31.709-26.483,52.966-26.483
+			C226.375,194.207,246.493,214.131,256,238.345"/>
+		<path style="fill:#D71E00;" d="M97.103,61.793v52.966c0,19.441,15.869,35.31,35.31,35.31s35.31-15.869,35.31-35.31V61.793
+			c0-19.441-15.869-35.31-35.31-35.31S97.103,42.352,97.103,61.793z M150.069,61.793v52.966c0,9.69-7.965,17.655-17.655,17.655
+			c-9.69,0-17.655-7.965-17.655-17.655V61.793c0-9.69,7.965-17.655,17.655-17.655C142.104,44.138,150.069,52.103,150.069,61.793z"/>
+		<path style="fill:#D71E00;" d="M162.428,148.303c3.9,2.925,9.433,2.135,12.359-1.766c2.925-3.9,2.135-9.433-1.766-12.359
+			l-35.31-26.483c-3.9-2.925-9.433-2.135-12.359,1.766c-2.925,3.9-2.135,9.433,1.766,12.359L162.428,148.303z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path style="fill:#D71E00;" d="M256,238.345c9.507-24.214,29.625-44.138,54.881-44.138c21.257,0,40.201,9.993,52.966,26.483
+			c16.013,20.692,27.33,66.754-7.715,101.8C338.353,340.268,256,423.724,256,423.724s-82.353-83.456-100.131-101.235
+			c-35.046-35.046-23.729-81.108-7.715-101.8c12.765-16.49,31.709-26.483,52.966-26.483
+			C226.375,194.207,246.493,214.131,256,238.345"/>
+		<path style="fill:#D71E00;" d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31
+			c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path style="fill:#D71E00;" d="M165.599,41.055c3.173-3.702,2.744-9.274-0.957-12.447s-9.274-2.744-12.447,0.957L99.229,91.359
+			c-3.173,3.702-2.744,9.274,0.957,12.447c3.702,3.173,9.274,2.744,12.447-0.957L165.599,41.055z"/>
+		<path style="fill:#D71E00;" d="M130.77,74.317c-2.834-3.967-8.347-4.886-12.314-2.052c-3.967,2.834-4.886,8.347-2.052,12.314
+			l44.138,61.793c2.834,3.967,8.347,4.886,12.314,2.052c3.967-2.834,4.886-8.347,2.052-12.314L130.77,74.317z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path style="fill:#D71E00;" d="M256,238.345c9.507-24.214,29.625-44.138,54.881-44.138c21.257,0,40.201,9.993,52.966,26.483
+			c16.013,20.692,27.33,66.754-7.715,101.8C338.353,340.268,256,423.724,256,423.724s-82.353-83.456-100.131-101.235
+			c-35.046-35.046-23.729-81.108-7.715-101.8c12.765-16.49,31.709-26.483,52.966-26.483
+			C226.375,194.207,246.493,214.131,256,238.345"/>
+		<path style="fill:#D71E00;" d="M149.616,32.519c-2.683-8.048-14.066-8.048-16.749,0L97.556,138.45
+			c-1.542,4.625,0.958,9.624,5.583,11.166c4.625,1.542,9.624-0.958,11.166-5.583l35.31-105.931h-16.749l35.31,105.931
+			c1.542,4.625,6.541,7.125,11.166,5.583c4.625-1.542,7.125-6.541,5.583-11.166L149.616,32.519z"/>
+		<path style="fill:#D71E00;" d="M158.897,114.759c4.875,0,8.828-3.952,8.828-8.828c0-4.875-3.952-8.828-8.828-8.828h-35.31
+			c-4.875,0-8.828,3.952-8.828,8.828c0,4.875,3.952,8.828,8.828,8.828H158.897z"/>
+	</g>
+</g>
+</svg></span><span class="arithmatex">\(\}\)</span>, <span class="arithmatex">\(\{\)</span><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<polygon style="fill:#D71E00;" points="256,176.552 150.069,308.966 256,441.379 361.931,308.966 		"/>
+		<path style="fill:#D71E00;" d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31
+			c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path style="fill:#D71E00;" d="M132.414,61.793v52.966c0,19.441,15.869,35.31,35.31,35.31s35.31-15.869,35.31-35.31V61.793
+			c0-19.441-15.869-35.31-35.31-35.31S132.414,42.352,132.414,61.793z M185.379,61.793v52.966c0,9.69-7.965,17.655-17.655,17.655
+			c-9.69,0-17.655-7.965-17.655-17.655V61.793c0-9.69,7.965-17.655,17.655-17.655C177.414,44.138,185.379,52.103,185.379,61.793z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<polygon style="fill:#D71E00;" points="256,176.552 150.069,308.966 256,441.379 361.931,308.966 		"/>
+		<path style="fill:#D71E00;" d="M132.414,141.241c19.441,0,35.31-15.869,35.31-35.31V35.31c0-4.875-3.952-8.828-8.828-8.828
+			s-8.828,3.952-8.828,8.828v70.621c0,9.69-7.965,17.655-17.655,17.655c-9.69,0-17.655-7.965-17.655-17.655
+			c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828C97.103,125.372,112.973,141.241,132.414,141.241z"/>
+		<path style="fill:#D71E00;" d="M176.552,44.138c4.875,0,8.828-3.952,8.828-8.828s-3.952-8.828-8.828-8.828h-35.31
+			c-4.875,0-8.828,3.952-8.828,8.828s3.952,8.828,8.828,8.828H176.552z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<polygon style="fill:#D71E00;" points="256,176.552 150.069,308.966 256,441.379 361.931,308.966 		"/>
+		<path style="fill:#D71E00;" d="M97.103,61.793v52.966c0,19.441,15.869,35.31,35.31,35.31s35.31-15.869,35.31-35.31V61.793
+			c0-19.441-15.869-35.31-35.31-35.31S97.103,42.352,97.103,61.793z M150.069,61.793v52.966c0,9.69-7.965,17.655-17.655,17.655
+			c-9.69,0-17.655-7.965-17.655-17.655V61.793c0-9.69,7.965-17.655,17.655-17.655C142.104,44.138,150.069,52.103,150.069,61.793z"/>
+		<path style="fill:#D71E00;" d="M162.428,148.303c3.9,2.925,9.433,2.135,12.359-1.766c2.925-3.9,2.135-9.433-1.766-12.359
+			l-35.31-26.483c-3.9-2.925-9.433-2.135-12.359,1.766c-2.925,3.9-2.135,9.433,1.766,12.359L162.428,148.303z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<polygon style="fill:#D71E00;" points="256,176.552 150.069,308.966 256,441.379 361.931,308.966 		"/>
+		<path style="fill:#D71E00;" d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31
+			c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path style="fill:#D71E00;" d="M165.599,41.055c3.173-3.702,2.744-9.274-0.957-12.447s-9.274-2.744-12.447,0.957L99.229,91.359
+			c-3.173,3.702-2.744,9.274,0.957,12.447c3.702,3.173,9.274,2.744,12.447-0.957L165.599,41.055z"/>
+		<path style="fill:#D71E00;" d="M130.77,74.317c-2.834-3.967-8.347-4.886-12.314-2.052c-3.967,2.834-4.886,8.347-2.052,12.314
+			l44.138,61.793c2.834,3.967,8.347,4.886,12.314,2.052c3.967-2.834,4.886-8.347,2.052-12.314L130.77,74.317z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<polygon style="fill:#D71E00;" points="256,176.552 150.069,308.966 256,441.379 361.931,308.966 		"/>
+		<path style="fill:#D71E00;" d="M149.616,32.519c-2.683-8.048-14.066-8.048-16.749,0L97.556,138.45
+			c-1.542,4.625,0.958,9.624,5.583,11.166c4.625,1.542,9.624-0.958,11.166-5.583l35.31-105.931h-16.749l35.31,105.931
+			c1.542,4.625,6.541,7.125,11.166,5.583c4.625-1.542,7.125-6.541,5.583-11.166L149.616,32.519z"/>
+		<path style="fill:#D71E00;" d="M158.897,114.759c4.875,0,8.828-3.952,8.828-8.828c0-4.875-3.952-8.828-8.828-8.828h-35.31
+			c-4.875,0-8.828,3.952-8.828,8.828c0,4.875,3.952,8.828,8.828,8.828H158.897z"/>
+	</g>
+</g>
+</svg></span><span class="arithmatex">\(\}\)</span>, <span class="arithmatex">\(\{\)</span><span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31c0-4.875-3.952-8.828-8.828-8.828
+			c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path d="M132.414,61.793v52.966c0,19.441,15.869,35.31,35.31,35.31s35.31-15.869,35.31-35.31V61.793
+			c0-19.441-15.869-35.31-35.31-35.31S132.414,42.352,132.414,61.793z M185.379,61.793v52.966c0,9.69-7.965,17.655-17.655,17.655
+			c-9.69,0-17.655-7.965-17.655-17.655V61.793c0-9.69,7.965-17.655,17.655-17.655C177.414,44.138,185.379,52.103,185.379,61.793z"/>
+		<path d="M282.483,361.931L282.483,361.931c0,0,44.323,44.323,79.448-8.828c18.282-27.666,5.888-54.616-13.603-73.242
+			l-83.906-82.635c-4.723-4.025-11.979-4.025-16.711,0l-85.124,82.635c-16.746,17.523-31.011,45.506-12.518,73.242
+			c35.31,52.966,79.448,8.828,79.448,8.828c0,22.625-6.444,51.703-8.324,59.683c-0.256,1.112,0.6,2.11,1.739,2.11h66.145
+			c1.139,0,1.986-0.997,1.73-2.101C288.936,413.617,282.483,384.415,282.483,361.931"/>
+		<path d="M114.759,35.31c0-4.875-3.952-8.828-8.828-8.828c-4.875,0-8.828,3.952-8.828,8.828v8.828c0,4.875,3.952,8.828,8.828,8.828
+			c4.875,0,8.828-3.952,8.828-8.828V35.31z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,361.931L282.483,361.931c0,0,44.323,44.323,79.448-8.828c18.282-27.666,5.888-54.616-13.603-73.242
+			l-83.906-82.635c-4.723-4.025-11.979-4.025-16.711,0l-85.124,82.635c-16.746,17.523-31.011,45.506-12.518,73.242
+			c35.31,52.966,79.448,8.828,79.448,8.828c0,22.625-6.444,51.703-8.324,59.683c-0.256,1.112,0.6,2.11,1.739,2.11h66.145
+			c1.139,0,1.986-0.997,1.73-2.101C288.936,413.617,282.483,384.415,282.483,361.931"/>
+		<path d="M132.414,141.241c19.441,0,35.31-15.869,35.31-35.31V35.31c0-4.875-3.952-8.828-8.828-8.828s-8.828,3.952-8.828,8.828
+			v70.621c0,9.69-7.965,17.655-17.655,17.655c-9.69,0-17.655-7.965-17.655-17.655c0-4.875-3.952-8.828-8.828-8.828
+			c-4.875,0-8.828,3.952-8.828,8.828C97.103,125.372,112.973,141.241,132.414,141.241z"/>
+		<path d="M176.552,44.138c4.875,0,8.828-3.952,8.828-8.828s-3.952-8.828-8.828-8.828h-35.31c-4.875,0-8.828,3.952-8.828,8.828
+			s3.952,8.828,8.828,8.828H176.552z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,361.931L282.483,361.931c0,0,44.323,44.323,79.448-8.828c18.282-27.666,5.888-54.616-13.603-73.242
+			l-83.906-82.635c-4.723-4.025-11.979-4.025-16.711,0l-85.124,82.635c-16.746,17.523-31.011,45.506-12.518,73.242
+			c35.31,52.966,79.448,8.828,79.448,8.828c0,22.625-6.444,51.703-8.324,59.683c-0.256,1.112,0.6,2.11,1.739,2.11h66.145
+			c1.139,0,1.986-0.997,1.73-2.101C288.936,413.617,282.483,384.415,282.483,361.931"/>
+		<path d="M97.103,61.793v52.966c0,19.441,15.869,35.31,35.31,35.31s35.31-15.869,35.31-35.31V61.793
+			c0-19.441-15.869-35.31-35.31-35.31S97.103,42.352,97.103,61.793z M150.069,61.793v52.966c0,9.69-7.965,17.655-17.655,17.655
+			c-9.69,0-17.655-7.965-17.655-17.655V61.793c0-9.69,7.965-17.655,17.655-17.655C142.104,44.138,150.069,52.103,150.069,61.793z"/>
+		<path d="M162.428,148.303c3.9,2.925,9.433,2.135,12.359-1.766c2.925-3.9,2.135-9.433-1.766-12.359l-35.31-26.483
+			c-3.9-2.925-9.433-2.135-12.359,1.766c-2.925,3.9-2.135,9.433,1.766,12.359L162.428,148.303z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,361.931L282.483,361.931c0,0,44.323,44.323,79.448-8.828c18.282-27.666,5.888-54.616-13.603-73.242
+			l-83.906-82.635c-4.723-4.025-11.979-4.025-16.711,0l-85.124,82.635c-16.746,17.523-31.011,45.506-12.518,73.242
+			c35.31,52.966,79.448,8.828,79.448,8.828c0,22.625-6.444,51.703-8.324,59.683c-0.256,1.112,0.6,2.11,1.739,2.11h66.145
+			c1.139,0,1.986-0.997,1.73-2.101C288.936,413.617,282.483,384.415,282.483,361.931"/>
+		<path d="M97.103,141.241c0,4.875,3.952,8.828,8.828,8.828c4.875,0,8.828-3.952,8.828-8.828V35.31c0-4.875-3.952-8.828-8.828-8.828
+			c-4.875,0-8.828,3.952-8.828,8.828V141.241z"/>
+		<path d="M165.599,41.055c3.173-3.702,2.744-9.274-0.957-12.447s-9.274-2.744-12.447,0.957L99.229,91.359
+			c-3.173,3.702-2.744,9.274,0.957,12.447c3.702,3.173,9.274,2.744,12.447-0.957L165.599,41.055z"/>
+		<path d="M130.77,74.317c-2.834-3.967-8.347-4.886-12.314-2.052c-3.967,2.834-4.886,8.347-2.052,12.314l44.138,61.793
+			c2.834,3.967,8.347,4.886,12.314,2.052c3.967-2.834,4.886-8.347,2.052-12.314L130.77,74.317z"/>
+	</g>
+</g>
+</svg></span>,<span class="twemoji"><?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<path style="fill:#E6EEF4;" d="M423.724,0H88.276c-9.754,0-17.655,7.901-17.655,17.655v476.69c0,9.754,7.901,17.655,17.655,17.655
+		h335.448c9.754,0,17.655-7.901,17.655-17.655V17.655C441.379,7.901,433.479,0,423.724,0"/>
+	<g>
+		<path d="M282.483,361.931L282.483,361.931c0,0,44.323,44.323,79.448-8.828c18.282-27.666,5.888-54.616-13.603-73.242
+			l-83.906-82.635c-4.723-4.025-11.979-4.025-16.711,0l-85.124,82.635c-16.746,17.523-31.011,45.506-12.518,73.242
+			c35.31,52.966,79.448,8.828,79.448,8.828c0,22.625-6.444,51.703-8.324,59.683c-0.256,1.112,0.6,2.11,1.739,2.11h66.145
+			c1.139,0,1.986-0.997,1.73-2.101C288.936,413.617,282.483,384.415,282.483,361.931"/>
+		<path d="M149.616,32.519c-2.683-8.048-14.066-8.048-16.749,0L97.556,138.45c-1.542,4.625,0.958,9.624,5.583,11.166
+			c4.625,1.542,9.624-0.958,11.166-5.583l35.31-105.931h-16.749l35.31,105.931c1.542,4.625,6.541,7.125,11.166,5.583
+			c4.625-1.542,7.125-6.541,5.583-11.166L149.616,32.519z"/>
+		<path d="M158.897,114.759c4.875,0,8.828-3.952,8.828-8.828c0-4.875-3.952-8.828-8.828-8.828h-35.31
+			c-4.875,0-8.828,3.952-8.828,8.828c0,4.875,3.952,8.828,8.828,8.828H158.897z"/>
+	</g>
+</g>
+</svg></span><span class="arithmatex">\(\}\)</span>.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<p>Events are supposed to be measured afterwards, however we require some structure among events.
+We want to speak about the occurence of one or the other event, two events happening coincidentally, or an event not happening.
+Therefore, the definition of measurable space</p>
+<div class="admonition definition">
+<p class="admonition-title">Measurable Space</p>
+<p>A <strong>measurable space</strong> is a tuple <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span>, where </p>
+<ul>
+<li><span class="arithmatex">\(\Omega\)</span> is a set (<strong>state space</strong>)</li>
+<li><span class="arithmatex">\(\mathcal{F}\)</span> is an algebra of subsets of <span class="arithmatex">\(\Omega\)</span> (<strong>Events</strong>)</li>
+</ul>
+<p>An algebra is a collection of sets satisfying the following properties</p>
+<ul>
+<li><span class="arithmatex">\( \emptyset \)</span> (nothing happens) and <span class="arithmatex">\( \Omega \)</span> (anything can happen) are events.</li>
+<li>If <span class="arithmatex">\(A\)</span> is an event, then so is <span class="arithmatex">\(A^c\)</span>;</li>
+<li>If <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are events, then <span class="arithmatex">\(A\cup B\)</span> is an event (the event that <span class="arithmatex">\(A\)</span> or <span class="arithmatex">\(B\)</span> happen is itself an event)</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that this is the intuitive definition of a measurable space, but for mathematical reason, we require the algebra of events <span class="arithmatex">\(\mathcal{F}\)</span> to be <span class="arithmatex">\(\sigma\)</span>-stable, that is instead of requiring union of two or finitely many events to be an events, we also require </p>
+</div>
+<p>If the state space <span class="arithmatex">\(\Omega\)</span> is finite or countable, the classical assumption is to consider as algebra of events the power set <span class="arithmatex">\(2^{\Omega}\)</span> which is the collection of any subsets.
+If the state space is infinite, such as <span class="arithmatex">\(\mathbb{R}\)</span>, the power set would be truly large and leading to mathematical issues.
+In the case of <span class="arithmatex">\(\mathbb{R}\)</span> for instance, the measurable sets are those generated by intervals.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>The third assumption for an algebra is equivalent to replace by </p>
+<ul>
+<li>If <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are events, then <span class="arithmatex">\(A\cap B\)</span> is an event.</li>
+</ul>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Let <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> be event, from the second assumption it follows follows that <span class="arithmatex">\(A^c\)</span>.
+Now the equivalence between the two assertion (intersection vs union) follows from Morgan's rule</p>
+<div class="arithmatex">\[
+    A\cap B = (A^c \cup B^c)^c \quad \text{and}\quad A\cup B = (A^c \cap B^c)^c
+\]</div>
+</div>
+<div class="admonition examples">
+<p class="admonition-title">Examples</p>
+<p>Here are some classical exmaples we will see throughout the lecture.</p>
+<ul>
+<li>
+<p><strong>Coin toss:</strong></p>
+<ul>
+<li><strong>State Space:</strong> <span class="arithmatex">\(\Omega = \{-1, 1\}\)</span> two states for head and tail</li>
+<li><strong>Events:</strong> <span class="arithmatex">\(\mathcal{F} = 2^\Omega = \{\emptyset, \Omega, \{1\}, \{-1\}\}\)</span></li>
+</ul>
+<p>There are here exactly <span class="arithmatex">\(2^2 =4\)</span> events.</p>
+</li>
+<li>
+<p><strong>Finite state space:</strong></p>
+<ul>
+<li><strong>State Space:</strong> <span class="arithmatex">\(\Omega = \{\omega_1, \ldots, \omega_N\}\)</span></li>
+<li><strong>Events:</strong> <span class="arithmatex">\(\mathcal{F} = 2^\Omega\)</span></li>
+</ul>
+<p>There are here exactly <span class="arithmatex">\(2^{\#\Omega} = 2^N\)</span> events (already with <span class="arithmatex">\(N\)</span> beyond 100 this is more than a computer can take).</p>
+</li>
+<li>
+<p><strong>Random Walk:</strong></p>
+<p>The random walk consists to draw a coin several times in a row, recording every single result.</p>
+<ul>
+<li><strong>State Sapce:</strong> <span class="arithmatex">\(\Omega = \{\omega = (\omega_1, \ldots, \omega_T)\colon \omega_i = \pm 1\}\)</span> where each state is the sequence of results of the coin toss.</li>
+<li><strong>Events:</strong> <span class="arithmatex">\(\mathcal{F}=2^\Omega\)</span>.</li>
+</ul>
+<p>As above, the cardinality of <span class="arithmatex">\(\mathcal{F}\)</span> is equal to <span class="arithmatex">\(2^{\# \Omega}\)</span>.
+However there are <span class="arithmatex">\(2^N\)</span> possible sequences, and so the cardinality of events is equal to <span class="arithmatex">\(2^{2^N}\)</span>.
+You can imagine that for small <span class="arithmatex">\(N\)</span> this size is already gigantic.</p>
+</li>
+</ul>
+</div>
+<h2 id="random-variables">Random Variables</h2>
+<p>Aside from being able to measure events, we also want to know how to measure the events that a function of this state satisfies.
+For instance, in the case of the coin toss, suppose that you play a game where if head you win 100 and if tail you lose everything.
+As a function of the state it writes as <span class="arithmatex">\(X \colon \Omega \to \mathbb{R}\)</span> where <span class="arithmatex">\(X(\omega) = 100\)</span> if <span class="arithmatex">\(\omega = 1\)</span> and <span class="arithmatex">\(X(\omega) = 0\)</span> otherwize.
+We want to be able to speak about the event <span class="arithmatex">\(A\)</span> you strictly win something which clearly if <span class="arithmatex">\(\{1\}\)</span>.
+In the general case we define random variables as such functions where you can measure this function to reach some certain level.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Let <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span> be a measurable space.
+A function</p>
+<div class="arithmatex">\[
+  \begin{equation*}
+    \begin{split}
+      X\colon \Omega \longrightarrow \mathbb{R}\\
+          \omega &amp; \longmapsto X(\omega)
+    \end{split}
+  \end{equation*}
+\]</div>
+<p>is called a <strong>random variable</strong> if for every level <span class="arithmatex">\(x\)</span>, the set</p>
+<div class="arithmatex">\[
+    A = \left\{ \omega \in \Omega \colon X(\omega)\leq x \right\}:= \{X\leq x\}
+\]</div>
+<p>is an event, that is <span class="arithmatex">\(A \in \mathcal{F}\)</span>.</p>
+</div>
+<p>The fact that we require the event smaller than some value seems arbitrary, however, since we have a (<span class="arithmatex">\(\sigma\)</span>)-algebra this is quite general</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>It is equivalent for <span class="arithmatex">\( X: \Omega \to \mathbb{R} \)</span> to be a random variable to require:</p>
+<ol>
+<li><span class="arithmatex">\( \{X &gt; x\} \in \mathcal{F} \)</span> for any <span class="arithmatex">\( x \)</span>.</li>
+<li><span class="arithmatex">\( \{X &lt; x\} \in \mathcal{F} \)</span> for any <span class="arithmatex">\( x \)</span>.</li>
+<li><span class="arithmatex">\( \{X \geq x\} \in \mathcal{F} \)</span> for any <span class="arithmatex">\( x \)</span>.</li>
+<li><span class="arithmatex">\( \{x \leq(&lt;) X \leq(&lt;) y\} \in \mathcal{F} \)</span> for any <span class="arithmatex">\( x \leq y \)</span>.</li>
+</ol>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<ol>
+<li>Follows from <span class="arithmatex">\( \{X &gt; x\} = \{X \leq x\}^c \)</span>, and <span class="arithmatex">\( \mathcal{F} \)</span> is closed under complementation.</li>
+<li><span class="arithmatex">\( \{X &lt; x\} = \cap_{n} \{X \leq x +1/n\} \)</span>, and <span class="arithmatex">\( \mathcal{F} \)</span> is closed under countable union.</li>
+</ol>
+<p>The other assertions follows similar argumentations.</p>
+</details>
+<p>This definition is compatible with many of the standard operations.
+In other terms the sum, product, composition with continuous function of random variables remain random variables.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\( X \)</span> be a random variable and <span class="arithmatex">\( f:\mathbb{R}\to \mathbb{R} \)</span> be a continuous function.
+Then</p>
+<div class="arithmatex">\[
+  \begin{equation*}
+    \begin{split}
+      Y\colon \Omega &amp;\longrightarrow \mathbb{R}\\
+      \omega &amp; \longmapsto Y(\omega) = f(X(\omega))
+    \end{split}
+  \end{equation*}
+\]</div>
+<p>is a random variable denoted <span class="arithmatex">\( Y = f(X) \)</span>.</p>
+<p>Let <span class="arithmatex">\( X, Y \)</span> be random variables as well as <span class="arithmatex">\( (X_n) \)</span> be a converging sequence of random variables.
+The following are random variables:</p>
+<ul>
+<li><span class="arithmatex">\( aX + bY \)</span> for every <span class="arithmatex">\( a, b \in \mathbb{R} \)</span>;</li>
+<li><span class="arithmatex">\( XY \)</span>;</li>
+<li><span class="arithmatex">\( \max(X, Y) \)</span> and <span class="arithmatex">\( \min(X, Y) \)</span>;</li>
+<li><span class="arithmatex">\( \sup X_n \)</span> and <span class="arithmatex">\( \inf X_n \)</span>;</li>
+<li><span class="arithmatex">\( \lim X_n \)</span>.</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>The first part of the proof is not trivial and has to do with topology as well as the definition of continuous functions.
+The argument goes as follows, for <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span>, the set <span class="arithmatex">\(F = \{x \in \mathbb{R}\colon f(x) \leq y\}\)</span> is a close set since <span class="arithmatex">\(f\)</span> is continuous (lower semi-continuous would be enought).
+Now it is possible to show following the previous proposition that if <span class="arithmatex">\(X\)</span> is a random variable, then <span class="arithmatex">\(\{X \in F\}\)</span> is an event since <span class="arithmatex">\(F\)</span> is closed.
+It follows that</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    \{Y \leq y\} &amp; = \left\{\omega \in \Omega\colon f(X(\omega))\leq y\right\}\\
+                  &amp; = \left\{ \omega \in \Omega \colon X(\omega) \in \{x \in \mathbb{R}\colon f(x)\leq y\} \right\}\\
+                  &amp; = \left\{ X \in F \right\} &amp;&amp; \text{which is an event.}
+  \end{align*}
+\]</div>
+<p>For the other three points, it follows from the continuity of functions.
+For the <span class="arithmatex">\(\sup\)</span> and <span class="arithmatex">\(\inf\)</span>, it follows from <span class="arithmatex">\(\{\sup X_n \leq x\} = \cap \{X_n \leq x\}\)</span> and <span class="arithmatex">\(\{\inf X_n &lt;x\} = \cup \{X_n &lt;x\}\)</span>, with similar argumentation of the limit of converging sequence of random variables.</p>
+<p>If you are interested, you can ask for lecture notes on probability.</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Example: Indicator and Simple Random Variables</p>
+<p>We turn to the most simple yet one of the most important example of random variable in probability.</p>
+<div class = "grid cards" markdown>
+<ul>
+<li>
+<p><strong>Indicator Function</strong></p>
+<hr />
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Let <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span> be a measurable space and let <span class="arithmatex">\( A \in \mathcal{F} \)</span> be an event.
+The function</p>
+<div class="arithmatex">\[
+\begin{equation*}
+\begin{split}
+  1_A \colon &amp; \Omega \longrightarrow \mathbb{R}\\
+  \omega &amp; \longmapsto 1_A(\omega) = 
+     \begin{cases}
+       1 &amp; \text{if } \omega \in A, \\
+       0 &amp; \text{if } \omega \notin A
+     \end{cases}
+\end{split}
+\end{equation*}
+\]</div>
+<p>is called the indicator function of <span class="arithmatex">\( A \)</span>.</p>
+</div>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise</p>
+<p>The indicator function <span class="arithmatex">\(1_A\)</span> of an event <span class="arithmatex">\(A\)</span> is a random variable.
+Indeed, let <span class="arithmatex">\(x\)</span> be in <span class="arithmatex">\(\mathbb{R}\)</span>.
+It follows that</p>
+<div class="arithmatex">\[
+  \{1_A \leq x\} = 
+  \begin{cases}
+  \emptyset &amp; \text{if } x&lt;0\\
+  A^c &amp; \text{if }0\leq x &lt;1 \\
+  \Omega &amp; \text{if }x \geq 1
+  \end{cases}
+\]</div>
+</div>
+</li>
+<li>
+<p><strong>Plot</strong></p>
+<hr />
+<p><img align="align" alt="Indicator Function" src="../../images/indicator_dark.svg#only-dark" />
+<img align="align" alt="Indicator Function" src="../../images/indicator_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+<p>This definition is strongly related to a table of truth: <span class="arithmatex">\( 1 \)</span> for true, <span class="arithmatex">\( 0 \)</span> for false.
+Clearly <span class="arithmatex">\( 1_{\emptyset} = 0 \)</span> and <span class="arithmatex">\( 1_{\Omega} = 1 \)</span>.<br />
+Show that:</p>
+<ol>
+<li>If <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> are events such that <span class="arithmatex">\( A \cap B = \emptyset \)</span>, then <span class="arithmatex">\( 1_{A \cup B} = 1_A + 1_B \)</span>.</li>
+<li>If <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> are events, then <span class="arithmatex">\( 1_{A \cap B} = 1_A 1_B \)</span>.</li>
+<li>If <span class="arithmatex">\( A \subseteq B \)</span> are events, then <span class="arithmatex">\( 1_A \leq 1_B \)</span>.</li>
+</ol>
+<div class = "grid cards" markdown>
+<ul>
+<li>
+<p><strong>Simple Random Variable</strong></p>
+<hr />
+<div class="admonition definition">
+<p class="admonition-title">Definition: Simple Random Variables</p>
+<p>For a family <span class="arithmatex">\( A_1, A_2, \ldots, A_n \)</span> of disjoint events and numbers <span class="arithmatex">\( \alpha_1, \ldots, \alpha_n \)</span>, we can define the simple random variable</p>
+<div class="arithmatex">\[
+  X(\omega) = \sum_{k=1}^n \alpha_k 1_{A_k}(\omega) = 
+    \begin{cases}
+      \alpha_k &amp; \text{if } \omega \in A_k, \\
+      0 &amp; \text{otherwize}
+    \end{cases}
+\]</div>
+</div>
+<p>According to the previous proposition, it follows that <span class="arithmatex">\( X \)</span> is also a random variable.</p>
+<p>Note that intuitively, multiplication and addition of simple random variables remain simple random variables, however one has to be careful to show it on the events where both random variable coincide.</p>
+</li>
+<li>
+<p><strong>Plot</strong></p>
+<hr />
+<p><img align="align" alt="Simple RV" src="../../images/simple_rv_dark.svg#only-dark" />
+<img align="align" alt="Simple RV" src="../../images/simple_rv_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Random Variable on Finite State Space</p>
+<p>Let <span class="arithmatex">\( \Omega = \{\omega_1, \omega_2, \ldots, \omega_N\} \)</span> be a finite state space and <span class="arithmatex">\( \sigma \)</span>-algebra <span class="arithmatex">\( \mathcal{F} = 2^\Omega \)</span>.
+We consider a financial market with one stock <span class="arithmatex">\( S \)</span> where <span class="arithmatex">\( S_0 &gt; 0 \)</span> denotes the price today and <span class="arithmatex">\( S_1 \)</span> represents the possible price of the stock tomorrow.
+The possible evolution for the stock is given as a function:</p>
+<div class="arithmatex">\[
+  \begin{equation*}
+    \begin{split}
+      S_1\colon \Omega &amp; \longrightarrow [0, \infty)\\
+          \omega_n &amp;\longmapsto S_1(\omega_n) = s_n
+    \end{split}
+  \end{equation*}
+\]</div>
+<p>We can also write the stock price function as a simple random variable (showing therefore that it is a random variable):</p>
+<div class="arithmatex">\[
+S_1 = \sum_{n=1}^N s_n 1_{A_n}
+\]</div>
+<p>where <span class="arithmatex">\( A_n = \{\omega_n\} \)</span>.
+In other terms, the stock price is entirely given by the vector <span class="arithmatex">\( (s_1, \ldots, s_N) \)</span>.
+Without any loss of generality, since we have one stock, we may assume that <span class="arithmatex">\( s_1 &lt; s_2 &lt; \ldots &lt; s_N \)</span>.
+Also, since the stock price is positive, we also have <span class="arithmatex">\( 0 \leq s_1 \)</span>.
+The returns <span class="arithmatex">\( R_1 = \frac{S_1 - S_0}{S_0} \)</span> are also a random variable that can be described as a vector <span class="arithmatex">\( (r_1, \ldots, r_N) \)</span>, where</p>
+<div class="arithmatex">\[
+r_n = \frac{s_n - S_0}{S_0}
+\]</div>
+</div>
+<h2 id="probability-measure">Probability Measure</h2>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Probability Measure</p>
+<p>A <strong>probability measure</strong> <span class="arithmatex">\( P \)</span> on the measurable space <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span> is a function <span class="arithmatex">\( P: \mathcal{F} \to [0,1] \)</span> that associate to each event <span class="arithmatex">\(A\)</span> the <em>likelyhood</em> of this event.</p>
+<p>It has the following basic properties:</p>
+<ul>
+<li>
+<p class="annotate"><span class="arithmatex">\( P[\emptyset] = 0 \)</span> and <span class="arithmatex">\( P[\Omega] = 1 \)</span>(1)</p>
+<ol>
+<li>Clearly, the probability that nothing or anything can happen is <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span>.</li>
+</ol>
+</li>
+<li>
+<p class="annotate"><span class="arithmatex">\(P[A \cup B] = P[A] + P[B]\)</span> if <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are two disjoint events.(1)</p>
+<ol>
+<li>The countable property is however assumed, that is <span class="arithmatex">\( P[\cup A_n] = \sum P[A_n] \)</span> for every sequence of pairwise disjoint(1) events <span class="arithmatex">\( (A_n) \subseteq \mathcal{F} \)</span>.</li>
+</ol>
+</li>
+</ul>
+<p>The triple <span class="arithmatex">\( (\Omega, \mathcal{F}, P) \)</span> is called a <strong>probability space</strong>.</p>
+</div>
+<p>The assumptions for a probability measure are few, however together with the definition of the algebra we can rapidly derive classical properties that are common knowledge.</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>Let <span class="arithmatex">\( P \)</span> be a probability measure. For any events <span class="arithmatex">\( A \)</span>, <span class="arithmatex">\( B \)</span>, or sequence <span class="arithmatex">\( (A_n) \)</span> of events, the following hold:</p>
+<ul>
+<li><span class="arithmatex">\( P[B] = P[A] + P[B \setminus A] \geq P[A] \)</span> whenever <span class="arithmatex">\( A \subseteq B \)</span>;</li>
+<li><span class="arithmatex">\( P[A^c] = 1 - P[A] \)</span>;</li>
+<li><span class="arithmatex">\( P[A \cup B] + P[A \cap B] = P[A] + P[B] \)</span>;</li>
+<li>
+<p>If <span class="arithmatex">\( A_1 \subseteq A_2 \subseteq \ldots \subseteq A_n \subseteq \ldots \)</span>, then:</p>
+<div class="arithmatex">\[
+  P\left[ \cup A_n \right] = \lim P[A_n]
+\]</div>
+</li>
+<li>
+<p>If <span class="arithmatex">\( A_1 \supseteq A_2 \supseteq \ldots \supseteq A_n \supseteq \ldots \)</span>, then:</p>
+<div class="arithmatex">\[
+  P\left[ \cap A_n \right] = \lim P[A_n]
+\]</div>
+<p>In particular, it equals <span class="arithmatex">\( 0 \)</span> if <span class="arithmatex">\( \cap A_n = \emptyset \)</span>.</p>
+</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>We prove some of the points, leaving the others as an exercise.</p>
+<p>For the first point, let <span class="arithmatex">\( A \subseteq B \)</span>. We have <span class="arithmatex">\( B = A \cup (B \setminus A) \)</span>, where this union is disjoint.
+By the second property of a probability measure and the positivity of probability:</p>
+<div class="arithmatex">\[
+P[B] = P[A \cup (B \setminus A)] = P[A] + P[B \setminus A] \geq P[A]
+\]</div>
+<p>Taking <span class="arithmatex">\( B = \Omega \)</span>, and using <span class="arithmatex">\( P[\Omega] = 1 \)</span>, the second point follows.</p>
+<p>Using similar arguments, prove the third point.</p>
+<p>For the fourth point, construct the sequence of disjoint sets:</p>
+<div class="arithmatex">\[
+    B_1 = A_1, \quad B_2 = A_2 \setminus A_1, \quad \ldots, \quad B_n = A_n \setminus A_{n-1}
+\]</div>
+<p>By induction, it is easy to show:</p>
+<div class="arithmatex">\[
+A_n = \cup_{k=1}^n A_k = \cup_{k=1}^n B_k, \quad \text{and} \quad \cup_n A_n = \cup_n B_n
+\]</div>
+<p>By additivity of the probability measure:</p>
+<div class="arithmatex">\[
+  P[A_n] = P\left[ \cup_{k=1}^n A_k \right] = P\left[ \cup_{k=1}^n B_k \right] = \sum_{k=1}^n P[B_k] \nearrow \sum_{k=1}^\infty P[B_k]
+\]</div>
+<p>Thus:</p>
+<div class="arithmatex">\[
+  \lim P[A_n] = \sum_{k=1}^\infty P[B_k]
+\]</div>
+<p>By the second property of a probability measure:</p>
+<div class="arithmatex">\[
+P\left[ \cup_{k=1}^\infty A_k \right] = P\left[ \cup_{k=1}^\infty B_k \right] = \sum_{k=1}^\infty P[B_k]
+\]</div>
+<p>Combining these equations shows <span class="arithmatex">\( \lim P[A_n] = P[\cup A_n] \)</span>.</p>
+<p>Follow similar reasoning to prove the last point.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Note: Shorthand Notations in Probability</p>
+<p>In probability theory, the following shorthand notations are commonly used:</p>
+<div class="arithmatex">\[
+P[X \in B] := P[\{\omega \in \Omega : X(\omega) \in B\}], \quad 
+P[X = x] := P[\{\omega \in \Omega : X(\omega) = x\}]
+\]</div>
+<div class="arithmatex">\[
+P[X \leq x] := P[\{\omega \in \Omega : X(\omega) \leq x\}], \quad \ldots
+\]</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Examples</p>
+<ol>
+<li>
+<p><strong>Probability on Finite Sets</strong>:
+    Suppose <span class="arithmatex">\( \Omega = \{\omega_1, \ldots, \omega_N\} \)</span> is finite.
+    Each probability measure <span class="arithmatex">\( P \)</span> on <span class="arithmatex">\( \mathcal{F} = 2^\Omega \)</span> is entirely determined by the values <span class="arithmatex">\( p_n = P[\{\omega_n\}] \)</span> for <span class="arithmatex">\( n = 1, \ldots, N \)</span>.
+    Indeed, for every event <span class="arithmatex">\(A\)</span> is of the form <span class="arithmatex">\(A=\{\omega_n\colon n \in I\}\)</span> for some <span class="arithmatex">\(I\subseteq \{1, \ldots, N\}\)</span>.
+    It follows that</p>
+<div class="arithmatex">\[
+  P[A] = \sum_{\omega \in A} P[\{\omega\}] = \sum_{n \in I} p_n
+\]</div>
+<p>This vector <span class="arithmatex">\(\boldsymbol{p}=(p_1, \ldots, p_N) \)</span> has the property that <span class="arithmatex">\(p_n = P[\{\omega_n\}]\geq 0\)</span> and <span class="arithmatex">\(\sum p_n =P[\Omega] = 1\)</span>.</p>
+<p>Reciprocally, if you give yourself a vector <span class="arithmatex">\(\boldsymbol{p}=(p_1, \ldots, p_N)\)</span> with <span class="arithmatex">\(p_n \geq 0\)</span> and <span class="arithmatex">\(\sum p_n\)</span>, it defines a probability <span class="arithmatex">\(P\)</span> on <span class="arithmatex">\(\mathcal{F}\)</span> with the definition</p>
+<div class="arithmatex">\[
+  P[A]:=\sum_{n \in I} p_n
+\]</div>
+<p>where <span class="arithmatex">\(A = \{\omega_n \colon n \in I\}\)</span>.
+As an exercise, verify that this defines a probability measure.</p>
+<p>The set of such vectors is denoted by</p>
+<div class="arithmatex">\[
+  \Delta := \left\{ \boldsymbol{p} \in \mathbb{R}^N \colon : p_n \geq 0, \, \sum p_n = 1 \right\}
+\]</div>
+<p>An important case is when <span class="arithmatex">\( p_n = 1/N \)</span> for all <span class="arithmatex">\( n \)</span>.
+This is called the <em>uniform probability distribution</em>.</p>
+</li>
+<li>
+<p><strong>Probability on the Coin Toss Space</strong>:
+    Let <span class="arithmatex">\( \Omega = \{\omega = (\omega_1, \ldots, \omega_T) : \omega_t = \pm 1\} \)</span>, a finite state space.
+    Assuming the probability of heads is <span class="arithmatex">\( p \)</span> and coin tosses are independent, the probability is:</p>
+<div class="arithmatex">\[
+  P[\{\omega = (\omega_1, \ldots, \omega_T)\}] = p^l q^{T-l}
+\]</div>
+<p>where <span class="arithmatex">\( l \)</span> is the number of times <span class="arithmatex">\( \omega_t = 1 \)</span> for <span class="arithmatex">\( t = 1, \ldots, T \)</span>.</p>
+</li>
+<li>
+<p><strong>Normal Distribution</strong>:
+    For <span class="arithmatex">\( \Omega = \mathbb{R} \)</span> and <span class="arithmatex">\( \mathcal{F} \)</span> the <span class="arithmatex">\( \sigma \)</span>-algebra of <span class="arithmatex">\( \mathbb{R} \)</span> generated by intervals, define for any event <span class="arithmatex">\(A\)</span> the probability</p>
+<div class="arithmatex">\[
+  P[A] = \frac{1}{\sigma \sqrt{2\pi}} \int_A e^{-\frac{(x-\mu)^2}{2\sigma^2}} \lambda(dx)
+\]</div>
+<p>where <span class="arithmatex">\( \lambda \)</span> is the Lebesgue measure on <span class="arithmatex">\( \mathbb{R} \)</span>, the one measuring intervals.
+This is the <em>normal distribution</em>.
+For example, temperatures in Shanghai at this time of year may follow a normal distribution around 24°C with variance 1.</p>
+</li>
+</ol>
+</div>
+<h2 id="integration">Integration</h2>
+<p>The historical idea behind integration was to measure areas below a function.
+The expectation in probability brings exactly the same intuition to this more abstract level.</p>
+<p>Consider the simple example of the indicator function <span class="arithmatex">\(1_A\)</span>, it represents a rectangle of height <span class="arithmatex">\(1\)</span> and width represented by the measure of <span class="arithmatex">\(A\)</span>, that is <span class="arithmatex">\(P[A]\)</span>.
+Hence, the area of the rectangle, or expectation of the indicator function, is given by <span class="arithmatex">\(E[1_A]=1 \times P[A]\)</span>.</p>
+<p>Extending this concept is straightforward for any positive simple random variable.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>Integration of Simple Random Variable</strong></p>
+<hr />
+<div class="admonition definition">
+<p class="admonition-title">Definition: Expectation 1.0</p>
+<p>Let <span class="arithmatex">\((\Omega,\mathcal{F},P)\)</span> be a probability space.
+Given a simple random variable  </p>
+<div class="arithmatex">\[
+  X = \sum_{k\leq n} \alpha_k 1_{A_k}
+\]</div>
+<p>we define the <em>expectation</em> of <span class="arithmatex">\(X\)</span> with respect to <span class="arithmatex">\(P\)</span> as  </p>
+<div class="arithmatex">\[
+  E[X]:=\sum_{k\leq n} \alpha_k P[A_k]
+\]</div>
+</div>
+</li>
+<li>
+<p><strong>Plot</strong></p>
+<hr />
+<p><img align="align" alt="Expectation Simple RV" src="../../images/expectation_dark.svg#only-dark" />
+<img align="align" alt="Expecation Simple RV" src="../../images/expectation_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>One needs to be careful that this definition is independent of the representation of the simple random variable.
+Indeed, we have <span class="arithmatex">\(X= 1_A + 1_B = 1_{A\cup B}\)</span> if <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are disjoint for instance.
+Luckily, by the properties of the probability measure, this random variable has the same expectation for the two representations.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>The two following important properties of the expectation on simple random variables can be rapidely checked.</p>
+<ul>
+<li><strong>Monotony:</strong> <span class="arithmatex">\(E[X]\leq E[Y]\)</span> whenever <span class="arithmatex">\(X\leq Y\)</span>.  </li>
+<li><strong>Linearity:</strong> <span class="arithmatex">\(E[aX+bY]=aE[X]+bE[Y]\)</span>.  </li>
+</ul>
+</div>
+<p>The proof of which is easy and left to you.</p>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise</p>
+<p>Given a simple random variable <span class="arithmatex">\(X\)</span> show that</p>
+<ol>
+<li>If <span class="arithmatex">\(X\)</span> is positive, then <span class="arithmatex">\(E[X]&gt;0\)</span> if and only if <span class="arithmatex">\(P[X&gt;0] &gt;0\)</span>.  </li>
+<li>If <span class="arithmatex">\(X\)</span> is positive, then <span class="arithmatex">\(E[X] = 0\)</span> if and only if <span class="arithmatex">\(P[X = 0]=1\)</span>.  </li>
+</ol>
+</div>
+<p>We can now define the expectation of an arbitrary positive random random variable.
+The idea is to approximate from below this random variable by simple ones and take the limit.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>First Approximation</strong></p>
+<hr />
+<p><img align="align" alt="Expectation 1" src="../../images/expectation1_dark.svg#only-dark" />
+<img align="align" alt="Expectation 1" src="../../images/expectation1_white.svg#only-light" /></p>
+</li>
+<li>
+<p><strong>Second Approximation</strong></p>
+<hr />
+<p><img align="align" alt="Expectation 2" src="../../images/expectation2_dark.svg#only-dark" />
+<img align="align" alt="Expectation 2" src="../../images/expectation2_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>Note</summary>
+<p>Though the definition of the expectation does not implies the explicit construction of a sequence approximating, it is however possible to formalize the idea in the picture.</p>
+<p>Given a random variable <span class="arithmatex">\(X\)</span>, the strategy is as follows:
+For every natural number <span class="arithmatex">\(n\)</span>, divide the ever growing vertical interval <span class="arithmatex">\([0, n)\)</span> into <span class="arithmatex">\(2^n\)</span> sub intervals <span class="arithmatex">\(\left[k \frac{n}{2^Nn}, (k+1)\frac{n}{2^n}\right)\)</span> for <span class="arithmatex">\(k=0, \ldots, 2^n-1\)</span>.
+Define now</p>
+<div class="arithmatex">\[
+  \alpha_k^n = k \frac{N}{2^n} \quad \text{and}\quad A_k^n = \left\{ k\frac{N}{2^n} \leq X &lt; (k+1)\frac{n}{2^N} \right\}
+\]</div>
+<p>It follows that the sequence <span class="arithmatex">\((X_n)\)</span> of simple random variables defined as</p>
+<div class="arithmatex">\[
+    X_n = \sum_{k=0}^{2^N-1} \alpha_k^n 1_{A_k^n}
+\]</div>
+<p>is increasing and converges to <span class="arithmatex">\(X\)</span>.</p>
+</details>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Expectation 1.5</p>
+<p>Given a positive random variable, the expectation of which is defined as</p>
+<div class="arithmatex">\[
+  E[X] := \sup \left\{ E[Y] \colon Y\text{ simple random variable and } Y\leq X \right\}
+\]</div>
+</div>
+<p>This is well defined but eventually equal to <span class="arithmatex">\(\infty\)</span>.
+For this is also holds that for two positive random variable <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> with positive numbers <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> then <span class="arithmatex">\(E[aX + bY] = aE[X] + b E[Y]\)</span> as well as <span class="arithmatex">\(E[X]\leq E[Y]\)</span> if <span class="arithmatex">\(X\leq Y\)</span>.</p>
+<p>To consider general random variable, we need to assume integrability.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Expectation 2.0</p>
+<p>A random variable is called <strong>integrable</strong> if <span class="arithmatex">\(E[X^+]&lt;\infty\)</span> and <span class="arithmatex">\(E[X^-]&lt;\infty\)</span>.
+The expectation of an integrable random variable is then defined as</p>
+<div class="arithmatex">\[E[X] = E[X^+]-E[X^-]\]</div>
+</div>
+<p>On the set of integrable random variables, which is a vector space, the expectation is also linear and monotone.</p>
+<p>The following fundamental theorem is due to Lebesgue.
+It tells under which conditions it is possible to swap limit and expectation.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\((X_n)\)</span> be a sequence of random variables. 
+The following holds true</p>
+<ol>
+<li>
+<p><strong>Monotone Convergence:</strong> If <span class="arithmatex">\((X_n)\)</span> are positive and increasing, that is, X_1\leq X_2 \leq \cdots$  it holds that</p>
+<div class="arithmatex">\[
+    \sup E[X_n] = \lim E[X_n] = E[\sup X_n] = E[\lim X_n]
+\]</div>
+</li>
+<li>
+<p><strong>Fatou's Lemma:</strong> If <span class="arithmatex">\((X_n)\)</span> are positive then it holds</p>
+<div class="arithmatex">\[
+    E\left[ \liminf X_n \right]:=E\left[ \sup_n \inf_{k\geq n} X_k\right] \leq \liminf E[X_n]
+\]</div>
+</li>
+<li>
+<p><strong>Lebesgue's Dominated Convergence:</strong> If <span class="arithmatex">\(X_n(\omega) \to X(\omega)\)</span> for all (at least in probability) and <span class="arithmatex">\(|X_n|\leq Y\)</span> for some integrable random variable <span class="arithmatex">\(Y\)</span>, then it holds</p>
+<div class="arithmatex">\[
+  \lim E[X_n] = E[\lim X_n] = E[X]
+\]</div>
+</li>
+</ol>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>We start by the monotone convergence.</p>
+<p>By monotonicity, we clearly have <span class="arithmatex">\(E[X_n]\leq E[X]\)</span> for every <span class="arithmatex">\(n\)</span>, therefore <span class="arithmatex">\(\sup E[X_n]\leq E[X]\)</span>.</p>
+<p>Reciprocally, suppose that <span class="arithmatex">\(E[X]&lt;\infty\)</span> and pick <span class="arithmatex">\(\varepsilon&gt;0\)</span> and a positive simple random variable <span class="arithmatex">\(Y \)</span> such that <span class="arithmatex">\(Y\leq X\)</span> and <span class="arithmatex">\(E[X]-\varepsilon\leq E[Y]\)</span>.
+For <span class="arithmatex">\(0&lt;c&lt;1\)</span>, define the sets <span class="arithmatex">\(A_n=\{X_n\geq cY\}\)</span>.
+Since <span class="arithmatex">\(X^n\)</span> is increasing to <span class="arithmatex">\(X\)</span>, it follows that <span class="arithmatex">\(A_n\)</span> is an increasing sequence of events.
+Furthermore, since <span class="arithmatex">\(cY\leq Y\leq X\)</span> and <span class="arithmatex">\(cY&lt;X\)</span> on <span class="arithmatex">\(\{X&gt;0\}\)</span>, it follows that <span class="arithmatex">\(\cup A_n=\Omega\)</span>.
+By non-negativity of <span class="arithmatex">\(X_n\)</span> and monotonicity, it follows that</p>
+<div class="arithmatex">\[
+    cE[1_{A_n}Y]\leq E[1_{A_n}X_n]\leq E[X_n]
+\]</div>
+<p>and so</p>
+<div class="arithmatex">\[
+    c\sup E[1_{A_n}Y]\leq \sup E[X_n]
+\]</div>
+<p>Since <span class="arithmatex">\(Y=\sum_{l\leq k} \alpha_l 1_{B_l}\)</span> for positive numbers <span class="arithmatex">\(\alpha_1,\ldots,\alpha_k\)</span> and events <span class="arithmatex">\(B_1,\ldots, B_k\)</span>, it follows that  </p>
+<div class="arithmatex">\[
+    E\left[ 1_{A_n}Y \right]=\sum_{l\leq k}\alpha_l P[A_n\cap B_l].
+\]</div>
+<p>However, since <span class="arithmatex">\(P\)</span> is a probability measure, and <span class="arithmatex">\(A_n\)</span> is increasing to <span class="arithmatex">\(\Omega\)</span>, it follows from the lower semi-continuity of probability measures, that <span class="arithmatex">\(P[A_n\cap B_l]\nearrow P[\Omega\cap B_l]=P[B_l]\)</span>, and so  </p>
+<div class="arithmatex">\[
+    \sup E[1_{A_n}Y]=\sum_{l\leq k}\alpha_l \sup P[A_n\cap B_l]=\sum \alpha_l P[B_l]=E[Y].
+\]</div>
+<p>Consequently</p>
+<div class="arithmatex">\[
+    E[X]\geq \lim E[X_n]=\sup E[X_n]\geq cE[Y] \geq cE[X]-c\varepsilon
+\]</div>
+<p>which, by letting <span class="arithmatex">\(c\)</span> converge to <span class="arithmatex">\(1\)</span> and <span class="arithmatex">\(\varepsilon\)</span> to <span class="arithmatex">\(0\)</span>, yields the result.  </p>
+<p>The case where <span class="arithmatex">\(E[X]=\infty\)</span> is similar and left to the reader.</p>
+<p>As for Fatou's lemma, define <span class="arithmatex">\(Y_n =\inf_{k\geq n} X_k\)</span> which defines by assumption an increasing sequence of positive random variables.
+It follows from monotone convergence that</p>
+<div class="arithmatex">\[
+    \sup_n E\left[ Y_n  \right] = E[\sup_n Y_n] = E[\sup_n \sup_{k\geq n}X_n] = E[\liminf X_n]
+\]</div>
+<p>On the other hand, it clearly holds that <span class="arithmatex">\(X_k \geq Y_n\)</span> for every <span class="arithmatex">\(k\geq n\)</span> and therefore <span class="arithmatex">\(\inf_{k\geq n} E[X_k] \geq E[Y_n]\)</span>.
+Combined with the previous inequality we get</p>
+<div class="arithmatex">\[
+  E[\liminf X_n] = \sup_n E[Y_n]\leq \sup_n \inf_{k\geq n}E[X_k] = \liminf E[X_n]
+\]</div>
+<p>As for the dominated convergence of Lebesgue, we have by assumption that <span class="arithmatex">\(X_n+Y\)</span> is a sequence of positive random variables, which by Fatou's lemma yields</p>
+<div class="arithmatex">\[
+  E[X+Y] =E[\liminf X_n +Y ] \leq \liminf E[X_n] +E[Y]
+\]</div>
+<p>Reciprovally <span class="arithmatex">\(Y = X_n\)</span> is a sequence of positive random variable for which also holds</p>
+<div class="arithmatex">\[
+  E[Y-X] = E[\liminf Y - X_n] \leq E[Y] +\liminf -E[X_n] = E[Y] - \limsup E[X_n]
+\]</div>
+<p>Combining both inequality yields</p>
+<div class="arithmatex">\[
+  \limsup E[X_n] \leq E[X] \leq \liminf E[X_n]
+\]</div>
+<p>Since $\liminf \leq \limsup $ if and only if there exists a limit we deduce that <span class="arithmatex">\(E[X] = \lim E[X_n]\)</span>.</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>
+<p><strong>Integration for the simple coin toss:</strong>
+    Let <span class="arithmatex">\(\Omega =\{\omega_1,\omega_2\}\)</span> and <span class="arithmatex">\(p=P[\{\omega_1\}]\)</span> and <span class="arithmatex">\(q=(1-p)\)</span>.<br />
+    Every random variable <span class="arithmatex">\(X:\Omega \to \mathbb{R}\)</span> is entirely determined by the values <span class="arithmatex">\(X(\omega_1) = x_1\)</span> and <span class="arithmatex">\(X(\omega_2)=x_2\)</span>.<br />
+    It follows that  </p>
+<div class="arithmatex">\[
+    E[X]=pX(\omega_1)+qX(\omega_2) = p x_1 + (1-p)x_2
+\]</div>
+</li>
+<li>
+<p><strong>Integration in the finite state case:</strong>
+    Let <span class="arithmatex">\(\Omega=\{\omega_1,\ldots,\omega_N\}\)</span> be a finite state space.<br />
+    The probability measure is entirely given by the vector <span class="arithmatex">\(\boldsymbol{p}=(p_1,\ldots,p_N)\in \mathbb{R}^N\)</span>, where <span class="arithmatex">\(p_n=P[\{\omega_n\}]\geq 0\)</span> and <span class="arithmatex">\(\sum p_n=1\)</span>.
+    Every random variable <span class="arithmatex">\(X:\Omega \to \mathbb{R}\)</span> can be seen as a vector <span class="arithmatex">\(\boldsymbol{x} \in \mathbb{R}^N\)</span>, where <span class="arithmatex">\(x_n=X(\omega_n)\)</span>.
+    It follows that the expectation of <span class="arithmatex">\(X\)</span> under <span class="arithmatex">\(P\)</span> is given by</p>
+<div class="arithmatex">\[
+    E[X]=\sum p_n X(\omega_n)=\sum p_n x_n=\boldsymbol{p}\cdot \boldsymbol{x}
+\]</div>
+<p>In other terms, the expectation of <span class="arithmatex">\(X\)</span> boils down to the scalar product of the probability vector <span class="arithmatex">\(\boldsymbol{p}\)</span> with the vector of values <span class="arithmatex">\(\boldsymbol{x}\)</span> of the random variable.</p>
+</li>
+</ul>
+</div>
+<h2 id="measure-change">Measure Change</h2>
+<p>The concept of the expectation of a random variable <span class="arithmatex">\( E[X] \)</span> depends, by definition, on the probability measure <span class="arithmatex">\( P \)</span>.
+We should therefore write <span class="arithmatex">\( E^P[X] \)</span> to signify this dependence.
+If, on the same measurable space <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span>, we are given another probability <span class="arithmatex">\( Q \)</span>, the question arises: how is <span class="arithmatex">\( E^P[X] \)</span> related to <span class="arithmatex">\( E^Q[X] \)</span>?</p>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Before diving into this question, let us first see how, starting from a probability <span class="arithmatex">\( P \)</span>, we can define a new probability <span class="arithmatex">\( Q \)</span>.
+Suppose we are given a random variable <span class="arithmatex">\( Z \)</span> such that:</p>
+<ol>
+<li><span class="arithmatex">\( Z \)</span> is positive.</li>
+<li><span class="arithmatex">\( E^P[Z] = 1 \)</span>.</li>
+</ol>
+<p>We can define the function:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    Q \colon \mathcal{F} &amp; \longrightarrow [0,1] \\
+      A &amp; \longmapsto Q[A] = E^P[Z \cdot 1_A]
+\end{aligned}
+\]</div>
+<p>This function, for any event <span class="arithmatex">\( A \)</span>, returns the expectation of <span class="arithmatex">\( Z \)</span> over <span class="arithmatex">\( A \)</span>.
+It turns out that this function, under the assumptions on <span class="arithmatex">\( Z \)</span>, defines a new probability measure.<br />
+Specifically:</p>
+<ul>
+<li><span class="arithmatex">\( Q[\emptyset] = E^P[Z \cdot 1_\emptyset] = E^P[0] = 0 \)</span>,</li>
+<li><span class="arithmatex">\( Q[\Omega] = E^P[Z \cdot 1_\Omega] = E^P[Z] = 1 \)</span>.</li>
+</ul>
+<p>Additivity also holds: for any two disjoint events <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span>, <span class="arithmatex">\( 1_{A \cup B} = 1_A + 1_B \)</span>.
+Hence:</p>
+<div class="arithmatex">\[
+Q[A \cup B] = E^P[Z \cdot 1_{A \cup B}] = E^P[Z \cdot 1_A] + E^P[Z \cdot 1_B] = Q[A] + Q[B].
+\]</div>
+<details class="warning">
+<summary>Warning</summary>
+<p>To fully define <span class="arithmatex">\( Q \)</span> as a probability measure, you must also check <span class="arithmatex">\(\sigma\)</span>-additivity.
+That is, for every sequence <span class="arithmatex">\( (A_n) \)</span> of pairwise disjoint events, it must hold:</p>
+<div class="arithmatex">\[
+Q\left[\bigcup A_n\right] = \sum Q[A_n].
+\]</div>
+<p>Define the random variables <span class="arithmatex">\( X_n = Z \cdot 1_{\cup_{k \leq n} A_k} = Z \cdot \left( \sum_{k \leq n} 1_{A_k} \right) \)</span> and let <span class="arithmatex">\( X = Z \cdot 1_{\cup A_n} \)</span>.
+Since <span class="arithmatex">\( |X_n| \leq Z \)</span>, where <span class="arithmatex">\( Z \)</span> is integrable, dominated convergence implies:</p>
+<div class="arithmatex">\[
+\lim E^P[X_n] = E^P[X].
+\]</div>
+<p>Meanwhile:</p>
+<div class="arithmatex">\[
+E^P[X_n] = \sum_{k \leq n} E^P[Z \cdot 1_{A_k}] = \sum_{k \leq n} Q[A_k],
+\]</div>
+<p>and <span class="arithmatex">\( E^P[X] = Q\left[\bigcup A_n\right] \)</span>.</p>
+</details>
+<p>Hence, any positive random variable <span class="arithmatex">\( Z \)</span> with expectation 1 under <span class="arithmatex">\( P \)</span> defines a new probability measure <span class="arithmatex">\( Q \)</span>.</p>
+<p>Furthermore, for any bounded random variable <span class="arithmatex">\( X \)</span>, it holds that:
+[
+E^Q[X] = E^P[Z \cdot X].
+]</p>
+<p>To see this, consider a simple random variable <span class="arithmatex">\( X = \sum \alpha_k \cdot 1_{A_k} \)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    E^Q[X] &amp;= \sum \alpha_k Q[A_k] \\
+           &amp;= \sum \alpha_k E^P[Z \cdot 1_{A_k}] \\
+           &amp;= E^P[Z \cdot X].
+\end{aligned}
+\]</div>
+<p>The general case follows by approximating <span class="arithmatex">\( X \)</span> with simple random variables.</p>
+<p>Additionally, <span class="arithmatex">\( Q \)</span> is <strong>dominated</strong> by <span class="arithmatex">\( P \)</span> in the sense that <span class="arithmatex">\( P[A] = 0 \)</span> implies <span class="arithmatex">\( Q[A] = E^P[Z \cdot 1_A] = 0 \)</span>.</p>
+</div>
+<p>From this, we see that a positive random variable <span class="arithmatex">\( Z \)</span> with expectation 1 allows us to define a new probability <span class="arithmatex">\( Q \)</span>, dominated by <span class="arithmatex">\( P \)</span>, and connects expectations under <span class="arithmatex">\( Q \)</span> to those under <span class="arithmatex">\( P \)</span>.
+The challenging and powerful task is to establish the reciprocal relationship.
+The key lies in the concepts of absolute continuity or equivalence between probability measures, and the <strong>Radon-Nikodym Theorem</strong>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Given two probability measures <span class="arithmatex">\( P \)</span> and <span class="arithmatex">\( Q \)</span>, we define:</p>
+<ol>
+<li>
+<p><span class="arithmatex">\( Q \)</span> is <strong>absolutely continuous</strong> with respect to <span class="arithmatex">\( P \)</span> (<span class="arithmatex">\( Q \ll P \)</span>) if:</p>
+<div class="arithmatex">\[
+P[A] = 0 \quad \text{implies} \quad Q[A] = 0.
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\( Q \)</span> is <strong>equivalent</strong> to <span class="arithmatex">\( P \)</span> (<span class="arithmatex">\( Q \sim P \)</span>) if both <span class="arithmatex">\( Q \ll P \)</span> and <span class="arithmatex">\( P \ll Q \)</span>, i.e.:</p>
+<div class="arithmatex">\[
+P[A] = 0 \quad \text{if and only if} \quad Q[A] = 0.
+\]</div>
+</li>
+</ol>
+</div>
+<p>By definition:</p>
+<div class="arithmatex">\[
+Q \ll P \quad \text{if and only if} \quad P[A] = 1 \text{ implies }Q[A] = 1,
+\]</div>
+<p>or equivalently:</p>
+<div class="arithmatex">\[
+Q \ll P \quad \text{if and only if} \quad Q[A] &gt; 0 \text{ implies }P[A] &gt; 0.
+\]</div>
+<p>In the equivalent case:</p>
+<div class="arithmatex">\[
+Q \sim P \quad \text{if and only if} \quad P[A] = 1 \text{if and only if } Q[A] = 1,
+\]</div>
+<p>or equivalently:</p>
+<div class="arithmatex">\[
+Q \sim P \quad \text{if and only if} \quad P[A] &gt; 0 \text{ if and only if } Q[A] &gt; 0.
+\]</div>
+<p>Absolute continuity implies that events unlikely under <span class="arithmatex">\( P \)</span> are also unlikely under <span class="arithmatex">\( Q \)</span>.
+Equivalence means that <span class="arithmatex">\( P \)</span> and <span class="arithmatex">\( Q \)</span> agree on which sets are unlikely.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Radon-Nikodym Theorem</p>
+<p>On a measurable space <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span>, if a probability measure <span class="arithmatex">\( Q \)</span> is absolutely continuous with respect to another probability measure <span class="arithmatex">\( P \)</span>, there exists a (<span class="arithmatex">\( P \)</span>-almost surely) unique random variable <span class="arithmatex">\( Z \)</span> such that:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    Z &amp;\geq 0, \\
+    E^P[Z] &amp;= 1, \\
+    E^Q[X] &amp;= E^P[Z \cdot X] \quad \text{ for any bounded random variable } X.
+\end{aligned}
+\]</div>
+<p>This unique random variable is called the <strong>density</strong> of <span class="arithmatex">\( Q \)</span> with respect to <span class="arithmatex">\( P \)</span> and is denoted <span class="arithmatex">\( \frac{dQ}{dP} \)</span>.</p>
+</div>
+<p>The notation <span class="arithmatex">\( \frac{dQ}{dP} \)</span> is cosmetic; it does not represent a literal ratio.
+It simplifies expressions such as:</p>
+<div class="arithmatex">\[
+E^P\left[ \frac{dQ}{dP} \cdot X \right] = \int X \frac{dQ}{dP} \, dP = \int X \, dQ = E^Q[X].
+\]</div>
+<p>This theorem underpins many results in stochastic processes and finance, such as the Black-Scholes-Merton formula.
+However, proving it requires knowledge of functional analysis, which is beyond this lecture's scope.
+The proof is simpler in a finite state space.</p>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise</p>
+<p>Let <span class="arithmatex">\( \Omega = \{\omega_1, \ldots, \omega_n\} \)</span> be a finite state space with <span class="arithmatex">\( \sigma \)</span>-algebra <span class="arithmatex">\( \mathcal{F} = 2^\Omega \)</span>.
+Suppose <span class="arithmatex">\( P \)</span> is a probability measure given by <span class="arithmatex">\( \boldsymbol{p} = (p_1, \ldots, p_n) \)</span>, where <span class="arithmatex">\( P[\{\omega_i\}] = p_i &gt; 0 \)</span> and <span class="arithmatex">\( \sum p_i = 1 \)</span>.
+Let <span class="arithmatex">\( Q \)</span> be another probability measure on <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span> given by <span class="arithmatex">\( \boldsymbol{q} = (q_1, \ldots, q_n) \)</span>, where <span class="arithmatex">\( Q[\{\omega_i\}] = q_i \geq 0 \)</span> and <span class="arithmatex">\( \sum q_i = 1 \)</span>.</p>
+<p>Since <span class="arithmatex">\( P[A] = 0 \)</span> implies <span class="arithmatex">\( A = \emptyset \)</span>, it follows that <span class="arithmatex">\( Q[A] = Q[\emptyset] = 0 \)</span>.<br />
+Hence, <span class="arithmatex">\( Q \ll P \)</span>.</p>
+<p>Find a random variable <span class="arithmatex">\( \frac{dQ}{dP} \colon \Omega \to \mathbb{R} \)</span> such that <span class="arithmatex">\( \frac{dQ}{dP} \geq 0 \)</span>, <span class="arithmatex">\( E^P\left[\frac{dQ}{dP}\right] = 1 \)</span>, and:</p>
+<div class="arithmatex">\[
+E^Q[X] = E^P\left[\frac{dQ}{dP} \cdot X\right]
+\]</div>
+<p>for every random variable <span class="arithmatex">\( X \colon \Omega \to \mathbb{R} \)</span>.
+Show that <span class="arithmatex">\( \frac{dQ}{dP} \)</span> is unique.</p>
+<p>In this finite setting, <span class="arithmatex">\( \frac{dQ}{dP} \)</span> can be represented by a vector <span class="arithmatex">\( \boldsymbol{z} = (z_1, \ldots, z_n) \)</span> with <span class="arithmatex">\( z_i = \frac{dQ}{dP}(\omega_i) \)</span>.
+The conditions reduce to finding <span class="arithmatex">\( \boldsymbol{z} \)</span> such that <span class="arithmatex">\( z_i \geq 0 \)</span>, <span class="arithmatex">\( \sum z_i p_i = 1 \)</span>, and for every vector <span class="arithmatex">\( \boldsymbol{x} = (x_1, \ldots, x_n) \)</span>:</p>
+<div class="arithmatex">\[
+\sum x_i q_i = E^Q[X] = E^P\left[\frac{dQ}{dP} \cdot X\right] = \sum x_i z_i p_i.
+\]</div>
+</div>
+<h2 id="independence">Independence</h2>
+<p>A fundamental concept in probability, distinct from general measure theory, is <strong>independence</strong>.
+Intuitively, two events <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> are independent if their probability of joint occurrence equals the product of their respective probabilities.</p>
+<p>This concept can be extended to random variables and families of events, with significant implications for results in probability theory.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Given a probability space <span class="arithmatex">\( (\Omega, \mathcal{F}, P) \)</span>:</p>
+<ol>
+<li>
+<p>Two events <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> are called independent if:</p>
+<div class="arithmatex">\[
+P[A \cap B] = P[A] P[B].
+\]</div>
+</li>
+<li>
+<p>Two families of events <span class="arithmatex">\( \mathcal{C} \)</span> and <span class="arithmatex">\( \mathcal{D} \)</span> are independent if any event <span class="arithmatex">\( A \)</span> in <span class="arithmatex">\(\mathcal{C}\)</span> is independent of any event <span class="arithmatex">\( B \)</span> in <span class="arithmatex">\(\mathcal{D}\)</span>.</p>
+</li>
+<li>
+<p>Two random variables <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> are independent if the <span class="arithmatex">\(\sigma\)</span>-algebras generated by their information,</p>
+<div class="arithmatex">\[
+\sigma(X) = \sigma(\{X \leq x\} : x \in \mathbb{R}) \quad \text{and} \quad \sigma(Y) = \sigma(\{Y \leq x\} : x \in \mathbb{R}),
+\]</div>
+<p>are independent.</p>
+</li>
+<li>
+<p>A collection of families of events <span class="arithmatex">\( \mathcal{C}^i \)</span> (with <span class="arithmatex">\( i \)</span> indexing the families) is independent if for every finite selection of events <span class="arithmatex">\( A^{i_1}, \ldots, A^{i_n} \)</span>, where <span class="arithmatex">\( A^{i_k}\)</span> is in <span class="arithmatex">\(\mathcal{C}^{i_k} \)</span>, it holds that:</p>
+<div class="arithmatex">\[
+P\left[ A^{i_1} \cap \cdots \cap A^{i_n} \right] = \prod_{k=1}^n P[A^{i_k}].
+\]</div>
+</li>
+<li>
+<p>A family (or sequence) of random variables <span class="arithmatex">\( (X_i) \)</span> is independent if the family of <span class="arithmatex">\(\sigma\)</span>-algebras <span class="arithmatex">\( \sigma(X_i) \)</span> is independent.</p>
+</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The first three points focus on pairwise independence for events, families, or random variables.<br />
+However, for collections with more than two elements, pairwise independence is insufficient.<br />
+For example, a sequence of random variables requires a stronger notion of independence that accounts for all finite subsets.  </p>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise</p>
+<p>Consider a four-element probability space <span class="arithmatex">\( \Omega = \{\omega_1, \omega_2, \omega_3, \omega_4\} \)</span> with uniform probability <span class="arithmatex">\( P[\{\omega_i\}] = \frac{1}{4} \)</span>.</p>
+<p>Construct three events <span class="arithmatex">\( A_1 \)</span>, <span class="arithmatex">\( A_2 \)</span>, and <span class="arithmatex">\( A_3 \)</span> such that:
+- <span class="arithmatex">\( A_1 \)</span> is independent of <span class="arithmatex">\( A_2 \)</span>,
+- <span class="arithmatex">\( A_1 \)</span> is independent of <span class="arithmatex">\( A_3 \)</span>,
+- <span class="arithmatex">\( A_2 \)</span> is independent of <span class="arithmatex">\( A_3 \)</span>,
+- but <span class="arithmatex">\( A_1 \)</span>, <span class="arithmatex">\( A_2 \)</span>, and <span class="arithmatex">\( A_3 \)</span> together are <strong>not</strong> independent.</p>
+<p>Formally:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    P[A_1 \cap A_2] &amp;= P[A_1] P[A_2], \\
+    P[A_1 \cap A_3] &amp;= P[A_1] P[A_3], \\
+    P[A_2 \cap A_3] &amp;= P[A_2] P[A_3], \\
+    P[A_1 \cap A_2 \cap A_3] &amp;\neq P[A_1] P[A_2] P[A_3].
+\end{aligned}
+\]</div>
+<p>If you struggle, ask ChatGPT—it can handle this.</p>
+</div>
+</div>
+<p>Independence is a strong assumption, but it depends on the probability measure.
+Even if two events are independent under a specific <span class="arithmatex">\( P \)</span>, independence might fail under a different measure.
+This concept is crucial in foundational results such as the law of large numbers and the central limit theorem, which are cornerstones of Monte Carlo methods.</p>
+<p>Let us now present a proposition related to independent random variables, which will be further explored in the context of stochastic processes and conditional expectations.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> be two independent bounded random variables.<br />
+Then:
+[
+E[X Y] = E[X] E[Y].
+]</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof sketch</p>
+<p>Consider the case where <span class="arithmatex">\( X = 1_A \)</span> and <span class="arithmatex">\( Y = 1_B \)</span> are indicator functions.<br />
+Independence of <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> implies that <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> are independent.<br />
+Hence:
+[
+E[XY] = E[1_A 1_B] = E[1_{A \cap B}] = P[A \cap B] = P[A] P[B] = E[X] E[Y].
+]</p>
+<p>This reasoning extends easily to simple random variables, as the <span class="arithmatex">\(\sigma\)</span>-algebras generated by <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> correspond to the events on which they are defined.</p>
+<p>For the general case, approximate <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> by sequences of simple random variables <span class="arithmatex">\( (X_n) \)</span> and <span class="arithmatex">\( (Y_n) \)</span>, and use the properties of independence and limits of expectations.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

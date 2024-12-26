@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../lecture/02-risk-management/023-oce/">
+        <link rel="prev" href="../../lecture/03-Multi-Period/033-ruin-probability/">
       
       
         <link rel="next" href="../stochastic/">
@@ -351,6 +351,8 @@
   
     
     
+      
+        
       
         
       
@@ -717,6 +719,123 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Multi Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Multi Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/03-Multi-Period/031-multi-period-financial-markets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi Period Financial Market
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/03-Multi-Period/032-american-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    American Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lecture/03-Multi-Period/033-ruin-probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ruin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -856,6 +975,24 @@
   <a href="#integration" class="md-nav__link">
     <span class="md-ellipsis">
       Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measure-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measure Change
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#independence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Independence
     </span>
   </a>
   
@@ -1736,8 +1873,8 @@ It follows that</p>
 <li>
 <p><strong>Plot</strong></p>
 <hr />
-<p><img align="align" alt="Indicator Function" src="./../../images/indicator_dark.svg#only-dark" />
-<img align="align" alt="Indicator Function" src="./../../images/indicator_white.svg#only-light" /></p>
+<p><img align="align" alt="Indicator Function" src="../../images/indicator_dark.svg#only-dark" />
+<img align="align" alt="Indicator Function" src="../../images/indicator_white.svg#only-light" /></p>
 </li>
 </ul>
 </div>
@@ -1771,8 +1908,8 @@ Show that:</p>
 <li>
 <p><strong>Plot</strong></p>
 <hr />
-<p><img align="align" alt="Simple RV" src="./../../images/simple_rv_dark.svg#only-dark" />
-<img align="align" alt="Simple RV" src="./../../images/simple_rv_white.svg#only-light" /></p>
+<p><img align="align" alt="Simple RV" src="../../images/simple_rv_dark.svg#only-dark" />
+<img align="align" alt="Simple RV" src="../../images/simple_rv_white.svg#only-light" /></p>
 </li>
 </ul>
 </div>
@@ -1965,8 +2102,8 @@ Given a simple random variable  </p>
 <li>
 <p><strong>Plot</strong></p>
 <hr />
-<p><img align="align" alt="Expectation Simple RV" src="./../../images/expectation_dark.svg#only-dark" />
-<img align="align" alt="Expecation Simple RV" src="./../../images/expectation_white.svg#only-light" /></p>
+<p><img align="align" alt="Expectation Simple RV" src="../../images/expectation_dark.svg#only-dark" />
+<img align="align" alt="Expecation Simple RV" src="../../images/expectation_white.svg#only-light" /></p>
 </li>
 </ul>
 </div>
@@ -1993,7 +2130,39 @@ Luckily, by the properties of the probability measure, this random variable has 
 <li>If <span class="arithmatex">\(X\)</span> is positive, then <span class="arithmatex">\(E[X] = 0\)</span> if and only if <span class="arithmatex">\(P[X = 0]=1\)</span>.  </li>
 </ol>
 </div>
-<p>We can now define the expectation of general random positive random variables as follows</p>
+<p>We can now define the expectation of an arbitrary positive random random variable.
+The idea is to approximate from below this random variable by simple ones and take the limit.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>First Approximation</strong></p>
+<hr />
+<p><img align="align" alt="Expectation 1" src="../../images/expectation1_dark.svg#only-dark" />
+<img align="align" alt="Expectation 1" src="../../images/expectation1_white.svg#only-light" /></p>
+</li>
+<li>
+<p><strong>Second Approximation</strong></p>
+<hr />
+<p><img align="align" alt="Expectation 2" src="../../images/expectation2_dark.svg#only-dark" />
+<img align="align" alt="Expectation 2" src="../../images/expectation2_white.svg#only-light" /></p>
+</li>
+</ul>
+</div>
+<details class="note">
+<summary>Note</summary>
+<p>Though the definition of the expectation does not implies the explicit construction of a sequence approximating, it is however possible to formalize the idea in the picture.</p>
+<p>Given a random variable <span class="arithmatex">\(X\)</span>, the strategy is as follows:
+For every natural number <span class="arithmatex">\(n\)</span>, divide the ever growing vertical interval <span class="arithmatex">\([0, n)\)</span> into <span class="arithmatex">\(2^n\)</span> sub intervals <span class="arithmatex">\(\left[k \frac{n}{2^Nn}, (k+1)\frac{n}{2^n}\right)\)</span> for <span class="arithmatex">\(k=0, \ldots, 2^n-1\)</span>.
+Define now</p>
+<div class="arithmatex">\[
+  \alpha_k^n = k \frac{N}{2^n} \quad \text{and}\quad A_k^n = \left\{ k\frac{N}{2^n} \leq X &lt; (k+1)\frac{n}{2^N} \right\}
+\]</div>
+<p>It follows that the sequence <span class="arithmatex">\((X_n)\)</span> of simple random variables defined as</p>
+<div class="arithmatex">\[
+    X_n = \sum_{k=0}^{2^N-1} \alpha_k^n 1_{A_k^n}
+\]</div>
+<p>is increasing and converges to <span class="arithmatex">\(X\)</span>.</p>
+</details>
 <div class="admonition definition">
 <p class="admonition-title">Definition: Expectation 1.5</p>
 <p>Given a positive random variable, the expectation of which is defined as</p>
@@ -2116,6 +2285,232 @@ Combined with the previous inequality we get</p>
 <p>In other terms, the expectation of <span class="arithmatex">\(X\)</span> boils down to the scalar product of the probability vector <span class="arithmatex">\(\boldsymbol{p}\)</span> with the vector of values <span class="arithmatex">\(\boldsymbol{x}\)</span> of the random variable.</p>
 </li>
 </ul>
+</div>
+<h2 id="measure-change">Measure Change</h2>
+<p>The concept of the expectation of a random variable <span class="arithmatex">\( E[X] \)</span> depends, by definition, on the probability measure <span class="arithmatex">\( P \)</span>.
+We should therefore write <span class="arithmatex">\( E^P[X] \)</span> to signify this dependence.
+If, on the same measurable space <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span>, we are given another probability <span class="arithmatex">\( Q \)</span>, the question arises: how is <span class="arithmatex">\( E^P[X] \)</span> related to <span class="arithmatex">\( E^Q[X] \)</span>?</p>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Before diving into this question, let us first see how, starting from a probability <span class="arithmatex">\( P \)</span>, we can define a new probability <span class="arithmatex">\( Q \)</span>.
+Suppose we are given a random variable <span class="arithmatex">\( Z \)</span> such that:</p>
+<ol>
+<li><span class="arithmatex">\( Z \)</span> is positive.</li>
+<li><span class="arithmatex">\( E^P[Z] = 1 \)</span>.</li>
+</ol>
+<p>We can define the function:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    Q \colon \mathcal{F} &amp; \longrightarrow [0,1] \\
+      A &amp; \longmapsto Q[A] = E^P[Z \cdot 1_A]
+\end{aligned}
+\]</div>
+<p>This function, for any event <span class="arithmatex">\( A \)</span>, returns the expectation of <span class="arithmatex">\( Z \)</span> over <span class="arithmatex">\( A \)</span>.
+It turns out that this function, under the assumptions on <span class="arithmatex">\( Z \)</span>, defines a new probability measure.<br />
+Specifically:</p>
+<ul>
+<li><span class="arithmatex">\( Q[\emptyset] = E^P[Z \cdot 1_\emptyset] = E^P[0] = 0 \)</span>,</li>
+<li><span class="arithmatex">\( Q[\Omega] = E^P[Z \cdot 1_\Omega] = E^P[Z] = 1 \)</span>.</li>
+</ul>
+<p>Additivity also holds: for any two disjoint events <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span>, <span class="arithmatex">\( 1_{A \cup B} = 1_A + 1_B \)</span>.
+Hence:</p>
+<div class="arithmatex">\[
+Q[A \cup B] = E^P[Z \cdot 1_{A \cup B}] = E^P[Z \cdot 1_A] + E^P[Z \cdot 1_B] = Q[A] + Q[B].
+\]</div>
+<details class="warning">
+<summary>Warning</summary>
+<p>To fully define <span class="arithmatex">\( Q \)</span> as a probability measure, you must also check <span class="arithmatex">\(\sigma\)</span>-additivity.
+That is, for every sequence <span class="arithmatex">\( (A_n) \)</span> of pairwise disjoint events, it must hold:</p>
+<div class="arithmatex">\[
+Q\left[\bigcup A_n\right] = \sum Q[A_n].
+\]</div>
+<p>Define the random variables <span class="arithmatex">\( X_n = Z \cdot 1_{\cup_{k \leq n} A_k} = Z \cdot \left( \sum_{k \leq n} 1_{A_k} \right) \)</span> and let <span class="arithmatex">\( X = Z \cdot 1_{\cup A_n} \)</span>.
+Since <span class="arithmatex">\( |X_n| \leq Z \)</span>, where <span class="arithmatex">\( Z \)</span> is integrable, dominated convergence implies:</p>
+<div class="arithmatex">\[
+\lim E^P[X_n] = E^P[X].
+\]</div>
+<p>Meanwhile:</p>
+<div class="arithmatex">\[
+E^P[X_n] = \sum_{k \leq n} E^P[Z \cdot 1_{A_k}] = \sum_{k \leq n} Q[A_k],
+\]</div>
+<p>and <span class="arithmatex">\( E^P[X] = Q\left[\bigcup A_n\right] \)</span>.</p>
+</details>
+<p>Hence, any positive random variable <span class="arithmatex">\( Z \)</span> with expectation 1 under <span class="arithmatex">\( P \)</span> defines a new probability measure <span class="arithmatex">\( Q \)</span>.</p>
+<p>Furthermore, for any bounded random variable <span class="arithmatex">\( X \)</span>, it holds that:
+[
+E^Q[X] = E^P[Z \cdot X].
+]</p>
+<p>To see this, consider a simple random variable <span class="arithmatex">\( X = \sum \alpha_k \cdot 1_{A_k} \)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    E^Q[X] &amp;= \sum \alpha_k Q[A_k] \\
+           &amp;= \sum \alpha_k E^P[Z \cdot 1_{A_k}] \\
+           &amp;= E^P[Z \cdot X].
+\end{aligned}
+\]</div>
+<p>The general case follows by approximating <span class="arithmatex">\( X \)</span> with simple random variables.</p>
+<p>Additionally, <span class="arithmatex">\( Q \)</span> is <strong>dominated</strong> by <span class="arithmatex">\( P \)</span> in the sense that <span class="arithmatex">\( P[A] = 0 \)</span> implies <span class="arithmatex">\( Q[A] = E^P[Z \cdot 1_A] = 0 \)</span>.</p>
+</div>
+<p>From this, we see that a positive random variable <span class="arithmatex">\( Z \)</span> with expectation 1 allows us to define a new probability <span class="arithmatex">\( Q \)</span>, dominated by <span class="arithmatex">\( P \)</span>, and connects expectations under <span class="arithmatex">\( Q \)</span> to those under <span class="arithmatex">\( P \)</span>.
+The challenging and powerful task is to establish the reciprocal relationship.
+The key lies in the concepts of absolute continuity or equivalence between probability measures, and the <strong>Radon-Nikodym Theorem</strong>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Given two probability measures <span class="arithmatex">\( P \)</span> and <span class="arithmatex">\( Q \)</span>, we define:</p>
+<ol>
+<li>
+<p><span class="arithmatex">\( Q \)</span> is <strong>absolutely continuous</strong> with respect to <span class="arithmatex">\( P \)</span> (<span class="arithmatex">\( Q \ll P \)</span>) if:</p>
+<div class="arithmatex">\[
+P[A] = 0 \quad \text{implies} \quad Q[A] = 0.
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\( Q \)</span> is <strong>equivalent</strong> to <span class="arithmatex">\( P \)</span> (<span class="arithmatex">\( Q \sim P \)</span>) if both <span class="arithmatex">\( Q \ll P \)</span> and <span class="arithmatex">\( P \ll Q \)</span>, i.e.:</p>
+<div class="arithmatex">\[
+P[A] = 0 \quad \text{if and only if} \quad Q[A] = 0.
+\]</div>
+</li>
+</ol>
+</div>
+<p>By definition:</p>
+<div class="arithmatex">\[
+Q \ll P \quad \text{if and only if} \quad P[A] = 1 \text{ implies }Q[A] = 1,
+\]</div>
+<p>or equivalently:</p>
+<div class="arithmatex">\[
+Q \ll P \quad \text{if and only if} \quad Q[A] &gt; 0 \text{ implies }P[A] &gt; 0.
+\]</div>
+<p>In the equivalent case:</p>
+<div class="arithmatex">\[
+Q \sim P \quad \text{if and only if} \quad P[A] = 1 \text{if and only if } Q[A] = 1,
+\]</div>
+<p>or equivalently:</p>
+<div class="arithmatex">\[
+Q \sim P \quad \text{if and only if} \quad P[A] &gt; 0 \text{ if and only if } Q[A] &gt; 0.
+\]</div>
+<p>Absolute continuity implies that events unlikely under <span class="arithmatex">\( P \)</span> are also unlikely under <span class="arithmatex">\( Q \)</span>.
+Equivalence means that <span class="arithmatex">\( P \)</span> and <span class="arithmatex">\( Q \)</span> agree on which sets are unlikely.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Radon-Nikodym Theorem</p>
+<p>On a measurable space <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span>, if a probability measure <span class="arithmatex">\( Q \)</span> is absolutely continuous with respect to another probability measure <span class="arithmatex">\( P \)</span>, there exists a (<span class="arithmatex">\( P \)</span>-almost surely) unique random variable <span class="arithmatex">\( Z \)</span> such that:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    Z &amp;\geq 0, \\
+    E^P[Z] &amp;= 1, \\
+    E^Q[X] &amp;= E^P[Z \cdot X] \quad \text{ for any bounded random variable } X.
+\end{aligned}
+\]</div>
+<p>This unique random variable is called the <strong>density</strong> of <span class="arithmatex">\( Q \)</span> with respect to <span class="arithmatex">\( P \)</span> and is denoted <span class="arithmatex">\( \frac{dQ}{dP} \)</span>.</p>
+</div>
+<p>The notation <span class="arithmatex">\( \frac{dQ}{dP} \)</span> is cosmetic; it does not represent a literal ratio.
+It simplifies expressions such as:</p>
+<div class="arithmatex">\[
+E^P\left[ \frac{dQ}{dP} \cdot X \right] = \int X \frac{dQ}{dP} \, dP = \int X \, dQ = E^Q[X].
+\]</div>
+<p>This theorem underpins many results in stochastic processes and finance, such as the Black-Scholes-Merton formula.
+However, proving it requires knowledge of functional analysis, which is beyond this lecture's scope.
+The proof is simpler in a finite state space.</p>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise</p>
+<p>Let <span class="arithmatex">\( \Omega = \{\omega_1, \ldots, \omega_n\} \)</span> be a finite state space with <span class="arithmatex">\( \sigma \)</span>-algebra <span class="arithmatex">\( \mathcal{F} = 2^\Omega \)</span>.
+Suppose <span class="arithmatex">\( P \)</span> is a probability measure given by <span class="arithmatex">\( \boldsymbol{p} = (p_1, \ldots, p_n) \)</span>, where <span class="arithmatex">\( P[\{\omega_i\}] = p_i &gt; 0 \)</span> and <span class="arithmatex">\( \sum p_i = 1 \)</span>.
+Let <span class="arithmatex">\( Q \)</span> be another probability measure on <span class="arithmatex">\( (\Omega, \mathcal{F}) \)</span> given by <span class="arithmatex">\( \boldsymbol{q} = (q_1, \ldots, q_n) \)</span>, where <span class="arithmatex">\( Q[\{\omega_i\}] = q_i \geq 0 \)</span> and <span class="arithmatex">\( \sum q_i = 1 \)</span>.</p>
+<p>Since <span class="arithmatex">\( P[A] = 0 \)</span> implies <span class="arithmatex">\( A = \emptyset \)</span>, it follows that <span class="arithmatex">\( Q[A] = Q[\emptyset] = 0 \)</span>.<br />
+Hence, <span class="arithmatex">\( Q \ll P \)</span>.</p>
+<p>Find a random variable <span class="arithmatex">\( \frac{dQ}{dP} \colon \Omega \to \mathbb{R} \)</span> such that <span class="arithmatex">\( \frac{dQ}{dP} \geq 0 \)</span>, <span class="arithmatex">\( E^P\left[\frac{dQ}{dP}\right] = 1 \)</span>, and:</p>
+<div class="arithmatex">\[
+E^Q[X] = E^P\left[\frac{dQ}{dP} \cdot X\right]
+\]</div>
+<p>for every random variable <span class="arithmatex">\( X \colon \Omega \to \mathbb{R} \)</span>.
+Show that <span class="arithmatex">\( \frac{dQ}{dP} \)</span> is unique.</p>
+<p>In this finite setting, <span class="arithmatex">\( \frac{dQ}{dP} \)</span> can be represented by a vector <span class="arithmatex">\( \boldsymbol{z} = (z_1, \ldots, z_n) \)</span> with <span class="arithmatex">\( z_i = \frac{dQ}{dP}(\omega_i) \)</span>.
+The conditions reduce to finding <span class="arithmatex">\( \boldsymbol{z} \)</span> such that <span class="arithmatex">\( z_i \geq 0 \)</span>, <span class="arithmatex">\( \sum z_i p_i = 1 \)</span>, and for every vector <span class="arithmatex">\( \boldsymbol{x} = (x_1, \ldots, x_n) \)</span>:</p>
+<div class="arithmatex">\[
+\sum x_i q_i = E^Q[X] = E^P\left[\frac{dQ}{dP} \cdot X\right] = \sum x_i z_i p_i.
+\]</div>
+</div>
+<h2 id="independence">Independence</h2>
+<p>A fundamental concept in probability, distinct from general measure theory, is <strong>independence</strong>.
+Intuitively, two events <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> are independent if their probability of joint occurrence equals the product of their respective probabilities.</p>
+<p>This concept can be extended to random variables and families of events, with significant implications for results in probability theory.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Given a probability space <span class="arithmatex">\( (\Omega, \mathcal{F}, P) \)</span>:</p>
+<ol>
+<li>
+<p>Two events <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> are called independent if:</p>
+<div class="arithmatex">\[
+P[A \cap B] = P[A] P[B].
+\]</div>
+</li>
+<li>
+<p>Two families of events <span class="arithmatex">\( \mathcal{C} \)</span> and <span class="arithmatex">\( \mathcal{D} \)</span> are independent if any event <span class="arithmatex">\( A \)</span> in <span class="arithmatex">\(\mathcal{C}\)</span> is independent of any event <span class="arithmatex">\( B \)</span> in <span class="arithmatex">\(\mathcal{D}\)</span>.</p>
+</li>
+<li>
+<p>Two random variables <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> are independent if the <span class="arithmatex">\(\sigma\)</span>-algebras generated by their information,</p>
+<div class="arithmatex">\[
+\sigma(X) = \sigma(\{X \leq x\} : x \in \mathbb{R}) \quad \text{and} \quad \sigma(Y) = \sigma(\{Y \leq x\} : x \in \mathbb{R}),
+\]</div>
+<p>are independent.</p>
+</li>
+<li>
+<p>A collection of families of events <span class="arithmatex">\( \mathcal{C}^i \)</span> (with <span class="arithmatex">\( i \)</span> indexing the families) is independent if for every finite selection of events <span class="arithmatex">\( A^{i_1}, \ldots, A^{i_n} \)</span>, where <span class="arithmatex">\( A^{i_k}\)</span> is in <span class="arithmatex">\(\mathcal{C}^{i_k} \)</span>, it holds that:</p>
+<div class="arithmatex">\[
+P\left[ A^{i_1} \cap \cdots \cap A^{i_n} \right] = \prod_{k=1}^n P[A^{i_k}].
+\]</div>
+</li>
+<li>
+<p>A family (or sequence) of random variables <span class="arithmatex">\( (X_i) \)</span> is independent if the family of <span class="arithmatex">\(\sigma\)</span>-algebras <span class="arithmatex">\( \sigma(X_i) \)</span> is independent.</p>
+</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The first three points focus on pairwise independence for events, families, or random variables.<br />
+However, for collections with more than two elements, pairwise independence is insufficient.<br />
+For example, a sequence of random variables requires a stronger notion of independence that accounts for all finite subsets.  </p>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise</p>
+<p>Consider a four-element probability space <span class="arithmatex">\( \Omega = \{\omega_1, \omega_2, \omega_3, \omega_4\} \)</span> with uniform probability <span class="arithmatex">\( P[\{\omega_i\}] = \frac{1}{4} \)</span>.</p>
+<p>Construct three events <span class="arithmatex">\( A_1 \)</span>, <span class="arithmatex">\( A_2 \)</span>, and <span class="arithmatex">\( A_3 \)</span> such that:
+- <span class="arithmatex">\( A_1 \)</span> is independent of <span class="arithmatex">\( A_2 \)</span>,
+- <span class="arithmatex">\( A_1 \)</span> is independent of <span class="arithmatex">\( A_3 \)</span>,
+- <span class="arithmatex">\( A_2 \)</span> is independent of <span class="arithmatex">\( A_3 \)</span>,
+- but <span class="arithmatex">\( A_1 \)</span>, <span class="arithmatex">\( A_2 \)</span>, and <span class="arithmatex">\( A_3 \)</span> together are <strong>not</strong> independent.</p>
+<p>Formally:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    P[A_1 \cap A_2] &amp;= P[A_1] P[A_2], \\
+    P[A_1 \cap A_3] &amp;= P[A_1] P[A_3], \\
+    P[A_2 \cap A_3] &amp;= P[A_2] P[A_3], \\
+    P[A_1 \cap A_2 \cap A_3] &amp;\neq P[A_1] P[A_2] P[A_3].
+\end{aligned}
+\]</div>
+<p>If you struggle, ask ChatGPT—it can handle this.</p>
+</div>
+</div>
+<p>Independence is a strong assumption, but it depends on the probability measure.
+Even if two events are independent under a specific <span class="arithmatex">\( P \)</span>, independence might fail under a different measure.
+This concept is crucial in foundational results such as the law of large numbers and the central limit theorem, which are cornerstones of Monte Carlo methods.</p>
+<p>Let us now present a proposition related to independent random variables, which will be further explored in the context of stochastic processes and conditional expectations.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> be two independent bounded random variables.<br />
+Then:
+[
+E[X Y] = E[X] E[Y].
+]</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof sketch</p>
+<p>Consider the case where <span class="arithmatex">\( X = 1_A \)</span> and <span class="arithmatex">\( Y = 1_B \)</span> are indicator functions.<br />
+Independence of <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> implies that <span class="arithmatex">\( A \)</span> and <span class="arithmatex">\( B \)</span> are independent.<br />
+Hence:
+[
+E[XY] = E[1_A 1_B] = E[1_{A \cap B}] = P[A \cap B] = P[A] P[B] = E[X] E[Y].
+]</p>
+<p>This reasoning extends easily to simple random variables, as the <span class="arithmatex">\(\sigma\)</span>-algebras generated by <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> correspond to the events on which they are defined.</p>
+<p>For the general case, approximate <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( Y \)</span> by sequences of simple random variables <span class="arithmatex">\( (X_n) \)</span> and <span class="arithmatex">\( (Y_n) \)</span>, and use the properties of independence and limits of expectations.</p>
 </div>
 
 
