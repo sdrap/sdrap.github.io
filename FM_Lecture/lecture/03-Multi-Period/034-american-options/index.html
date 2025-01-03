@@ -1,0 +1,1366 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../033-exotic-options/">
+      
+      
+        <link rel="next" href="../../../material/probability/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
+    
+    
+      
+        <title>American Options - Financial Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#american-options" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Financial Mathematics" class="md-header__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Financial Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              American Options
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-index/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../material/probability/" class="md-tabs__link">
+          
+  
+    
+  
+  Math Add On
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../material/ex01/" class="md-tabs__link">
+          
+  
+    
+  
+  Exercises
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Financial Mathematics" class="md-nav__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Financial Mathematics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-index/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/001-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            One Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-One-Period/011-mathematical-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematical Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-One-Period/012-arbitrage-pricing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arbitrage and Pricing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-One-Period/013-derivative-securities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Derivative Securities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Risk Management
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Risk Management
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-risk-management/021-what-is-risk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is Risk
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-risk-management/022-risk-preferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk Preferences and Measures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-risk-management/023-oce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expected Shortfall
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Multi Period Model
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Multi Period Model
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../031-multi-period-financial-markets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi Period Financial Market
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../032-crr-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binomial Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../033-exotic-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exotic Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    American Options
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    American Options
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hedging-strategy-for-the-seller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hedging Strategy for the Seller
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math Add On
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Math Add On
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../material/probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Probability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../material/stochastic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Processes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Exercises
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../material/ex01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    One Period Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../material/ex02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../material/ex_math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Probability and Stochastic Processes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="american-options">American Options</h1>
+<p>So far, even if the outcome of European contingent claims may depend on the sequence of events previous to the maturity, the contract is settled for a given time horizon.
+In <em>American type</em> of contingent claim, the buyer can claim the payoff at any time before the settlement.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>An <em>American contingent claim</em> is a non-negative adapted stochastic process:</p>
+<div class="arithmatex">\[
+C=(C_t)_{0\leq t\leq T}.
+\]</div>
+<p>The value <span class="arithmatex">\(C_t(\omega)\)</span> represents the outcome that a buyer can claim if he/she exercises at time <span class="arithmatex">\(t\)</span> in state <span class="arithmatex">\(\omega\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The most classical example of American contingent claims are the American call and put options:</p>
+<div class="arithmatex">\[
+C_t^{call}=\left( S_t^i-K \right)^+ \quad \text{and} \quad C_t^{put}=\left( K-S_t^i \right)^+,
+\]</div>
+<p>for <span class="arithmatex">\(t=0,\ldots, T\)</span>.</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that a European contingent claim <span class="arithmatex">\(C\)</span> can be viewed as a special case of an American one.<br />
+Indeed, it would correspond to the stochastic process:</p>
+<div class="arithmatex">\[
+C_t=
+\begin{cases}
+0 &amp; \text{if } t=0,\ldots, T-1, \\\\
+C &amp; \text{if } t=T.
+\end{cases}
+\]</div>
+</div>
+<h2 id="hedging-strategy-for-the-seller">Hedging Strategy for the Seller</h2>
+<p>We first consider the problem of a hedging strategy for the seller of an American contingent claim <span class="arithmatex">\(C\)</span>.
+Hereby, we denote by <span class="arithmatex">\(H\)</span> the discounted contingent process, that is:</p>
+<div class="arithmatex">\[
+H_t=\frac{C_t}{B_t}, \quad t=0,\ldots, T.
+\]</div>
+<p>We suppose throughout that the financial market is arbitrage-free and, even more, complete.
+This means there exists only one pricing measure <span class="arithmatex">\(P^\ast\)</span> equivalent to <span class="arithmatex">\(P\)</span>.
+We want to compute the minimal amount of capital <span class="arithmatex">\(U_t\)</span> that the seller at time <span class="arithmatex">\(t\)</span> should have in order to pay the buyer of the contingent claim in case this person exercises their claim.
+We make this computation backward:</p>
+<ul>
+<li>
+<p><strong>Time <span class="arithmatex">\(T\)</span></strong>:
+    Suppose that at time <span class="arithmatex">\(T\)</span>, the buyer did not exercise their claim previously. Then the discounted amount of capital needed to satisfy the buyer is exactly:</p>
+<div class="arithmatex">\[
+U_T=H_T.
+\]</div>
+</li>
+<li>
+<p><strong>Time <span class="arithmatex">\(T-1\)</span></strong>:
+    Suppose that we are at time <span class="arithmatex">\(T-1\)</span>. We face two situations.<br />
+    First, the buyer decides to exercise now, and we need at least:</p>
+<div class="arithmatex">\[
+U_{T-1} \geq H_{T-1}.
+\]</div>
+<p>Or they decide to wait another time period, and we have to hedge against what they could require in the next period in expectation under the pricing measure, that is:</p>
+<div class="arithmatex">\[
+U_{T-1} \geq E^{P^\ast}\left[ H_T | \mathcal{F}_{T-1} \right] = E^{\ast}\left[ U_T | \mathcal{F}_{T-1} \right].
+\]</div>
+<p>Altogether, this means:</p>
+<div class="arithmatex">\[
+U_{T-1} = \max\left\{ H_{T-1}, E^{\ast}\left[ U_T | \mathcal{F}_{T-1} \right] \right\} = H_{T-1} \vee E^{P^\ast}\left[ U_T | \mathcal{F}_{T-1} \right].
+\]</div>
+</li>
+<li>
+<p><strong>Time <span class="arithmatex">\(t \leq T-1\)</span></strong>:
+    The same argumentation means we have to reserve at least:</p>
+<div class="arithmatex">\[
+U_t \geq H_t,
+\]</div>
+<p>as well as the minimum amount of capital <span class="arithmatex">\(U_{t+1}\)</span> needed from tomorrow in expectation under the pricing measure, that is:</p>
+<div class="arithmatex">\[
+U_t \geq E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right].
+\]</div>
+<p>Altogether, it follows that:</p>
+<div class="arithmatex">\[
+U_t = \max\left\{ H_t, E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right] \right\} = H_t \vee E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right].
+\]</div>
+</li>
+</ul>
+<p>This recursive scheme is called the <em>Snell Envelope</em>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: The Snell Enveloppe</p>
+<p>Let <span class="arithmatex">\(H\)</span> be an adapted process, <span class="arithmatex">\(P^\ast\)</span>-integrable.
+The Snell Envelope of <span class="arithmatex">\(H\)</span> is defined inverse recursively as follows:</p>
+<div class="arithmatex">\[
+U_T=H_T, \quad \text{and} \quad U_t=H_t \vee E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right], \quad t=T-1,\ldots, 0.
+\]</div>
+</div>
+<p>The Snell envelope satisfies the following inequality:</p>
+<div class="arithmatex">\[
+\begin{align*}
+   E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right] &amp; \leq  H_t \vee E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right] \\
+      &amp; = U_t
+\end{align*}
+\]</div>
+<p>Processes satisfying this inequality are called super-martingales:</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Super/Sub Martingales</p>
+<p>A process <span class="arithmatex">\(X\)</span> is called a <span class="arithmatex">\(P^\ast\)</span>-super-martingale if:</p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is adapted;</li>
+<li><span class="arithmatex">\(X\)</span> is <span class="arithmatex">\(Q\)</span>-integrable;</li>
+<li><span class="arithmatex">\(E^{P^\ast}[X_{t+1}|\mathcal{F}_t] \leq X_t\)</span> for every <span class="arithmatex">\(t=0,\ldots,T-1\)</span>.</li>
+</ol>
+<p>A process <span class="arithmatex">\(X\)</span> is called a <span class="arithmatex">\(Q\)</span>-sub-martingale if <span class="arithmatex">\(-X\)</span> is a <span class="arithmatex">\(Q\)</span>-super-martingale.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Doob-Meyer Decomposition</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a <span class="arithmatex">\(Q\)</span>-integrable and adapted process.<br />
+It can be uniquely decomposed into:</p>
+<div class="arithmatex">\[
+X=M-A,
+\]</div>
+<p>where <span class="arithmatex">\(A\)</span> is a predictable process with <span class="arithmatex">\(A_0=0\)</span> and <span class="arithmatex">\(M\)</span> is a <span class="arithmatex">\(Q\)</span>-martingale.  </p>
+<p>The process <span class="arithmatex">\(X\)</span> is a <span class="arithmatex">\(Q\)</span>-super-martingale if and only if <span class="arithmatex">\(A\)</span> is increasing.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Exercise</p>
+</div>
+<p>The Snell envelope is a particular <span class="arithmatex">\(P^\ast\)</span>-super-martingale.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(H\)</span> be an adapted and <span class="arithmatex">\(P^\ast\)</span>-integrable process.
+The Snell envelope <span class="arithmatex">\(U\)</span> of <span class="arithmatex">\(H\)</span> is a <span class="arithmatex">\(P^\ast\)</span>-super-martingale and the smallest <span class="arithmatex">\(P^\ast\)</span>-super-martingale among those dominating <span class="arithmatex">\(H\)</span>.
+That is, if <span class="arithmatex">\(V\)</span> is a <span class="arithmatex">\(P^\ast\)</span> super-martingale such that <span class="arithmatex">\(V_t \geq H_t\)</span> for all <span class="arithmatex">\(t\)</span>, then <span class="arithmatex">\(V\geq U\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>From the definition of <span class="arithmatex">\(U\)</span>, it follows immediately that <span class="arithmatex">\(U\)</span> is a <span class="arithmatex">\(P^\ast\)</span>-super-martingale.
+Let <span class="arithmatex">\(V\)</span> be another <span class="arithmatex">\(P^\ast\)</span>-super-martingale such that <span class="arithmatex">\(V_t \geq H_t\)</span> for every <span class="arithmatex">\(t\)</span>.
+By backward induction we show that <span class="arithmatex">\(V_t \geq U_t\)</span>.</p>
+<ul>
+<li>For <span class="arithmatex">\(t = T\)</span>, it holds that <span class="arithmatex">\(V_T \geq H_T = U_T\)</span> so it holds</li>
+<li>
+<ul>
+<li><span class="arithmatex">\(V_{T-1} \geq H_{T-1}\)</span> since <span class="arithmatex">\(V\)</span> dominates <span class="arithmatex">\(H\)</span></li>
+<li><span class="arithmatex">\(V_{T-1}\geq E^{P^\ast}[V_T|\mathcal{F}_{T-1}] = E^{P^\ast}[U_T|\mathcal{F}_{T-1}]\)</span> since <span class="arithmatex">\(V\)</span> is a super martingale and <span class="arithmatex">\(V_T \geq U_T\)</span>.</li>
+</ul>
+<p>For <span class="arithmatex">\(t = T-1\)</span>, we have</p>
+<p>All together it follows that <span class="arithmatex">\(V_{T-1}\geq H_{T-1}\vee E^{P^\ast}[U_T|\mathcal{F}_{T-1}] = U_{T-1}\)</span>.</p>
+</li>
+</ul>
+<p>The argumentation follows the same logic for every other step.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Consider the CRR model where the American contingent claim is path-independent, that is:</p>
+<div class="arithmatex">\[
+H_t = h_t(S_t),
+\]</div>
+<p>for some functions <span class="arithmatex">\(h_t:\mathbb{R}\to \mathbb{R}\)</span>.
+This is particularly the case for American put and call options since <span class="arithmatex">\(S^0\)</span> does not depend on the states <span class="arithmatex">\(\omega \in \Omega\)</span>.
+The American option scheme for the computation of the Snell envelope <span class="arithmatex">\(U_t=u_t(S_t)\)</span> reads as follows:</p>
+<div class="arithmatex">\[
+  u_T(x)=h_T(x), \quad \text{and} \quad u_t(x)= h_t(x) \vee \left( u_{t+1}(x(1+u) )p + u_{t+1}(x(1+d))(1-p) \right),
+\]</div>
+<p>for <span class="arithmatex">\(t=0,\ldots, T-1\)</span>, where <span class="arithmatex">\(p=(r-d)/(u-d)\)</span>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
