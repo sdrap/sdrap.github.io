@@ -879,11 +879,11 @@
         <li class="md-nav__item">
   <a href="#reducing-complexity-vanilla-derivatives" class="md-nav__link">
     <span class="md-ellipsis">
-      Reducing complexity: Vanilla Derivatives
+      Reducing Complexity: Vanilla Derivatives
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Reducing complexity: Vanilla Derivatives">
+    <nav class="md-nav" aria-label="Reducing Complexity: Vanilla Derivatives">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1220,7 +1220,7 @@ We also consider a probability measure <span class="arithmatex">\(P\)</span> suc
 \begin{equation*}
   \begin{split}
     Y_t\colon \Omega &amp; \longmapsto \{-1, 1\}\\
-              \omega &amp; \longrightarrow Y_t(\omega) = \text{result of coin toss at time }t
+              \omega &amp; \longrightarrow Y_t(\omega) = \omega_t =  \text{result of coin toss at time }t
   \end{split}
 \end{equation*}
 \]</div>
@@ -1346,11 +1346,11 @@ Hence, for <span class="arithmatex">\(\omega = (\omega_1, \ldots, \omega_T)\)</s
 \]</div>
 </li>
 </ul>
-<p>In particular, given the replicating strategy <span class="arithmatex">\(\eta\)</span>, we can even provide the price at any time by means of</p>
+<p>In particular, given the replicating strategy <span class="arithmatex">\(\eta\)</span>, we can even provide the (discounted) price at any time by means of</p>
 <div class="arithmatex">\[
     V_t = \pi(C) + \sum_{s=1}^t \eta_s \Delta X_s = E^\ast\left[ \frac{C}{(1 + r)^T} \mid \mathcal{F}_t \right]
 \]</div>
-<p><strong>Pricing</strong> (i.e., computing <span class="arithmatex">\(\pi(C)\)</span>) and <strong>Hedging</strong> (i.e., finding <span class="arithmatex">\(\eta\)</span>) are the two of three (managing risk is a fundamental component) main activities of financial institutions engaging in derivative trading.</p>
+<p><strong>Pricing</strong> (i.e., computing <span class="arithmatex">\(\pi(C)\)</span>) and <strong>Hedging</strong> (i.e., finding <span class="arithmatex">\(\eta\)</span>) are two of three (managing risk is a fundamental component) main activities of financial institutions engaging in derivative trading.</p>
 <p>Before any further assumptions, as for the price, since we have an explicit expression for <span class="arithmatex">\(P^\ast\)</span>, it holds that</p>
 <div class="arithmatex">\[
 \pi(C) = \sum_{\omega \in \Omega} \frac{C(\omega)}{(1+r)^T} P^\ast[\{\omega\}] = \sum_{\omega \in \Omega}\frac{C(\omega)}{(1+r)^T}p^{l(\omega)}(1-p)^{T-l(\omega)}
@@ -1363,7 +1363,7 @@ The sum is processed over all possible paths of coin tosses, and the cardinality
 Even with such a very simple market, if we consider one year maturity by daily trading, it amounts for <span class="arithmatex">\(2^{260}\)</span> paths which largely outmatch any computational power.
 Hence, it is not efficiently implementable, and without further assumptions, this curse of dimensionality can only be overcome through Monte-Carlo methods, sampling a large number, though less than <span class="arithmatex">\(2^{260}\)</span> of paths and approximating the expectation.</p>
 </div>
-<h2 id="reducing-complexity-vanilla-derivatives">Reducing complexity: Vanilla Derivatives</h2>
+<h2 id="reducing-complexity-vanilla-derivatives">Reducing Complexity: Vanilla Derivatives</h2>
 <p>Many of the derivatives are plain vanilla European options, that is derivatives which discounted value only depends on the last value of the underlying:</p>
 <div class="arithmatex">\[
 H = \frac{C}{(1+r)^T} = h(S_T)
@@ -1445,16 +1445,6 @@ In not so adequate notations, </p>
 </ul>
 <p>The next steps <span class="arithmatex">\(T-2, \ldots, 0\)</span> follows the same argumentation.</p>
 </div>
-<div class="admonition remark">
-<p class="admonition-title">Remark</p>
-<p>The function <span class="arithmatex">\(\Delta_t\)</span> is called the <strong>delta</strong> hedge in finance.
-The notation is a bit unfortunate in regards to our notation for difference, but is makes sense if you notice that this is the discrete version of the derivative of the portfolio value with respect to the underlying asset <span class="arithmatex">\(\partial v_t/\partial S_t\)</span> coinciding with the Black and Sholes framework.</p>
-</div>
-<div class="admonition proof">
-<p class="admonition-title">Proof</p>
-<p>Fix <span class="arithmatex">\(1\leq t\leq T\)</span>, being a hedging strategy, <span class="arithmatex">\(\eta\)</span> mut satisfy <span class="arithmatex">\(\eta_t (X_t- X_{t-1}) = V_t - V_{t-1}\)</span>.
-For any path <span class="arithmatex">\(\omega = (\omega_1, \ldots, \omega_T)\)</span>, since <span class="arithmatex">\(\eta_t\)</span>, <span class="arithmatex">\(X_{t-1}\)</span> and <span class="arithmatex">\(V_{t-1}\)</span> are predictable, they only depends on <span class="arithmatex">\(\omega_1, \ldots, \omega_{t-1}\)</span> and </p>
-</div>
 <h3 id="dynamic-hedging">Dynamic Hedging</h3>
 <p>As for the second part of the job, hedging, we know that there exists a predictable strategy <span class="arithmatex">\(\eta = (\eta_t)_{t=1, \ldots, T}\)</span> that will hedge the claim.
 Again, in the setting of plain vanilla european option, these ones can be computed backwardly as soon as you computed the sequence of functions <span class="arithmatex">\(v_0, \ldots, v_T\)</span>.</p>
@@ -1468,6 +1458,11 @@ Again, in the setting of plain vanilla european option, these ones can be comput
 <div class="arithmatex">\[
     \displaystyle \Delta_t(x) = (1+r)^t \frac{v_t(x(1+u)) - v_t(x(1+d))}{x(1+u) - x(1+d)}
 \]</div>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>The function <span class="arithmatex">\(\Delta_t\)</span> is called the <strong>delta</strong> hedge in finance.
+The notation is a bit unfortunate in regards to our notation for difference, but is makes sense if you notice that this is the discrete version of the derivative of the portfolio value with respect to the underlying asset <span class="arithmatex">\(\partial v_t/\partial S_t\)</span> coinciding with the Black and Sholes framework.</p>
 </div>
 <div class="admonition proof">
 <p class="admonition-title">Proof</p>

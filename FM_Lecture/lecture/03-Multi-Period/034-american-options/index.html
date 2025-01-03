@@ -1185,28 +1185,37 @@ Hereby, we denote by <span class="arithmatex">\(H\)</span> the discounted contin
 <div class="arithmatex">\[
 H_t=\frac{C_t}{B_t}, \quad t=0,\ldots, T.
 \]</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>We suppose throughout that the financial market is arbitrage-free and, even more, complete.
-This means there exists only one pricing measure <span class="arithmatex">\(P^\ast\)</span> equivalent to <span class="arithmatex">\(P\)</span>.
-We want to compute the minimal amount of capital <span class="arithmatex">\(U_t\)</span> that the seller at time <span class="arithmatex">\(t\)</span> should have in order to pay the buyer of the contingent claim in case this person exercises their claim.
+This means there exists only one pricing measure <span class="arithmatex">\(P^\ast\)</span> equivalent to <span class="arithmatex">\(P\)</span>.</p>
+</div>
+<p>We want to compute the minimal amount of capital <span class="arithmatex">\(U_t\)</span> that the seller at time <span class="arithmatex">\(t\)</span> should have in order to pay the buyer of the contingent claim in case this person exercises their claim.
 We make this computation backward:</p>
 <ul>
 <li>
 <p><strong>Time <span class="arithmatex">\(T\)</span></strong>:
-    Suppose that at time <span class="arithmatex">\(T\)</span>, the buyer did not exercise their claim previously. Then the discounted amount of capital needed to satisfy the buyer is exactly:</p>
+    Suppose that at time <span class="arithmatex">\(T\)</span>, the buyer did not exercise its claim previously.
+    Then the discounted amount of capital needed to satisfy the buyer is exactly:</p>
 <div class="arithmatex">\[
-U_T=H_T.
+U_T=H_T
 \]</div>
 </li>
 <li>
 <p><strong>Time <span class="arithmatex">\(T-1\)</span></strong>:
-    Suppose that we are at time <span class="arithmatex">\(T-1\)</span>. We face two situations.<br />
-    First, the buyer decides to exercise now, and we need at least:</p>
+    Suppose that we are at time <span class="arithmatex">\(T-1\)</span>. We face two situations.</p>
+<p>Either the buyer decides to exercise now, and we need at least:</p>
 <div class="arithmatex">\[
-U_{T-1} \geq H_{T-1}.
+U_{T-1} \geq H_{T-1}
 \]</div>
-<p>Or they decide to wait another time period, and we have to hedge against what they could require in the next period in expectation under the pricing measure, that is:</p>
+<p>Or it decides to wait another time period, and we have to hedge against the capital we need in the next period <span class="arithmatex">\(U_T\)</span>.
+Since the market is complete with a value <span class="arithmatex">\(E^{P^\ast}[U_T|\mathcal{F}_{T-1}]\)</span> at time <span class="arithmatex">\(T-1\)</span> I can find a strategy <span class="arithmatex">\(\boldsymbol{\eta}_T\)</span> which will replicate <span class="arithmatex">\(U_T\)</span>, that is</p>
 <div class="arithmatex">\[
-U_{T-1} \geq E^{P^\ast}\left[ H_T | \mathcal{F}_{T-1} \right] = E^{\ast}\left[ U_T | \mathcal{F}_{T-1} \right].
+    E^{P^\ast}[U_T |\mathcal{F}_{T-1}] + \boldsymbol{\eta}_T\cdot \Delta \boldsymbol{X}_T = U_T
+\]</div>
+<p>It follows that the capital required today to hedge this case must be:</p>
+<div class="arithmatex">\[
+    U_{T-1} \geq E^{P^\ast}\left[ U_T |\mathcal{F}_{T-1} \right]
 \]</div>
 <p>Altogether, this means:</p>
 <div class="arithmatex">\[
@@ -1217,7 +1226,7 @@ U_{T-1} = \max\left\{ H_{T-1}, E^{\ast}\left[ U_T | \mathcal{F}_{T-1} \right] \r
 <p><strong>Time <span class="arithmatex">\(t \leq T-1\)</span></strong>:
     The same argumentation means we have to reserve at least:</p>
 <div class="arithmatex">\[
-U_t \geq H_t,
+    U_t \geq H_t,
 \]</div>
 <p>as well as the minimum amount of capital <span class="arithmatex">\(U_{t+1}\)</span> needed from tomorrow in expectation under the pricing measure, that is:</p>
 <div class="arithmatex">\[
@@ -1235,7 +1244,13 @@ U_t = \max\left\{ H_t, E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right] \right\}
 <p>Let <span class="arithmatex">\(H\)</span> be an adapted process, <span class="arithmatex">\(P^\ast\)</span>-integrable.
 The Snell Envelope of <span class="arithmatex">\(H\)</span> is defined inverse recursively as follows:</p>
 <div class="arithmatex">\[
-U_T=H_T, \quad \text{and} \quad U_t=H_t \vee E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right], \quad t=T-1,\ldots, 0.
+\begin{equation*}
+    \begin{cases}
+        U_T =H_T\\
+        \\
+        U_t=H_t \vee E^{P^\ast}\left[ U_{t+1} | \mathcal{F}_t \right] &amp;\text{for } t=T-1,\ldots, 0.
+    \end{cases}
+\end{equation*}
 \]</div>
 </div>
 <p>The Snell envelope satisfies the following inequality:</p>
@@ -1256,21 +1271,7 @@ U_T=H_T, \quad \text{and} \quad U_t=H_t \vee E^{P^\ast}\left[ U_{t+1} | \mathcal
 </ol>
 <p>A process <span class="arithmatex">\(X\)</span> is called a <span class="arithmatex">\(Q\)</span>-sub-martingale if <span class="arithmatex">\(-X\)</span> is a <span class="arithmatex">\(Q\)</span>-super-martingale.</p>
 </div>
-<div class="admonition proposition">
-<p class="admonition-title">Doob-Meyer Decomposition</p>
-<p>Let <span class="arithmatex">\(X\)</span> be a <span class="arithmatex">\(Q\)</span>-integrable and adapted process.<br />
-It can be uniquely decomposed into:</p>
-<div class="arithmatex">\[
-X=M-A,
-\]</div>
-<p>where <span class="arithmatex">\(A\)</span> is a predictable process with <span class="arithmatex">\(A_0=0\)</span> and <span class="arithmatex">\(M\)</span> is a <span class="arithmatex">\(Q\)</span>-martingale.  </p>
-<p>The process <span class="arithmatex">\(X\)</span> is a <span class="arithmatex">\(Q\)</span>-super-martingale if and only if <span class="arithmatex">\(A\)</span> is increasing.</p>
-</div>
-<div class="admonition proof">
-<p class="admonition-title">Proof</p>
-<p>Exercise</p>
-</div>
-<p>The Snell envelope is a particular <span class="arithmatex">\(P^\ast\)</span>-super-martingale.</p>
+<p>The Snell envelope is an example of <span class="arithmatex">\(P^\ast\)</span>-super-martingale with particular property</p>
 <div class="admonition proposition">
 <p class="admonition-title">Proposition</p>
 <p>Let <span class="arithmatex">\(H\)</span> be an adapted and <span class="arithmatex">\(P^\ast\)</span>-integrable process.
@@ -1283,13 +1284,15 @@ That is, if <span class="arithmatex">\(V\)</span> is a <span class="arithmatex">
 Let <span class="arithmatex">\(V\)</span> be another <span class="arithmatex">\(P^\ast\)</span>-super-martingale such that <span class="arithmatex">\(V_t \geq H_t\)</span> for every <span class="arithmatex">\(t\)</span>.
 By backward induction we show that <span class="arithmatex">\(V_t \geq U_t\)</span>.</p>
 <ul>
-<li>For <span class="arithmatex">\(t = T\)</span>, it holds that <span class="arithmatex">\(V_T \geq H_T = U_T\)</span> so it holds</li>
 <li>
+<p>For <span class="arithmatex">\(t = T\)</span>, by definition we have <span class="arithmatex">\(V_T \geq H_T = U_T\)</span></p>
+</li>
+<li>
+<p>For <span class="arithmatex">\(t = T-1\)</span>, we have</p>
 <ul>
 <li><span class="arithmatex">\(V_{T-1} \geq H_{T-1}\)</span> since <span class="arithmatex">\(V\)</span> dominates <span class="arithmatex">\(H\)</span></li>
 <li><span class="arithmatex">\(V_{T-1}\geq E^{P^\ast}[V_T|\mathcal{F}_{T-1}] = E^{P^\ast}[U_T|\mathcal{F}_{T-1}]\)</span> since <span class="arithmatex">\(V\)</span> is a super martingale and <span class="arithmatex">\(V_T \geq U_T\)</span>.</li>
 </ul>
-<p>For <span class="arithmatex">\(t = T-1\)</span>, we have</p>
 <p>All together it follows that <span class="arithmatex">\(V_{T-1}\geq H_{T-1}\vee E^{P^\ast}[U_T|\mathcal{F}_{T-1}] = U_{T-1}\)</span>.</p>
 </li>
 </ul>

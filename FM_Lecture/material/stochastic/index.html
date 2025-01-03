@@ -952,6 +952,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Processes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -961,6 +972,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#information-conditional-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information, Conditional Expectation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#martingales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Martingales
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1109,7 +1157,6 @@
 <p>Stochastic processes mean that you want to carry over <em>time</em> the idea that outcomes will be revealed as time goes by.
 Considering for instance your view of the evolution of a financial asset.
 At the very begining your decisions towards it relies only on what you can forsee in the future about its evolution however as times goes buy you learn more and more infromation about the nature of this financial asset.</p>
-<p>Let us consider the following example</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>We consider a probability space <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> and a sequence <span class="arithmatex">\((Y_t)\)</span> of independent identically distributed (iid) random variables such that</p>
@@ -1135,7 +1182,176 @@ At the very begining your decisions towards it relies only on what you can forse
 <p>Now which game would you venture in and why?
 Which game would bring you in expectation the best outcome?</p>
 </div>
-<p>The answer to the second question is that all the games in expectation are equal.</p>
+<h2 id="information-conditional-expectation">Information, Conditional Expectation</h2>
+<p>Information is considered as a <span class="arithmatex">\(\sigma\)</span>-algebra of events.
+Now information means that we have an increasing sequence of events that we are aware of, called a filtration.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Filtration</p>
+<p>A <strong>filtration</strong> <span class="arithmatex">\(\mathbb{F} = (\mathcal{F}_t)_{t=0, \ldots, T}\)</span> is a collection of <span class="arithmatex">\(\sigma\)</span>-algebra of events such that</p>
+<div class="arithmatex">\[ \mathcal{F}_0 \subseteq \mathcal{F}_1 \subseteq \cdots \subseteq \mathcal{F}_T\]</div>
+</div>
+<p>In other terms, the collection of events known at time <span class="arithmatex">\(s\)</span> is included in the set of events known at time <span class="arithmatex">\(t\geq s\)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is not necessary but throughout we make the assumption that </p>
+<div class="arithmatex">\[\mathcal{F}_0 = \{\emptyset, \Omega\} \quad \text{and}\quad \mathcal{F}_T = \mathcal{F}\]</div>
+<p>In other terms, we assume that at time zero we know nothing and at time <span class="arithmatex">\(T\)</span> we know everything.</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>If a random variable <span class="arithmatex">\(\xi\)</span> is <span class="arithmatex">\(\mathcal{F}_0=\{\emptyset, \Omega\}\)</span>-measurable, then it must be constant.</p>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>It is a basic exercise to check.
+Suppose that a random variable <span class="arithmatex">\(\xi\)</span> is <span class="arithmatex">\(\mathcal{F}_0=\{\emptyset, \Omega\}\)</span>-measurable then it constant.
+Indeed, if it where not, let <span class="arithmatex">\(\omega_1\)</span> and <span class="arithmatex">\(\omega_2\)</span> be two states on which <span class="arithmatex">\(\xi(\omega_1) &lt; \xi(\omega_2)\)</span>, let <span class="arithmatex">\(x\)</span> be such that <span class="arithmatex">\(\xi(\omega_1)&lt;x&lt;\xi(\omega_2)\)</span>.
+It follows that <span class="arithmatex">\(\omega_1 \in A=\{\xi\leq x\}\)</span> while <span class="arithmatex">\(\omega_2 \not \in A\)</span>.
+This is however not possible since the event <span class="arithmatex">\(A\)</span> is either <span class="arithmatex">\(\Omega\)</span> or <span class="arithmatex">\(\emptyset\)</span>.</p>
+</details>
+<p>In this case, it follows that any random variable <span class="arithmatex">\(\xi\)</span> which is <span class="arithmatex">\(\mathcal{F}_0\)</span> measurable must be constant.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A family <span class="arithmatex">\(X = (X_t)\)</span> of random variable indexed by time is called a <strong>stochastic process</strong>.</p>
+<p>A stochastic process <span class="arithmatex">\(X\)</span> is called </p>
+<ul>
+<li><strong>Adapted:</strong> if <span class="arithmatex">\(X_t\)</span> is <span class="arithmatex">\(\mathcal{F}_t\)</span>-measurable for every <span class="arithmatex">\(t\)</span>;</li>
+<li><strong>Predictable:</strong> if <span class="arithmatex">\(X_t\)</span> is <span class="arithmatex">\(\mathcal{F}_{t-1}\)</span>-measurable for every <span class="arithmatex">\(t\)</span></li>
+</ul>
+</div>
+<details class="remark">
+<summary>Remark</summary>
+<p>For predictability, one needs to specify a convention for <span class="arithmatex">\(X_0\)</span>.
+either we say that predictable processes starts at time <span class="arithmatex">\(1\)</span> or we say that <span class="arithmatex">\(\mathcal{F}_{-1} = \mathcal{F}_0 = \{\emptyset, \Omega\}\)</span>.</p>
+</details>
+<h2 id="martingales">Martingales</h2>
+<p>Martingales are the most important object to study the properties of stochastic processes.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A stochastic process <span class="arithmatex">\(X = (X_t)_{t=0, \ldots, T}\)</span> is called a <strong>martingale</strong> if</p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is adapted</li>
+<li><span class="arithmatex">\(X\)</span> is integrable</li>
+<li>
+<p><span class="arithmatex">\(X\)</span> satisfies the martingale property</p>
+<div class="arithmatex">\[
+    E[X_{t+1}|\mathcal{F}_t] = X_t
+\]</div>
+</li>
+</ol>
+<p>It is a <strong>super-martingale</strong> if </p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is adapted</li>
+<li><span class="arithmatex">\(X\)</span> is integrable</li>
+<li>
+<p><span class="arithmatex">\(X\)</span> satisfies the super martingale property</p>
+<div class="arithmatex">\[
+    E[X_{t+1}|\mathcal{F}_t] \leq X_t
+\]</div>
+</li>
+</ol>
+<p>It is a <strong>sub-martingale</strong> if </p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is adapted</li>
+<li><span class="arithmatex">\(X\)</span> is integrable</li>
+<li>
+<p><span class="arithmatex">\(X\)</span> satisfies the super martingale property</p>
+<div class="arithmatex">\[
+    E[X_{t+1}|\mathcal{F}_t] \geq X_t
+\]</div>
+</li>
+</ol>
+</div>
+<p>Clearly, <span class="arithmatex">\(X\)</span> is a sub-martingale if and only if <span class="arithmatex">\(-X\)</span> is a super-martingale and <span class="arithmatex">\(X\)</span> is a martingale if and only if it is a super and sub martingale at the same time.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that the notion of martingale (sup or super) depends on the measure considered.
+A martingale under a probability measure <span class="arithmatex">\(P\)</span> might no longer be a martingale under another probability measure.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Doob-Meyer Decomposition</p>
+<p>Let <span class="arithmatex">\(X\)</span> be an integrable and adapted process.
+It can be uniquely decomposed into:</p>
+<div class="arithmatex">\[
+X=M+A,
+\]</div>
+<p>where <span class="arithmatex">\(A\)</span> is a predictable process with <span class="arithmatex">\(A_0=0\)</span> and <span class="arithmatex">\(M\)</span> is a martingale.  </p>
+<p>The process <span class="arithmatex">\(X\)</span> is a super-martingale if and only if <span class="arithmatex">\(A\)</span> is decreasing and a sub-martingale if and only if <span class="arithmatex">\(A\)</span> is increasing.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p><strong>Existence:</strong> 
+Suppose that we have a decomposition <span class="arithmatex">\(X = M+A\)</span> with <span class="arithmatex">\(M\)</span> martingale and <span class="arithmatex">\(A\)</span> predictable, then it must hold that</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        0 &amp; = E[M_{t+1} - M_t|\mathcal{F}_t]\\
+            &amp; = E[X_{t+1} - X_t - A_{t+1} + A_t | \mathcal{F}_t]\\
+            &amp; = E[X_{t+1} - X_t  | \mathcal{F}_t] - A_{t+1} + A_t &amp;&amp;A \text{ is predictable}
+    \end{align*}
+\]</div>
+<p>showing that <span class="arithmatex">\(A_{t+1} =  E[X_{t+1} - X_t |\mathcal{F}_t] - A_t\)</span>.</p>
+<p>We therefore define recursively</p>
+<div class="arithmatex">\[
+    \begin{equation*}
+        \begin{cases}
+            A_0 &amp; = 0\\
+            A_{t+1} &amp; = E[X_{t+1} - X_{t}|\mathcal{F}_t] - A_t
+        \end{cases}
+    \end{equation*}
+\]</div>
+<p>which by induction can be shown to be predictable and starting at <span class="arithmatex">\(0\)</span>.
+Then <span class="arithmatex">\(M = X+A\)</span> by the previous computations is a martingale defining the decomposition.</p>
+<p><strong>Uniqueness:</strong>
+Suppose that <span class="arithmatex">\(X = M+A = \tilde{M} + \tilde{A}\)</span> be two decompositions.
+It follows that <span class="arithmatex">\(M - \tilde{M}\)</span> is a martingale and predictable.
+It follows that for every <span class="arithmatex">\(t\)</span> it must hold</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        0 &amp;= E\left[ (M_{t+1} - M_t) - (\tilde{M}_{t+1} - \tilde{M}_t) |\mathcal{F}_t \right] &amp;&amp; \text{Martingale property}\\
+        &amp; = (M_{t+1} - M_t) - (\tilde{M}_{t+1} - \tilde{M}_t) &amp;&amp; M-\tilde{M}\text{ is predictable}
+    \end{align*}
+\]</div>
+<p>We therefore get that</p>
+<div class="arithmatex">\[
+    M_{t+1} - \tilde{M}_{t+1} = M_{t} - \tilde{M}_{t} = \cdots = M_0 - \tilde{M}_0 = \tilde{A}_0 - A_0 = 0-0 = 0 
+\]</div>
+<p>showing that <span class="arithmatex">\(M=\tilde{M}\)</span> and therefore <span class="arithmatex">\(A=\tilde{A}\)</span>.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(M\)</span> be an adapted and integrable process.
+The two following assertions are equivalent:</p>
+<ol>
+<li><span class="arithmatex">\(M\)</span> is a martingale</li>
+<li>
+<p>for any bounded predictable process <span class="arithmatex">\(\eta = (\eta_t)\)</span>, the process <span class="arithmatex">\(V= (V_t)\)</span></p>
+<div class="arithmatex">\[
+    V_t = V_0 + \sum_{s=1}^t \eta_s (M_s - M_{s-1})
+\]</div>
+<p>is a martingale.</p>
+</li>
+</ol>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Suppose that <span class="arithmatex">\(M\)</span> is a martingale and let <span class="arithmatex">\(\eta\)</span> be a bounded predictable process.
+By definition <span class="arithmatex">\(V\)</span> is adapted.
+Furthermore, denoting by <span class="arithmatex">\(c\)</span> the constant bounding <span class="arithmatex">\(\eta\)</span>, it holds that</p>
+<div class="arithmatex">\[
+    |V_t| \leq |V_0| + c \sum_{s=1}^t (|M_s| + |M_{s-1}|)
+\]</div>
+<p>which is a a sum of integrable random variables hence integrable.
+As for the martingale property</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        E[V_{t+1} - V_t|\mathcal{F}_t] &amp; = E[\eta_{t+1} (M_{t+1} - M_t) | \mathcal{F}_t]\\
+        &amp; = \eta_{t+1} E[M_{t+1}- M_t |\mathcal{F}_t] &amp;&amp; \eta\text{ is predictable}\\
+        &amp; = 0 &amp;&amp; M\text{ is a martingale}\\
+    \end{align*}
+\]</div>
+<p>Reciprocally, for <span class="arithmatex">\(V_0 = M_0\)</span> and <span class="arithmatex">\(\eta_t = 1\)</span> for every <span class="arithmatex">\(t\)</span> by hypotheses, <span class="arithmatex">\(V\)</span> is a martingale.
+However <span class="arithmatex">\(V_t = M_t\)</span> for every <span class="arithmatex">\(t\)</span>.</p>
+</div>
 
 
 
