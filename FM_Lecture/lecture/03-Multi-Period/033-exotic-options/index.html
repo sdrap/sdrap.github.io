@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../032-american-options/">
+        <link rel="prev" href="../032-crr-model/">
       
       
-        <link rel="next" href="../../../material/probability/">
+        <link rel="next" href="../034-american-options/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Ruin - Financial Mathematics</title>
+        <title>Exotic Options - Financial Mathematics</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#exotic-options" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -105,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ruin
+              Exotic Options
             
           </span>
         </div>
@@ -738,6 +743,8 @@
       
         
       
+        
+      
     
     
       
@@ -797,11 +804,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../032-american-options/" class="md-nav__link">
+      <a href="../032-crr-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    American Options
+    Binomial Model
   </span>
   
 
@@ -824,17 +831,40 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Ruin
+    Exotic Options
   </span>
   
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../034-american-options/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    American Options
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1079,9 +1109,177 @@
                   
 
 
-  <h1>Ruin</h1>
-
-
+<h1 id="exotic-options">Exotic Options</h1>
+<p>We saw in the previous simple binomial model that for options that depends on the path, the computational complexity increases exponentially when derivatives can depends on the path.
+This is for instance the case for exotic options such as asian options and barrer options:</p>
+<div class="arithmatex">\[
+C^{call}_{asian} = \left( \frac{1}{T}\sum_{t=1}^T S_t - K \right)^+
+\quad \text{or}\quad
+C^{call}_{up\&amp;out} = \left( S_T - K \right)^+ 1_{\{S_t &lt; B \colon t=0, \ldots, T\}}
+\]</div>
+<p>This usually would require Monte Carlo methods which are less accurate and slower to compute.
+However, in the case of barrer option, a mathematical result known as the relexion principle will reduce the dimension of the integration from <span class="arithmatex">\(T+1\)</span> to <span class="arithmatex">\(2\)</span> which does not depends in complexity on the number of steps and is easy to compute.</p>
+<p>The key to price barrier options is to know the joint distribution of <span class="arithmatex">\(S_T\)</span> and the running maximum <span class="arithmatex">\(\overline{S}_T\)</span>.<br />
+In order to keep the formulas easy, we make the following assumption:</p>
+<div class="arithmatex">\[
+1+u=\frac{1}{1+d}
+\]</div>
+<p>In this case, the price process takes the form:</p>
+<div class="arithmatex">\[
+S_t=S_0\left( 1+u \right)^{Z_t}
+\]</div>
+<p>where the stochastic process <span class="arithmatex">\(Z=(Z_t)_{0\leq t\leq T}\)</span> is given by:</p>
+<div class="arithmatex">\[
+Z_0=0, \quad \text{and} \quad Z_t=\sum_{s=1}^t Y_s
+\]</div>
+<p>which is the so-called random walk.
+We also consider that <span class="arithmatex">\(P\)</span> is the uniform distribution, that is:</p>
+<div class="arithmatex">\[
+P\left[ \{\omega\} \right]=\frac{1}{\# \Omega}
+\]</div>
+<p>Under this measure, the random variables <span class="arithmatex">\(Y_t\)</span> are independent, and therefore, it holds:</p>
+<div class="arithmatex">\[
+P[Z_t=k]=
+\begin{cases}
+2^{-t} C_t^{(t+k)/2} &amp; \text{if } t+k \text{ is even}, \\\\
+0 &amp; \text{otherwise}.
+\end{cases}
+\]</div>
+<p>Denoting by:</p>
+<div class="arithmatex">\[
+\overline{Z}_t=\sup_{s\leq t}Z_s
+\]</div>
+<p>the following reflection principle holds:</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition: Reflexion Principle</p>
+<p>For all <span class="arithmatex">\(k\geq 1\)</span> and <span class="arithmatex">\(l\geq 0\)</span>, it holds:</p>
+<div class="arithmatex">\[
+  P\left[ \overline{Z}_T \geq k \text{ and } Z_T=k-l\right]=P[Z_T=k+l]
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+  P\left[ \overline{Z}_T=k \text{ and } Z_T=k-l \right]=\frac{k+l+1}{T+1}2P[Z_{T+1}=1+k+l]
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Define <span class="arithmatex">\(\tau(\omega)=\inf\{t\colon Z_t(\omega)=k\}\wedge T\)</span> and define:</p>
+<div class="arithmatex">\[
+f(\omega)=(\omega_1,\ldots, \omega_{\tau(\omega)}, -\omega_{\tau(\omega)+1},\ldots,-\omega_T)
+\]</div>
+<p>The trajectories of <span class="arithmatex">\(Z(\omega)\)</span> and <span class="arithmatex">\(Z(f(\omega))\)</span> coincide up to the moment where <span class="arithmatex">\(Z(\omega)\)</span> reaches for the first time the level <span class="arithmatex">\(k\)</span>.
+From there on, the trajectories are mirrored with respect to the level <span class="arithmatex">\(k\)</span>.
+Since the random variables <span class="arithmatex">\(Y_t\)</span> are independent of each other, it follows that <span class="arithmatex">\(f\)</span> is a bijection between the set:</p>
+<div class="arithmatex">\[
+  \{\omega \in \Omega\colon \overline{Z}_T(\omega)\geq k \text{ and } Z_T(\omega)=k-l\}
+\]</div>
+<p>and the set:</p>
+<div class="arithmatex">\[
+  \{\omega \in \Omega\colon \overline{Z}_T(\omega)\geq k \text{ and } Z_T(\omega)=k+l\}=\{\omega \in \Omega \colon Z_T=k+l\}
+\]</div>
+<p>Since <span class="arithmatex">\(P\)</span> is uniformly distributed, it follows that the first relation of the proposition holds.</p>
+<p>As for the second relation, if <span class="arithmatex">\(T+k+l\)</span> is not even, suppose therefore that <span class="arithmatex">\(j=(T+k+l)/2\)</span> is an integer. Applying the first relation, it holds:</p>
+<div class="arithmatex">\[
+  P\left[ \overline{Z}_T=k;Z_T=k-l \right] = P\left[ Z_T=k+l \right]-P\left[ Z_T=k+l+2 \right] = 2^{-T}C_T^j - 2^{-T} C_{T}^{j+1}
+\]</div>
+<p>which simplifies to:</p>
+<div class="arithmatex">\[
+  P\left[ \overline{Z}_T=k;Z_T=k-l \right]=\frac{k+l+1}{T+1}2P[Z_{T+1}=1+k+l]
+\]</div>
+<p>The rest of the proof follows analogously.</p>
+</div>
+<p>We can derive the same kind of formulas if we replace <span class="arithmatex">\(P\)</span> by the equivalent martingale measure <span class="arithmatex">\(P^\ast\)</span>.
+In that case, it holds:</p>
+<div class="arithmatex">\[
+P^\ast\left[ Z_t=k \right]=
+\begin{cases}
+p^{(t+k)/2}(1-p)^{(t-k)/2} C_{t}^{(t+k)/2} &amp; \text{if } t+k \text{ is even}, \\\\
+0 &amp; \text{otherwise}.
+\end{cases}
+\]</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>For all <span class="arithmatex">\(k\geq 1\)</span> and <span class="arithmatex">\(l\geq 0\)</span>, it holds:</p>
+<div class="arithmatex">\[
+  P^\ast\left[ \overline{Z}_T \geq k \text{ and } Z_T=k-l\right]=\left( \frac{1-p}{p} \right)^lP^\ast[Z_T=k+l]=\left( \frac{p}{1-p} \right)^kP^\ast[Z_T=-k-l]
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+  P^\ast\left[ \overline{Z}_T=k \text{ and } Z_T=k-l \right]=\frac{1}{p}\left( \frac{1-p}{p} \right)^l\frac{k+l+1}{T+1}P^\ast[Z_{T+1}=1+k+l]
+  =\frac{1}{1-p}\left( \frac{p}{1-p} \right)^k\frac{k+l+1}{T+1}P^\ast[Z_{T+1}=-1-k-l].
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>First, inspection shows that:</p>
+<div class="arithmatex">\[
+\frac{dP^\ast}{dP}=2^T p^{\frac{Z_T+T}{2}}(1-p)^{\frac{T-Z_T}{2}}.
+\]</div>
+<p>From the density formula, we get:</p>
+<div class="arithmatex">\[
+P^\ast\left[ \overline{S}_T \geq k \text{ and } Z_T=k-l\right]=2^T p^{(T+k-l)/2}(1-p)^{(T+l-k)/2}P\left[ \overline{S}_T \geq k \text{ and } Z_T=k-l\right].
+\]</div>
+<p>As well as:</p>
+<div class="arithmatex">\[
+P\left[ Z_T=k+l\right]=2^T p^{-(T+l+k)/2}(1-p)^{-(T-k-l)/2}P^\ast[Z_T=k+l].
+\]</div>
+<p>Which combine with:</p>
+<div class="arithmatex">\[
+P\left[ \overline{S}_T \geq k \text{ and } Z_T=k-l\right]=P[Z_T=k+l].
+\]</div>
+<p>This yields the first relation, the second one being analogous.</p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Example: Up &amp; In Call Option</p>
+<p>Let:</p>
+<div class="arithmatex">\[
+C^{call}_{up\&amp;in}=
+\begin{cases}
+(S_T-K)^+ &amp; \text{if } \max_{0\leq t\leq T}S_t=\overline{S}_T \geq B, \\\\
+0 &amp; \text{otherwise}.
+\end{cases}
+\]</div>
+<p>Where <span class="arithmatex">\(K\)</span> is the strike and <span class="arithmatex">\(B&gt;S_0\vee K\)</span> is a barrier.
+Note that:</p>
+<div class="arithmatex">\[
+S_t=S_0(1+u)^{Z_t}, \quad \text{and} \quad \overline{S}_t=S_0(1+u)^{\overline{Z}_t}.
+\]</div>
+<p>It holds:</p>
+<div class="arithmatex">\[
+\pi(C)=\frac{1}{(1+r)^T} E^\ast\left[C^{call}_{up\&amp;in}\right].
+\]</div>
+<p>However:</p>
+<div class="arithmatex">\[
+E^\ast\left[C^{call}_{up\&amp;in}\right]=
+E^\ast\left[ (S_T-K)^+;\overline{S}_T\geq B \right]=
+E^\ast\left[ (S_T-K)^+;S_T\geq B \right] + E^\ast\left[ (S_T-K)^+;\overline{S}_T\geq B;S_T&lt;B \right].
+\]</div>
+<p>The first expectation can be entirely computed using the distribution of <span class="arithmatex">\(P^\ast\)</span> since it only depends on the distribution of <span class="arithmatex">\(S_T\)</span>.
+As for the second expectation, without loss of generality, let <span class="arithmatex">\(B=S_0(1+u)^k\)</span> and using our reflection principle:</p>
+<div class="arithmatex">\[
+E^\ast\left[ (S_T-K)^+;\overline{S}_T\geq B;S_T&lt;B \right]=
+\sum_{l\geq 1} E^\ast\left[ (S_T-K)^+;\overline{S}_T\geq B;Z_T=k-l \right].
+\]</div>
+<p>This becomes:</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    \sum_{l\geq 1}\left( S_0(1+u)^{k-l}-K \right)^+ P^\ast\left[ \overline{Z}_T \geq k \text{ and } Z_T=k-l\right]
+    &amp;=\sum_{l\geq 1}\left( S_0(1+u)^{k-l}-K \right)^+\left( \frac{p}{1-p} \right)^kP^\ast[Z_T=-k-l]
+    \\
+    &amp; =\left( \frac{p}{1-p} \right)^k(1+u)^{2k}\sum_{l\geq 1}\left( S_0(1+u)^{-k-l}-\tilde{K} \right)^+P^\ast[Z_T=-k-l]
+  \end{align*}
+\]</div>
+<p>where <span class="arithmatex">\(\tilde{K}=K(1+u)^{-2k}=K(S_0/B)^2\)</span>.
+Hence, it follows that:</p>
+<div class="arithmatex">\[
+  \pi(C)=\frac{1}{(1+r)^T} \left( E^\ast\left[ (S_T-K)^+;S_T\geq B \right] + \left( \frac{p}{1-p} \right)^k\left( \frac{B}{S_0} \right)^2E^\ast\left[ (S_T-\tilde{K})^+;S_T&lt;B \right] \right).
+\]</div>
+<p>Plugging in this distribution yields the explicit formula:</p>
+<div class="arithmatex">\[
+\pi(C)=\frac{1}{(1+r)^T} \left[
+\sum_{n=0}^{n_k}\left( S_0(1+u)^{T-2n}-K \right)^+ p^{T-n}(1-p)^n C_{T}^{T-n} + \left( \frac{p}{1-p} \right)^k\left( \frac{B}{S_0} \right)^2 \sum_{n=n_k+1}^T \left( S_0(1+u)^{T-2n}-\tilde{K} \right)^+p^{T-n}(1-p)^n C_T^{T-n} \right].
+\]</div>
+</div>
 
 
 
