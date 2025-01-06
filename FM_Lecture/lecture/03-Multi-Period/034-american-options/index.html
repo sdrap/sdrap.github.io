@@ -12,7 +12,7 @@
         <link rel="prev" href="../033-exotic-options/">
       
       
-        <link rel="next" href="../../../material/probability/">
+        <link rel="next" href="../035-ruin-probability/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -745,6 +745,8 @@
       
         
       
+        
+      
     
     
       
@@ -892,9 +894,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hedging-strategy-for-the-seller" class="md-nav__link">
+  <a href="#hedging-capital-for-the-seller" class="md-nav__link">
     <span class="md-ellipsis">
-      Hedging Strategy for the Seller
+      Hedging Capital for the Seller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#execution-time-for-the-buyer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution Time for the Buyer
     </span>
   </a>
   
@@ -904,6 +915,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../035-ruin-probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Probability
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1179,7 +1211,7 @@ C &amp; \text{if } t=T.
 \end{cases}
 \]</div>
 </div>
-<h2 id="hedging-strategy-for-the-seller">Hedging Strategy for the Seller</h2>
+<h2 id="hedging-capital-for-the-seller">Hedging Capital for the Seller</h2>
 <p>We first consider the problem of a hedging strategy for the seller of an American contingent claim <span class="arithmatex">\(C\)</span>.
 Hereby, we denote by <span class="arithmatex">\(H\)</span> the discounted contingent process, that is:</p>
 <div class="arithmatex">\[
@@ -1312,6 +1344,241 @@ The American option scheme for the computation of the Snell envelope <span class
 \]</div>
 <p>for <span class="arithmatex">\(t=0,\ldots, T-1\)</span>, where <span class="arithmatex">\(p=(r-d)/(u-d)\)</span>.</p>
 </div>
+<h2 id="execution-time-for-the-buyer">Execution Time for the Buyer</h2>
+<p>The buyer of an American claim is no longer a passive owner of a contract for which he waits until the end of the period the result of the outcome. He can also strategically decide in any state <span class="arithmatex">\(\omega\)</span> to exercise its contract at a time <span class="arithmatex">\(\tau(\omega)\)</span>. In general, this stopping strategy is a set of conditions which triggered, yields the exercise of the claim. However the triggering conditions whether to stop or not at time <span class="arithmatex">\(t\)</span> should only rely on the available information at time <span class="arithmatex">\(t\)</span>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A <em>stopping time</em> is a random variable <span class="arithmatex">\(\tau:\Omega \to \{0,1,\ldots, T\}\cup\{\infty\}\)</span> such that <span class="arithmatex">\(\{\tau =t\} = \{\omega \in \Omega\colon \tau(\omega)=t\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_t\)</span> for every <span class="arithmatex">\(0\leq t\leq T\)</span>.</p>
+</div>
+<p>In other terms, <span class="arithmatex">\(\{ \tau=t\}\)</span> represents the event on which the buyer will decide to exercise its American contingent claim.
+The event <span class="arithmatex">\(\{\tau=\infty\}\)</span> represents the event where the triggering conditions have not been met before the time horizon, and therefore the buyer will exercise it at time <span class="arithmatex">\(T\)</span>.</p>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that the following facts hold true (see math suplement on processes):</p>
+<ul>
+<li><em>Deterministic times are stopping times:</em>* The constant random variable <span class="arithmatex">\(\tau(\omega)=t\)</span> for every <span class="arithmatex">\(\omega\)</span> and a given <span class="arithmatex">\(t\)</span> is a stopping time;</li>
+<li>A random variable <span class="arithmatex">\(\tau:\Omega \to \{0,1,\ldots,T\}\)</span> is a stopping time if and only if <span class="arithmatex">\(\{\tau\leq t\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_t\)</span> for every <span class="arithmatex">\(t=0,\ldots, T\)</span>.</li>
+<li>If <span class="arithmatex">\(\tau\)</span> is a stopping time, then <span class="arithmatex">\(\{t\leq \tau\} = \{\tau \leq t-1\}^c\)</span> is in <span class="arithmatex">\(\mathcal{F}_{t-1}\)</span> for every <span class="arithmatex">\(t=1,\ldots, T\)</span>;</li>
+<li>If <span class="arithmatex">\(\sigma\)</span> and <span class="arithmatex">\(\tau\)</span> are two stopping times, then so are <span class="arithmatex">\(\sigma \vee \tau\)</span>, <span class="arithmatex">\(\tau\wedge \sigma\)</span>. In particular <span class="arithmatex">\(\tau \wedge t\)</span>.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let <span class="arithmatex">\(S\)</span> be an adapted process, for instance the price evolution of an asset.
+Given a threshold <span class="arithmatex">\(c\)</span>, the random variable</p>
+<div class="arithmatex">\[
+    \tau(\omega)=\inf\left\{ t\colon S_t(\omega)\geq c \right\}
+\]</div>
+<p>is a stopping time.</p>
+<details class="proof">
+<summary>Proof</summary>
+<p>It holds that</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    \{\tau \leq t\} &amp; = \left\{\omega \in \Omega\colon S_s(\omega) \geq c \text{ for some }0 \leq s\leq t\right\}\\
+                    &amp; = \underbrace{\cup_{s=0}^t \underbrace{\{S_s \geq t\}}_{\in \mathcal{F}_s \subseteq \mathcal{F}_t}}_{\in \mathcal{F}_t}
+  \end{align*}
+\]</div>
+</details>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Let <span class="arithmatex">\(S\)</span> be a stochastic process and <span class="arithmatex">\(\tau\)</span> a stopping time.
+We denote by <span class="arithmatex">\(S^\tau\)</span> the stopped process</p>
+<div class="arithmatex">\[
+    \begin{equation*}
+      S_t^\tau(\omega)=S_{t\wedge \tau(\omega)}(\omega) =
+      \begin{cases}
+        S_t(\omega) &amp;\text{if }t&lt; \tau(\omega)\\
+        S_{\tau(\omega)}(\omega) &amp; \text{if }\tau(\omega)\leq t
+      \end{cases}
+    \end{equation*}
+\]</div>
+<p><img alt="Stopped" src="../../../images/stopping_dark.svg#only-dark" />
+<img alt="Stopped" src="../../../images/stopping_white.svg#only-light" /></p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem: Doob's Optional Sampling</p>
+<p>Let <span class="arithmatex">\(M\)</span> be an adapted process and <span class="arithmatex">\(Q\)</span> a probability measure such that <span class="arithmatex">\(M_t\)</span> is <span class="arithmatex">\(Q\)</span>-integrable for all <span class="arithmatex">\(t=0,\ldots,T\)</span>. The following assertions are equivalent:</p>
+<ol>
+<li><span class="arithmatex">\(M\)</span> is a <span class="arithmatex">\(Q\)</span>-martingale;</li>
+<li>For every stopping time <span class="arithmatex">\(\tau\)</span>, the process <span class="arithmatex">\(M^\tau\)</span> is a martingale;</li>
+</ol>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>As for 1. implies 2, we already know that if <span class="arithmatex">\(M\)</span> is a martingale and <span class="arithmatex">\(\eta = (\eta_t)_{t=1, \ldots, T}\)</span> is a predictable process, then the portfolio</p>
+<div class="arithmatex">\[
+  V_t = V_0 + \sum_{s=1}^t \eta_s (M_s - M_{s-1})
+\]</div>
+<p>is a martingale.
+Taking the portfolio <span class="arithmatex">\(V_0 = M_0\)</span> and the strategy</p>
+<div class="arithmatex">\[
+  \begin{equation*}
+   \eta_t = 1_{\{t\leq \tau\}} = \begin{cases}
+    1 &amp; \text{if }t\leq \tau\\
+    0 &amp; \text{if }t&gt;\tau
+  \end{cases}
+  \end{equation*}
+\]</div>
+<p>where you buy and hold <span class="arithmatex">\(M\)</span> until time <span class="arithmatex">\(\tau\)</span>, it follows that <span class="arithmatex">\(\eta\)</span> is predictable since <span class="arithmatex">\(\{t\leq \tau\}=\{\tau \leq t-1\}^c\)</span> is in <span class="arithmatex">\(\mathcal{F}_{t-1}\)</span>.
+Furthermore, by definition </p>
+<div class="arithmatex">\[
+  \begin{equation*}
+    V_t = \begin{cases}
+      M_t &amp; \text{if }t&lt; \tau\\
+      M_\tau &amp; \text{if }\tau \leq t
+    \end{cases}
+    = M_{t\wedge \tau} = M^\tau_t
+  \end{equation*}
+\]</div>
+<p>showing that <span class="arithmatex">\(M^\tau\)</span> is a martingale.</p>
+<p>As for 2. implies 1., it is immediate by considering the stopping time <span class="arithmatex">\(\tau = T\)</span>.</p>
+</details>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that if <span class="arithmatex">\(\eta\)</span> is a <strong>positive</strong> predictable process and <span class="arithmatex">\(M\)</span> is a super-/sub-martingale, then it is easy to show that the portfolio <span class="arithmatex">\(V_t = V_0 + \sum_{s=1}^t\eta_s (M_s - M_{s-1})\)</span> is a super-/sub-martingale.
+It follows from the proof that Doob's optional sampling theorem also holds for super-/sub-martingales.</p>
+</div>
+<p>Concerning our buyer of an American option. He will choose its exercise strategy among the following set</p>
+<div class="arithmatex">\[
+    \mathcal{T}=\left\{ \tau\colon \tau \text{ stopping time with } \tau \leq T \right\}
+\]</div>
+<p>Suppose now that the goal of the buyer is to maximize the expectation of its outcome under the pricing measure <span class="arithmatex">\(P^\ast\)</span>, he therefore faces the following optimization problem</p>
+<div class="arithmatex">\[
+    \max\left\{ E^{\ast}\left[ H_{\tau} \right]\colon \tau \in \mathcal{T}\right\}
+\]</div>
+<p>Its goal is therefore to find an optimal stopping time <span class="arithmatex">\(\tau^\ast\)</span> such that</p>
+<div class="arithmatex">\[
+E^\ast\left[ H_{\tau^\ast}  \right] \geq E^{\ast}\left[ H_{\tau} \right]
+\]</div>
+<p>for any other stopping strategy <span class="arithmatex">\(\tau\)</span>.</p>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that such a problem even if intuitive is highly non trivial.
+Indeed, the maximization is done among the set of possible stopping times which is usually infinite dimensional and difficult to describe or parametrize.
+Secondly, the optimization function <span class="arithmatex">\(\tau \mapsto E^{\ast}[H_{\tau}]\)</span> is nothing close to be something like convex or even smooth (smooth in which sense).
+The classical optimization theory here do not apply at all.</p>
+</div>
+<p>We start by showing that the optimization problem from the buyer's side is always smaller than the minimum hedging capital for the seller.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>For any stopping time <span class="arithmatex">\(\tau\)</span> in <span class="arithmatex">\(\mathcal{T}\)</span>, it holds</p>
+<div class="arithmatex">\[
+    U_0 \geq E^\ast\left[ H_{\tau} \right]
+\]</div>
+<p>In particular,</p>
+<div class="arithmatex">\[
+    \underbrace{U_0}_{\text{Seller's minimum hedging capital}} \geq \underbrace{\sup \left\{ E^\ast\left[ H_\tau \right] \colon \tau \in \mathcal{T} \right\}}_{\text{Buyer's maximal expected revenue}}
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Let <span class="arithmatex">\(\tau\)</span> in <span class="arithmatex">\(\mathcal{T}\)</span> be any stopping time strategy for the buyer.
+We know that the Snell envelope is a super-martingale such that <span class="arithmatex">\(U_t\geq H_t\)</span> for every <span class="arithmatex">\(t\)</span>.
+In particular, on the one hand, it holds that <span class="arithmatex">\(U_\tau \geq H_\tau\)</span> and therefore <span class="arithmatex">\(E^\ast[U_\tau] \geq E^\ast[H_\tau]\)</span>.
+On the other hand, <span class="arithmatex">\(U^\tau\)</span> is also a super-martingale due to Doob's optional sampling theorem.
+Hence <span class="arithmatex">\(U_0 \geq E^\ast\left[ U_T^\tau \right] = E^\ast\left[ U_{T\wedge \tau} \right]=E^\ast[U_\tau]\)</span>.
+Both together we deduce that</p>
+<div class="arithmatex">\[
+    U_0 \geq E^\ast\left[ H_\tau \right]
+\]</div>
+</div>
+<p>This proposition shows that whatever stopping strategy the buyer is choosing, it will always reach less in (risk-neutral) expectation than what the seller is asking as minimum capital to hedge its contingent claim. If the buyer reaches equality, then it is an optimal strategy. Therefore, the following definition.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A stopping time <span class="arithmatex">\(\tau^\ast\)</span> in <span class="arithmatex">\(\mathcal{T}\)</span> is called optimal if <span class="arithmatex">\(U_0=E^\ast\left[ H_{\tau^\ast} \right]\)</span>.</p>
+</div>
+<p>The question is whether, at least one, optimal stopping time is available to the buyer. Before addressing this question, we can obtain a better characterization of optimal stopping times.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>A stopping time <span class="arithmatex">\(\tau^\ast\)</span> is optimal if and only if the two following conditions are satisfied</p>
+<ol>
+<li><span class="arithmatex">\(U_{\tau^\ast}=H_{\tau^\ast}\)</span>;</li>
+<li><span class="arithmatex">\(U^{\tau^\ast}\)</span> is a <span class="arithmatex">\(P^\ast\)</span>-martingale.</li>
+</ol>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Suppose that a stopping time <span class="arithmatex">\(\tau^\ast\)</span> is such that:</p>
+<ul>
+<li><span class="arithmatex">\(U_{\tau^\ast}=H_{\tau^\ast}\)</span></li>
+<li><span class="arithmatex">\(U^{\tau^\ast}\)</span> is a <span class="arithmatex">\(P^\ast\)</span>-martingale</li>
+</ul>
+<p>From the second point and Doob's optional sampling theorem, we deduce that</p>
+<div class="arithmatex">\[
+    U_0 = E^\ast\left[ U^\tau_T \right] = E^\ast\left[ U_{\tau^\ast} \right]
+\]</div>
+<p>And from the first, we get that <span class="arithmatex">\(E^\ast[U_{\tau^\ast}] = E^\ast[H_{\tau^\ast}]\)</span>.
+Hence <span class="arithmatex">\(U_0 = E^\ast[H_{\tau^\ast}]\)</span>, showing that <span class="arithmatex">\(\tau^\ast\)</span> is an optimal stopping time.</p>
+<p>Reciprocally, suppose that <span class="arithmatex">\(\tau^\ast\)</span> is an optimal stopping time.
+Since <span class="arithmatex">\(U\)</span> is a Snell envelope, and <span class="arithmatex">\(\tau^\ast\)</span> is an optimal stopping time (last equality), we know that</p>
+<div class="arithmatex">\[
+    U_0 \geq E^\ast\left[ U_{\tau^\ast} \right] \geq E^\ast\left[ H_{\tau^\ast} \right] = U_0
+\]</div>
+<p>and <span class="arithmatex">\(U_{\tau^\ast}\geq H_{\tau^\ast}\)</span>.
+If <span class="arithmatex">\(U^{\tau^\ast}\)</span> were a strict martingale, then the first inequality would be strict.
+If <span class="arithmatex">\(U_{\tau^\ast}\)</span> were strictly greater than <span class="arithmatex">\(H_{\tau^\ast}\)</span> on a set of positive probability, the second inequality would be strict.
+Since both sides of the inequalities are equal to <span class="arithmatex">\(U_0\)</span>, we conclude that <span class="arithmatex">\(U^{\tau^\ast}\)</span> is a martingale and <span class="arithmatex">\(U_{\tau^\ast} = H_{\tau^\ast}\)</span>.</p>
+</div>
+<p>This mathematical characterization of optimal stopping times gives us a hint as how to derive an optimal stopping strategy.</p>
+<p>Given the Snell envelope <span class="arithmatex">\(U\)</span> of <span class="arithmatex">\(H\)</span> under <span class="arithmatex">\(P^\ast\)</span> with Doob-Meyer decomposition <span class="arithmatex">\(U = M + A\)</span> where <span class="arithmatex">\(M\)</span> is a martingale and <span class="arithmatex">\(A\)</span> is a predictable decreasing process starting at <span class="arithmatex">\(0\)</span>.
+On the one hand, according to the first condition we define </p>
+<div class="arithmatex">\[
+    \tau_{\min}=\inf\left\{ t\colon U_t=H_t \right\}
+\]</div>
+<p>which is a member of <span class="arithmatex">\(\mathcal{T}\)</span>.
+Per definition, it is the smallest stopping time such that <span class="arithmatex">\(U_{\tau_{\min}}=H_{\tau_{\min}}\)</span>.</p>
+<p>On the other hand, according to the first condition we define</p>
+<div class="arithmatex">\[
+    \tau_{\max}=\inf \left\{ t\colon E^{\ast}\left[ U_{t+1}-U_t |\mathcal{F}_t \right]\neq 0 \right\}\wedge T=\inf\left\{ t\colon A_{t+1}\neq 0 \right\}\wedge T
+\]</div>
+<p>which is also a stopping time in <span class="arithmatex">\(\mathcal{T}\)</span>.
+By definition is this the largest stopping time for which <span class="arithmatex">\(U^\tau\)</span> is still a martingale before it starts to be a strict super martingale.</p>
+<p>According to the previous proposition, if the buyer is choosing a stopping time that might stop earlier than <span class="arithmatex">\(\tau_{\min}\)</span> or stop after <span class="arithmatex">\(\tau_{\max}\)</span> then is has to be sub-optimal.</p>
+<p>In other terms, any optimal stopping time <span class="arithmatex">\(\tau^\ast\)</span> must satisfy</p>
+<div class="arithmatex">\[
+\tau_{\min} \leq \tau^\ast \leq \tau_{\max}
+\]</div>
+<p>The following proposition shows that eventually <span class="arithmatex">\(\tau_{\min}\)</span> as well as <span class="arithmatex">\(\tau_{\max}\)</span>, which are explicit, are both optimal stopping times</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>The stopping times <span class="arithmatex">\(\tau_{\min}\)</span> and <span class="arithmatex">\(\tau_{\max}\)</span> are optimal stopping times.
+Furthermore, any other optimal stopping time <span class="arithmatex">\(\tau^\ast\)</span> must satisfy <span class="arithmatex">\(\tau_{\min} \leq \tau^\ast \leq \tau_{\max}\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>We first show that <span class="arithmatex">\(\tau_{\min}\)</span> is a optimal stopping time.
+By the characterization, since by definition <span class="arithmatex">\(U_{\tau_{\min}} = H_{\tau_\min}\)</span> we just need to show that <span class="arithmatex">\(U^{\tau_\min}\)</span> is a martingale.
+By Doob's optional sampling theorem, the stopped process <span class="arithmatex">\(U^{\tau_{\min}}_t=U_{t\wedge \tau_{\min}}\)</span> is a <span class="arithmatex">\(P^\ast\)</span>-super-martingale.
+For a fixed <span class="arithmatex">\(0\leq t\leq T-1\)</span>, define <span class="arithmatex">\(A=\{t&lt;\tau_{\min}\}\)</span>. For <span class="arithmatex">\(\omega\in A\)</span>, it holds that <span class="arithmatex">\(t&lt;\tau_{\min}(\omega)\)</span> and therefore <span class="arithmatex">\(U_t(\omega)&gt;H_t(\omega)\)</span>. Hence,</p>
+<div class="arithmatex">\[
+    U_t^{\tau_{\min}}(\omega)=U_{t}(\omega)=H_t(\omega)\vee E^{\ast}\left[ U_{t+1}|\mathcal{F}_t \right](\omega)=E^{\ast}\left[ U_{t+1}|\mathcal{F}_t \right](\omega)
+    =E^{\ast}\left[ U_{t+1}^{\tau_{\min}}|\mathcal{F}_t \right](\omega)
+\]</div>
+<p>But for <span class="arithmatex">\(\omega \in A^c\)</span>, it holds that <span class="arithmatex">\(t\wedge \tau_{\min}(\omega)=(t+1)\wedge\tau_{\min}(\omega)=\tau_{\min}(\omega)\)</span> and therefore</p>
+<div class="arithmatex">\[
+     U_t^{\tau_{\min}}(\omega)=E^{\ast}[U_{t+1}^{\tau_{\min}}|\mathcal{F}_t](\omega)
+\]</div>
+<p>All together with the fact that <span class="arithmatex">\(A \in \mathcal{F}_t\)</span>, it follows that</p>
+<div class="arithmatex">\[
+    U_{t}^{\tau_{\min}}
+    =1_AU_{t}^{\tau_{\min}}+1_{A^c}U_{t}^{\tau_{\min}}
+    =1_A E^{\ast}\left[ U_{t+1}^{\tau_{\min}}|\mathcal{F}_t \right]+1_{A^c}E^{\ast}\left[ U_{t+1}^{\tau_{\min}}|\mathcal{F}_t \right]
+    =E^{\ast}\left[ U_{t+1}^{\tau_{\min}}|\mathcal{F}_t \right]
+\]</div>
+<p>showing that <span class="arithmatex">\(U^{\tau_{\min}}\)</span> is a <span class="arithmatex">\(P^\ast\)</span>-martingale.</p>
+<p>We now show that <span class="arithmatex">\(\tau_{\max}\)</span> is an optimal stopping time.
+By the characterization, since by definition <span class="arithmatex">\(U^{\tau_\max}\)</span> is a martingale, we just need to show that <span class="arithmatex">\(U_{\tau_\max} = H_{\tau_\max}\)</span>.
+Let <span class="arithmatex">\(U = M + A\)</span> be the Doob-Meyer decomposition of <span class="arithmatex">\(U\)</span> into a martingale <span class="arithmatex">\(M\)</span> and a predictable decreasing process <span class="arithmatex">\(A\)</span> starting at <span class="arithmatex">\(0\)</span>.
+For <span class="arithmatex">\(\omega \in \{\tau_{\max}=T\}\)</span> it is clear.
+For <span class="arithmatex">\(\omega \in \{\tau_{\max}=t\}\)</span> for <span class="arithmatex">\(t&lt;T\)</span>, it follows that <span class="arithmatex">\(A_t(\omega)=0\)</span> and <span class="arithmatex">\(A_{t+1}(\omega)&gt;0\)</span>. Hence,</p>
+<div class="arithmatex">\[
+    E^{\ast}\left[ U_{t+1}-U_t|\mathcal{F}_t \right](\omega)=-\left( A_{t+1}(\omega)-A_t(\omega) \right)&lt;0
+\]</div>
+<p>showing that <span class="arithmatex">\(U_{t}(\omega)&gt;E^{\ast}[U_{t+1}|\mathcal{F}_t](\omega)\)</span> and by the definition of the Snell envelope it follows that <span class="arithmatex">\(U_t(\omega)=H_t(\omega)\vee E^{\ast}[U_{t+1}|\mathcal{F}_t](\omega) = H_t(\omega)\)</span>.
+Hence <span class="arithmatex">\(H_{\tau_{\max}}=U_{\tau_{\max}}\)</span>.</p>
+</details>
 
 
 
