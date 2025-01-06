@@ -745,6 +745,8 @@
       
         
       
+        
+      
     
     
       
@@ -936,6 +938,27 @@
   
   <span class="md-ellipsis">
     American Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../035-ruin-probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default Probability
   </span>
   
 
@@ -1520,6 +1543,11 @@ For instance European call and put options</p>
   C^{asian\,put} &amp; = (S^{av}_T - K)^+ = \left( K-\frac{1}{T}\sum_{t=1}^T S_t \right)^+
 \end{align*}
 \]</div>
+<p>In the following illustration thick lines stands for paths while dashed stands for exanding average.
+For an asian call, only the red scenario returns a positive outcome.
+In contrast, for the standard call, only the red scenario is void.</p>
+<p><img align="align" alt="Asian" src="../../../images/asian_dark.svg#only-dark" />
+<img align="align" alt="Asian" src="../../../images/asian_white.svg#only-light" /></p>
 </li>
 <li>
 <p><strong>Barrier Options</strong>: Barrier options are options that depends on the path of the underlying hitting or not a given barrier at a given previous time.</p>
@@ -1557,6 +1585,11 @@ For instance</p>
     \end{cases}
   \end{align*}
 \]</div>
+<p>In the following illustration thick lines stands for paths while dashed stands for the running maximum.
+For an up and out call, only the orange scenario returns a positive outcome.
+The blue scenario is above the strike however knocked the barrier before <span class="arithmatex">\(T\)</span>.</p>
+<p><img align="align" alt="Barrier" src="../../../images/barrer_dark.svg#only-dark" />
+<img align="align" alt="Barrier" src="../../../images/barrer_white.svg#only-light" /></p>
 </li>
 </ul>
 <div class="admonition note">
