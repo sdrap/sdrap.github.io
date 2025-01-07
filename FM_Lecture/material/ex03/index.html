@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../000-index/">
+        <link rel="prev" href="../ex02/">
       
       
-        <link rel="next" href="../../01-One-Period/011-mathematical-model/">
+        <link rel="next" href="../ex_math/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.10">
     
     
       
-        <title>Notations - Financial Mathematics</title>
+        <title>Multi Period Model - Financial Mathematics</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notations" class="md-skip">
+        <a href="#multiperiod-market" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Financial Mathematics" class="md-header__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+    <a href="../.." title="Financial Mathematics" class="md-header__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notations
+              Multi Period Model
             
           </span>
         </div>
@@ -199,7 +199,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -214,21 +214,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../000-index/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../lecture/00-Introduction/000-index/" class="md-tabs__link">
           
   
     
@@ -251,7 +247,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../material/probability/" class="md-tabs__link">
+        <a href="../probability/" class="md-tabs__link">
           
   
     
@@ -267,11 +263,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../material/ex01/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ex01/" class="md-tabs__link">
           
   
     
@@ -314,7 +312,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Financial Mathematics" class="md-nav__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
+    <a href="../.." title="Financial Mathematics" class="md-nav__button md-logo" aria-label="Financial Mathematics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -332,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -349,10 +347,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -367,20 +363,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -391,7 +384,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -402,10 +395,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -419,11 +410,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -437,7 +428,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Introduction
@@ -451,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../000-index/" class="md-nav__link">
+      <a href="../../lecture/00-Introduction/000-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -469,30 +460,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Notations
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../lecture/00-Introduction/001-notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,44 +472,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mathematical-notations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Mathematical Notations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#colorenvironment-conventions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Color/Environment conventions
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -605,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-One-Period/011-mathematical-model/" class="md-nav__link">
+      <a href="../../lecture/01-One-Period/011-mathematical-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-One-Period/012-arbitrage-pricing/" class="md-nav__link">
+      <a href="../../lecture/01-One-Period/012-arbitrage-pricing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../01-One-Period/013-derivative-securities/" class="md-nav__link">
+      <a href="../../lecture/01-One-Period/013-derivative-securities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -722,7 +655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-risk-management/021-what-is-risk/" class="md-nav__link">
+      <a href="../../lecture/02-risk-management/021-what-is-risk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -743,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-risk-management/022-risk-preferences/" class="md-nav__link">
+      <a href="../../lecture/02-risk-management/022-risk-preferences/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -764,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-risk-management/023-oce/" class="md-nav__link">
+      <a href="../../lecture/02-risk-management/023-oce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -843,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-Multi-Period/031-multi-period-financial-markets/" class="md-nav__link">
+      <a href="../../lecture/03-Multi-Period/031-multi-period-financial-markets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-Multi-Period/032-crr-model/" class="md-nav__link">
+      <a href="../../lecture/03-Multi-Period/032-crr-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-Multi-Period/033-exotic-options/" class="md-nav__link">
+      <a href="../../lecture/03-Multi-Period/033-exotic-options/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-Multi-Period/034-american-options/" class="md-nav__link">
+      <a href="../../lecture/03-Multi-Period/034-american-options/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -927,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-Multi-Period/035-ruin-probability/" class="md-nav__link">
+      <a href="../../lecture/03-Multi-Period/035-ruin-probability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../material/probability/" class="md-nav__link">
+      <a href="../probability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1028,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../material/stochastic/" class="md-nav__link">
+      <a href="../stochastic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1053,8 +986,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1069,17 +1004,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1090,7 +1028,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Exercises
@@ -1104,7 +1042,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../material/ex01/" class="md-nav__link">
+      <a href="../ex01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1125,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../material/ex02/" class="md-nav__link">
+      <a href="../ex02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,10 +1081,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../material/ex03/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Multi Period Model
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1155,6 +1113,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#american-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      American Option
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Probability
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1167,7 +1172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../material/ex_math/" class="md-nav__link">
+      <a href="../ex_math/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1203,64 +1208,198 @@
                   
 
 
-<h1 id="notations">Notations</h1>
-<h2 id="mathematical-notations">Mathematical Notations</h2>
-<p>The following notations will be used throughout the course:</p>
-<ul>
-<li><strong>Natural Numbers:</strong> <span class="arithmatex">\(\mathbb{N} = \{1, 2, \ldots\}\)</span>, <span class="arithmatex">\(\mathbb{N}_0 = \{0, 1, 2, \ldots\}\)</span>.</li>
-<li><strong>Integers:</strong> <span class="arithmatex">\(\mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}\)</span></li>
-<li><strong>Rational Numbers:</strong> <span class="arithmatex">\(\mathbb{Q} = \{ p/q\colon p \in \mathbb{Z}, q \in \mathbb{N}\}\)</span></li>
-<li><strong>Real Numbers:</strong> <span class="arithmatex">\(\mathbb{R}\)</span></li>
-<li>Vectors in <span class="arithmatex">\(\mathbb{R}^d\)</span> are denoted in bold font, <span class="arithmatex">\(\boldsymbol{x} = (x^1, \dots, x^d)\)</span>, and are assumed to be column vectors.  </li>
-<li>Vectors with positive components <span class="arithmatex">\(\mathbb{R}^d_+ = \{\boldsymbol{x} \in \mathbb{R}^d : x^k \geq 0, k=1,\ldots,d\}\)</span> and vectors with strictly positive components <span class="arithmatex">\(\mathbb{R}^d_{++} = \{\boldsymbol{x} \in \mathbb{R}^d : x^k &gt; 0, k=1,\ldots,d\}\)</span>.  </li>
-<li><strong>Scalar Product:</strong> <span class="arithmatex">\(\boldsymbol{x} \cdot \boldsymbol{y} := \sum x_k y_k\)</span> denotes the scalar product of <span class="arithmatex">\(\boldsymbol{x}\)</span> and <span class="arithmatex">\(\boldsymbol{y}\)</span> in <span class="arithmatex">\(\mathbb{R}^d\)</span>.  </li>
-<li><span class="arithmatex">\(\beta \boldsymbol{x} := (\beta x_1, \ldots, \beta x_d)\)</span> represents the multiplication of <span class="arithmatex">\(\boldsymbol{x}\)</span> in <span class="arithmatex">\(\mathbb{R}^d\)</span> by a scalar <span class="arithmatex">\(\beta \in \mathbb{R}\)</span>.  </li>
-<li><span class="arithmatex">\(\boldsymbol{x} + \boldsymbol{y} := (x_1 + y_1, \ldots, x_d + y_d)\)</span> represents vector addition in <span class="arithmatex">\(\mathbb{R}^d\)</span>.  </li>
-<li><strong>Component wise operations:</strong> <span class="arithmatex">\(\boldsymbol{x}\boldsymbol{y}= (x_1 y_1, \ldots, x_d y_d)\)</span>, <span class="arithmatex">\(\boldsymbol{x}/ \boldsymbol{y} = (x_1/ y_1, \ldots, x_d/y_d)\)</span>, <span class="arithmatex">\(f(\boldsymbol{x}) = (f(x_1), \ldots, f(x_d))\)</span> for any function <span class="arithmatex">\(f\colon \mathbb{R}\to \mathbb{R}\)</span>.</li>
-<li>
-<p>For scalars <span class="arithmatex">\(x, y \in \mathbb{R}\)</span>, the following notations are used:  </p>
+<h1 id="multiperiod-market">Multiperiod Market</h1>
+<h2 id="generic">Generic</h2>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise</p>
+<p>We consider a multi-period financial market with a bank account <span class="arithmatex">\(B\)</span> and one stock <span class="arithmatex">\(S^1 = S\)</span>.<br />
+Which of the following processes <span class="arithmatex">\(\eta = (\eta_t)_{1 \leq t \leq T}\)</span>, where <span class="arithmatex">\(\eta_t : \Omega \to \mathbb{R}\)</span>, are predictable?</p>
+<ol>
+<li><span class="arithmatex">\(\eta_t = 1_{\{S_t &gt; S_{t-1}\}}\)</span> for <span class="arithmatex">\(t = 1, \ldots, T\)</span>;</li>
+<li><span class="arithmatex">\(\eta_1 = 1\)</span> and <span class="arithmatex">\(\eta_t = 1_{\{S_{t-1} &gt; S_{t-2}\}}\)</span> for <span class="arithmatex">\(t = 2, \ldots, T\)</span>;</li>
+<li><span class="arithmatex">\(\eta_t = 1_A 1_{\{t &gt; t_0\}}\)</span> for some <span class="arithmatex">\(A \in \mathcal{F}_{t_0}\)</span> and some <span class="arithmatex">\(t_0 \in \{0, \ldots, T-1\}\)</span>;</li>
+<li><span class="arithmatex">\(\eta_t = 1_{\{S_t &gt; S_{S_0}\}}\)</span>;</li>
+<li><span class="arithmatex">\(\eta_1 = 1\)</span> and <span class="arithmatex">\(\eta_t = 2 \eta_{t-1} 1_{\{S_t &lt; 1\}}\)</span> for <span class="arithmatex">\(t \geq 2\)</span>.</li>
+</ol>
+</div>
+<div class="admonition exercise">
+<p class="admonition-title">Insider Problem</p>
+<p>Let <span class="arithmatex">\(Y_1, \ldots, Y_T\)</span> be independent identically distributed random variables such that <span class="arithmatex">\(E[Y_t] = 0\)</span> for every <span class="arithmatex">\(t\)</span> and not identically constant on some probability space <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span>.
+We consider the filtration <span class="arithmatex">\(\mathcal{F}_0 = \{\emptyset, \Omega\}\)</span> and <span class="arithmatex">\(\mathcal{F}_t = \sigma(Y_1, \ldots, Y_t)\)</span> and the discounted price process:</p>
 <div class="arithmatex">\[
-  x \vee y = \max\{x, y\}, \quad x \wedge y = \min\{x, y\}, \quad x^+ = \max\{x, 0\}, \quad x^- = \max\{-x, 0\}.
+    X_0 := 0, \quad X_t := X_0 + \sum_{s=1}^t Y_s.
 \]</div>
-<p>Notably, <span class="arithmatex">\(x = x^+ - x^-\)</span> and <span class="arithmatex">\(|x| = x^+ + x^-\)</span>.  </p>
+<p>We extend the filtration with the information provided by <span class="arithmatex">\(X_T\)</span>, that is:</p>
+<div class="arithmatex">\[
+    \tilde{\mathcal{F}}_t = \sigma(\mathcal{F}_t, X_T), \quad t = 0, \ldots, T
+\]</div>
+<p>This is the information that an insider knows, for whatever reason, about the terminal value of the discounted price at time <span class="arithmatex">\(T\)</span>.
+We denote the non-insider filtration <span class="arithmatex">\(\mathbb{F}\)</span> and the insider filtration <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span>.</p>
+<p>Show that:</p>
+<ol>
+<li>
+<p>If <span class="arithmatex">\(Z_1\)</span> and <span class="arithmatex">\(Z_2\)</span> are identically distributed integrable random variables, then it holds</p>
+<div class="arithmatex">\[
+  E[Z_1 |\sigma(Z_1+Z_2)] = \frac{Z_1 + Z_2}{2}
+\]</div>
 </li>
-</ul>
-<h2 id="colorenvironment-conventions">Color/Environment conventions</h2>
-<div class="admonition definition">
-<p class="admonition-title">Definition</p>
-<p>For a ... we define</p>
-</div>
-<div class="admonition remark">
-<p class="admonition-title">Remark</p>
-<p>Note that  </p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>As an example we consider </p>
-</div>
-<div class="admonition theorem">
-<p class="admonition-title">Theorem</p>
-<p>Let <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> be a probability space...</p>
-</div>
-<div class="admonition proposition">
-<p class="admonition-title">Proposition</p>
-<p>Assuming no-arbitrage for the financial market, the followign assertions holds...</p>
-</div>
-<div class="admonition corollary">
-<p class="admonition-title">Corollary</p>
-<p>As a corrolary to the previous proposition, it holds</p>
-</div>
-<div class="admonition lemma">
-<p class="admonition-title">Lemma</p>
-<p>In the case where <span class="arithmatex">\(P^\ast\)</span> is equivalent to <span class="arithmatex">\(P\)</span>, it holds...</p>
-</div>
-<div class="admonition proof">
-<p class="admonition-title">Proof</p>
-<p>In a first step we show that <span class="arithmatex">\((i)\)</span> implies <span class="arithmatex">\((ii)\)</span>...</p>
+<li>
+<p><span class="arithmatex">\(X\)</span> is a martingale under the filtration <span class="arithmatex">\(\mathbb{F}\)</span>.</p>
+</li>
+</ol>
+<p>Show that <span class="arithmatex">\(X\)</span> cannot be a martingale under the insider filtration <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span>.
+  However, the process:</p>
+<div class="language-text highlight"><pre><span></span><code>\[
+    \tilde{X}_0 = X_0, \quad \text{and} \quad \tilde{X}_t = X_t - \sum_{s=0}^{t-1} \frac{X_T - X_s}{T - s}, \quad t = 1, \ldots, T
+\]
+</code></pre></div>
+<p>is a martingale under <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span>.</p>
+<ol>
+<li>
+<p>With the information about the terminal discounted value <span class="arithmatex">\(X_T\)</span> of the stock, it is possible to realize arbitrage gains.
+  Find a strategy <span class="arithmatex">\(\eta\)</span>, predictable with respect to <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span>, such that among all other strategies <span class="arithmatex">\(\mu\)</span>, predictable with respect to <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span> with <span class="arithmatex">\(|\mu_t| \leq 1\)</span>, the expected gain <span class="arithmatex">\(E[G_T]\)</span> is maximal, where:</p>
+<div class="arithmatex">\[
+    G_T = \sum_{s=1}^T \eta_s \Delta X_s.
+\]</div>
+</li>
+</ol>
 </div>
 <div class="admonition exercise">
 <p class="admonition-title">Exercise</p>
-<p>Solve in a a binomial financial market...</p>
+<p>In an arbitrage-free market with a bank account:</p>
+<div class="arithmatex">\[
+      B_t = (1 + r)^t, \quad r &gt; -1, \, t = 0, \ldots, T
+  \]</div>
+<p>Let <span class="arithmatex">\(C_t^{call}\)</span> and <span class="arithmatex">\(C_t^{put}\)</span> be the price processes of a call and put on a self-financed portfolio <span class="arithmatex">\(V\)</span> with strike <span class="arithmatex">\(K\)</span>, that is:</p>
+<div class="arithmatex">\[
+    C^{call} = (V_T - K)^+ \quad \text{and} \quad C^{put} = (K - V_T)^+.
+\]</div>
+<p>Show the put-call parity:</p>
+<div class="arithmatex">\[
+    C_t^{call} - C_t^{put} = V_t - K(1 + r)^{t-T}, \quad t = 0, \ldots, T.
+  \]</div>
+</div>
+<h2 id="american-option">American Option</h2>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise</p>
+<p>Let <span class="arithmatex">\(H\)</span> be the discounted price of an American option in a complete financial market, and denote by <span class="arithmatex">\(U\)</span> the Snell envelope.
+Denote by <span class="arithmatex">\(\tilde{H} := H_T\)</span> the corresponding European option whose price process is given by:</p>
+<div class="arithmatex">\[
+    V_t = E_{P^\ast}\left[ H_T \mid \mathcal{F}_t \right], \quad t = 0, \ldots, T
+\]</div>
+<p>Show that:</p>
+<ol>
+<li><span class="arithmatex">\(U_t \geq V_t\)</span> for every <span class="arithmatex">\(t\)</span>.</li>
+<li>If <span class="arithmatex">\(V_t \geq H_t\)</span> for all <span class="arithmatex">\(t\)</span>, then <span class="arithmatex">\(U_t = V_t\)</span> for every <span class="arithmatex">\(t\)</span>.</li>
+<li>If <span class="arithmatex">\(H\)</span> is a <span class="arithmatex">\(P^\ast\)</span>-sub-martingale, then <span class="arithmatex">\(U = V\)</span>.</li>
+<li>Show that if <span class="arithmatex">\(H_t = f(X_t)\)</span> for some convex function <span class="arithmatex">\(f\)</span> for every <span class="arithmatex">\(t\)</span>, for instance, an American call option, then <span class="arithmatex">\(H\)</span> is a <span class="arithmatex">\(P^\ast\)</span>-sub-martingale.</li>
+</ol>
+</div>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise (Difficult)</p>
+<p>In a multi-period arbitrage-free and complete financial market with one stock <span class="arithmatex">\(S\)</span>, consider the following American put option:</p>
+<div class="arithmatex">\[
+  H_t^K = \frac{(K - S_t)^+}{(1 + r)^t}, \quad t = 0, 1, \ldots, T
+  \]</div>
+<p>where <span class="arithmatex">\(r &gt; 0\)</span> and <span class="arithmatex">\(K\)</span> is a positive strike.
+  We denote by <span class="arithmatex">\(\tau^K_{\min}\)</span> the smallest optimal stopping time for the buyer, that is:</p>
+<p>[
+      \tau^K_{\min}(\omega) = \inf{t : U_t^K(\omega) = H_t^K(\omega)},
+  ]</p>
+<p>where <span class="arithmatex">\(U^K\)</span> is the corresponding Snell envelope of <span class="arithmatex">\(H^K\)</span>.</p>
+<p>Show that:</p>
+<ol>
+<li><span class="arithmatex">\(\tau^K_{\min} \geq \tau^{K^\prime}_{\min}\)</span> whenever <span class="arithmatex">\(K \leq K^\prime\)</span>.</li>
+<li>For <span class="arithmatex">\(K\)</span> large enough, show that ultimately <span class="arithmatex">\(\tau^K_{\min} = 0\)</span>.</li>
+</ol>
+</div>
+<h2 id="default-probability">Default Probability</h2>
+<div class="admonition exercise">
+<p class="admonition-title">Exercise: First part is easy, second part less so</p>
+<p>Let <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> be a probability space, <span class="arithmatex">\(Y_1, Y_2, \ldots\)</span> a sequence of independent identically distributed random variables taking values <span class="arithmatex">\(\pm 1\)</span> and such that:</p>
+<div class="arithmatex">\[
+  P[Y_t = 1] = p, \quad \text{and} \quad P[Y_t = -1] = 1 - p = q
+\]</div>
+<p>for <span class="arithmatex">\(1 &gt; p \geq 1/2\)</span>.
+Consider the filtration <span class="arithmatex">\(\mathcal{F}_0 = \{\emptyset, \Omega\}\)</span> and <span class="arithmatex">\(\mathcal{F}_t = \sigma(Y_1, \ldots, Y_t)\)</span>, <span class="arithmatex">\(t \geq 1\)</span>.
+The random walk <span class="arithmatex">\(Z\)</span> is given by:</p>
+<div class="arithmatex">\[
+  Z_0 = 0 \quad \text{and} \quad Z_t = \sum_{s=1}^t Y_s, \quad t \geq 1.
+\]</div>
+<p>Finally, for two integers <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, we define the stopping time:</p>
+<div class="arithmatex">\[
+  \tau_a = \inf\{ t : Z_t = a \}, \quad \tau_b = \inf\{ t : Z_t = -b \}, \quad \text{and} \quad \tau = \tau_a \wedge \tau_b.
+\]</div>
+<p>You can assume that for any value of <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>, it holds <span class="arithmatex">\(\tau(\omega) &lt; \infty\)</span> for almost all <span class="arithmatex">\(\omega\)</span>.</p>
+<ol>
+<li>Since <span class="arithmatex">\(1 &gt; p \geq 1/2\)</span>, show that <span class="arithmatex">\(Z\)</span> is a sub-martingale and a martingale if and only if <span class="arithmatex">\(p = 1/2\)</span>.</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(p = 1/2\)</span>, and show that for every time horizon <span class="arithmatex">\(T\)</span>, it holds:</p>
+<div class="arithmatex">\[
+      E\left[ Z_{T \wedge \tau} \right] = 0
+\]</div>
+<p>Deduce that:</p>
+<div class="arithmatex">\[
+      P[Z_\tau = a] = \frac{b}{a + b}.
+\]</div>
+</li>
+<li>
+<p>Always for <span class="arithmatex">\(p = 1/2\)</span>, show that the process <span class="arithmatex">\(Z^2_t - t\)</span> is a martingale.
+   Show that <span class="arithmatex">\(E[Z_\tau^2 - \tau] = 0\)</span>, and using the previous point, show that the expected time to reach <span class="arithmatex">\(a\)</span> or <span class="arithmatex">\(-b\)</span> for the first time is given by:</p>
+<div class="arithmatex">\[
+E\left[ \tau \right] = ab.
+\]</div>
+</li>
+<li>
+<p>For <span class="arithmatex">\(1 &gt; p &gt; 1/2\)</span>, show that the process:</p>
+<div class="arithmatex">\[
+M_0 = 1, \quad M_t = \left( \frac{q}{p} \right)^{Z_t}, \quad t = 1, 2, \ldots
+\]</div>
+<p>is a martingale.</p>
+</li>
+<li>
+<p>For <span class="arithmatex">\(1 &gt; p &gt; 1/2\)</span>, show that:</p>
+<div class="arithmatex">\[
+P\left[ Z_\tau = a \right] = \frac{(q/p)^b - 1}{(q/p)^{a + b} - 1}.
+\]</div>
+</li>
+</ol>
+<p>From now on, suppose that <span class="arithmatex">\(p &gt; 1/2\)</span> and for <span class="arithmatex">\(\lambda \in \mathbb{R}\)</span>, define:</p>
+<div class="arithmatex">\[
+      \phi(\lambda) = \ln(E[\exp(\lambda Y_t)]) = \ln(E[\exp(\lambda Y_1)]) = \ln(pe^{\lambda} + qe^{-\lambda})
+    \]</div>
+<p>as well as the process <span class="arithmatex">\(L(\lambda)\)</span> by:</p>
+<div class="arithmatex">\[
+      L_t(\lambda) = \exp\left( \lambda Z_t - t \phi(\lambda) \right), \quad t = 0, 1, 2, \ldots
+    \]</div>
+<ol>
+<li>
+<p>Show that:</p>
+<div class="arithmatex">\[
+\phi^\prime(0) = E\left[ Y_1 \right]
+\]</div>
+<p>and (with differentiation done with respect to <span class="arithmatex">\(\lambda\)</span>!)</p>
+<div class="arithmatex">\[
+L^\prime_t := \frac{d L_t}{d\lambda}(0) = Z_t - t \phi^\prime(0).
+\]</div>
+</li>
+<li>
+<p>Show that <span class="arithmatex">\(L(\lambda)\)</span> is a martingale.
+   Sketch the reason why the process <span class="arithmatex">\(L^\prime\)</span> is then also a martingale.</p>
+</li>
+<li>
+<p>From the two previous points, show that:</p>
+<div class="arithmatex">\[
+E\left[ Z_{t \wedge \tau} - t \wedge \tau \phi^\prime(0) \right] = 0, \quad \text{for every time } t.
+\]</div>
+</li>
+<li>
+<p>From equation (4), deduce that the average time before reaching either <span class="arithmatex">\(a\)</span> or <span class="arithmatex">\(-b\)</span> is given by:</p>
+<div class="arithmatex">\[
+E[\tau] = \frac{a + b}{p - q} \frac{(q/p)^b - 1}{(q/p)^{a + b} - 1} - \frac{b}{p - q}.
+\]</div>
+</li>
+</ol>
 </div>
 
 
@@ -1305,14 +1444,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
-        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+        <script src="../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
       
     
   </body>
