@@ -1029,6 +1029,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stopping-times" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stopping times
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#doobs-optional-sampling-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doob's Optional Sampling Theorem
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1053,6 +1071,8 @@
   
     
     
+      
+        
       
         
       
@@ -1124,6 +1144,27 @@
   
   <span class="md-ellipsis">
     Risk Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ex03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi Period Model
   </span>
   
 
@@ -1301,8 +1342,8 @@ X=M+A,
 <p>where <span class="arithmatex">\(A\)</span> is a predictable process with <span class="arithmatex">\(A_0=0\)</span> and <span class="arithmatex">\(M\)</span> is a martingale.  </p>
 <p>The process <span class="arithmatex">\(X\)</span> is a super-martingale if and only if <span class="arithmatex">\(A\)</span> is decreasing and a sub-martingale if and only if <span class="arithmatex">\(A\)</span> is increasing.</p>
 </div>
-<div class="admonition proof">
-<p class="admonition-title">Proof</p>
+<details class="proof">
+<summary>Proof</summary>
 <p><strong>Existence:</strong> 
 Suppose that we have a decomposition <span class="arithmatex">\(X = M+A\)</span> with <span class="arithmatex">\(M\)</span> martingale and <span class="arithmatex">\(A\)</span> predictable, then it must hold that</p>
 <div class="arithmatex">\[
@@ -1339,7 +1380,7 @@ It follows that for every <span class="arithmatex">\(t\)</span> it must hold</p>
     M_{t+1} - \tilde{M}_{t+1} = M_{t} - \tilde{M}_{t} = \cdots = M_0 - \tilde{M}_0 = \tilde{A}_0 - A_0 = 0-0 = 0 
 \]</div>
 <p>showing that <span class="arithmatex">\(M=\tilde{M}\)</span> and therefore <span class="arithmatex">\(A=\tilde{A}\)</span>.</p>
-</div>
+</details>
 <div class="admonition proposition">
 <p class="admonition-title">Proposition</p>
 <p>Let <span class="arithmatex">\(M\)</span> be an adapted and integrable process.
@@ -1355,8 +1396,8 @@ The two following assertions are equivalent:</p>
 </li>
 </ol>
 </div>
-<div class="admonition proof">
-<p class="admonition-title">Proof</p>
+<details class="proof">
+<summary>Proof</summary>
 <p>Suppose that <span class="arithmatex">\(M\)</span> is a martingale and let <span class="arithmatex">\(\eta\)</span> be a bounded predictable process.
 By definition <span class="arithmatex">\(V\)</span> is adapted.
 Furthermore, denoting by <span class="arithmatex">\(c\)</span> the constant bounding <span class="arithmatex">\(\eta\)</span>, it holds that</p>
@@ -1374,6 +1415,146 @@ As for the martingale property</p>
 \]</div>
 <p>Reciprocally, for <span class="arithmatex">\(V_0 = M_0\)</span> and <span class="arithmatex">\(\eta_t = 1\)</span> for every <span class="arithmatex">\(t\)</span> by hypotheses, <span class="arithmatex">\(V\)</span> is a martingale.
 However <span class="arithmatex">\(V_t = M_t\)</span> for every <span class="arithmatex">\(t\)</span>.</p>
+</details>
+<h2 id="stopping-times">Stopping times</h2>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A <em>stopping time</em> is a random variable <span class="arithmatex">\(\tau:\Omega \to \{0,1,\ldots, T\}\cup\{\infty\}\)</span> such that <span class="arithmatex">\(\{\tau =t\} = \{\omega \in \Omega\colon \tau(\omega)=t\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_t\)</span> for every <span class="arithmatex">\(0\leq t\leq T\)</span>.</p>
+</div>
+<p>In other terms, <span class="arithmatex">\(\{ \tau=t\}\)</span> represents the event on which the buyer will decide to exercise its American contingent claim.
+The event <span class="arithmatex">\(\{\tau=\infty\}\)</span> represents the event where the triggering conditions have not been met before the time horizon, and therefore the buyer will exercise it at time <span class="arithmatex">\(T\)</span>.</p>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Also (and this is specific to discrete time), the condition <span class="arithmatex">\(\{\tau = t\}\)</span> in <span class="arithmatex">\(\mathcal{F}_t\)</span> for every <span class="arithmatex">\(t\)</span> is equivalent to the condition <span class="arithmatex">\(\{\tau \leq t\}\)</span> in <span class="arithmatex">\(\mathcal{F}_t\)</span> for every <span class="arithmatex">\(t\)</span>.
+This comes from the fact that <span class="arithmatex">\(\{\tau \leq t\} = \cup_{s=0}^t \{\tau = s\}\)</span> and <span class="arithmatex">\(\{\tau = t\} = \{\tau\leq t\} \setminus \{\tau \leq t-1\}\)</span>.</p>
+</div>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>The following statments hold true</p>
+<ol>
+<li>Deterministic times are stopping times, i.e. <span class="arithmatex">\(\tau \equiv t\)</span> for some <span class="arithmatex">\(t\)</span> is a stopping time.</li>
+<li>If <span class="arithmatex">\(\sigma\)</span> and <span class="arithmatex">\(\tau\)</span> are stopping times then so is <span class="arithmatex">\(\sigma\vee \tau\)</span>, <span class="arithmatex">\(\sigma \wedge \tau\)</span> and <span class="arithmatex">\(\sigma + \tau\)</span>.</li>
+<li>
+<p>If <span class="arithmatex">\(X\)</span> is an adapted stochastic process and <span class="arithmatex">\(I\)</span> is an interval then the entry time</p>
+<div class="arithmatex">\[
+    \tau(\omega) = \inf \left\{ t\colon X_t(\omega) \in I \right\}
+\]</div>
+<p>is a stopping time.</p>
+</li>
+</ol>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>As for 1., defining <span class="arithmatex">\(\tau \equiv t\)</span> as a stopping time follows from <span class="arithmatex">\(\{\tau = s\}\)</span> is equal to <span class="arithmatex">\(\emptyset\)</span> if <span class="arithmatex">\(s\neq t\)</span> and <span class="arithmatex">\(\Omega\)</span> is <span class="arithmatex">\(s=t\)</span> both of which are in <span class="arithmatex">\(\mathcal{F}_s\)</span>.</p>
+<p>As for 2., we just show <span class="arithmatex">\(\sigma \wedge \tau\)</span> is a stopping time.
+It follows from <span class="arithmatex">\(\{\sigma\wedge \tau = t\} = (\{\sigma = t\}\cap \{\tau \leq t\}^c) \cup \{\tau = t\}\cap \{\sigma \leq t\}^c\)</span>.
+The other cases follow from similar arguments and are left as an exercise.</p>
+<p>As for 3., it holds</p>
+<div class="arithmatex">\[
+  \{\tau \leq t\} = \{X_s \in I \text{ for some }s\leq t\} = \cup_{s=0}^t \{X_s \in I\}  
+\]</div>
+<p>however, <span class="arithmatex">\(\{X_s \in I\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_s\subseteq \mathcal{F}_t\)</span> since <span class="arithmatex">\(X\)</span> is adapted.</p>
+</details>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>As a particular case, given a stopping time <span class="arithmatex">\(\tau\)</span>, then <span class="arithmatex">\(\tau \wedge t\)</span> is a stopping time smaller than <span class="arithmatex">\(t\)</span>.
+It follows that <span class="arithmatex">\(t \mapsto t\wedge \tau\)</span> is a stopped clock where it runs time until it hits <span class="arithmatex">\(\tau\)</span> and then stay at <span class="arithmatex">\(\tau\)</span>.
+This motivates the following concept of a stopped process.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Stopped Process</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a stochastic process and <span class="arithmatex">\(\tau\)</span> a stopping time.
+We denote by <span class="arithmatex">\(X^\tau = (X_t^\tau) = (X_{t \wedge \tau})\)</span> the stopped process</p>
+<div class="arithmatex">\[
+    \begin{equation*}
+      X_t^\tau(\omega)=X_{t\wedge \tau(\omega)}(\omega) =
+      \begin{cases}
+        X_t(\omega) &amp;\text{if }t&lt; \tau(\omega)\\
+        X_{\tau(\omega)}(\omega) &amp; \text{if }\tau(\omega)\leq t
+      \end{cases}
+    \end{equation*}
+\]</div>
+<p><img alt="Stopped" src="./../../images/stopping_dark.svg#only-dark" />
+<img alt="Stopped" src="./../../images/stopping_white.svg#only-light" /></p>
+</div>
+<p>Stopping an adapted process, then it remains an adapted process.</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>If <span class="arithmatex">\(X\)</span> is adapted then so is <span class="arithmatex">\(X^\tau\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(x\)</span> be in <span class="arithmatex">\(\mathbb{R}\)</span>, given a time <span class="arithmatex">\(t\)</span>, we have</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        \{X_t^\tau \leq x\} &amp; = \{X_{t\wedge \tau} \leq x\}\\
+                            &amp; = (\{X_t \leq x\} \cap \{\tau &gt; t\}) \cup_{s=0}^t (\{X_s \leq x\}\cap \{\tau = s\})\\
+                            &amp; = \underbrace{(\underbrace{\{X_t \leq x\}}_{\in \mathcal{F}_t} \cap \underbrace{\{\tau \leq t\}^c}_{\in \mathcal{F}_t}) \cup_{s=0}^t (\underbrace{\{X_s \leq x\}}_{\in \mathcal{F}_s \subseteq \mathcal{F}_t}\cap \underbrace{\{\tau = s\}}_{\in \mathcal{F}_s \subseteq \mathcal{F}_t})}_{\in \mathcal{F}_t}
+    \end{align*}
+\]</div>
+</details>
+<h2 id="doobs-optional-sampling-theorem">Doob's Optional Sampling Theorem</h2>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem: Doob's Optional Sampling</p>
+<p>Let <span class="arithmatex">\(X\)</span> be an adapted and integrable process. The following assertions are equivalent:</p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is a martingale;</li>
+<li>For every stopping time <span class="arithmatex">\(\tau\)</span>, the stopped process <span class="arithmatex">\(X^\tau\)</span> is a martingale;</li>
+</ol>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>As for 1. implies 2, we already know that if <span class="arithmatex">\(X\)</span> is a martingale and <span class="arithmatex">\(\eta = (\eta_t)_{t=1, \ldots, T}\)</span> is a predictable process, then the portfolio</p>
+<div class="arithmatex">\[
+  V_t = V_0 + \sum_{s=1}^t \eta_s (X_s - X_{s-1})
+\]</div>
+<p>is a martingale.
+Taking the portfolio <span class="arithmatex">\(V_0 = X_0\)</span> and the strategy</p>
+<div class="arithmatex">\[
+  \begin{equation*}
+   \eta_t = 1_{\{t\leq \tau\}} = \begin{cases}
+    1 &amp; \text{if }t\leq \tau\\
+    0 &amp; \text{if }t&gt;\tau
+  \end{cases}
+  \end{equation*}
+\]</div>
+<p>where you buy and hold <span class="arithmatex">\(X\)</span> until time <span class="arithmatex">\(\tau\)</span>, it follows that <span class="arithmatex">\(\eta\)</span> is predictable since <span class="arithmatex">\(\{t\leq \tau\}=\{\tau \leq t-1\}^c\)</span> is in <span class="arithmatex">\(\mathcal{F}_{t-1}\)</span>.
+Furthermore, by definition </p>
+<div class="arithmatex">\[
+  \begin{equation*}
+    V_t = \begin{cases}
+      X_t &amp; \text{if }t&lt; \tau\\
+      X_\tau &amp; \text{if }\tau \leq t
+    \end{cases}
+    = M_{t\wedge \tau} = M^\tau_t
+  \end{equation*}
+\]</div>
+<p>showing that <span class="arithmatex">\(M^\tau\)</span> is a martingale.</p>
+<p>As for 2. implies 1., it is immediate by considering the stopping time <span class="arithmatex">\(\tau = T\)</span>.</p>
+</details>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that if <span class="arithmatex">\(\eta\)</span> is a <strong>positive</strong> predictable process and <span class="arithmatex">\(X\)</span> is a super-/sub-martingale, then it is easy to show that the portfolio <span class="arithmatex">\(V_t = V_0 + \sum_{s=1}^t\eta_s (X_s - X_{s-1})\)</span> is a super-/sub-martingale.
+It follows from the proof that Doob's optional sampling theorem also holds for super-/sub-martingales.</p>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Original version of Doob Meyer's Optional Sampling Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a martingale and <span class="arithmatex">\(\tau\)</span> be a stopping time with <span class="arithmatex">\(\tau \leq T\)</span>, then it follows that</p>
+<div class="arithmatex">\[
+    X_0 = E[X_{\tau}]
+\]</div>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(\tau\)</span> be a stopping time bounded by <span class="arithmatex">\(T\)</span> for which clearly holds $0\wedge \tau = 0# and <span class="arithmatex">\(T\wedge \tau =T\)</span>, since <span class="arithmatex">\(X\)</span> is a martingale, it follows that <span class="arithmatex">\(X^\tau\)</span> is a martingale.
+By the tower property we get</p>
+<div class="arithmatex">\[
+    X_0 = X_{0\wedge \tau} = E[X_0^\tau] = E[X_T^\tau] = E[\underbrace{X_{T\wedge \tau}}_{=X_\tau}]
+\]</div>
+</details>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>The same argumentation with inequality holds if <span class="arithmatex">\(X\)</span> is a super-/sub-martingale.</p>
 </div>
 
 
