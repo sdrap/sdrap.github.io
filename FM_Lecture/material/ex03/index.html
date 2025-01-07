@@ -1244,17 +1244,14 @@ We denote the non-insider filtration <span class="arithmatex">\(\mathbb{F}\)</sp
 \]</div>
 </li>
 <li>
-<p><span class="arithmatex">\(X\)</span> is a martingale under the filtration <span class="arithmatex">\(\mathbb{F}\)</span>.</p>
-</li>
-</ol>
-<p>Show that <span class="arithmatex">\(X\)</span> cannot be a martingale under the insider filtration <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span>.
-  However, the process:</p>
-<div class="language-text highlight"><pre><span></span><code>\[
+<p><span class="arithmatex">\(X\)</span> is a martingale under the filtration <span class="arithmatex">\(\mathbb{F}\)</span>.
+    Show that <span class="arithmatex">\(X\)</span> cannot be a martingale under the insider filtration <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span>.
+    However, the process:</p>
+<div class="arithmatex">\[
     \tilde{X}_0 = X_0, \quad \text{and} \quad \tilde{X}_t = X_t - \sum_{s=0}^{t-1} \frac{X_T - X_s}{T - s}, \quad t = 1, \ldots, T
-\]
-</code></pre></div>
+\]</div>
 <p>is a martingale under <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span>.</p>
-<ol>
+</li>
 <li>
 <p>With the information about the terminal discounted value <span class="arithmatex">\(X_T\)</span> of the stock, it is possible to realize arbitrage gains.
   Find a strategy <span class="arithmatex">\(\eta\)</span>, predictable with respect to <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span>, such that among all other strategies <span class="arithmatex">\(\mu\)</span>, predictable with respect to <span class="arithmatex">\(\tilde{\mathbb{F}}\)</span> with <span class="arithmatex">\(|\mu_t| \leq 1\)</span>, the expected gain <span class="arithmatex">\(E[G_T]\)</span> is maximal, where:</p>
