@@ -1,0 +1,1280 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Default (Ruin) Probability - Stochastics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#default-ruin-probability" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Stochastics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Default (Ruin) Probability
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Stochastics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sets, Continuity and Measurability
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sets, Continuity and Measurability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/010-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/011-sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurable/Topological Sapces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurability/Continuity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Measure Theory, Construction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Measure Theory, Construction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/020-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/021-measure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Semi-Ring to Ring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Ring to $\sigma$-Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Expectation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Expectation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/030-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction/Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/031-expectation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expectation, Lebesgue's Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    $L^p$-Spaces and Classical Inequalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Radon-Nykodym and Conditional Expectation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/034-independence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Independence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/035-fubini-tonelli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fubini-Tonelli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/036-uniform-integrability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uniform Integrability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Discrete Time Stochastic Processes, Martingales
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Discrete Time Stochastic Processes, Martingales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/040-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/041-discrete-time-processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discrete Time Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/042-martingale-doob/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales Almost Sure Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales $L^p$ Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="default-ruin-probability">Default (Ruin) Probability</h1>
+<p>We saw that the random walk often generates the evolution of the stock prices in the CRR model. In this section, we are interested in finding the probability of the ruin event. During the study of American Options, we introduced the concept of stopping times. Stopping times are also used to define ruin events, and the martingales with the help of Doob's Optional Sampling Theorem will provide a very elegant way to study the properties of this ruin event.</p>
+<p>We consider the following random walk of the CRR model starting at <span class="arithmatex">\(0\)</span>:</p>
+<div class="arithmatex">\[
+    Z_0=0\quad \text{and}\quad Z_t=\sum_{s=1}^t Y_s,\quad t\geq 1
+\]</div>
+<p>where <span class="arithmatex">\(Y\)</span> are i.i.d. with <span class="arithmatex">\(P[Y_t = 1] = p\)</span> and <span class="arithmatex">\(P[Y_t = -1] = 1 - p = q\)</span>.</p>
+<p>As for the filtration, we take</p>
+<div class="arithmatex">\[
+    \mathcal{F}_0=\{\emptyset,\Omega\}\quad \text{and}\quad \mathcal{F}_t=\sigma(Z_s\colon 1\leq s\leq t),\quad t\geq 1
+\]</div>
+<p>We define <span class="arithmatex">\(\tau_{a}=\inf\left\{ t\colon Z_t=a \right\}\)</span>, <span class="arithmatex">\(\tau_{b}=\inf\left\{ t\colon Z_t =-b \right\}\)</span>, and <span class="arithmatex">\(\tau=\tau_a\wedge \tau_b =\inf\{t\colon Z_t=a\text{ or }Z_t=-b\}\)</span> for two integers <span class="arithmatex">\(a,b\)</span>.</p>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>As we saw in the CRR model, we often describe the stock price as:</p>
+<div class="arithmatex">\[
+    S_t=S_0(1+u)^{Z_t}
+\]</div>
+<p>so that the stopping time <span class="arithmatex">\(\tau\)</span> can be interpreted as the first time that the stock price reaches the level <span class="arithmatex">\(S_0(1+u)^a\)</span> or drops to the level <span class="arithmatex">\(S_0/(1+u)^{b}\)</span>.</p>
+</div>
+<p>We are interested in the following probabilities:</p>
+<div class="arithmatex">\[
+    P\left[ Z_{\tau}=a \right], \quad \text{and}\quad P \left[ Z_{\tau}=-b \right]
+\]</div>
+<p>which are, respectively, the probability that <span class="arithmatex">\(Z\)</span> reaches the level <span class="arithmatex">\(a\)</span> before running bankrupt at level <span class="arithmatex">\(-b\)</span>, and the probability of running bankrupt at level <span class="arithmatex">\(-b\)</span> before reaching level <span class="arithmatex">\(a\)</span>.</p>
+<h3 id="symmetric-random-walk">Symmetric Random Walk</h3>
+<p>Suppose first that <span class="arithmatex">\(p=q=1/2\)</span>, the case of the symmetric random walk. It follows that <span class="arithmatex">\(Z\)</span> is a martingale. Hence, due to the Optional Sampling Theorem, the stopped process <span class="arithmatex">\(Z^\tau\)</span> is a martingale, showing that:</p>
+<div class="arithmatex">\[
+    0=Z_0=E\left[ Z_t^\tau \right]=E\left[ Z_{t\wedge \tau} \right]
+\]</div>
+<p>for every <span class="arithmatex">\(t\)</span>. An intuitive inspection shows that for almost all <span class="arithmatex">\(\omega\)</span>, the hitting time of one of the barriers will occur in a finite amount of time almost surely, that is <span class="arithmatex">\(P[\tau &lt;\infty]=1\)</span>. Hence,</p>
+<div class="arithmatex">\[
+    \lim_{t\to \infty}Z_{t\wedge \tau}=Z_\tau
+\]</div>
+<p><span class="arithmatex">\(P\)</span>-almost surely. Furthermore, <span class="arithmatex">\(|Z^\tau_t|\leq a\wedge b\)</span> for every <span class="arithmatex">\(t\)</span>, and therefore, by Lebesgue's Dominated Convergence Theorem, it follows that:</p>
+<div class="arithmatex">\[
+    0=\lim_{t\to \infty}E\left[ Z_t^\tau \right]=E\left[ \lim_{t\to \infty} Z_{t\wedge \tau} \right]=E[Z_{\tau}]
+\]</div>
+<p>On the other hand, it holds:</p>
+<div class="arithmatex">\[
+    Z_{\tau}=a1_{\{Z_\tau =a\}}-b1_{\{Z_\tau=-b\}}=a1_{\{Z_\tau=a\}}-b(1-1_{\{Z_\tau=a\}})
+\]</div>
+<p>showing that:</p>
+<div class="arithmatex">\[
+    E\left[ Z_\tau \right]=(a+b)P\left[ Z_\tau=a \right]-b
+\]</div>
+<p>Together with the fact that <span class="arithmatex">\(E[Z_\tau]=0\)</span>, it follows that:</p>
+<div class="arithmatex">\[
+    P\left[ Z_\tau=a \right]=\frac{b}{a+b}, \quad \text{and}\quad P\left[ Z_\tau=-b \right]=\frac{a}{a+b}
+\]</div>
+<h3 id="asymmetric-random-walk">Asymmetric Random Walk</h3>
+<p>Suppose now that <span class="arithmatex">\(1&gt;p&gt;1/2\)</span>. Then, <span class="arithmatex">\(Z\)</span> is no longer a martingale, but a sub-martingale. Indeed, <span class="arithmatex">\(Y\)</span> being independent and identically distributed, it follows that:</p>
+<div class="arithmatex">\[
+    E\left[ Z_{t+1}-Z_t|\mathcal{F}_t \right]=E\left[ Y_{t+1}|\mathcal{F}_t \right]=E\left[ Y_{1} \right]= P\left[ Y_1=1 \right]-P\left[ Y_1=-1 \right]=2p-1&gt;0
+\]</div>
+<p>We can therefore no longer apply the same strategy as before. However, a similar inspection as in the previous case shows that <span class="arithmatex">\(\tau(\omega)&lt;\infty\)</span> for <span class="arithmatex">\(P\)</span>-almost all <span class="arithmatex">\(\omega \in \Omega\)</span>. Despite the fact that <span class="arithmatex">\(Z\)</span> is no longer a martingale, the process:</p>
+<div class="arithmatex">\[
+    M_t=\left(\frac{q}{p}\right)^{Z_t}, \quad t=0,1,\ldots
+\]</div>
+<p>is a martingale where <span class="arithmatex">\(q = 1-p\)</span>. Indeed, it is clearly adapted and integrable. Furthermore, using the independent and identically distributed assumption for <span class="arithmatex">\(Y\)</span>, it holds:</p>
+<div class="arithmatex">\[
+    E\left[ M_{t+1}-M_t|\mathcal{F}_t \right]
+    =M_tE\left[ \left( \frac{q}{p} \right)^{Y_{t+1}}-1|\mathcal{F}_t \right]
+    =M_tE\left[ \left( \frac{q}{p} \right)^{Y_{1}}-1 \right]
+    =M_t\left( p\frac{q}{p}+q\frac{p}{q}-1 \right)=0
+\]</div>
+<p>Considering the stopped process <span class="arithmatex">\(M^\tau\)</span>, it follows from Doob's Optional Sampling Theorem that:</p>
+<div class="arithmatex">\[
+    1=M_0=E\left[M_{t}^\tau  \right]=E\left[ M_{t\wedge \tau} \right]
+\]</div>
+<p>for every <span class="arithmatex">\(t\)</span>. However, since <span class="arithmatex">\(\tau(\omega)&lt;\infty\)</span> for every <span class="arithmatex">\(\omega\)</span>, it follows that <span class="arithmatex">\(\lim_{t\to \infty}M_{t\wedge \tau}=M_{\tau}\)</span> <span class="arithmatex">\(P\)</span>-almost surely. Furthermore <span class="arithmatex">\(|M_{t\wedge \tau}|\leq 1\)</span>, allowing us to apply Lebesgue's Dominated Convergence:</p>
+<div class="arithmatex">\[
+    1=\lim_{t\to \infty}E\left[ M_{t\wedge \tau} \right]=E\left[ \lim_{t\to \infty}M_{t\wedge \tau} \right]=E\left[ M_\tau \right]
+\]</div>
+<p>On the other hand, it holds:</p>
+<div class="arithmatex">\[
+    E\left[ M_\tau \right]
+    =\left(\frac{q}{p}\right)^aP\left[ Z_\tau=a \right]+\left( \frac{q}{p} \right)^{-b} P\left[ Z_\tau=-b \right]
+    =\left(\frac{q}{p}\right)^{-b}\left(\left(\frac{q}{p}\right)^{a+b}P[Z_\tau=a]+(1-P[ Z_\tau=a]) \right)
+\]</div>
+<p>Combined with <span class="arithmatex">\(E[M_\tau]=1\)</span>, it yields:</p>
+<div class="arithmatex">\[
+    P\left[ Z_\tau=a \right]=\frac{(q/p)^b-1}{(q/p)^{a+b}-1}, \quad \text{and}\quad P\left[ Z_{\tau}=-b \right]=\frac{(q/p)^{a}-1}{(q/p)^{a}-(q/p)^{-b}}
+\]</div>
+<h3 id="application-to-credit-rating">Application to Credit Rating</h3>
+<p>Given a company, we want to estimate its probability to default at some point. In our simple framework, we define:</p>
+<div class="arithmatex">\[
+    \inf\left\{ t: b+Z_t =0 \right\}=\inf\left\{ t \colon Z_t = -b \right\}=\tau_b
+\]</div>
+<p>which is the first time that a firm with cumulative returns <span class="arithmatex">\(Z\)</span> and start capital <span class="arithmatex">\(b\)</span> reaches bankruptcy. We also assume here that <span class="arithmatex">\(1/2 &lt;p&lt;1\)</span>. We want to estimate:</p>
+<div class="arithmatex">\[
+    P\left[ \tau_b &lt;\infty \right]
+\]</div>
+<p>which is the probability that the firm goes bankrupt at some point in time. Since <span class="arithmatex">\(\tau_a \to \infty\)</span> as <span class="arithmatex">\(a\to \infty\)</span>, it follows that:</p>
+<div class="arithmatex">\[
+    P\left[ \tau_b&lt;\infty \right]=\lim_{a \to \infty}P\left[ Z_{\tau}=-b \right]=\lim_{a\to \infty}\frac{(q/p)^{a}-1}{(q/p)^{a}-(q/p)^{-b}}=\left( \frac{q}{p} \right)^b
+\]</div>
+<p>We see therefore two factors impacting the probability of default of the company:</p>
+<ul>
+<li><strong>The returns of the company</strong> (<span class="arithmatex">\(p\)</span>): Since <span class="arithmatex">\(E[Z_{t+1}-Z_t|\mathcal{F}_t]=2p-1&gt;0\)</span>, if <span class="arithmatex">\(p\)</span> is very close to <span class="arithmatex">\(1\)</span>, that is strong returns, then <span class="arithmatex">\(q/p\)</span> is very small and so is the probability of default <span class="arithmatex">\((q/p)^b\)</span>.</li>
+<li><strong>The present capital of the company</strong> (<span class="arithmatex">\(b\)</span>): Since <span class="arithmatex">\(0&lt;q/p&lt;1\)</span>, it follows that the higher <span class="arithmatex">\(b\)</span>, the smaller <span class="arithmatex">\((q/p)^b\)</span> in an exponential way.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
