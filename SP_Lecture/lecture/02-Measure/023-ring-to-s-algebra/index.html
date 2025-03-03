@@ -1,0 +1,1471 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../022-semi-ring-to-ring/">
+      
+      
+        <link rel="next" href="../../03-Integration/030-introduction/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>From Ring to $\sigma$-Algebra - Stochastics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#from-ring-to-sigma-algebra-caratheodorys-theorem" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Stochastics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              From Ring to $\sigma$-Algebra
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Stochastics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sets, Continuity and Measurability
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sets, Continuity and Measurability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/010-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/011-sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurable/Topological Sapces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurability/Continuity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Measure Theory, Construction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Measure Theory, Construction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../020-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../021-measure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../022-semi-ring-to-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Semi-Ring to Ring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    From Ring to $\sigma$-Algebra
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    From Ring to $\sigma$-Algebra
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#outer-measure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outer Measure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caratheodorys-extension-theorem-proof" class="md-nav__link">
+    <span class="md-ellipsis">
+      Carathéodory's Extension Theorem Proof
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Expectation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Expectation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/030-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction/Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/031-expectation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expectation, Lebesgue's Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    $L^p$-Spaces and Classical Inequalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Radon-Nykodym and Conditional Expectation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/034-independence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Independence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/035-fubini-tonelli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fubini-Tonelli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/036-uniform-integrability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uniform Integrability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Discrete Time Stochastic Processes, Martingales
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Discrete Time Stochastic Processes, Martingales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/040-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/041-discrete-time-processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discrete Time Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/042-martingale-doob/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales Almost Sure Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales $L^p$ Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="from-ring-to-sigma-algebra-caratheodorys-theorem">From Ring to <span class="arithmatex">\(\sigma\)</span>-Algebra: Carathéodory's Theorem</h1>
+<p>As mentioned in the previous section, the question is whether a <span class="arithmatex">\(\sigma\)</span>-additive pre-measure on a ring <span class="arithmatex">\(\mathcal{R}\)</span> can be extended to the <span class="arithmatex">\(\sigma\)</span>-algebra it generates.
+In case such an extension exists, a further relevant question is whether such an extension is unique.</p>
+<p>Before assessing the extension, we first address some central properties of the <span class="arithmatex">\(\sigma\)</span>-additivity in terms of continuity.</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>Let <span class="arithmatex">\(\mathcal{R}\)</span> be a ring and <span class="arithmatex">\(\mu:\mathcal{R}\to [0,\infty]\)</span> a finite content, that is <span class="arithmatex">\(\mu[A]&lt;\infty\)</span> for every <span class="arithmatex">\(A \in \mathcal{R}\)</span>.
+Then the following properties of <span class="arithmatex">\(\mu\)</span> hold:</p>
+<ol>
+<li><strong><span class="arithmatex">\(\sigma\)</span>-additivity</strong></li>
+<li><strong><span class="arithmatex">\(\sigma\)</span>-sub-additivity</strong></li>
+<li><strong>Lower semi-continuity:</strong> <span class="arithmatex">\(\sup_n \mu[A_n]= \mu[\cup A_n]\)</span> for every countable family <span class="arithmatex">\((A_n)\)</span> of increasing elements in <span class="arithmatex">\(\mathcal{R}\)</span> such that <span class="arithmatex">\(\cup A_n\)</span> is in <span class="arithmatex">\(\mathcal{R}\)</span>.</li>
+<li><strong>Upper semi-continuity:</strong> <span class="arithmatex">\(\inf_n \mu[A_n]= \mu[\cap A_n]\)</span> for every countable family <span class="arithmatex">\((A_n)\)</span> of decreasing elements in <span class="arithmatex">\(\mathcal{R}\)</span> such that <span class="arithmatex">\(\cap A_n\)</span> is in <span class="arithmatex">\(\mathcal{R}\)</span>.</li>
+<li><strong>Continuous at <span class="arithmatex">\(\emptyset\)</span>:</strong> <span class="arithmatex">\(\inf_n \mu[A_n]= 0\)</span> for every countable family <span class="arithmatex">\((A_n)\)</span> of decreasing elements in <span class="arithmatex">\(\mathcal{R}\)</span> such that <span class="arithmatex">\(\cap A_n=\emptyset\)</span>.</li>
+</ol>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<ul>
+<li>The equivalence between <strong><span class="arithmatex">\(\sigma\)</span>-additivity</strong> and <strong><span class="arithmatex">\(\sigma\)</span>-sub-additivity</strong> is already shown in a previous <a href="../022-semi-ring-to-ring/#lem-propcontentsemiring">Lemma</a> in the context of a semi-ring.</li>
+<li>
+<p><strong><span class="arithmatex">\(\sigma\)</span>-additivity implies lower semi-continuity:</strong>
+    Let <span class="arithmatex">\((A_n)\)</span> be an increasing sequence of elements in <span class="arithmatex">\(\mathcal{R}\)</span> such that <span class="arithmatex">\(A=\cup A_n\)</span> is in <span class="arithmatex">\(\mathcal{R}\)</span>.<br />
+    Defining <span class="arithmatex">\(B_n=A_n\setminus \cup_{k&lt;n}A_k=A_n\setminus B_{n-1}\)</span> for <span class="arithmatex">\(n&gt;1\)</span> and <span class="arithmatex">\(B_1=A_1\)</span> provides a disjoint sequence of elements in <span class="arithmatex">\(\mathcal{R}\)</span>.<br />
+    Since <span class="arithmatex">\(A_n=\cup_{1\leq k\leq n} B_k\)</span> and <span class="arithmatex">\(A=\cup B_n\)</span>, it follows from <span class="arithmatex">\(\sigma\)</span>-additivity that  </p>
+<div class="arithmatex">\[
+\mu[A]=\sum \mu[B_n]=\sup \sum_{1\leq k\leq n}\mu[B_k]=\sup \mu[\cup_{1\leq k\leq n}B_k]=\sup \mu[A_n]
+\]</div>
+</li>
+<li>
+<p><strong>Lower semi-continuity implies upper semi-continuity:</strong><br />
+    Let <span class="arithmatex">\((A_n)\)</span> be a decreasing sequence of elements in <span class="arithmatex">\(\mathcal{R}\)</span> such that <span class="arithmatex">\(A=\cap A_n\)</span> is in <span class="arithmatex">\(\mathcal{R}\)</span>.
+    It follows that <span class="arithmatex">\(B_n=A_1\setminus A_n\)</span> defines an increasing sequence such that <span class="arithmatex">\(B=\cup B_n=A_1\setminus \cap A_n=A_1\setminus A \in \mathcal{R}\)</span>.
+    Lower semi-continuity, additivity, and the properties of Lemma [lem-propcontentsemiring] imply that</p>
+<div class="arithmatex">\[
+  \mu[A_1]-\inf \mu[A_n]=\sup (\mu[A_1]-\mu[A_n])=\sup \mu[A_1\setminus A_n]=\mu[\cup A_1\setminus A_n]=\mu[A_1]-\mu[A]
+\]</div>
+</li>
+<li>
+<p><strong>Upper semi-continuity implies continuity at <span class="arithmatex">\(\emptyset\)</span></strong> (immediate).</p>
+</li>
+<li>
+<p><strong>Continuity at <span class="arithmatex">\(\emptyset\)</span> implies <span class="arithmatex">\(\sigma\)</span>-additivity:</strong>
+    Let <span class="arithmatex">\((A_n)\)</span> be a sequence of mutually disjoint elements of <span class="arithmatex">\(\mathcal{R}\)</span> such that <span class="arithmatex">\(A=\cup A_n\)</span> is in <span class="arithmatex">\(\mathcal{R}\)</span>.
+    By means of <a href="../022-semi-ring-to-ring/#lem-propcontentsemiring">Lemma</a>, it follows that  </p>
+<div class="arithmatex">\[
+  \sum \mu[A_n]\leq \mu[A]
+\]</div>
+<p>It follows that <span class="arithmatex">\(B_n=A\setminus (\cup_{1\leq k\leq n}A_k)\)</span> is a decreasing family of elements of <span class="arithmatex">\(\mathcal{R}\)</span> such that <span class="arithmatex">\(\cap B_n=\emptyset\)</span>.
+By additivity of <span class="arithmatex">\(\mu\)</span>, we have</p>
+<div class="arithmatex">\[
+\mu[A]=\mu[B_n\cup (\cup_{1\leq k\leq n}A_k)]=\mu[B_n]+\sum_{1\leq k\leq n}\mu[A_k]
+\]</div>
+<p>for every <span class="arithmatex">\(n\)</span>.
+Since <span class="arithmatex">\(\sum_{q\leq k\leq n}\mu[A_k]\to \sum \mu[A_n]\)</span> and by continuity at <span class="arithmatex">\(\emptyset\)</span>, <span class="arithmatex">\(\mu[B_n]\to 0\)</span>, it follows that <span class="arithmatex">\(\mu[A]=\sum \mu[A_n]\)</span>, hence the <span class="arithmatex">\(\sigma\)</span>-additivity.</p>
+</li>
+</ul>
+</div>
+<p>We are now in position to formulate the central extension theorem of Carathéodory.</p>
+<p><span id="thm-caratheodory"></span></p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem: Carathéodory's Extension Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a non-empty set, <span class="arithmatex">\(\mathcal{S}\)</span> a semi-ring such that <span class="arithmatex">\(X=\cup A_n\)</span> for some countable family <span class="arithmatex">\((A_n)\)</span> of elements in <span class="arithmatex">\(\mathcal{S}\)</span>.
+Suppose that <span class="arithmatex">\(\mu:\mathcal{R}\to [0,\infty]\)</span> is a pre-measure such that:</p>
+<ol>
+<li><span class="arithmatex">\(\mu[A_n]&lt;\infty\)</span> for every <span class="arithmatex">\(n\)</span>.</li>
+<li><span class="arithmatex">\(\mu\)</span> is <span class="arithmatex">\(\sigma\)</span>-sub-additive or equivalently <span class="arithmatex">\(\sigma\)</span>-additive.</li>
+</ol>
+<p>Then <span class="arithmatex">\(\mu\)</span> can be uniquely extended to a measure <span class="arithmatex">\(\nu\)</span> on <span class="arithmatex">\(\mathcal{F}=\sigma(\mathcal{S})\)</span>.</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>We already know from the assumption of this theorem that according to a previous <a href="../022-semi-ring-to-ring/#prop-pre-mes-semi-ring-to-ring">proposition</a> there exists a unique extension <span class="arithmatex">\(\nu\)</span> to the ring <span class="arithmatex">\(\mathcal{R}\)</span> generated by <span class="arithmatex">\(\mathcal{S}\)</span> such that <span class="arithmatex">\(\nu\)</span> is a <span class="arithmatex">\(\sigma\)</span>-additive content.
+We can therefore assume for the proof of Carathéodory's theorem that <span class="arithmatex">\(\mu\)</span> is a <span class="arithmatex">\(\sigma\)</span>-additive content on a ring.</p>
+</div>
+<p>The existence is the complex and lengthy part of the proof.
+However uniqueness can be adressed through the following proposition.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\((X,\mathcal{F})\)</span> be a measurable space and <span class="arithmatex">\(\mathcal{P}\)</span> a <span class="arithmatex">\(\pi\)</span>-system on <span class="arithmatex">\(X\)</span> that generates <span class="arithmatex">\(\mathcal{F}\)</span> and such that there exists a sequence <span class="arithmatex">\((A_n)\)</span> of elements of <span class="arithmatex">\(\mathcal{P}\)</span> with <span class="arithmatex">\(\cup A_n=X\)</span>.
+Let <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\nu\)</span> be two measures on <span class="arithmatex">\(\mathcal{F}\)</span> that coincide on <span class="arithmatex">\(\mathcal{P}\)</span> and such that <span class="arithmatex">\(\mu(A_n)=\nu(A_n)&lt;\infty\)</span> for every <span class="arithmatex">\(n\)</span>.
+Then <span class="arithmatex">\(\mu=\nu\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Let <span class="arithmatex">\(n\)</span> be an integer and consider the collection of sets <span class="arithmatex">\(\mathcal{C}^n=\{A \in \mathcal{F}\colon \mu[A\cap A_n]=\nu[A\cap A_n]\}\)</span>.
+Then <span class="arithmatex">\(\mathcal{C}^n\)</span> is a <span class="arithmatex">\(\lambda\)</span>-system.
+Indeed</p>
+<ul>
+<li><strong><span class="arithmatex">\(X\)</span> is in <span class="arithmatex">\(\mathcal{C}^n\)</span></strong> since <span class="arithmatex">\(\mu[X\cap A_n]=\mu[A_n]=\nu[A_n]=\nu[A_n\cap X]\)</span>.</li>
+<li><strong>Stability under relative complements:</strong> For <span class="arithmatex">\(A\subseteq B\)</span> with <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> in <span class="arithmatex">\(\mathcal{C}^n\)</span>, it holds that <span class="arithmatex">\(\mu[(B\setminus A)\cap A_n]=\mu[B\cap A_n]-\mu[A\cap A_n]=\nu[B\cap A_n]-\nu[A\cap A_n]=\nu[(B\setminus A)\cap A_n]\)</span>, showing that <span class="arithmatex">\(B\setminus A\)</span> belongs to <span class="arithmatex">\(\mathcal{C}^n\)</span>.</li>
+<li>
+<p><strong>Stability under countable disjoint unions:</strong> If <span class="arithmatex">\((B_m)\)</span> is a disjoint sequence in <span class="arithmatex">\(\mathcal{C}^n\)</span>, then</p>
+<div class="arithmatex">\[
+\mu[(\cup B_m) \cap A_n]=\sum_m \mu[B_m\cap A_n]=\sum_m \nu[B_m\cap A_n]=\nu[(\cup B_m)\cap A_n]
+\]</div>
+<p>showing that <span class="arithmatex">\(\cup B_m \in \mathcal{C}^n\)</span>.  </p>
+</li>
+</ul>
+<p>Since <span class="arithmatex">\(\mathcal{P}\subseteq \mathcal{C}^n\)</span>, and <span class="arithmatex">\(\mathcal{P}\)</span> is stable under intersection, by means of the Dynkin Lemma, it follows that <span class="arithmatex">\(\mathcal{F}=\sigma(\mathcal{P})\subseteq \mathcal{C}^n\subseteq \mathcal{F}\)</span>.
+Thus, <span class="arithmatex">\(\mu=\nu\)</span>.  </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Lebesgue/Stieljes Measure</p>
+<p>The conditions of <a href="#thm-caratheodory">Carathéodory's Theorem</a> are fulfilled in the case of the Lebesgue/Stieltjes measure.
+Therefore, it defines a unique measure on the Borel <span class="arithmatex">\(\sigma\)</span>-algebra of <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+</div>
+<p>We are left to show Carathéodory's extension theorem.
+The proof relies on the concept of outer measure.
+So far we tried to built measures from the bottom up, from simple class of sets and trying to reach <span class="arithmatex">\(\sigma\)</span>-algebra.
+The idea of outer measure is a top down approach hopping that both concepts would meet at the right place, that is, the <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<h2 id="outer-measure">Outer Measure</h2>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Outer Measure</p>
+<p>A set function <span class="arithmatex">\(\mu^\ast \colon 2^X \to [0, \infty]\)</span> is called an <strong>outer measure</strong> if</p>
+<ul>
+<li><span class="arithmatex">\(\mu^\ast[\emptyset] = 0\)</span>;</li>
+<li>
+<p><strong><span class="arithmatex">\(\sigma\)</span>-sub-additivity</strong>: For any countable family <span class="arithmatex">\((B_n)\)</span> of subsets of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(A \subseteq \cup B_n\)</span> it holds</p>
+<div class="arithmatex">\[
+  \mu^\ast[A] \leq \sum \mu^\ast[B_n]
+\]</div>
+</li>
+</ul>
+<p>A set <span class="arithmatex">\(A\subseteq X\)</span> is called <strong><span class="arithmatex">\(\mu^\ast\)</span>-measurable</strong> if </p>
+<div class="arithmatex">\[
+  \mu^\ast[E] = \mu^\ast\left[ E\cap A \right] + \mu^\ast \left[ E\cap A^c \right]
+\]</div>
+<p>for every <span class="arithmatex">\(E\subseteq X\)</span>.</p>
+</div>
+<p>Note that the second condition implies that an outer measure is monotone, that is <span class="arithmatex">\(\mu[A] \leq \mu[B]\)</span> for any <span class="arithmatex">\(A\subseteq B\)</span>.
+The notion of <span class="arithmatex">\(\mu^\ast\)</span>-measurability of a set depends naturally of the outer measure.
+Clearly, due to subadditivity, for any subsets <span class="arithmatex">\(E\)</span> and <span class="arithmatex">\(A\)</span> of <span class="arithmatex">\(X\)</span> it holds</p>
+<div class="arithmatex">\[
+\mu^\ast[E] \leq \mu^\ast[E \cap A] + \mu^\ast[E\cap A^c]
+\]</div>
+<p>Hence, <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(\mu^\ast\)</span>-measurable if the reverse inequality holds for any set <span class="arithmatex">\(E\subseteq X\)</span>.
+The denomination <em>measurable</em> is justified by the following theorem.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(\mu^\ast\)</span> be an outer measure on <span class="arithmatex">\(X\)</span>.
+Then, the collection <span class="arithmatex">\(\mathcal{M}\)</span> of all <span class="arithmatex">\(\mu^\ast\)</span>-measurable is a <span class="arithmatex">\(\sigma\)</span>-algebra.
+Furthermore, the restriction of <span class="arithmatex">\(\mu^\ast\)</span> on this collection is a measure.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>We show that <span class="arithmatex">\(\mathcal{M}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<p><strong>Step 1 - <span class="arithmatex">\(\emptyset\)</span> belongs to <span class="arithmatex">\(\mathcal{M}\)</span></strong>: Clearly, <span class="arithmatex">\(\emptyset\)</span> is obviously <span class="arithmatex">\(\mu^\ast\)</span> measurable.</p>
+<p><strong>Step 2 - Stability under complementation</strong>: For <span class="arithmatex">\(A\)</span> in <span class="arithmatex">\(\mathcal{M}\)</span>, then for any <span class="arithmatex">\(E \subseteq X\)</span> it holds that</p>
+<div class="arithmatex">\[
+      \mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c).
+\]</div>
+<p>Interchanging <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(A^c\)</span> yields <span class="arithmatex">\(A^c\)</span> belongs to <span class="arithmatex">\(\mathcal{M}\)</span>.</p>
+<p><strong>Step 3 - Stability under union</strong>: Let <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> be two <span class="arithmatex">\(\mu^\ast\)</span>-measurable sets.
+For any set <span class="arithmatex">\(E\)</span> it holds</p>
+<div class="arithmatex">\[
+    \mu^\ast[E] = \mu^\ast[E \cap A] + \mu^\ast[E \cap A^c]
+\]</div>
+<p>In particular for <span class="arithmatex">\(B\)</span> it holds</p>
+<div class="arithmatex">\[
+      \mu^\ast[E\cap A^c] = \mu^\ast[(E\cap A^c) \cap B] + \mu^\ast[(E\cap A^c) \cap B^c]
+\]</div>
+<p>Since by sub-additivity it holds that <span class="arithmatex">\(\mu^\ast[E\cap(A\cup B)] \leq \mu^\ast[E \cap A] + \mu^\ast[E\cap(A^c \cap B)]\)</span>.
+Hence, it holds that</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    \mu^\ast[E] &amp; =  \mu^*(E \cap A) + \mu^\ast[(E\cap A^c) \cap B] + \mu^\ast[(E\cap A^c) \cap B^c]\\
+                &amp; = \mu^*(E \cap A) + \mu^\ast[(E\cap A^c) \cap B] + \mu^\ast[(E\cap (A\cup B)^c]\\
+                &amp; \geq \mu^\ast[E\cap (A\cup B)] + \mu^\ast[E\cap (A\cup B)^c] 
+  \end{align*}
+\]</div>
+<p>showing that <span class="arithmatex">\(A\cup B\)</span> is <span class="arithmatex">\(\mu^\ast\)</span>-measurable.</p>
+<p>In particular <span class="arithmatex">\(\mathcal{M}\)</span> is a ring.</p>
+<p><strong>Step 4 - stability under countable union</strong>: 
+Since <span class="arithmatex">\(\mathcal{M}\)</span> is a ring, it is enough to show that <span class="arithmatex">\(\cup A_n\)</span> is <span class="arithmatex">\(\mu^\ast\)</span>-measurable for any countable family <span class="arithmatex">\((A_n)\)</span> of pairwise disjoints <span class="arithmatex">\(\mu^\ast\)</span>-measurable sets.
+Let <span class="arithmatex">\(B_n =\cup_{k\leq n} A_k\)</span> which is measurable for each <span class="arithmatex">\(n\)</span>.
+By induction, it holds that <span class="arithmatex">\(\mu^\ast[E\cap B_n] = \sum_{k\leq n} \mu^\ast[E\cap A_k]\)</span> for any set <span class="arithmatex">\(E\subseteq X\)</span>.
+Indeed <span class="arithmatex">\(B_n\)</span> is <span class="arithmatex">\(\mu^\ast\)</span>-measurable and <span class="arithmatex">\(\mu^\ast[E \cap B_{n+1}] = \mu^\ast[E\cap B_{n+1}\cap B_n ] + \mu^\ast[E \cap B_{n+1}\cap B_n^c] = \mu^\ast[E\cap B_n] + \mu^\ast[E\cap A_{n+1}]\)</span>.
+By monotonicity, it also holds that</p>
+<div class="arithmatex">\[
+  \mu^\ast[E \cap A] \geq \sup_n \mu^\ast[E \cap B_n] = \sum \mu^\ast[E \cap A_k]
+\]</div>
+<p>which together with sub-additivity yields <span class="arithmatex">\(\mu^\ast[E\cap A] = \sum \mu^\ast[E\cap A_n]\)</span>.
+Hence, for any <span class="arithmatex">\(E\)</span> we get</p>
+<div class="arithmatex">\[
+  \mu^\ast[E] = \mu^\ast[E\cap B_n] + \mu^\ast[E\cap B_n^c]\geq \sum_{k\leq n}\mu^\ast[E\cap B_k]+\mu^\ast[E\cap A^c]
+\]</div>
+<p>from which follows that <span class="arithmatex">\(\mu^\ast[E]\geq \mu^\ast[E\cap A] + \mu^\ast[E\cap A^c]\)</span> showing that <span class="arithmatex">\(A = \cup A_n\)</span> is <span class="arithmatex">\(\mu^\ast\)</span>-measurable.
+Thus <span class="arithmatex">\(\mathcal{M}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-Algebra.</p>
+<p>The fact that <span class="arithmatex">\(\mu^\ast\)</span> restricted to <span class="arithmatex">\(\mathcal{M}\)</span> is immediate since it is <span class="arithmatex">\(\sigma\)</span>-sub-additive.</p>
+</div>
+<h2 id="caratheodorys-extension-theorem-proof">Carathéodory's Extension Theorem Proof</h2>
+<p>We are now in position to show the proof of Carathéodory's extension theorem.</p>
+<div class="admonition proof">
+<p class="admonition-title">Proof: Carathéodory's Extension Theorem</p>
+<p>From the previous results, we know that we can extend uniquely <span class="arithmatex">\(\mu\)</span> to a <span class="arithmatex">\(\sigma\)</span>-additive and finite measure to the ring <span class="arithmatex">\(\mathcal{R}\)</span> generated by <span class="arithmatex">\(\mathcal{S}\)</span>.</p>
+<p>We define the set function</p>
+<div class="arithmatex">\[
+  \mu^\ast[E]:= \inf \left\{ \sum \mu^\ast[A_n] \colon E\subseteq \cup A_n \colon (A_n) \text{ is a countable family in }\mathcal{R} \right\}
+\]</div>
+<p>By definition, <span class="arithmatex">\(\mu^\ast\)</span> coincides with <span class="arithmatex">\(\mu\)</span> on <span class="arithmatex">\(\mathcal{R}\)</span>.
+Let us show that <span class="arithmatex">\(\mu^\ast\)</span> is an outer measure.
+Clearly, <span class="arithmatex">\(\mu^\ast[\emptyset] = 0\)</span>.
+Let us show that <span class="arithmatex">\(\mu^\ast\)</span> is <span class="arithmatex">\(\sigma\)</span>-sub-additive by taking a countable family <span class="arithmatex">\((E_n)\)</span> and <span class="arithmatex">\(E\)</span> of sets such that <span class="arithmatex">\(E\subseteq \cup E_n\)</span>.
+Since if <span class="arithmatex">\(\mu^\ast[E_n] = \infty\)</span> for some <span class="arithmatex">\(n\)</span>, then trivialy it holds that <span class="arithmatex">\(\mu^\ast[E]\leq \sum \mu^\ast[E_n]\)</span>, we can then assume that <span class="arithmatex">\(\mu^\ast[E_n]&lt;\infty\)</span> for any <span class="arithmatex">\(n\)</span>.
+Choose families <span class="arithmatex">\((A_{nk})\)</span> in <span class="arithmatex">\(\mathcal{R}\)</span> such that <span class="arithmatex">\(E_n \subseteq_k A_{nk}\)</span> and <span class="arithmatex">\(\sum_k \mu^\ast[A_{nk}] \leq \mu^\ast[E_n] + \varepsilon 2^{-k}\)</span>.
+It follows that <span class="arithmatex">\(E\subseteq \cup_{nk}A_{nk}\)</span> and </p>
+<div class="arithmatex">\[
+  \mu^\ast[E]\leq \sum_{nk}\mu^\ast[A_{nk}] \leq \sum \mu^\ast[E_n] + \varepsilon
+\]</div>
+<p>which by arbitrariness of <span class="arithmatex">\(\varepsilon\)</span> show <span class="arithmatex">\(\sigma\)</span>-subadditivity.</p>
+<p>From the previous Theorem on outer measure, it follows that the set <span class="arithmatex">\(\mathcal{M}\)</span> of <span class="arithmatex">\(\mu^\ast\)</span>-measurable sets is a <span class="arithmatex">\(\sigma\)</span>-algebra on which <span class="arithmatex">\(\mu^\ast\)</span> is a measure.
+Since any element of <span class="arithmatex">\(\mathcal{R}\)</span> is <span class="arithmatex">\(\mu^\ast\)</span>-measurable, it follows that <span class="arithmatex">\(\sigma(\mathcal{R})\subseteq \mathcal{M}\)</span>.</p>
+<p>Hence <span class="arithmatex">\(\mu^\ast\)</span> defines a measure on <span class="arithmatex">\(\sigma(\mathcal{R})\)</span> coinciding with <span class="arithmatex">\(\mu\)</span> on <span class="arithmatex">\(\mathcal{R}\)</span> which ends the proof.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Lebesgue/Stieljes measure</p>
+<p>From the previous derivation together with this extension theorem, we conclude that the Lebesgue/Stieljes measure is indeed a measure.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

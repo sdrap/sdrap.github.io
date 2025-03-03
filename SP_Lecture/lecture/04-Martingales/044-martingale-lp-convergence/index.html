@@ -1,0 +1,1731 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../043-martingale-as-convergence/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Martingales $L^p$ Convergence - Stochastics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#martingales-lp-convergence" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Stochastics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Martingales $L^p$ Convergence
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Stochastics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sets, Continuity and Measurability
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sets, Continuity and Measurability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/010-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/011-sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurable/Topological Sapces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurability/Continuity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Measure Theory, Construction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Measure Theory, Construction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/020-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/021-measure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Semi-Ring to Ring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Ring to $\sigma$-Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Expectation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Expectation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/030-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction/Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/031-expectation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expectation, Lebesgue's Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    $L^p$-Spaces and Classical Inequalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Radon-Nykodym and Conditional Expectation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/034-independence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Independence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/035-fubini-tonelli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fubini-Tonelli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/036-uniform-integrability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uniform Integrability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Discrete Time Stochastic Processes, Martingales
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Discrete Time Stochastic Processes, Martingales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../040-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../041-discrete-time-processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discrete Time Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../042-martingale-doob/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../043-martingale-as-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales Almost Sure Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Martingales $L^p$ Convergence
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Martingales $L^p$ Convergence
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#doobs-maximal-inequalities-and-lp-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Doob's Maximal Inequalities and \(L^p\) Convergence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications-of-lp-convergence-law-of-large-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications of \(L^p\) Convergence, Law of Large Numbers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l1-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      \(L^1\) Convergence
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="martingales-lp-convergence">Martingales <span class="arithmatex">\(L^p\)</span>-Convergence</h1>
+<p>As astonishing and useful the martingales convergence in the <span class="arithmatex">\(P\)</span>-almost sure case can be due to Doob's optional sampling and upcrossing lemma it is often limiting from a topological viewpoint.
+The <span class="arithmatex">\(P\)</span>-almost sure convergence does not provides a satisfactory topology on spaces of random variable (in particular it is not a locally convex topology).
+We would prefer in most case to get stronger convergence in terms of norms.</p>
+<p>It turns out that convergence in <span class="arithmatex">\(L^p\)</span> for <span class="arithmatex">\(p&gt;1\)</span> can be derived as shown in the subsequent section due to <strong>Doob's maximal inequalities</strong>.
+The case of <span class="arithmatex">\(L^1\)</span> due to its topological particularity (is not a reflexive space) is not available without additional uniform integrability conditions.</p>
+<h2 id="doobs-maximal-inequalities-and-lp-convergence">Doob's Maximal Inequalities and <span class="arithmatex">\(L^p\)</span> Convergence</h2>
+<p>The building block for <span class="arithmatex">\(L^p\)</span> convergence are the so-called Doob's maximal inequalities.
+In the following, given a process <span class="arithmatex">\(X\)</span> we define the</p>
+<ul>
+<li><strong>Running supremum process</strong> <span class="arithmatex">\(\overline{X}\)</span> by <span class="arithmatex">\(\overline{X}_t=\sup_{s\leq t}X_s\)</span>.</li>
+<li><strong>Running infimum process</strong> <span class="arithmatex">\(\underline{X}\)</span> by <span class="arithmatex">\(\underline{X}_t=\inf_{s\leq t}X_s\)</span>.</li>
+<li><strong>Running absolute supremum process</strong> <span class="arithmatex">\(X^\ast\)</span> by <span class="arithmatex">\(X^\ast_t=\sup_{s\leq t} |X_s|\)</span>.</li>
+</ul>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition: Doob's Maximal Inequalities</p>
+<p>The following assertions hold true.</p>
+<ol>
+<li>
+<p>Let <span class="arithmatex">\(X\)</span> be a sub-martingale and <span class="arithmatex">\(\lambda&gt;0\)</span>.
+    Then it holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+   \lambda P\left[ \overline{X}_t\geq \lambda \right]&amp;\leq E\left[ 1_{\{\overline{X}_t \geq \lambda\}}X_t \right]\leq E\left[ X_t^+ \right];\\
+   \lambda P\left[ \underline{X}_t\leq -\lambda \right]&amp;\leq E\left[ 1_{\{\underline{X}_t &gt;- \lambda\}} X_t \right]-E[X_0]\leq E\left[ X_t^+ \right]-E\left[ X_0 \right].
+\end{align*}
+\]</div>
+</li>
+<li>
+<p>For <span class="arithmatex">\(X\)</span> a positive sub-martingale and <span class="arithmatex">\(p&gt;1\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+   \left\Vert\sup_{s \leq t}X_s\right\Vert_p\leq \frac{p}{p-1}\left\Vert X_t\right\Vert_p.
+\end{equation*}
+\]</div>
+</li>
+</ol>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that Doob's maximal inequalities are similar to Markov inequality.
+The fundamental difference though and powerfull fact is that the probability of the behavior of the whole path between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(t\)</span> is controled by the expectation of the sub martingale at the begining and end.</p>
+<p>Note also that the second statement shows that the norm of the running maximum of the path between <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(t\)</span>, which can be arbitrarily large, is controled by the norm at time <span class="arithmatex">\(t\)</span>.
+This however only holds for <span class="arithmatex">\(p&gt;1\)</span>.</p>
+<p>Those statements about the path being controled by the values at its boundary is certainly not trivial.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<ol>
+<li>
+<p>For the stopping time <span class="arithmatex">\(\tau=\inf\{s:X_s\geq \lambda \}\)</span>, observe that <span class="arithmatex">\(\{\tau\leq t\}=\{\overline{X}_t\geq \lambda\}\)</span>.
+    Also, on <span class="arithmatex">\(\{\tau\leq t\}\)</span>, it holds <span class="arithmatex">\(X^\tau_{t}=X_{\tau\wedge t}\geq \lambda\)</span>.
+    Hence,</p>
+<div class="arithmatex">\[
+\begin{equation*}
+   X_{\tau\wedge t}=X_{\tau}1_{\{\overline{X}_t\geq \lambda\}}+X_t1_{\{\tau&gt;t\}}\geq \lambda 1_{\{\overline{X}_t\geq \lambda\}}+X_t1_{\{\tau&gt;t\}}.
+\end{equation*}
+\]</div>
+<p>It also holds, <span class="arithmatex">\(X_t1_{\{\tau&gt;t\}}\geq -X_t^-\)</span>.
+Altogether, with Doob's optional sampling theorem and <span class="arithmatex">\(X\)</span> being a sub-martingale, we get</p>
+<div class="arithmatex">\[
+\begin{equation*}
+   E\left[ X_t \right]\geq E\left[ X_{\tau\wedge t} \right]\geq \lambda P\left[ \overline{X}_t\geq \lambda \right]+E\left[ 1_{\{\tau&gt;t\}} X_t\right]\geq \lambda P\left[ \overline{X}_t\geq \lambda \right]-E\left[ X_t^- \right],
+\end{equation*}
+\]</div>
+<p>and conclude the first inequality by observing that, on the one hand, <span class="arithmatex">\(E[X_t^+]=E[X_t]+E[X_t^-]\)</span>, and on the other hand,</p>
+<div class="arithmatex">\[
+\begin{equation*}
+   E[X_t]-E\left[ 1_{\{\tau&gt;t\}} X_t\right]=E[(1- 1_{\{\overline{X}_t&lt;\lambda\}}) X_t]=E[1_{\{\overline{X}_t\geq \lambda \}}X_t].
+\end{equation*}
+\]</div>
+<p>As for the second inequality, for the stopping time <span class="arithmatex">\(\sigma=\inf\{s: X_s\leq -\lambda\}\)</span>, observe that <span class="arithmatex">\(\{\sigma\leq t\}=\{\underline{X}_t\leq -\lambda\}\)</span>.
+Also, on <span class="arithmatex">\(\{\sigma\leq t\}\)</span>, it holds <span class="arithmatex">\(X^\sigma_{t}=X_{\sigma\wedge t}\leq -\lambda\)</span>.
+Hence,</p>
+<div class="arithmatex">\[
+\begin{equation*}
+   X_{\sigma\wedge t}=X_{\sigma}1_{\{\underline{X}_t\leq -\lambda\}}+X_t1_{\{\sigma&gt;t\}}\leq -\lambda 1_{\{\underline{X}_t\leq -\lambda\}}+X_t1_{\{\sigma&gt;t\}}.
+\end{equation*}
+\]</div>
+<p>Altogether, with Doob's optional sampling theorem and <span class="arithmatex">\(X\)</span> being a sub-martingale, we get</p>
+<div class="arithmatex">\[
+\begin{equation*}
+   E\left[ X_0 \right]\leq E\left[ X_{\sigma\wedge t} \right]\leq -\lambda P\left[ \underline{X}_t \leq -\lambda\right]+E\left[ 1_{\{\sigma&gt;t\}} X_t \right]\leq -\lambda P\left[ \underline{X}_t \leq -\lambda\right]+E\left[ X_t^+ \right]
+\end{equation*}
+\]</div>
+<p>showing the second inequality by observing that <span class="arithmatex">\(E[1_{\{\sigma&gt;t\}}X_t]=E[1_{\{\underline{X}_t&gt;-\lambda\}}X_t]\)</span>.</p>
+</li>
+<li>
+<p>Define the random variables <span class="arithmatex">\(Y=\sup_{s\leq t}X_s\)</span> and <span class="arithmatex">\(Z=X_t=X_t^+\)</span> since <span class="arithmatex">\(X\)</span> is positive.
+    For <span class="arithmatex">\(\varphi\)</span> an increasing, right-continuous function with <span class="arithmatex">\(\varphi(0)=0\)</span>, by Fubini's theorem and the previous inequalities, it holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+   E\left[ \varphi(Y) \right] &amp; = E\left[ \int_{0}^\infty 1_{\{\lambda \leq Y\}}d\varphi(\lambda) \right]\\
+                              &amp; = \int_{0}^\infty P\left[ Y\geq \lambda \right]d\varphi(\lambda)\\
+                              &amp; \leq \int_0^\infty E\left[1_{\{Y\geq \lambda\}}Z\right]\frac{d\varphi(\lambda)}{\lambda}\\
+                              &amp; = E\left[ Z \int_0^\infty 1_{\{Y\geq \lambda\}}\frac{d\varphi(\lambda)}{\lambda} \right].
+\end{align*}
+\]</div>
+<p>If we consider <span class="arithmatex">\(\varphi(\lambda)=\lambda^p\)</span>, <span class="arithmatex">\(p&gt;1\)</span>, and define <span class="arithmatex">\(q=p/(p-1)\)</span> for which holds <span class="arithmatex">\(1/p+1/q=1\)</span>, it follows from Hölder's inequality that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+   \left\Vert Y\right\Vert_p^p\leq pE\left[ Z \int_0^\infty 1_{\{Y\geq \lambda\}}\lambda^{p-2}d\lambda \right]=\frac{p}{p-1}E\left[ Z Y^{p-1} \right]\leq q \left\Vert Z\right\Vert_p \left\Vert Y^{p-1}\right\Vert_q=q \left\Vert Z\right\Vert_p \left\Vert Y\right\Vert_p^{p/q}.
+\end{equation*}
+\]</div>
+<p>If <span class="arithmatex">\(0&lt;\left\Vert Y\right\Vert^{p/q}_p&lt;\infty\)</span>, dividing the inequality by <span class="arithmatex">\(\left\Vert Y\right\Vert^{p/q}_p\)</span>, noting that <span class="arithmatex">\(p-p/q =1\)</span>, yields</p>
+<div class="arithmatex">\[
+\begin{equation*}
+   \left\Vert\sup_{s\leq t}X_s\right\Vert_p=\left\Vert Y\right\Vert_p\leq q \left\Vert Z\right\Vert_p=q \left\Vert X_t\right\Vert_p,
+\end{equation*}
+\]</div>
+<p>as desired.</p>
+</li>
+</ol>
+</div>
+<div class="admonition corollary">
+<p class="admonition-title">Corollary</p>
+<p>If <span class="arithmatex">\(X\)</span> is a martingale, and <span class="arithmatex">\(p&gt;1\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation}    
+    \left\Vert X^\ast_t\right\Vert_p=E\left[ \left( \sup_{s\leq t}\left\vert X_s\right\vert \right)^p \right]^{1/p}\leq \left(\frac{p}{p-1}\right) \left\Vert X_t\right\Vert
+\end{equation}
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Follows immediately that <span class="arithmatex">\(|X|\)</span> is a sub-martingale and the doob's maximal inequalities.</p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Martingale Convergence Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a martingale such that <span class="arithmatex">\(\sup_{t}E[|X_t|^p]&lt;\infty\)</span> for some <span class="arithmatex">\(p&gt;1\)</span>.
+Then, there exists a random variable <span class="arithmatex">\(X_{\infty}\)</span> in <span class="arithmatex">\(L^p\)</span> such that <span class="arithmatex">\(X_t \to X_{\infty}\)</span> almost surely and in <span class="arithmatex">\(L^p\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Since Jensen's inequality yields <span class="arithmatex">\(E[X_t^+]\leq E[|X_t|]\leq E[|X_t|^p]^{\frac{1}{p}}\)</span>, it follows that <span class="arithmatex">\(\sup E[X_t^+]&lt;\infty\)</span>.
+By the <span class="arithmatex">\(P\)</span>-almost sure martingale convergence Theorem, there exists an integrable random variable <span class="arithmatex">\(X_{\infty}\)</span> for which <span class="arithmatex">\(X_t\to X_{\infty}\)</span> almost surely.</p>
+<p>We are left to show that the sequence <span class="arithmatex">\(|X_t-X_\infty|^p\)</span> satisfies the assumptions of Lebesgue's dominated convergence.
+It holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    |X_t -X_\infty|^p\leq c\left(| X_t|^p + |X_\infty|^p \right)\leq c\left(\sup |X_t|^p+|X_\infty|^p\right).
+\end{equation*}
+\]</div>
+<p>On the one hand, by Fatou's lemma we have <span class="arithmatex">\(E[|X_\infty|^p]\leq\liminf E [|X_t|^p]&lt;\infty\)</span>.
+On the other hand, by means of the previous corollary, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E[\sup_{s\leq t}|X_s|^p]\leq (p/(p-1))^p E[|X_t|^p]
+\end{equation*}
+\]</div>
+<p>showing that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E[\sup|X_t|^p]=\sup_tE[\sup_{s\leq t}|X_s|^p]\leq (p/(p-1))^p\sup E[|X_t|^p]&lt;\infty. 
+\end{equation*}
+\]</div>
+<p>Thus, the dominated convergence theorem yields <span class="arithmatex">\(X_t\to X_\infty\)</span> in <span class="arithmatex">\(L^p\)</span>.</p>
+</div>
+<h2 id="applications-of-lp-convergence-law-of-large-numbers">Applications of <span class="arithmatex">\(L^p\)</span> Convergence, Law of Large Numbers</h2>
+<p>We apply the <span class="arithmatex">\(L^p\)</span>-convergence of martingales to show the law of large numbers that states that the sample average of independently distributed random variables with finite mean converges almost surely to its mean.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a square integrable martingale for which holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \sum E\left[ \left( X_t-X_{t-1} \right)^2 \right]&lt;\infty.
+\end{equation*}
+\]</div>
+<p>Then, the sequence <span class="arithmatex">\((X_t)\)</span> converges almost surely and in <span class="arithmatex">\(L^2\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Beforehand, let us show the following lemma.</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a martingale such that <span class="arithmatex">\(X_t\)</span> is square integrable for every <span class="arithmatex">\(t\)</span>.
+It follows that</p>
+<div class="arithmatex">\[
+\begin{align*}
+    E\left[ \left( X_u-X_t \right)X_s \right] &amp; =0,\\
+    E\left[ \left( X_t-X_s \right)^2|\mathcal{F}_s \right]&amp;=E\left[ X_t^2|\mathcal{F}_s \right]-X_s^2,
+\end{align*}
+\]</div>
+<p>for every <span class="arithmatex">\(s\leq t\leq u\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Since <span class="arithmatex">\(s\leq t\leq u\)</span> and <span class="arithmatex">\(X\)</span> is a square integrable martingale, it follows from the properties of the conditional expectation</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E\left[ \left( X_u-X_t \right)X_s \right]=E\left[ E\left[\left( X_u-X_t \right)X_s |\mathcal{F}_t\right]\right]=E\left[ E\left[\left( X_u-X_t \right) |\mathcal{F}_t\right]X_s\right]=0
+\end{equation*}
+\]</div>
+<p>showing the first equality.
+The same reasoning yields</p>
+<div class="arithmatex">\[
+\begin{align*}
+    E\left[ \left( X_t-X_s \right)^2 |\mathcal{F}_s\right] &amp; = E\left[ X_t^2 |\mathcal{F}_s\right]-E\left[ X_tX_s|\mathcal{F}_s \right]-E\left[ (X_t-X_s)X_s|\mathcal{F}_s \right]\\
+    &amp; = E\left[ X_t^2 |\mathcal{F}_s\right]- X_sE\left[ X_t|\mathcal{F}_s \right]-X_sE\left[ X_t-X_s|\mathcal{F}_s \right]\\
+    &amp; = E\left[ X_t^2 |\mathcal{F}_s\right]- X_s^2,
+\end{align*}
+\]</div>
+<p>showing the second equality.</p>
+</div>
+<p>For every <span class="arithmatex">\(t\)</span>, by means of this lemma, it follows that</p>
+<div class="arithmatex">\[
+\begin{align*}
+    E\left[ X_t^2 \right] &amp; = E\left[X_0^2\right]+\sum_{s=1}^tE\left[X_{s}^2-X_{s-1}^2\right]\\
+                          &amp; = E\left[X_0^2\right]+\sum_{s=1}^tE\left[E\left[X_{s}^2-X_{s-1}^2|\mathcal{F}_{s-1}\right]\right]\\
+                          &amp; = E\left[X_0^2\right]+\sum_{s=1}^tE\left[E\left[\left(X_{s}-X_{s-1}\right)^2|\mathcal{F}_{s-1}\right]\right]\\
+                          &amp; = E\left[X_0^2\right]+\sum_{s=1}^tE\left[\left(X_{s}-X_{s-1}\right)^2\right]\\
+                          &amp; \leq E\left[ X_0^2 \right]+\sum E\left[ \left( X_s-X_{s-1} \right)^2 \right].
+\end{align*}
+\]</div>
+<p>It follows that <span class="arithmatex">\(\sup_{t}E\left[ X_t^2 \right]&lt;\infty\)</span> and therefore, by means of Theorem \ref{thm:martingaleconvergenceLp}, it follows that <span class="arithmatex">\(X_t\to X_\infty\)</span> almost surely and in <span class="arithmatex">\(L^2\)</span>.</p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a martingale and <span class="arithmatex">\(a=(a_t)\)</span> be an increasing sequence such that <span class="arithmatex">\(a_t\to \infty\)</span>.
+If</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \sum E[(X_t-X_{t-1})^2/a_t^2]&lt;\infty,
+\end{equation*}
+\]</div>
+<p>then it follows that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \frac{X_t}{a_t}\longrightarrow 0 \quad \text{almost surely}
+\end{equation*}
+\]</div>
+<p>In particular, if <span class="arithmatex">\(\sup E[(X_t-X_{t-1})^2]&lt;\infty\)</span>, then it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \frac{X_t}{t}\longrightarrow 0 \quad \text{almost surely}
+\end{equation*}
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Define the process <span class="arithmatex">\(Y\)</span> by <span class="arithmatex">\(Y_0=0\)</span> and <span class="arithmatex">\(Y_t=\sum_{s=1}^t (X_s-X_{s-1})/a_s\)</span> for <span class="arithmatex">\(t\geq 1\)</span>.
+It follows that <span class="arithmatex">\(Y\)</span> is a martingale.
+Indeed, adaptiveness and integrability are immediate since <span class="arithmatex">\(X\)</span> is a martingale.
+As for the martingale property, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E\left[ Y_{t}-Y_{t-1} |\mathcal{F}_t\right]=\frac{1}{a_t}E\left[ X_t-X_{t-1}|\mathcal{F}_t \right]=0.
+\end{equation*}
+\]</div>
+<p>Furthermore, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \sum E\left[ \left( Y_t-Y_{t-1} \right)^2 \right]=\sum \frac{1}{a_t^2}E\left[ \left( X_t-X_{t-1} \right)^2 \right]&lt;\infty
+\end{equation*}
+\]</div>
+<p>which by means of the previous Theorem implies that </p>
+<div class="arithmatex">\[
+\begin{equation*}
+    Y_t=\sum_{s=1}^t\frac{X_s-X_{s-1}}{a_s}\longrightarrow Y_T=\sum \frac{X_t-X_{t-1}}{a_t}
+\end{equation*}
+\]</div>
+<p>almost surely and in <span class="arithmatex">\(L^2\)</span>.
+The Kronecker's lemma states that if <span class="arithmatex">\(\sum b_t/a_t&lt;\infty\)</span> for two sequences <span class="arithmatex">\((a_t)\)</span> and <span class="arithmatex">\((b_t)\)</span> whereby <span class="arithmatex">\((a_t)\)</span> is an increasing sequence of strictly positive numbers, it follows that <span class="arithmatex">\((\sum b_t)/a_t=0\)</span>.
+Hence, applying Kronecker's lemma, it follows that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \frac{X_t}{a_t}=\frac{1}{a_t}\sum_{s=1}^t X_s-X_{s-1}\to 0
+\end{equation*}
+\]</div>
+<p>almost surely.
+In particular, if <span class="arithmatex">\(\sup E[(X_t-X_{t-1})^2]&lt;\infty\)</span> it follows that </p>
+<div class="arithmatex">\[
+  \sum E[(X_t-X_{t-1})^2/t^2]\leq \sup E[(X_t-X_{t-1})^2]\sum \frac{1}{t^2}&lt;\infty
+\]</div>
+<p>and the second assertion of the theorem follows.</p>
+</div>
+<div class="admonition corollary">
+<p class="admonition-title">Corollary</p>
+<p>Let <span class="arithmatex">\((X_t)\)</span> be a sequence of integrable independent random variables such that <span class="arithmatex">\(E[X_t]=0\)</span> for every <span class="arithmatex">\(t\)</span> and such that <span class="arithmatex">\(\sum E[X_t^2]/a_t^2&lt;\infty\)</span> for some increasing sequence <span class="arithmatex">\((a_t)\)</span> of strictly positive real numbers such that <span class="arithmatex">\(a_t\to \infty\)</span>.
+Then it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \frac{1}{a_t}\sum_{s=1}^t X_s\longrightarrow 0 \quad \text{almost surely}
+\end{equation*}
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Define <span class="arithmatex">\(\mathcal{F}_0=\{\emptyset,\Omega\}\)</span> and <span class="arithmatex">\(\mathcal{F}_t=\sigma(X_s\colon s\leq t)\)</span> and the process <span class="arithmatex">\(S\)</span> by <span class="arithmatex">\(S_0=0\)</span> and <span class="arithmatex">\(S_t=\sum_{s=1}^t X_s\)</span>.
+It follows that <span class="arithmatex">\(S\)</span> is a martingale.
+Indeed, it is integrable by assumption.
+It is furthermore adapted since <span class="arithmatex">\(\mathbb{F}\)</span> is the filtration generated by <span class="arithmatex">\(X\)</span>.
+Finally due to the independence, it follows that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E\left[ S_t-S_{t-1} |\mathcal{F}_{t-1}\right]=E\left[ X_t|\mathcal{F}_{t-1} \right]=E\left[ X_t \right]=0.
+\end{equation*}
+\]</div>
+<p>Furthermore, since</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \sum \frac{1}{a_t^2}E\left[ \left( S_t-S_{t-1} \right)^2 \right]=\sum \frac{1}{a_t^2}E\left[ X_t^2 \right]&lt;\infty,
+\end{equation*}
+\]</div>
+<p>Applying the previous theorem yields</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \frac{S_t}{a_t}=\frac{1}{a_t}\sum_{s=1}^t X_s\longrightarrow 0 \quad \text{almost surely}
+\end{equation*}
+\]</div>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem: Strong Law of Large Numbers</p>
+<p>Let <span class="arithmatex">\((X_t)\)</span> be a sequence of integrable, independent, and identically distributed random variables.
+Then it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \frac{1}{t}\sum_{s=1}^t X_s\xrightarrow[t \to \infty]{\text{almost surely}}E\left[ X_1 \right].
+\end{equation*}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that we do not make here the traditional assumption that the sequence shall be square integrable.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p><strong>Step 1:</strong> Define first the countable family <span class="arithmatex">\((A_t)\)</span> as <span class="arithmatex">\(A_t=\{ |X_t|&gt;t\}\)</span> of events in <span class="arithmatex">\(\mathcal{F}\)</span>.
+Using the fact that <span class="arithmatex">\(X_t\sim X_1\)</span> for every <span class="arithmatex">\(t\)</span> and Fubini's Theorem, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \sum P\left[ A_t \right]=\sum P\left[ |X_t|&gt;t \right]=\sum P\left[ |X_1|&gt;t \right]\leq \int_{0}^\infty P\left[ |X_1|&gt;\lambda \right]d\lambda=E\left[ |X_1| \right]&lt;\infty.
+\end{equation*}
+\]</div>
+<p>By Borel-Cantelli, it follows that <span class="arithmatex">\(P[\limsup A_t]=0\)</span> and therefore, for almost all <span class="arithmatex">\(\omega\)</span> in <span class="arithmatex">\(\Omega\)</span>, there exists <span class="arithmatex">\(t_0(\omega)\)</span> such that <span class="arithmatex">\(\omega\)</span> does not belong to <span class="arithmatex">\(A_t\)</span> for every <span class="arithmatex">\(t\geq t_0\)</span>.
+Hence, defining <span class="arithmatex">\(Y_t=X_t1_{A_t^c}\)</span>, it follows that </p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \liminf \frac{1}{t}\sum_{s\leq t} X_s=\liminf \frac{1}{t}\sum_{s\leq t}  Y_s\quad \text{as well as}\quad \limsup \frac{1}{t} \sum_{s\leq t}X_s=\limsup \frac{1}{t}\sum_{s\leq t} Y_s,
+\end{equation*}
+\]</div>
+<p>and so we just have to show that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \frac{1}{t}\sum_{s\leq t} Y_s\xrightarrow[t \to \infty]{\text{almost surely}} E\left[ X_1 \right].
+\end{equation*}
+\]</div>
+<p><strong>Step 2:</strong> Let <span class="arithmatex">\(Z_t=Y_t-E[Y_t]\)</span> for every <span class="arithmatex">\(t\)</span> which is an independent sequence of random variables.
+Furthermore, note that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \sum \frac{E[Z_t^2]}{t^2}=\sum \frac{E\left[ (Y_t-E[Y_t])^2 \right]}{t^2}=\sum \frac{E\left[ Y_t^2 \right]-E\left[ Y_t \right]^2}{t^2}\leq \sum \frac{E[Y_t^2]}{t^2}.
+\end{equation*}
+\]</div>
+<p>By Fubini's theorem, and the fact that <span class="arithmatex">\(P[|Y_t|&gt;s]=P[|Y_t|&gt;t]=0\)</span> for every <span class="arithmatex">\(s\geq t\)</span> as well as <span class="arithmatex">\(P[Y_t&gt;\lambda ]\leq P[X_t&gt;\lambda]=P[X_1&gt;\lambda]\)</span> for every <span class="arithmatex">\(t\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E\left[ Y_t^2 \right]=E\left[ \int_{0}^\infty 1_{\{|Y_t|&gt;\lambda\}}2\lambda d\lambda \right]=\int_{0}^\infty P\left[ |Y_t|&gt;\lambda \right]2\lambda d\lambda \leq\int_{0}^t P\left[ |X_1|&gt;\lambda \right]2\lambda d\lambda.
+\end{equation*}
+\]</div>
+<p>The monotone convergence of Lebesgue yields</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \sum \frac{1}{t^2}\int_{0}^t P\left[ |X_1|&gt;\lambda \right]2\lambda d\lambda=\int_{0}^\infty \sum \frac{1_{\{t\geq \lambda\}}}{t^2}P\left[ |X_1|&gt;\lambda \right]2\lambda d\lambda.
+\end{equation*}
+\]</div>
+<ul>
+<li>
+<p>For <span class="arithmatex">\(\lambda &lt;1\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  2 \lambda \sum \frac{1}{t^2}=2\lambda\frac{\pi^2}{6}\leq 4\lambda\leq 4.
+\end{equation*}
+\]</div>
+</li>
+<li>
+<p>For <span class="arithmatex">\(\lambda\geq 1\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  2\lambda \sum_{t\geq \lambda}\frac{1}{t^2}\leq \frac{2}{\lambda}+2\lambda\int_{\lambda}^\infty \frac{1}{x^2}dx\leq 2+2\lambda \frac{1}{\lambda}=4.
+\end{equation*}
+\]</div>
+</li>
+</ul>
+<p>Hence,</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \sum \frac{E\left[ Z_t^2 \right]}{t^2}\leq 4 \int_0^\infty P\left[ |X_1|&gt;\lambda \right]d\lambda=4E\left[ |X_1| \right]&lt;\infty.
+\end{equation*}
+\]</div>
+<p>According to the previous corollary, it follows that <span class="arithmatex">\((\sum_{s\leq t} Z_s)/t\to 0\)</span> almost surely.</p>
+<p><strong>Step 3:</strong> We finally show that <span class="arithmatex">\((\sum_{s\leq t} Y_s)/t\to E[X_1]\)</span> almost surely.
+It holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \left| \frac{1}{t}\sum_{s\leq t}Y_s-E[X_1]\right|
+        &amp; \leq \left| \frac{1}{t} \sum_{s\leq t}Z_s\right|+\frac{1}{t}\sum_{s\leq t}\left|E\left[Y_s  \right]-E\left[ X_s \right]\right|\\
+        &amp; = \left| \frac{1}{t} \sum_{s\leq t}Z_s\right|+\frac{1}{t}\sum_{s\leq t}\left|E\left[X_s1_{\{|X_s|\leq s\}}  \right]-E\left[ X_s \right]\right|\\
+        &amp; \leq \left| \frac{1}{t} \sum_{s\leq t}Z_s\right|+\frac{1}{t}\sum_{s\leq t}E\left[|X_s|1_{\{|X_s|&gt; s\}}  \right]\\
+        &amp; = \left| \frac{1}{t} \sum_{s\leq t}Z_s\right|+\frac{1}{t}\sum_{s\leq t}E\left[ |X_1|1_{|X_1|&gt;s} \right]\\
+        &amp; =\left| \frac{1}{t} \sum_{s\leq t}Z_s\right|+E\left[|X_1|\frac{1}{t}\sum_{s\leq t} 1_{\{|X_1|&gt;s\}}\right]\\
+        &amp; =I_t+E[J_t].
+\end{align*}
+\]</div>
+<p>We already shown in the previous step that <span class="arithmatex">\(I_t\to 0\)</span> almost surely.
+On the other hand, it holds <span class="arithmatex">\(J_t\leq |X_1|\)</span> with <span class="arithmatex">\(E[|X_1|]&lt;\infty\)</span> and since <span class="arithmatex">\((\sum_{s\leq t} 1_{\{|X_1|&gt;s\}})/t\to 0\)</span> almost surely, it follows that <span class="arithmatex">\(J_t\to 0\)</span> almost surely.
+Hence, by Lebesgue's dominated convergence theorem, it follows that <span class="arithmatex">\(E[J_t]\to 0\)</span> which ends the proof.</p>
+</div>
+<h2 id="l1-convergence"><span class="arithmatex">\(L^1\)</span> Convergence</h2>
+<p>The <span class="arithmatex">\(L^1\)</span>-case is more delicate.
+There we have to make use of uniform integrability in order to show similar results.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem: <span class="arithmatex">\(L^1\)</span>-Martingale Convergence</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a sub-martingale bounded in <span class="arithmatex">\(L^1\)</span>, that is, <span class="arithmatex">\(\sup E[|X_t|]&lt;\infty\)</span> or equivalently <span class="arithmatex">\(\lim E[X_t]&gt;-\infty\)</span>.
+In particular, by almost sure martingale convergence Theorem, there exists <span class="arithmatex">\(X_\infty \in L^1\)</span> such that <span class="arithmatex">\(X_t\to X_\infty\)</span> almost surely.
+Then the following two assertions are equivalent:</p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is uniformly integrable;</li>
+<li><span class="arithmatex">\(X_t\to X_{\infty}\)</span> in <span class="arithmatex">\(L^1\)</span> and <span class="arithmatex">\(E[ X_{\infty}|\mathcal{F}_t ]\geq X_t\)</span> for every <span class="arithmatex">\(t\)</span>.</li>
+</ol>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>If <span class="arithmatex">\(X_t\to X_\infty\)</span> almost surely, uniform integrability of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(L^1\)</span> convergence are equivalent by means of Uniform Integrability Theorem.
+In particular, by the sub-martingale property, for every event <span class="arithmatex">\(A\)</span> in <span class="arithmatex">\(\mathcal{F}_t\)</span>, it holds that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E[X_{\infty}1_A]=\lim_{s\geq t}E\left[ X_{s}1_A \right]\geq E[X_t1_A],
+\end{equation*}
+\]</div>
+<p>showing that (i) is equivalent to (ii).</p>
+</div>
+<p>The following corollaries are consequences of this theorem as well as uniform integrability properties.</p>
+<div class="admonition corollary">
+<p class="admonition-title">Corollary</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a martingale.
+Then the following assertions are equivalent:</p>
+<ul>
+<li><span class="arithmatex">\(X_t=E[\xi|\mathcal{F}_t]\)</span> for some <span class="arithmatex">\(\xi\in L^1\)</span>;</li>
+<li><span class="arithmatex">\(X\)</span> is uniformly integrable;</li>
+<li><span class="arithmatex">\(X_{t}\to X_{\infty}\)</span> in <span class="arithmatex">\(L^1\)</span>.</li>
+</ul>
+<hr />
+<p>Let <span class="arithmatex">\(\xi\)</span> be an integrable random variable and <span class="arithmatex">\(\mathcal{F}_\infty=\sigma(\cup \mathcal{F}_t)\)</span>.
+Then it follows that </p>
+<div class="arithmatex">\[
+\begin{equation*}
+    X_t:=E[\xi|\mathcal{F}_t]\to X_{\infty}:=E[\xi|\mathcal{F}_{\infty}]
+\end{equation*}
+\]</div>
+<p>almost surely and in <span class="arithmatex">\(L^1\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>The proof is left as an exercise for the first part of the corollary.</p>
+<p>We show the second part.
+Clearly, <span class="arithmatex">\(X\)</span> is a martingale which is uniformly integrable.
+Hence, from the previous theorem, it converges to <span class="arithmatex">\(X_\infty\)</span> almost surely and in <span class="arithmatex">\(L^1\)</span>.
+We are left to show that <span class="arithmatex">\(X_{\infty}=E\left[ \xi|\mathcal{F}_{\infty} \right]\)</span>.
+Let </p>
+<div class="arithmatex">\[
+\mathcal{C}=\{A \in \mathcal{F}_{\infty}\colon E[X_{\infty}1_A]=E[\xi1_A]\}.
+\]</div>
+<p>For every <span class="arithmatex">\(A \in\mathcal{F}_t\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    E[X_{\infty}1_A]=\lim E[X_t1_A]=\lim E\left[ E[\xi|\mathcal{F}_t]1_A \right]=E[\xi1_A],
+\end{equation*}
+\]</div>
+<p>showing that <span class="arithmatex">\(\cup \mathcal{F}_t\)</span> is in <span class="arithmatex">\(\mathcal{C}\)</span>.
+Since <span class="arithmatex">\(\mathcal{C}\)</span> is clearly a <span class="arithmatex">\(\lambda\)</span>-system, by Dynkin's Lemma, it follows that <span class="arithmatex">\(\mathcal{C}\)</span> contains <span class="arithmatex">\(\mathcal{F}_{\infty}\)</span>, ending the proof.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
