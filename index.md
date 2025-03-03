@@ -31,6 +31,32 @@ My research focus &mdash; even if not bounded to &mdash; are
 * Risk and Uncertainty
 * Data Analysis
 
+
+
+Lecture Notes:
+:   I recently experimented with lecture notes online using [mkdocs material](https://squidfunk.github.io/mkdocs-material/).
+    Those are work in progress, available publicly on github for forking, correcting, pulling requests, as well as the template I am using.
+
+    The following lecture notes are available:
+    
+    * [**Advanced Scientific Programming**]({{site.url}}/ASP_Lecture/)
+
+        [source code](https://github.com/sdrap/ASP_Lecture)
+        
+        *It is rather an introduction to scientific programming for mathematicians*.
+    * [**Financial Mathematics**]({{site.url}}/FM_Lecture/)
+
+        [source code](https://github.com/sdrap/FM_Lecture)
+
+    * [**Stochastic**]({{site.url}}/SP_Lecture/) 
+
+        [source code](https://github.com/sdrap/SP_Lecture)
+
+        *Still in the process of writing chapters 5 to 12 during this semester.*
+
+
+
+
 Links:
 :   **Publications and CV:** [Publications, preprints and talks]({{site.url}}/research) and a short CV [here]({{site.url}}/CV).  
     **Teaching:** The [teaching]({{site.url}}/teaching) section contains details about current and past lectures as well as some open sourced lecture notes that I've written myself or together with others.  
