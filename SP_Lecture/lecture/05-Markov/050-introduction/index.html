@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../01-Sets-Functions/013-measurable-continuous-functions/">
+        <link rel="prev" href="../../04-Martingales/044-martingale-lp-convergence/">
       
       
-        <link rel="next" href="../021-measure/">
+        <link rel="next" href="../051-markov-extension/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#markov-processes-browninan-motion" class="md-skip">
           Skip to content
         </a>
       
@@ -586,10 +586,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -607,11 +605,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -626,7 +624,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Measure Theory, Construction
@@ -637,19 +635,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../02-Measure/020-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +648,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -672,7 +660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../021-measure/" class="md-nav__link">
+      <a href="../../02-Measure/021-measure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../022-semi-ring-to-ring/" class="md-nav__link">
+      <a href="../../02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../023-ring-to-s-algebra/" class="md-nav__link">
+      <a href="../../02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1129,8 +1117,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1144,11 +1134,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1163,7 +1153,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Markov Processes
@@ -1174,10 +1164,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../05-Markov/050-introduction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1187,6 +1186,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1199,7 +1199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-Markov/051-markov-extension/" class="md-nav__link">
+      <a href="../051-markov-extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1245,15 +1245,15 @@
 
 
 
-<h1 id="introduction">Introduction</h1>
-<p>This Chapter introduce the notion of measure.
-From the definition on a <span class="arithmatex">\(\sigma\)</span>-algebra it goes forward to measure defined on simpler class of sets such as "Lebesgue/Stieljes" measure.
-How to extend those measures to larger class of sets such as ring.
-It finishes with Carathéodory's extension theorem that allows to extend those meaningfull measures to the <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<h1 id="markov-processes-browninan-motion">Markov Processes Browninan Motion</h1>
+<p>This Chapter serves as a bridge in our study of stochastic processes towards the continuous time and the stochastic integral.
+The goal is to introduce the concepts of <strong>Markov processes</strong>&mdash;that is, memoryless processes.
+We will start with the definition and key properties of general markov processes and how to construct them.
+We turn to specific applications in discrete time and then turn to the construction of a central Markov process, and martingale, namely the <strong>Brownian</strong> motion.</p>
 <ul>
-<li><a href="../021-measure/">Measures</a></li>
-<li><a href="../022-semi-ring-to-ring/">From Semi-Ring to Ring</a></li>
-<li><a href="../023-ring-to-s-algebra/">From Ring to <span class="arithmatex">\(\sigma\)</span>-Alegebra: Carathéodory's Extension Theorem</a></li>
+<li><a href="../051-markov-extension/"><strong>Markov Processes</strong></a></li>
+<li><a href="../052-markov-discrete/"><strong>Markov Chains</strong></a></li>
+<li><a href="../053-brownian/"><strong>Brownian Motion</strong></a></li>
 </ul>
 
 

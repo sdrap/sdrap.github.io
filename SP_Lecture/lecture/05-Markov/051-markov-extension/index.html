@@ -1,0 +1,1685 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../050-introduction/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Markov Processes - Stochastics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markov-chain-and-extension" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Stochastics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Markov Processes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Stochastics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sets, Continuity and Measurability
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sets, Continuity and Measurability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/010-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/011-sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurable/Topological Sapces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurability/Continuity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Measure Theory, Construction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Measure Theory, Construction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/020-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/021-measure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Semi-Ring to Ring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Ring to $\sigma$-Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Expectation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Expectation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/030-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction/Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/031-expectation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expectation, Lebesgue's Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    $L^p$-Spaces and Classical Inequalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Radon-Nykodym and Conditional Expectation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/034-independence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Independence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/035-fubini-tonelli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fubini-Tonelli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/036-uniform-integrability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uniform Integrability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Discrete Time Stochastic Processes, Martingales
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Discrete Time Stochastic Processes, Martingales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/040-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/041-discrete-time-processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discrete Time Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/042-martingale-doob/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales Almost Sure Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales $L^p$ Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Markov Processes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Markov Processes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../050-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Markov Processes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Markov Processes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-markov-process-to-transition-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Markov Process to Transition probability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-transition-probabilities-to-markov" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Transition Probabilities to Markov
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markov-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      Markov Property
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="markov-chain-and-extension">Markov Chain and Extension</h1>
+<p>In this section we will study a special class of stochastic processes namely those which immediate next evolution only depends on the current state.
+In other terms they are memory less.
+We will first introduce them in general framework and dive down into the more intuitive markov chain framework.</p>
+<p>In this section we consider a time index <span class="arithmatex">\(\mathbf{T}\)</span> which can be either <span class="arithmatex">\(\mathbb{N}_0\)</span> or <span class="arithmatex">\([0,\infty)\)</span>.
+The Markov process will take value in a measurable state space <span class="arithmatex">\((S, \mathcal{S})\)</span> where <span class="arithmatex">\(S\)</span> is a closed or open subset of <span class="arithmatex">\(\mathbb{R}^d\)</span> and <span class="arithmatex">\(\mathcal{S}\)</span> is the Borel <span class="arithmatex">\(\sigma\)</span>-Algebra&mdash;in particular <span class="arithmatex">\(S\)</span> is a Polish space.
+Though we can always consider processes from any abstract probability space, it is always possible to map it on the canonical space of paths with the product <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Path Space (or Canonical Space)</p>
+<p>The canonical space with values in <span class="arithmatex">\((S, \mathcal{S})\)</span> is given by the triplet</p>
+<div class="arithmatex">\[
+  (\Omega, \mathcal{F}, \mathbb{F})
+\]</div>
+<p>together with the canonical process <span class="arithmatex">\(X = (X_t)_{t \in \mathbf{T}}\)</span> where</p>
+<ul>
+<li>
+<p><strong>State Space</strong>: </p>
+<div class="arithmatex">\[
+  \Omega = \left\{ \omega = (\omega_t)_{t \in \mathbf{T}}\colon \omega_t \in S \right\} = S^{\mathbf{T}}
+\]</div>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(\sigma\)</span>-Algebra</strong>: is the resulting product <span class="arithmatex">\(\sigma\)</span>-algebra</p>
+<div class="arithmatex">\[
+  \mathcal{F} = \otimes_{t \in \mathbf{T}} \mathcal{S}
+\]</div>
+</li>
+<li>
+<p><strong>Canonical Process</strong>: <span class="arithmatex">\(X = (X_t)_{t \in \mathbf{T}}\)</span> where</p>
+<div class="arithmatex">\[
+  \begin{equation*}
+    \begin{split}
+      X_t \colon \Omega &amp;\longrightarrow S \\
+                \omega = (\omega_s)_{s \in \mathbf{T}} &amp; \longmapsto X_t(\omega) = \omega_t
+    \end{split}
+  \end{equation*}
+\]</div>
+<p>which is basically the projection process.
+By definition of the product <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(X\)</span> is a stochastic process.</p>
+</li>
+<li>
+<p><strong>Filtration</strong>: <span class="arithmatex">\(\mathbb{F}=(\mathcal{F}_t)_{t \in \mathbf{T}}\)</span> where</p>
+<div class="arithmatex">\[
+  \mathcal{F}_t = \sigma\left( X_s \colon s\leq t \right)
+\]</div>
+<p>turning <span class="arithmatex">\(X\)</span> into an adapted process, its own filtration.</p>
+</li>
+</ul>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Markov Process on Canonical Space</p>
+<p>The canonical process <span class="arithmatex">\(X\)</span> under a given probability measure <span class="arithmatex">\(P\)</span> is called a <strong>Markov process</strong> if it satisfies the <strong>Markov property</strong>:</p>
+<div class="arithmatex">\[
+\begin{equation}
+    P\left[ X_{t} \in B |\mathcal{F}_s \right]=P\left[ X_{t} \in B |X_s \right]
+\end{equation}
+\]</div>
+<p>for every <span class="arithmatex">\(s\leq t\)</span> and Borel set <span class="arithmatex">\(B \in \mathcal{S}\)</span>.</p>
+<p>The probability distribution <span class="arithmatex">\(B\mapsto \mu[B]:=P[X_0 \in B]\)</span> is called the <strong>start distribution</strong> of the Markov process.</p>
+</div>
+<p>Note that the Markov property is equivalent to <span class="arithmatex">\(E[ f(X_t)|\mathcal{F}_s ]=E[ f(X_t)| X_s ]\)</span> for every bounded measurable function <span class="arithmatex">\(f:S \to \mathbb{R}\)</span>.</p>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>In this definition, a Markov process is in fact the specification of a probability measure on the path space such that the canonical process satisfies the <strong>Markov property</strong>.</p>
+<p>Note that we can alternatively give ourselves any abstract filtrated probability space <span class="arithmatex">\((\tilde{\Omega}, \tilde{\mathcal{F}}, \tilde{\mathbb{F}},\tilde{P})\)</span> and define Markov processes as adapted processes <span class="arithmatex">\(\tilde{X}\)</span> satisfying the markov property.</p>
+<p>However the mapping <span class="arithmatex">\(\omega \mapsto (t\mapsto \tilde{X}_t(\omega))\)</span> from <span class="arithmatex">\(\tilde{\Omega}\)</span> to <span class="arithmatex">\(\Omega\)</span> with the pullback measure <span class="arithmatex">\(P:=\tilde{P}\circ\tilde{X}^{-1}\)</span> specifies the probability measure <span class="arithmatex">\(P\)</span> under which the canonical process <span class="arithmatex">\(X\)</span> is a Markov process with the same start distribution and same law.</p>
+</div>
+<p>From this remark, we see that defining a Markov process corresponds precisely to specifying the probability on the canonical space <span class="arithmatex">\(\Omega = S^{\mathbf{T}}\)</span>.
+In other terms, providing the structure of the mappings</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    P_{s,t}(B):=P\left[ X_t \in B |X_s \right] \quad \text{and}\quad \mu(B)=P[X_0 \in B]
+\end{equation*}
+\]</div>
+<p>for every <span class="arithmatex">\(B \in \mathcal{S}\)</span> and <span class="arithmatex">\(s\leq t\)</span>.  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>A typical way to see a discrete time finite state Markov process is as follows.<br />
+We set <span class="arithmatex">\(S=\{1,2,3\}\)</span> and <span class="arithmatex">\(\mu:=\delta_1\)</span>.
+We further assume that the Markov process <span class="arithmatex">\(X\)</span> is time homogeneous, that is <span class="arithmatex">\(P[X_{t+1}\in B|X_s]=P[X_1 \in B|X_0]\)</span> providing the following evolution starting from <span class="arithmatex">\(1\)</span>.</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    p=\begin{pmatrix}
+        0 &amp; 1/2 &amp; 1/2 \\ 1/2 &amp;
+        1/4 &amp; 1/4\\ 2/3 &amp; 1/3 &amp; 0
+    \end{pmatrix}.     
+\end{equation*}
+\]</div>
+<pre class="mermaid"><code>flowchart LR
+  s2((State 2)) --&gt;|1/4| s2
+  s2 --&gt;|1/2| s1((State 1))
+  s1 --&gt;|1/2| s2
+  s1 --&gt;|1/2| s3
+  s3 --&gt;|2/3| s1
+  s3 --&gt;|1/3| s2
+  s2 --&gt;|1/4| s3((State 3))</code></pre>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Random walk</p>
+<p>Let <span class="arithmatex">\(Y\)</span> be a discrete stochastic process of independent random variables with values in <span class="arithmatex">\(S=\mathbb{Z}^d\)</span>.
+Define <span class="arithmatex">\(X_t:=\sum_{s=0}^{t} Y_s\)</span> and <span class="arithmatex">\(\mathcal{F}_t:=\sigma(X_s\colon s\leq t)\)</span>.
+For <span class="arithmatex">\(y\in\mathbb{Z}^d\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+    P[X_{t+1}=y | \mathcal{F}_t]
+    &amp; =P[Y_{t+1} =y-X_t | \mathcal{F}_t]
+    \\
+    &amp;=\sum_{x\in\mathbb{Z}^d} P[Y_{t+1}=y-x | \mathcal{F}_t] 1_{\{X_t=x\}} 
+    \\
+    &amp; = \sum_{x\in\mathbb{Z}^d} P[Y_{t+1}=y-x ] 1_{\{X_t=x\}} 
+    \\
+    &amp; = \sum_{x\in\mathbb{Z}^d} P[Y_{t+1}=y-x | X_t] 1_{\{X_t=x\}}
+    \\
+    &amp; = P[Y_{t+1}=y-X_t | X_t]
+    \\
+    &amp; = P[X_{t+1}=y | X_t].
+\end{align*}
+\]</div>
+</div>
+<p>In both examples, we are either providing the transition probabilities or assuming a probability measure on the full space without checking whether such a probability measure can be constructed.</p>
+<p>Hence</p>
+<ul>
+<li>A Markov process defines a start measure <span class="arithmatex">\(\mu_0\)</span> and family of transition probabilities <span class="arithmatex">\(P_{st}(\cdot, \cdot)\)</span>. What are these transition probabilities? What are their properties?</li>
+<li>Is it possible to construct a markov process (or in other terms a probability measure <span class="arithmatex">\(P\)</span> on the path space) from families of transition probabilities? If so, under which conditions?</li>
+</ul>
+<p>This is the content of the following section</p>
+<h2 id="from-markov-process-to-transition-probability">From Markov Process to Transition probability</h2>
+<p>Every <span class="arithmatex">\(\sigma(X_s)\)</span>-measurable random variable <span class="arithmatex">\(Y\)</span> can be written as <span class="arithmatex">\(Y = f(X_s)\)</span> for some measurable function <span class="arithmatex">\(f:S\to \mathbb{R}\)</span>.
+Hence, there exist measurable functions <span class="arithmatex">\(x\mapsto P_{st}(x,B)\)</span> such that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    P_{st}(X_s,B)=P\left[ X_t\in B|X_s \right]
+\end{equation*}
+\]</div>
+<p>for every <span class="arithmatex">\(s&lt;t\)</span> and <span class="arithmatex">\(B\in \mathcal{S}\)</span>.
+Furthermore, it seems very natural that <span class="arithmatex">\(B\mapsto P_{st}(x,B)\)</span> should be a probability measure.
+This leads us to the notion of stochastic kernel and transition probability which is an alternative way to see Markov processes.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Stochastic Kernel (see Fubini-Tonelli in Chapter 3)</p>
+<p>A <em>stochastic kernel</em> on <span class="arithmatex">\((S, \mathcal{S})\)</span> is a function <span class="arithmatex">\(K:S\times \mathcal{S}\to [0,\infty)\)</span> such that</p>
+<ul>
+<li><span class="arithmatex">\(x \mapsto K(x,B)\)</span> is measurable for every event <span class="arithmatex">\(B\)</span> in <span class="arithmatex">\(\mathcal{S}\)</span>.</li>
+<li><span class="arithmatex">\(B \mapsto K(x,B)\)</span> is a measure for every <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(S\)</span>.</li>
+</ul>
+<p>If <span class="arithmatex">\(K(x,\cdot)\)</span> is a probability measure, then we call it sometimes refered to as a <strong>transition probability</strong>.</p>
+</div>
+<p>For a measurable function <span class="arithmatex">\(f:S\to \mathbb{R}\)</span> and two kernels <span class="arithmatex">\(K\)</span> and <span class="arithmatex">\(L\)</span>, we define</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    Kf(x)=\int_{}^{} f(y)K(x,dy) \quad \text{and}\quad KL(x,A)=\int_{}^{}L(y,A) K(x,dy)
+\end{equation*}
+\]</div>
+<p>An easy exercise shows that <span class="arithmatex">\(Kf\)</span> is a measurable function and that <span class="arithmatex">\(KL\)</span> is once again a stochastic kernel.
+The question of whether the mapping <span class="arithmatex">\(B\mapsto P_{st}(x,B)\)</span> is a probability measure for every <span class="arithmatex">\(x\)</span> is in general not true.
+However, it holds on Borel spaces as the following proposition shows.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Regular conditional distribution</p>
+<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be two <span class="arithmatex">\(S\)</span> valued random variables.
+Then, there exists a stochastic kernel <span class="arithmatex">\(K:S\times \mathcal{S}\to [0,1]\)</span> such that</p>
+<div class="arithmatex">\[
+K\left( X,B \right)= P\left[ Y \in B | X \right]
+\]</div>
+<p>almost surely for every Borel set <span class="arithmatex">\(B\)</span> and this stochastic kernel is unique almost surely.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Without loss of generality, we may assume that <span class="arithmatex">\(S=\mathbb{R}\)</span>.
+For every rational <span class="arithmatex">\(r\)</span>, there exists a measurable function <span class="arithmatex">\(f(\cdot,r): S\to [0,1]\)</span> such that <span class="arithmatex">\(f(X,r)=P[ Y\leq r |X ]\)</span> almost surely.
+Since <span class="arithmatex">\(f(X,r)\leq f(X,q)\)</span> almost surely for every <span class="arithmatex">\(r\leq q\)</span> and <span class="arithmatex">\(\lim_{r \to  \infty} f(X,r) =1\)</span> and <span class="arithmatex">\(\lim_{r\to -\infty}f(X,r)=0\)</span> almost surely, and these conditions are countable and only depending on <span class="arithmatex">\(X\)</span>, there exists a set <span class="arithmatex">\(A\in \sigma(X)\)</span> of measure one such that <span class="arithmatex">\(f(x,r)\)</span> is increasing with limit at <span class="arithmatex">\(\pm \infty\)</span> being <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(1\)</span>.</p>
+<p>Hence, defining</p>
+<div class="arithmatex">\[
+F(x,t)=1_A(x)\inf_{r&gt;t, r\in \mathbb{Q}}f(x,r)+1_{A^c}(x)1_{[0,\infty)}(t)
+\]</div>
+<p>we get that <span class="arithmatex">\(F(x,\cdot)\)</span> is a cumulative distribution function for every <span class="arithmatex">\(x\in \mathbb{R}\)</span>.
+In particular, there exists probability measures <span class="arithmatex">\(K(x, \cdot)\)</span> such that</p>
+<div class="arithmatex">\[
+K(x,B)=\int_{B}^{} F(x,dt)
+\]</div>
+<p>and by construction <span class="arithmatex">\(x\mapsto K(x,B)\)</span> is measurable for every <span class="arithmatex">\(x\)</span>.
+A monotone class argument together with monotone convergence for conditional expectation shows that</p>
+<div class="arithmatex">\[
+K(X,B)=P\left[ Y \in B|X \right]
+\]</div>
+<p>and uniqueness almost surely follows from the uniqueness almost surely of the conditional expectation.</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>In particular for any bounded measurable function <span class="arithmatex">\(f:\mathbb{R}^2\to \mathbb{R}\)</span>, it holds</p>
+<div class="arithmatex">\[
+E\left[ f(X,Y)| X \right]=\int_{}^{} f(X,y)K(X,dy) = g(X)
+\]</div>
+<p>where</p>
+<div class="arithmatex">\[
+g(x) = \int_{}^{} f(x,y)K(x,dy)
+\]</div>
+</div>
+<p>This statement leads to the following proposition.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Markov process transition probabilities</p>
+<p>If <span class="arithmatex">\(X\)</span> is a Markov process under <span class="arithmatex">\(P\)</span> with start distribution <span class="arithmatex">\(\mu\)</span>, there exists a family <span class="arithmatex">\((P_{st})_{s&lt;t}\)</span> of transition probabilities such that</p>
+<div class="arithmatex">\[
+P\left[ X_t \in B |\mathcal{F}_s \right]=P_{st}(X_s,B)
+\]</div>
+<p>for every <span class="arithmatex">\(s&lt;t\)</span>.
+Furthermore, <span class="arithmatex">\((P_{st})_{s&lt;t}\)</span> satisfies the semi-group property</p>
+<div class="arithmatex">\[
+P_{st}P_{tu}=P_{su}
+\]</div>
+<p>for every <span class="arithmatex">\(s&lt;t&lt;u\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Suppose that <span class="arithmatex">\(X\)</span> is a Markov process.
+According to Proposition "Regular conditional distribution", it follows that there exists a family of stochastic kernels <span class="arithmatex">\(P_{st}\)</span> such that <span class="arithmatex">\(P[ X_t \in B|X_s ]=P_{st}(X_s, B)\)</span>, hence Property.</p>
+<p>As for the semi-group property, it follows from the tower property of conditional expectation.
+Indeed, it holds <span class="arithmatex">\(P_{st}(x,B)=P[X_t\in B|X_s=x]\)</span> almost surely for every <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(B\in \mathcal{S}\)</span> and <span class="arithmatex">\(s&lt;t\)</span> as well as <span class="arithmatex">\(E[f(X_t)|\mathcal{F}_s]=E[f(X_t)|X_s]=\int_{}^{} f(y)P_{st}(X_s,dy)\)</span>.
+Hence, using the Markov property,</p>
+<div class="arithmatex">\[
+P_{st}P_{tu}(X_s,B)=\int_{S}^{} P_{tu}(y,B)P_{st}(X_s,dy)=E\left[ P_{tu}(X_t,B)|\mathcal{F}_s \right] = E\left[ E\left[ 1_{\{X_u \in B\}}|X_t \right]|\mathcal{F}_s \right]
+\]</div>
+<div class="arithmatex">\[
+E\left[ E\left[ 1_{\{X_u \in B\}} |\mathcal{F}_t\right] |\mathcal{F}_s\right]=E\left[ 1_{\{X_u \in B\}} |\mathcal{F}_s\right]=E\left[ 1_{\{X_u \in B\}} | X_s\right]=P_{su}(X_s,B)
+\]</div>
+<p>By the uniqueness of the stochastic kernel, we deduce that <span class="arithmatex">\(P_{st}P_{tu}=P_{su}\)</span>.</p>
+</div>
+<h2 id="from-transition-probabilities-to-markov">From Transition Probabilities to Markov</h2>
+<p>The most interesting, and involving question though is the reciprocal.
+In other terms, given a start distribution <span class="arithmatex">\(\mu\)</span> and a family of transition probabilities, does there exists a probability measure <span class="arithmatex">\(P\)</span> on the path space such that the canonical process is a Markov process with the given transition probabilities?
+Is this process unique?
+It is indeed true and based on the fondamental Kolmogorov extension Theorem that we will treat in a separate subsection during the construction of the Brownian motion.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Existence of Markov process</p>
+<p>Given a probability distribution <span class="arithmatex">\(\mu\)</span> and a family of transition probabilities <span class="arithmatex">\((P_{st})_{s&lt;t}\)</span> satisfying the semi-group property, then there exists a probability measure <span class="arithmatex">\(P^\mu\)</span> such that <span class="arithmatex">\(X\)</span> is a Markov process with start distribution <span class="arithmatex">\(\mu\)</span> and such that the transition probability holds.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>We define the family of probability measures <span class="arithmatex">\((P^\mu_I)\)</span> for every finite family <span class="arithmatex">\(I=\{0&lt;t_1&lt;\ldots&lt;t_n\}\subseteq \mathbf{T}\)</span> by setting for every <span class="arithmatex">\(n+1\)</span>-dimensional Borel set <span class="arithmatex">\(A_0\times A_1\times \cdots A_n\)</span></p>
+<div class="arithmatex">\[
+P^\mu_I(A_0\times \ldots \times A_n )=\int_{A_0}^{}\mu(dx_0)\int_{A_1}^{}P_{0t_1}(x_0,dx_1)\int_{A_2}^{}P_{t_1t_2}(x_1,dx_2)\cdots \int_{A_n}^{} P_{t_{n-1}t_n}(x_{n-1},dx_n)
+\]</div>
+<p>Due to the semi-group property, it defines a consistent family of probability measures.
+Hence, by means of the Kolmogorov extension theorem, we can extend this projective family to a unique probability measure <span class="arithmatex">\(P^\mu\)</span> such that <span class="arithmatex">\(X\)</span> by definition fulfills the transition probability property.
+Hence, <span class="arithmatex">\(X\)</span> is a Markov process under <span class="arithmatex">\(P^\mu\)</span> with start distribution <span class="arithmatex">\(\mu\)</span> and transition probability <span class="arithmatex">\((P_{st})_{s&lt;t}\)</span>.</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that given a family of transition probabilities <span class="arithmatex">\((P_{st})\)</span> we can define a probability measure <span class="arithmatex">\(P^\mu\)</span> on the path space such that <span class="arithmatex">\(X\)</span> is a Markov process with start distribution <span class="arithmatex">\(\mu\)</span>.
+We denote in that case <span class="arithmatex">\(E^\mu\)</span> the expectation under this probability measure.
+This is in particular the case for all the Dirac measures <span class="arithmatex">\(\delta_{x}\)</span> for <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(S\)</span>, that is, for Markov processes starting at <span class="arithmatex">\(x\)</span>.
+We denote <span class="arithmatex">\(P^x\)</span> instead of <span class="arithmatex">\(P^{\delta_x}\)</span> and <span class="arithmatex">\(E^x\)</span> instead of <span class="arithmatex">\(E^{\delta_x}\)</span>.
+Given <span class="arithmatex">\(P^x\)</span> for every <span class="arithmatex">\(x\)</span> and a distribution <span class="arithmatex">\(\mu\)</span>, we can recover any <span class="arithmatex">\(P^\mu\)</span> as follows.</p>
+<div class="arithmatex">\[
+P^{\mu}[A]=\int_{}^{} P^{x}[A] \mu(dx)
+\]</div>
+<p>In fact, <span class="arithmatex">\((x,A)\mapsto P^{x}[A]\)</span> is a stochastic kernel on <span class="arithmatex">\(S\times \mathcal{F}\)</span> and therefore the relation</p>
+<div class="arithmatex">\[
+P^{\mu}[A]=\int_{}^{} P^{x}[A] \mu(dx)
+\]</div>
+</div>
+<h2 id="markov-property">Markov Property</h2>
+<p><strong>From now on, we will only consider time homogeneous Markov processes:</strong></p>
+<div class="admonition definition">
+<p class="admonition-title">Time homogeneous Markov process</p>
+<p>A Markov process is called <strong>time homogeneous</strong> if and only if <span class="arithmatex">\(P_{st}=P_{0t-s}\)</span>, or in other terms, <span class="arithmatex">\(P[X_t\in B|X_s]=P[X_{t-s}\in B|X_0]\)</span>.</p>
+</div>
+<p>In that case, we only have to specify the start distribution <span class="arithmatex">\(\mu\)</span> and a family of transition probabilities <span class="arithmatex">\(P_t\)</span>.</p>
+<p>Let <span class="arithmatex">\(Z\)</span> be a random variable on <span class="arithmatex">\(\Omega\)</span>, that is, <span class="arithmatex">\(\mathcal{F}=\mathcal{F}_{\infty}=\sigma(X_t\colon t \in \mathbf{T})\)</span>-measurable.
+It is, in particular, a function <span class="arithmatex">\(\omega=(\omega_t)\mapsto Z(X(\omega))=Z((\omega)_{t \in \mathbf{T}})\)</span>.</p>
+<p>However:</p>
+<ul>
+<li>If <span class="arithmatex">\(Z\)</span> is <span class="arithmatex">\(\mathcal{F}_{t}=\sigma(X_s\colon s\leq t)\)</span>-measurable, then <span class="arithmatex">\(Z\)</span> can actually be seen as a measurable function that only depends on the paths up to time <span class="arithmatex">\(t\)</span>, that is, <span class="arithmatex">\(\omega \mapsto Z((X_s(\omega))_{s\leq t})=Z((\omega)_{s\leq t})\)</span>.</li>
+<li>If <span class="arithmatex">\(Z\)</span> is <span class="arithmatex">\(\sigma(X_t)\)</span>-measurable, then it can be seen as a measurable function that only depends on the value of the path at time <span class="arithmatex">\(t\)</span>, that is, <span class="arithmatex">\(\omega \mapsto Z(X_t(\omega))=Z(\omega_t)\)</span>.</li>
+</ul>
+<p>In particular, for the shift operator of a path by <span class="arithmatex">\(t\)</span>:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    \theta_t :\Omega &amp; \longrightarrow \Omega\\
+    \omega =(\omega_s)_{s \in \mathbf{T}} &amp; \longmapsto \theta_t(\omega)=(\omega_{s+t})_{s\in \mathbf{T}}
+\end{aligned}
+\]</div>
+<p>we have that <span class="arithmatex">\(Z\circ \theta_t(\omega)=Z\left( (\omega_{s+t})_{s\in \mathbf{T}} \right)\)</span> is the evaluation of the random variable <span class="arithmatex">\(Z\)</span> on the shifted path space by <span class="arithmatex">\(t\)</span>.
+In particular, if <span class="arithmatex">\(Z\)</span> is <span class="arithmatex">\(\sigma(X_s)\)</span>-measurable, then it holds that <span class="arithmatex">\(Z\circ \theta_t(\omega)=Z(\omega_{t+s})\)</span> is <span class="arithmatex">\(\sigma(X_{t+s})\)</span>-measurable.</p>
+<div class="admonition proposition">
+<p class="admonition-title"><strong>Markov Property</strong></p>
+<p>Let <span class="arithmatex">\((P_{t})\)</span> be a family of transition probabilities and <span class="arithmatex">\(\mu\)</span> be a probability distribution.
+For every bounded or positive measurable random variable <span class="arithmatex">\(Z\)</span>, it holds that <span class="arithmatex">\(x \mapsto E^x[Z]\)</span> is measurable.
+In particular, for every <span class="arithmatex">\(t\)</span>, the function <span class="arithmatex">\(E^{X_t}[Z]\)</span> defined as</p>
+<div class="arithmatex">\[
+\omega \mapsto E^{X_t(\omega)}[Z]
+\]</div>
+<p>is <span class="arithmatex">\(\sigma(X_t)\)</span>-measurable, and the Markov property holds</p>
+<div class="arithmatex">\[
+E^\mu\left[ Z\circ \theta_t |\mathcal{F}_t  \right]=E^{X_t}\left[ Z \right]
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>By monotony and approximation arguments, it is enough to show the proposition for the function <span class="arithmatex">\(Z = 1_{A_0\times A_1\times \ldots \times A_n}(X_0,X_{t_{1}},\ldots, X_{t_n})\)</span> where <span class="arithmatex">\(A_k\)</span> are Borel sets.
+By definition of <span class="arithmatex">\(P^x\)</span> and the previous remarks, it follows that</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     E^x[Z] &amp; = \int_{A_0}^{}\delta_x(dx_0)\int_{A_1}^{}P_{t_1}(x_0,dx_1)\ldots \int_{A_n}^{}P_{t_n-t_{n-1}}(x_{n-1},dx_n)\\
+            &amp; = 1_{A_0}(x)\int_{A_1}^{}P_{t_1}(x,dx_1)\ldots \int_{A_n}^{}P_{t_n - t_{n-1}}(x_{n-1},dx_n)
+  \end{align*}
+\]</div>
+<p>Since <span class="arithmatex">\(x \mapsto 1_{A_0}(x)\)</span> is measurable, and the <span class="arithmatex">\((P_{st})\)</span> are stochastic kernels, the first assertion follows.
+In particular, for this specific form of <span class="arithmatex">\(Z\)</span>, it holds  </p>
+<div class="arithmatex">\[
+E^{X_t}[Z]=1_{A_0}(X_t)\int_{A_1}^{}P_{t_1}(X_t,dx_1)\ldots \int_{A_n}^{}P_{t_n-t_{n-1}}(x_{n-1},dx_n)
+\]</div>
+<p>As for the second assertion, once again with a monotone class argument, it is enough to show that</p>
+<div class="arithmatex">\[
+  E^\mu[ Z\circ \theta_t Y ]=E^\mu[ E^{X_t}[ Z ]Y]
+\]</div>
+<p>for <span class="arithmatex">\(Y = 1_{B_0\times B_1\times \ldots \times B_m}(X_0,X_{s_{1}},\ldots, X_{s_m})\)</span> where <span class="arithmatex">\(A_k\)</span> are Borel sets and <span class="arithmatex">\(s_m= t\)</span>.
+By definition of <span class="arithmatex">\(P^\mu\)</span>, the shift operator, and the expression of <span class="arithmatex">\(E^{X_t}[Z]\)</span> above we get</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     E^\mu[ Z\circ \theta_t Y ] &amp; = E^\mu\left[ 1_{A}(X_{t}, X_{t+t_1}, \ldots, X_{t+t_n}) 1_B(X_{0}, \ldots, X_{s_m}) \right]\\
+                                &amp; = \int_{B_0}^{}\mu(dx_0)\int_{B_1}^{}P_{s_1}(x_0,dx_1)\ldots\\
+                                &amp; \qquad \qquad \qquad\ldots \int_{B_m\cap A_0}^{}P_{t-s_{m-1}}(x_{m-1},dx_m)\int_{A_1}^{} P_{t+t_1-t}(x_{m},dy_1)\cdots \int_{A_n}^{} P_{t+t_{n} -t-t_{n-1}}(y_{n-1},dy_n)\\
+                                &amp; = \int_{B_0}^{}\mu(dx_0)\int_{B_1}^{}P_{s_1}(x_0,dx_1)\ldots \int_{B_m\cap A_0}^{}P_{t-s_{m-1}}(x_{m-1},dx_m)\int_{A_1}^{} P_{t_1}(x_{m},dy_1)\cdots\\
+                                &amp; \qquad \qquad \qquad \cdots \int_{A_n}^{} P_{t_{n}-t_{n-1}}(y_{n-1},dy_n)\\
+                                &amp; = E^\mu[ E^{X_t}[ Z ]Y]
+  \end{align*}
+\]</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

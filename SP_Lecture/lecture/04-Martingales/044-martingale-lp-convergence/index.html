@@ -12,6 +12,8 @@
         <link rel="prev" href="../043-martingale-as-convergence/">
       
       
+        <link rel="next" href="../../05-Markov/050-introduction/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
@@ -314,6 +316,8 @@
   
     
     
+      
+        
       
         
       
@@ -1179,6 +1183,103 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Markov Processes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Markov Processes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Markov/050-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Markov/051-markov-extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markov Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1263,9 +1364,12 @@ This however only holds for <span class="arithmatex">\(p&gt;1\)</span>.</p>
 <p>It also holds, <span class="arithmatex">\(X_t1_{\{\tau&gt;t\}}\geq -X_t^-\)</span>.
 Altogether, with Doob's optional sampling theorem and <span class="arithmatex">\(X\)</span> being a sub-martingale, we get</p>
 <div class="arithmatex">\[
-\begin{equation*}
-   E\left[ X_t \right]\geq E\left[ X_{\tau\wedge t} \right]\geq \lambda P\left[ \overline{X}_t\geq \lambda \right]+E\left[ 1_{\{\tau&gt;t\}} X_t\right]\geq \lambda P\left[ \overline{X}_t\geq \lambda \right]-E\left[ X_t^- \right],
-\end{equation*}
+\begin{align*}
+   E\left[ X_t \right]  &amp; = E\left[ E\left[X_t |\mathcal{F}_{t\wedge \tau} \right] \right]\\
+                        &amp; \geq E\left[ X_{\tau\wedge t} \right]\\
+                        &amp; \geq \lambda P\left[ \overline{X}_t\geq \lambda \right]+E\left[ 1_{\{\tau&gt;t\}} X_t\right]\\
+                        &amp; \geq \lambda P\left[ \overline{X}_t\geq \lambda \right]-E\left[ X_t^- \right],
+\end{align*}
 \]</div>
 <p>and conclude the first inequality by observing that, on the one hand, <span class="arithmatex">\(E[X_t^+]=E[X_t]+E[X_t^-]\)</span>, and on the other hand,</p>
 <div class="arithmatex">\[
@@ -1416,7 +1520,7 @@ The same reasoning yields</p>
                           &amp; \leq E\left[ X_0^2 \right]+\sum E\left[ \left( X_s-X_{s-1} \right)^2 \right].
 \end{align*}
 \]</div>
-<p>It follows that <span class="arithmatex">\(\sup_{t}E\left[ X_t^2 \right]&lt;\infty\)</span> and therefore, by means of Theorem \ref{thm:martingaleconvergenceLp}, it follows that <span class="arithmatex">\(X_t\to X_\infty\)</span> almost surely and in <span class="arithmatex">\(L^2\)</span>.</p>
+<p>It follows that <span class="arithmatex">\(\sup_{t}E\left[ X_t^2 \right]&lt;\infty\)</span> and therefore, by means of martingale convergence theorem, it follows that <span class="arithmatex">\(X_t\to X_\infty\)</span> almost surely and in <span class="arithmatex">\(L^2\)</span>.</p>
 </div>
 <div class="admonition theorem">
 <p class="admonition-title">Theorem</p>

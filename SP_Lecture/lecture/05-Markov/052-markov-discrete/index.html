@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../../01-Sets-Functions/013-measurable-continuous-functions/">
-      
-      
-        <link rel="next" href="../021-measure/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>Introduction - Stochastics</title>
+        <title>Markov Chains - Stochastics</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#markov-chains" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Markov Chains
             
           </span>
         </div>
@@ -214,20 +210,16 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
           
   
@@ -310,10 +302,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -332,20 +322,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -357,7 +344,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -586,10 +573,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -607,11 +592,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -626,7 +611,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Measure Theory, Construction
@@ -637,19 +622,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../02-Measure/020-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -659,7 +635,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -672,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../021-measure/" class="md-nav__link">
+      <a href="../../02-Measure/021-measure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../022-semi-ring-to-ring/" class="md-nav__link">
+      <a href="../../02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../023-ring-to-s-algebra/" class="md-nav__link">
+      <a href="../../02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1177,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-Markov/050-introduction/" class="md-nav__link">
+      <a href="../050-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1199,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-Markov/051-markov-extension/" class="md-nav__link">
+      <a href="../051-markov-extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1245,16 +1220,154 @@
 
 
 
-<h1 id="introduction">Introduction</h1>
-<p>This Chapter introduce the notion of measure.
-From the definition on a <span class="arithmatex">\(\sigma\)</span>-algebra it goes forward to measure defined on simpler class of sets such as "Lebesgue/Stieljes" measure.
-How to extend those measures to larger class of sets such as ring.
-It finishes with Carathéodory's extension theorem that allows to extend those meaningfull measures to the <span class="arithmatex">\(\sigma\)</span>-algebra.</p>
+<h1 id="markov-chains">Markov Chains</h1>
+<p>In this subsection we treat discrete time Markov processes chains with a finite or eventually countable state space <span class="arithmatex">\(S\)</span>, also called <strong>Markov Chains</strong>.
+Recall that we only consider time homogenous Markov processes.
+Defining</p>
+<div class="arithmatex">\[
+\begin{align*}
+    \mu_x:=P[X_0=x] \quad p_{xy}:=P\left[X_{t+1}=y|X_t=x\right]=P[X_1=y|X_0=x]
+\end{align*}
+\]</div>
+<p>it follows that <span class="arithmatex">\(0\leq \mu_x, p_{xy}\leq 1\)</span> and <span class="arithmatex">\(\sum \mu_x=1\)</span>, as well as <span class="arithmatex">\(\sum_y p_{xy}=1\)</span> for every <span class="arithmatex">\(x\)</span>.
+In other terms, the initial distribution <span class="arithmatex">\(\mu:=(\mu_x)\)</span> is a random vector and the one step transition probability can be represented by the stochastic matrix <span class="arithmatex">\(P=(p_{xy})\)</span>.
+For <span class="arithmatex">\(B\subseteq S\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    P_1(x,B)=\sum_{y \in B}p_{xy}
+\end{equation*}
+\]</div>
+<p>By Chapman Kolmogorov relation, we have <span class="arithmatex">\(P_t=P_{t-1}P_1\)</span>, hence, defining recursively</p>
+<div class="arithmatex">\[
+\begin{equation}\label{eq:repetition_markov}
+    p^t_{xy}=\sum_{z}p^{t-1}_{xz}p_{zy}
+\end{equation}
+\]</div>
+<p>we have</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    P_t(x,B)=\sum_{y \in B}p^t(x,y)
+\end{equation*}
+\]</div>
+<p>In the discrete case the following strong Markov property holds.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Strong Markov Property</p>
+<p>Let <span class="arithmatex">\(Z\)</span> be a bounded random variable and <span class="arithmatex">\(\tau\)</span> a stopping time.
+Then it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    1_{\{\tau&lt;\infty\}}E^{\mu}\left[ Z\circ\theta_{\tau}|\mathcal{F}_\tau \right]=1_{\{\tau&lt;\infty\}} E^{X_{\tau}}\left[ Z \right].
+\end{equation*}
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>For every <span class="arithmatex">\(A \in \mathcal{F}_\tau\)</span> we get by Theorem \ref{thm:markov property} and the fact that <span class="arithmatex">\(A\cap \{\tau=t\}\in \mathcal{F}_t\)</span> for every <span class="arithmatex">\(t\)</span>,</p>
+<div class="arithmatex">\[
+\begin{align*}
+    E^{\mu}\left[1_A1_{\{\tau&lt;\infty\}} Z\circ\theta_\tau\right]
+    &amp;=\sum_{t} E^\mu \left[1_A1_{\{\tau=t\}} Z\circ\theta_t\right]\\
+    &amp;= \sum_{t} E^{\mu}\left[1_A1_{\{\tau=t\}} E^{X_t}\left[Z\right]\right]\\ 
+    &amp;=E^\mu\left[1_A1_{\{\tau&lt;\infty\}} E^{X_\tau}\left[Z\right]\right],
+\end{align*}
+\]</div>
+<p>from which the claim follows.</p>
+</div>
+<p>Markov chains are defined locally:
+The next step is entirely defined by the place where you are now and the transition probability.
+The natural question therefore is whether you will come back or not.
+Given a state <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(S\)</span>, define recursively </p>
+<div class="arithmatex">\[
+\begin{align*}
+    \tau^0_y  &amp; :=0\\
+    \tau^1_y &amp; := \inf\left\{ t&gt; \tau^0_y\colon X_t=y \right\}\\
+    \vdots\\
+    \tau^k_y &amp; := \inf\left\{ t&gt;\tau^{k-1}_y\colon X_t=y \right\}\\
+    \vdots
+\end{align*}
+\]</div>
+<p>Here <span class="arithmatex">\(\tau^k_y\)</span> denotes the <span class="arithmatex">\(k\)</span>-th return time to the state <span class="arithmatex">\(y\)</span>.
+Let further </p>
+<div class="arithmatex">\[
+\begin{equation*}
+    \rho_{xy}:=P^{x}\left[ \tau_y&lt;\infty \right]
+\end{equation*}
+\]</div>
+<p>be the probability that starting from <span class="arithmatex">\(x\)</span>, the Markov chain visits the state <span class="arithmatex">\(y\)</span> at least once, 
+where we denote the first return time as <span class="arithmatex">\(\tau_y = \tau^1_y\)</span>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>We say that a time homogeneous Markov chain is </p>
 <ul>
-<li><a href="../021-measure/">Measures</a></li>
-<li><a href="../022-semi-ring-to-ring/">From Semi-Ring to Ring</a></li>
-<li><a href="../023-ring-to-s-algebra/">From Ring to <span class="arithmatex">\(\sigma\)</span>-Alegebra: Carathéodory's Extension Theorem</a></li>
+<li><strong>recurrent</strong>: if <span class="arithmatex">\(\rho_{xx}=1\)</span>;</li>
+<li><strong>transient</strong>: if <span class="arithmatex">\(\rho_{xx}&lt;1\)</span>.</li>
 </ul>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>For any two states <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(S\)</span>, it holds</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    P^x[\tau_y^k &lt; \infty] = \rho_{xy}\rho_{yy}^{k-1}.
+\end{equation*}
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>We show it per induction.
+Per definition, it holds <span class="arithmatex">\(P^x[\tau_y^1 &lt; \infty]= \rho_{xy}\)</span>.
+Suppose therefore that the claim holds for every <span class="arithmatex">\(l=1,\ldots,k-1\)</span> and we show it for <span class="arithmatex">\(k\)</span>.</p>
+<p>Define <span class="arithmatex">\(\tau=\tau_y^{k-1}\)</span> and <span class="arithmatex">\(Z:=1_{\{\tau_y &lt; \infty \}}\)</span>.
+It follows that <span class="arithmatex">\(\{ \tau_y^k &lt; \infty \} = \{ \tau_y \circ \theta_\tau &lt; \infty \}\)</span>.
+Furthermore, from <span class="arithmatex">\(1_{\{\tau&lt;\infty\}}\)</span> bounded and <span class="arithmatex">\(\mathcal{F}_{\tau}\)</span>-measurable and <span class="arithmatex">\(X_{\tau}=y\)</span> on <span class="arithmatex">\(\{\tau&lt;\infty\}\)</span>, using the strong Markov property it follows that</p>
+<div class="arithmatex">\[
+\begin{align*}
+    P^{x}[\tau_y^k &lt; \infty ] &amp;= P^{x}[\tau_y \circ \theta_\tau &lt; \infty ]\\
+                              &amp;= E^x\left[1_{\{\tau &lt; \infty\}}  (Z \circ \theta_\tau) \right]\\
+                              &amp;= E^x\left[1_{\{\tau &lt; \infty\}}  E^x\left[Z \circ \theta_\tau| \mathcal{F}_\tau\right]\right]\\
+                              &amp;= E^x\left[1_{\{\tau &lt; \infty\}}  E^{X_\tau}\left[Z\right] \right]\\
+                              &amp;= E^x\left[1_{\{\tau &lt; \infty\}}  P^y[\tau_y&lt;\infty]\right]\\
+                              &amp;= \rho_{yy} P^x[\tau_y^{k-1} &lt; \infty]\\
+                              &amp;= \rho_{yy} \rho_{xy} \rho_{yy}^{k-2}\\
+                              &amp;= \rho_{xy} \rho_{yy}^{k-1}.
+\end{align*}
+\]</div>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> be two states in <span class="arithmatex">\(S\)</span>, where <span class="arithmatex">\(x\)</span> is recurrent and <span class="arithmatex">\(\rho_{xy}&gt;0\)</span>.
+Then <span class="arithmatex">\(y\)</span> is recurrent and <span class="arithmatex">\(\rho_{yx}=1\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Let us first show that <span class="arithmatex">\(\rho_{yx}=1\)</span>.
+Since <span class="arithmatex">\(x\)</span> is recurrent, it follows that <span class="arithmatex">\(\tau_x(\omega)&lt;\infty\)</span> for almost all <span class="arithmatex">\(\omega \in \Omega\)</span>.
+Hence, for almost all <span class="arithmatex">\(\omega \in \Omega\)</span> such that <span class="arithmatex">\(\tau_y(\omega)&lt;\infty\)</span> we get <span class="arithmatex">\(\tau_x \circ \theta_{\tau_y}(\omega) &lt;\infty\)</span>.</p>
+<p>Thus with <span class="arithmatex">\(H:=1_{\{\tau_x=\infty\}}\)</span>, the strong markov property, and the fact that <span class="arithmatex">\(X_{\tau_y}=y\)</span>, we get</p>
+<div class="arithmatex">\[
+\begin{align*}
+    0 &amp; =P^x[\tau_y &lt; \infty, \tau_x \circ \theta_{\tau_y} = \infty]\\
+      &amp; =E^x\left[1_{\{\tau_y&lt;\infty\}} 1_{\{\tau_x \circ \theta_{\tau_y} = \infty\}} \right]\\
+      &amp; =E^x\left[1_{\{\tau_y&lt;\infty\}} E^{X_{\tau_y}}\left[H\right] \right]\\
+      &amp; =E^x\left[1_{\{\tau_y&lt;\infty\}} P^y[\tau_x=\infty]\right] \\
+      &amp; =\rho_{xy}(1-\rho_{yx}).
+\end{align*}
+\]</div>
+<p>Since <span class="arithmatex">\(\rho_{xy} &gt; 0\)</span>, it must be that <span class="arithmatex">\(\rho_{yx}=1\)</span>.</p>
+<p>Let us finally show that <span class="arithmatex">\(y\)</span> is recurrent.
+Let <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span> be two states in <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(k\)</span> in<span class="arithmatex">\(\mathbb{N}\)</span>.
+Then by Chapman-Kolmogorov relation and an induction we get <span class="arithmatex">\(P_i[X_k=j]=p^k_{ij}\)</span>.
+Since <span class="arithmatex">\(\rho_{xy}&gt;0\)</span> and <span class="arithmatex">\(\rho_{yx}&gt;0\)</span>, there exist <span class="arithmatex">\(k_1\)</span> and <span class="arithmatex">\(k_2\)</span> in <span class="arithmatex">\(\mathbb{N}\)</span> with <span class="arithmatex">\(p_{xy}^{k_1}&gt;0\)</span> and <span class="arithmatex">\(p_{yx}^{k_2}&gt;0\)</span>.
+By the Chapman-Kolmogorov relation we get</p>
+<div class="arithmatex">\[
+p_{yy}^{k_1+t+k_2} \geq p_{yx}^{k_2} p_{xx}^t p_{xy}^{k_1}
+\]</div>
+<p>so that</p>
+<div class="arithmatex">\[
+E^y\left[N_y\right] =p_{yx}^{k_2} E^x\left[N_x\right]p_{xy}^{k_1} =\infty.
+\]</div>
+<p>Recurrence/Transience Theorem implies that <span class="arithmatex">\(y\)</span> is recurrent.</p>
+</div>
 
 
 
