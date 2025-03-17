@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../051-markov-extension/">
+      
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -210,16 +212,20 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
           
   
@@ -302,8 +308,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -322,17 +330,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -344,7 +355,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -1104,8 +1115,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1113,17 +1126,19 @@
       
         
       
+        
+      
     
     
       
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1138,7 +1153,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Markov Processes
@@ -1184,6 +1199,38 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Markov Chains
+    
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -1367,6 +1414,198 @@ p_{yy}^{k_1+t+k_2} \geq p_{yx}^{k_2} p_{xx}^t p_{xy}^{k_1}
 E^y\left[N_y\right] =p_{yx}^{k_2} E^x\left[N_x\right]p_{xy}^{k_1} =\infty.
 \]</div>
 <p>Recurrence/Transience Theorem implies that <span class="arithmatex">\(y\)</span> is recurrent.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A set <span class="arithmatex">\(C \subseteq S\)</span> is called</p>
+<ul>
+<li><strong>closed</strong>, if for <span class="arithmatex">\(x\in C\)</span>, <span class="arithmatex">\(y\in S\)</span> and <span class="arithmatex">\(\rho_{xy}&gt;0\)</span> it holds <span class="arithmatex">\(y \in C\)</span>,</li>
+<li><strong>irreducible</strong>, if <span class="arithmatex">\(\rho_{xy}&gt;0\)</span> for all <span class="arithmatex">\(x,y\in C\)</span>.</li>
+</ul>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Suppose <span class="arithmatex">\(C \subset S\)</span> is finite and closed.</p>
+<ul>
+<li>There exists <span class="arithmatex">\(x\in C\)</span> such that <span class="arithmatex">\(x\)</span> is recurrent.</li>
+<li>If <span class="arithmatex">\(C\)</span> is irreducible, then all its states are recurrent.</li>
+</ul>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<ul>
+<li>
+<p>By contradiction, assume that all states are transient, that is <span class="arithmatex">\(E^x[N_y] &lt; \infty\)</span> for all <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(C\)</span> by the recurrent/transient Theorem.
+    But then, since <span class="arithmatex">\(C\)</span> is finite we get with Tonelli's theorem</p>
+<div class="arithmatex">\[
+\sum_{y\in C} E^x[N_y] =\sum_{y\in C} \sum_{t} P^x [X_t=y] =\sum_{t}\sum_{y\in C} P^x[X_t=y]
+=\sum_{t} P^x [ X_t\in C] =\sum_{t} 1=\infty.
+\]</div>
+<p>Indeed, if <span class="arithmatex">\(P^x [X_t\in C] &lt; 1\)</span>, then there is <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(C^c\)</span> with <span class="arithmatex">\(P^x[X_t=y] &gt;0\)</span>, that is <span class="arithmatex">\(\rho_{xy} &gt;0\)</span>.
+Since <span class="arithmatex">\(C\)</span> is closed, it follows <span class="arithmatex">\(y \in C\)</span>, a contradiction.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(x \in C\)</span> is recurrent and <span class="arithmatex">\(\rho_{xy}&gt;0\)</span>, then <span class="arithmatex">\(y\)</span> is recurrent by Theorem the previous theorem.</p>
+</li>
+</ul>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(R:=\{ x \in S \colon \rho_{xx} =1  \}\)</span> be the set of recurrent states.
+Then <span class="arithmatex">\(R\)</span> is a disjoint union of closed and irreducible sets.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Fix <span class="arithmatex">\(x\)</span> in$ R$ and let $C_x :={ y\in R \colon \rho_{xy} &gt;0 } $.</p>
+<ul>
+<li>
+<p>For <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(z\)</span> in <span class="arithmatex">\(R\)</span> it holds <span class="arithmatex">\(\rho_{xy} \geq \rho_{xz} \rho_{zy}\)</span>.
+    Indeed, with <span class="arithmatex">\(H:=1_{\{\tau_y &lt; \infty\}}\)</span> and the strong Markov property using the same argument as in recurrence Theorem we obtain</p>
+<div class="arithmatex">\[
+\begin{align*}
+   \rho_{xy}  &amp; =P^x[\tau_y&lt;\infty]\\
+              &amp; \geq P^x[\tau_z&lt;\infty, \tau_y \circ \theta_{\tau_z} &lt; \infty]\\
+              &amp; =E^x[1_{\{\tau_z &lt; \infty\}} E^x[H \circ \theta_{\tau_z} | \mathcal{F}_{\tau_z}]]\\
+              &amp; =E^x[1_{\{\tau_z &lt; \infty\}}] E^z[1_{\{\tau_y &lt; \infty\}}]]\\
+              &amp; =\rho_{xz}\rho_{zy}.
+\end{align*}
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(C_x\)</span> is irreducible and closed.
+    Indeed, for <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(C_x\)</span> and <span class="arithmatex">\(\rho_{yz} &gt;0\)</span>, since <span class="arithmatex">\(y\)</span> is in <span class="arithmatex">\(C_x\)</span> we have <span class="arithmatex">\(\rho_{xy}&gt;0\)</span> and therefore by the previous step <span class="arithmatex">\(\rho_{xz} &gt;0\)</span>, that is <span class="arithmatex">\(z\)</span> belongs to <span class="arithmatex">\(C_x\)</span>.
+    Furthermore, for <span class="arithmatex">\(y\)</span> and <span class="arithmatex">\(z\)</span> in <span class="arithmatex">\(C_x\)</span>, it implies that <span class="arithmatex">\(\rho_{xy} &gt;0\)</span>, <span class="arithmatex">\(\rho_{xz}&gt;0\)</span>.
+    Recurrence Theorem yields <span class="arithmatex">\(\rho_{yx}&gt;0\)</span> and therefore <span class="arithmatex">\(\rho_{yz}&gt;0\)</span>.</p>
+</li>
+<li>
+<p>We now show that <span class="arithmatex">\(C_x \cap C_y \neq \emptyset\)</span> implies <span class="arithmatex">\(C_x=C_y\)</span>.
+    Let <span class="arithmatex">\(z\)</span> be in <span class="arithmatex">\(C_x \cap C_y\)</span> and <span class="arithmatex">\(y^\prime\)</span> in <span class="arithmatex">\(C_y\)</span>.
+    Therefore <span class="arithmatex">\(\rho_{xz}&gt;0\)</span>, <span class="arithmatex">\(\rho_{yz}&gt;0\)</span>, <span class="arithmatex">\(\rho_{yy^\prime}&gt;0\)</span> and by recurrence Theorem <span class="arithmatex">\(\rho_{zy}&gt;0\)</span>.
+    This means <span class="arithmatex">\(\rho_{xy^\prime} &gt;0\)</span> which yields <span class="arithmatex">\(y^\prime\in C_x\)</span>, hence <span class="arithmatex">\(C_y \subset C_x\)</span>.
+    Analogously, <span class="arithmatex">\(C_x \subset C_y\)</span>.</p>
+</li>
+</ul>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A measure <span class="arithmatex">\(\mu\)</span> on is called <strong>stationary</strong>&mdash;or <strong>invariant</strong>&mdash;if</p>
+<ul>
+<li><span class="arithmatex">\(\mu(y)&lt; \infty\)</span> for all <span class="arithmatex">\(y \in S\)</span>,</li>
+<li><span class="arithmatex">\(\mu(y)=\sum_{x\in S} \mu(x)p_{xy}\)</span>.</li>
+</ul>
+<p>If <span class="arithmatex">\(\mu\)</span> is a probability measure, then <span class="arithmatex">\(\mu\)</span> is called a stationary distribution.</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Suppose that <span class="arithmatex">\(\mu\)</span> is a stationary distribution, and let <span class="arithmatex">\(P^\mu\)</span> the measure such that <span class="arithmatex">\(X\)</span> is Markov with start distribution <span class="arithmatex">\(\mu\)</span>.
+Then</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     P^\mu[X_1=y] &amp; = \sum_{x\in S}P^\mu[X_1=y | X_0=x] P^\mu[X_0=x]\\
+                  &amp; =\sum_{x\in S} \mu(x) p_{xy}\\
+                  &amp; =\mu(y)
+  \end{align*}
+\]</div>
+<p>By induction, we assume that <span class="arithmatex">\(P^\mu[X_t=y]=\mu(y)\)</span>.
+Then</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     P^\mu[X_{t+1}=y] &amp; =\sum_{z\in S} P^\mu[X_{t+1}=y|X_t=z]P^\mu[X_t=z]\\
+                      &amp; =\sum_{z\in S} \mu(z) p_{zy}\\
+                      &amp; =\mu(y)
+  \end{align*}
+\]</div>
+<p>This shows <span class="arithmatex">\(P^\mu(X_t=y) = \mu(y)\)</span> for every <span class="arithmatex">\(t\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Randomw Walk</p>
+<p>Let <span class="arithmatex">\(X_t:=X_0+\sum_{s=1}^{t} Y_s\)</span> and <span class="arithmatex">\(\mathcal{F}_t:=\sigma(X_0,\dots,X_t)\)</span>.
+Then</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     p_{xy} &amp; = P[X_{t+1}=y | X_t=x]=P[\xi_{t+1}=y-X_t | X_t=x]\\
+            &amp; =P[\xi_1=y-x]\\
+            &amp; =f(y-x)
+  \end{align*}
+\]</div>
+<p>where <span class="arithmatex">\(f \colon S \to [0,1]\)</span> is such that <span class="arithmatex">\(\sum_{y\in S}f(y)=1\)</span>, that is <span class="arithmatex">\(f(y):=P[\xi_1=y]\)</span>.
+In this case <span class="arithmatex">\(\mu \equiv 1\)</span> is a stationary measure.
+Indeed,</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     \sum_{x\in S} \mu(x)p_{xy}   &amp; = \sum_{x\in S} p_{xy}\\
+                                  &amp; = \sum_{x\in S} f(y-x) \\
+                                  &amp; =\sum_{x^\prime\in S} f(x^\prime) \\
+                                  &amp; =1\\
+                                  &amp; =\mu(y)
+  \end{align*}
+\]</div>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Let <span class="arithmatex">\(x\in S\)</span> be transient and <span class="arithmatex">\(\pi\)</span> a stationary distribution.
+Then <span class="arithmatex">\(\pi(x)=0\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Exercise.</p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Suppose <span class="arithmatex">\(x\)</span> is recurrent and <span class="arithmatex">\(\tau:=\inf\{ t\colon X_t = x \}\)</span>.
+Define</p>
+<div class="arithmatex">\[
+\mu(y)=E^x\left[\sum_{t=0}^{\tau-1}1_{\{X_t=y\}}\right]=\sum_{t} P^x[X_t=y, t&lt;\tau]
+\]</div>
+<p>for all <span class="arithmatex">\(y\in S\)</span>.
+Then <span class="arithmatex">\(\mu\)</span> is a stationary measure.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>For <span class="arithmatex">\(z\)</span> in <span class="arithmatex">\(S\)</span> and <span class="arithmatex">\(t\)</span> let <span class="arithmatex">\(\bar{p}_t(x,z):=P^x[X_t=z,\tau&gt;t]\)</span>.
+We claim that <span class="arithmatex">\(\sum_{t} \bar{p}_t(x,\cdot)\)</span> is a stationary measure.</p>
+<ul>
+<li>
+<p>For <span class="arithmatex">\(z\neq x\)</span> we have</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     \sum_{y\in S} \bar{p}_t(x,y) p_{yz} 
+      &amp; = \sum_{y\in S} P^x[X_t=y, \tau&gt;t] p_{yz} \\
+      &amp; = \sum_{y\in S} P^x(X_t=y,\tau&gt;t,X_{t+1}=z]\\
+      &amp; = P^x[\tau&gt;t+1,X_{t+1}=z]\\
+      &amp; =\bar{p}_{t+1}(x,z)
+  \end{align*}
+\]</div>
+<p>Hence,</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     \sum_{y\in S}\sum_{t} \bar{p}_t(x,y)p_{yz} 
+        &amp; = \sum_{t}\sum_{y\in S} \bar{p}_t(x,y)p_{yz}\\
+        &amp; = \sum_{t} \bar{p}_{t+1}(x,z)\\
+        &amp; = \mu(z)
+  \end{align*}
+\]</div>
+<p>since <span class="arithmatex">\(\bar{p}_0(x,z)=0\)</span>.</p>
+</li>
+<li>
+<p>For <span class="arithmatex">\(z=x\)</span> we have</p>
+<div class="arithmatex">\[
+\sum_{y\in S} \bar{p}_t(x,y) p_{yx} = \sum_{y\in S} P^x[X_t=y,\tau&gt;t,X_{t+1}=x] = P^x[\tau=t+1].
+\]</div>
+<p>Hence,</p>
+<div class="arithmatex">\[
+\sum_{t}\sum_{y\in S} \bar{p}_t(x,y)p_{yz} = \sum_{t} P^x[\tau=t+1] = 1 = \mu(x).
+\]</div>
+</li>
+<li>
+<p>Finally we show that <span class="arithmatex">\(\mu(y)&lt;\infty\)</span> for any <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(S\)</span>.
+    We have <span class="arithmatex">\(\mu(x)=1\)</span>, and <span class="arithmatex">\(\mu p^t=\mu\)</span>, showing that <span class="arithmatex">\(\mu(y)&lt;\infty\)</span> if <span class="arithmatex">\(p^t_{xy}&gt;0\)</span> for some <span class="arithmatex">\(t\)</span>.</p>
+<ul>
+<li>If <span class="arithmatex">\(P^x[\tau_y&lt;\infty]=0\)</span>, then <span class="arithmatex">\(\mu(y)=0\)</span>.</li>
+<li>If <span class="arithmatex">\(P^x[\tau_y&lt;\infty]&gt;0\)</span>, then by recurrence Theorem we have <span class="arithmatex">\(P^y[\tau_x&lt;\infty]&gt;0\)</span> so that <span class="arithmatex">\(p_{yx}^t&gt;0\)</span> for some <span class="arithmatex">\(t\)</span>, hence <span class="arithmatex">\(\mu(y)&lt;\infty\)</span>.</li>
+</ul>
+</li>
+</ul>
 </div>
 
 

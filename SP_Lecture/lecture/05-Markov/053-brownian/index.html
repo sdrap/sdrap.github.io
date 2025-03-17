@@ -16,7 +16,7 @@
     
     
       
-        <title>053 brownian - Stochastics</title>
+        <title>Brownian Motion - Stochastics</title>
       
     
     
@@ -69,6 +69,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#brownian-motion" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              053 brownian
+              Brownian Motion
             
           </span>
         </div>
@@ -1108,6 +1113,8 @@
       
         
       
+        
+      
     
     
       
@@ -1184,6 +1191,28 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../052-markov-discrete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markov Chains
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1215,9 +1244,408 @@
 
 
 
-  <h1>053 brownian</h1>
-
-
+<h1 id="brownian-motion">Brownian Motion</h1>
+<details class="note">
+<summary>Note: Browninan Motion and Wiener Measure</summary>
+<p>The Brownian motion, named after the botanist Robert Brown, was first observed in 1827 when Brown noticed the erratic motion of pollen particles suspended in water.
+While Brown initially attributed this movement to some "life force," it was later understood as a physical phenomenon resulting from molecular collisions.</p>
+<p>At the end of the 19th and the beginning of the 20th century, physicists such as Albert Einstein and Marian Smoluchowski provided theoretical models that linked Brownian motion to the kinetic theory of gases, demonstrating the random behavior of particles in a fluid.
+This work provided critical evidence for the atomic theory of matter.</p>
+<p>In spite of its success and applications, it tooks a century until a rigorous mathematical formulation and proof of the existence of Brownian motion as a stochastic process was achieved by Norbert Wiener in the 1930 ies.
+This layed the foundation for modern probability theory and the study of continuous-time stochastic processes.
+The resulting process, is now often called the Wiener process.</p>
+</details>
+<p>The Brownian motion is one of the central objects of continuous time stochastic analysis.
+Though being classical and intuitive, it is not an easy object with fascinating mathematical properties.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Brownian Motion</p>
+<p>Let <span class="arithmatex">\((\Omega,\mathcal{F},P)\)</span> be a probability space.
+A stochastic process <span class="arithmatex">\(B\)</span> is called a <strong>Brownian Motion</strong> if</p>
+<ul>
+<li><strong>Independence of Increments:</strong> The increments <span class="arithmatex">\(B_{t_n}-B_{t_{n-1}}\)</span>, <span class="arithmatex">\(B_{t_{n-1}}-B_{t_{n-2}}\)</span>, <span class="arithmatex">\(\ldots\)</span>, <span class="arithmatex">\(B_{t_1}-B_{t_0}\)</span> are independent for every finite family <span class="arithmatex">\(0\leq t_0&lt;t_1&lt;\ldots&lt;t_n\)</span>.</li>
+<li><strong>Normal Behavior of Increments:</strong> Increments are normally distributed <span class="arithmatex">\(B_{t}-B_s\sim \mathcal{N}(0,t-s)\)</span>.</li>
+<li>
+<p><strong>Continuity of paths:</strong> (almost surely)</p>
+<div class="arithmatex">\[
+P\left[ \left\{ \omega \colon t\mapsto B_t(\omega) \text{ is continuous} \right\} \right]=1
+\]</div>
+</li>
+</ul>
+</div>
+<p>Note that we do not require any filtration in the definition of the Brownian motion.
+As we will see later, we will often consider the filtration <span class="arithmatex">\(\mathcal{F}_t=\sigma(B_s\colon s\leq t)\)</span> up to completion, and this filtration has particular properties.</p>
+<p>It is intuitive to see the Brownian motion as a scaling limit of a symmetric random wall&mdash;and it actually is.
+However, one of the first questions to ask is whether such an object exists.
+Precisely, one asks if, for an adequate measurable space <span class="arithmatex">\((\Omega,\mathcal{F})\)</span> and stochastic process <span class="arithmatex">\(B\)</span>, there exists a probability measure <span class="arithmatex">\(P\colon\mathcal{F}\to [0,1]\)</span> such that under <span class="arithmatex">\(P\)</span>, the stochastic process <span class="arithmatex">\(B\)</span> is a Brownian motion.
+This measure is called the <strong>Wiener measure</strong>.</p>
+<p>There are several ways to construct such a measure, including a wavelet construction, a Hilbert space approach, or an appropriate scaling of the symmetric random walk together with some weak convergence.
+Hereafter, we will present a pure stochastic construction based on the <strong>Kolmogorov-Carathéodory extension theorem</strong>.
+It may be a little technical, but it has the advantage of presenting several important aspects of measure theory without relying on any advanced functional analysis assumptions.</p>
+<p>The construction will follow two important steps:</p>
+<ul>
+<li><strong>Construction of a measure <span class="arithmatex">\(P\)</span> on the path space</strong> such hat the canonical process <span class="arithmatex">\(X\)</span> satisfies the two first properties. <span class="arithmatex">\(\leadsto\)</span> Kolmogorov extension Theorem.</li>
+<li><strong>Modification of the Canonical process</strong> <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(B\)</span> such that <span class="arithmatex">\(B\)</span> additionally satisfies the continuity property. <span class="arithmatex">\(\leadsto\)</span> Kolmogorov-Centov Theorem.</li>
+</ul>
+<h2 id="pre-brownian-motion-kolmogorov-caratheodory-extension-theorem">Pre-Brownian Motion: Kolmogorov-Carathéodory extension Theorem</h2>
+<p>For a given index set <span class="arithmatex">\(\mathbf{T}\)</span>, we consider <span class="arithmatex">\((S,\mathcal{S})\)</span> where <span class="arithmatex">\(S\)</span> is a Polish space<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> with Borel <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{S}\)</span>.
+For ease, you may assume that <span class="arithmatex">\(S \subseteq \mathbb{R}^d\)</span> is a closed or open subset.
+The product of countable Polish spaces is Polish, and recall the following theorem from Ulam.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Ulam</p>
+<p>Let <span class="arithmatex">\(P\)</span> be a probability measure on <span class="arithmatex">\((S,\mathcal{S})\)</span>, then <span class="arithmatex">\(P\)</span> is regular, that is</p>
+<div class="arithmatex">\[
+  P\left[ A \right]=\sup\left\{ P[K]\colon K\subseteq A, K\text{ compact} \right\}
+\]</div>
+<p>for every Borel set <span class="arithmatex">\(A\subseteq S\)</span>.</p>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>Let <span class="arithmatex">\(A \subseteq S\)</span> be a Borel set.
+By inner regularity of the probability measure <span class="arithmatex">\(P\)</span>, we have</p>
+<div class="arithmatex">\[
+P(A) = \sup\{P(K) \colon K \subseteq A, K \text{ compact} \}.
+\]</div>
+<p>To prove this, define</p>
+<div class="arithmatex">\[
+\mu(A) = \sup\{P(K) \colon K \subseteq A, K \text{ compact} \}.
+\]</div>
+<p>Clearly, <span class="arithmatex">\(\mu\)</span> is an outer measure with <span class="arithmatex">\(\mu(S) = 1\)</span> and <span class="arithmatex">\(\mu \leq P\)</span>.</p>
+<p>Now, consider an open set <span class="arithmatex">\(G \supseteq A\)</span>.
+Since <span class="arithmatex">\(S\)</span> is Polish, there exists an increasing sequence of compact sets <span class="arithmatex">\((K_n)\)</span> such that <span class="arithmatex">\(G = \bigcup_{n=1}^\infty K_n\)</span>.
+By the continuity of <span class="arithmatex">\(P\)</span>,</p>
+<div class="arithmatex">\[
+\mu(G) = \lim_{n \to \infty} P(K_n) \leq P(G).
+\]</div>
+<p>Taking the infimum over all such open sets <span class="arithmatex">\(G\)</span> containing <span class="arithmatex">\(A\)</span> gives</p>
+<div class="arithmatex">\[
+\mu(A) \geq P(A).
+\]</div>
+<p>Combining both inequalities, we conclude <span class="arithmatex">\(\mu(A) = P(A)\)</span>, proving the result.</p>
+</details>
+<p>Recall standard notations for the path space:</p>
+<ul>
+<li><strong>Sample space</strong> given by <span class="arithmatex">\(\Omega :=\{\omega=(\omega_t) :\omega_t \in  S \text{ for all } t\}=S^{\mathbf{T}}\)</span>.</li>
+<li><strong>Coordinate process</strong> <span class="arithmatex">\(X\)</span> given by <span class="arithmatex">\(X_t(\omega)=\omega_t\)</span> for every <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(\omega\)</span>.</li>
+<li>
+<p><strong>Projection</strong> For <span class="arithmatex">\(F\)</span> and <span class="arithmatex">\(G\)</span> subsets of <span class="arithmatex">\(\mathbf{T}\)</span> with <span class="arithmatex">\(F\subseteq G\)</span>, define the projections:</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \begin{split}
+    \pi_F \colon \Omega &amp; \longrightarrow S^{F}\\
+                  \omega &amp; \longmapsto  \pi_F(\omega) = (\omega_t)_{t\in F}
+  \end{split}
+\end{equation*}
+\]</div>
+<p>and</p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \begin{split}
+    \pi_{GF} \colon S^{G} &amp; \longrightarrow S^{F}\\
+                  (\omega_t)_{t \in G} &amp; \longmapsto  \pi_{GF}\left((\omega_t)_{t \in G}\right) = (\omega_t)_{t\in F}
+  \end{split}
+\end{equation*}
+\]</div>
+</li>
+<li>
+<p><strong>Algebra</strong> <span class="arithmatex">\(\mathcal{C}\)</span> of those sets <span class="arithmatex">\(C=\pi^{-1}_F(A)=\{ \omega \in \Omega\colon (\omega_{t_1},\ldots,\omega_{t_n})\in A \}=\{(X_{t_1},\ldots X_{t_n})\in A\}\)</span> where <span class="arithmatex">\(A\)</span> is in the Borel <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{F}^F:=\mathcal{B}(S^F)\)</span> and <span class="arithmatex">\(F\subseteq\mathbf{T}\)</span> is finite.</p>
+</li>
+<li><strong>Product <span class="arithmatex">\(\sigma\)</span>-Algebra</strong> <span class="arithmatex">\(\mathcal{F}=\sigma(\mathcal{C}) =\otimes_{t \in \mathbf{T}}\mathcal{S}\)</span></li>
+</ul>
+<div class="admonition definition">
+<p class="admonition-title">Consistent family</p>
+<p>A family <span class="arithmatex">\((P_{F})\)</span> of probability measures <span class="arithmatex">\(P_F:\mathcal{F}^F\to [0,1]\)</span> for every finite subset <span class="arithmatex">\(F\)</span> of <span class="arithmatex">\(\mathbf{T}\)</span> is called <strong>consistent</strong> if</p>
+<div class="arithmatex">\[
+  P_{F}(A)=P_{G}\left( B \right)
+\]</div>
+<p>for every <span class="arithmatex">\(F\subseteq G\)</span> and <span class="arithmatex">\(A\in \mathcal{F}^F\)</span> where <span class="arithmatex">\(B=\pi_{GF}^{-1}(A)\)</span>.</p>
+</div>
+<p>We can now formulate the Kolmogorov extension theorem, a consequence of Carathéodory's Theorem.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Kolmogorov Extension Theorem</p>
+<p>Let <span class="arithmatex">\((P_F)\)</span> be a consistent family of Borel probability measures.
+Then, there exists a unique probability measure <span class="arithmatex">\(P\)</span> on <span class="arithmatex">\(\mathcal{F}\)</span> such that</p>
+<div class="arithmatex">\[
+\begin{equation*}
+    P(C)=P_F(A)    
+\end{equation*}
+\]</div>
+<p>for every <span class="arithmatex">\(A \in \mathcal{F}^F\)</span> where <span class="arithmatex">\(C=\pi^{-1}_F(A)\)</span>.</p>
+</div>
+<p>In other words, it is possible to construct a unique probability measure whose finite-dimensional restriction coincides exactly with each given finite-dimensional distribution <span class="arithmatex">\(P_F\)</span>, provided they are consistent with each other.</p>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Note that for every finite family <span class="arithmatex">\((C_k)_{k\leq n}=(\pi^{-1}_{F_k}(A_k))_{1\leq k\leq n}\)</span>, if we define <span class="arithmatex">\(F=\cup_{k\leq n}F_k\)</span> and <span class="arithmatex">\(B_k=\pi^{-1}_{FF_k}(A_k) \in \mathcal{F}^F\)</span>, it follows that <span class="arithmatex">\(C_k=\pi^{-1}_{F}(B_k)\)</span>.
+In particular, up to enlargement, we can always assume that we take a common finite family to represent the <span class="arithmatex">\((C_k)\)</span>.
+Furthermore, if the <span class="arithmatex">\((C_k)\)</span> are disjoint, then so are the <span class="arithmatex">\((B_k)\)</span>.</p>
+<p><strong>Step 1:</strong> Definition of <span class="arithmatex">\(P\)</span> as a set function<br />
+Define <span class="arithmatex">\(P:\mathcal{C}\to [0,1]\)</span> by setting <span class="arithmatex">\(P[C]=P_F(A)\)</span> where <span class="arithmatex">\(C=\pi^{-1}_F(A)\)</span> for <span class="arithmatex">\(A\in \mathcal{F}^F\)</span>.
+This function is well-defined due to consistency.
+Suppose <span class="arithmatex">\(C=\pi^{-1}_F(A)=\pi^{-1}_{G}(B)\)</span> for <span class="arithmatex">\(A\)</span> in <span class="arithmatex">\(\mathcal{F}^F\)</span> and <span class="arithmatex">\(B\)</span> in <span class="arithmatex">\(\mathcal{F}^G\)</span>.
+Then <span class="arithmatex">\(D := \pi^{-1}_{F\cup G F}(A) = \pi^{-1}_{F\cup G G}(B)\)</span> and <span class="arithmatex">\(\pi^{-1}_{F\cup G}(D)=C\)</span>.
+By the consistency of the family, it follows that <span class="arithmatex">\(P_F(A)=P_{F\cup G}(D)=P_{G}(B)\)</span>, confirming that <span class="arithmatex">\(P\)</span> is well-defined.</p>
+<p><strong>Step 2:</strong> <span class="arithmatex">\(P\)</span> as an additive measure<br />
+Clearly, <span class="arithmatex">\(P[\emptyset]=0\)</span> and <span class="arithmatex">\(P[\Omega]=1\)</span>.
+As mentioned above, let <span class="arithmatex">\((C_k)_{k\leq n}=(\pi^{-1}_{F}(A_k))_{k\leq n}\)</span> be a finite disjoint family of elements in the algebra <span class="arithmatex">\(\mathcal{C}\)</span> with common finite set <span class="arithmatex">\(F\)</span>.
+Since <span class="arithmatex">\(P_F\)</span> is a probability measure, it follows that</p>
+<div class="arithmatex">\[
+P\left[\cup_{k\leq n} C_k\right] = P_F\left[\cup_{k\leq n} A_k\right] = \sum_{k\leq n} P_F[A_k] = \sum_{k\leq n} P[A_k].
+\]</div>
+<p>Therefore, <span class="arithmatex">\(P\)</span> is an additive probability measure on the algebra <span class="arithmatex">\(\mathcal{C}\)</span>.</p>
+<p><strong>Step 3:</strong> <span class="arithmatex">\(P\)</span> is <span class="arithmatex">\(\sigma\)</span>-additive<br />
+Using continuity at <span class="arithmatex">\(\emptyset\)</span>, let <span class="arithmatex">\((C_n) = (\pi^{-1}_{F_n}(A_n))\)</span> be a decreasing sequence of elements in <span class="arithmatex">\(\mathcal{C}\)</span> such that <span class="arithmatex">\(\cap C_n = \emptyset\)</span> and suppose that <span class="arithmatex">\(P[C_n] \geq \varepsilon &gt; 0\)</span> for some <span class="arithmatex">\(\varepsilon &gt; 0\)</span>.
+Up to redefining <span class="arithmatex">\(\tilde{F}_n = \cup_{k\leq n}F_k\)</span> and <span class="arithmatex">\(\tilde{A}_n = \pi^{-1}_{\cup_{k\leq n}F_k F_n}(A_n)\)</span>, where <span class="arithmatex">\(C_n = \pi_{\tilde{F}_n}(\tilde{A}_n)\)</span> with <span class="arithmatex">\(\tilde{A}_n\)</span> in <span class="arithmatex">\(\mathcal{F}^{\tilde{F}_n}\)</span>, we may assume that <span class="arithmatex">\((F_n)\)</span> is an increasing sequence of finite subsets of <span class="arithmatex">\(\mathbf{T}\)</span>.
+Since <span class="arithmatex">\((F_n)\)</span> is increasing and <span class="arithmatex">\((C_n)\)</span> decreasing, it follows that <span class="arithmatex">\(A_{n+1}\subseteq \pi_{F_{n+1}F_n}^{-1}(A_n)\)</span>.
+By inner regularity of Borel probability measures on <span class="arithmatex">\(\mathbb{R}\)</span>, we can find a sequence of compacts <span class="arithmatex">\((\tilde{K}_n)\)</span> such that <span class="arithmatex">\(\tilde{K}_n\subseteq A_n\)</span> and <span class="arithmatex">\(P_{F_n}[A_n\setminus \tilde{K}_n]\leq \varepsilon/2^{n+1}\)</span>.
+However, we do not know whether this sequence of compacts fulfills the same monotonicity condition as <span class="arithmatex">\((A_n)\)</span>.
+We therefore shrink the compacts to </p>
+<div class="arithmatex">\[
+K_n=\cap_{k\leq n}\pi^{-1}_{F_nF_k}(\tilde{K}_k)\subseteq \tilde{K}_n
+\]</div>
+<p>ensuring <span class="arithmatex">\(K_{n+1} \subseteq \pi^{-1}_{F_{n+1}F_n}(K_n)\)</span> for every <span class="arithmatex">\(n\)</span>.
+By construction,</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     P_{F_n}\left[ K_n \right] 
+      &amp; = P_{F_n}[A_n]-P_{F_n}[A_n\setminus K_n]\\
+      &amp; \geq \varepsilon -P_{F_n}[A_n\setminus \cap_{k\leq n}\pi^{-1}_{F_nF_k}(\tilde{K}_k)]\\
+      &amp; =\varepsilon -P_{F_n}[\cup_{k\leq n} A_n\setminus \pi^{-1}_{F_nF_k}(\tilde{K}_k)]\\
+      &amp; \geq \varepsilon -P_{F_n}[\cup_{k\leq n} \pi^{-1}_{F_nF_k}(A_k\setminus \tilde{K}_k)]\\
+      &amp; \geq \varepsilon -\sum_{k\leq n}P_{F_n}[\pi^{-1}_{F_nF_k}(A_k\setminus \tilde{K}_k)]\\
+      &amp; =\varepsilon -\sum_{k\leq n}P_{F_k}[A_k\setminus \tilde{K}_k]\\
+      &amp; \geq \varepsilon -\sum_{k=1}^{n}\frac{\varepsilon}{2^{k+1}}\\
+      &amp; \geq \frac{\varepsilon}{2}
+  \end{align*}
+\]</div>
+<p>In particular, each compact is non empty, so let <span class="arithmatex">\(\omega_n\)</span> be in <span class="arithmatex">\(\pi^{-1}_{F_n}(K_n)\)</span>, that is <span class="arithmatex">\(\pi_{F_n}(\omega_n)\)</span> is in <span class="arithmatex">\(K_n\)</span>.
+It holds from <span class="arithmatex">\(K_n \subseteq \pi_{F_1}^{-1}(K_1)\)</span> that <span class="arithmatex">\(\pi_{F_1}(\omega_n)\in K_1\)</span> for every <span class="arithmatex">\(n\)</span>.
+By compactness of <span class="arithmatex">\(K_1\)</span>, we have for a subsequence, again denoted by <span class="arithmatex">\((\omega_n)\)</span>, that <span class="arithmatex">\(\pi_{F_1}(\omega_{n})\to \pi_{F_1}(\bar{\omega}_1)\)</span> some <span class="arithmatex">\(\bar{\omega}_1\)</span> in <span class="arithmatex">\(\Omega\)</span>.
+Further, from <span class="arithmatex">\(K_n\subseteq \pi_{F_2}^{-1}(K_2)\)</span> we have for the same reason as before for a sub-subsequence also denoted by <span class="arithmatex">\((\omega_n)\)</span>, that <span class="arithmatex">\(\pi_{F_2}(\omega_n)\to \pi_{F_2}(\bar{\omega}_2)\)</span>.
+Since <span class="arithmatex">\(\pi_{F_1}(\bar{\omega}_1)=\pi_{F_1}(\bar{\omega}_2)\)</span>, we deduce that the coordinates of <span class="arithmatex">\(\bar{\omega}_2\)</span> and <span class="arithmatex">\(\bar{\omega}_1\)</span> coincide on <span class="arithmatex">\(F_1\)</span>.
+Doing so forth, we can construct a point <span class="arithmatex">\(\bar{\omega}\)</span> by setting arbitrarily points on <span class="arithmatex">\((\cup F_n)^c\)</span> such that <span class="arithmatex">\(\pi_{F_n}(\bar{\omega})=\pi_{F_n}(\bar{\omega}_n)\)</span> for every <span class="arithmatex">\(n\)</span>.
+It follows in particular that <span class="arithmatex">\(\bar{\omega}\in \pi^{-1}_{F_n}(K_n)\subseteq C_n\)</span> for every <span class="arithmatex">\(n\)</span> showing that <span class="arithmatex">\(\cap C_n\neq \emptyset\)</span>, contradicting our initial assumption that <span class="arithmatex">\(\cap C_n = \emptyset\)</span>.</p>
+<p><strong>Step 4:</strong> Carathéodory's Extension Theorem<br />
+Since <span class="arithmatex">\(P\)</span> is a <span class="arithmatex">\(\sigma\)</span>-additive probability measure on the algebra <span class="arithmatex">\(\mathcal{C}\)</span>, by Carathéodory's Theorem, it can be uniquely extended to <span class="arithmatex">\(\mathcal{F}=\sigma(\mathcal{C})\)</span>, hence the theorem.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Existence of iid Sequences and Henceforth a Random Walk</p>
+<p>We can apply Kolmogorov's extension theorem to show the existence of iid desquences and henceforth a Random Walk.
+Let <span class="arithmatex">\(S = \{-1, 1\}\)</span>, which is a closed subset of <span class="arithmatex">\(\mathbb{R}\)</span> with the Borel <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{S}\)</span>, which reduces to <span class="arithmatex">\(2^S\)</span>.
+Let <span class="arithmatex">\(\mathbb{T} = \mathbb{N}_0\)</span> and <span class="arithmatex">\(0&lt;p&lt;1\)</span>.
+For every finite subset <span class="arithmatex">\(F = \{t_0 &lt; t_1 \ldots &lt; t_n\} \subset \mathbb{N}_0\)</span>, define</p>
+<div class="arithmatex">\[
+  P_F\left[ (\omega_{t_1},\ldots, \omega_{t_n})=(e_1,\ldots, e_n) \right] = p^l(1-p)^{n-l},
+\]</div>
+<p>where <span class="arithmatex">\(e_i \in \{-1, 1\}\)</span> for every <span class="arithmatex">\(i\)</span>, and <span class="arithmatex">\(l = \#\{ i \colon e_i = 1, i = 1, \ldots, n \}\)</span>, which defines a probability measure on <span class="arithmatex">\(\mathcal{F}^F = \otimes_F \mathcal{S}\)</span>.</p>
+<p>It is straightforward to check that the family <span class="arithmatex">\((P_F)\)</span> is a consistent family of probability measures.
+By Kolmogorov's extension theorem, there exists a unique probability measure on <span class="arithmatex">\(S^{\mathbf{T}} = \{-1, 1\}^{\mathbb{N}_0}\)</span> with the product <span class="arithmatex">\(\sigma\)</span>-algebra such that</p>
+<div class="arithmatex">\[
+  P[B] = P_F[A] 
+\]</div>
+<p>where <span class="arithmatex">\(B = \pi^{-1}_F(A)\)</span> for any <span class="arithmatex">\(F \subseteq \mathbb{N}_0\)</span> finite and <span class="arithmatex">\(A\)</span> in <span class="arithmatex">\(\mathcal{F}^F\)</span>.
+In particular,</p>
+<div class="arithmatex">\[
+  P[X_t = 1] = P_{\{t\}}[\omega_t = 1] = p \quad \text{and} \quad P\left[ X_t = -1 \right] = 1 - p.
+\]</div>
+<p>A straightforward computation shows that the canonical process <span class="arithmatex">\(X\)</span> is a sequence of i.i.d. random variables.
+As seen before, it is also a Markov process.</p>
+<p>Doing so, the random walk <span class="arithmatex">\(S_0 =0\)</span> and <span class="arithmatex">\(S_t = \sum_{s=1}^t X_s\)</span> is well defined.</p>
+</div>
+<p>With this extension theorem at hand, we can therefore construct a <em>pre</em>-Brownian motion.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition: Existence of a Pre-Brownian Motion</p>
+<p>Taking <span class="arithmatex">\(S = \mathbb{R}\)</span> and <span class="arithmatex">\(\mathbf{T} = [0, \infty)\)</span>, with the notations of the sample space here above, there exists a probability measure on <span class="arithmatex">\(\mathcal{F}\)</span> such that <span class="arithmatex">\(X\)</span> is, up to continuity of paths, a Brownian motion.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>For the sample space <span class="arithmatex">\(\Omega =\mathbb{R}^{[0,\infty)}\)</span> with the <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{F}=\sigma(\mathcal{C})\)</span> where <span class="arithmatex">\(\mathcal{C}\)</span> is the collection of those <span class="arithmatex">\(C=\pi_{F}^{-1}(A)\)</span> for <span class="arithmatex">\(A\)</span> in <span class="arithmatex">\(\mathcal{B}(\mathbb{R}^F)\)</span>, <span class="arithmatex">\(F=\{t_0, t_1,\ldots,t_n\}\)</span> for <span class="arithmatex">\(0&lt; t_0&lt;t_1&lt; \ldots&lt;t_n\)</span>, we define the conditional probability distribution</p>
+<div class="arithmatex">\[
+  p(t,x,y)=\frac{1}{\sqrt{t2\pi}}\exp\left( -\frac{(x-y)^2}{2t} \right)
+\]</div>
+<p>for <span class="arithmatex">\(t&gt;0\)</span> and <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(\mathbb{R}\)</span>.
+For <span class="arithmatex">\(x=(x_1,\ldots,x_n)\)</span> we set the cumulative distribution </p>
+<div class="arithmatex">\[
+P_F\left[ X_{t_0}\leq x_0, \ldots, X_{t_n}\leq x_n \right]
+=\int_{-\infty}^{x_0}\int_{-\infty}^{x_1}\ldots \int_{-\infty}^{x_n}p(t_0,0,y_0)p(t_1-t_0,y_0,y_1)\ldots p(t_n-t_{n-1},y_{n-1},y_n)dy_0\ldots dy_{n}   
+\]</div>
+<p>For <span class="arithmatex">\(F\subseteq G\subseteq \mathbf{T}\)</span> both finite set and <span class="arithmatex">\(A \in \mathcal{B}(\mathbb{R}^F)\)</span>, it holds <span class="arithmatex">\(D=\pi_{GF}^{-1}(A)\approx \mathbb{R}^{G\setminus F}\times A\)</span> where <span class="arithmatex">\(\approx\)</span> stands for reordering of the coordinates of <span class="arithmatex">\(G\)</span> along those who belong to <span class="arithmatex">\(F\)</span>.
+It follows that</p>
+<div class="arithmatex">\[
+P_{F}\left[ A \right]=\int_{A}^{}dP_{F}=\int_{A}^{}\int_{\mathbb{R}^{G\setminus F}}^{}dP_{F}dP_{G\setminus F}=\int_{D}^{}dP_{G}=P_{G}[D] 
+\]</div>
+<p>showing that <span class="arithmatex">\((P_{F})\)</span> is a consistent family of probability measures.
+Hence, by Kolmogorov extension's theorem, it follows that it can uniquely be extended to <span class="arithmatex">\(\Omega\)</span> and it holds</p>
+<div class="arithmatex">\[
+P\left[ X \in \pi_{F}^{-1}(A) \right]=P_{F}\left[ A \right]
+\]</div>
+<p>for any <span class="arithmatex">\(A\)</span> in <span class="arithmatex">\(\mathcal{F}^{F}\)</span> where $F={t_0,t_1,\ldots, t_n} with <span class="arithmatex">\(0&lt; t_0&lt; t_1&lt;\ldots&lt;t_n\)</span>.</p>
+<p>Let us show that <span class="arithmatex">\(X\)</span> under <span class="arithmatex">\(P\)</span> fulfills the first two properties of a Brownian motion.
+As for the first property, it holds that</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     P\left[ X_t-X_s \leq x \right]   &amp; =P_{\{s,t\}}\left[ \{(x_1,x_2)\in \mathbb{R}^2 \colon x_2\leq x+x_1\} \right]\\
+                                      &amp; =\int_{\mathbb{R}}^{}\int_{-\infty}^{x+y_1}p(s,0,y_1)p(t-s,y_1,y_2)dy_1dy_2\\ 
+                                      &amp; =\int_{\mathbb{R}}^{}\int_{-\infty}^{x}p(s,0,y_1)p(t-s,y_1,y_2-y_1)dy_1dy_2\\
+                                      &amp; =\int_{-\infty}^{x}p(t-s,0,y_2)dy_2
+  \end{align*}
+\]</div>
+<p>showing that <span class="arithmatex">\(X_t-X_s\sim \mathcal{N}(0,t-s)\)</span>.</p>
+<p>As for the independence, <span class="arithmatex">\((X_{t_n}-X_{t_{n-1}}, \ldots, X_{t_1}-X_{t_0})\)</span> is a Gaussian vector for every finite <span class="arithmatex">\(0\leq t_0&lt;\ldots&lt; t_n\)</span>.
+Indeed, by the definition of <span class="arithmatex">\(P\)</span>, every linear combination of them yields a normal distribution -- check it as an exercise.
+Hence, being a Gaussian vector, it is enough to check that their covariance is equal to <span class="arithmatex">\(0\)</span>.</p>
+<p>We check it for <span class="arithmatex">\(n=2\)</span>, and the general case being left to you.
+By obvious variable change we have</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     E\left[ (X_{t_{2}}-X_{t_1})(X_{t_1}-X_{t_0}) \right]
+        &amp; = \int_{\mathbb{R}^4} \left( x_3-x_2 \right)\left( x_1-x_0 \right)p(t_0,0,x_0)p(t_0-t_1,x_0,x_1)p(t_1-t_2,x_1,x_2)p(t_3-t_2,x_2,x_3)dx_0dx_1dx_2dx_3\\
+        &amp; =\int_{\mathbb{R}^2} y_1 y_2 p(t_1-t_0,0,y_1)p(t_3-t_2,0,y_2)dy_1dy_2\\
+        &amp; =0
+  \end{align*}
+\]</div>
+<p>finishing the proof.</p>
+</div>
+<h2 id="continuity-of-paths-kolmogorov-centov-theorem">Continuity of Paths: Kolmogorov-&#268;entov Theorem</h2>
+<p>As for the continuity, we should prove that</p>
+<div class="arithmatex">\[
+  P[\{\omega \colon t\mapsto X_t(\omega)\text{ is continuous}\}]=1
+\]</div>
+<p>to ensure that we have a Brownian motion.
+Since <span class="arithmatex">\(X\)</span> is the canonical process, it follows that <span class="arithmatex">\(\{\omega \colon t\mapsto X_t(\omega)\text{ is continuous}\}\)</span> is exactly the set <span class="arithmatex">\(C[0,t)\subseteq \mathbb{R}^{[0,\infty)}\)</span> of continuous functions.
+A naive way to show this would be to show that <span class="arithmatex">\(P\)</span> assigns probability one to the subset <span class="arithmatex">\(C[0,t)\subseteq \mathbb{R}^{[0,\infty)}\)</span> of continuous functions.
+In that case, it would follow that almost all the paths of <span class="arithmatex">\(X\)</span> are concentrated under <span class="arithmatex">\(P\)</span> in the space of continuous functions.
+This strategy is hopeless as the following proposition shows.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>The set of continuous functions is not a measurable set for the product <span class="arithmatex">\(\sigma\)</span>-algebra of <span class="arithmatex">\(\mathbb{R}^{[0,\infty)}\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Intuitively, it follows from the fact that measurable sets of <span class="arithmatex">\(\mathbb{R}^{[0,\infty)}\)</span> for the product <span class="arithmatex">\(\sigma\)</span>-algebra are generated by finite-dimensional ones of the form</p>
+<div class="arithmatex">\[
+  C=\{\omega \colon \omega_{t_0}\in A_0, \ldots, \omega_{t_n}\in A_n\}, \quad A_k \in \mathcal{B}(\mathbb{R})
+\]</div>
+<p>As an exercise, try to show why this proposition holds.</p>
+</div>
+<p>To overcome this difficulty, we will <em>modify</em> the canonical process <span class="arithmatex">\(X\)</span> to another process <span class="arithmatex">\(B\)</span> which has continuous paths with probability <span class="arithmatex">\(1\)</span>, that is construct a version of the Brownian motion that has continuous paths.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Modification vs Indistinguishable</p>
+<p>Let <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> be a probability space and <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be two stochastic processes.
+We say that</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(X\)</span> is a <strong>modification</strong> of <span class="arithmatex">\(Y\)</span> if</p>
+<div class="arithmatex">\[
+  P\left[ X_t = Y_t \right] = 1 \text{ for any }t \text{ in }\mathbf{T}
+\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(X\)</span> is <strong>indistinguishable</strong> from <span class="arithmatex">\(Y\)</span> if</p>
+<div class="arithmatex">\[
+  P\left[ \{ \omega\colon X_t(\omega) = Y_t(\omega) \text{ for all }t \text{ in }\mathbf{T}\}\right] = 1
+\]</div>
+</li>
+</ul>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Clearly, indistinguishable implies modification.
+If <span class="arithmatex">\(\mathbf{T}\)</span> is countable, then the reciprocal is true as</p>
+<div class="arithmatex">\[
+    P[\{ \omega\colon X_t(\omega) \neq Y_t(\omega) \text{ for some }t \text{ in }\mathbf{T}\}] = P\left[ \cup_{t \in \mathbf{T}} \{X_t \neq Y_t\} \right] \leq \sum_{t \in \mathbf{T}} P[X_t \neq Y_t] = 0
+\]</div>
+<p>If <span class="arithmatex">\(\mathbf{T}\)</span> is not countable, then <span class="arithmatex">\(\cup_{t \in \mathbf{T}}\{X_t\}\)</span> is not a countable union of measurable sets and we can not apply subadditivity.
+The following counter example illustrate this fact.</p>
+<p>Let <span class="arithmatex">\(\Omega = [0,1]^{\mathbf{T}}\)</span> and <span class="arithmatex">\(\mathcal{F} = \otimes_{t \in \mathbf{T}} \mathcal{B}([0,1])\)</span> for <span class="arithmatex">\(\mathbf{T} = [0,1]\)</span>.
+As for the measure we consider the product measure such that each marginal is equal to lebesgue.
+Define the two processes</p>
+<div class="arithmatex">\[
+    X_t \equiv 0 \quad \text{and}\quad Y_t (\omega) = 
+      \begin{cases}
+      0 &amp; \text{if }\omega \neq t\\
+      \omega &amp; \text{if }\omega = t
+      \end{cases}
+\]</div>
+<p>This defines two stochastic processes.
+Clearly, for every <span class="arithmatex">\(t\)</span>, the two processes differes only on one point which is of lebesgue measure <span class="arithmatex">\(0\)</span>.
+Hence they are modifications of each others.
+However <span class="arithmatex">\(\{\omega\colon X_t(\omega) = Y_t(\omega)\text{ for all }0\leq t\leq 1\} = \emptyset\)</span>. </p>
+</div>
+<p>If <span class="arithmatex">\(P\)</span> is a probability measure on the path space such that <span class="arithmatex">\(X\)</span> is a pre-Brownian motion and <span class="arithmatex">\(B\)</span> is a modification of <span class="arithmatex">\(X\)</span>, then <span class="arithmatex">\(B\)</span> is a pre Brownian motion as well as it only involves finitely many marginals.
+The goal is therefore to find a modification <span class="arithmatex">\(B\)</span> of <span class="arithmatex">\(X\)</span> such that <span class="arithmatex">\(P[\{\omega\colon t \mapsto B_t(\omega) \text{ is continuous }\}] = 1\)</span> which is a consequence of the following theorem</p>
+<div class="admonition theorem">
+<p class="admonition-title">Kolmogorov-&#268;entov</p>
+<p>Let <span class="arithmatex">\((\Omega,\mathcal{F},P)\)</span> be a probability space and <span class="arithmatex">\(\tilde{X}=(\tilde{X}_{t})_{0\leq t\leq T}\)</span> be a stochastic process.
+Suppose that</p>
+<div class="arithmatex">\[
+  E\left[ |\tilde{X}_t-\tilde{X}_s|^{\alpha} \right]\leq C|t-s|^{1+\beta}
+\]</div>
+<p>for every <span class="arithmatex">\(s&lt;t\leq T\)</span> and some strictly positive constants <span class="arithmatex">\(\alpha,\beta\)</span>, and <span class="arithmatex">\(C\)</span>.
+Then <span class="arithmatex">\(\tilde{X}\)</span> admits a continuous modification <span class="arithmatex">\(X\)</span> which is locally H\"older continuous for every exponent <span class="arithmatex">\(0&lt;\gamma&lt;\beta/\alpha\)</span>, that is</p>
+<div class="arithmatex">\[
+  P\left[ \left\{ \omega \colon \sup_{0&lt;t-s&lt;h(\omega), t,s\leq T}\frac{|X_t(\omega)-X_s(\omega)|}{|t-s|^\gamma}\leq \delta \right\} \right]=1
+\]</div>
+<p>where <span class="arithmatex">\(h\)</span> is an almost surely strictly positive random variable and <span class="arithmatex">\(\delta&gt;0\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>We show it for <span class="arithmatex">\(T=1\)</span> and define <span class="arithmatex">\(\Pi^n=\{k/2^n\colon k=0,\ldots,2^n\}\)</span> as well as <span class="arithmatex">\(\Pi=\cup \Pi^n\)</span>, the sequence of dyadic numbers in <span class="arithmatex">\([0,1]\)</span>.</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> H\"older continuity restricted to <span class="arithmatex">\(\Pi^n\)</span><br />
+    Denote by</p>
+<div class="arithmatex">\[
+A_n = \max_{\substack{s,t \in \Pi^n\\ |t-s|\leq 2^{-n}}}|\tilde{X}_t-\tilde{X}_s|\geq 2^{-n\gamma}
+\]</div>
+<p>By Markov's inequality,</p>
+<div class="arithmatex">\[
+  P[|\tilde{X}_t-\tilde{X}_s|\geq \varepsilon] \leq \frac{1}{\varepsilon^\alpha} E[|\tilde{X}_t-\tilde{X}_s|^\alpha] \leq C \varepsilon^{-\alpha}|t-s|^{1+\beta}.
+\]</div>
+<p>Hence for <span class="arithmatex">\(0&lt;\gamma &lt; \beta/\alpha\)</span>, <span class="arithmatex">\(\varepsilon=2^{-\gamma n}\)</span>, it holds</p>
+<div class="arithmatex">\[
+P\left[ A_n \right] \leq C 2^{-n(\beta - \alpha\gamma)}
+\]</div>
+<p>Since <span class="arithmatex">\(\beta - \alpha \gamma &gt; 0\)</span> by the very choice of <span class="arithmatex">\(\gamma\)</span>, it follows from Borel-Cantelli that</p>
+<div class="arithmatex">\[
+P\left[\limsup A_n \right] = P\left[ \bigcap_n \bigcup_{k\geq n} A_k \right]=0
+\]</div>
+<p>In other terms, for each <span class="arithmatex">\(\omega\)</span> out of a set <span class="arithmatex">\(\mathcal{N}\)</span> of zero measure, it holds that</p>
+<div class="arithmatex">\[
+1_{\cap_{k \geq n} }A_k^c (\omega) \rightarrow 1
+\]</div>
+<p>Denote by </p>
+<div class="arithmatex">\[
+n_0\left( \omega \right) = \inf\left\{ n \in \mathbb{N}\colon 1_{ \cap_{k\geq n}A_k^c}(\omega)\geq \frac{1}{2}\right\}
+\]</div>
+<p>it follows that <span class="arithmatex">\(n_0\)</span> is a random variable finite on <span class="arithmatex">\(\Omega \setminus \mathcal{N}\)</span>.
+Hence</p>
+<div class="arithmatex">\[
+\max_{\substack{s,t \in \Pi^n\\ |t-s|\leq 2^{-n}}}|\tilde{X}_t(\omega)-\tilde{X}_s(\omega)|&lt; 2^{-n\gamma}
+\]</div>
+<p>for all <span class="arithmatex">\(n\)</span> greater than <span class="arithmatex">\(n_0(\omega)\)</span>.</p>
+</li>
+<li>
+<p><strong>Step 2:</strong> Definition of the continuous version <span class="arithmatex">\(X\)</span>.</p>
+</li>
+</ul>
+<p>For <span class="arithmatex">\(\omega\)</span> in <span class="arithmatex">\(\mathcal{N}\)</span> we set <span class="arithmatex">\(X(\omega)=0\)</span>.
+  For <span class="arithmatex">\(\omega\)</span> outside of <span class="arithmatex">\(\mathcal{N}\)</span>, and <span class="arithmatex">\(t\)</span>, we pick a sequence <span class="arithmatex">\((s_n)\)</span> of elements in <span class="arithmatex">\(\Pi\)</span> converging to <span class="arithmatex">\(t\)</span>, which by the uniform continuity of <span class="arithmatex">\(\tilde{X}(\omega)\)</span> on <span class="arithmatex">\(\Pi\)</span> yields a limit</p>
+<p>[
+    X_t(\omega)=\lim \tilde{X}_{s_n}(\omega)
+  ]</p>
+<p>independent of the choice of the sequence <span class="arithmatex">\((s_n)\)</span> in <span class="arithmatex">\(\Pi\)</span> converging to <span class="arithmatex">\(t\)</span>.
+  It follows that <span class="arithmatex">\(X\)</span> has continuous paths.
+  Defined as a limit of a sequence of random variables, it follows also that <span class="arithmatex">\(X\)</span> is a process.
+  Finally, <span class="arithmatex">\(\{X_t=\tilde{X}_t\}\)</span> is contained in the set of those <span class="arithmatex">\(\omega\)</span> such that <span class="arithmatex">\(\tilde{X}_{s_n}(\omega)\)</span> has a limit for some sequence <span class="arithmatex">\((s_n)\)</span> in <span class="arithmatex">\(\Pi\)</span> converging to <span class="arithmatex">\(t\)</span>, it follows that <span class="arithmatex">\(\{X_t = \tilde{X}_t\} \supseteq \mathcal{N}^c\)</span>.
+  Hence <span class="arithmatex">\(P[X_t=\tilde{X}_t]\geq P[\mathcal{N}^c]=1\)</span>, showing that <span class="arithmatex">\(X\)</span> is a version of <span class="arithmatex">\(\tilde{X}\)</span> which ends the proof of the theorem.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>A complete metric space which is separable.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
