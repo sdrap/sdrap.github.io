@@ -49,6 +49,16 @@
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-61166184-1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-61166184-1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-61166184-1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -597,6 +607,8 @@
       
         
       
+        
+      
     
     
       
@@ -707,6 +719,28 @@
   
   <span class="md-ellipsis">
     From Ring to $\sigma$-Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/024-polish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Polish Spaces
     
   </span>
   
@@ -1386,6 +1420,7 @@ It may be a little technical, but it has the advantage of presenting several imp
 <p>For a given index set <span class="arithmatex">\(\mathbf{T}\)</span>, we consider <span class="arithmatex">\((S,\mathcal{S})\)</span> where <span class="arithmatex">\(S\)</span> is a Polish space<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> with Borel <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{S}\)</span>.
 For ease, you may assume that <span class="arithmatex">\(S \subseteq \mathbb{R}^d\)</span> is a closed or open subset.
 The product of countable Polish spaces is Polish, on which according to Ulam, probability measures are regular.</p>
+<p>We recall the Ulam Theorem, see the <a href="../../02-Measure/024-polish/">section on measures</a>.</p>
 <div class="admonition theorem">
 <p class="admonition-title">Ulam</p>
 <p>Let <span class="arithmatex">\(P\)</span> be a probability measure on <span class="arithmatex">\((S,\mathcal{S})\)</span>, then <span class="arithmatex">\(P\)</span> is <strong>regular</strong>, that is</p>
@@ -1394,30 +1429,6 @@ The product of countable Polish spaces is Polish, on which according to Ulam, pr
 \]</div>
 <p>for every Borel set <span class="arithmatex">\(A\subseteq S\)</span>.</p>
 </div>
-<details class="proof">
-<summary>Proof</summary>
-<p>Let <span class="arithmatex">\(A \subseteq S\)</span> be a Borel set.
-By inner regularity of the probability measure <span class="arithmatex">\(P\)</span>, we have</p>
-<div class="arithmatex">\[
-P(A) = \sup\{P(K) \colon K \subseteq A, K \text{ compact} \}.
-\]</div>
-<p>To prove this, define</p>
-<div class="arithmatex">\[
-\mu(A) = \sup\{P(K) \colon K \subseteq A, K \text{ compact} \}.
-\]</div>
-<p>Clearly, <span class="arithmatex">\(\mu\)</span> is an outer measure with <span class="arithmatex">\(\mu(S) = 1\)</span> and <span class="arithmatex">\(\mu \leq P\)</span>.</p>
-<p>Now, consider an open set <span class="arithmatex">\(G \supseteq A\)</span>.
-Since <span class="arithmatex">\(S\)</span> is Polish, there exists an increasing sequence of compact sets <span class="arithmatex">\((K_n)\)</span> such that <span class="arithmatex">\(G = \bigcup_{n=1}^\infty K_n\)</span>.
-By the continuity of <span class="arithmatex">\(P\)</span>,</p>
-<div class="arithmatex">\[
-\mu(G) = \lim_{n \to \infty} P(K_n) \leq P(G).
-\]</div>
-<p>Taking the infimum over all such open sets <span class="arithmatex">\(G\)</span> containing <span class="arithmatex">\(A\)</span> gives</p>
-<div class="arithmatex">\[
-\mu(A) \geq P(A).
-\]</div>
-<p>Combining both inequalities, we conclude <span class="arithmatex">\(\mu(A) = P(A)\)</span>, proving the result.</p>
-</details>
 <p>Recall standard notations for the path space:</p>
 <ul>
 <li><strong>Sample space</strong> given by <span class="arithmatex">\(\Omega :=\{\omega=(\omega_t) :\omega_t \in  S \text{ for all } t\}=S^{\mathbf{T}}\)</span>.</li>
@@ -1833,6 +1844,8 @@ Then the following processes:</p>
 
 
 
+
+  
 
 
 
