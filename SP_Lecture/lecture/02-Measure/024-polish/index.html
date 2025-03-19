@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../023-ring-to-s-algebra/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+        <link rel="next" href="../../03-Integration/030-introduction/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
-        <title>Exercise: Risk Management - Stochastics</title>
+        <title>Polish Spaces - Stochastics</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,11 +46,21 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-61166184-1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-61166184-1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-61166184-1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -70,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercise-risk-management" class="md-skip">
+        <a href="#measures-on-polish-spaces" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +100,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
+    <a href="../../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -106,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercise: Risk Management
+              Polish Spaces
             
           </span>
         </div>
@@ -195,7 +209,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -210,17 +224,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../lecture/00-Introduction/000-notations/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
           
   
     
@@ -266,7 +284,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
+    <a href="../../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -284,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -302,8 +320,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -322,17 +342,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -344,7 +367,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -401,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/00-Introduction/000-notations/" class="md-nav__link">
+      <a href="../../00-Introduction/000-notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/01-Sets-Functions/010-introduction/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/010-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -502,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/01-Sets-Functions/011-sets/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/011-sets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,8 +596,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -586,17 +611,19 @@
       
         
       
+        
+      
     
     
       
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -611,7 +638,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Measure Theory, Construction
@@ -625,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/02-Measure/020-introduction/" class="md-nav__link">
+      <a href="../020-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/02-Measure/021-measure/" class="md-nav__link">
+      <a href="../021-measure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
+      <a href="../022-semi-ring-to-ring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
+      <a href="../023-ring-to-s-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -701,6 +728,38 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Polish Spaces
+    
+  </span>
+  
+
+      </a>
+      
     </li>
   
 
@@ -776,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/03-Integration/030-introduction/" class="md-nav__link">
+      <a href="../../03-Integration/030-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/03-Integration/031-expectation/" class="md-nav__link">
+      <a href="../../03-Integration/031-expectation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -820,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
+      <a href="../../03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
+      <a href="../../03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/03-Integration/034-independence/" class="md-nav__link">
+      <a href="../../03-Integration/034-independence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -886,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/03-Integration/035-fubini-tonelli/" class="md-nav__link">
+      <a href="../../03-Integration/035-fubini-tonelli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -908,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/03-Integration/036-uniform-integrability/" class="md-nav__link">
+      <a href="../../03-Integration/036-uniform-integrability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/04-Martingales/040-introduction/" class="md-nav__link">
+      <a href="../../04-Martingales/040-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/04-Martingales/041-discrete-time-processes/" class="md-nav__link">
+      <a href="../../04-Martingales/041-discrete-time-processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,7 +1092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/04-Martingales/042-martingale-doob/" class="md-nav__link">
+      <a href="../../04-Martingales/042-martingale-doob/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
+      <a href="../../04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
+      <a href="../../04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1156,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/05-Markov/050-introduction/" class="md-nav__link">
+      <a href="../../05-Markov/050-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1178,7 +1237,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/05-Markov/051-markov-extension/" class="md-nav__link">
+      <a href="../../05-Markov/051-markov-extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/05-Markov/052-markov-discrete/" class="md-nav__link">
+      <a href="../../05-Markov/052-markov-discrete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lecture/05-Markov/053-brownian/" class="md-nav__link">
+      <a href="../../05-Markov/053-brownian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1268,99 +1327,155 @@
 
 
 
-<h1 id="exercise-risk-management">Exercise: Risk Management</h1>
-<div class="admonition exercise">
-<p class="admonition-title">Exercise</p>
-<p>A random variable <span class="arithmatex">\( L \)</span> is called normally distributed with mean <span class="arithmatex">\( \mu \)</span> in <span class="arithmatex">\(\mathbb{R} \)</span> and variance <span class="arithmatex">\( \sigma &gt; 0 \)</span> if it has a probability density given by</p>
-<div class="arithmatex">\[
-  f_{\mu,\sigma}(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left( -\frac{(x-\mu)^2}{2\sigma^2} \right)
-\]</div>
-<p>and we use the notation <span class="arithmatex">\( L \sim \mathcal{N}(\mu, \sigma^2) \)</span>. We denote by</p>
-<div class="arithmatex">\[
-F_{\mu,\sigma}(m) = P[L \leq m] = \int_{-\infty}^{m} f_{\mu,\sigma}(y) \, dy, \quad x \in \mathbb{R} \quad \text{and} \quad q_{\mu,\sigma}(s) = F^{-1}_{\mu,\sigma}(s), \quad s \in (0,1)
-\]</div>
-<p>the CDF and quantile of the normal distribution with mean <span class="arithmatex">\( \mu \)</span> and variance <span class="arithmatex">\( \sigma \)</span>.
-We use the simplified notations for the standard normal:</p>
-<div class="arithmatex">\[
-f = f_{0,1}, \quad F = F_{0,1}, \quad q = q_{0,1}.
-\]</div>
-<ol>
-<li>Show that if <span class="arithmatex">\( L \sim \mathcal{N}(0,1) \)</span>, it holds <span class="arithmatex">\( \mu + \sigma L \sim \mathcal{N}(\mu, \sigma^2) \)</span>.</li>
-<li>Show that if <span class="arithmatex">\( L \sim \mathcal{N}(\mu, \sigma^2) \)</span>, it holds <span class="arithmatex">\( -L \sim \mathcal{N}(-\mu, \sigma^2) \)</span>.</li>
+<h1 id="measures-on-polish-spaces">Measures On Polish Spaces</h1>
+<p>In this section we address how topological assumptions on the underlying state space interplay with the probability measure.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Throughout, <span class="arithmatex">\(S\)</span> is a metric space<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> with distance <span class="arithmatex">\(d\)</span> with corresponding Borel <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{S}=\mathcal{B}(S)\)</span>.</p>
+<p>With <span class="arithmatex">\(B_\delta(x) = \{y \in S\colon d(x,y)&lt;\delta\}\)</span> we denote the open ball of size <span class="arithmatex">\(\delta\)</span> centered at <span class="arithmatex">\(x\)</span>.</p>
+<p>For a set <span class="arithmatex">\(A\)</span> we define <span class="arithmatex">\(d(x,A) = \inf \{d(x,y)\colon y \in A\}\)</span> wich is the distance of <span class="arithmatex">\(x\)</span> to <span class="arithmatex">\(a\)</span>.
+By triangular inequality it holds that <span class="arithmatex">\(d(x, A)\leq d(x, z) + d(z, A)\)</span> for any <span class="arithmatex">\(z\)</span> showing that <span class="arithmatex">\(|d(x, A)- d(z,A)|\leq d(x,z)|\)</span>, that is <span class="arithmatex">\(x \mapsto d(x, A)\)</span> is Lipshitz continuous.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Tightness and Regularity</p>
+<p>A probability measure <span class="arithmatex">\(P\)</span> on <span class="arithmatex">\((S, \mathcal{S})\)</span> is called</p>
+<ul>
 <li>
-<p>Show that</p>
+<p><strong>tight</strong> if for any <span class="arithmatex">\(\varepsilon&gt;0\)</span>, there exists a compact <span class="arithmatex">\(K\)</span> such that </p>
 <div class="arithmatex">\[
-f_{\mu,\sigma}(x) = \frac{1}{\sigma} f\left( \frac{x-\mu}{\sigma} \right), \quad
-\sigma^2 f^\prime_{\mu,\sigma} (x) = (\mu-x)f_{\mu,\sigma}(x)
-\]</div>
-<div class="arithmatex">\[
-F_{\mu,\sigma}(x) = F\left( \frac{x-\mu}{\sigma} \right), \quad
-q_{\mu,\sigma}(s) = \mu + \sigma q(s).
+  P[S\setminus K] \leq \varepsilon
 \]</div>
 </li>
-</ol>
-<p>Recall that </p>
+<li>
+<p><strong>regular:</strong> if for every borel set <span class="arithmatex">\(A\)</span> it holds</p>
+<div class="arithmatex">\[
+  P[A] = \sup \left\{ P[K]\colon K\subseteq A\text{ and } K \text{ compact} \right\}
+\]</div>
+</li>
+</ul>
+</div>
+<p>Tightness shows that the metric space can be modulo <span class="arithmatex">\(\varepsilon\)</span> reduced in probability to a compact subset, while regularity shows that the measure of any complex Borel set can be approximated from inside by compacts.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>For a probability measure <span class="arithmatex">\(P\)</span> on <span class="arithmatex">\((S, \mathcal{S})\)</span> the following are equivalent</p>
+<ul>
+<li><span class="arithmatex">\(P\)</span> is tight;</li>
+<li><span class="arithmatex">\(P\)</span> is regular;</li>
+</ul>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>Clearly, regularity implies tightness.
+Reciprocally, suppose that <span class="arithmatex">\(P\)</span> is tight.</p>
+<ul>
+<li>
+<p><strong>Step 1:</strong> We show that for any Borel set <span class="arithmatex">\(A\)</span> it holds</p>
+<div class="arithmatex">\[
+    P[A] = \sup\{P[F]\colon F\subseteq A \text{ where }F \text{ is closed.}\} 
+\]</div>
+<ul>
+<li>
+<p>If <span class="arithmatex">\(A\)</span> is an open set, define <span class="arithmatex">\(F_n = \{x \colon d(x, A^c)\geq 1/n\}\subseteq A\)</span> which is a closed set.
+    Indeed, <span class="arithmatex">\(x \mapsto d(x, A^c)\)</span> is Lipschitz continuous and <span class="arithmatex">\(F_n = d(\cdot , A^c)^{-1}([1/n, \infty))\)</span> is the reciprocal image of a closed set, hence closed.
+    Furthermore <span class="arithmatex">\(A = \cup F_n\)</span> since <span class="arithmatex">\(A^c\)</span> is closed.
+    Indeed, if there exists <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(A\setminus \cup F_n\)</span>, it follows that <span class="arithmatex">\(d(x, y_n)&lt;2/n\)</span> for some sequence <span class="arithmatex">\((y_n)\)</span> in <span class="arithmatex">\(A^c\)</span> showing that <span class="arithmatex">\(y_n \to x\)</span>.
+    Since <span class="arithmatex">\(A^c\)</span> is closed it follows that <span class="arithmatex">\(x\)</span> is in <span class="arithmatex">\(A^c\)</span> which is a contradiction.</p>
+<p>Since the sequence of sets <span class="arithmatex">\(F_n\)</span> is increasing, by lower continuity of the probability measure it follows that</p>
 <div class="arithmatex">\[
   \begin{align*}
-    V@R_{\alpha}(L) &amp; = \inf \{m \colon P[L&gt;m]\geq \alpha\} = q_L(1-\alpha)\\
-    ES_{\alpha}(L) &amp; = \frac{1}{\alpha}\int_0^\alpha V@R_{\alpha}(s) ds = \frac{1}{\alpha}\int_{1-\alpha}^1 q_L(s)ds
+    \sup\left\{ P[F]\colon F\subseteq A, F \text{ closed} \right\} 
+        &amp; \leq P[A]\\
+        &amp; = P[\cup F_n ]\\
+        &amp; = \sup P[F_n]\\
+        &amp; \leq \sup\left\{ P[F]\colon F\subseteq A, F \text{ closed} \right\}
   \end{align*}
 \]</div>
-<p>and that both functionals are positive homogoneous.</p>
-<p>Show that for <span class="arithmatex">\(L\sim \mathcal{N}(\mu, \sigma^2)\)</span></p>
-<div class="arithmatex">\[
-    V@R_{\alpha}(L) = \mu + \sigma V@R_{\alpha}(\bar{L}) \quad \text{and} \quad ES_{\alpha}(L) = \mu + \sigma ES_{\alpha}(\bar{L})
-\]</div>
-<p>where <span class="arithmatex">\(\bar{L} \sim \mathcal{N}(0, 1)\)</span> (in other terms, to compute the value at risk or expected shortfal of normal distribution, you just need the V@R and ES of the standard normal distribution).</p>
-<p>Deduce that for normally distributed random variable <span class="arithmatex">\(L\)</span> with <strong>zero mean</strong>, <span class="arithmatex">\(V@R\)</span> and <span class="arithmatex">\(ES\)</span> are related through</p>
-<div class="arithmatex">\[
-    ES_{\alpha}(L) = C V@R_{\alpha}(L)
-\]</div>
-<p>for some constant <span class="arithmatex">\(C\)</span> which you provide explicitely.</p>
-</div>
-<div class="admonition exercise">
-<p class="admonition-title">Dual Representation</p>
-<p>We already know that the expected shortfall has two possible representations:</p>
+</li>
+<li>
+<p>Define the collection <span class="arithmatex">\(\mathcal{C}\)</span> of those borel sets <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(P[A]\)</span> and <span class="arithmatex">\(P[A^c]\)</span> can be approximated from inside by closed sets.
+    Clearly any open set is member of <span class="arithmatex">\(\mathcal{C}\)</span>, in particular <span class="arithmatex">\(S\)</span> itself.
+    It is by definition closed under complementation.
+    Finally, it is closed under countable unions.
+    Indeed, let <span class="arithmatex">\((A_n)\)</span> be a sequence in <span class="arithmatex">\(\mathcal{C}\)</span> and define <span class="arithmatex">\(A = \cup A_n\)</span>.
+    Choose closed sets <span class="arithmatex">\(F_n\)</span> and <span class="arithmatex">\(G_n\)</span> such that <span class="arithmatex">\(P[A_n\setminus F_n]\leq \varepsilon/2^{n+1}\)</span> and <span class="arithmatex">\(P[A_n^c \setminus G_n]\leq \varepsilon/2^{n+1}\)</span>.
+    Fix <span class="arithmatex">\(m\)</span> such that <span class="arithmatex">\(P[A\setminus \cup_{n \leq m}A_n] \leq \varepsilon/2\)</span> and define <span class="arithmatex">\(F = \cup_{n\leq m}F_n \subseteq \cup_{n\leq m} A_n \subseteq A\)</span>.
+    It follows that</p>
 <div class="arithmatex">\[
   \begin{align*}
-     ES_\alpha(L) &amp; = \frac{1}{\alpha} \int_{1-\alpha}^{1} q_L(s) ds\\
-                  &amp; = \inf\left\{ m + \frac{1}{\alpha} E\left[ (L-m)^+ \right] \right\}\\
-                  &amp; = q_L(1-\alpha) + \frac{1}{\alpha} E\left[ \left( L - q_L(1-\alpha) \right)^+ \right]
+    P[A\setminus F] 
+      &amp; = P[A \setminus \cup_{n\leq m} A_n] + P[\cup_{n\leq m}A_n \setminus F]\\
+      &amp; \leq \frac{\varepsilon}{2} + P\left[ \cup_{n \leq m} A_n \setminus F_n \right]\\
+      &amp; \leq \frac{\varepsilon}{2} + \sum_{n \leq m} \frac{\varepsilon}{2^{n+1}}
+       \leq \varepsilon
   \end{align*}
 \]</div>
-<p>We derive an alternative formulation in terms of duality, namely:</p>
+<p>Since <span class="arithmatex">\(G = \cap G_n\)</span> is closed, it follows that</p>
 <div class="arithmatex">\[
-ES_{\alpha}(L) = \sup\left\{ E^Q[L] \colon 0 \leq \frac{dQ}{dP} \leq \frac{1}{\alpha} \right\}
+  \begin{align*}
+    P\left[ A\setminus G \right] 
+      &amp; = P[\cap A_n^c \setminus \cap G_n]\\
+      &amp; \leq P\left[ \cup A_n^c \setminus G_n \right]\\
+      &amp; \leq \sum P[A_n^c \setminus G_n] \leq \varepsilon
+  \end{align*}
 \]</div>
-<p>This general statement says that the expected shortfall accounts for computing the expected loss under any alternative probability model <span class="arithmatex">\( Q \)</span> such that <span class="arithmatex">\( Q \)</span> is not "too" far away from <span class="arithmatex">\( P \)</span> in the sense that the density is bounded by <span class="arithmatex">\( 1/\alpha \)</span>.</p>
+<p>showing that <span class="arithmatex">\(\mathcal{C}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra henceforth equal to <span class="arithmatex">\(\mathcal{S}\)</span> finishing the proof of the first step.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Step 2:</strong> We show the inner approximation with compacts.</p>
+<p>For a Borel set <span class="arithmatex">\(A\)</span> choose a closed set <span class="arithmatex">\(F\)</span> such that <span class="arithmatex">\(P[A\setminus F] \leq \varepsilon/2\)</span>.
+By tightness, choose a compact <span class="arithmatex">\(K\)</span> such that <span class="arithmatex">\(P[S\setminus K]\leq \varepsilon/2\)</span>.
+The set <span class="arithmatex">\(F\cap K\)</span> is itself compact, and it holds</p>
+<div class="arithmatex">\[
+  P[A \setminus (F\cap K)] \leq P\left[ A\setminus F \right] + P[A \setminus K] \leq \frac{\varepsilon}{2} + P[S\setminus K] \leq \varepsilon
+\]</div>
+</li>
+</ul>
+</details>
+<p>A metric space is automatically first countable, that is, each point has a countable basis of neighborhoods namely <span class="arithmatex">\(B_{1/n}(x)\)</span>.
+Most of the metric space we will encounter later have further properties that are useful from a measure viewpoint.
+Such metric spaces are called <strong>Polish</strong>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Polish Space</p>
+<p>A metric space <span class="arithmatex">\(S\)</span> is called <strong>Polish</strong> if it is </p>
+<ul>
+<li>separable: there exists a countable dense subset <span class="arithmatex">\((x_n)\)</span>;</li>
+<li>complete: any Cauchy sequence is converging.</li>
+</ul>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Ulam's Theorem</p>
+<p>Any probability measure <span class="arithmatex">\(P\)</span> on a Polish space <span class="arithmatex">\((S, \mathcal{S})\)</span> is tight, in particular, regular.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Recall that in a metric space a set <span class="arithmatex">\(K\)</span> is compact if and only if it is closed, complete and totally bounded.
+Clearly if <span class="arithmatex">\(K\)</span> is compact it is closed.
+Furthermore, as any sequence has a converging subsequence, if this sequence is Cauchy, it has a limit in <span class="arithmatex">\(K\)</span>, hence <span class="arithmatex">\(K\)</span> is complete.
+Finally, for any <span class="arithmatex">\(\varepsilon&gt;0\)</span>, <span class="arithmatex">\(B_{\varepsilon}(x)\)</span> for <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(K\)</span> is an open covering which can be reduce to a finite one because of compactness.
+Reciprocally, let <span class="arithmatex">\((x_n)\)</span> be a sequence in the closed, complete and totally bounded set <span class="arithmatex">\(K\)</span>.
+For any integer <span class="arithmatex">\(m\)</span> there exists a finite open covering of <span class="arithmatex">\(K\)</span> by open balls of radius <span class="arithmatex">\(1/m\)</span>.
+Infinitely many elements of the sequence must belong to one of such ball.
+We can therefore construct a subsequence which is Cauchy which by completness will converge showing that <span class="arithmatex">\(K\)</span> is compact.</p>
+<p>Let <span class="arithmatex">\((x_n)\)</span> be a countable dense subset of <span class="arithmatex">\(S\)</span>.
+For any <span class="arithmatex">\(m\)</span>, since <span class="arithmatex">\(S = \cup_n \bar{B}_{1/m}(x_n)\)</span> where <span class="arithmatex">\(\bar{B}_{1/m}(x_n)\)</span> is the closed ball of radius <span class="arithmatex">\(1/m\)</span> centered in <span class="arithmatex">\(x_n\)</span>, choose <span class="arithmatex">\(N_m\)</span> be such that <span class="arithmatex">\(P[S \setminus K_m]\leq \varepsilon/2^m\)</span> where <span class="arithmatex">\(K_m = \cup_{n\leq N_m}\bar{B}_{1/m}(x_n)\)</span>.
+Clearly <span class="arithmatex">\(K_m\)</span> is closed as finite union of closed sets and also complete as closed subset of a complete space.
+So is <span class="arithmatex">\(K := \cap_m K_m\)</span>.
+Let us show that <span class="arithmatex">\(K\)</span> is totally bounded.
+For <span class="arithmatex">\(\delta&gt;0\)</span> choose <span class="arithmatex">\(m\)</span> such that <span class="arithmatex">\(1/m&lt;\delta\)</span>.
+It follows that <span class="arithmatex">\(K \subseteq K_m =\cup_{n\leq N_m} \bar{B}_{1/m}(x_n) \subseteq \cup_{n\leq N_m}B_{\delta}(x_n)\)</span> showing that <span class="arithmatex">\(K\)</span> can be covered by finitely many balls of size <span class="arithmatex">\(\delta\)</span>, hence is totally bounded.
+We deduce that <span class="arithmatex">\(K\)</span> is compact.
+Finally it holds that</p>
+<div class="arithmatex">\[
+  P[S \setminus K] \leq \sum P[S\setminus K_m] \leq \sum \frac{\varepsilon}{2^m} = \varepsilon
+\]</div>
+</div>
+<div class="footnote">
+<hr />
 <ol>
-<li>
-<p>Show that for every <span class="arithmatex">\( x \)</span> and every <span class="arithmatex">\( y \)</span> with <span class="arithmatex">\( 0 \leq y \leq 1/\alpha \)</span> it holds:</p>
-<div class="arithmatex">\[
-\frac{1}{\alpha} x^+ \geq xy
-\]</div>
-<p>In other terms, <span class="arithmatex">\( x^+ / \alpha = \sup\{ xy \colon 0 \leq y \leq 1/\alpha \} \)</span>, which is called Fenchel-Moreau duality.</p>
-</li>
-<li>
-<p>Using the fact that <span class="arithmatex">\( E[dQ/dP] = 1 \)</span>, show that if <span class="arithmatex">\( 0 \leq dQ/dP \leq 1/\alpha \)</span>, then it holds:</p>
-<div class="arithmatex">\[
-m + \frac{1}{\alpha} E\left[ (L-m)^+ \right] \geq E^Q[L]
-\]</div>
-<p>and deduce that:</p>
-<div class="arithmatex">\[
-ES_{\alpha}(L) \geq \sup\left\{ E^Q[L] \colon 0 \leq \frac{dQ}{dP} \leq \frac{1}{\alpha} \right\}
-\]</div>
-</li>
-<li>
-<p>Assuming that <span class="arithmatex">\( F_L \)</span> is continuous and strictly increasing, show that if we define the random variable:</p>
-<div class="arithmatex">\[
-\frac{dQ^\ast}{dP} = \frac{1}{\alpha} 1_{\{L \geq q_L(1-\alpha)\}}
-\]</div>
-<p>then it defines a probability measure <span class="arithmatex">\( Q^\ast \)</span> such that <span class="arithmatex">\( 0 \leq dQ^\ast/dP \leq 1/\alpha \)</span> and for which it holds:</p>
-<div class="arithmatex">\[
-ES_{\alpha}(L) = E^{Q^\ast}[L]
-\]</div>
-<p>and deduce the duality formula — for which you now have an explicit <span class="arithmatex">\( Q^\ast \)</span> that depends on <span class="arithmatex">\( L \)</span>.</p>
+<li id="fn:1">
+<p>The definition of tightness and regularity only requires a topological space but most of the interesting results we will address are for Polish spaces.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1372,6 +1487,8 @@ ES_{\alpha}(L) = E^{Q^\ast}[L]
 
 
 
+
+  
 
 
 
@@ -1407,14 +1524,14 @@ ES_{\alpha}(L) = E^{Q^\ast}[L]
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
       
     
   </body>
