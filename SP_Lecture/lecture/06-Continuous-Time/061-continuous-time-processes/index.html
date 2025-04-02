@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../03-Integration/036-uniform-integrability/">
+        <link rel="prev" href="../060-introduction/">
       
       
-        <link rel="next" href="../041-discrete-time-processes/">
+        <link rel="next" href="../062-lebesgue/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Introduction - Stochastics</title>
+        <title>Continuous Time Processes - Stochastics</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#discrete-time-processes-martingales" class="md-skip">
+        <a href="#continuous-time-processes-regularity-filtration-stopping-times" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Continuous Time Processes
             
           </span>
         </div>
@@ -984,10 +984,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1007,11 +1005,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
           <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
@@ -1026,7 +1024,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Discrete Time Stochastic Processes, Martingales
@@ -1037,19 +1035,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/040-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1059,7 +1048,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1072,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../041-discrete-time-processes/" class="md-nav__link">
+      <a href="../../04-Martingales/041-discrete-time-processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../042-martingale-doob/" class="md-nav__link">
+      <a href="../../04-Martingales/042-martingale-doob/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1116,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../043-martingale-as-convergence/" class="md-nav__link">
+      <a href="../../04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1138,7 +1126,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../044-martingale-lp-convergence/" class="md-nav__link">
+      <a href="../../04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1310,8 +1298,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1329,11 +1319,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
         
           
           <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
@@ -1348,7 +1338,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_7">
             <span class="md-nav__icon md-icon"></span>
             Continuous Time Processes
@@ -1362,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06-Continuous-Time/060-introduction/" class="md-nav__link">
+      <a href="../060-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1381,10 +1371,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../06-Continuous-Time/061-continuous-time-processes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1394,6 +1393,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1406,7 +1406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06-Continuous-Time/062-lebesgue/" class="md-nav__link">
+      <a href="../062-lebesgue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1428,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06-Continuous-Time/063-martingales/" class="md-nav__link">
+      <a href="../063-martingales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1474,43 +1474,310 @@
 
 
 
-<h1 id="discrete-time-processes-martingales">Discrete Time Processes, Martingales</h1>
-<p>We are now interested in "time" dependent random outcomes.
-In this chapter we consider discrete time, that is an ordered countable index.
-This could be anything from a finite set <span class="arithmatex">\(\{0, 1, \ldots, T\}\)</span> or at the other extreme <span class="arithmatex">\(\mathbb{Q}\)</span>.
-We will however generically consider <span class="arithmatex">\(\mathbb{N}_0\)</span> as the standard index for time and denote different times by <span class="arithmatex">\(s\)</span> or <span class="arithmatex">\(t\)</span>.
-The results in this chapter all holds for any countable ordered set.
-In the case where a specific different index shall be considered we will precise it.</p>
-<p>Throughout we fix a probability space <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span>.</p>
+<h1 id="continuous-time-processes-regularity-filtration-stopping-times">Continuous Time Processes: Regularity, Filtration, Stopping Times</h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Unless otherwize specified, the letters <span class="arithmatex">\(q\)</span> and <span class="arithmatex">\(r\)</span> used for time means that they are rational.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be two processes.
+We say that</p>
 <ul>
-<li><a href="../041-discrete-time-processes/">Discrete Time Processes</a> (filtration, adapted processes, stopping times.)</li>
-<li><a href="../042-martingale-doob/">Martingales</a> (martingale, stochastic integral, doob's optional sampling theorem)</li>
-<li><a href="../043-martingale-as-convergence/">Martingales: Almost Sure Convergence</a> (Doob's upcrossing lemma, martingale convergence, Borel-Cantelli)</li>
-<li><a href="../044-martingale-lp-convergence/">Martingales: <span class="arithmatex">\(L^p\)</span>-convergence</a> (<span class="arithmatex">\(L^p\)</span>-convergence, law of large numbers)</li>
+<li><span class="arithmatex">\(X\)</span> is a <strong>modification</strong> of <span class="arithmatex">\(Y\)</span> if <span class="arithmatex">\(X_t=Y_t\)</span> <span class="arithmatex">\(P\)</span>-almost surely for every <span class="arithmatex">\(t\)</span>, that is</li>
 </ul>
-<!---->
-<!---->
-<!---->
-<!-- !!! note "Joseph L. Doob" -->
-<!--      -->
-<!--     <div class = "grid cards" markdown> -->
-<!--      -->
-<!--     - __Joseph L. Doob (1910–2004)__ -->
-<!--          -->
-<!--         ---- -->
-<!--        -->
-<!--         Doob played a crucial role in shaping modern probability theory, particularly through his work on stochastic processes. While pioneers like Kolmogorov and Lévy had already laid the foundation for probability as a rigorous mathematical discipline, Doob pushed the field further by developing martingale theory into a powerful analytical framework. His background in complex analysis gave him a unique perspective, allowing him to introduce measure-theoretic precision into probability, bridging gaps between pure and applied mathematics. -->
-<!---->
-<!--         His most lasting contribution came with his 1953 book Stochastic Processes, where he systematically developed martingale theory, proving fundamental results such as the Doob decomposition and key convergence theorems. These results provided the mathematical backbone for modern stochastic calculus, later becoming essential in areas like financial mathematics, filtering theory, and ergodic theory. By showing how seemingly chaotic processes could be decomposed and analyzed, Doob’s work gave probability a new level of rigor, making it an indispensable tool across various disciplines. -->
-<!---->
-<!--     -  -->
-<!---->
-<!--         ![Joseph Doob](./../../images/doob.gif){align = right} -->
-<!--     </div> -->
-<!---->
-<!---->
-<!---->
-<!---->
+<div class="arithmatex">\[
+P[X_t=Y_t]=1,\quad \text{for every }t.
+\]</div>
+<ul>
+<li><span class="arithmatex">\(X\)</span> is indistinguishable from <span class="arithmatex">\(Y\)</span> if <span class="arithmatex">\(X_t=Y_t\)</span> for all <span class="arithmatex">\(t\)</span>, <span class="arithmatex">\(P\)</span>-almost surely, that is</li>
+</ul>
+<div class="arithmatex">\[
+P[X_t=Y_t; \text{ for every }t]=1.
+\]</div>
+</div>
+<p>In the case where the stochastic process is indexed by a countable set, these two notions are equivalent.
+However, if it is indexed by <span class="arithmatex">\(t\)</span> in <span class="arithmatex">\([0, \infty)\)</span> of any uncountable directed set, modification and indistinguishability are different in that we may have to take into account uncountably many null sets as the following example shows.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Set <span class="arithmatex">\((\Omega, \mathcal{F},P):=([0,1], \mathcal{B}([0,1]),dt)\)</span>, where <span class="arithmatex">\(dt\)</span> is the Lebesgue measure and <span class="arithmatex">\(\mathcal{B}([0,1])\)</span> is the Borel <span class="arithmatex">\(\sigma\)</span>-algebra.
+Define the processes <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> by</p>
+<div class="arithmatex">\[
+X_t=0\quad\text{and}\quad
+Y_t=
+\begin{cases}
+    Y_t(\omega)=1&amp; \text{if }\omega = t\\
+    Y_t(\omega)=0 &amp; \text{otherwise}
+\end{cases}
+\]</div>
+<p>for every <span class="arithmatex">\(0\leq t\leq 1\)</span>.
+It follows that </p>
+<div class="arithmatex">\[
+  P[X_t=Y_t]=P[ \{\omega\in [0,1]\colon \omega\neq t\}]=1
+\]</div>
+<p>whereas </p>
+<div class="arithmatex">\[
+  P[X_t=Y_t\colon\text{ for every }t]=P[\{\omega \in [0,1]\colon \omega\neq t\text{ for every }t\}]=P[\emptyset]=0
+\]</div>
+</div>
+<p>We see that uncountably many sets of measure zero can add up to something that may no longer have measure zero.
+However, if we can infer from the structure of the trajectories that it is sufficient to consider countably many times, then these two conditions will coincide again.</p>
+<p>We say that a process <span class="arithmatex">\(X\)</span> has</p>
+<ul>
+<li>
+<p><strong>des limites à gauche</strong>(1) (làg) if </p>
+<div class="arithmatex">\[
+P\left[\liminf_{s\nearrow t}X_s=\limsup_{s\nearrow t}X_s: \text{ for every }t&gt;0\right]=1,
+\]</div>
+</li>
+<li>
+<p><strong>des limites à droite</strong> (làd) if</p>
+<div class="arithmatex">\[
+P\left[\liminf_{s\searrow t}X_s=\limsup_{s\searrow t}X_s:\text{ for every }t\right]=1,
+\]</div>
+</li>
+<li>
+<p><strong>continue à gauche</strong> (càg) if</p>
+<div class="arithmatex">\[
+P\left[\lim_{s\nearrow t}X_s=X_t: \text{ for every }t&gt;0, t\in \mathbf{T}\right]=1,
+\]</div>
+</li>
+<li>
+<p><strong>continue à droide</strong> (càd) if</p>
+<div class="arithmatex">\[
+P\left[\lim_{s\searrow t}X_s=X_t:\text{ for every }t&lt;T, t \in \mathbf{T}\right]=1,
+\]</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The notations làg, làd, càd, or càg comes from french where "gauche" stands for "left", "droite" stands for "right", "limites" stands for "limits" and "continue" stands for "continuous".
+In some Americanized textbooks, "ll" stands for "làg", "lr" stands for "làd", "rc" stands for "càd", or "lc" stands for "càg".</p>
+</div>
+<p>A process <span class="arithmatex">\(X\)</span> is said to be càdlàg, càglàd, or làdlàg, if it is “continue à droite avec des limites à gauche”, “continue à gauche avec des limites à droite” or “limites à gauche et limites à droite”, respectively.</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>Suppose that <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are modifications of each other and both are either càd or càg.
+Then <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are indistinguishable.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> both be càd and modifications of each other.
+Since <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are càd, it follows that</p>
+<div class="arithmatex">\[
+\begin{align*}
+  P\left[ X_t\neq Y_t:\text{for some }t\right] 
+    &amp; = P\left[ \lim_{ q\searrow t}X_q\neq \lim_{ q\searrow t}Y_q: \text{ for some }t \right]\\
+    &amp; = P\left[X_q \neq Y_q: \text{for some }q \in \mathbb{Q} \right]\\
+    &amp; = P\left[ \cup_{q \in \mathbb{Q}}\{X_q\neq Y_q\} \right]\\
+    &amp; \leq \sum P[X_q\neq Y_q]=0
+\end{align*}
+\]</div>
+<p>Hence, <span class="arithmatex">\(P\left[ X_t=Y_t\colon \text{for every }t \right]=1\)</span> showing that <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are indistinguishable.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The assumption of left- or right-continuity is central.
+The counter example provided for distinction between version and indistinguishable are two làdlàg processes modification of each others while not indistinguishable.</p>
+</div>
+<p class="annotate">The definition of a filtration <span class="arithmatex">\(\mathbb{F}=(\mathcal{F}_t)\)</span> does not change as an increasing family of <span class="arithmatex">\(\sigma\)</span>-algebra indexed by time.
+However, in continuous time, we can also define the right and left filtration <span class="arithmatex">\(\mathbb{F}^+=(\mathcal{F}_t^+)\)</span> and <span class="arithmatex">\(\mathbb{F}^-=(\mathcal{F}^-_t)\)</span> as follows(1)</p>
+<ol>
+<li>Clearly for the left continuous version we have to assume <span class="arithmatex">\(t&gt;0\)</span> and set as convention <span class="arithmatex">\(\mathcal{F}_0^- = \mathcal{F}_0\)</span>. If the time index is <span class="arithmatex">\([0, T]\)</span>, then also for the right continuous version we set <span class="arithmatex">\(\mathcal{F}_T^+ = \\mathcal{F}_T\)</span>.</li>
+</ol>
+<div class="arithmatex">\[
+  \mathcal{F}_t^+=\bigcap_{s&gt;t}\mathcal{F}_s\quad \text{and}\quad \mathcal{F}_{t}^-=\bigvee_{s&lt;t}\mathcal{F}_s:=\sigma\left( \mathcal{F}_s: s&lt;t \right)
+\]</div>
+<p>We say that the filtration is left- or right-continuous if <span class="arithmatex">\(\mathbb{F}=\mathbb{F}^-\)</span> or <span class="arithmatex">\(\mathbb{F}=\mathbb{F}^+\)</span>, and continuous if it is both.</p>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>From the definition, <span class="arithmatex">\(\mathbb{F}^\pm\)</span> are themselves filtrations and it holds <span class="arithmatex">\(\mathcal{F}_t^-\subseteq \mathcal{F}_t\subseteq \mathcal{F}_t^+\)</span> as well as <span class="arithmatex">\(\mathcal{F}^+_s\subseteq \mathcal{F}_t^-\)</span> whenever <span class="arithmatex">\(s&lt;t\)</span>.
+Hence <span class="arithmatex">\((\mathbb{F}^-)^+=(\mathbb{F})^+=(\mathbb{F}^+)^+\)</span> as well as <span class="arithmatex">\((\mathbb{F}^+)^-=(\mathbb{F})^-=(\mathbb{F}^-)^-\)</span>.</p>
+</div>
+<p>As such, a process is nothing else than an arbitrary family of random variables indexed by the time.
+It can also be seen as a mapping <span class="arithmatex">\(X:\Omega \times [0, \infty)\to \mathbb{R}\)</span>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>Given a filtration <span class="arithmatex">\(\mathbb{F} = (\mathcal{F}_t)\)</span>, we say that a process <span class="arithmatex">\(X\)</span> is</p>
+<ul>
+<li>
+<p><strong>measurable</strong> if <span class="arithmatex">\(X\colon \Omega\times [0, \infty) \to \mathbb{R}\)</span> is measurable with respect to the product <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{F}\otimes \mathcal{B}([0, \infty))\)</span>.</p>
+</li>
+<li>
+<p><strong>adapted</strong> if <span class="arithmatex">\(X_t\)</span> is <span class="arithmatex">\(\mathcal{F}_t\)</span>-measurable for every <span class="arithmatex">\(t\)</span>.</p>
+</li>
+<li>
+<p><strong>progressively measurable</strong> if for every <span class="arithmatex">\(t\)</span>, the function <span class="arithmatex">\(X\colon \Omega \times [0, t]\to \mathbb{R}\)</span>, <span class="arithmatex">\((\omega, s) \mapsto X_s(\omega)\)</span> is measurable with respect to the product <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{F}\otimes \mathcal{B}([0, t])\)</span></p>
+</li>
+</ul>
+</div>
+<p>In particular, progressively measurable processes are automatically adapted.
+The reciprocal is true if the paths of the process are regular enough.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a càd or càg <span class="arithmatex">\(\mathbb{F}\)</span>-adapted process.
+Then <span class="arithmatex">\(X\)</span> is progressively measurable.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Suppose that <span class="arithmatex">\(X\)</span> is càd and fix <span class="arithmatex">\(t\)</span>.
+Define</p>
+<div class="arithmatex">\[
+    X^n_s=X_{\frac{k+1}{2^n}t}, \quad \text{for} \quad \frac{k}{2^n}t \leq  s &lt; \frac{k+1}{2^n}t
+\]</div>
+<p>It follows that <span class="arithmatex">\(X^n\)</span> is also càd as <span class="arithmatex">\(X\)</span>, hence <span class="arithmatex">\(\lim X^n =X\)</span> on <span class="arithmatex">\(\Omega \times [0,t]\)</span> up to the null set of those <span class="arithmatex">\(\omega\)</span> on which <span class="arithmatex">\(X\)</span> does not have right-continuous paths.
+Furthermore, since <span class="arithmatex">\(X\)</span> is adapted, it follows that the piecewise constant process <span class="arithmatex">\(X^n\)</span> is <span class="arithmatex">\(\mathcal{F}_t\otimes \mathcal{B}([0,t])\)</span>-measurable.
+Hence <span class="arithmatex">\(X\)</span> is progressively measurable.</p>
+</div>
+<p>The previous result makes use of the regularity of paths to derive progressive measurability from adaptiveness.
+The following result goes a step further by showing that measurability together with adaptiveness yields progressive measurability, up to a modification though.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Any measurable and adapted process admits a progressive modification.</p>
+</div>
+<p>The proof of this theorem is clearly not trivial, somewhat lengthy and often just mentioned like here without proof. If you are interested you can see Delacherie and Meyer<sup id="fnref:Dellacherie1978"><a class="footnote-ref" href="#fn:Dellacherie1978">1</a></sup><sup id="fnref:Dellacherie1982"><a class="footnote-ref" href="#fn:Dellacherie1982">2</a></sup>.</p>
+<p>The notion of stopping times also has to be slightly modified in the continuous time.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>On a probability space, a <em>random time</em> is a measurable mapping <span class="arithmatex">\(\tau :\Omega \to [0, \infty)\cup \{\infty\}\)</span>.
+Given a filtration, a random time is</p>
+<ul>
+<li>an <strong>optional time</strong> if <span class="arithmatex">\(\{\tau &lt;t\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_t\)</span> for every <span class="arithmatex">\(t\)</span>.</li>
+<li>a <strong>stopping time</strong> if <span class="arithmatex">\(\{\tau \leq t\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_t\)</span> for every <span class="arithmatex">\(t\)</span>.</li>
+</ul>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Every stopping time is an optional time, and every optional time is a stopping time for the right-filtration.
+In particular, the two notions coincide if the filtration is right-continuous.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>The first assertion is trivial.
+As for the second, let <span class="arithmatex">\(\tau\)</span> be an optional time and fix <span class="arithmatex">\(t\)</span>.
+It follows that <span class="arithmatex">\(\{\tau \leq t\}=\cap_n\{\tau &lt; t+ 1/n\}\)</span> which is an event in <span class="arithmatex">\(\mathcal{F}_{t}^+\)</span>.</p>
+</div>
+<p>For a process <span class="arithmatex">\(X\)</span> and a subset <span class="arithmatex">\(V\)</span> of the state space we define the <strong>hitting time</strong> of <span class="arithmatex">\(X\)</span> in <span class="arithmatex">\(V\)</span> as</p>
+<div class="arithmatex">\[
+\tau_V(\omega)=\inf\{t\colon X_t(\omega)\in V\}.
+\]</div>
+<p>This function is not necessarily measurable even if <span class="arithmatex">\(X\)</span> is adapted, however we have the following.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>If <span class="arithmatex">\(X\)</span> adapted and càd and <span class="arithmatex">\(V\)</span> is open, then <span class="arithmatex">\(\tau_{V}\)</span> is an optional time.
+If <span class="arithmatex">\(X\)</span> is adapted and continuous and <span class="arithmatex">\(V\)</span> is closed, then <span class="arithmatex">\(\tau_{V}\)</span> is a stopping time.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>It holds <span class="arithmatex">\(\{\tau_V &lt;t\}=\{\omega \in \Omega: X_s(\omega)\in V, s&lt;t\}\)</span>.
+Since <span class="arithmatex">\(X\)</span> is càd and <span class="arithmatex">\(V\)</span> is open, <span class="arithmatex">\(X_s(\omega)\)</span> being in <span class="arithmatex">\(V\)</span> implies the existence of a rational <span class="arithmatex">\(q&lt;t\)</span> such that <span class="arithmatex">\(X_q(\omega)\)</span> is already in <span class="arithmatex">\(V\)</span>.
+Hence </p>
+<div class="arithmatex">\[
+  \{\tau_V&lt;t\}=\{X_q \in V:  q&lt;t\}=\cup_{ q&lt;t}\{X_q \in V\}\in \mathcal{F}_t
+\]</div>
+<p>For the case of <span class="arithmatex">\(X\)</span> being continuous and <span class="arithmatex">\(V\)</span> closed, define the open sets <span class="arithmatex">\(V_n=\{x: d(x,V)&lt;1/n\}\supseteq V\)</span>.
+Then by continuity of <span class="arithmatex">\(X\)</span> we obtain</p>
+<div class="arithmatex">\[
+  \{\tau_V \leq t\}=\{X_t \in V\}\cup \left( \cap_n \cup_{ q&lt;t}\{X_q \in V_n\} \right) \in \mathcal{F}_t.
+\]</div>
+</div>
+<p>Let us collect some standard properties of optional and stopping times.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>The following assertions hold:</p>
+<ul>
+<li>Every constant <span class="arithmatex">\(t\)</span> is a stopping time;</li>
+<li><span class="arithmatex">\(\tau+\sigma\)</span>, <span class="arithmatex">\(\tau \vee \sigma\)</span> and <span class="arithmatex">\(\tau\wedge \sigma\)</span> are stopping/optional times as soon as <span class="arithmatex">\(\tau,\sigma\)</span> are stopping/optional times;</li>
+<li><span class="arithmatex">\(\lim \tau^n\)</span> is a stopping time as soon as <span class="arithmatex">\((\tau^n)\)</span> is an increasing sequence of stopping times;</li>
+<li><span class="arithmatex">\(\lim \tau^n\)</span> is an optional time as soon as <span class="arithmatex">\((\tau^n)\)</span> is a decreasing sequence of optional times;
+  It is a stopping time if <span class="arithmatex">\((\tau^n)\)</span> are stationary stopping times, that is, <span class="arithmatex">\(\tau^m(\omega)=\tau^n(\omega)\)</span> for all <span class="arithmatex">\(m\)</span> greater than a given <span class="arithmatex">\(n\)</span>, for <span class="arithmatex">\(P\)</span>-almost all <span class="arithmatex">\(\omega \in \Omega\)</span>;</li>
+<li>If <span class="arithmatex">\(\tau\)</span> is a stopping time, then the collection <span class="arithmatex">\(\mathcal{F}_\tau=\{A \in \mathcal{F}: A\cap \{\tau\leq t\}\in \mathcal{F}_t\}\)</span> is a <span class="arithmatex">\(\sigma\)</span>-algebra and <span class="arithmatex">\(\tau\)</span> is <span class="arithmatex">\(\mathcal{F}_{\tau}\)</span>-measurable;</li>
+<li>For any two stopping times, it holds <span class="arithmatex">\(\mathcal{F}_{\sigma}\cap \mathcal{F}_{\tau}=\mathcal{F}_{\sigma \wedge \tau}\)</span>.
+  In particular, <span class="arithmatex">\(\mathcal{F}_{\sigma}\subseteq \mathcal{F}_{\tau}\)</span>, if <span class="arithmatex">\(\sigma \leq \tau\)</span>.
+  For every integrable random variable <span class="arithmatex">\(\xi\)</span>, it holds <span class="arithmatex">\(E[E[\xi|\mathcal{F}_{\sigma}]| \mathcal{F}_{\tau}]=E[\xi| \mathcal{F}_{\sigma \wedge \tau}]\)</span>.</li>
+</ul>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>The proof follows the same argumentation as in the discrete time since <span class="arithmatex">\(\mathbb{Q}\)</span> is a countable dense subset of <span class="arithmatex">\([0, \infty)\)</span>.
+Only the following two points need a certain care.</p>
+<ul>
+<li>
+<p>Let <span class="arithmatex">\(\tau\)</span> and <span class="arithmatex">\(\sigma\)</span> be two stopping times, let us show that the sum is still a stopping time.
+    Noting that <span class="arithmatex">\(\tau\)</span> is a stopping time if and only if <span class="arithmatex">\(\{\tau &gt;t \}=\{\tau\leq t\}^c\)</span> is in <span class="arithmatex">\(\mathcal{F}_t\)</span> for every <span class="arithmatex">\(t\)</span>, the following decomposition holds</p>
+<div class="arithmatex">\[
+\{\tau+\sigma &gt;t\}=\{\tau=0, \sigma &gt; t\}\cup \{\sigma=0,\tau &gt; t\}\cup \{\tau \geq t, \sigma&gt;0 \}\cup\{\sigma+\tau&gt;t,0&lt;\tau&lt;t\}
+\]</div>
+<p>Noting that <span class="arithmatex">\(\{\tau=0\}=\{\tau\leq 0\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_0\subseteq \mathcal{F}_t\)</span>, the same for <span class="arithmatex">\(\{\sigma=0\}\)</span> being in <span class="arithmatex">\(\mathcal{F}_t\)</span>, it follows immediately that the first two sets are in <span class="arithmatex">\(\mathcal{F}_t\)</span>.
+Further, <span class="arithmatex">\(\{\tau \geq t\}=\cap_{n}\{\tau&gt;t-1/n\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_{t-}\subseteq \mathcal{F}_t\)</span> and <span class="arithmatex">\(\{\sigma&gt;0\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_0\)</span> showing that the third set in this decomposition is in <span class="arithmatex">\(\mathcal{F}_t\)</span>.
+As for the last one, note that</p>
+<div class="arithmatex">\[
+  \{\sigma+\tau&gt;t,0&lt;\tau&lt;t\}=\cup_{0&lt;q&lt;t}\{\sigma&gt;t-q\}\cap\{t&gt;\tau&gt;q\}=\cup_{0&lt;q&lt;t}\{\sigma&gt;t-q\}\cap \{\tau&gt;q\}\cap \{\tau&lt;t\}
+\]</div>
+<p>which is for the same reason as before in <span class="arithmatex">\(\mathcal{F}_t\)</span> since <span class="arithmatex">\(0&lt;q&lt;t\)</span>.</p>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(\tau^n\)</span> is a decreasing sequence of optional times.
+  It follows from <span class="arithmatex">\(\{\lim \tau^n &lt;t\}=\{\tau^n &lt;t: \text{ for some }n\}=\cup_n\{\tau^n &lt;t\}\)</span> is in <span class="arithmatex">\(\mathcal{F}_t\)</span> that <span class="arithmatex">\(\lim \tau^n\)</span> is an optional time.
+  If <span class="arithmatex">\(\tau^n\)</span> are stopping times, it only holds <span class="arithmatex">\(\{\lim \tau^n \leq t\}=\cap_{q&gt;0}\{\tau^n \leq t+q: \text{for some }n\}\)</span> is in <span class="arithmatex">\(\mathcal{F}^+_t\)</span> and therefore <span class="arithmatex">\(\lim \tau^n\)</span> is optional.
+  However, defining <span class="arithmatex">\(A_n=\{\tau^n=\tau^m: \text{for all }m\geq n\}\)</span>, it follows from stationarity that <span class="arithmatex">\(A_n\)</span> is increasing to <span class="arithmatex">\(\Omega\)</span>.
+  Furthermore, <span class="arithmatex">\(A_n\)</span> is an event in <span class="arithmatex">\(\mathcal F_{\tau^n}\)</span> and hence <span class="arithmatex">\(\{\lim \tau^n \leq t\}=\cup_n \{\tau^n\leq t\}\cap A_n\)</span> is in <span class="arithmatex">\(\mathcal{F}_t\)</span>.</p>
+</li>
+</ul>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a progressively measurable process and <span class="arithmatex">\(\tau\)</span> a stopping time with <span class="arithmatex">\(\tau &lt;\infty\)</span>.
+Then <span class="arithmatex">\(X_\tau(\omega):=X_{\tau(\omega)}(\omega)\)</span> is an <span class="arithmatex">\(\mathcal{F}_{\tau}\)</span>-measurable random variable.
+Furthermore, <span class="arithmatex">\(X^\tau:=(X_{\cdot\wedge \tau})\)</span> is a progressive process.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>First, <span class="arithmatex">\(\tau\)</span> being a stopping time implies that <span class="arithmatex">\((\omega,s)\mapsto h(\omega,s):= (\omega, \tau(\omega)\wedge s)\)</span> from <span class="arithmatex">\(\Omega \times [0,t]\)</span> onto itself is <span class="arithmatex">\(\mathcal{F}_t\otimes \mathcal{B}([0,t])\)</span>-measurable for every <span class="arithmatex">\(t\)</span>.
+Since <span class="arithmatex">\(X\)</span> is progressive and <span class="arithmatex">\(X^\tau_s(\omega)=X\circ h(\omega, s)\)</span> for every <span class="arithmatex">\(s\leq t\)</span>, it follows that <span class="arithmatex">\((s,\omega)\mapsto X^\tau_s(\omega)\)</span> is also <span class="arithmatex">\(\mathcal{F}_t\otimes \mathcal{B}([0,t])\)</span>-measurable.
+Thus <span class="arithmatex">\(X^\tau\)</span> is progressive and, in particular, <span class="arithmatex">\(X_{\tau}\)</span> is <span class="arithmatex">\(\mathcal{F}_{\tau}\)</span>-measurable.</p>
+</div>
+<p>The null sets on a probability space play a central role.
+They allow to identify random variables in the almost sure sense.
+With regard to a filtration indexed by an uncountable time set, this may yield some tricky problems — this is mainly due to the problem of right-continuous version of processes not further discussed here, see Theorem III-44 p.~64, Theorems IV-32-33 pp.~102--103 From Delacherie-Meyer<sup id="fnref2:Dellacherie1978"><a class="footnote-ref" href="#fn:Dellacherie1978">1</a></sup>.
+In order to get rid of these problems and the identification between optional and stopping times we will work with the following assumption.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A filtration <span class="arithmatex">\(\mathbb{F}\)</span> is said to </p>
+<ul>
+<li>
+<p>be <strong>complete</strong> if <span class="arithmatex">\(\mathcal{F}_0\)</span> contains all the <span class="arithmatex">\(P\)</span>-negligible sets of <span class="arithmatex">\(\mathcal{F}\)</span>;</p>
+</li>
+<li>
+<p>satisfy the <strong>usual conditions</strong> if it is complete and right-continuous, that is <span class="arithmatex">\(\mathbb{F}^+=\mathbb{F}\)</span>.</p>
+</li>
+</ul>
+</div>
+<p>From now on, unless otherwise specified:</p>
+<div class="arithmatex">\[
+\mathbb{F}=\mathbb{F}^+\quad \text{and}\quad \mathcal{F}_0\text{ contains all the }P\text{ null sets of }\mathcal{F}
+\]</div>
+<p>For a stopping/optional time <span class="arithmatex">\(\tau\)</span>, we denote by <span class="arithmatex">\([\tau]=\{(\omega,t) \in \Omega \times \mathbf{T}: \tau(\omega)=t\}\)</span> its graph.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a càdlàg, adapted process on a filtration satisfying the usual conditions.
+Then there exists a sequence of stopping times <span class="arithmatex">\((\tau^n)\)</span> which exhausts the jumps\footnote{For <span class="arithmatex">\(X\)</span> càdlàg, the jump process <span class="arithmatex">\(\Delta X\)</span> is the difference of <span class="arithmatex">\(X\)</span> with the càglàd version <span class="arithmatex">\(X_{-}\)</span> of <span class="arithmatex">\(X\)</span>} <span class="arithmatex">\(\Delta X=X-X_{-}\)</span> of <span class="arithmatex">\(X\)</span>, that is</p>
+<div class="arithmatex">\[
+\left\{\Delta X\neq 0\right\}\subseteq\bigcup_{n}\left[ \tau^n \right].
+\]</div>
+</div>
+<p>This proposition is also particularly difficult to prove buy it basically shows that the jumps can be described by stopping times.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:Dellacherie1978">
+<p>Claude Dellacherie and Paul-André Meyer. <em>Probabilities and Potential. A</em>. Volume 29 of North-Holland Mathematics Studies. North-Holland Publishing Co., Amsterdam, 1978. ISBN 0-7204-0701-X.&#160;<a class="footnote-backref" href="#fnref:Dellacherie1978" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:Dellacherie1978" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:Dellacherie1982">
+<p>Claude Dellacherie and Paul André Meyer. <em>Probabilities and Potential. B</em>. Volume 72 of North-Holland Mathematics Studies. North-Holland Publishing Co., Amsterdam, 1982.&#160;<a class="footnote-backref" href="#fnref:Dellacherie1982" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 

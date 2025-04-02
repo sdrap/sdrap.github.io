@@ -12,6 +12,8 @@
         <link rel="prev" href="../052-markov-discrete/">
       
       
+        <link rel="next" href="../../06-Continuous-Time/060-introduction/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
@@ -324,6 +326,8 @@
   
     
     
+      
+        
       
         
       
@@ -1351,6 +1355,151 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Continuous Time Processes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Continuous Time Processes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Continuous-Time/060-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Continuous-Time/061-continuous-time-processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Time Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Continuous-Time/062-lebesgue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lebesgue-Stieljes Integral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-Continuous-Time/063-martingales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1782,7 +1931,13 @@ From the result of the recursion, and <span class="arithmatex">\(\gamma&gt;0\)</
 For <span class="arithmatex">\(\omega\)</span> outside of <span class="arithmatex">\(\mathcal{N}\)</span>, and <span class="arithmatex">\(t\)</span> we pick a sequence <span class="arithmatex">\((s_n)\)</span> of elements in <span class="arithmatex">\(\Pi\)</span> converging to <span class="arithmatex">\(t\)</span> which by the uniform continuity of <span class="arithmatex">\(\tilde{X}(\omega)\)</span> on <span class="arithmatex">\(\Pi\)</span> yields a limit <span class="arithmatex">\(X_t(\omega)=\lim \tilde{X}_{s_n}(\omega)\)</span> independent of the choice of the sequence <span class="arithmatex">\((s_n)\)</span> in <span class="arithmatex">\(\Pi\)</span> converging to <span class="arithmatex">\(t\)</span>.
 It follows that <span class="arithmatex">\(X\)</span> has continuous paths.
 Defined as a limit of sequence of random variables, it follows also that <span class="arithmatex">\(X\)</span> is a process.
-Finally, <span class="arithmatex">\(\{X_t=\tilde{X}_t\}\)</span> is contained in the set of those <span class="arithmatex">\(\omega\)</span> such that <span class="arithmatex">\(\tilde{X}_{s_n}(\omega)\)</span> has a limit for some sequence <span class="arithmatex">\((s_n)\)</span> in <span class="arithmatex">\(\Pi\)</span> converging to <span class="arithmatex">\(t\)</span>, it follows that <span class="arithmatex">\(\{X_t = \tilde{X}_t\}\supseteq \mathcal{N}^c\)</span>.
+Given <span class="arithmatex">\(\delta&gt;0\)</span> and <span class="arithmatex">\(t\)</span>, for <span class="arithmatex">\(|t-s|\leq \gamma\)</span> from triangular as well as Markov inequality, it holds</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    P\left[ |X_t - \tilde{X}_t|&gt;\delta \right] &amp; \leq P\left[ |X_t - X_s|geq \delta \right] + P\left[ |X_s - \tilde{X}_s|\geq \delta \right] 
+  \end{align*}
+\]</div>
+<p>Finally, <span class="arithmatex">\(\{X_t=\tilde{X}_t\}\)</span> is contained in the set of those <span class="arithmatex">\(\omega\)</span> such that <span class="arithmatex">\(\tilde{X}_{s_n}(\omega)\)</span> has a limit for some sequence <span class="arithmatex">\((s_n)\)</span> in <span class="arithmatex">\(\Pi\)</span> converging to <span class="arithmatex">\(t\)</span>, it follows that <span class="arithmatex">\(\{X_t = \tilde{X}_t\}\supseteq \mathcal{N}^c\)</span>.
 Hence <span class="arithmatex">\(P[X_t=\tilde{X}_t]\geq P[\mathcal{N}^c]=1\)</span> showing that <span class="arithmatex">\(X\)</span> is a version of <span class="arithmatex">\(\tilde{X}\)</span> which ends the proof of the Theorem.</p>
 </li>
 </ul>
