@@ -1,0 +1,1731 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../062-lebesgue/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Martingales - Stochastics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto Mono";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","UA-61166184-1"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","UA-61166184-1",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=UA-61166184-1",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#martingales" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Stochastics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Martingales
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="Switch to light"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
+          
+  
+    
+  
+  Lecture
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Stochastics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Lecture
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../00-Introduction/000-notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sets, Continuity and Measurability
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sets, Continuity and Measurability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/010-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/011-sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurable/Topological Sapces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measurability/Continuity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Measure Theory, Construction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Measure Theory, Construction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/020-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/021-measure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Measures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Semi-Ring to Ring
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    From Ring to $\sigma$-Algebra
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Measure/024-polish/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Polish Spaces
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Expectation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Expectation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/030-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction/Notations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/031-expectation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expectation, Lebesgue's Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    $L^p$-Spaces and Classical Inequalities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Radon-Nykodym and Conditional Expectation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/034-independence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Independence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/035-fubini-tonelli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fubini-Tonelli
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Integration/036-uniform-integrability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uniform Integrability
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Discrete Time Stochastic Processes, Martingales
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Discrete Time Stochastic Processes, Martingales
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/040-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/041-discrete-time-processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discrete Time Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/042-martingale-doob/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales Almost Sure Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Martingales $L^p$ Convergence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Markov Processes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Markov Processes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Markov/050-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Markov/051-markov-extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markov Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Markov/052-markov-discrete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markov Chains
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-Markov/053-brownian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Brownian Motion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Continuous Time Processes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            Continuous Time Processes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../060-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../061-continuous-time-processes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Time Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../062-lebesgue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lebesgue-Stieljes Integral
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Martingales
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="martingales">Martingales</h1>
+<p>The definition of (Super-/Sub-)Martingales does not change in the continuous time.
+The martingale properties and theorems extend to the continuous time.
+However, some restrictions have to be made in terms of path regularity.
+Indeed, as mentioned earlier, the infinite amount of null sets that may add up has to be countably controlled.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Simple Processes</p>
+<p>We denote by <span class="arithmatex">\(\mathcal{S}\)</span> the set of <strong>simple predictable</strong> processes <span class="arithmatex">\(H\)</span> of the form  </p>
+<div class="arithmatex">\[
+  H = H_0 1_{\{0\}} + \sum_{k=1}^n H_k 1_{(\tau_{k-1}, \tau_k]}
+\]</div>
+<p>for a finite sequence <span class="arithmatex">\(0 = \tau_0 \leq \tau_1 \leq \ldots \leq \tau_n\)</span> of stopping times where <span class="arithmatex">\(\tau_n&lt;\infty\)</span>, and <span class="arithmatex">\(H_k\)</span> is bounded and <span class="arithmatex">\(\mathcal{F}_{\tau_{k-1}}\)</span> measurable for <span class="arithmatex">\(k = 0, \dots, n\)</span>.</p>
+</div>
+<p>For a progressive process <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(H \in \mathcal{S}\)</span>, we denote by <span class="arithmatex">\(\int H d X\)</span> the process</p>
+<div class="arithmatex">\[
+\int H dX := H_0 X_0 + \sum_{k=1}^n H_k \left( X^{\tau_k} - X^{\tau_{k-1}} \right)
+\]</div>
+<p>which is the simple definition of a stochastic integral of <span class="arithmatex">\(H\)</span> with respect to <span class="arithmatex">\(X\)</span>.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a càd stochastic process and <span class="arithmatex">\(H\)</span> be a simple process.
+The following assertions hold true.</p>
+<ol>
+<li>
+<p>If <span class="arithmatex">\(X\)</span> is a martingale and then <span class="arithmatex">\(\int H d X\)</span> is a martingale.
+    If <span class="arithmatex">\(X\)</span> is a super/sub-martingale, and <span class="arithmatex">\(H\)</span> is positive then <span class="arithmatex">\(\int Hd X\)</span> is a super/sub-martingale.</p>
+<p>In particular, if <span class="arithmatex">\(\tau\)</span> is a bounded stopping time then <span class="arithmatex">\(X^\tau\)</span> is a martingale or super/sub-martingale, respectively.</p>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(X\)</span> be a submartingale.
+    For any <span class="arithmatex">\(\lambda &gt; 0\)</span> it holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+  \lambda P\left[ \overline{X}_t \geq \lambda \right] &amp; \leq E\left[ 1_{\{\overline{X}_t &lt; \lambda\}} X_t \right] \leq E\left[ X_t^+ \right]\\
+  \lambda P\left[ \underline{X}_t \leq -\lambda \right] &amp; \leq E\left[ 1_{\{\underline{X}_t &gt; -\lambda\}} X_t \right] - E\left[ X_0 \right] \leq E\left[ X_t^+ \right] - E\left[ X_0 \right]
+\end{align*}
+\]</div>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(X\)</span> be a positive submartingale and <span class="arithmatex">\(p &gt; 1\)</span>, it holds</p>
+<div class="arithmatex">\[
+  \left\Vert \sup_{s \leq t} X_s \right\Vert_p \leq \frac{p}{p-1} \left\Vert X_t \right\Vert_p
+\]</div>
+</li>
+<li>
+<p>Let <span class="arithmatex">\(X\)</span> be a submartingale.
+    Then for every two reals <span class="arithmatex">\(x &lt; y\)</span>, the number of up-crossings of <span class="arithmatex">\((x,y)\)</span> by <span class="arithmatex">\(X\)</span> up to time <span class="arithmatex">\(t\)</span>, <span class="arithmatex">\(U_{[0,t]}(x,y,X)\)</span> is a random variable and it holds  </p>
+<div class="arithmatex">\[
+  (y - x) E\left[ U_{[0,t]}(x,y,X) \right] \leq E\left[ \left( X_t - x \right)^+ \right] - E\left[ \left( X_0 - x \right)^+ \right]
+\]</div>
+</li>
+</ol>
+</div>
+<p>In particular, if <span class="arithmatex">\(X\)</span> is a càd martingale, and <span class="arithmatex">\(p &gt; 1\)</span>, then <span class="arithmatex">\(|X|^p\)</span> is a positive càd submartingale and therefore</p>
+<div class="arithmatex">\[
+  \left\Vert X^\ast_t \right\Vert_p \leq \left( \frac{p}{p - 1} \right) \left\Vert X_t \right\Vert_p
+\]</div>
+<p>for every <span class="arithmatex">\(p &gt; 1\)</span>.</p>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>The inequalities hold true if the process <span class="arithmatex">\(X\)</span> is sampled on any finite discretization of <span class="arithmatex">\([0,t]\)</span> containing <span class="arithmatex">\(0\)</span> and <span class="arithmatex">\(t\)</span>.
+Hence, passing to the limit, these inequalities hold for <span class="arithmatex">\(([0,t] \cap \mathbb{Q}) \cup \{0,t\}\)</span> and since the paths of <span class="arithmatex">\(X\)</span> are càd, the inequalities follow.</p>
+<p>The single thing to check is whether <span class="arithmatex">\(U_{[0,t]}(x,y,X)\)</span> is a well-defined random variable.
+However, for any finite <span class="arithmatex">\(F \subseteq [0,t]\)</span>, since <span class="arithmatex">\(X\)</span> is right-continuous, the <span class="arithmatex">\(\tau^k\)</span> and <span class="arithmatex">\(\sigma^k\)</span> in the construction of <span class="arithmatex">\(U_F(x,y,X)\)</span> are stopping times according to the hitting times propositions for continuous processes.
+Therefore <span class="arithmatex">\(U_F(x,y,X)\)</span> is a random variable.
+It follows that <span class="arithmatex">\(U_{([0,t] \cap \mathbb{Q}) \cup \{0,t\}}(x,y,X)\)</span> is a random variable.
+Since <span class="arithmatex">\(X\)</span> is càd, this set takes into account all the up-crossings on <span class="arithmatex">\([0,t]\)</span>.</p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Any càd sub-martingale is càdlàg, and every sample path is almost surely bounded on any compact interval.</p>
+<p>Furthermore, <span class="arithmatex">\(X\)</span> is a submartingale with respect to <span class="arithmatex">\(\mathbb{F}^+\)</span> as well as with respect to the augmentation of <span class="arithmatex">\(\mathbb{F}\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a càd sub-martingale.
+The boundedness of the sample paths on any compact interval almost surely follows from the previous inequalities.
+As for the càdlàg property, define</p>
+<div class="arithmatex">\[
+  A = \bigcup_{n \in \mathbb{N}} \bigcup_{p,q \in \mathbb{Q}, p &lt; q} \left\{U_{[0,n]}(p,q,X) = \infty \right\}
+\]</div>
+<p>By means of the up-crossing inequality, it follows that this countable union is of measure <span class="arithmatex">\(0\)</span>.
+However, <span class="arithmatex">\(A\)</span> contains the set</p>
+<div class="arithmatex">\[
+\left\{ \liminf_{s \nearrow t} X_s &lt; \limsup_{s \nearrow t} X_s, \, \text{for some } \right\}
+\]</div>
+<p>Hence <span class="arithmatex">\(X\)</span> is càdlàg.
+The fact that <span class="arithmatex">\(X\)</span> is a supermartingale with respect to <span class="arithmatex">\(\mathbb{F}^+\)</span> is immediate.
+As for the augmentation, observe that null sets do not modify the supermartingale inequalities.</p>
+</div>
+<p>As noticed, the up-crossing inequality shows that sub-martingales have some nice regularity of paths.
+However, we assumed from the beginning that these sub-martingales were right-continuous, central to derive Doob's maximal inequalities.
+Let us show that up to modification, any sub-martingale has nice properties, however in the right-continuous filtration or in a filtration satisfying the usual conditions.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a sub-martingale, then the following holds true.</p>
+<ol>
+<li>
+<p>Almost surely, the limits  </p>
+<div class="arithmatex">\[
+X_{t+} = \lim_{q \searrow t} X_q \quad \text{and} \quad X_{t-} = \lim_{q \nearrow t} X_q
+\]</div>
+<p>exist for every <span class="arithmatex">\(t\)</span> and thereby define two processes <span class="arithmatex">\(X_{+}\)</span> and <span class="arithmatex">\(X_{-}\)</span>, respectively.</p>
+</li>
+<li>
+<p>The process <span class="arithmatex">\(X_{+}\)</span> is a <span class="arithmatex">\(\mathbb{F}^+\)</span> sub-martingale and is a martingale if <span class="arithmatex">\(X\)</span> is.
+    Analogously, the process <span class="arithmatex">\(X_{-}\)</span> is a <span class="arithmatex">\(\mathbb{F}^-\)</span> submartingale and is a martingale if <span class="arithmatex">\(X\)</span> is.
+    Furthermore  </p>
+<div class="arithmatex">\[
+\begin{align*}
+    X_t     &amp; \leq E\left[ X_{t+} \,\big|\, \mathcal{F}_{t} \right]\\
+    X_{t-}  &amp; \leq E\left[ X_t \,\big|\, \mathcal{F}_{t-} \right]
+\end{align*}
+\]</div>
+<p>with equality in the first if <span class="arithmatex">\(t \mapsto E[X_t]\)</span> is right-continuous, and equality in the second if <span class="arithmatex">\(t \mapsto E[X_t]\)</span> is left-continuous.
+In particular, equality holds in both if <span class="arithmatex">\(X\)</span> is a martingale.</p>
+</li>
+</ol>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<ol>
+<li>
+<p>Unlike in the previous proof we can only estimate the up-crossing of <span class="arithmatex">\(X\)</span> over a countable bounded interval.
+    Define  </p>
+<div class="arithmatex">\[
+A = \bigcup_{n \in \mathbb{N}} \bigcup_{p &lt; q,\, p,q \in \mathbb{Q}} \left\{ \omega \in \Omega : U_{[0,n] \cap \mathbb{Q}}(p,q,X(\omega)) = \infty \right\}
+\]</div>
+<p>This set is of measure <span class="arithmatex">\(0\)</span>.
+Hence, with the same argumentation as in the previous proof, it follows that</p>
+<div class="arithmatex">\[
+\begin{align*} 
+  P\left[ \liminf_{q \nearrow t, q \in \mathbb{Q}} X_q &lt; \limsup_{q \nearrow t, q \in \mathbb{Q}} X_q  \text{ for some } t \right] &amp; = 0\\
+  P\left[ \liminf_{q \searrow t, q \in \mathbb{Q}} X_q &lt; \limsup_{q \searrow t, q \in \mathbb{Q}} X_q  \text{ for some } t \right] &amp; = 0
+\end{align*}
+\]</div>
+<p>We can then define the processes <span class="arithmatex">\(X_{-}\)</span> and <span class="arithmatex">\(X_{+}\)</span> by</p>
+<div class="arithmatex">\[
+  X_{t+} = \lim_{q \searrow t} X_q, \quad \text{ and } \quad X_{t-} = \lim_{q \nearrow t} X_q
+\]</div>
+<p>with the conventions that <span class="arithmatex">\(X_{0-} = X_0\)</span>.</p>
+</li>
+<li>
+<p>Clearly <span class="arithmatex">\(X_{+}\)</span> and <span class="arithmatex">\(X_{-}\)</span> are <span class="arithmatex">\(\mathbb{F}^+\)</span>- and <span class="arithmatex">\(\mathbb{F}^-\)</span>-adapted processes, respectively.
+    Let us show that they are integrable and satisfy the sub-martingale property.
+    Let <span class="arithmatex">\((q_n) \subseteq \mathbb{Q}\)</span> be a sequence decreasing to <span class="arithmatex">\(t\)</span>.
+    From the previous step, <span class="arithmatex">\(X_{q_n}\)</span> converges <span class="arithmatex">\(P\)</span>-almost surely to <span class="arithmatex">\(X_{t+}\)</span>.
+    Further, <span class="arithmatex">\(E[X_t] \leq E[X_{q_n}] \leq E[X_{q_0}]\)</span> for every <span class="arithmatex">\(n\)</span>, so <span class="arithmatex">\((X_{q_n})\)</span> is uniformly bounded in <span class="arithmatex">\(L^1\)</span>, and <span class="arithmatex">\(E[X_{q_n}]\)</span> is a decreasing sequence converging to <span class="arithmatex">\(\lim E[X_{q_n}] &gt; E[X_t] &gt; -\infty\)</span>.
+    Hence, for <span class="arithmatex">\(\lambda &gt; 0\)</span> and <span class="arithmatex">\(\varepsilon &gt; 0\)</span>, let <span class="arithmatex">\(n_0\)</span> be such that <span class="arithmatex">\(E[X_{q_n}] \geq E[X_{q_{n_0}}] - \varepsilon\)</span> for every <span class="arithmatex">\(n \geq n_0\)</span>.
+    As <span class="arithmatex">\(X\)</span> is a submartingale, it follows that  </p>
+<div class="arithmatex">\[
+\begin{align}
+E\left[ |X_{q_n}| 1_{\{ |X_{q_n}| &gt; \lambda \}} \right] 
+  &amp;= E\left[ X_{q_n} 1_{\{ X_{q_n} &gt; \lambda \}} \right] - E\left[ X_{q_n} 1_{\{ X_{q_n} &lt; -\lambda \}} \right] \\
+  &amp;= E\left[ X_{q_n} 1_{\{ X_{q_n} &gt; \lambda \}} \right] - E[X_{q_n}] + E\left[ X_{q_n} 1_{\{ X_{q_n} \geq -\lambda \}} \right] \\
+  &amp;\leq E\left[ X_{q_{n_0}} 1_{\{ X_{q_n} &gt; \lambda \}} \right] + \varepsilon - E[X_{q_{n_0}}] + E\left[ X_{q_{n_0}} 1_{\{ X_{q_n} \geq -\lambda \}} \right] \\
+  &amp;= E\left[ X_{q_{n_0}} 1_{\{ X_{q_n} &gt; \lambda \}} \right] - E\left[ X_{q_{n_0}} 1_{\{ X_{q_n} &lt; -\lambda \}} \right] + \varepsilon \\
+  &amp;\leq E\left[ |X_{q_{n_0}}| 1_{\{ |X_{q_n}| &gt; \lambda \}} \right] + \varepsilon
+\end{align}
+\]</div>
+<p>By Markov's inequality, <span class="arithmatex">\(P[|X_{q_n}| &gt; \lambda] \leq \sup_n E[|X_{q_n}|]/\lambda = C/\lambda\)</span> for some <span class="arithmatex">\(C &lt; \infty\)</span>, showing that <span class="arithmatex">\((X_{q_n})\)</span> is uniformly integrable.
+Together with <span class="arithmatex">\(P\)</span>-almost sure convergence, it follows that <span class="arithmatex">\(X_{q_n} \to X_{t+}\)</span> in <span class="arithmatex">\(L^1\)</span>.
+Thus <span class="arithmatex">\(X_{t+}\)</span> is integrable and it holds</p>
+<div class="arithmatex">\[
+  X_t \leq \lim E\left[ X_{q_n} \,\big|\, \mathcal{F}_t \right] = E\left[ X_{t+} \,\big|\, \mathcal{F}_t \right]
+\]</div>
+<p>Further, for <span class="arithmatex">\(s &lt; t\)</span> and <span class="arithmatex">\(q_n \searrow s\)</span> with <span class="arithmatex">\(q_n &lt; t\)</span>, it holds  </p>
+<div class="arithmatex">\[
+  X_{q_n} \leq E\left[ X_t \,\big|\, \mathcal{F}_{q_n} \right] \leq E\left[ E\left[ X_{t+} \,\big|\, \mathcal{F}_t \right] \,\big|\, \mathcal{F}_{q_n} \right] = E\left[ X_{t+} \,\big|\, \mathcal{F}_{q_n} \right]
+\]</div>
+<p>for every <span class="arithmatex">\(n\)</span>.
+The same arguments as above show that <span class="arithmatex">\(E\left[ X_{t+} \,\big|\, \mathcal{F}_{q_n} \right]\)</span> is uniformly integrable and converges <span class="arithmatex">\(P\)</span>-almost surely and in <span class="arithmatex">\(L^1\)</span>, and that the limit is <span class="arithmatex">\(E\left[ X_{t+} \,\big|\, \mathcal{F}_{s+} \right]\)</span>.
+Thus <span class="arithmatex">\(X_{+}\)</span> is a <span class="arithmatex">\(\mathbb{F}^+\)</span>-submartingale.<br />
+Finally, if <span class="arithmatex">\(t \mapsto E[X_t]\)</span> is right-continuous, it follows that <span class="arithmatex">\(E[X_{t+}] = \lim E[X_{q_n}] = E[X_t]\)</span>.<br />
+Hence, the positive random variable <span class="arithmatex">\(X_t - E[X_{t+} \,|\, \mathcal{F}_t]\)</span> has zero expectation and therefore is zero.</p>
+<p>As for the case of <span class="arithmatex">\(X_{-}\)</span>, a similar argumentation holds using the submartingale convergence theorem for the existence and integrability of <span class="arithmatex">\(X_{t-}\)</span> and inequality  </p>
+<div class="arithmatex">\[
+  X_{t-} \leq E[X_t \,|\, \mathcal{F}_{t-}]
+\]</div>
+<p>Furthermore, by <span class="arithmatex">\(X_{s-} \leq E[X_s \,|\, \mathcal{F}_{s-}] \leq E[E[X_{t-} \,|\, \mathcal{F}_s] \,|\, \mathcal{F}_{s-}] = E[X_{t-} \,|\, \mathcal{F}_{s-}]\)</span> it follows that <span class="arithmatex">\(X\)</span> is a <span class="arithmatex">\(\mathbb{F}^-\)</span> submartingale.</p>
+<p>The equality if <span class="arithmatex">\(t \mapsto E[X_t]\)</span> is left-continuous follows by an analogous argumentation.</p>
+</li>
+</ol>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a supermartingale with respect to a filtration satisfying the usual assumptions.
+Suppose further that <span class="arithmatex">\(t \mapsto E[X_t]\)</span> is càd.
+Then <span class="arithmatex">\(X\)</span> has a càdlàg modification.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>According to the previous theorem, set <span class="arithmatex">\(Y = X_{+}\)</span> outside the negligible set <span class="arithmatex">\(A\)</span> up to which <span class="arithmatex">\(X_{+}\)</span> and <span class="arithmatex">\(X_{-}\)</span> are defined, and <span class="arithmatex">\(Y = 0\)</span> on <span class="arithmatex">\(A\)</span>.
+Since <span class="arithmatex">\(A \in \mathcal{F}_0\)</span>, it follows that <span class="arithmatex">\(Y\)</span> is càdlàg.
+Furthermore, from <span class="arithmatex">\(t \mapsto E[X_t]\)</span> right-continuous, by the previous theorem it holds that</p>
+<div class="arithmatex">\[
+X_t = E[X_{t+} \,|\, \mathcal{F}_t] = E[Y_t \,|\, \mathcal{F}_t]
+\]</div>
+<p>However, since <span class="arithmatex">\(\mathbb{F}\)</span> is right-continuous, it follows that <span class="arithmatex">\(Y_t\)</span> is <span class="arithmatex">\(\mathcal{F}_t\)</span>-measurable and so <span class="arithmatex">\(X_t = Y_t\)</span> almost surely for every <span class="arithmatex">\(t\)</span>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
