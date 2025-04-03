@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../072-stochastic-integral/">
       
-        <link rel="next" href="lecture/00-Introduction/000-notations/">
+      
+        <link rel="next" href="../074-ito-formula/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
-        <title>Stochastics</title>
+        <title>Quadratic Variations - Semi-Martingales - Stochastics</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -81,11 +83,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#stochastics" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +95,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
+    <a href="../../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -118,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Quadratic Variations - Semi-Martingales
             
           </span>
         </div>
@@ -205,11 +202,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -224,17 +219,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="lecture/00-Introduction/000-notations/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
           
   
     
@@ -267,9 +266,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -282,7 +279,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
+    <a href="../../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -297,31 +294,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -331,71 +307,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#course-objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      Course Objective
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concrete-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      Concrete Approach
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisite" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisite
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#literature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Literature
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -404,8 +315,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -428,17 +341,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -450,7 +366,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -507,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/00-Introduction/000-notations/" class="md-nav__link">
+      <a href="../../00-Introduction/000-notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -586,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Sets-Functions/010-introduction/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/010-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Sets-Functions/011-sets/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/011-sets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -733,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/020-introduction/" class="md-nav__link">
+      <a href="../../02-Measure/020-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/021-measure/" class="md-nav__link">
+      <a href="../../02-Measure/021-measure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
+      <a href="../../02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
+      <a href="../../02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/024-polish/" class="md-nav__link">
+      <a href="../../02-Measure/024-polish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/030-introduction/" class="md-nav__link">
+      <a href="../../03-Integration/030-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -928,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/031-expectation/" class="md-nav__link">
+      <a href="../../03-Integration/031-expectation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
+      <a href="../../03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -972,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
+      <a href="../../03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/034-independence/" class="md-nav__link">
+      <a href="../../03-Integration/034-independence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1016,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/035-fubini-tonelli/" class="md-nav__link">
+      <a href="../../03-Integration/035-fubini-tonelli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1038,7 +954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/036-uniform-integrability/" class="md-nav__link">
+      <a href="../../03-Integration/036-uniform-integrability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/040-introduction/" class="md-nav__link">
+      <a href="../../04-Martingales/040-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/041-discrete-time-processes/" class="md-nav__link">
+      <a href="../../04-Martingales/041-discrete-time-processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1163,7 +1079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/042-martingale-doob/" class="md-nav__link">
+      <a href="../../04-Martingales/042-martingale-doob/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1185,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
+      <a href="../../04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1207,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
+      <a href="../../04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/05-Markov/050-introduction/" class="md-nav__link">
+      <a href="../../05-Markov/050-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1308,7 +1224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/05-Markov/051-markov-extension/" class="md-nav__link">
+      <a href="../../05-Markov/051-markov-extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1330,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/05-Markov/052-markov-discrete/" class="md-nav__link">
+      <a href="../../05-Markov/052-markov-discrete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1352,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/05-Markov/053-brownian/" class="md-nav__link">
+      <a href="../../05-Markov/053-brownian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1431,7 +1347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/06-Continuous-Time/060-introduction/" class="md-nav__link">
+      <a href="../../06-Continuous-Time/060-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/06-Continuous-Time/061-continuous-time-processes/" class="md-nav__link">
+      <a href="../../06-Continuous-Time/061-continuous-time-processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/06-Continuous-Time/062-lebesgue/" class="md-nav__link">
+      <a href="../../06-Continuous-Time/062-lebesgue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1497,7 +1413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/06-Continuous-Time/063-martingales/" class="md-nav__link">
+      <a href="../../06-Continuous-Time/063-martingales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,8 +1440,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1545,11 +1463,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
         
           
           <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
@@ -1564,7 +1482,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             Stochastic Integral
@@ -1578,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/070-introduction/" class="md-nav__link">
+      <a href="../070-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/071-doob-meyer/" class="md-nav__link">
+      <a href="../071-doob-meyer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/072-stochastic-integral/" class="md-nav__link">
+      <a href="../072-stochastic-integral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1641,10 +1559,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/073-quadratic-variations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1654,6 +1579,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1666,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/074-ito-formula/" class="md-nav__link">
+      <a href="../074-ito-formula/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1709,74 +1635,14 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
+
+
+
+  <h1>Quadratic Variations - Semi-Martingales</h1>
 
 
 
 
-<h1 id="stochastics">Stochastics</h1>
-<p>These lecture notes, still a work in progress, are for a course taught at <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>, for graduate students.</p>
-<h2 id="course-objective">Course Objective</h2>
-<p>This lecture aims at the evolution over time of systems that are subject to uncertainty: stochastic processes.</p>
-<p>Throughout this lecture we will address the following fundamental concepts:</p>
-<ul>
-<li><strong>Probability:</strong> probability space, probability measure, expectation, measure change, conditional expectation, stochastic kernel, independence as well as fundamental inequalities and relations.</li>
-<li><strong>Discrete Martingales:</strong> discrete stochastic processes, information, stopping times, martingales and related fundamental results (convergence, law of large numbers, etc.)</li>
-<li><strong>Markov Processes:</strong> concept of memoryless stochastic processes, discrete time results, construction of the Brownian motion.</li>
-<li><strong>Ito-Integral and Calculus:</strong> construction of the stochastic integral, Ito-formula, applications.</li>
-<li><strong>Stochastic Exponential:</strong> measure change, Girsanov formula and applications</li>
-<li><strong>Stochastic Differential Equations:</strong> existence and uniqueness, strong vs weak solutions, ...</li>
-<li><strong>SDE and PDE:</strong> Relation between PDE and SDE, Kolmogorov equation, Feynman-Kak formula and applications.</li>
-</ul>
-<h2 id="concrete-approach">Concrete Approach</h2>
-<p>The theoretical lecture combines blackboard lectures with practical applications.
-Lecture notes will be provided and updated during the course.
-The evaluation of the lecture will consists of </p>
-<ul>
-<li><strong>Homework:</strong> Once every two weeks to be handed out within two weeks by groups of 5-6</li>
-<li><strong>Quizz:</strong> 3-4 quizz, in class, 30 min about the past lectures.</li>
-<li><strong>Final Exam:</strong> 120 min final exam at the end of the semester.</li>
-</ul>
-<h2 id="prerequisite">Prerequisite</h2>
-<p>The lecture suppose that students knows about basic algebra, analysis.
-A previous knowledge about measure theory might be of help but nor necessary.</p>
-<h2 id="literature">Literature</h2>
-<p>The lecture follows the present lecture notes.
-However those are inspired by uncountably many textbooks on the topic from which we present a short selection:</p>
-<ul>
-<li>Rick Durret<sup id="fnref:durret01"><a class="footnote-ref" href="#fn:durret01">1</a></sup>: Excellent introduction to discrete stochastic processes (markov processesw and martingales and Brownian motion). No stochastic integral and SDEs</li>
-<li>Steve Shreve<sup id="fnref:shreve2004"><a class="footnote-ref" href="#fn:shreve2004">2</a></sup><sup id="fnref:shreve2004a"><a class="footnote-ref" href="#fn:shreve2004a">3</a></sup>: Both books with a focus on Finance. The first one is discrete the second continuous and both approchable.</li>
-<li>Olav Kallenberg<sup id="fnref:kallenberg2002"><a class="footnote-ref" href="#fn:kallenberg2002">4</a></sup>: Complete from probability to stochastic processes. General stochastic processes.</li>
-<li>Philip Protter<sup id="fnref:protter"><a class="footnote-ref" href="#fn:protter">5</a></sup>: Complete about general stochastic processes (w/wo jumps). Complex.</li>
-<li>Delacherie and Meyer<sup id="fnref:Dellacherie1978"><a class="footnote-ref" href="#fn:Dellacherie1978">6</a></sup><sup id="fnref:Dellacherie1982"><a class="footnote-ref" href="#fn:Dellacherie1982">7</a></sup>: The bible however machine typed and French</li>
-</ul>
-<h2 id="references">References</h2>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:durret01">
-<p>Rick Durrett. <em>Probability: Theory and Examples</em>. Cambridge Series in Statistical and Probabilistic Mathematics, 2010.&#160;<a class="footnote-backref" href="#fnref:durret01" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:shreve2004">
-<p>Steven E. Shreve. <em>Stochastic Calculus for Finance</em>. Volume I of Springer Finance. Springer-Verlag, New York, 2004. ISBN 0-387-40100-8. The binomial asset pricing model.&#160;<a class="footnote-backref" href="#fnref:shreve2004" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-<li id="fn:shreve2004a">
-<p>Steven E. Shreve. <em>Stochastic Calculus for Finance</em>. Volume II of Springer Finance. Springer-Verlag, New York, 2004. ISBN 0-387-40101-6. Continuous-time models.&#160;<a class="footnote-backref" href="#fnref:shreve2004a" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
-<li id="fn:kallenberg2002">
-<p>Olav Kallenberg. <em>Foundations of Modern Probability</em>. Probability and its Applications (New York). Springer-Verlag, New York, 2nd edition, 2002.&#160;<a class="footnote-backref" href="#fnref:kallenberg2002" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
-<li id="fn:protter">
-<p>Philip E. Protter. <em>Stochastic Integration and Differential Equations</em>. Springer, 2nd edition, 2005.&#160;<a class="footnote-backref" href="#fnref:protter" title="Jump back to footnote 5 in the text">&#8617;</a></p>
-</li>
-<li id="fn:Dellacherie1978">
-<p>Claude Dellacherie and Paul-André Meyer. <em>Probabilities and Potential. A</em>. Volume 29 of North-Holland Mathematics Studies. North-Holland Publishing Co., Amsterdam, 1978. ISBN 0-7204-0701-X.&#160;<a class="footnote-backref" href="#fnref:Dellacherie1978" title="Jump back to footnote 6 in the text">&#8617;</a></p>
-</li>
-<li id="fn:Dellacherie1982">
-<p>Claude Dellacherie and Paul André Meyer. <em>Probabilities and Potential. B</em>. Volume 72 of North-Holland Mathematics Studies. North-Holland Publishing Co., Amsterdam, 1982.&#160;<a class="footnote-backref" href="#fnref:Dellacherie1982" title="Jump back to footnote 7 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
 
 
 
@@ -1785,14 +1651,7 @@ However those are inspired by uncountably many textbooks on the topic from which
 
 
   
-  
 
-
-
-  
-
-
-  
 
 
 
@@ -1827,14 +1686,14 @@ However those are inspired by uncountably many textbooks on the topic from which
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
       
     
   </body>

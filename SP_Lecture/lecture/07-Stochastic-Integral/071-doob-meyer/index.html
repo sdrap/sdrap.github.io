@@ -9,23 +9,25 @@
       
       
       
+        <link rel="prev" href="../070-introduction/">
       
-        <link rel="next" href="lecture/00-Introduction/000-notations/">
+      
+        <link rel="next" href="../072-stochastic-integral/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
     
     
       
-        <title>Stochastics</title>
+        <title>Doob-Meyer Decomposition - Stochastics</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -82,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stochastics" class="md-skip">
+        <a href="#doob-meyer-decomposition" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +100,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
+    <a href="../../.." title="Stochastics" class="md-header__button md-logo" aria-label="Stochastics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -118,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Doob-Meyer Decomposition
             
           </span>
         </div>
@@ -205,11 +207,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -224,17 +224,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="lecture/00-Introduction/000-notations/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../00-Introduction/000-notations/" class="md-tabs__link">
           
   
     
@@ -267,9 +271,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -282,7 +284,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
+    <a href="../../.." title="Stochastics" class="md-nav__button md-logo" aria-label="Stochastics" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -297,31 +299,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -331,71 +312,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#course-objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      Course Objective
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#concrete-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      Concrete Approach
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisite" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisite
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#literature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Literature
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -404,8 +320,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -428,17 +346,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -450,7 +371,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Lecture
@@ -507,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/00-Introduction/000-notations/" class="md-nav__link">
+      <a href="../../00-Introduction/000-notations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -586,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Sets-Functions/010-introduction/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/010-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Sets-Functions/011-sets/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/011-sets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -630,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/012-measurability-topology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -652,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
+      <a href="../../01-Sets-Functions/013-measurable-continuous-functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -733,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/020-introduction/" class="md-nav__link">
+      <a href="../../02-Measure/020-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/021-measure/" class="md-nav__link">
+      <a href="../../02-Measure/021-measure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +698,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
+      <a href="../../02-Measure/022-semi-ring-to-ring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -799,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
+      <a href="../../02-Measure/023-ring-to-s-algebra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/02-Measure/024-polish/" class="md-nav__link">
+      <a href="../../02-Measure/024-polish/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -906,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/030-introduction/" class="md-nav__link">
+      <a href="../../03-Integration/030-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -928,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/031-expectation/" class="md-nav__link">
+      <a href="../../03-Integration/031-expectation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -950,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
+      <a href="../../03-Integration/032-lp-spaces-inequalities/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -972,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
+      <a href="../../03-Integration/033-radon-nikodym-cond-exp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/034-independence/" class="md-nav__link">
+      <a href="../../03-Integration/034-independence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1016,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/035-fubini-tonelli/" class="md-nav__link">
+      <a href="../../03-Integration/035-fubini-tonelli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1038,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/03-Integration/036-uniform-integrability/" class="md-nav__link">
+      <a href="../../03-Integration/036-uniform-integrability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/040-introduction/" class="md-nav__link">
+      <a href="../../04-Martingales/040-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/041-discrete-time-processes/" class="md-nav__link">
+      <a href="../../04-Martingales/041-discrete-time-processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1163,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/042-martingale-doob/" class="md-nav__link">
+      <a href="../../04-Martingales/042-martingale-doob/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1185,7 +1106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
+      <a href="../../04-Martingales/043-martingale-as-convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1207,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
+      <a href="../../04-Martingales/044-martingale-lp-convergence/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1286,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/05-Markov/050-introduction/" class="md-nav__link">
+      <a href="../../05-Markov/050-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1308,7 +1229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/05-Markov/051-markov-extension/" class="md-nav__link">
+      <a href="../../05-Markov/051-markov-extension/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1330,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/05-Markov/052-markov-discrete/" class="md-nav__link">
+      <a href="../../05-Markov/052-markov-discrete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1352,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/05-Markov/053-brownian/" class="md-nav__link">
+      <a href="../../05-Markov/053-brownian/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1431,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/06-Continuous-Time/060-introduction/" class="md-nav__link">
+      <a href="../../06-Continuous-Time/060-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/06-Continuous-Time/061-continuous-time-processes/" class="md-nav__link">
+      <a href="../../06-Continuous-Time/061-continuous-time-processes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/06-Continuous-Time/062-lebesgue/" class="md-nav__link">
+      <a href="../../06-Continuous-Time/062-lebesgue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1497,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/06-Continuous-Time/063-martingales/" class="md-nav__link">
+      <a href="../../06-Continuous-Time/063-martingales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,8 +1445,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1545,11 +1468,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" checked>
         
           
           <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
@@ -1564,7 +1487,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             Stochastic Integral
@@ -1578,7 +1501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/070-introduction/" class="md-nav__link">
+      <a href="../070-introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,10 +1520,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/071-doob-meyer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1610,6 +1542,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1622,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/072-stochastic-integral/" class="md-nav__link">
+      <a href="../072-stochastic-integral/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1644,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/073-quadratic-variations/" class="md-nav__link">
+      <a href="../073-quadratic-variations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1666,7 +1599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="lecture/07-Stochastic-Integral/074-ito-formula/" class="md-nav__link">
+      <a href="../074-ito-formula/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1709,71 +1642,255 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
 
 
 
-
-<h1 id="stochastics">Stochastics</h1>
-<p>These lecture notes, still a work in progress, are for a course taught at <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>, for graduate students.</p>
-<h2 id="course-objective">Course Objective</h2>
-<p>This lecture aims at the evolution over time of systems that are subject to uncertainty: stochastic processes.</p>
-<p>Throughout this lecture we will address the following fundamental concepts:</p>
+<h1 id="doob-meyer-decomposition">Doob-Meyer Decomposition</h1>
+<p>We already saw in discrete time that any process can be decomposed into the sum of a martingale and a predictable process.
+In particular if <span class="arithmatex">\(X\)</span> is a sub-martingale, the predictable process is increasing.
+The proof is relatively straightforward, and one wonders whether it still holds in continuous time.
+It turns out that this is way more involved.
+In this section, we do not assume continuity of processes.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition: Natural Processes</p>
+<p>An increasing process <span class="arithmatex">\(A\)</span> is called <strong>natural</strong> if for every bounded right-continuous martingale <span class="arithmatex">\(M\)</span> and any <span class="arithmatex">\(t\)</span> it holds</p>
+<div class="arithmatex">\[
+  E\left[\int_0^t M_s \, dA_s\right] = E\left[ \int_0^t M_{s-} \, dA_s \right]
+\]</div>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that every increasing and continuous process is automatically natural.
+Indeed  </p>
+<div class="arithmatex">\[
+  \int_0^t (M_s - M_{s-}) \, dA_s = 0
+\]</div>
+<p>almost surely, since every path <span class="arithmatex">\(s \mapsto M_s\)</span> has only countably many discontinuities and therefore is a set of <span class="arithmatex">\(dA\)</span>-zero measure.</p>
+</div>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>The condition for an increasing process to be natural is equivalent to  </p>
+<div class="arithmatex">\[
+E\left[ M_t A_t \right] = E\left[ \int_0^t M_{s-} \, dA_s \right]
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>It suffices to show that</p>
+<div class="arithmatex">\[
+E[M_t A_t] = \int_0^t M_s \, dA_s.
+\]</div>
+<p>Let <span class="arithmatex">\(0 = t_0 &lt; t_1 &lt; \cdots &lt; t_n = t\)</span> and define  </p>
+<div class="arithmatex">\[
+  M^n = \sum_{k=1}^n M_{t_k} 1_{(t_{k-1}, t_k]}.
+\]</div>
+<p>By the martingale property, it follows that  </p>
+<div class="arithmatex">\[
+\begin{align}
+E\left[ \int_0^t M^n_s \, dA_s \right] 
+  &amp; = \sum_{k=1}^n E\left[ M_{t_k} (A_{t_k} - A_{t_{k-1}}) \right] \\
+  &amp; = E[M_t A_t] - \sum_{k=1}^{n-1} E\left[ A_{t_k} (M_{t_{k+1}} - M_{t_k}) \right]\\
+  &amp; = E[M_t A_t].
+\end{align}
+\]</div>
+<p>letting the mesh of the subdivision to <span class="arithmatex">\(0\)</span>, yields <span class="arithmatex">\(M^n \to M\)</span> <span class="arithmatex">\(P\)</span>-almost surely, and by dominated convergence, the claim follows.</p>
+</div>
+<p>Natural processes are the natural pendant to predictable processes in discrete time.</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>In the discrete time context, an increasing process is natural if and only if it is predictable and integrable.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>If an increasing process is predictable and integrable, then clearly it is natural.
+Reciprocally, define the bounded positive martingale <span class="arithmatex">\(M_s = E[1_B \,|\, \mathcal{F}_s]\)</span> where  </p>
+<div class="arithmatex">\[
+  B = \{ A_t - E[A_t \,|\, \mathcal{F}_{t-1}] &gt; \varepsilon \}.
+\]</div>
+<p>From <span class="arithmatex">\(A\)</span> being natural, it holds  </p>
+<div class="arithmatex">\[
+  E[M_t A_t] = E\left[ \int_0^t M_{s-} \, dA_s \right] = \sum_{1 \leq s \leq t} E\left[ M_{s-1} (A_s - A_{s-1}) \right]
+\]</div>
+<p>for every <span class="arithmatex">\(t = 1, \ldots\)</span>.
+Hence, per induction, it holds  </p>
+<div class="arithmatex">\[
+\begin{align}
+  0 &amp; = E[(M_t - M_{t-1}) A_t] \\
+    &amp; = E[1_B A_t] - E[E[1_B \,|\, \mathcal{F}_{t-1}] A_t] \\
+    &amp; \geq \varepsilon P[B] + E[1_B E[A_t \,|\, \mathcal{F}_{t-1}]] - E[1_B E[A_t \,|\, \mathcal{F}_{t-1}]] \\
+    &amp; = \varepsilon P[B].
+\end{align}
+\]</div>
+<p>showing that <span class="arithmatex">\(P[B] = 0\)</span>.
+The same holds for <span class="arithmatex">\(B = \{ A_t - E[A_t \,|\, \mathcal{F}_{t-1}] &lt; -\varepsilon \}\)</span>, showing that  </p>
+<div class="arithmatex">\[
+  A_t = E[A_t \,|\, \mathcal{F}_{t-1}].
+\]</div>
+</div>
+<p>As in the discrete time where a predictable martingale is uniformly constant, the same holds for natural martingales.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(M\)</span> be a càd martingale which can be written as the difference between two natural increasing processes.
+Then <span class="arithmatex">\(M\)</span> is indistinguishable from <span class="arithmatex">\(0\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>By the identity</p>
+<div class="arithmatex">\[
+  E[X_t M_t] = E\left[ \int_0^t X_{s-} \, dM_s \right]
+\]</div>
+<p>for every càdlàg bounded martingale <span class="arithmatex">\(X\)</span>, consider the approximation</p>
+<div class="arithmatex">\[
+X^n = \sum_{k=1}^n X_{t_{k-1}} 1_{[t_{k-1}, t_k)} + X_t 1_{\{t\}}
+\]</div>
+<p>over a subdivision <span class="arithmatex">\(0 = t_0 &lt; t_1 &lt; \cdots &lt; t_n = t\)</span>, which satisfies  </p>
+<div class="arithmatex">\[
+  X^n_{-} = X_0 1_{\{0\}} + \sum_{k=1}^n X_{t_{k-1}} 1_{(t_{k-1}, t_k]}.
+\]</div>
+<p>Hence, by the martingale property of <span class="arithmatex">\(M\)</span> it holds  </p>
+<div class="arithmatex">\[
+  E\left[ \int_0^t X^n_{s-} \, dM_s \right] = E\left[ \sum_{k=1}^n X_{t_{k-1}} (M_{t_k} - M_{t_{k-1}}) \right] = 0.
+\]</div>
+<p>Letting the mesh of the subdivision to <span class="arithmatex">\(0\)</span>, dominated convergence yields</p>
+<div class="arithmatex">\[
+  E[X_t M_t] = E\left[ \int_0^t X_{s-} \, dA_s \right] = 0.
+\]</div>
+<p>Let <span class="arithmatex">\(X = E[1_A \,|\, \mathcal{F}_\cdot]\)</span> where <span class="arithmatex">\(A = \{M_t &gt; \varepsilon\}\)</span>.
+Then <span class="arithmatex">\(X\)</span> is a bounded martingale, and up to a modification, it is càdlàg.
+It follows that</p>
+<div class="arithmatex">\[
+  0 = E[X_t M_t] = E[1_A M_t] \geq \varepsilon P[A]
+\]</div>
+<p>so <span class="arithmatex">\(P[A] = 0\)</span>.<br />
+The same holds for <span class="arithmatex">\(A = \{M_t &lt; -\varepsilon\}\)</span>, showing that <span class="arithmatex">\(M_t = 0\)</span>.<br />
+Since both <span class="arithmatex">\(M\)</span> and <span class="arithmatex">\(0\)</span> are càdlàg, this implies indistinguishability.</p>
+</div>
+<p>We can now address the Doob-Meyer decomposition.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A càd process <span class="arithmatex">\(X\)</span> is said to belong to class:</p>
 <ul>
-<li><strong>Probability:</strong> probability space, probability measure, expectation, measure change, conditional expectation, stochastic kernel, independence as well as fundamental inequalities and relations.</li>
-<li><strong>Discrete Martingales:</strong> discrete stochastic processes, information, stopping times, martingales and related fundamental results (convergence, law of large numbers, etc.)</li>
-<li><strong>Markov Processes:</strong> concept of memoryless stochastic processes, discrete time results, construction of the Brownian motion.</li>
-<li><strong>Ito-Integral and Calculus:</strong> construction of the stochastic integral, Ito-formula, applications.</li>
-<li><strong>Stochastic Exponential:</strong> measure change, Girsanov formula and applications</li>
-<li><strong>Stochastic Differential Equations:</strong> existence and uniqueness, strong vs weak solutions, ...</li>
-<li><strong>SDE and PDE:</strong> Relation between PDE and SDE, Kolmogorov equation, Feynman-Kak formula and applications.</li>
+<li><strong>(D)</strong> if the collection <span class="arithmatex">\(\{X_\tau : \tau \text{ stopping time}, \tau &lt; \infty\}\)</span> is uniformly integrable</li>
+<li><strong>(DL)</strong> if the collections <span class="arithmatex">\(\{X_\tau : \tau \text{ stopping time}, \tau &lt; t\}\)</span> are uniformly integrable for every <span class="arithmatex">\(t\)</span></li>
 </ul>
-<h2 id="concrete-approach">Concrete Approach</h2>
-<p>The theoretical lecture combines blackboard lectures with practical applications.
-Lecture notes will be provided and updated during the course.
-The evaluation of the lecture will consists of </p>
-<ul>
-<li><strong>Homework:</strong> Once every two weeks to be handed out within two weeks by groups of 5-6</li>
-<li><strong>Quizz:</strong> 3-4 quizz, in class, 30 min about the past lectures.</li>
-<li><strong>Final Exam:</strong> 120 min final exam at the end of the semester.</li>
-</ul>
-<h2 id="prerequisite">Prerequisite</h2>
-<p>The lecture suppose that students knows about basic algebra, analysis.
-A previous knowledge about measure theory might be of help but nor necessary.</p>
-<h2 id="literature">Literature</h2>
-<p>The lecture follows the present lecture notes.
-However those are inspired by uncountably many textbooks on the topic from which we present a short selection:</p>
-<ul>
-<li>Rick Durret<sup id="fnref:durret01"><a class="footnote-ref" href="#fn:durret01">1</a></sup>: Excellent introduction to discrete stochastic processes (markov processesw and martingales and Brownian motion). No stochastic integral and SDEs</li>
-<li>Steve Shreve<sup id="fnref:shreve2004"><a class="footnote-ref" href="#fn:shreve2004">2</a></sup><sup id="fnref:shreve2004a"><a class="footnote-ref" href="#fn:shreve2004a">3</a></sup>: Both books with a focus on Finance. The first one is discrete the second continuous and both approchable.</li>
-<li>Olav Kallenberg<sup id="fnref:kallenberg2002"><a class="footnote-ref" href="#fn:kallenberg2002">4</a></sup>: Complete from probability to stochastic processes. General stochastic processes.</li>
-<li>Philip Protter<sup id="fnref:protter"><a class="footnote-ref" href="#fn:protter">5</a></sup>: Complete about general stochastic processes (w/wo jumps). Complex.</li>
-<li>Delacherie and Meyer<sup id="fnref:Dellacherie1978"><a class="footnote-ref" href="#fn:Dellacherie1978">6</a></sup><sup id="fnref:Dellacherie1982"><a class="footnote-ref" href="#fn:Dellacherie1982">7</a></sup>: The bible however machine typed and French</li>
-</ul>
-<h2 id="references">References</h2>
-<div class="footnote">
-<hr />
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Doob-Meyer Decomposition</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a càdlàg sub-martingale of class (DL).
+Then <span class="arithmatex">\(X\)</span> can be decomposed uniquely &mdash; up to indistinguishability &mdash; into</p>
+<div class="arithmatex">\[
+  X = M + A
+\]</div>
+<p>where <span class="arithmatex">\(M\)</span> is a càdlàg martingale and <span class="arithmatex">\(A\)</span> is a natural increasing process.
+If furthermore, <span class="arithmatex">\(X\)</span> is of class (D), then <span class="arithmatex">\(M\)</span> is uniformly integrable and <span class="arithmatex">\(A\)</span> is integrable.</p>
+</div>
+<p>The proof relies on a deep functional analysis result describing the relatively compacts subsets of <span class="arithmatex">\(L^1\)</span>.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Dunford-Pettis's Theorem</p>
+<p>A subset of <span class="arithmatex">\(L^1\)</span> is <span class="arithmatex">\(\sigma(L^1, L^\infty)\)</span>-relatively compact if and only if it is uniformly integrable.</p>
+</div>
+<p>We do not address the proof of this theorem which involves functional analysis arguments.</p>
+<p>Remember that we use the notation <span class="arithmatex">\(E[\xi \colon A] := E[X 1_A]\)</span>.</p>
+<div class="admonition proof">
+<p class="admonition-title">Proof of Doob-Meyer Decomposition</p>
 <ol>
-<li id="fn:durret01">
-<p>Rick Durrett. <em>Probability: Theory and Examples</em>. Cambridge Series in Statistical and Probabilistic Mathematics, 2010.&#160;<a class="footnote-backref" href="#fnref:durret01" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<li>
+<p><strong>Uniqueness:</strong> Set <span class="arithmatex">\(X = M + A = M' + A'\)</span>.
+   It follows that <span class="arithmatex">\(A - A' = M - M'\)</span> is a càdlàg martingale which is the difference of two increasing natural processes.
+   From the previous proposition, <span class="arithmatex">\(A - A' = M - M'\)</span> is indistinguishable from <span class="arithmatex">\(0\)</span>, hence the uniqueness.</p>
 </li>
-<li id="fn:shreve2004">
-<p>Steven E. Shreve. <em>Stochastic Calculus for Finance</em>. Volume I of Springer Finance. Springer-Verlag, New York, 2004. ISBN 0-387-40100-8. The binomial asset pricing model.&#160;<a class="footnote-backref" href="#fnref:shreve2004" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<li>
+<p><strong>Decomposition along a discrete partition:</strong>
+    Fix <span class="arithmatex">\(T\)</span> and consider the process on <span class="arithmatex">\([0,T]\)</span>.
+    Assume without loss of generality that <span class="arithmatex">\(X_0 = 0\)</span> and use the dyadic partitions <span class="arithmatex">\(\Pi^n = \{t_k^n = kT / 2^n : k = 0, \ldots, 2^n\}\)</span>, and <span class="arithmatex">\(\Pi = \cup \Pi^n\)</span>.
+    Define</p>
+<div class="arithmatex">\[
+A_t^n =
+  \begin{cases}
+    0 &amp; \text{if } t =0 \\
+    \sum_{j=0}^{k-1} E[\Delta_j^n X \,|\, \mathcal{F}_{t_j^n}] &amp; \text{if } t_k^n &lt; t \leq t_{k+1}^n,\; k=1,\ldots,2^n-1
+  \end{cases}
+\]</div>
+<p>where we use the notation <span class="arithmatex">\(\Delta_k^n Y = Y_{t_{k+1}^n} - Y_{t_k^n}\)</span>.
+In other terms</p>
+<div class="arithmatex">\[
+  A^n = \sum_{k=0}^{2^n-2} E[\Delta_k^n X \,|\, \mathcal{F}_{t_k^n}] 1_{[t_k^n, t_{k+1}^n)} +  E[\Delta_{2^{n-1}}^n X \,|\, \mathcal{F}_{t_{2^n-1}^n}] 1_{\{T\}}
+\]</div>
+<p>This defines a càg, piecewise constant, increasing process <span class="arithmatex">\(A^n\)</span>.
+Define <span class="arithmatex">\(M^n = X - A^n\)</span>, so that <span class="arithmatex">\(X = M^n + A^n\)</span>.
+Since <span class="arithmatex">\(X\)</span> is a sub-martingale, <span class="arithmatex">\(M^n\)</span> is a martingale on <span class="arithmatex">\(\Pi^n\)</span>.</p>
 </li>
-<li id="fn:shreve2004a">
-<p>Steven E. Shreve. <em>Stochastic Calculus for Finance</em>. Volume II of Springer Finance. Springer-Verlag, New York, 2004. ISBN 0-387-40101-6. Continuous-time models.&#160;<a class="footnote-backref" href="#fnref:shreve2004a" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<li>
+<p><strong>Convergence of <span class="arithmatex">\((A_T^n)\)</span>:</strong>
+    For <span class="arithmatex">\(\lambda &gt; 0\)</span>, define the stopping time <span class="arithmatex">\(\tau_\lambda^n = \inf\{t \colon A_t^n &gt; \lambda\} \wedge T\)</span>.
+    Since <span class="arithmatex">\(A^n\)</span> is increasing, càg and piecewise constant over <span class="arithmatex">\(\Pi^n\)</span>, it follows that <span class="arithmatex">\(\tau_\lambda^n\)</span> takes values in <span class="arithmatex">\(\Pi^n\)</span> and on <span class="arithmatex">\(\{\tau^n_{\lambda}&lt;T\}\)</span> it holds that <span class="arithmatex">\(A_{\tau^n_\lambda}^n \leq \lambda\)</span>.
+    From optional sampling we have</p>
+<div class="arithmatex">\[
+\begin{align}
+    E[A_T^n \, \colon \, A_T^n &gt; \lambda]
+      &amp; = E[A_T^n - A_{\tau_\lambda^n} \, \colon \, \tau^n_\lambda &lt;T] + E[A_{\tau_\lambda^n}^n \, \colon \, A_T^n &gt;\lambda ]\\
+      &amp; = E[X_T - X_{\tau_\lambda^n} \, \colon \, \tau^n_\lambda &lt;T] - \underbrace{E[M^n_T - M^n_{\tau^n_\lambda} \, \colon \, \tau^n_\lambda&lt;T]}_{=0 \text{ Doob optional sampling}} + E[A_{\tau_\lambda^n}^n \, \colon \, A_T^n &gt;\lambda]\\
+    &amp;\leq E[X_T^n - X_{\tau_\lambda^n }^n \, \colon\, \tau_\lambda^n &lt; T] + \lambda P[A_T^n&gt;\lambda]
+\end{align}
+\]</div>
+<p>On the other hand, for <span class="arithmatex">\(\tau^n_{\lambda/2}\)</span> with the same doob's optional sampling arguments we get</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     2E[X_T^n - X_{\tau_{\lambda/2}^n \wedge T}^n \, \colon \tau_{\lambda/2}^n &lt; T] 
+        &amp; = 2 E[A_T^n -A_{\tau^n_{\lambda/2}} \colon A_T^n\geq \lambda/2]\\
+        &amp; \geq 2 E[A_T^n -A_{\tau^n_{\lambda/2}} \colon A_T^n\geq \lambda ]\\
+        &amp; \geq \lambda P[A_T^n &gt; \lambda]\\
+  \end{align*}
+\]</div>
+<p>Combining both, we get:</p>
+<div class="arithmatex">\[
+  E[A_T^n \, \colon \, A_T^n &gt; \lambda] \leq E[X_T - X_{\tau_\lambda^n} \, \colon\, \tau_\lambda^n &lt; T] + 2 E[X_T - X_{\tau_{\lambda/2}^n} \, \colon\, \tau_{\lambda/2}^n &lt; T]
+\]</div>
+<p>Since <span class="arithmatex">\(X\)</span> is of class (DL), the families <span class="arithmatex">\((X_T - X_{\tau^n_\lambda})\)</span> and <span class="arithmatex">\((X_T - X_{\tau^n_\lambda})\)</span> are uniformly integrable.
+We therefore just need to show that <span class="arithmatex">\(\{\tau_{\lambda/2}^n&lt;T\}\supseteq \{\tau_\lambda^n\}\)</span> can be made arbitrarily small in <span class="arithmatex">\(\lambda\)</span> uniformly in <span class="arithmatex">\(n\)</span> to show that <span class="arithmatex">\((A_T^n)\)</span> is uniformly integrable.
+However, by Markov inequality, it holds that</p>
+<div class="arithmatex">\[
+  P[\tau_{\lambda/2}^n&lt;T] = P[A_T^n &gt; \lambda/2] \leq \frac{2}{\lambda}E[A_T^n]= \frac{2}{\lambda} E[X_T]
+\]</div>
+<p>Thus, <span class="arithmatex">\((A_T^n)\)</span> is uniformly integrable.
+By Dunford-Pettis, up to a subsequence, <span class="arithmatex">\(A_T^n\)</span> converges weakly in <span class="arithmatex">\(L^1\)</span> to some <span class="arithmatex">\(A_T\)</span> in <span class="arithmatex">\(L^1\)</span>, that is <span class="arithmatex">\(E[\xi A_T^n] \to E[\xi A_T]\)</span> for all <span class="arithmatex">\(\xi\)</span> in <span class="arithmatex">\(L^\infty\)</span>.</p>
 </li>
-<li id="fn:kallenberg2002">
-<p>Olav Kallenberg. <em>Foundations of Modern Probability</em>. Probability and its Applications (New York). Springer-Verlag, New York, 2nd edition, 2002.&#160;<a class="footnote-backref" href="#fnref:kallenberg2002" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<li>
+<p>*<em>Definition of the limit decomposition:</em>
+    Define <span class="arithmatex">\(M = E[X_T - A_T \,|\, \mathcal{F}_\cdot]\)</span>, a càdlàg martingale, and <span class="arithmatex">\(A = X^T - M\)</span>.
+    So <span class="arithmatex">\(X = M + A\)</span> on <span class="arithmatex">\([0,T]\)</span>.
+    We just remained to show that <span class="arithmatex">\(A\)</span> is natural.
+    Fix <span class="arithmatex">\(t \in \Pi\)</span>, for <span class="arithmatex">\(n\)</span> large enough such that <span class="arithmatex">\(t\)</span> is in <span class="arithmatex">\(\Pi^n\)</span>, it holds that for every <span class="arithmatex">\(\xi\)</span> in <span class="arithmatex">\(L^\infty\)</span>:</p>
+<div class="arithmatex">\[
+  E[\xi(A_t^n - A_t)] = E[E[\xi \,|\, \mathcal{F}_t](M_t - M_t^n)] = E[E[\xi \,|\, \mathcal{F}_t](A_T^n - A_T)] \to 0
+\]</div>
+<p>Hence <span class="arithmatex">\(A_t^n \to A_t\)</span> in <span class="arithmatex">\(\sigma(L^1, L^\infty)\)</span>.
+For any <span class="arithmatex">\(s&lt;t\)</span> with <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(t\)</span> in <span class="arithmatex">\(\Pi^n\)</span>, since <span class="arithmatex">\(1_{\{A_t&lt;A_s\}}\)</span> is bounded, it holds</p>
+<div class="arithmatex">\[
+    0\geq E[(A_t-A_s)1_{\{A_t&lt;A_s\}}] = \lim E[(A_t^n - A_s^n)1_{\{A_t&lt;A_s\}}] \geq 0
+\]</div>
+<p>showing that <span class="arithmatex">\(P[A_t\geq A_s] = 1\)</span>.
+Since <span class="arithmatex">\(A\)</span> is càdlàg, we deduce that <span class="arithmatex">\(A\)</span> is increasing.</p>
+<p>We are left to show that <span class="arithmatex">\(A\)</span> is natural.
+For a bounded càdlàg martingale <span class="arithmatex">\(N\)</span></p>
+<div class="arithmatex">\[
+  \begin{align}
+    E[N_T A_T^n] &amp;= E\left[ \int_0^T N_{s-} \, dA_s^n \right] \\
+    &amp;= \sum E[N_{t_k^n} \Delta_k^n A] + \sum E[N_{t_k^n} \Delta_k^n(M - M^n)] \\
+    &amp;\to E\left[ \int_0^T N_{s-} \, dA_s \right]
+  \end{align}
+\]</div>
+<p>so <span class="arithmatex">\(E[N_T A_T] = E\left[ \int_0^T N_{s-} \, dA_s \right]\)</span>, hence <span class="arithmatex">\(A\)</span> is natural on <span class="arithmatex">\([0,T]\)</span>.</p>
 </li>
-<li id="fn:protter">
-<p>Philip E. Protter. <em>Stochastic Integration and Differential Equations</em>. Springer, 2nd edition, 2005.&#160;<a class="footnote-backref" href="#fnref:protter" title="Jump back to footnote 5 in the text">&#8617;</a></p>
-</li>
-<li id="fn:Dellacherie1978">
-<p>Claude Dellacherie and Paul-André Meyer. <em>Probabilities and Potential. A</em>. Volume 29 of North-Holland Mathematics Studies. North-Holland Publishing Co., Amsterdam, 1978. ISBN 0-7204-0701-X.&#160;<a class="footnote-backref" href="#fnref:Dellacherie1978" title="Jump back to footnote 6 in the text">&#8617;</a></p>
-</li>
-<li id="fn:Dellacherie1982">
-<p>Claude Dellacherie and Paul André Meyer. <em>Probabilities and Potential. B</em>. Volume 72 of North-Holland Mathematics Studies. North-Holland Publishing Co., Amsterdam, 1982.&#160;<a class="footnote-backref" href="#fnref:Dellacherie1982" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<li>
+<p><strong>Extension to <span class="arithmatex">\([0,\infty)\)</span> and case (D):</strong>
+    By uniqueness, decompositions on <span class="arithmatex">\([0, T+n]\)</span> for each <span class="arithmatex">\(n\)</span> are consistent, extending the result to <span class="arithmatex">\([0,\infty)\)</span>.
+    If <span class="arithmatex">\(X\)</span> is of class (D), then <span class="arithmatex">\(A_T^n\)</span> are uniformly integrable, hence <span class="arithmatex">\(A_T \in L^1\)</span>.
+    Also, <span class="arithmatex">\(\sup_t E[|X_t|] &lt; \infty\)</span> implies:</p>
+<div class="arithmatex">\[
+E[M_t 1_{\{M_t &gt; \lambda\}}] \leq E[(X_t - A_T) 1_{\{X_t - A_T &gt; \lambda\}}]
+\]</div>
+<p>By Markov’s inequality and uniform integrability of <span class="arithmatex">\(X_t - A_T\)</span>, <span class="arithmatex">\(M\)</span> is uniformly integrable.</p>
 </li>
 </ol>
 </div>
@@ -1784,15 +1901,10 @@ However those are inspired by uncountably many textbooks on the topic from which
 
 
 
-  
-  
-
 
 
   
 
-
-  
 
 
 
@@ -1827,14 +1939,14 @@ However those are inspired by uncountably many textbooks on the topic from which
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "content.code.copy", "content.code.annotate", "navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "toc.integrate"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
-        <script src="javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
+        <script src="../../../javascripts/node_modules/mathjax/es5/tex-mml-chtml.js"></script>
       
     
   </body>
