@@ -1,3 +1,15 @@
+- occasion: "Seminar"
+  place: Peking University, Peking, China"
+  title: "Presentation of the Financial Data and Quant Analysis Platform Fastbox"
+  date: March 2025
+  score: 6
+
+- occasion: "Seminar"
+  place: Shandong University, Shandong, China"
+  title: "Presentation of the Financial Data and Quant Analysis Platform Fastbox"
+  date: Jan 2025
+  score: 6
+
 - occasion: "Bachelier Seminar"
   place: Paris, France"
   title: "On/Off Shore Currency Rate Discrepancy"

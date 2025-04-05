@@ -1856,7 +1856,7 @@ However, by Markov inequality, it holds that</p>
 By Dunford-Pettis, up to a subsequence, <span class="arithmatex">\(A_T^n\)</span> converges weakly in <span class="arithmatex">\(L^1\)</span> to some <span class="arithmatex">\(A_T\)</span> in <span class="arithmatex">\(L^1\)</span>, that is <span class="arithmatex">\(E[\xi A_T^n] \to E[\xi A_T]\)</span> for all <span class="arithmatex">\(\xi\)</span> in <span class="arithmatex">\(L^\infty\)</span>.</p>
 </li>
 <li>
-<p>*<em>Definition of the limit decomposition:</em>
+<p><strong>Definition of the limit decomposition:</strong>
     Define <span class="arithmatex">\(M = E[X_T - A_T \,|\, \mathcal{F}_\cdot]\)</span>, a càdlàg martingale, and <span class="arithmatex">\(A = X^T - M\)</span>.
     So <span class="arithmatex">\(X = M + A\)</span> on <span class="arithmatex">\([0,T]\)</span>.
     We just remained to show that <span class="arithmatex">\(A\)</span> is natural.
@@ -1894,6 +1894,18 @@ E[M_t 1_{\{M_t &gt; \lambda\}}] \leq E[(X_t - A_T) 1_{\{X_t - A_T &gt; \lambda\}
 </li>
 </ol>
 </div>
+<p>In the following we will define the stochastic integral with respect to continuous martingale using the Doob-Meyer decomposition.
+So one may think that if <span class="arithmatex">\(X\)</span> is continuous, then the Doob-Meyer decomposition is also continuous.
+This is not straightforward a-priori, and is the subject of the following theorem.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a càdlàg sub-martingale such that <span class="arithmatex">\(E[X_{\tau^n}]\to E[X_\tau]\)</span> for every increasing sequence of stopping times <span class="arithmatex">\((\tau^n)\)</span> with <span class="arithmatex">\(\sup \tau^n=\tau&lt;T\)</span> for some <span class="arithmatex">\(T&gt;0\)</span>.
+Then, the natural increasing process in the Doob-Meyer decomposition of <span class="arithmatex">\(X\)</span> is continuous.</p>
+</div>
+<details class="proof">
+<summary>Proof</summary>
+<p>To be updated</p>
+</details>
 
 
 

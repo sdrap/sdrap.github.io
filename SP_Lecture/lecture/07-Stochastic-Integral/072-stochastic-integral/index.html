@@ -83,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#stochastic-integral" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1546,6 +1551,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1638,9 +1645,102 @@
 
 
 
-  <h1>Stochastic Integral</h1>
-
-
+<h1 id="stochastic-integral">Stochastic Integral</h1>
+<p>Let us fix some notations.</p>
+<ul>
+<li>
+<p>By <span class="arithmatex">\(\mathcal{M}^2_c\)</span> we denote the space of square integrable continuous martingales <span class="arithmatex">\(M\)</span> such that <span class="arithmatex">\(M_0=0\)</span>.</p>
+</li>
+<li>
+<p>For <span class="arithmatex">\(M\)</span> in <span class="arithmatex">\(\mathcal{M}_c^2\)</span>, we denote by <span class="arithmatex">\(\langle M\rangle\)</span> the continuous natural process of bounded variation in the Doob-Meyer decomposition of the sub-martingale <span class="arithmatex">\(M^2\)</span>. 
+    That is, <span class="arithmatex">\(M^2=\text{martingale}+\langle M\rangle\)</span>.
+    We call <span class="arithmatex">\(\langle M\rangle\)</span> the <strong>quadratic variations</strong> of <span class="arithmatex">\(M\)</span>.</p>
+</li>
+<li>
+<p>Such a continuous quadratic variation process <span class="arithmatex">\(\langle M\rangle\)</span> defines a product measure <span class="arithmatex">\(P\otimes d\langle M\rangle\)</span> on <span class="arithmatex">\(\Omega\otimes [0,\infty)\)</span> with <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{G}\otimes \mathcal{B}([0, \infty))\)</span>.</p>
+</li>
+<li>
+<p>For every locally bounded and progressive measurable process <span class="arithmatex">\(H\)</span> we can define the continuous and adapted process <span class="arithmatex">\(\int H d\langle M\rangle\)</span>, and we denote by <span class="arithmatex">\(\mathcal{L}^2(M)\)</span> the space of progressively measurable processes <span class="arithmatex">\(H\)</span> such that</p>
+<div class="arithmatex">\[
+E\left[ \int_{0}^{t}H^2 d\langle M\rangle  \right]&lt;\infty
+\]</div>
+<p>for every <span class="arithmatex">\(t\)</span>.
+If there is no risk of confusion, we often drop the reference to <span class="arithmatex">\(M\)</span> and use the notation <span class="arithmatex">\(\mathcal{L}^2:=\mathcal{L}^2(M)\)</span>.</p>
+</li>
+<li>
+<p>We generically denote by <span class="arithmatex">\(\Pi=\{0=\tau_0&lt;\tau_1&lt;\ldots&lt;\tau_n&lt;T\}\)</span> a stochastic partition where <span class="arithmatex">\(\tau_k\)</span> are stopping times and <span class="arithmatex">\(T&gt;0\)</span>.
+    We call it a deterministic partition if each <span class="arithmatex">\(\tau_k=t_k \in [0,\infty)\)</span>.
+    Further, we adopt the handy notation <span class="arithmatex">\(\Delta_k Y=Y^{\tau_k}-Y^{\tau_{k-1}}\)</span> for an increment of a progressive stochastic process <span class="arithmatex">\(Y\)</span>.
+    That is, <span class="arithmatex">\(\Delta_kY_t=Y_t^{\tau_k}-Y_{t}^{\tau_{k-1}}=Y_{t\wedge \tau_k}-Y_{t\wedge \tau_{k-1}}\)</span> for every <span class="arithmatex">\(t\)</span>.</p>
+</li>
+<li>
+<p>We denote by <span class="arithmatex">\(\mathcal{S}\)</span> the set of simple predictable integrands</p>
+<p>[
+    H=H_0+\sum_{k=1}^n H_k 1_{(\tau_{k-1},\tau_k]}
+  ]</p>
+<p>where along a stochastic partition <span class="arithmatex">\(\Pi\)</span>, <span class="arithmatex">\(H_k\)</span> is <span class="arithmatex">\(\mathcal{F}_{\tau_{k-1}}\)</span>-measurable and <span class="arithmatex">\(|H_k|\leq C\)</span> for every <span class="arithmatex">\(k\)</span> and some constant <span class="arithmatex">\(C\)</span>.</p>
+</li>
+<li>
+<p>Finally for <span class="arithmatex">\(H\)</span> in <span class="arithmatex">\(\mathcal{S}\)</span> and <span class="arithmatex">\(M\)</span> in <span class="arithmatex">\(\mathcal{M}_c^2\)</span>, we define the discrete stochastic integral</p>
+<div class="arithmatex">\[
+\int H dM:=M_0H_0+\sum_{k=1}^nH_k(M^{\tau_k}-M^{\tau_{k-1}})=\sum_{k=1}^nH_k\Delta_k M
+\]</div>
+</li>
+</ul>
+<p>According to what has been done so far, we have from Doob's optional sampling theorem and the fact that <span class="arithmatex">\(M\)</span> is a square integrable the following proposition easily follows</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(M\)</span> in <span class="arithmatex">\(\mathcal{M}_c^2\)</span>.
+It follows that <span class="arithmatex">\(\int \cdot\, dM\)</span> is an operator from <span class="arithmatex">\(\mathcal{S}\)</span> to <span class="arithmatex">\(\mathcal{M}_c^2\)</span>.
+It satisfies the following properties:</p>
+<ol>
+<li>
+<p><strong>Linearity:</strong> <span class="arithmatex">\(\int (\alpha H+\beta G) dM=\alpha\int HdM+\beta \int GdM\)</span> for <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> constants.</p>
+</li>
+<li>
+<p><strong>Stopping property:</strong> <span class="arithmatex">\(\int 1_{\{\cdot \leq \tau\}} H dM=\int H dM^\tau=\int_0^{\cdot \wedge\tau} H dM\)</span>.</p>
+</li>
+<li>
+<p><strong>Ito-Isometry:</strong> for every <span class="arithmatex">\(t\)</span></p>
+<div class="arithmatex">\[
+  E\left[ \left( \int_{0}^{t}H dM  \right)^2 \right]= E\left[ \int_{0}^{t} H^2 d\langle M \rangle   \right]
+\]</div>
+</li>
+</ol>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Since <span class="arithmatex">\(H\)</span> is uniformly bounded, we know from Doob's optional sampling theorem that <span class="arithmatex">\(\int HdM\)</span> is a martingale which is continuous since <span class="arithmatex">\(M\)</span> is continuous.
+Linearity is immediate and the stopping property is a simple adaptation of the discrete time version.</p>
+<p>We show the Ito-Isometry which as a consequence will show that <span class="arithmatex">\(\int HdM\)</span> is square integrable since <span class="arithmatex">\(H\)</span> is bounded and <span class="arithmatex">\(\langle M\rangle\)</span> is integrable, hence an element of <span class="arithmatex">\(\mathcal{M}_c^2\)</span>.
+We denote by <span class="arithmatex">\(N\)</span> the martingale in the Doob-Meyer decomposition <span class="arithmatex">\(M^2=N+\langle M\rangle\)</span>.
+Since <span class="arithmatex">\(H\)</span> is uniformly bounded and <span class="arithmatex">\(M\)</span> is square integrable, the following expectations and conditional expectations are well defined.</p>
+<div class="arithmatex">\[
+E\left[ \left( \int_{0}^{t}H dM  \right)^2 \right]=\sum_{k=1}^n E\left[H_k^2\left(\Delta_kM_t\right)^2  \right]
++2\sum_{k&lt;j} E\left[ H_kH_j\Delta_k M_t \Delta_j M_t \right]
+\]</div>
+<p>Note that for every martingale, <span class="arithmatex">\(E[M_{t\wedge \tau_j}|\mathcal{F}_{\tau_{j-1}}]=M_{t\wedge \tau_{j-1}}\)</span>, and therefore <span class="arithmatex">\(E[\Delta_kM_t|\mathcal{F}_{\tau_{k-1}}]=0\)</span>.
+Since <span class="arithmatex">\(j&gt;k\)</span> and <span class="arithmatex">\(H\)</span> is predictable, for the second term it holds</p>
+<div class="arithmatex">\[
+E\left[ H_kH_j\Delta_kM_t \Delta_j M_t \right] =E\left[ H_kH_j\Delta_k M_tE\left[\Delta_j M_t|\mathcal{F}_{\tau_{j-1}}\right]\right]=0
+\]</div>
+<p>As for the first term, for the same reasons, one has</p>
+<div class="arithmatex">\[
+\begin{align*}
+  E\left[ H_k^2\left(\Delta_k M_{t} \right)^2\right]
+    &amp; = E\left[ H_k^2\left(\left(M_{t\wedge \tau_k}^2 - M_{t\wedge \tau_{k-1}}^2\right) -2 M_{t\wedge \tau_{k-1}}\left(M_{t\wedge \tau_k} - M_{t\wedge \tau_{k-1}}\right)\right) \right]\\
+    &amp; = E\left[ H_k^2 \Delta_k M^2_t \right] -2 E\left[ H_k^2 M_{t\wedge \tau_{k-1}}\underbrace{E\left[\Delta_k M_t | \mathcal{F}_{\tau_{k-1}}\right]}_{=0} \right]\\
+    &amp; = E\left[ H_k^2 \left( \Delta_k N_t + \Delta_k \langle M\rangle_t \right) \right]\\
+    &amp; = E\left[ H_k^2 \underbrace{E\left[ \Delta_k N_t|\mathcal{F}_{\tau_{k-1}} \right]}_{=0}\right] + E\left[H_k^2\Delta_k \langle M\rangle_{t} \right]\\
+    &amp; =E\left[H_k^2\Delta_k \langle M\rangle_{t} \right] 
+\end{align*}
+\]</div>
+<p>Summing up yields</p>
+<div class="arithmatex">\[
+E\left[ \left(\int_{0}^{t}H dM\right)^2  \right]=E\left[\sum_{k=1}^n H_k^2 \Delta_k\langle M\rangle_t\right] =E\left[ \int_{0}^{t}H^2 d\langle M\rangle  \right]
+\]</div>
+<p>Showing the Ito-Isometry and finishes the proof.</p>
+</div>
 
 
 
