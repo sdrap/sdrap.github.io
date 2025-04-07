@@ -1646,6 +1646,21 @@
 
 
 <h1 id="stochastic-integral">Stochastic Integral</h1>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that if <span class="arithmatex">\(X\)</span> is a càdlàg sub-martingale such that <span class="arithmatex">\(\sup_{s\leq t} X_s\)</span> is integrable for each <span class="arithmatex">\(t\)</span>, then <span class="arithmatex">\(X\)</span> is of class (DL).
+Indeed, for any stopping time it holds</p>
+<div class="arithmatex">\[
+    |X_{\tau \wedge t}|\leq \sup_{s \leq t}|X_s|
+\]</div>
+<p>showing that the family is uniformly bounded by an integrable random variable, hence, is uniformly integrable.</p>
+<p>In particular, if <span class="arithmatex">\(M\)</span> is a càdlàg martingale which is <span class="arithmatex">\(p\)</span>-integrable for <span class="arithmatex">\(p&gt;1\)</span>, then <span class="arithmatex">\(|M|^p\)</span> is a positive sub-martingale and from from Doob's maximal inequality it follows that</p>
+<div class="arithmatex">\[
+    E\left[ \sup_{s\leq t} |M_s|^p \right]^{1/p} \leq \frac{p}{p-1}\left\| M_t \right\|_{p} &lt;\infty
+\]</div>
+<p>For <span class="arithmatex">\(p=2\)</span>, it follows that <span class="arithmatex">\(M^2\)</span> is a sub-martingale of class (DL), hence, admits a Doob-Meyer decomposition.
+In particular, if <span class="arithmatex">\(M\)</span> is continuous, it follows that the natural process in the decomposition is continuous too.</p>
+</div>
 <p>Let us fix some notations.</p>
 <ul>
 <li>
@@ -1657,7 +1672,7 @@
     We call <span class="arithmatex">\(\langle M\rangle\)</span> the <strong>quadratic variations</strong> of <span class="arithmatex">\(M\)</span>.</p>
 </li>
 <li>
-<p>Such a continuous quadratic variation process <span class="arithmatex">\(\langle M\rangle\)</span> defines a product measure <span class="arithmatex">\(P\otimes d\langle M\rangle\)</span> on <span class="arithmatex">\(\Omega\otimes [0,\infty)\)</span> with <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{G}\otimes \mathcal{B}([0, \infty))\)</span>.</p>
+<p>Such a continuous quadratic variation process <span class="arithmatex">\(\langle M\rangle\)</span> defines a product measure <span class="arithmatex">\(P\otimes d\langle M\rangle\)</span> on <span class="arithmatex">\(\Omega\otimes [0,\infty)\)</span> with <span class="arithmatex">\(\sigma\)</span>-algebra <span class="arithmatex">\(\mathcal{F}\otimes \mathcal{B}([0, \infty))\)</span>.</p>
 </li>
 <li>
 <p>For every locally bounded and progressive measurable process <span class="arithmatex">\(H\)</span> we can define the continuous and adapted process <span class="arithmatex">\(\int H d\langle M\rangle\)</span>, and we denote by <span class="arithmatex">\(\mathcal{L}^2(M)\)</span> the space of progressively measurable processes <span class="arithmatex">\(H\)</span> such that</p>
@@ -1687,6 +1702,13 @@ If there is no risk of confusion, we often drop the reference to <span class="ar
 \]</div>
 </li>
 </ul>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>The stochastic integral <span class="arithmatex">\(\int H dM\)</span> for simple <span class="arithmatex">\(H\)</span> follows the same definition as for the integral in the Lebesgue-Stieljes integral if we replace <span class="arithmatex">\(M\)</span> by some BV process <span class="arithmatex">\(A\)</span>.
+Both are clearly linear operators, however, a fundamental difference between both, is the lack of monotonicity for the <span class="arithmatex">\(\int \cdot dM\)</span>, which is a corner stone of the definition of the Lebesgue-Stieljes integral that yields monotone convergence and then dominated convergence.</p>
+<p>In other terms, defining the stochastic integral <span class="arithmatex">\(\int \cdot dM\)</span> beyond the class of simple processes can not involve the same arguments as the classical Lebesgue-Stieljes approach.
+The key answer to this problem is the so called Ito-Isometry.</p>
+</div>
 <p>According to what has been done so far, we have from Doob's optional sampling theorem and the fact that <span class="arithmatex">\(M\)</span> is a square integrable the following proposition easily follows</p>
 <div class="admonition proposition">
 <p class="admonition-title">Proposition</p>
@@ -1740,6 +1762,315 @@ E\left[ H_kH_j\Delta_kM_t \Delta_j M_t \right] =E\left[ H_kH_j\Delta_k M_tE\left
 E\left[ \left(\int_{0}^{t}H dM\right)^2  \right]=E\left[\sum_{k=1}^n H_k^2 \Delta_k\langle M\rangle_t\right] =E\left[ \int_{0}^{t}H^2 d\langle M\rangle  \right]
 \]</div>
 <p>Showing the Ito-Isometry and finishes the proof.</p>
+</div>
+<p>So far we constructed a stochastic integral operator from <span class="arithmatex">\(\mathcal{S}\)</span> to <span class="arithmatex">\(\mathcal{M}_{c}^2\)</span>.<br />
+The question is whether we can extend it to some closure to <span class="arithmatex">\(\mathcal{S}\subseteq \mathcal{L}^2(M)\)</span> and in which form.</p>
+<p>Let us state first a classical topological result.</p>
+<div class="admonition definition">
+<p class="admonition-title">Definition</p>
+<p>A metric vector space <span class="arithmatex">\((E,d)\)</span> is called a Fréchet space if</p>
+<ul>
+<li>Addition and multiplication by a scalar are continuous operations with respect to <span class="arithmatex">\(d\)</span>.</li>
+<li><span class="arithmatex">\(d\)</span> is translation invariant, that is, <span class="arithmatex">\(d(x,y)=d(x+z,y+z)\)</span>.</li>
+<li><span class="arithmatex">\((E,d)\)</span> is complete.</li>
+</ul>
+</div>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\((E,d)\)</span> and <span class="arithmatex">\((E^\prime,d^\prime)\)</span> be two Fréchet spaces and <span class="arithmatex">\(F\subseteq E\)</span> a linear subspace.
+Any linear function <span class="arithmatex">\(f:F\to E^\prime\)</span> which is an isometry, that is, <span class="arithmatex">\(d\left( f(x),f(y) \right)=d(x,y)\)</span>, can be extended uniquely to a linear function <span class="arithmatex">\(f:\bar{F}\to E^\prime\)</span> which is also an isometry where <span class="arithmatex">\(\bar{F}\)</span> is the closure of <span class="arithmatex">\(F\)</span> in <span class="arithmatex">\(E\)</span>.
+In particular, the extension is continuous.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>For <span class="arithmatex">\(x \in \bar{F}\)</span>, let <span class="arithmatex">\((x_n)\)</span> be a sequence of elements in <span class="arithmatex">\(F\)</span> converging to <span class="arithmatex">\(x\)</span>.
+It follows that <span class="arithmatex">\((x_n)\)</span> is in particular Cauchy.
+By the isometric property, so is the sequence <span class="arithmatex">\((f(x_n))\)</span>, which, by completeness of <span class="arithmatex">\(E^\prime\)</span>, converges to some <span class="arithmatex">\(y \in E^\prime\)</span>.
+For another sequence <span class="arithmatex">\((\tilde{x}_n)\)</span> converging to <span class="arithmatex">\(x\)</span>, it also follows that <span class="arithmatex">\((f(\tilde{x}_n))\)</span> converges to some <span class="arithmatex">\(\tilde{y} \in E^\prime\)</span>.
+By isometry and triangular inequality</p>
+<div class="arithmatex">\[
+\begin{align*}
+d^\prime(y,\tilde{y}) 
+    &amp; \leq d^\prime(y,f(x_n))+d^\prime(f(x_n),f(\tilde{x}_n))+d^\prime(f(\tilde{x}_n),\tilde{y})
+    \\
+    &amp; = d^\prime(y,f(x_n))+d(x_n,\tilde{x}_n)+d^\prime(f(\tilde{x}_n),\tilde{y})
+    \\
+    &amp; \leq d^\prime(y,f(x_n))+d^\prime(f(\tilde{x}_n),\tilde{y})+d(x_n,x)+d(x,\tilde{x}_n) \xrightarrow[n\to \infty]{} 0
+\end{align*}
+\]</div>
+<p>showing that <span class="arithmatex">\(y = \tilde{y}\)</span>.
+Hence, the limit does not depend on the choice of the sequence <span class="arithmatex">\((x_n)\)</span> converging to <span class="arithmatex">\(x\)</span>, so that we can extend <span class="arithmatex">\(f\)</span> to <span class="arithmatex">\(\bar{F}\)</span>.
+It is straightforward to check that the extension is once again an isometry and also linear since both metrics are translation invariant distances and addition as well as multiplication are continuous.
+As for the uniqueness of this isometric extension, it is also straightforward.</p>
+</div>
+<p>Since <span class="arithmatex">\(\int \cdot \, dM\)</span> is a linear operator which is an isometry, we will apply this classical result of functional analysis to define the stochastic integral on the closure of <span class="arithmatex">\(\mathcal{S}\)</span>.
+Two main questions now:</p>
+<ul>
+<li>
+<p><strong>Question 1:</strong> What are the metrics <span class="arithmatex">\(d\)</span> and <span class="arithmatex">\(d^\prime\)</span> we consider on <span class="arithmatex">\(\mathcal{L}^2(M)\)</span> and <span class="arithmatex">\(\mathcal{M}_c^2\)</span> making them into Fréchet spaces?</p>
+</li>
+<li>
+<p><strong>Question 2:</strong> What is the closure of <span class="arithmatex">\(\mathcal{S}\)</span>?</p>
+</li>
+</ul>
+<p>As for the first question, the answer comes from a general fact that Fréchet distances are generated by countable families of semi-norms.
+For every <span class="arithmatex">\(n\)</span>, with some abuse of notations, let</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    \left\Vert H1_{[0,n]}\right\Vert_{2}
+      &amp; : =E\left[ \int H^21_{[0,n]} d\langle M\rangle \right]^{1/2}\\
+      &amp; =E\left[ \int_{0}^{n}H^2 d\langle M\rangle \right]^{1/2} \\
+    \left\Vert N_n\right\Vert_{2}
+      &amp; :=E\left[ N_n^2 \right]^{1/2}
+  \end{align*}
+\]</div>
+<p>for <span class="arithmatex">\(H\)</span> in <span class="arithmatex">\(\mathcal{L}^2(M)\)</span> and <span class="arithmatex">\(N \in \mathcal{M}_c^2\)</span>.
+On the one hand <span class="arithmatex">\(\left\Vert\cdot 1_{[0,n]}\right\Vert_{2}\)</span> is the standard <span class="arithmatex">\(L^2\)</span> norm on the product space of <span class="arithmatex">\(\Omega\times [0,n]\)</span> with the measure <span class="arithmatex">\(P\otimes d\langle M\rangle\)</span>, and therefore a semi-norm on <span class="arithmatex">\(\mathcal{L}^2(M)\)</span>.
+On the other hand, by Doob's maximal inequality <span class="arithmatex">\(E[\sup_{s\leq n}N_s^2]\leq C E[N_n^2]\)</span>, and therefore <span class="arithmatex">\(\left\Vert\cdot_n\right\Vert_{2}\)</span> is a norm on the space of continuous square integrable martingales restricted to <span class="arithmatex">\([0,n]\)</span>, hence a semi-norm on <span class="arithmatex">\(\mathcal{M}^2_c\)</span>.</p>
+<p>We can define</p>
+<div class="arithmatex">\[
+\begin{align*}
+d(H,H^\prime) &amp;= \sum \frac{1}{2^n}\frac{\left\Vert(H-H^\prime)1_{[0,n]}\right\Vert_{2}}{1+\left\Vert(H-H^\prime)1_{[0,n]}\right\Vert_{2}}, \\
+d^\prime(N,N^\prime) &amp;= \sum \frac{1}{2^n}\frac{\left\Vert N_n-N^\prime_n\right\Vert_{2}}{1+\left\Vert N^\prime_n-N^\prime_n\right\Vert_{2}}
+\end{align*}
+\]</div>
+<p>for <span class="arithmatex">\(H,H^\prime\)</span> in <span class="arithmatex">\(\mathcal{L}^2(M)\)</span> and <span class="arithmatex">\(N,N^\prime\)</span> in <span class="arithmatex">\(\mathcal{M}^2_c\)</span>.</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>Both <span class="arithmatex">\((\mathcal{L}^2(M),d)\)</span> and <span class="arithmatex">\((\mathcal{M}_c^2,d^\prime)\)</span> are Fréchet spaces.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>It is quite standard to check that both functions define distances which are translation invariant and for which addition and multiplication by scalar in both vector spaces are continuous.
+Furthermore, it is also clear that <span class="arithmatex">\(\mathcal{L}^2(M)\)</span> is complete since the <span class="arithmatex">\(\left\Vert\cdot\right\Vert_2\)</span> norm on any compact <span class="arithmatex">\([0,n]\)</span> makes <span class="arithmatex">\(L^2(P\otimes d\langle M\rangle)\)</span> into a complete normed space.
+We just check that <span class="arithmatex">\(\mathcal{M}_c^2\)</span> is complete for the distance <span class="arithmatex">\(d^\prime\)</span>.</p>
+<p>Let <span class="arithmatex">\((M^n)\)</span> be a Cauchy sequence in <span class="arithmatex">\(\mathcal{M}^2_c\)</span>.
+It follows that <span class="arithmatex">\((M_t^n)\)</span> is Cauchy in <span class="arithmatex">\(L^2_t\)</span> for any <span class="arithmatex">\(t\)</span>, hence converges in <span class="arithmatex">\(L^2\)</span> to <span class="arithmatex">\(M_t\)</span>.
+Let further <span class="arithmatex">\(A\)</span> be an event in <span class="arithmatex">\(\mathcal{F}_s\)</span>.
+It follows from the martingale property of <span class="arithmatex">\(M^n\)</span> that <span class="arithmatex">\(E[M_t1_{A}]=\lim_n E[M_t^n1_{A}]=\lim_n E[M_s^n 1_{A}]=E[M_s1_{A}]\)</span>.
+Choosing the càdlàg version of <span class="arithmatex">\(M\)</span> shows that <span class="arithmatex">\(M\)</span> is a càdlàg martingale with <span class="arithmatex">\(M_t\)</span> in <span class="arithmatex">\(L^2_t\)</span> for every <span class="arithmatex">\(t\)</span>.
+Let us prove that <span class="arithmatex">\(M\)</span> is actually continuous.
+By Doob's maximal inequality one has</p>
+<div class="arithmatex">\[
+P\left[ \sup_{s\leq t} \left\vert M_s^n-M_s\right\vert&gt;\lambda \right]\leq \frac{1}{\lambda} \left\Vert M_t^n-M_t\right\Vert_2^2 \xrightarrow[n\to \infty]{} 0.
+\]</div>
+<p>Hence <span class="arithmatex">\(P[\sup_{s\leq t}\left\vert M_s^{n_k}-M_s\right\vert&gt;\lambda]\leq 1/2^{k}\)</span> for some <span class="arithmatex">\(n_k\)</span> and every <span class="arithmatex">\(k\)</span>.
+Applying Borel-Cantelli, it follows that <span class="arithmatex">\(P[\liminf \{\sup_{s\leq t}\left\vert M_s^n-M_s\right\vert\leq \lambda\}]=1\)</span> for every <span class="arithmatex">\(\lambda\)</span>, showing that for <span class="arithmatex">\(P\)</span>-almost all <span class="arithmatex">\(\omega\in \Omega\)</span> the continuous path <span class="arithmatex">\(M^n(\omega)\)</span> converges uniformly on <span class="arithmatex">\([0,t]\)</span> to <span class="arithmatex">\(M(\omega)\)</span>, that is <span class="arithmatex">\(M\)</span> is continuous.</p>
+</div>
+<p>As for the second question about the closure of <span class="arithmatex">\(\mathcal{S}\)</span>, we have</p>
+<div class="admonition lemma">
+<p class="admonition-title">Lemma</p>
+<p>The space <span class="arithmatex">\(\mathcal{S}\)</span> is dense in <span class="arithmatex">\(\mathcal{L}^2(M)\)</span>.
+In particular, for each <span class="arithmatex">\(H\in\mathcal{L}^2(M)\)</span> there exists a sequence <span class="arithmatex">\((H^n)\subseteq\mathcal{S}\)</span> satisfying <span class="arithmatex">\(\left\Vert(H-H^n)1_{[0,t]}\right\Vert_{2}\to 0\)</span> for all <span class="arithmatex">\(t\)</span>.</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>The “size” of the closure of <span class="arithmatex">\(\mathcal{S}\)</span> depends on the “regularity” of <span class="arithmatex">\(\langle M\rangle\)</span>, allowing for more or fewer integrands for the stochastic integral with respect to <span class="arithmatex">\(M\)</span>.
+On the one hand, if <span class="arithmatex">\(\langle M\rangle\)</span> is absolutely continuous — for instance in the case of the Brownian motion — then it is even possible to define a stochastic integral with respect to integrands in <span class="arithmatex">\(L^2(P\otimes d\langle M\rangle)\)</span> which are “only” measurable and adapted and not necessarily progressive.
+On the other hand, if <span class="arithmatex">\(M\)</span> were an element of <span class="arithmatex">\(\mathcal{M}^2\)</span> — those càdlàg martingales such that <span class="arithmatex">\(E[M_t^2]&lt;\infty\)</span> for all <span class="arithmatex">\(t\)</span>, such as some class of Lévy Processes — then it is also possible to define a stochastic integral but with respect to a smaller set of integrands, namely those predictable processes in <span class="arithmatex">\(\mathcal{L}^2(M)\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p><strong>Step 1:</strong> Assume first that the paths of <span class="arithmatex">\(\langle M\rangle\)</span> are absolutely continuous almost surely.
+In particular, <span class="arithmatex">\(P\otimes d\langle M\rangle \ll P\otimes dt\)</span>.
+Fix <span class="arithmatex">\(t\)</span>.</p>
+<ul>
+<li>
+<p>If <span class="arithmatex">\(H\)</span> is continuous, adapted and bounded, hence, by a proposition in the previous chapter, progressive, it holds that <span class="arithmatex">\(H^n\)</span> were</p>
+<div class="arithmatex">\[
+  H^n_s = H_{\frac{kt}{2^n}},
+\]</div>
+<p>for <span class="arithmatex">\(kt/2^n &lt; s \leq (k+1)t/2^n\)</span> converges <span class="arithmatex">\(P\otimes dt\)</span> to <span class="arithmatex">\(H\)</span> on <span class="arithmatex">\(\Omega \times [0,t]\)</span>, and by Lebesgue's dominated convergence, it follows that <span class="arithmatex">\(\left\Vert(H^n-H)1_{[0,t]}\right\Vert_{2}\to 0\)</span>, showing that continuous adapted and bounded processes are included in <span class="arithmatex">\(\bar{\mathcal{S}}\)</span>.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(H\)</span> is progressively measurable and bounded.
+    For every <span class="arithmatex">\(n\)</span>, define</p>
+<div class="arithmatex">\[
+G_s^n(\omega) = n \int_{(s - 1/n) \vee 0}^s H_u(\omega) \, du.
+\]</div>
+<p>It follows that <span class="arithmatex">\(G^n\)</span> is a bounded, adapted and continuous process on <span class="arithmatex">\([0,t]\)</span>.
+By the fundamental theorem of calculus, it follows that for almost all <span class="arithmatex">\(\omega \in \Omega\)</span>, <span class="arithmatex">\(G_s^n(\omega) \to H_s(\omega)\)</span> for <span class="arithmatex">\(dt\)</span>-almost all <span class="arithmatex">\(s \in [0,t]\)</span>.
+Hence, by Fubini, <span class="arithmatex">\(\{\lim G^n \neq H\}\)</span> is a <span class="arithmatex">\(P \otimes dt\)</span>-null measure set.
+Indeed,</p>
+<div class="arithmatex">\[
+P\otimes dt\left[ \lim G_n \neq H \right] = \int_{\Omega}\left( \int_{0}^{t} 1_{\left\{ (\omega,u): \lim G_u^n(\omega) \neq H_u(\omega) \right\}}(s) \, ds \right) P(d\omega) = 0.
+\]</div>
+<p>And since <span class="arithmatex">\(P \otimes d\langle M\rangle \ll P \otimes dt\)</span>, it follows that <span class="arithmatex">\(\{\lim G^n \neq H\}\)</span> is a <span class="arithmatex">\(P \otimes d\langle M\rangle\)</span>-null set.
+In other terms, <span class="arithmatex">\(G^n \to H\)</span> <span class="arithmatex">\(P \otimes d\langle M\rangle\)</span>-almost surely.
+By Lebesgue's dominated convergence, it follows that <span class="arithmatex">\(\left\Vert(G^n - H)1_{[0,t]}\right\Vert_{2} \to 0\)</span>.</p>
+<p>Hence, bounded progressively measurable processes are included in the closure of continuous adapted and bounded processes, themselves included in <span class="arithmatex">\(\bar{\mathcal{S}}\)</span>.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(H\)</span> is a progressive process, define <span class="arithmatex">\(G^n_t = H_t 1_{\{|H_t| \leq n\}}\)</span>, which is progressive and bounded.
+    It follows that <span class="arithmatex">\(G^n \to H\)</span> <span class="arithmatex">\(P \otimes d\langle M\rangle\)</span>-almost surely and is dominated by <span class="arithmatex">\(H\)</span>, which is integrable.
+    Hence, by dominated convergence we have <span class="arithmatex">\(\left\Vert(H^n - H)1_{[0,t]}\right\Vert_{2} \to 0\)</span>, showing that <span class="arithmatex">\(\mathcal{L}^2(M)\)</span> is included in the closure of bounded progressively measurable processes, themselves included in <span class="arithmatex">\(\bar{\mathcal{S}}\)</span>.</p>
+</li>
+</ul>
+<p class="annotate"><strong>Step 2:</strong> Let us now address the case where <span class="arithmatex">\(d\langle M\rangle\)</span> is not absolutely continuous with respect to <span class="arithmatex">\(dt\)</span>.
+Just as previously, it is enough to show that every <span class="arithmatex">\(H\)</span> progressive, uniformly bounded by a constant <span class="arithmatex">\(C\)</span>, and nonzero only on <span class="arithmatex">\([0,m]\)</span> can be approximated by elements of <span class="arithmatex">\(\mathcal{S}\)</span> in the <span class="arithmatex">\(\left\Vert\cdot\right\Vert_{2}\)</span>-norm.
+The idea is to “tweak” <span class="arithmatex">\(d\langle M\rangle\)</span> into a measure absolutely continuous with respect to <span class="arithmatex">\(dt\)</span> by means of a time change.
+Since <span class="arithmatex">\(\langle M \rangle_s + s\)</span> is strictly increasing and continuous, there exists a strictly increasing and continuous inverse <span class="arithmatex">\(T:\Omega \times \mathbf{T} \to \mathbf{T}\)</span> such that <span class="arithmatex">\(\langle M\rangle_{T_s(\omega)}(\omega) + T_s(\omega) = s\)</span> for all <span class="arithmatex">\(s \in \mathbf{T}\)</span>.
+In particular,(1) <span class="arithmatex">\(T_s \leq s\)</span> since <span class="arithmatex">\(A_t + t \geq t\)</span> and <span class="arithmatex">\(\{T_s \leq t\} = \{A_t + t \geq s\} \in \mathcal{F}_t\)</span> for all <span class="arithmatex">\(t\)</span>.
+It follows that <span class="arithmatex">\(T_s\)</span> is a bounded stopping time for every <span class="arithmatex">\(s\)</span>.</p>
+<ol>
+<li>Recall that the general right-continuous inverse of an increasing function <span class="arithmatex">\(f\)</span> is given by <span class="arithmatex">\(f^{-1}(s)=\sup\{t: f(t)\leq s\}\)</span>. However, if <span class="arithmatex">\(f\)</span> is strictly increasing and continuous, it follows that <span class="arithmatex">\(f^{-1}(s)=\inf\{t: s\leq f(t)\}\)</span>. Furthermore, if <span class="arithmatex">\(f(t)\geq t\)</span>, then <span class="arithmatex">\(f^{-1}(s)\leq s\)</span>.</li>
+</ol>
+<p>We then define the new filtration <span class="arithmatex">\(\mathcal{G}_s := \mathcal{F}_{T_s}\)</span> for <span class="arithmatex">\(s \in \mathbf{T}\)</span> and the process <span class="arithmatex">\(G_s = H_{T_s}\)</span>, which is <span class="arithmatex">\(\mathbb{G}\)</span>-adapted and measurable since <span class="arithmatex">\(H\)</span> is <span class="arithmatex">\(\mathbb{F}\)</span>-progressive.
+However, we do not know whether <span class="arithmatex">\(G\)</span> is progressive.
+We can however modify it and assume that it is progressive and adapted.
+From the previous argumentation, there exists a simple process <span class="arithmatex">\(G^\varepsilon\)</span> of the form</p>
+<div class="arithmatex">\[
+H^n_s = H_{\frac{kt}{2^n}}, \quad \text{for } \frac{kt}{2^n} &lt; s \leq \frac{(k+1)t}{2^n}
+\]</div>
+<p>such that <span class="arithmatex">\(E[\int_0^\lambda |G - G^\varepsilon|^2 ds] \leq \varepsilon/2\)</span> for a given <span class="arithmatex">\(\lambda\)</span>.
+However, since</p>
+<div class="arithmatex">\[
+E\left[\int G_s^2 \, ds\right] \leq E\left[\int 1_{\{T_s \leq m\}} H_{T_s}^2 \, ds\right] \leq C E[\langle M\rangle_m + m] &lt; \infty,
+\]</div>
+<p>we may choose <span class="arithmatex">\(\lambda\)</span> large enough and <span class="arithmatex">\(G^\varepsilon\)</span> zero outside <span class="arithmatex">\([0,\lambda]\)</span> to get</p>
+<div class="arithmatex">\[
+E\left[\int |G^\varepsilon_s - G_s|^2 \, ds\right] &lt; \varepsilon.
+\]</div>
+<p>Reversing the time clock, it follows that</p>
+<div class="arithmatex">\[
+H^\varepsilon_t = H_0 1_{\{0\}}(t) + \sum G^\varepsilon_{s_k} 1_{]T_{s_k}, T_{s_{k+1}}]}(t)
+\]</div>
+<p>which is a simple process since <span class="arithmatex">\(T_{s_k}\)</span> is a bounded stopping time and <span class="arithmatex">\(G^\varepsilon_{s_k}\)</span> is <span class="arithmatex">\(\mathcal{F}_{T_{s_k}}\)</span>-measurable.
+Hence, by definition</p>
+<div class="arithmatex">\[
+E\left[ \int_0^m |H_t^\varepsilon - H_t|^2 d\langle M\rangle_t \right] \leq E\left[ \int_0^m |H_t^\varepsilon - H_t|^2 (d\langle M\rangle_t + dt) \right] \leq E\left[ \int |G^\varepsilon_s - G_s|^2 ds \right] \leq \varepsilon,
+\]</div>
+<p>which ends the proof.</p>
+</div>
+<p>We have now all the ingredients to define the stochastic integral.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(M \in \mathcal{M}_c^2\)</span>.
+There exists a unique continuous linear functional </p>
+<div class="arithmatex">\[
+\begin{equation*}
+  \begin{split}
+    \int \cdot \, dM  \colon \mathcal{L}^2(M) &amp; \longrightarrow \mathcal{M}_2^c\\
+                              H &amp; \longmapsto \int H dM
+  \end{split}
+\end{equation*}
+\]</div>
+<p>coinciding with the elementary stochastic integral on <span class="arithmatex">\(\mathcal{S}\)</span>.
+Furthermore, the following properties hold:</p>
+<ol>
+<li>
+<p><strong>Linearity:</strong> <span class="arithmatex">\(\int (\alpha H + \beta G) \, dM = \alpha \int H \, dM + \beta \int G \, dM\)</span> for constants <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span>.</p>
+</li>
+<li>
+<p><strong>Stopping property:</strong> <span class="arithmatex">\(\int 1_{\{\cdot \leq \tau\}} H \, dM = \int H \, dM^\tau = \int_0^{\cdot \wedge \tau} H \, dM\)</span>.</p>
+</li>
+<li>
+<p><strong>Itô-Isometry:</strong> For every <span class="arithmatex">\(t\)</span></p>
+<div class="arithmatex">\[
+E\left[ \left( \int_{0}^{t}H \, dM  \right)^2 \right] = E\left[ \int_{0}^{t} H^2 \, d\langle M \rangle \right]
+\]</div>
+</li>
+</ol>
+<p>And the quadratic variations of the square integrable continuous martingale <span class="arithmatex">\(\int H \, dM\)</span> are given by</p>
+<div class="arithmatex">\[
+      \left\langle \int H \, dM \right\rangle = \int H^2 \, d\langle M \rangle
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>We already handled here all the elements of the proof which are consequences of the previous results, up to the stopping property and the quadratic variations of <span class="arithmatex">\(\int H \, dM\)</span>.
+As for the stopping property, it follows directly by approximating <span class="arithmatex">\(H \in \mathcal{L}^2\)</span> by elements in <span class="arithmatex">\(\mathcal{S}\)</span>.</p>
+<p>As for the quadratic variations of <span class="arithmatex">\(\int H \, dM\)</span>, note that <span class="arithmatex">\(\int H_s^2 \, d\langle M\rangle\)</span> is a continuous process of bounded variation, hence normal.
+From the uniqueness of the Doob-Meyer decomposition, we just have to show that</p>
+<div class="arithmatex">\[
+\left( \int H \, dM \right)^2 - \int H^2 \, d\langle M\rangle
+\]</div>
+<p>is a martingale.
+Clearly it is integrable and adapted.
+For <span class="arithmatex">\(s \leq t\)</span> and any event <span class="arithmatex">\(A\)</span> in %\mathcal{F}_s$, by Itô-isometry and <span class="arithmatex">\(\int H \, dM\)</span> being a square integrable martingale, it holds</p>
+<div class="arithmatex">\[
+\begin{multline*}
+E\left[ 1_A \left( \left( \int_{0}^{t} H \, dM \right)^2 - \int_{0}^{t} H^2 \, d\langle M\rangle - \left( \int_{0}^{s} H \, dM \right)^2 + \int_{0}^{s} H^2 \, d\langle M\rangle \right) \right] \\
+= E\left[ 1_A \left( \int_{s}^{t} H \, dM \right)^2 \right] - E\left[ 1_A \int_{s}^{t} H^2 \, d\langle M\rangle \right] + E\left[ 1_A \left( \int_{0}^{s} H \, dM \right) \left( \int_{s}^{t} H \, dM \right) \right] \\
+= E\left[ 1_A E\left[ \left( \int_{s}^{t} H \, dM \right)^2 \big| \mathcal{F}_s \right] \right] - E\left[ 1_A \int_{s}^{t} H^2 \, d\langle M\rangle \right] + E\left[ 1_A \left( \int_{0}^{s} H \, dM \right) E\left[ \int_{s}^{t} H \, dM \big| \mathcal{F}_s \right] \right] \\
+= E\left[ 1_A \int_{s}^{t} H^2 \, d\langle M\rangle \right] - E\left[ 1_A \int_{s}^{t} H^2 \, d\langle M\rangle \right] = 0
+\end{multline*}
+\]</div>
+<p>finishing the proof.</p>
+</div>
+<p>We call this operator the <strong>stochastic integral</strong> of <span class="arithmatex">\(H\)</span> with respect to <span class="arithmatex">\(M\)</span>.
+For square integrable continuous martingales <span class="arithmatex">\(M\)</span> and <span class="arithmatex">\(N\)</span>, the covariation of <span class="arithmatex">\(M,N\)</span> is given by the polar formula</p>
+<div class="arithmatex">\[
+  \langle M, N\rangle = \frac{1}{4} \left( \langle M + N \rangle - \langle M - N \rangle \right)
+\]</div>
+<p>The following relation holds</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(M, N \in \mathcal{M}_c^2\)</span> and <span class="arithmatex">\(G \in \mathcal{L}^2(M)\)</span>, <span class="arithmatex">\(H \in \mathcal{L}^2(N)\)</span>.
+Then it holds</p>
+<div class="arithmatex">\[
+\langle \int G \, dM, \int H \, dN \rangle = \int G \, d\langle M, \int H \, dN \rangle = \int GH \, d\langle M, N \rangle
+\]</div>
+<p>In particular, for <span class="arithmatex">\(G \in \mathcal{L}^2(M)\)</span> and <span class="arithmatex">\(H \in \mathcal{L}^2\left( \int G \, dM \right)\)</span>, it holds that <span class="arithmatex">\(GH \in \mathcal{L}^2(M)\)</span> and the chain rule</p>
+<div class="arithmatex">\[
+\int H \, d \int G \, dM = \int GH \, dM
+\]</div>
+</div>
+<p>This relation is straightforward for <span class="arithmatex">\(G, H \in \mathcal{S}\)</span>.
+The passage to the limit is left as an exercise by using the following proposition known as the Kunita-Watanabe inequality, a stochastic version of Hölder.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Let <span class="arithmatex">\(M, N \in \mathcal{M}_{c}^2\)</span> and <span class="arithmatex">\(G \in \mathcal{L}^2(M)\)</span>, <span class="arithmatex">\(H \in \mathcal{L}^2(N)\)</span>.
+Then it holds</p>
+<div class="arithmatex">\[
+  \begin{align*}
+     \left\vert\int GH \, d\langle M,N\rangle \right\vert 
+        &amp; \leq \int \left\vert GH \right\vert \, d\left\vert \langle M,N \rangle \right\vert
+        \\
+        &amp; \leq \left( \int \left\vert G \right\vert^2 \, d\langle M \rangle \right)^{1/2} \left( \int \left\vert H \right\vert^2 \, d\langle N \rangle \right)^{1/2}
+  \end{align*}
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Recall that</p>
+<div class="arithmatex">\[
+\langle M, N \rangle = \frac{1}{4}(\langle M + N \rangle - \langle M - N \rangle)
+\]</div>
+<p>and therefore</p>
+<div class="arithmatex">\[
+|\langle M, N \rangle| = \frac{1}{4}(\langle M + N \rangle + \langle M - N \rangle).
+\]</div>
+<p>Furthermore, for two simple processes <span class="arithmatex">\(G, H \in \mathcal{S}\)</span>, a painful but easy inspection shows that <span class="arithmatex">\(GH \in \mathcal{S}\)</span>.
+Hence,</p>
+<div class="arithmatex">\[
+\begin{align*}
+  \left\vert \int GH \, d\langle M,N\rangle \right\vert 
+    &amp; = \left\vert \sum G_k H_k \Delta_k \langle M, N \rangle \right\vert
+    \\
+    &amp; \leq \sum \left\vert G_k H_k \right\vert \left\vert \Delta_k \langle M, N \rangle \right\vert\\
+    &amp; = \int \left\vert GH \right\vert \, d|\langle M, N \rangle|
+\end{align*}
+\]</div>
+<p>showing, by passing to the limit on the simple processes, the first inequality.
+Furthermore, by the Cauchy-Schwarz inequality, it holds</p>
+<div class="arithmatex">\[
+|\Delta_k \langle M, N \rangle| \leq (\Delta_k \langle M \rangle)^{1/2} (\Delta_k \langle N \rangle)^{1/2}.
+\]</div>
+<p>Hence, for simple integrands, using Hölder's inequality, it holds</p>
+<div class="arithmatex">\[
+\begin{align*}
+  \int \left\vert GH \right\vert \, d|\langle M,N \rangle|
+    &amp; = \sum \left\vert G_k H_k \right\vert \left\vert \Delta_k \langle M, N \rangle \right\vert
+    \\
+    &amp; \leq \sum \left\vert G_k \right\vert \left\vert H_k \right\vert (\Delta_k \langle M \rangle )^{1/2} (\Delta_k \langle N \rangle )^{1/2}
+    \\
+    &amp; \leq \left( \sum \left\vert H_k \right\vert^2 \Delta_k \langle M \rangle \right)^{1/2} \left( \sum \left\vert G_k \right\vert^2 \Delta_k \langle N \rangle \right)^{1/2}
+    \\
+    &amp; = \left( \int \left\vert G \right\vert^2 \, d\langle M \rangle \right)^{1/2} \left( \int \left\vert H \right\vert^2 \, d\langle N \rangle \right)^{1/2}
+\end{align*}
+\]</div>
+<p>The case of general integrands follows by passing to the limit with simple integrands in this inequality.</p>
 </div>
 
 
