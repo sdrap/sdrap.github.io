@@ -48,7 +48,7 @@ Lecture Notes:
 
         [source code](https://github.com/sdrap/FM_Lecture)
 
-    * [**Stochastic**]({{site.url}}/SP_Lecture/) 
+    * [**Stochastics**]({{site.url}}/SP_Lecture/) 
 
         [source code](https://github.com/sdrap/SP_Lecture)
 
