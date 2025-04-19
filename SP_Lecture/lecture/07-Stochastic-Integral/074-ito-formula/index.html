@@ -81,6 +81,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#itos-formula" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1588,6 +1593,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1636,9 +1643,260 @@
 
 
 
-  <h1>Itô's Formula</h1>
-
-
+<h1 id="itos-formula">Itô's Formula</h1>
+<p>This Section is dedicated to the celebrated Itô's Formula.
+To begin with, let us state a result about an analogue to Lebesgue's dominated convergence for stochastic integral.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition: Lebegue's Stochastic Dominated Convergence</p>
+<p>Let <span class="arithmatex">\(X\)</span> be a semi-martingale.
+For <span class="arithmatex">\((H^n)\)</span> sequence in <span class="arithmatex">\(\mathcal{L}^{loc}(X)\)</span> converging point-wise to <span class="arithmatex">\(0\)</span>, if <span class="arithmatex">\(\left\vert H^n\right\vert\leq H\)</span> for <span class="arithmatex">\(H \in \mathcal{L}^{loc}(X)\)</span>, then it follows that <span class="arithmatex">\(\int_{}^{} H^n d X \to 0\)</span> in ucp.</p>
+<p>In particular, if <span class="arithmatex">\(H\)</span> is a continuous adapted process, then, <span class="arithmatex">\(\int_{}^{} H^n d X\)</span> converges uniformly in probability on <span class="arithmatex">\([0,t]\)</span> to <span class="arithmatex">\(\int_{}^{} HdX\)</span> for <span class="arithmatex">\(H^n=H_0+\sum H_{t^n_{k-1}}1_{(t_{k-1}^n,t^n_{k}]}\)</span> and for a subdivision <span class="arithmatex">\(\Pi^n=\{0=t_0^n&lt; \cdots&lt; t_{k_n}^n\nearrow \infty\}\)</span> whose mesh is converging to <span class="arithmatex">\(0\)</span>.</p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Let <span class="arithmatex">\(X=M+A\)</span>.
+It is enough to show the convergence to zero uniformly on compact in probability for both <span class="arithmatex">\(\int_{}^{} H^n dM\)</span> and <span class="arithmatex">\(\int_{}^{} H^ndA\)</span>.
+Defining <span class="arithmatex">\(\tau^m = \inf\{t \colon |M_t|&gt;m \text{ or }\int_{0}^{t} |H| d|A| &gt;m \text{ or } \int_{0}^{t} H^2 d\langle M\rangle &gt;m\}\)</span> provides a localizing sequence of stopping times.
+Hence according to the localization's Lemma, we may show the theorem by assuming that <span class="arithmatex">\(M\)</span>, <span class="arithmatex">\(\int |H| d|A|\)</span> and <span class="arithmatex">\(\int H^2 d\langle M\rangle\)</span> are all uniformly bounded.
+By the fact that <span class="arithmatex">\(|H^n|\leq H\)</span>, the same holds uniformly for <span class="arithmatex">\(\int_{}^{} |H^n| d|A|\)</span> and <span class="arithmatex">\(\int_{}^{} (H^n)^2 d\langle M\rangle\)</span>.
+By Lebesgue's dominated convergence and Itô's isometry, it follows that</p>
+<div class="arithmatex">\[ 
+\begin{equation*}
+    \int_{0}^{t}H^n dM \xrightarrow[ n\to \infty]{L^2}0 \quad \text{and} \quad \int_{0}^{t}H^n dA \xrightarrow[ \to \infty]{L^1} 0 
+\end{equation*}
+\]</div>
+<p>From Doob's maximal inequalities, follows that <span class="arithmatex">\(\sup_{s\leq t}(\int_{0}^{s}H^n dM)^2 \to 0\)</span> in <span class="arithmatex">\(L^1\)</span> and therefore <span class="arithmatex">\(P\)</span>-almost surely.
+Since <span class="arithmatex">\(|\int_{0}^{s}H^n dA|\leq \int_{0}^{s}|H^n|d|A|\leq \int_{0}^{t}|H^n|d|A|\to 0\)</span> in <span class="arithmatex">\(L^1\)</span>, it follows that <span class="arithmatex">\(\sup_{s\leq t}\int_{0}^{s}H^n dA\to 0\)</span> <span class="arithmatex">\(P\)</span>-almost surely, hence in probability for every <span class="arithmatex">\(t\)</span>, ending the proof.</p>
+</div>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem: Product Rule</p>
+<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be semi-martingales, then it holds</p>
+<div class="arithmatex">\[ 
+\begin{equation}\label{eq:itomonome}
+    \begin{split}
+        XY&amp;=X_0Y_0+\int XdY+\int YdX+\int d\langle X,Y\rangle\\
+          &amp;=X_0Y_0+\int XdY+\int YdX+\langle X,Y\rangle
+    \end{split}
+\end{equation}
+\]</div>
+<p>In particular</p>
+<div class="arithmatex">\[ 
+\begin{equation}\label{eq:itoquadrat}
+    \begin{split}
+        X^2&amp;=X_0+2\int X dX+\int d\langle X\rangle=X_0+2\int X dX+\langle X\rangle
+    \end{split}
+\end{equation}
+\]</div>
+<p>Furthermore, for any <span class="arithmatex">\(n\geq 2\)</span> it holds</p>
+<div class="arithmatex">\[
+  X^n = X_0^n + \int n X^{n-1}dX + \frac{1}{2}\int n(n-1)X^{n-2}d\langle X \rangle
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Note that from the polar relation <span class="arithmatex">\(XY=((X+Y)^2-(X-Y)^2)/4\)</span> and the linearity of the relation \eqref{eq:itoquadrat}, it is enough to show \eqref{eq:itoquadrat}.
+Let <span class="arithmatex">\((\Pi^n)\)</span> be a sequence of subdivisions whose mesh is converging to <span class="arithmatex">\(0\)</span>.
+It follows that</p>
+<div class="arithmatex">\[ 
+\begin{equation*}
+    \begin{split}
+        X^2-X_0^2 &amp; = 2\sum X_{t_{k-1}}\left( X_{t_k\wedge t}-X_{t_{k-1}\wedge t} \right)+ \sum \left( X_{t_{k}\wedge t}-X_{t_{k-1}\wedge t} \right)^2\\
+                  &amp; = 2\int_{}^{} X^n dX+\left[ X \right]^{\Pi^n}
+    \end{split}
+\end{equation*}
+\]</div>
+<p>where <span class="arithmatex">\(X^n=X_0+\sum X_{t_{k-1}}1_{(t_{k-1},t_k]}\)</span>.
+Since <span class="arithmatex">\(X\)</span> is continuous, according to Lebesgue's stochastic dominated convergence, it follows that <span class="arithmatex">\(2\int X^n dX\to 2\int_{}^{}X dX\)</span> in ucp.
+On the other hand, according to the quadratic variation proposition, it holds that <span class="arithmatex">\([X]^{\Pi^n}\to \langle X\rangle\)</span> in ucp.
+Hence, up to a rapid subsequence, we get the result point-wise.</p>
+<p>We show per induction on <span class="arithmatex">\(n\geq 2\)</span> the product formula.
+For <span class="arithmatex">\(n=2\)</span>, this is the previous result.
+Assume that it holds for any <span class="arithmatex">\(m \leq n\)</span> and we show it for <span class="arithmatex">\(n\geq 3\)</span>.
+Define <span class="arithmatex">\(Y = X^{n-1}\)</span>.
+According to the product rule it holds </p>
+<div class="arithmatex">\[
+  X^n = XY = X_0^n + \int X dX^{n-1} + \int X^{n-1}dX + \langle X, Y\rangle
+\]</div>
+<p>However by induction assumption it holds </p>
+<div class="arithmatex">\[ 
+\begin{align*}
+    \int XdX^{n-1} &amp; = \int Xd\left( X_0+(n-1)\int X^{n-2}dX+\frac{(n-1)(n-2)}{2}\int X^{n-3}d\langle X\rangle \right)\\
+                   &amp; = (n-1)\int X^{n-1}dX+\frac{(n-1)(n-2)}{2}\int X^{n-2}d\langle X\rangle
+\end{align*}
+\]</div>
+<p>and since the covariation where one of the process is of bounded variation is <span class="arithmatex">\(0\)</span>, for the covariation we get</p>
+<div class="arithmatex">\[ 
+\begin{align*}
+    \langle X,X^{n-1}\rangle&amp;=\left\langle X,X_0+(n-1)\int X^{n-2}dX+\frac{(n-1)(n-2)}{2}\int X^{n-3}d\langle X\rangle\right\rangle\\
+    &amp; = (n-1)\langle \int dX, \int X^{n-2}dX \rangle\\
+    &amp;=(n-1)\int_{}^{}X^{n-2}d\langle X\rangle.
+\end{align*}
+\]</div>
+<p>Substituting these two relations in the product formula yields the result.</p>
+</div>
+<div class="admonition remark">
+<p class="admonition-title">Remark</p>
+<p>Note that a similar proof also shows </p>
+<div class="arithmatex">\[ 
+  \begin{align}
+    X^nY^m &amp; = X_0^nY_0^m+n\int_{}^{}X^{n-1}Y^m dX+m\int X^nY^{m-1}dY\\
+      &amp; \quad \quad \quad +\frac{n(n-1)}{2}\int_{}^{} X^{n-2}Y^m d\langle X\rangle+nm\int_{}^{} X^{n-1}Y^{m-1}d\langle X,Y\rangle+\frac{m(m-1)}{2}\int_{}^{} X^{n}Y^{m-2}d\langle Y\rangle
+  \end{align}
+\]</div>
+</div>
+<p>The product rule formula can immediately be reformulated into Ito's formula.</p>
+<div class="admonition theorem">
+<p class="admonition-title">Theorem</p>
+<p>Let <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> be semi-martingale, and <span class="arithmatex">\(f:\mathbb{R}^2\to \mathbb{R}\)</span> be a twice continuously differentiable function.</p>
+<p>Then it holds</p>
+<div class="arithmatex">\[ 
+\begin{align}
+    f(X,Y) &amp; = f(X_0,Y_0)+\int_{}^{}\partial_x f(X,Y)dX+\int_{}^{} \partial_y f(X,Y) dY \\
+      &amp; \quad \quad \quad +\frac{1}{2}\int_{}^{} \partial_{xx} f(X,Y)d\langle X\rangle +\int_{}^{} \partial_{xy}f(X,Y)\langle X,Y\rangle+\frac{1}{2}\int_{}^{} \partial_{yy}f(X,Y) d\langle Y\rangle
+\end{align}
+\]</div>
+<p>In particular, if <span class="arithmatex">\(f\)</span> only depends on <span class="arithmatex">\(x\)</span>, we get the more classical version</p>
+<div class="arithmatex">\[ 
+\begin{equation}\label{eq:ito}
+    f(X)=f(X_0)+\int_{}^{} f^\prime (X)dX+\frac{1}{2}\int_{}^{} f^{\prime\prime}(X)d\langle X\rangle
+\end{equation}
+\]</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>Obviously, Itô's formula holds in the case where <span class="arithmatex">\(f(x,y) = x^n y^m\)</span> and by linearity for any multivariate polynomials <span class="arithmatex">\(f(x,y) = \sum_{0\leq n\leq N, 0\leq m\leq M} a_{n,m} x^n y^m\)</span>.
+We will show the unidimensional case, the argumentation for the two or <span class="arithmatex">\(n\)</span>-dimensional case is just a simple adaptation of the argumentation.
+Note that by localization, we can show the statement for <span class="arithmatex">\(X\)</span> uniformly bounded by <span class="arithmatex">\(K\)</span>.
+We denote by <span class="arithmatex">\(\|\cdot \|_{K}\)</span> the supremum norm on <span class="arithmatex">\([-K, K]\)</span>.
+By density of polynomials in the set of <span class="arithmatex">\(C^2\)</span> functions on compact, for any <span class="arithmatex">\(n\)</span> we can find a polynomial <span class="arithmatex">\(P_n\)</span> such that</p>
+<div class="arithmatex">\[
+  \left\Vert P_n-f\right\Vert_K+\left\Vert P^\prime -f^\prime\right\Vert_K+\left\Vert P^{\prime\prime}-f^{\prime \prime}\right\Vert_K&lt;1/n
+\]</div>
+<p>It follows that</p>
+<div class="arithmatex">\[
+  \begin{multline*}
+    \left|f(X) - f(X_0) - \int f^\prime(X)dx - \frac{1}{2}\int f^{\prime\prime}(X) d\langle X\rangle\right| \\
+    \leq \left| f(X) - P_n(X)\right| + \left|f(X_0) - P_n(X_0)\right| + \left|\int \left( f^\prime(X) - P_n^\prime(X) \right)dX\right| + \int \left| f^{\prime\prime}(X) - P_n^{\prime\prime}(X)\right| d\langle X\rangle
+  \end{multline*}
+\]</div>
+<p>The first two differences can be made arbitrarily small.
+As for the stochastic integral difference, the uniform convergence on compact in probability follows from Lebesgue's stochastic dominated convergence.
+Hence, up to a rapid subsequence, we have almost sure convergence.
+Finally the Lebesgues-Stieltjes integral converges to <span class="arithmatex">\(0\)</span> due to Lebesgues' dominated convergence.</p>
+</div>
+<p>Ito's formula as we will see later is the door to stochastic differential equations as well as the link between stochastic analysis and partial differential equations.
+Note that we often use the differential notation</p>
+<div class="arithmatex">\[
+  \begin{align*}
+    df(X) &amp; = f^\prime(X) dX + \frac{1}{2}f^\prime\prime(X) d \langle X \rangle\\
+          &amp; = f^\prime dX + \frac{1}{2}f^{\prime\prime}d\langle X\rangle\\
+    df(X,Y) &amp; = \partial_x f(X,Y)dX + \partial_y f(X,Y) dY \\
+            &amp; \quad \quad \quad + \frac{1}{2}\partial_{xx}f(X,Y)d \langle X \rangle + \partial_{xy}f(X,Y)d \langle X,Y \rangle + \frac{1}{2}\partial_{yy}f(X,Y)d \langle Y\rangle\\
+            &amp; = \partial_x f dX + \partial_y fdY + \frac{1}{2}\partial_{xx} f d\langle X\rangle +\partial_{xy}f d\langle X,Y\rangle + \frac{1}{2}\partial_{yy}f d\langle Y \rangle
+  \end{align*}
+\]</div>
+<p>Note also that by taking <span class="arithmatex">\(Y_t = t\)</span> which is a semi-martingale without local martingale term where <span class="arithmatex">\(dY = dt\)</span> and <span class="arithmatex">\(d\langle Y\rangle = d\langle X, Y\rangle =0\)</span> we obtain a very common version of Itô's formula for <span class="arithmatex">\(f:[0, \infty)\times \mathbb{R} \to \mathbb{R}\)</span> which is <span class="arithmatex">\(C^{1,2}\)</span> as follows</p>
+<div class="arithmatex">\[
+  df(t, X) = \partial_t f dt + \partial_x f dX + \frac{1}{2}\partial_{xx} f d\langle X\rangle
+\]</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Let us have a look at a classical situation that provides a hint as to the relation between PDEs and Stochastics.
+Let <span class="arithmatex">\(\mu, \sigma \colon \mathbb{R}\to \mathbb{R}\)</span> be two smooth functions and suppose that there exists a semi martingale <span class="arithmatex">\(X\)</span> such that</p>
+<div class="arithmatex">\[
+X = X_0 + \int \mu(X) dt + \int \sigma(X) dW
+\]</div>
+<p>where <span class="arithmatex">\(W\)</span> is the Brownian motion.
+In other terms, <span class="arithmatex">\(X\)</span> solves the stochastic differential equation </p>
+<div class="arithmatex">\[
+ dX = \mu(X) dt +\sigma(X) dW
+\]</div>
+<p>Note that</p>
+<div class="arithmatex">\[
+    d\langle X\rangle = \sigma^2(X)d\langle W\rangle = \sigma^2(X)dt
+\]</div>
+<p>Given a <span class="arithmatex">\(C^{1,2}\)</span> function <span class="arithmatex">\(u \colon [0, \infty) \times \mathbb{R}\)</span>, using Itô's formula we get</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        du(t, X_t) 
+            &amp; = \partial_t u(t, X_t)dt + \partial_x u(t, X_t)dX_t + \frac{1}{2}\partial_{xx}u(t, X_t)d\langle X\rangle_t\\
+            &amp; = \partial_t u(t, X_t)dt +\partial_x u(t, X_t)\left(\mu(X_t)dt + \sigma(X_t)dW_t\right) + \frac{\sigma^2(X_t)}{2}\partial_{xx}u(t, X_t) dt\\
+            &amp; = \left(\partial_t +\underbrace{\mu(X_t)\partial_x +\frac{\sigma^2(X_t)}{2}\partial_{xx}}_{=: \mathcal{L}^X(X_t)}\right)u(t, X_t)dt + \sigma(X_t)\partial_x u(t, X_t)dW
+    \end{align*}
+\]</div>
+<p>Defining the differential operator <span class="arithmatex">\(\mathcal{L}^X(x)\)</span> &mdash; also called <strong>infinitesimal generator</strong> of <span class="arithmatex">\(X\)</span> &mdash; on <span class="arithmatex">\(C^{1,2}\)</span> functions <span class="arithmatex">\(f\)</span>:</p>
+<div class="arithmatex">\[
+    \mathcal{L}^X(x) f(t, x) := \mu(x)\partial_x f(t,x) + \frac{\sigma^2(x)}{2}\partial_{xx}f(t,x)
+\]</div>
+<p>We can rewrite the result of the Itô's formula as follows</p>
+<div class="arithmatex">\[
+    du = \underbrace{\left(\partial_t + \mathcal{L}^X\right) u dt}_{\text{Bounded variations}} + \underbrace{\sigma \partial_x u dW}_{\text{Local martingale}}
+\]</div>
+<p>Suppose that <span class="arithmatex">\(u\)</span> is in particular a solution of the following PDE</p>
+<div class="arithmatex">\[
+    \begin{equation*}
+        \begin{cases}
+            \begin{aligned}
+            \partial_t u(t, x) + \mathcal{L}^X(x) u(t, x) &amp; = 0\\
+            \\
+            u(0, x) &amp; = X_0
+            \end{aligned}
+        \end{cases}
+    \end{equation*}
+\]</div>
+<p>then it follows that</p>
+<div class="arithmatex">\[
+    du = \left(\partial_t + \mathcal{L}^X\right) u dt +\sigma \partial_x u dW = \sigma \partial_x dW
+\]</div>
+<p>and therefore <span class="arithmatex">\(u(t, X_t)\)</span> is a local martingale.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Geometric Brownian Motion</p>
+<p>In finance, the bank account <span class="arithmatex">\(B\)</span> pays interest <span class="arithmatex">\(r \Delta\)</span> over the period <span class="arithmatex">\(\Delta\)</span>.
+It follows that the value of the bank account at time <span class="arithmatex">\(t+\Delta\)</span> is given by <span class="arithmatex">\(B_{t+\Delta} = B_t (1+ r\Delta)\)</span>.
+In differential form it follows that</p>
+<div class="arithmatex">\[
+    dB_t \approx B_{t+\Delta} - B_t = B_t r \Delta \approx B_t r dt
+\]</div>
+<p>With one RMB at time <span class="arithmatex">\(0\)</span>, that is, <span class="arithmatex">\(B_0 = 1\)</span>, this stochastic differential equation is a simple (eventually stochastic) ODE <span class="arithmatex">\(dB = B r dt\)</span> with solution</p>
+<div class="arithmatex">\[
+    B = B_0 \exp\left(\int r dt\right) = e^{\int r dt}
+\]</div>
+<p>On the other hand, looking at a risky asset <span class="arithmatex">\(S\)</span>, such as a stock price,, the return between <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(t+\Delta\)</span> might be subject to uncertainty.
+In this case, the stock price <span class="arithmatex">\(S_{t+\Delta} = S_t(1+R_{t+\Delta})\)</span> where</p>
+<div class="arithmatex">\[
+    R_{t+\Delta} = \mu \Delta + \sigma \sqrt{\Delta} \xi_t
+\]</div>
+<p>where <span class="arithmatex">\(\xi_t \sim \mathcal{N}(0, 1)\)</span> is some random noise, <span class="arithmatex">\(\mu\)</span> is the certain return on the asset over the short period while <span class="arithmatex">\(\sigma\)</span> is the volatility, or amount of uncertainty.
+For the differential form we have a problem as how <span class="arithmatex">\(\sigma \sqrt{\Delta}\xi_t\)</span> scales as <span class="arithmatex">\(\Delta\)</span> is infinitesimaly small.
+However, from the properties of the brownian motion, it hodls that <span class="arithmatex">\(\sqrt{\Delta}\xi_t \sim \mathcal{N}(0, \Delta) \sim W_{t+\Delta} - W_t\)</span>.
+We can therefore reformulate the differential evolution of the stock price as</p>
+<div class="arithmatex">\[
+    dS = S\left(\mu dt + \sigma dW\right)        
+\]</div>
+<p>In this case we are no longer facing an ODE but a stochastic differential equation as for the <span class="arithmatex">\(dW\)</span> term.
+It is not clear as if there exists a solution <span class="arithmatex">\(S\)</span> that satisfies this stochastic differential equation.
+However in this case, we can guess the solution as follows.
+Let <span class="arithmatex">\(X\)</span> be the semi martingale defined as</p>
+<div class="arithmatex">\[
+    X = \int \left( \mu -\frac{\sigma^2}{2}\right)dt + \int \sigma dW
+\]</div>
+<p>Applying Itô's formula to <span class="arithmatex">\(f(X) = \exp(X)\)</span>, knowing that <span class="arithmatex">\(f = f^\prime= f^{\prime\prime}\)</span> we get</p>
+<div class="arithmatex">\[
+    \begin{align*}
+        df(X) 
+            &amp; = f^\prime(X)dX + \frac{1}{2}f^{\prime \prime}(X)d\langle X\rangle\\
+            &amp; = f(X)\left(\underbrace{dX}_{=(\mu-\sigma^2/2) dt + \sigma dW} + \frac{1}{2}\underbrace{d\langle X\rangle}_{= \sigma^2 dt}\right)\\
+            &amp; = f(X)\left(\left(\mu dt - \frac{1}{2}\sigma^2 + \frac{1}{2}\sigma^2\right)dt + \sigma dW\right)\\
+            &amp; = f(X)(\mu dt + \sigma dW)
+    \end{align*}
+\]</div>
+<p>We deduce that </p>
+<div class="arithmatex">\[
+    S_t = S_0 \exp \left( \int \left(\mu - \frac{\sigma^2}{2}\right)dt + \int \sigma dW\right)
+\]</div>
+<p>satisifies the stochastic differential equation of the stock price evolution.</p>
+</div>
 
 
 
