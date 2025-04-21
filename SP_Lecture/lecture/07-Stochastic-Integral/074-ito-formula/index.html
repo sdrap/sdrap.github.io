@@ -12,6 +12,8 @@
         <link rel="prev" href="../073-quadratic-variations/">
       
       
+        <link rel="next" href="../../08-Stochastic-Exponential/080-introduction/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
@@ -324,6 +326,8 @@
   
     
     
+      
+        
       
         
       
@@ -1620,6 +1624,127 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stochastic Exponential and Girsanov
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            Stochastic Exponential and Girsanov
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-Stochastic-Exponential/080-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-Stochastic-Exponential/081-stochastic-exponential/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stochastic Exponential
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08-Stochastic-Exponential/082-girsanov/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Girsanov Transformation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1851,51 +1976,84 @@ In other terms, <span class="arithmatex">\(X\)</span> solves the stochastic diff
 <p>and therefore <span class="arithmatex">\(u(t, X_t)\)</span> is a local martingale.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Geometric Brownian Motion</p>
-<p>In finance, the bank account <span class="arithmatex">\(B\)</span> pays interest <span class="arithmatex">\(r \Delta\)</span> over the period <span class="arithmatex">\(\Delta\)</span>.
-It follows that the value of the bank account at time <span class="arithmatex">\(t+\Delta\)</span> is given by <span class="arithmatex">\(B_{t+\Delta} = B_t (1+ r\Delta)\)</span>.
-In differential form it follows that</p>
+<p class="admonition-title">Example: Financial Market</p>
+<p>The financial market is modeled by a bank account <span class="arithmatex">\(B\)</span> and stock prices <span class="arithmatex">\(S\)</span>.
+To simplify, we consider that we only have one stock price.
+Hereby <span class="arithmatex">\(B_t\)</span> represents the value at time <span class="arithmatex">\(t\)</span> of one RMB at time <span class="arithmatex">\(t\)</span> after interest rate and <span class="arithmatex">\(S_t\)</span> represents the value of the stock price at time <span class="arithmatex">\(t\)</span>.
+The most simple model of dynamic evolution of the bank account and the stock price are given by the stochastic differential equations</p>
 <div class="arithmatex">\[
-    dB_t \approx B_{t+\Delta} - B_t = B_t r \Delta \approx B_t r dt
+\begin{equation}
+    dB=r B dt\text{, with }B_0=1 \quad \text{and}\quad dS=S(\mu dt+\sigma dW)\text{, with }S_0&gt;0
+\end{equation}
 \]</div>
-<p>With one RMB at time <span class="arithmatex">\(0\)</span>, that is, <span class="arithmatex">\(B_0 = 1\)</span>, this stochastic differential equation is a simple (eventually stochastic) ODE <span class="arithmatex">\(dB = B r dt\)</span> with solution</p>
+<p>where <span class="arithmatex">\(r\)</span> represents the evolution of the interest rate in the bank and <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\sigma&gt;0\)</span> represent the drift and volatility of the stock price respectively.
+The basic intuition behind these stochastic evolutions is that over a small interval <span class="arithmatex">\([t,t+\Delta]\)</span> for a value <span class="arithmatex">\(B_t\)</span> on the bank account, the bank will pay out an interest <span class="arithmatex">\(r_t\)</span> so that after <span class="arithmatex">\(\Delta\)</span> amount of time you will own <span class="arithmatex">\(B_t(1+r_t \Delta)\)</span>.
+In other terms, the value of the bank account evolves like</p>
 <div class="arithmatex">\[
-    B = B_0 \exp\left(\int r dt\right) = e^{\int r dt}
+B_{t+\Delta}=B_t(1+r_t \Delta) \quad \text{that is}\quad B_{t+\Delta}-B_t=r_t B_t \Delta 
 \]</div>
-<p>On the other hand, looking at a risky asset <span class="arithmatex">\(S\)</span>, such as a stock price,, the return between <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(t+\Delta\)</span> might be subject to uncertainty.
-In this case, the stock price <span class="arithmatex">\(S_{t+\Delta} = S_t(1+R_{t+\Delta})\)</span> where</p>
+<p>As for the stock price, if we denote <span class="arithmatex">\(R_{t+\Delta}=(S_{t+\Delta}-S_t)/S_t\)</span> the returns of the stock over a small interval, it holds <span class="arithmatex">\(S_{t+\Delta}=S_{t}(1+R_{t+\Delta})\)</span> or <span class="arithmatex">\((S_{t+\Delta}-S_t)=S_tR_{t+\Delta}\)</span>.
+So the idea is to model the returns by assuming that they are iid and such that </p>
 <div class="arithmatex">\[
-    R_{t+\Delta} = \mu \Delta + \sigma \sqrt{\Delta} \xi_t
+R_{t+\Delta}=\mu_t \Delta +\sigma_t\sqrt{\Delta} Z, \quad \text{where}\quad Z\sim \mathcal{N}(0,1)
 \]</div>
-<p>where <span class="arithmatex">\(\xi_t \sim \mathcal{N}(0, 1)\)</span> is some random noise, <span class="arithmatex">\(\mu\)</span> is the certain return on the asset over the short period while <span class="arithmatex">\(\sigma\)</span> is the volatility, or amount of uncertainty.
-For the differential form we have a problem as how <span class="arithmatex">\(\sigma \sqrt{\Delta}\xi_t\)</span> scales as <span class="arithmatex">\(\Delta\)</span> is infinitesimaly small.
-However, from the properties of the brownian motion, it hodls that <span class="arithmatex">\(\sqrt{\Delta}\xi_t \sim \mathcal{N}(0, \Delta) \sim W_{t+\Delta} - W_t\)</span>.
-We can therefore reformulate the differential evolution of the stock price as</p>
+<p>In other terms the stock price, as the bank account, has a predictable evolution or drift given by <span class="arithmatex">\(\mu_t\)</span> over the interval.
+However, it is also subject to random movement around this mean given by a normal distribution scaled by the volatility of the market <span class="arithmatex">\(\sigma_t\)</span> as well as the time interval considered.
+Recasting, it follows that</p>
 <div class="arithmatex">\[
-    dS = S\left(\mu dt + \sigma dW\right)        
+S_{t+\Delta}-S_t=S_t(\mu_t \Delta+\sigma_t \Delta Z)=S_t\left( \mu_t\Delta+\sigma_t\left(W_{t+\Delta}-W_t \right)\right)
 \]</div>
-<p>In this case we are no longer facing an ODE but a stochastic differential equation as for the <span class="arithmatex">\(dW\)</span> term.
-It is not clear as if there exists a solution <span class="arithmatex">\(S\)</span> that satisfies this stochastic differential equation.
-However in this case, we can guess the solution as follows.
-Let <span class="arithmatex">\(X\)</span> be the semi martingale defined as</p>
+<p>The main question though, is whether the stochastic differential equations describing the financial market do have a solution.</p>
+<div class="admonition proposition">
+<p class="admonition-title">Proposition</p>
+<p>Suppose that <span class="arithmatex">\(r\)</span>, <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\sigma\)</span> are locally bounded processes with <span class="arithmatex">\(\sigma&gt;0\)</span>.
+Then, the stochastic differential equations</p>
 <div class="arithmatex">\[
-    X = \int \left( \mu -\frac{\sigma^2}{2}\right)dt + \int \sigma dW
+  \begin{align*}
+    dB &amp; = B rdt\\
+    dS &amp; = S(\mu dt + \sigma dW)
+  \end{align*}
 \]</div>
-<p>Applying Itô's formula to <span class="arithmatex">\(f(X) = \exp(X)\)</span>, knowing that <span class="arithmatex">\(f = f^\prime= f^{\prime\prime}\)</span> we get</p>
+<p>have solutions explicitly given by</p>
 <div class="arithmatex">\[
-    \begin{align*}
-        df(X) 
-            &amp; = f^\prime(X)dX + \frac{1}{2}f^{\prime \prime}(X)d\langle X\rangle\\
-            &amp; = f(X)\left(\underbrace{dX}_{=(\mu-\sigma^2/2) dt + \sigma dW} + \frac{1}{2}\underbrace{d\langle X\rangle}_{= \sigma^2 dt}\right)\\
-            &amp; = f(X)\left(\left(\mu dt - \frac{1}{2}\sigma^2 + \frac{1}{2}\sigma^2\right)dt + \sigma dW\right)\\
-            &amp; = f(X)(\mu dt + \sigma dW)
-    \end{align*}
+\begin{align}
+    B &amp; = \exp\left( \int r dt  \right) \\
+    S &amp; = S_0\exp\left( \int \left( \mu-\frac{\sigma^2}{2} \right)dt+\int \sigma dW   \right)
+\end{align}
 \]</div>
-<p>We deduce that </p>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">Proof</p>
+<p>We just have to check that the process </p>
 <div class="arithmatex">\[
-    S_t = S_0 \exp \left( \int \left(\mu - \frac{\sigma^2}{2}\right)dt + \int \sigma dW\right)
+\begin{align}
+    B &amp; = \exp\left( \int r dt  \right) \\
+    S &amp; = S_0\exp\left( \int \left( \mu-\frac{\sigma^2}{2} \right)dt+\int \sigma dW   \right)
+\end{align}
 \]</div>
-<p>satisifies the stochastic differential equation of the stock price evolution.</p>
+<p>satisfy the corresponding stochastic differential equations.</p>
+<p>Define <span class="arithmatex">\(Y=\int r dt\)</span> and <span class="arithmatex">\(X=\int (\mu-\sigma^2/2)dt+\int \sigma dW\)</span> which are well defined semi-martingales by the assumptions on <span class="arithmatex">\(r\)</span>, <span class="arithmatex">\(\mu\)</span> and <span class="arithmatex">\(\sigma\)</span>.
+For <span class="arithmatex">\(f(x)=\exp(x)\)</span>, since <span class="arithmatex">\(f=f^\prime=f^{\prime\prime}\)</span>, it follows that <span class="arithmatex">\(B=f(X)=f^\prime(X)=f^{\prime\prime}(X)\)</span> and <span class="arithmatex">\(S=S_0f(Y)=S_0f^{\prime}(Y)=f^{\prime\prime}(Y)\)</span>.
+Furthermore <span class="arithmatex">\(dX=rdt\)</span> and <span class="arithmatex">\(d\langle X\rangle =0\)</span>, as well as <span class="arithmatex">\(dY=(\mu-\sigma^2/2) dt+\sigma dW\)</span> and <span class="arithmatex">\(d\langle Y\rangle=d\langle \sigma W\rangle=\sigma^2 d\langle W\rangle=\sigma^2 dt\)</span>.
+Applying Itô's formula yields</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    dB = df(X) &amp; = f^\prime(X)dX+\frac{1}{2} f^{\prime\prime}(X)d\langle X\rangle\\
+               &amp; = f(X)rdt\\
+               &amp; = B r dt\\
+    dS = S_0df(Y) &amp; = S_0f^{\prime}(Y)dY+\frac{1}{2}S_0 f^{\prime\prime}(Y)d\langle Y\rangle\\
+                 &amp; = S_0f(Y)\left(\left( \mu-\frac{\sigma^2}{2} \right)dt+\sigma dW\right)+\frac{1}{2}S_0f(Y)\sigma^2 dt\\
+                 &amp; = S_0f(Y)\left( \mu dt+\sigma dW \right)\\
+                 &amp; = S\left( \mu dt+\sigma dW \right)
+\end{aligned}
+\]</div>
+<p>which ends the proof.</p>
+</div>
+<p>In particular, if <span class="arithmatex">\(\mu=0\)</span>, it follows that <span class="arithmatex">\(dS = \sigma S dW\)</span> showing that</p>
+<div class="arithmatex">\[
+  \exp \left( \int \sigma dW - \frac{1}{2}\int \sigma^2 dt\right)
+\]</div>
+<p>is a local martingale.</p>
 </div>
 
 
