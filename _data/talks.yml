@@ -1,41 +1,65 @@
+- occasion: "Advances in Mathematics of Randomness for Handeling Risks in Finance and Insurrance"
+  place: "CIRM, Luminy, France"
+  title: "Carbon: Tax vs Cap-and-Trade"
+  date: September 2025
+  score: 6
+
+- occasion: "BIRS Workshop Hangzhou"
+  place: "Institute for Advanced Study in Mathematics, Hangzhou, China"
+  title: "Carbon: Tax vs Cap-and-Trade"
+  date: August 2025
+  score: 6
+
+- occasion: "Quantitative Finance Conference"
+  place: "National University of Singapore, Singapore"
+  title: "Carbon: Tax vs Cap-and-Trade"
+  date: July 2025
+  score: 6
+
+- occasion: "The 10th International Syposium on Backward Stochastic Differential Equations"
+  place: "Shandong University, Qingdao, China"
+  title: "Carbon: Tax vs Cap-and-Trade"
+  date: June 2025
+  score: 6
+
 - occasion: "Seminar"
-  place: Peking University, Peking, China"
+  place: "Peking University, Peking, China"
   title: "Presentation of the Financial Data and Quant Analysis Platform Fastbox"
   date: March 2025
   score: 6
 
 - occasion: "Seminar"
-  place: Shandong University, Shandong, China"
+  place: "Shandong University, Shandong, China"
   title: "Presentation of the Financial Data and Quant Analysis Platform Fastbox"
   date: Jan 2025
   score: 6
 
 - occasion: "Bachelier Seminar"
-  place: Paris, France"
+  place: "Institute Louis Bachelier, Paris, France"
   title: "On/Off Shore Currency Rate Discrepancy"
   date: Oct 2024
   score: 6
 
 - occasion: "Finance Seminar LSPM"
-  place: Paris, France"
+  place: "University Paris Cite, France"
   title: "Robust Uncertainty Analysis"
   date: Oct 2024
   score: 6
 
 - occasion: "QRT Seminar"
-  place: Singapore"
+  place: "Singapore"
   title: "On Detecting Spoofing Strategies in High Frequency Trading"
   date: Aug 2024
   score: 6
 
 - occasion: "Quantitative Finance Conference"
-  place: NUS, Singapore"
+  place: "National University of Singapore, Singapore"
   title: "On/Off Shore Currency Rate Discrepancy"
   date: Aug 2024
   score: 6
 
 - occasion: "International Workshop on Probability Theory and Stochastic Analysis"
-  place: Weihai, China"
+  place: "Weihai, China"
   title: "On/Off Shore Currency Rate Discrepancy"
   date: Jul 2024
   score: 6
