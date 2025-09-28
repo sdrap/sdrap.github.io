@@ -38,12 +38,14 @@
     - family: Tadese
       given: Mekonnen
 
-  container-title: "Forthcoming in Mathematics and Financial Economics"
+  container-title: "Mathematics and Financial Economics"
   issued:
     date-parts:
-      - - 2024
+      - - 2025
   type: article-journal
   rank: "31"
+  volume: "19"
+  page: "183-223"
 
   URL_Open: "https://arxiv.org/pdf/2310.02608.pdf"
   abstract: >
