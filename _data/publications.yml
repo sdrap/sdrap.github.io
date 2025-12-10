@@ -1,3 +1,30 @@
+- id: mekonnen2025
+  title: Comparison of Tax and Cap-and-Trade Carbon Pricing Schemes
+  author:
+    - family: Crépey
+      given: Stéphane
+    - family: Drapeau
+      given: Samuel
+    - family: Tadese
+      given: Mekonnen
+
+  container-title: "Preprint"
+  issued:
+    date-parts:
+      - - 2025
+  type: article-journal
+  rank: "33"
+
+  URL_Open: "https://arxiv.org/abs/2510.15941"
+  abstract: >
+    Carbon pricing has become a central pillar of modern climate policy, with carbon taxes and emissions trading systems (ETS) serving as the two dominant approaches. Although economic theory suggests these instruments are equivalent under idealized assumptions, their performance diverges in practice due to real-world market imperfections. A particularly less explored dimension of this divergence concerns the role of financial intermediaries in emissions trading markets. This paper develops a unified framework to compare the economic and environmental performance of tax- and market-based schemes, explicitly incorporating the involvement of financial intermediaries. By calibrating both instruments to deliver identical aggregate emission reduction targets, we assess their economic performance across alternative market structures. Our results suggest that although the two schemes are equivalent under perfect competition, the presence of intermediaries in ETS reduces both regulatory wealth and the aggregate wealth of economic agents relative to carbon taxation. These effects stem from intermediaries' influence on price formation and their appropriation of part of the revenue stream. The findings underscore the importance of accounting for intermediaries' behavior in the design of carbon markets and highlight the need for further empirical research on the evolving institutional structure of emissions trading systems.
+
+  keywords:
+    - Carbon pricing
+    - Carbon tax
+    - Cap-and-trade system
+    - Financial intermediaries
+
 - id: taoxuan2024
   title: Evolution of Chinese Futures Markets from a High Frequency Perspective
   author:
