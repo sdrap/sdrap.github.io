@@ -1,3 +1,37 @@
+- id: chenling2026
+  title: Controlling Exploration-Exploitation in GFlowNets via Markov Chain Perspectives
+  author:
+    - family: Chen
+      given: Lin
+    - family: Drapeau
+      given: Samuel
+    - family: Shao
+      given:  Fanghao
+    - family: Zhu
+      given: Xuekai
+    - family: Xue
+      given: Bo
+    - family: Song
+      given: Yunchong
+    - family: Lauriere
+      given: Mathieu
+    - family: Lin
+      given: Zhouhan
+      
+  container-title: "Preprint"
+  issued:
+    date-parts:
+      - - 2026
+  type: article-journal
+  rank: "34"
+
+  URL_Open: "https://arxiv.org/abs/2602.01749"
+  abstract: >
+     Generative Flow Network (GFlowNet) objectives implicitly fix an equal mixing of forward and backward policies, potentially constraining the exploration-exploitation trade-off during training. By further exploring the link between GFlowNets and Markov chains, we establish an equivalence between GFlowNet objectives and Markov chain reversibility, thereby revealing the origin of such constraints, and provide a framework for adapting Markov chain properties to GFlowNets. Building on these theoretical findings, we propose α-GFNs, which generalize the mixing via a tunable parameter α. This generalization enables direct control over exploration-exploitation dynamics to enhance mode discovery capabilities, while ensuring convergence to unique flows. Across various benchmarks, including Set, Bit Sequence, and Molecule Generation, α-GFN objectives consistently outperform previous GFlowNet objectives, achieving up to a 10× increase in the number of discovered modes.
+
+  keywords:
+    - GFlowNet
+
 - id: mekonnen2025
   title: Comparison of Tax and Cap-and-Trade Carbon Pricing Schemes
   author:
