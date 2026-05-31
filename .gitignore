@@ -4,3 +4,17 @@ _site
 *.swp
 
 .jekyll-cache/
+
+# Generated mkdocs/mkdocs-material build artifacts (per lecture-note subdirectory)
+**/sitemap.xml.gz
+**/search/search_index.json
+**/assets/javascripts/*.map
+**/assets/stylesheets/*.map
+
+# Downloaded npm packages — do not commit
+node_modules/
+
+# Large binary/image workspace files
+*.xcf
+*.xls.bak
+*.ipynb_checkpoints/
