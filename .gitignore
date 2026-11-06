@@ -18,3 +18,7 @@ node_modules/
 *.xcf
 *.xls.bak
 *.ipynb_checkpoints/
+
+# Local bundler gems (jekyll dry runs)
+vendor/
+.bundle/

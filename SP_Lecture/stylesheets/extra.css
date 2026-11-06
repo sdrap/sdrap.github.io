@@ -170,3 +170,8 @@ table {
   -webkit-mask-image: var(--md-admonition-icon--exercise);
           mask-image: var(--md-admonition-icon--exercise);
 }
+
+/* KaTeX: left-aligned display equations (as with MathJax displayAlign: left) */
+.katex-display {
+  text-align: left;
+}

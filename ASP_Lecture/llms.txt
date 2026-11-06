@@ -1,0 +1,43 @@
+# Scientific Programing - An Introduction
+
+## Overview
+
+- [Home](<https://www.samuel-drapeau.info/ASP_Lecture/index.md>)
+
+## Lecture
+
+- [Introduction](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/00-Introduction/000-index/index.md>)
+- [Basic Operations, Data Types](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/01-Basics-Programing/011-first-steps/index.md>)
+- [Control Flows](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/01-Basics-Programing/012-control-flows/index.md>)
+- [Functions and Classes](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/01-Basics-Programing/013-functions-classes/index.md>)
+- [Arrays - Numpy](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/02-Basics-Scientifics/021-numpy/index.md>)
+- [Plotting](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/02-Basics-Scientifics/022-plotly/index.md>)
+- [Basic Computations](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/02-Basics-Scientifics/023-scipy/index.md>)
+- [Random Numbers and Monte Carlo](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/02-Basics-Scientifics/024-rng-monte-carlo/index.md>)
+- [Introduction](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/03-Data/031-pandas-first-steps/index.md>)
+- [Computations](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/03-Data/032-pandas-computations/index.md>)
+- [Data Manipulations](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/03-Data/033-pandas-manipulations/index.md>)
+- [Date and Time](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/03-Data/034-datetime/index.md>)
+- [Databases](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/03-Data/035-sql/index.md>)
+- [Applications](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/03-Data/036-applications/index.md>)
+- [Linear Regression](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/04-ML-101/041-LR/index.md>)
+- [Principal Component Analysis](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/04-ML-101/042-PCA/index.md>)
+- [Clustering](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/04-ML-101/043-Cluster/index.md>)
+- [Differentiation](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/05-Derivatives/051-differentiation/index.md>)
+- [PDE](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/05-Derivatives/052-PDE/index.md>)
+- [Gradient Descent](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/05-Derivatives/053-gradient/index.md>)
+- [Stochastic Gradient Descent](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/05-Derivatives/054-stoch-gradient/index.md>)
+- [Style](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/06-Repairing-Improving/061-style/index.md>)
+- [062 debug](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/06-Repairing-Improving/062-debug/index.md>)
+- [063 profile](<https://www.samuel-drapeau.info/ASP_Lecture/lecture/06-Repairing-Improving/063-profile/index.md>)
+
+## Material
+
+- [Simple exercises](<https://www.samuel-drapeau.info/ASP_Lecture/material/ex01/index.md>)
+- [Final Report](<https://www.samuel-drapeau.info/ASP_Lecture/material/final/index.md>)
+- [Homework 01](<https://www.samuel-drapeau.info/ASP_Lecture/material/hw01/index.md>)
+- [Homework 02](<https://www.samuel-drapeau.info/ASP_Lecture/material/hw02/index.md>)
+- [Homework 03](<https://www.samuel-drapeau.info/ASP_Lecture/material/hw03/index.md>)
+- [Homework 04](<https://www.samuel-drapeau.info/ASP_Lecture/material/hw04/index.md>)
+- [Overview](<https://www.samuel-drapeau.info/ASP_Lecture/material/index.md>)
+- [Setup](<https://www.samuel-drapeau.info/ASP_Lecture/material/material/index.md>)
