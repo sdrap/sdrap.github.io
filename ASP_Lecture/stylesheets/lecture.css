@@ -1,0 +1,189 @@
+/* Source: Exchange/Lecture@1f886f2 web/docs/stylesheets/lecture.css, kept verbatim so it can be re-synced; the lecture's environments and math rules. */
+/* The lecture's environments, in the site's Ayu palette, and what mathematics needs on top of
+   ayu.css. The kinds and their icons follow the owner's other lecture sites. */
+
+:root {
+  --md-admonition-icon--definition: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>');
+  --md-admonition-icon--theorem: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.47 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2m0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8m-4-6L7 8l3 2 2-3 2 3 3-2-1 6zm.56 2c-.34 0-.56-.22-.56-.56V15h8v.44c0 .34-.22.56-.56.56z"/></svg>');
+  --md-admonition-icon--proposition: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg>');
+  --md-admonition-icon--corollary: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.6 13.4a1 1 0 0 1-1.4 1.4 4.8 4.8 0 0 1 0-7l3.5-3.6a5.1 5.1 0 0 1 7.1 0 5.1 5.1 0 0 1 0 7.1l-1.5 1.5a6.4 6.4 0 0 0-.4-2.4l.5-.5a3.2 3.2 0 0 0 0-4.3 3.2 3.2 0 0 0-4.3 0l-3.5 3.6a2.9 2.9 0 0 0 0 4.2M23 18v2h-3v3h-2v-3h-3v-2h3v-3h2v3m-3.8-4.3a4.8 4.8 0 0 0-1.4-4.5 1 1 0 0 0-1.4 1.4 2.9 2.9 0 0 1 0 4.2l-3.5 3.6a3.2 3.2 0 0 1-4.3 0 3.2 3.2 0 0 1 0-4.3l.5-.4a7.3 7.3 0 0 1-.4-2.5l-1.5 1.5a5.1 5.1 0 0 0 0 7.1 5.1 5.1 0 0 0 7.1 0l1.8-1.8a6 6 0 0 1 3.1-4.3"/></svg>');
+  --md-admonition-icon--lemma: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-2.4-2.8.3-3.7-3.6-.8-1.9-3.2L12 3 8.6 1.5 6.7 4.7l-3.6.8.3 3.7L1 12l2.4 2.8-.3 3.7 3.6.8 1.9 3.2L12 21l3.4 1.5 1.9-3.2 3.6-.8-.3-3.7zm-4.3 4.9-2.7.6-1.4 2.4-2.6-1.1-2.6 1.1L8 17.5l-2.7-.6.2-2.8L3.7 12l1.8-2.1-.2-2.8L8 6.5l1.4-2.4L12 5.2l2.6-1.1L16 6.5l2.7.6-.2 2.8 1.8 2.1-1.8 2.1zm-2.1-9.3L18 9l-8 8-4-4 1.4-1.4 2.6 2.6z"/></svg>');
+  --md-admonition-icon--proof: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
+  --md-admonition-icon--remark: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 23a1 1 0 0 1-1-1v-3H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4.1l-3.7 3.71c-.2.18-.44.29-.7.29zm1-6v3.08L16.08 17H21V7H7v10zM3 15H1V3a2 2 0 0 1 2-2h16v2H3zm6-6h10v2H9zm0 4h8v2H9z"/></svg>');
+  --md-admonition-icon--exercise: url('data:image/svg+xml;utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/></svg>');
+  --md-admonition-icon--trial: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 19a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1c0-.21-.07-.41-.18-.57L13 8.35V4h-2v4.35L5.18 18.43c-.11.16-.18.36-.18.57m1 3a3 3 0 0 1-3-3c0-.6.18-1.16.5-1.63L9 7.81V6a1 1 0 0 1-1-1V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1v1.81l5.5 9.56c.32.47.5 1.03.5 1.63a3 3 0 0 1-3 3z"/></svg>');
+  --md-admonition-icon--recorded: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 22V8h4v14zm7 0V2h4v20zm7 0v-8h4v8z"/></svg>');
+}
+
+.md-typeset .admonition.definition,
+.md-typeset details.definition {
+  border-color: var(--ayu-green);
+}
+.md-typeset .definition > .admonition-title,
+.md-typeset .definition > summary {
+  background-color: color-mix(in srgb, var(--ayu-green) 10%, transparent);
+}
+.md-typeset .definition > .admonition-title::before,
+.md-typeset .definition > summary::before {
+  background-color: var(--ayu-green);
+  -webkit-mask-image: var(--md-admonition-icon--definition);
+          mask-image: var(--md-admonition-icon--definition);
+}
+
+.md-typeset .admonition.theorem,
+.md-typeset details.theorem {
+  border-color: var(--ayu-red);
+}
+.md-typeset .theorem > .admonition-title,
+.md-typeset .theorem > summary {
+  background-color: color-mix(in srgb, var(--ayu-red) 10%, transparent);
+}
+.md-typeset .theorem > .admonition-title::before,
+.md-typeset .theorem > summary::before {
+  background-color: var(--ayu-red);
+  -webkit-mask-image: var(--md-admonition-icon--theorem);
+          mask-image: var(--md-admonition-icon--theorem);
+}
+
+.md-typeset .admonition.proposition,
+.md-typeset details.proposition {
+  border-color: var(--ayu-orange);
+}
+.md-typeset .proposition > .admonition-title,
+.md-typeset .proposition > summary {
+  background-color: color-mix(in srgb, var(--ayu-orange) 10%, transparent);
+}
+.md-typeset .proposition > .admonition-title::before,
+.md-typeset .proposition > summary::before {
+  background-color: var(--ayu-orange);
+  -webkit-mask-image: var(--md-admonition-icon--proposition);
+          mask-image: var(--md-admonition-icon--proposition);
+}
+
+.md-typeset .admonition.corollary,
+.md-typeset details.corollary {
+  border-color: var(--ayu-orange);
+}
+.md-typeset .corollary > .admonition-title,
+.md-typeset .corollary > summary {
+  background-color: color-mix(in srgb, var(--ayu-orange) 10%, transparent);
+}
+.md-typeset .corollary > .admonition-title::before,
+.md-typeset .corollary > summary::before {
+  background-color: var(--ayu-orange);
+  -webkit-mask-image: var(--md-admonition-icon--corollary);
+          mask-image: var(--md-admonition-icon--corollary);
+}
+
+.md-typeset .admonition.lemma,
+.md-typeset details.lemma {
+  border-color: var(--ayu-accent);
+}
+.md-typeset .lemma > .admonition-title,
+.md-typeset .lemma > summary {
+  background-color: color-mix(in srgb, var(--ayu-accent) 10%, transparent);
+}
+.md-typeset .lemma > .admonition-title::before,
+.md-typeset .lemma > summary::before {
+  background-color: var(--ayu-accent);
+  -webkit-mask-image: var(--md-admonition-icon--lemma);
+          mask-image: var(--md-admonition-icon--lemma);
+}
+
+.md-typeset .admonition.proof,
+.md-typeset details.proof {
+  border-color: var(--ayu-muted);
+}
+.md-typeset .proof > .admonition-title,
+.md-typeset .proof > summary {
+  background-color: color-mix(in srgb, var(--ayu-muted) 10%, transparent);
+}
+.md-typeset .proof > .admonition-title::before,
+.md-typeset .proof > summary::before {
+  background-color: var(--ayu-muted);
+  -webkit-mask-image: var(--md-admonition-icon--proof);
+          mask-image: var(--md-admonition-icon--proof);
+}
+
+.md-typeset .admonition.remark,
+.md-typeset details.remark {
+  border-color: var(--ayu-blue);
+}
+.md-typeset .remark > .admonition-title,
+.md-typeset .remark > summary {
+  background-color: color-mix(in srgb, var(--ayu-blue) 10%, transparent);
+}
+.md-typeset .remark > .admonition-title::before,
+.md-typeset .remark > summary::before {
+  background-color: var(--ayu-blue);
+  -webkit-mask-image: var(--md-admonition-icon--remark);
+          mask-image: var(--md-admonition-icon--remark);
+}
+
+.md-typeset .admonition.exercise,
+.md-typeset details.exercise {
+  border-color: var(--ayu-cyan);
+}
+.md-typeset .exercise > .admonition-title,
+.md-typeset .exercise > summary {
+  background-color: color-mix(in srgb, var(--ayu-cyan) 10%, transparent);
+}
+.md-typeset .exercise > .admonition-title::before,
+.md-typeset .exercise > summary::before {
+  background-color: var(--ayu-cyan);
+  -webkit-mask-image: var(--md-admonition-icon--exercise);
+          mask-image: var(--md-admonition-icon--exercise);
+}
+
+.md-typeset .admonition.trial,
+.md-typeset details.trial {
+  border-color: var(--ayu-accent);
+}
+.md-typeset .trial > .admonition-title,
+.md-typeset .trial > summary {
+  background-color: color-mix(in srgb, var(--ayu-accent) 10%, transparent);
+}
+.md-typeset .trial > .admonition-title::before,
+.md-typeset .trial > summary::before {
+  background-color: var(--ayu-accent);
+  -webkit-mask-image: var(--md-admonition-icon--trial);
+          mask-image: var(--md-admonition-icon--trial);
+}
+
+.md-typeset .admonition.recorded,
+.md-typeset details.recorded {
+  border-color: var(--ayu-cyan);
+}
+.md-typeset .recorded > .admonition-title,
+.md-typeset .recorded > summary {
+  background-color: color-mix(in srgb, var(--ayu-cyan) 10%, transparent);
+}
+.md-typeset .recorded > .admonition-title::before,
+.md-typeset .recorded > summary::before {
+  background-color: var(--ayu-cyan);
+  -webkit-mask-image: var(--md-admonition-icon--recorded);
+          mask-image: var(--md-admonition-icon--recorded);
+}
+
+/* Display equations start at the left, as on the owner's other lecture sites. */
+.katex-display,
+.katex-display > .katex {
+  text-align: left;
+}
+
+.md-typeset div.arithmatex {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* KaTeX's auto-render wraps a display equation in an inline span, and the browser then gives it an
+   empty line above and below, which doubles the height of every equation. */
+.md-typeset div.arithmatex > span {
+  display: block;
+}
+
+/* The owner's diagrams have dark text on no background: they sit on a light card. */
+.md-typeset img[src*="images/orders/"] {
+  background: #fcfcfc;
+  padding: 0.6rem;
+}

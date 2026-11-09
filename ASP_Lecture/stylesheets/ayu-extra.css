@@ -1,0 +1,54 @@
+/* Source: Exchange/FastboxEx-Cli@ad90241 documentation/docs/stylesheets/extra.css, kept verbatim so it can be re-synced; loaded before ayu.css. */
+/* ── Booktabs-style tables ────────────────────────────── */
+/* Remove all internal grid lines; keep header rule + bottom rule */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  border: none;
+  box-shadow: none;
+}
+
+.md-typeset table:not([class]) thead {
+  border-bottom: 2px solid var(--md-primary-fg-color);
+}
+
+.md-typeset table:not([class]) thead th {
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.6em 1em 0.5em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset table:not([class]) tbody tr {
+  border-bottom: none;
+  background: transparent !important;
+}
+
+.md-typeset table:not([class]) tbody tr:last-child {
+  border-bottom: 1.5px solid var(--md-default-fg-color--lighter);
+}
+
+.md-typeset table:not([class]) td {
+  border: none;
+  padding: 0.45em 1em;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 6%, transparent) !important;
+}
+
+/* ── Code block styling ──────────────────────────────── */
+.md-typeset code {
+  font-size: 0.85em;
+}
+
+/* ── Admonition custom styling ───────────────────────── */
+.md-typeset .admonition.tip {
+  border-color: #ffc107;
+}
+
+/* ── API reference method signatures ─────────────────── */
+.doc-heading code {
+  font-weight: 600;
+}

@@ -1,0 +1,373 @@
+/* Source: Exchange/FastboxEx-Cli@ad90241 documentation/docs/stylesheets/ayu.css, kept verbatim so it can be re-synced; lecture-specific rules live in extra.css. */
+/* Ayu, as in the terminal UI and the Dashboard: one palette, monospace, square corners, 1px lines.
+   Dark uses their exact values. Official Ayu Light fails contrast on white, so its accents are
+   darkened here until text reaches 4.5:1. */
+
+[data-md-color-scheme="slate"] {
+  --ayu-bg: #0d1017;
+  --ayu-panel: #11161d;
+  --ayu-surface: #1b2733;
+  --ayu-line: #273340;
+  --ayu-line-strong: #636a72;
+  --ayu-text: #bfbdb6;
+  --ayu-muted: #92989f;
+  --ayu-accent: #e6b450;
+  --ayu-accent-hover: #ffb454;
+  --ayu-cyan: #90e1c6;
+  --ayu-blue: #53bdfa;
+  --ayu-green: #91b362;
+  --ayu-red: #ea6c73;
+  --ayu-orange: #ff8f40;
+}
+
+[data-md-color-scheme="default"] {
+  --ayu-bg: #fcfcfc;
+  --ayu-panel: #f4f5f6;
+  --ayu-surface: #e8ebee;
+  --ayu-line: #d9dde1;
+  --ayu-line-strong: #8a9199;
+  --ayu-text: #44484d;
+  --ayu-muted: #686d73;
+  --ayu-accent: #8f5a00;
+  --ayu-accent-hover: #6f4600;
+  --ayu-cyan: #1f7a63;
+  --ayu-blue: #1a6fb0;
+  --ayu-green: #527000;
+  --ayu-red: #c8323c;
+  --ayu-orange: #a4500c;
+}
+
+[data-md-color-scheme="slate"],
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: var(--ayu-bg);
+  --md-default-bg-color--light: var(--ayu-bg);
+  --md-default-bg-color--lighter: var(--ayu-panel);
+  --md-default-bg-color--lightest: var(--ayu-surface);
+  --md-default-fg-color: var(--ayu-text);
+  --md-default-fg-color--light: var(--ayu-muted);
+  --md-default-fg-color--lighter: var(--ayu-line-strong);
+  --md-default-fg-color--lightest: var(--ayu-line);
+  --md-primary-fg-color: var(--ayu-accent);
+  --md-primary-fg-color--light: var(--ayu-accent);
+  --md-primary-fg-color--dark: var(--ayu-accent);
+  --md-primary-bg-color: var(--ayu-bg);
+  --md-primary-bg-color--light: var(--ayu-muted);
+  --md-accent-fg-color: var(--ayu-accent-hover);
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--ayu-accent) 12%, transparent);
+  --md-accent-bg-color: var(--ayu-bg);
+  --md-typeset-color: var(--ayu-text);
+  --md-typeset-a-color: var(--ayu-accent);
+  --md-typeset-mark-color: color-mix(in srgb, var(--ayu-accent) 25%, transparent);
+  --md-typeset-table-color: var(--ayu-line);
+  --md-typeset-table-color--light: var(--ayu-surface);
+  --md-typeset-kbd-color: var(--ayu-panel);
+  --md-typeset-kbd-accent-color: var(--ayu-surface);
+  --md-typeset-kbd-border-color: var(--ayu-line);
+  --md-code-bg-color: var(--ayu-panel);
+  --md-code-bg-color--light: var(--ayu-panel);
+  --md-code-bg-color--lighter: var(--ayu-surface);
+  --md-code-fg-color: var(--ayu-text);
+  --md-code-hl-color: var(--ayu-accent);
+  --md-code-hl-color--light: color-mix(in srgb, var(--ayu-accent) 12%, transparent);
+  --md-code-hl-comment-color: var(--ayu-muted);
+  --md-code-hl-constant-color: var(--ayu-cyan);
+  --md-code-hl-function-color: var(--ayu-accent);
+  --md-code-hl-generic-color: var(--ayu-muted);
+  --md-code-hl-keyword-color: var(--ayu-orange);
+  --md-code-hl-name-color: var(--ayu-text);
+  --md-code-hl-number-color: var(--ayu-cyan);
+  --md-code-hl-operator-color: var(--ayu-orange);
+  --md-code-hl-punctuation-color: var(--ayu-muted);
+  --md-code-hl-special-color: var(--ayu-blue);
+  --md-code-hl-string-color: var(--ayu-green);
+  --md-code-hl-variable-color: var(--ayu-text);
+  --md-footer-bg-color: var(--ayu-bg);
+  --md-footer-bg-color--dark: var(--ayu-bg);
+  --md-footer-fg-color: var(--ayu-text);
+  --md-footer-fg-color--light: var(--ayu-muted);
+  --md-footer-fg-color--lighter: var(--ayu-muted);
+  --md-admonition-bg-color: transparent;
+  --md-admonition-fg-color: var(--ayu-text);
+  --md-shadow-z1: none;
+  --md-shadow-z2: none;
+  --md-shadow-z3: none;
+  --md-mermaid-font-family: var(--md-code-font-family);
+  --md-mermaid-node-bg-color: var(--ayu-surface);
+  --md-mermaid-node-fg-color: var(--ayu-text);
+  --md-mermaid-edge-color: var(--ayu-muted);
+  --md-mermaid-label-bg-color: var(--ayu-bg);
+  --md-mermaid-label-fg-color: var(--ayu-text);
+}
+
+/* Everything is monospace, as on the Dashboard. Chinese has no monospace of its own here, so it
+   is named, or Windows can fall back to a poor font. */
+:root {
+  --md-code-font: "JetBrains Mono";
+  --md-text-font: "JetBrains Mono", "SFMono-Regular", Consolas, Menlo, "Liberation Mono",
+    "DejaVu Sans Mono", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", monospace;
+}
+
+.md-typeset {
+  font-size: .68rem;
+}
+
+/* The Dashboard has no rounded corners anywhere. */
+* {
+  border-radius: 0 !important;
+}
+
+::selection {
+  background: var(--ayu-surface);
+}
+
+* {
+  scrollbar-color: var(--ayu-line-strong) transparent;
+  scrollbar-width: thin;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ayu-accent);
+  outline-offset: 3px;
+}
+
+/* Header and tabs: the Dashboard's flat bar, with its amber wordmark. */
+.md-header,
+.md-header--shadow {
+  background-color: var(--ayu-bg);
+  color: var(--ayu-text);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  border-bottom: 1px solid var(--ayu-line);
+}
+
+.md-header__title,
+.md-header__title .md-header__topic,
+.md-header__title .md-ellipsis {
+  font-family: var(--md-code-font-family);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ayu-accent);
+}
+
+.md-header__button.md-logo {
+  color: var(--ayu-accent);
+}
+
+.md-search__button {
+  background-color: var(--ayu-panel);
+  border: 1px solid var(--ayu-line);
+  color: var(--ayu-muted);
+  font-family: var(--md-code-font-family);
+  font-size: .62rem;
+}
+
+.md-tabs {
+  background-color: var(--ayu-bg);
+  color: var(--ayu-muted);
+  box-shadow: none;
+}
+
+.md-tabs__link {
+  font-family: var(--md-code-font-family);
+  font-size: .6rem;
+  color: var(--ayu-muted);
+  opacity: 1;
+}
+
+.md-tabs__item--active .md-tabs__link,
+.md-tabs__link:hover {
+  color: var(--ayu-accent);
+}
+
+.md-tabs__item--active {
+  border-bottom-color: var(--ayu-accent);
+}
+
+/* Side navigation: the Dashboard's watchlist selection. */
+.md-nav {
+  font-family: var(--md-code-font-family);
+  font-size: .62rem;
+}
+
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: var(--ayu-accent);
+  background-color: var(--ayu-surface);
+  box-shadow: inset 2px 0 0 var(--ayu-accent);
+}
+
+/* Headings are labels. */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: var(--md-code-font-family);
+  letter-spacing: 0;
+}
+
+.md-typeset h1 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--ayu-accent);
+}
+
+.md-typeset h2 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.md-typeset h3 {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--ayu-accent);
+}
+
+.md-typeset hr {
+  border-bottom-color: var(--ayu-line);
+}
+
+.md-typeset .headerlink {
+  color: var(--ayu-muted);
+}
+
+/* Panels: cards, code, notes and tabs share the Dashboard's 1px frame. */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  background: var(--ayu-bg);
+  border: 1px solid var(--ayu-line);
+  box-shadow: none;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ul > li:focus-within {
+  border-color: var(--ayu-line-strong);
+}
+
+.md-typeset .grid.cards a,
+.md-typeset .grid.cards strong {
+  font-family: var(--md-code-font-family);
+}
+
+.md-typeset .grid.cards a {
+  text-decoration: none;
+}
+
+.md-typeset pre > code {
+  border: 1px solid var(--ayu-line);
+  background: var(--ayu-panel);
+}
+
+.md-typeset :not(pre) > code {
+  background: var(--ayu-panel);
+  border: 1px solid var(--ayu-line);
+  color: var(--ayu-cyan);
+}
+
+.md-typeset a {
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+.md-typeset .tabbed-labels,
+.md-typeset .tabbed-labels > label {
+  font-family: var(--md-code-font-family);
+}
+
+.js .md-typeset .tabbed-labels::before {
+  background: var(--ayu-accent);
+}
+
+/* A prompt, which copying leaves out: the theme copies the text, not this. */
+.md-typeset .tabbed-block .language-sh code > span::before {
+  content: "$ ";
+  color: var(--ayu-muted);
+}
+
+.md-typeset .tabbed-block .language-powershell code > span::before {
+  content: "> ";
+  color: var(--ayu-muted);
+}
+
+.md-typeset .md-code__nav,
+.md-typeset .md-code__button {
+  background: transparent;
+}
+
+.md-typeset .md-button {
+  background: var(--ayu-surface);
+  border: 1px solid var(--ayu-line);
+  color: var(--ayu-accent);
+  font-family: var(--md-code-font-family);
+  font-size: .62rem;
+  font-weight: 400;
+}
+
+.md-typeset .md-button--primary {
+  background: var(--ayu-accent);
+  border-color: var(--ayu-accent);
+  color: var(--ayu-bg);
+}
+
+.md-typeset .md-button:hover {
+  border-color: var(--ayu-accent);
+}
+
+.md-typeset .tabbed-labels > label {
+  color: var(--ayu-muted);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  background-color: var(--ayu-panel) !important;
+  border: 1px solid var(--ayu-line);
+  box-shadow: none;
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background: transparent !important;
+  font-family: var(--md-code-font-family);
+  font-weight: 600;
+}
+
+/* Tables read like the Dashboard's. */
+.md-typeset table:not([class]) {
+  font-family: var(--md-code-font-family);
+  font-size: .62rem;
+}
+
+.md-typeset table:not([class]) thead {
+  border-bottom: 0;
+}
+
+.md-typeset table:not([class]) thead th {
+  color: var(--ayu-muted);
+  font-weight: 400;
+  border-bottom: 1px solid var(--ayu-accent) !important;
+}
+
+.md-typeset table:not([class]) tbody tr {
+  border-bottom: 1px solid color-mix(in srgb, var(--ayu-line) 45%, transparent);
+}
+
+.md-typeset table:not([class]) tbody tr:last-child {
+  border-bottom: 1px solid var(--ayu-line);
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background: color-mix(in srgb, var(--ayu-surface) 45%, transparent) !important;
+}
+
+/* Footer. */
+.md-footer,
+.md-footer-meta {
+  background-color: var(--ayu-bg);
+  border-top: 1px solid var(--ayu-line);
+  font-family: var(--md-code-font-family);
+}
