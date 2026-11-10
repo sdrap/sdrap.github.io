@@ -20,5 +20,5 @@ node_modules/
 *.ipynb_checkpoints/
 
 # Local bundler gems (jekyll dry runs)
-vendor/
+/vendor/
 .bundle/
